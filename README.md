@@ -18,7 +18,7 @@ A volunteer at a pond sees green scum and dogs swimming. Today that report stays
 
 ## Track alignment
 **Track 7 — Digital Health Standards** ("Enable interoperability across systems — fragmented data and lack of standards — FHIR models, AI agents, and integration frameworks"), with a **Track 2** flavour (actionable One Health insight).
-StreamFHIR is a small **integration framework**: ports-and-adapters code where one adapter reads a citizen-science record and another writes FHIR R4 to any server. It ships **FHIR models** — 2 profiles, 1 extension, 4 CodeSystems, a ValueSet, a CapabilityStatement and a Subscription example — tested live on the public HAPI FHIR R4 server. We did not build an AI agent. The 10 rules are published as a CodeSystem (`onehealth-risk-rule`), and every active Flag cites each corroborated rule that raised it as a code from that CodeSystem (`flag-rule` extension), so an agent or a person can query exactly why a warning exists.
+StreamFHIR is a small **integration framework**: ports-and-adapters code where one adapter reads a citizen-science record and another writes FHIR R4 to any server. It ships **FHIR models** — 2 profiles, 1 extension, 4 CodeSystems, 2 ValueSets, a CapabilityStatement and a Subscription example — tested live on the public HAPI FHIR R4 server. We did not build an AI agent. The 10 rules are published as a CodeSystem (`onehealth-risk-rule`), and every active Flag cites each corroborated rule that raised it as a code from that CodeSystem (`flag-rule` extension), so an agent or a person can query exactly why a warning exists.
 
 ## Problem
 - **Fragmented data** — every citizen-science tool has its own format. Environmental agencies, city dashboards and public-health teams cannot combine the data without re-keying it by hand.
@@ -74,7 +74,7 @@ python3 -m streamfhir validate-remote SYN-001 --with-profile   # server-side $va
 python3 -m streamfhir build-static              # rebuild the server-less demo in docs/demo
 python3 -m streamfhir bench                     # throughput on your machine
 python3 -m streamfhir send SYN-010 --live --review reject    # apply a reviewer decision, then send
-python3 -m pip install pytest && python3 -m pytest -q     # 80 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 81 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -144,7 +144,8 @@ flowchart LR
 | `ValueSet-stream-indicator.json` | all indicator codes |
 | `StructureDefinition-stream-assessment-panel.json` | panel profile |
 | `StructureDefinition-stream-indicator-observation.json` | indicator profile |
-| `StructureDefinition-flag-rule.json` | extension: a corroborated rule that raised the Flag, coded from `onehealth-risk-rule` |
+| `StructureDefinition-flag-rule.json` | extension: a corroborated rule that raised the Flag, coded from `onehealth-risk-rule` (required binding to the hazard-rule ValueSet) |
+| `ValueSet-onehealth-hazard-rule.json` | the 6 health-hazard rules (R3–R8) — the only rules that can raise a Flag |
 | `CapabilityStatement-streamfhir-client-requirements.json` | what a receiving server must support (`kind = requirements`) |
 | `Subscription-example-safety-flags.json` | R4 rest-hook subscription on safety Flags (example endpoint) |
 
@@ -188,7 +189,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
 
 ## Evidence
-- **80 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-31 (see `SPEC.md`).
+- **81 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-31 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -238,7 +239,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records; data/real-wqp: real WQP snapshot + imported dataset
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     80 tests
+tests/                     81 tests
 ```
 
 ## License

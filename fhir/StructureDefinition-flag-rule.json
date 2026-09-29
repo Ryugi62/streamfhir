@@ -52,7 +52,11 @@
      {
       "code": "CodeableConcept"
      }
-    ]
+    ],
+    "binding": {
+     "strength": "required",
+     "valueSet": "https://example.org/fhir/streamfhir/ValueSet/onehealth-hazard-rule"
+    }
    },
    {
     "id": "Extension.value[x].coding",

@@ -218,3 +218,17 @@ def test_stand_down_flag_cites_no_rules(sites, now):
     sd = mapper().stand_down_bundle(risk, sites["S-TEST"], "2026-09-20T09:30:00+01:00")
     flag = resources(sd, "Flag")[0]
     assert all(x["url"] != EXT_FLAG_RULE for x in flag.get("extension", []))
+
+
+def test_flag_rule_extension_binds_to_hazard_rules_only():
+    from streamfhir.adapters.fhir_mapper import CS_RULE, EXT_FLAG_RULE, VS_HAZARD_RULE, conformance_resources
+    from streamfhir.domain.risk import HAZARD, RULES
+    res = {r.get("url"): r for r in conformance_resources()}
+    vs = res[VS_HAZARD_RULE]
+    codes = {c["code"] for c in vs["compose"]["include"][0]["concept"]}
+    assert vs["compose"]["include"][0]["system"] == CS_RULE
+    assert codes == {r.rule_id for r in RULES if r.kind == HAZARD}
+    value = [e for e in res[EXT_FLAG_RULE]["differential"]["element"] if e["id"] == "Extension.value[x]"][0]
+    assert value["binding"] == {"strength": "required", "valueSet": VS_HAZARD_RULE}
+    with open(os.path.join(ROOT, "fhir", "ValueSet-%s.json" % vs["id"])) as fh:
+        assert json.load(fh) == vs, "run: python3 -m streamfhir build-fhir"

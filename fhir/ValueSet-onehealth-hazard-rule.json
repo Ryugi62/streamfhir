@@ -1,0 +1,60 @@
+{
+ "resourceType": "ValueSet",
+ "id": "onehealth-hazard-rule",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>ValueSet: StreamFHIR health-hazard rules</p></div>"
+ },
+ "url": "https://example.org/fhir/streamfhir/ValueSet/onehealth-hazard-rule",
+ "version": "0.3.0",
+ "name": "OneHealthHazardRule",
+ "title": "StreamFHIR health-hazard rules",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "description": "The StreamFHIR rules that can raise a Flag (health hazard only; ecological-condition rules never raise a warning). Example canonical.",
+ "compose": {
+  "include": [
+   {
+    "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+    "concept": [
+     {
+      "code": "R3",
+      "display": "Possible cyanobacterial bloom"
+     },
+     {
+      "code": "R4",
+      "display": "Sewage signal"
+     },
+     {
+      "code": "R5",
+      "display": "Dead fish"
+     },
+     {
+      "code": "R6",
+      "display": "People in contact with affected water"
+     },
+     {
+      "code": "R7",
+      "display": "Pets or livestock in contact with affected water"
+     },
+     {
+      "code": "R8",
+      "display": "Oil or chemical signal"
+     }
+    ]
+   }
+  ]
+ }
+}

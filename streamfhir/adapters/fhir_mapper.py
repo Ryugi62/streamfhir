@@ -27,6 +27,7 @@ CS_RISK = BASE + "/CodeSystem/onehealth-risk-level"
 CS_RULE = BASE + "/CodeSystem/onehealth-risk-rule"
 EXT_FLAG_RULE = BASE + "/StructureDefinition/flag-rule"   # coded citation of a fired rule on a Flag
 VS_INDICATOR = BASE + "/ValueSet/stream-indicator"
+VS_HAZARD_RULE = BASE + "/ValueSet/onehealth-hazard-rule"
 PROFILE_PANEL = BASE + "/StructureDefinition/stream-assessment-panel"
 PROFILE_OBS = BASE + "/StructureDefinition/stream-indicator-observation"
 SID_SITE = BASE + "/sid/site"
@@ -422,6 +423,16 @@ def valueset_resource() -> Dict[str, Any]:
             "compose": {"include": [{"system": CS_INDICATOR}]}}
 
 
+def hazard_rule_valueset() -> Dict[str, Any]:
+    return {"resourceType": "ValueSet", "id": "onehealth-hazard-rule", "url": VS_HAZARD_RULE, "version": VERSION,
+            "name": "OneHealthHazardRule", "title": "StreamFHIR health-hazard rules", "status": "draft",
+            "experimental": True, "date": DATE, "jurisdiction": [JURISDICTION_WORLD],
+            "description": "The StreamFHIR rules that can raise a Flag (health hazard only; ecological-condition rules "
+                           "never raise a warning). Example canonical.",
+            "compose": {"include": [{"system": CS_RULE, "concept": [
+                {"code": r.rule_id, "display": r.title} for r in RULES if r.kind == HAZARD]}]}}
+
+
 def _common_elements() -> List[Dict[str, Any]]:
     return [
         {"id": "Observation.category", "path": "Observation.category", "min": 1,
@@ -465,7 +476,8 @@ def flag_rule_extension() -> Dict[str, Any]:
             {"id": "Extension.extension", "path": "Extension.extension", "max": "0"},
             {"id": "Extension.url", "path": "Extension.url", "fixedUri": EXT_FLAG_RULE},
             {"id": "Extension.value[x]", "path": "Extension.value[x]", "min": 1,
-             "type": [{"code": "CodeableConcept"}]},
+             "type": [{"code": "CodeableConcept"}],
+             "binding": {"strength": "required", "valueSet": VS_HAZARD_RULE}},
             {"id": "Extension.value[x].coding", "path": "Extension.value[x].coding", "min": 1, "max": "1"},
             {"id": "Extension.value[x].coding.system", "path": "Extension.value[x].coding.system", "min": 1,
              "fixedUri": CS_RULE},
@@ -544,7 +556,7 @@ def _with_text(r: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def conformance_resources() -> List[Dict[str, Any]]:
-    return [_with_text(r) for r in codesystem_resources() + [valueset_resource()] + structuredefinition_resources()]
+    return [_with_text(r) for r in codesystem_resources() + [valueset_resource(), hazard_rule_valueset()] + structuredefinition_resources()]
 
 
 def conformance_bundle() -> Dict[str, Any]:
