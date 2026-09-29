@@ -1,0 +1,97 @@
+{
+ "resourceType": "CodeSystem",
+ "id": "stream-answer",
+ "url": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+ "version": "0.1.0",
+ "name": "StreamAnswer",
+ "title": "Citizen stream assessment answers",
+ "status": "draft",
+ "experimental": true,
+ "publisher": "StreamFHIR hackathon prototype",
+ "description": "Answer codes for categorical stream assessment indicators. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
+ "caseSensitive": true,
+ "content": "complete",
+ "count": 16,
+ "concept": [
+  {
+   "code": "colour-clear",
+   "display": "Water colour: clear",
+   "definition": "Answer 'clear' for indicator water-colour."
+  },
+  {
+   "code": "colour-brown-turbid",
+   "display": "Water colour: brown-turbid",
+   "definition": "Answer 'brown-turbid' for indicator water-colour."
+  },
+  {
+   "code": "colour-green",
+   "display": "Water colour: green",
+   "definition": "Answer 'green' for indicator water-colour."
+  },
+  {
+   "code": "colour-milky-grey",
+   "display": "Water colour: milky-grey",
+   "definition": "Answer 'milky-grey' for indicator water-colour."
+  },
+  {
+   "code": "colour-other",
+   "display": "Water colour: other",
+   "definition": "Answer 'other' for indicator water-colour."
+  },
+  {
+   "code": "surface-none",
+   "display": "Surface film: none",
+   "definition": "Answer 'none' for indicator surface."
+  },
+  {
+   "code": "surface-foam",
+   "display": "Surface film: foam",
+   "definition": "Answer 'foam' for indicator surface."
+  },
+  {
+   "code": "surface-oily-sheen",
+   "display": "Surface film: oily-sheen",
+   "definition": "Answer 'oily-sheen' for indicator surface."
+  },
+  {
+   "code": "surface-algal-scum",
+   "display": "Surface film: algal-scum",
+   "definition": "Answer 'algal-scum' for indicator surface."
+  },
+  {
+   "code": "odour-none",
+   "display": "Odour: none",
+   "definition": "Answer 'none' for indicator odour."
+  },
+  {
+   "code": "odour-earthy",
+   "display": "Odour: earthy",
+   "definition": "Answer 'earthy' for indicator odour."
+  },
+  {
+   "code": "odour-sewage",
+   "display": "Odour: sewage",
+   "definition": "Answer 'sewage' for indicator odour."
+  },
+  {
+   "code": "odour-chemical",
+   "display": "Odour: chemical",
+   "definition": "Answer 'chemical' for indicator odour."
+  },
+  {
+   "code": "litter-none",
+   "display": "Litter: none",
+   "definition": "Answer 'none' for indicator litter."
+  },
+  {
+   "code": "litter-some",
+   "display": "Litter: some",
+   "definition": "Answer 'some' for indicator litter."
+  },
+  {
+   "code": "litter-lots",
+   "display": "Litter: lots",
+   "definition": "Answer 'lots' for indicator litter."
+  }
+ ]
+}

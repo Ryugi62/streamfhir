@@ -1,0 +1,18 @@
+{
+ "resourceType": "ValueSet",
+ "id": "stream-indicator",
+ "url": "https://example.org/fhir/streamfhir/ValueSet/stream-indicator",
+ "version": "0.1.0",
+ "name": "StreamIndicator",
+ "title": "Citizen stream assessment indicators",
+ "status": "draft",
+ "experimental": true,
+ "description": "All codes from the StreamFHIR stream-indicator CodeSystem (example canonical).",
+ "compose": {
+  "include": [
+   {
+    "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator"
+   }
+  ]
+ }
+}

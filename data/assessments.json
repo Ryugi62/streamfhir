@@ -1,0 +1,372 @@
+{
+ "_note": "SYNTHETIC demo records generated for the StreamFHIR prototype. They are not real observations. Photo URLs are placeholders on example.org.",
+ "records": [
+  {
+   "record_id": "SYN-001",
+   "synthetic": true,
+   "site_id": "S-ALDER-UP",
+   "observed_at": "2026-09-16T08:40:00+01:00",
+   "observer": "obs-01",
+   "lat": 40.2151,
+   "lon": -8.4049,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-001.jpg"
+   ],
+   "values": {
+    "channel-condition": 8,
+    "bank-stability": 8,
+    "riparian-zone": 9,
+    "instream-habitat": 7,
+    "water-temperature": 15.2,
+    "ph": 7.4,
+    "nitrate": 5,
+    "phosphate": 0.1,
+    "transparency": 110,
+    "water-colour": "clear",
+    "surface": "none",
+    "odour": "none",
+    "litter": "none",
+    "dead-fish": false,
+    "people-contact": false,
+    "animal-contact": true
+   }
+  },
+  {
+   "record_id": "SYN-002",
+   "synthetic": true,
+   "site_id": "S-ALDER-UP",
+   "observed_at": "2026-09-24T17:15:00+01:00",
+   "observer": "obs-02",
+   "lat": 40.2149,
+   "lon": -8.4052,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-002.jpg"
+   ],
+   "values": {
+    "channel-condition": 8,
+    "bank-stability": 7,
+    "riparian-zone": 9,
+    "instream-habitat": 8,
+    "water-temperature": 14.6,
+    "ph": 7.6,
+    "nitrate": 5,
+    "transparency": 105,
+    "water-colour": "clear",
+    "surface": "none",
+    "odour": "earthy",
+    "litter": "some",
+    "dead-fish": false,
+    "people-contact": false,
+    "animal-contact": false
+   }
+  },
+  {
+   "record_id": "SYN-013",
+   "synthetic": true,
+   "site_id": "S-ALDER-UP",
+   "observed_at": "2026-09-27T12:05:00+01:00",
+   "observer": "obs-06",
+   "lat": 40.2152,
+   "lon": -8.4047,
+   "gps_accuracy_m": 8,
+   "photos": [],
+   "values": {
+    "water-colour": "clear",
+    "surface": "oily-sheen",
+    "odour": "chemical",
+    "litter": "some",
+    "people-contact": false,
+    "animal-contact": false
+   }
+  },
+  {
+   "record_id": "SYN-012",
+   "synthetic": true,
+   "site_id": "S-ALDER-UP",
+   "observed_at": "2030-06-01T10:00:00+01:00",
+   "observer": "obs-02",
+   "lat": 40.215,
+   "lon": -8.405,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-012.jpg"
+   ],
+   "values": {
+    "channel-condition": 8,
+    "bank-stability": 8,
+    "riparian-zone": 8,
+    "instream-habitat": 8,
+    "water-colour": "clear"
+   },
+   "note_for_demo": "Wrong phone date -> blocked"
+  },
+  {
+   "record_id": "SYN-003",
+   "synthetic": true,
+   "site_id": "S-ALDER-DN",
+   "observed_at": "2026-09-20T16:30:00+01:00",
+   "observer": "obs-01",
+   "lat": 40.2104,
+   "lon": -8.4178,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-003.jpg"
+   ],
+   "values": {
+    "channel-condition": 4,
+    "bank-stability": 3,
+    "riparian-zone": 3,
+    "instream-habitat": 4,
+    "water-temperature": 17.0,
+    "ph": 7.0,
+    "nitrate": 15,
+    "phosphate": 0.3,
+    "transparency": 25,
+    "water-colour": "milky-grey",
+    "surface": "foam",
+    "odour": "sewage",
+    "litter": "lots",
+    "dead-fish": false,
+    "people-contact": true,
+    "animal-contact": false
+   }
+  },
+  {
+   "record_id": "SYN-004",
+   "synthetic": true,
+   "site_id": "S-ALDER-DN",
+   "observed_at": "2026-09-25T15:50:00+01:00",
+   "observer": "obs-03",
+   "lat": 40.2106,
+   "lon": -8.4181,
+   "gps_accuracy_m": 8,
+   "photos": [],
+   "values": {
+    "channel-condition": 3,
+    "bank-stability": 3,
+    "riparian-zone": 4,
+    "instream-habitat": 3,
+    "water-temperature": 16.4,
+    "water-colour": "milky-grey",
+    "odour": "sewage",
+    "litter": "lots",
+    "people-contact": true,
+    "animal-contact": false
+   }
+  },
+  {
+   "record_id": "SYN-005",
+   "synthetic": true,
+   "site_id": "S-ALDER-DN",
+   "observed_at": "2026-09-26T09:10:00+01:00",
+   "observer": "obs-04",
+   "lat": 40.2105,
+   "lon": -8.418,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-005.jpg"
+   ],
+   "values": {
+    "channel-condition": 4,
+    "bank-stability": 4,
+    "riparian-zone": 3,
+    "instream-habitat": 4,
+    "ph": 15,
+    "water-colour": "brown-turbid",
+    "odour": "none"
+   },
+   "note_for_demo": "pH typo -> blocked"
+  },
+  {
+   "record_id": "SYN-006",
+   "synthetic": true,
+   "site_id": "S-MILL",
+   "observed_at": "2026-09-18T11:20:00+01:00",
+   "observer": "obs-05",
+   "lat": 40.1986,
+   "lon": -8.4121,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-006.jpg"
+   ],
+   "values": {
+    "channel-condition": 5,
+    "bank-stability": 6,
+    "riparian-zone": 4,
+    "instream-habitat": 5,
+    "water-temperature": 24.5,
+    "ph": 8.6,
+    "nitrate": 12,
+    "phosphate": 0.8,
+    "transparency": 30,
+    "water-colour": "green",
+    "surface": "algal-scum",
+    "odour": "earthy",
+    "litter": "some",
+    "dead-fish": false,
+    "people-contact": false,
+    "animal-contact": true
+   }
+  },
+  {
+   "record_id": "SYN-007",
+   "synthetic": true,
+   "site_id": "S-MILL",
+   "observed_at": "2026-09-22T18:40:00+01:00",
+   "observer": "obs-06",
+   "lat": 40.1984,
+   "lon": -8.4118,
+   "gps_accuracy_m": 8,
+   "photos": [],
+   "values": {
+    "water-temperature": 25.1,
+    "water-colour": "green",
+    "surface": "algal-scum",
+    "dead-fish": true,
+    "animal-contact": true
+   }
+  },
+  {
+   "record_id": "SYN-008",
+   "synthetic": true,
+   "site_id": "S-MILL",
+   "observed_at": "2026-09-27T10:05:00+01:00",
+   "observer": "obs-05",
+   "lat": 40.2021,
+   "lon": -8.412,
+   "gps_accuracy_m": 6,
+   "photos": [
+    "https://example.org/demo-photos/syn-008.jpg"
+   ],
+   "values": {
+    "channel-condition": 5,
+    "bank-stability": 5,
+    "riparian-zone": 4,
+    "instream-habitat": 5,
+    "water-temperature": 26.3,
+    "ph": 8.9,
+    "phosphate": 0.9,
+    "water-colour": "green",
+    "surface": "algal-scum",
+    "odour": "earthy",
+    "dead-fish": false,
+    "people-contact": false,
+    "animal-contact": true
+   }
+  },
+  {
+   "record_id": "SYN-009",
+   "synthetic": true,
+   "site_id": "S-WILLOW",
+   "observed_at": "2026-09-17T09:00:00+01:00",
+   "observer": "obs-07",
+   "lat": 40.2251,
+   "lon": -8.3902,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-009.jpg"
+   ],
+   "values": {
+    "channel-condition": 6,
+    "bank-stability": 5,
+    "riparian-zone": 4,
+    "instream-habitat": 6,
+    "water-temperature": 16.8,
+    "ph": 7.2,
+    "nitrate": 55,
+    "phosphate": 1.2,
+    "transparency": 40,
+    "water-colour": "brown-turbid",
+    "surface": "none",
+    "odour": "earthy",
+    "litter": "some",
+    "dead-fish": false,
+    "people-contact": false,
+    "animal-contact": false
+   }
+  },
+  {
+   "record_id": "SYN-010",
+   "synthetic": true,
+   "site_id": "S-WILLOW",
+   "observed_at": "2026-09-23T13:30:00+01:00",
+   "observer": "obs-02",
+   "lat": 40.2249,
+   "lon": -8.3899,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-010.jpg"
+   ],
+   "values": {
+    "channel-condition": 6,
+    "bank-stability": 6,
+    "riparian-zone": 5,
+    "instream-habitat": 6,
+    "water-temperature": 17.5,
+    "ph": 4.2,
+    "nitrate": 60,
+    "phosphate": 1.0,
+    "water-colour": "brown-turbid",
+    "surface": "foam",
+    "odour": "earthy",
+    "litter": "some",
+    "people-contact": false,
+    "animal-contact": false
+   }
+  },
+  {
+   "record_id": "SYN-011",
+   "synthetic": true,
+   "site_id": "S-WILLOW",
+   "observed_at": "2026-09-28T08:15:00+01:00",
+   "observer": "",
+   "lat": 40.225,
+   "lon": -8.39,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-011.jpg"
+   ],
+   "values": {
+    "channel-condition": 6,
+    "bank-stability": 6,
+    "riparian-zone": 5,
+    "instream-habitat": 6,
+    "nitrate": 58
+   },
+   "note_for_demo": "Observer pseudonym missing -> blocked"
+  },
+  {
+   "record_id": "SYN-014",
+   "synthetic": true,
+   "site_id": "S-OAK",
+   "observed_at": "2026-09-21T10:45:00+01:00",
+   "observer": "obs-07",
+   "lat": 40.2041,
+   "lon": -8.3951,
+   "gps_accuracy_m": 8,
+   "photos": [
+    "https://example.org/demo-photos/syn-014.jpg"
+   ],
+   "values": {
+    "channel-condition": 9,
+    "bank-stability": 8,
+    "riparian-zone": 8,
+    "instream-habitat": 9,
+    "water-temperature": 14.1,
+    "ph": 7.3,
+    "nitrate": 4,
+    "phosphate": 0.05,
+    "transparency": 120,
+    "water-colour": "clear",
+    "surface": "none",
+    "odour": "none",
+    "litter": "none",
+    "dead-fish": false,
+    "people-contact": true,
+    "animal-contact": true
+   }
+  }
+ ]
+}

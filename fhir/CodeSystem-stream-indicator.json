@@ -1,0 +1,102 @@
+{
+ "resourceType": "CodeSystem",
+ "id": "stream-indicator",
+ "url": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+ "version": "0.1.0",
+ "name": "StreamIndicator",
+ "title": "Citizen stream assessment indicators",
+ "status": "draft",
+ "experimental": true,
+ "publisher": "StreamFHIR hackathon prototype",
+ "description": "Indicators of a representative citizen-science stream assessment. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
+ "caseSensitive": true,
+ "content": "complete",
+ "count": 17,
+ "concept": [
+  {
+   "code": "stream-assessment",
+   "display": "Citizen stream assessment panel",
+   "definition": "Grouping observation for one citizen visit to a stream site."
+  },
+  {
+   "code": "channel-condition",
+   "display": "Channel condition score",
+   "definition": "Visual score 1-10 of how natural the channel shape is (10 = natural, 1 = concrete or straightened)."
+  },
+  {
+   "code": "bank-stability",
+   "display": "Bank stability score",
+   "definition": "Visual score 1-10 of bank erosion (10 = stable vegetated banks, 1 = actively collapsing)."
+  },
+  {
+   "code": "riparian-zone",
+   "display": "Riparian zone score",
+   "definition": "Visual score 1-10 of the vegetated strip along the stream (10 = wide native vegetation, 1 = none)."
+  },
+  {
+   "code": "instream-habitat",
+   "display": "In-stream habitat score",
+   "definition": "Visual score 1-10 of places for fish and insects to live (logs, stones, pools)."
+  },
+  {
+   "code": "water-temperature",
+   "display": "Water temperature",
+   "definition": "Water temperature measured with a thermometer."
+  },
+  {
+   "code": "ph",
+   "display": "pH",
+   "definition": "pH measured with a test strip or pen."
+  },
+  {
+   "code": "nitrate",
+   "display": "Nitrate (as NO3)",
+   "definition": "Nitrate measured with a colorimetric test strip."
+  },
+  {
+   "code": "phosphate",
+   "display": "Phosphate (as PO4)",
+   "definition": "Phosphate measured with a colorimetric test kit."
+  },
+  {
+   "code": "transparency",
+   "display": "Transparency tube depth",
+   "definition": "Depth at which the marker disappears in a transparency tube."
+  },
+  {
+   "code": "water-colour",
+   "display": "Water colour",
+   "definition": "Dominant colour of the water."
+  },
+  {
+   "code": "surface",
+   "display": "Surface film",
+   "definition": "What is floating on the surface."
+  },
+  {
+   "code": "odour",
+   "display": "Odour",
+   "definition": "Smell of the water."
+  },
+  {
+   "code": "litter",
+   "display": "Litter",
+   "definition": "Amount of litter in or next to the water."
+  },
+  {
+   "code": "dead-fish",
+   "display": "Dead fish seen",
+   "definition": "Dead fish seen in or near the water."
+  },
+  {
+   "code": "people-contact",
+   "display": "People in the water",
+   "definition": "People (e.g. children paddling, swimmers) seen in contact with the water."
+  },
+  {
+   "code": "animal-contact",
+   "display": "Pets or livestock in the water",
+   "definition": "Dogs, livestock or other domestic animals seen in contact with the water."
+  }
+ ]
+}
