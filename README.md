@@ -72,7 +72,7 @@ python3 -m streamfhir publish-conformance --live    # put CodeSystems, ValueSet 
 python3 -m streamfhir validate-remote SYN-001 --with-profile   # server-side $validate against the profile
 python3 -m streamfhir build-static              # rebuild the server-less demo in docs/demo
 python3 -m streamfhir bench                     # throughput on your machine
-python3 -m pip install pytest && python3 -m pytest -q     # 66 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 69 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -178,7 +178,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek turns *Needs verification* into *High* and raises the Flag. Undo returns it.
 
 ## Evidence
-- **66 automated tests** (`pytest -q`), 0 network calls. They include an architecture test and acceptance tests AC-1 to AC-24 (see `SPEC.md`).
+- **69 automated tests** (`pytest -q`), 0 network calls. They include an architecture test and acceptance tests AC-1 to AC-24 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -212,7 +212,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     66 tests
+tests/                     69 tests
 ```
 
 ## License
