@@ -8,7 +8,7 @@ Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy
 - **All demos:** https://ryugi62.github.io/streamfhir/ (synthetic, real citizen science, Toulouse, Ghent, Benevento).
 - **Real citizen-science demo:** https://ryugi62.github.io/streamfhir/demo-citizen/ — 25 real FreshWater Watch volunteer records; two implausible *blue-green scum* ticks wait for a reviewer instead of raising alarms.
 - **Real EU data demo (no install):** https://ryugi62.github.io/streamfhir/demo-eu/ — 52 real river monitoring stations around **Toulouse** (a OneAquaHealth research city) from France's open Hub'Eau API, run through the same pipeline ([details](#real-european-data-toulouse-a-oneaquahealth-city)).
-- **Demo video (3:25):** https://youtu.be/xxEL--FC9tA
+- **Demo video (4:19):** https://youtu.be/ED9cfRjsIfg (earlier 3:25 cut: https://youtu.be/xxEL--FC9tA)
 - **Run the full app:** `python3 -m streamfhir serve` → http://127.0.0.1:8000 (Python 3.9+, no dependencies).
 
 ![Sites overview (mobile)](docs/screenshots/0-first-screen-mobile.png)
