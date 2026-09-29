@@ -34,7 +34,7 @@
     "animal": 3,
     "human": 2
    },
-   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to harmless green or filamentous algae",
+   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
    "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins.",
    "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
    "flowing_only": false,
@@ -431,7 +431,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:f26415a4-5e6c-4037-bf61-272cb8456bd0",
+      "fullUrl": "urn:uuid:525101ff-081c-4fc6-9e5f-e66b8df74eb3",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -483,7 +483,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a16a9ada-aa30-4cc1-b287-89f66e47f816",
+      "fullUrl": "urn:uuid:3e80d494-caba-4f62-a7c3-62337e708161",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -529,7 +529,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:808d923a-8bda-460c-8bff-bfc3c76868ed",
+      "fullUrl": "urn:uuid:bd1e4d05-6138-4ceb-af30-a4d470815338",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -603,7 +603,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:f26415a4-5e6c-4037-bf61-272cb8456bd0",
+        "reference": "urn:uuid:525101ff-081c-4fc6-9e5f-e66b8df74eb3",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -611,7 +611,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:a16a9ada-aa30-4cc1-b287-89f66e47f816",
+        "reference": "urn:uuid:3e80d494-caba-4f62-a7c3-62337e708161",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -621,7 +621,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:eeb765b2-a3e3-4603-82fa-b68cebf21f42",
+      "fullUrl": "urn:uuid:99923ee8-7fb9-4155-8569-2020b74a353a",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -645,10 +645,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:808d923a-8bda-460c-8bff-bfc3c76868ed"
+         "reference": "urn:uuid:bd1e4d05-6138-4ceb-af30-a4d470815338"
         }
        ],
-       "recorded": "2026-09-29T06:27:42+00:00",
+       "recorded": "2026-09-29T06:28:41+00:00",
        "activity": {
         "coding": [
          {
@@ -670,7 +670,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:a16a9ada-aa30-4cc1-b287-89f66e47f816",
+          "reference": "urn:uuid:3e80d494-caba-4f62-a7c3-62337e708161",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -893,7 +893,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:4be40f3f-c490-4c2b-8725-e442c04efe4e",
+      "fullUrl": "urn:uuid:3bf38bc1-1c2b-469f-a1b9-211cb271158f",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -945,7 +945,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:dc0ffa75-a13a-4fab-83a2-c944dd463d94",
+      "fullUrl": "urn:uuid:38daf40e-c3e2-43bc-b290-fcc0eba58824",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -991,7 +991,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:b218b58f-8979-43c9-9321-8f9b91f12c58",
+      "fullUrl": "urn:uuid:7bef9d0e-3f0a-4282-8246-6634c4001ca2",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1054,7 +1054,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:4be40f3f-c490-4c2b-8725-e442c04efe4e",
+        "reference": "urn:uuid:3bf38bc1-1c2b-469f-a1b9-211cb271158f",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1062,7 +1062,7 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:dc0ffa75-a13a-4fab-83a2-c944dd463d94",
+        "reference": "urn:uuid:38daf40e-c3e2-43bc-b290-fcc0eba58824",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1072,7 +1072,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:ef90832e-c52a-4f65-89ba-c938a9f815dd",
+      "fullUrl": "urn:uuid:3a1d1480-1969-4870-8eba-47a525e3789c",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1096,10 +1096,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:b218b58f-8979-43c9-9321-8f9b91f12c58"
+         "reference": "urn:uuid:7bef9d0e-3f0a-4282-8246-6634c4001ca2"
         }
        ],
-       "recorded": "2026-09-29T06:27:42+00:00",
+       "recorded": "2026-09-29T06:28:41+00:00",
        "activity": {
         "coding": [
          {
@@ -1121,7 +1121,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:dc0ffa75-a13a-4fab-83a2-c944dd463d94",
+          "reference": "urn:uuid:38daf40e-c3e2-43bc-b290-fcc0eba58824",
           "display": "StreamFHIR 0.3.0"
          }
         }

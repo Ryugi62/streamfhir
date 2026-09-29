@@ -103,7 +103,7 @@ RULES: Tuple[Rule, ...] = (
          clear_keys=("nitrate", "phosphate")),
     Rule("R3", "Possible cyanobacterial bloom", HAZARD, {ANIMAL: 3, HUMAN: 2},
          "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test "
-         "points to harmless green or filamentous algae",
+         "points to ordinary green or filamentous algae",
          "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. "
          "Only a lab test can confirm toxins.",
          "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
