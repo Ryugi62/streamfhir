@@ -184,6 +184,7 @@ class SiteRisk:
     window_start: Optional[datetime]
     window_end: Optional[datetime]
     decisions: Dict[str, str] = field(default_factory=dict)
+    hazard_assessed: bool = True       # False: no record in the window observed any hazard input
 
     @property
     def needs_flag(self) -> bool:
@@ -254,7 +255,7 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
     if as_of is None:
         as_of = max((r.assessment.observed_at for r in usable), default=None)
     if as_of is None:
-        return SiteRisk(site_id, LOW, 0, 0, empty, 0, "unknown", (), (), excluded, None, None, decisions)
+        return SiteRisk(site_id, LOW, 0, 0, empty, 0, "not assessed", (), (), excluded, None, None, decisions, False)
     start = as_of - timedelta(days=window_days)
     window = sorted((r for r in usable if start <= r.assessment.observed_at <= as_of),
                     key=lambda r: r.assessment.observed_at)
@@ -297,9 +298,18 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
         level = MODERATE
     else:
         level = LOW
-    cond = "poor" if condition_pts >= POOR_CONDITION_POINTS else "fair" if condition_pts >= FAIR_CONDITION_POINTS else "good"
+    def observed(kind: str) -> bool:
+        keys = {k for rule in RULES if rule.kind == kind and not (rule.flowing_only and still_water)
+                for k in (rule.clear_keys or rule.keys)}
+        return any(k in r.assessment.values for r in window for k in keys)
+
+    if not observed(CONDITION):
+        cond = "not assessed"   # missing data is not good news
+    else:
+        cond = "poor" if condition_pts >= POOR_CONDITION_POINTS else "fair" if condition_pts >= FAIR_CONDITION_POINTS else "good"
     return SiteRisk(site_id, level, hazard, confirmed, lanes, condition_pts, cond, tuple(fired),
-                    tuple(r.record_id for r in window), excluded, start, as_of, decisions)
+                    tuple(r.record_id for r in window), excluded, start, as_of, decisions,
+                    hazard_assessed=observed(HAZARD) or bool(fired))
 
 
 def rules_table() -> List[Dict[str, object]]:

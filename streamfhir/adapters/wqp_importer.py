@@ -79,6 +79,10 @@ def parse_results(csv_text: str, stations: Dict[str, Dict]) -> Tuple[List[Dict],
             rec["source_notes"].append("Water temperature unit '%s' is not deg C; the value was not imported." % unit)
             stats["skipped_rows"] += 1
             continue
+        if code == "nitrate" and not unit.lower().replace(" ", "").startswith("mg/l"):
+            rec["source_notes"].append("Nitrate unit '%s' is not mg/L; the value was not imported." % unit)
+            stats["skipped_rows"] += 1
+            continue
         if code == "nitrate":
             u = unit.lower().replace(" ", "")
             if "asn" in u or u.endswith("-n"):

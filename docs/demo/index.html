@@ -134,7 +134,9 @@ function lanes(p){ return `<div class="lanes" aria-label="Health hazard points b
   <div class="lane"><b>${p.environment}</b><span>Environment</span></div>
   <div class="lane"><b>${p.animal}</b><span>Animals</span></div>
   <div class="lane"><b>${p.human}</b><span>People</span></div></div>`; }
-const COND = {poor:"Ecological condition: poor", fair:"Ecological condition: fair", good:"Ecological condition: good", unknown:"Ecological condition: no data"};
+const COND = {poor:"Ecological condition: poor", fair:"Ecological condition: fair", good:"Ecological condition: good", "not assessed":"Ecological condition: not assessed (no habitat, nutrient or invertebrate data)"};
+const lvl = r => r.hazard_assessed === false ? "na" : r.level;
+LEVEL.na = "Not assessed"; LEVEL_CLASS.na = "review"; VERDICT.na = "No visual hazard checks in the last 14 days, so nothing can be said about health hazards here.";
 const asOf = () => cache && cache.as_of ? new Date(cache.as_of).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
 
 function map(list){
@@ -142,11 +144,11 @@ function map(list){
   const [a, b, c, d] = [Math.min(...lats), Math.max(...lats), Math.min(...lons), Math.max(...lons)];
   const W = 360, H = 220, pad = 28, sx = (W - 2*pad) / ((d - c) || 1), sy = (H - 2*pad) / ((b - a) || 1), k = Math.min(sx, sy);
   const X = lon => pad + (lon - c) * k + ((W - 2*pad) - (d - c) * k) / 2, Y = lat => H - pad - (lat - a) * k - ((H - 2*pad) - (b - a) * k) / 2;
-  const col = {high:"var(--no)", verify:"var(--warn)", moderate:"var(--warn)", low:"var(--ok)"};
+  const col = {high:"var(--no)", verify:"var(--warn)", moderate:"var(--warn)", low:"var(--ok)", na:"var(--hint)"};
   return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} demo sites coloured by hazard level">
-    ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${x.risk.level==="high"?11:8}" fill="${x.risk.level==="verify" ? "none" : col[x.risk.level]}" stroke="${col[x.risk.level]}" stroke-width="${x.risk.level==="verify" ? 4 : 0}" opacity=".9"><title>${esc(x.site.name)}: ${LEVEL[x.risk.level]}</title></circle>
+    ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${list.length > 8 ? (x.risk.level==="high"?7:4) : (x.risk.level==="high"?11:8)}" fill="${x.risk.level==="verify" ? "none" : col[lvl(x.risk)]}" stroke="${col[lvl(x.risk)]}" stroke-width="${x.risk.level==="verify" ? 4 : 0}" opacity=".9"><title>${esc(x.site.name)}: ${LEVEL[x.risk.level]}</title></circle>
       ${list.length <= 8 ? `<text x="${(X(x.site.lon) + (X(x.site.lon) > W/2 ? -15 : 15)).toFixed(1)}" y="${(Y(x.site.lat)+5).toFixed(1)}" text-anchor="${X(x.site.lon) > W/2 ? "end" : "start"}">${esc(x.site.name.split(" - ").map((t, i) => i ? t.split(" ")[0] : t).join(" · "))}</text>` : ""}</a>`).join("")}
-  </svg><figcaption class="help"><span style="color:var(--no)">●</span> High (large) · <span style="color:var(--warn)">○</span> Needs verification (ring) · <span style="color:var(--warn)">●</span> Moderate · <span style="color:var(--ok)">●</span> Low. Schematic positions, no base map. Tap a dot to open the site.</figcaption></figure>`;
+  </svg><figcaption class="help"><span style="color:var(--no)">●</span> High (large) · <span style="color:var(--warn)">○</span> Needs verification (ring) · <span style="color:var(--warn)">●</span> Moderate · <span style="color:var(--ok)">●</span> Low · <span style="color:var(--hint)">●</span> Not assessed. Schematic positions, no base map. Tap a dot to open the site.</figcaption></figure>`;
 }
 
 function footnote(){
@@ -164,9 +166,9 @@ async function sites(){
     <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
     ${map(s)}
     <div class="grid">${s.map(x => `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
-      <div class="row"><div class="num">${x.risk.hazard_points}<small>hazard points</small></div><span class="chip ${LEVEL_CLASS[x.risk.level]}">${LEVEL[x.risk.level]}</span></div>
+      <div class="row"><div class="num">${x.risk.hazard_points}<small>hazard points</small></div><span class="chip ${LEVEL_CLASS[lvl(x.risk)]}">${LEVEL[lvl(x.risk)]}</span></div>
       <div class="site-name">${esc(x.site.name)}</div>
-      <div class="help">${esc(VERDICT[x.risk.level])}</div>
+      <div class="help">${esc(VERDICT[lvl(x.risk)])}</div>
       ${lanes(x.risk.lane_points)}
       <div class="help" style="margin-top:10px">${COND[x.risk.condition]} · ${x.risk.record_ids.length} ${x.risk.record_ids.length===1?"check":"checks"} used</div></a>`).join("")}</div></section>`;
   cta("Start a new stream check", () => location.hash = "#/new");
@@ -195,8 +197,8 @@ async function site(id){
   $("#view").innerHTML = `<section>
     <div class="card" id="level"><div class="num">${r.hazard_points}<small>hazard points · ${r.confirmed_hazard_points} corroborated</small></div>
       <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
-      <div class="row"><span class="chip ${LEVEL_CLASS[r.level]}">${LEVEL[r.level]}</span></div>
-      <p class="lead" style="margin:10px 0 0">${esc(VERDICT[r.level])}</p>${lanes(r.lane_points)}
+      <div class="row"><span class="chip ${LEVEL_CLASS[lvl(r)]}">${LEVEL[lvl(r)]}</span></div>
+      <p class="lead" style="margin:10px 0 0">${esc(VERDICT[lvl(r)])}</p>${lanes(r.lane_points)}
       <p class="help" style="margin:10px 0 0">${COND[r.condition]} (${r.condition_points} points) — tracked separately, never raises a warning on its own.</p></div></section>
     <section><h2>Health hazard: why</h2><div class="card"><ul class="plain">${hz.length ? hz.map(ruleItem).join("") : "<li>No hazard rule fired.</li>"}</ul></div></section>
     <section><h2>Citizen checks</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(p.record_id)}</b>

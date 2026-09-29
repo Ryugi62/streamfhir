@@ -51,3 +51,11 @@ def test_real_data_is_not_tagged_as_test_data_or_pseudonymised():
     obs = [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"][0]
     assert {c["code"] for c in obs["meta"]["security"]} == {"U"}
     assert obs["performer"][0]["display"].startswith("Monitoring organisation")
+    assert obs["performer"][0]["type"] == "Organization"
+
+
+def test_nitrate_with_non_mass_unit_is_not_imported():
+    sites = parse_stations(STATIONS)
+    records, _ = parse_results(HEAD + "ORG,A,A9,2026-09-20,10:00:00,EDT,ST-1,Nitrate,0.3,ueq/L\n",
+                               {s["site_id"]: s for s in sites})
+    assert "nitrate" not in records[0]["values"] and "ueq/L" in records[0]["source_notes"][0]

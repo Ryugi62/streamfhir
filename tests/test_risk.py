@@ -158,3 +158,12 @@ def test_flag_dates_and_evidence_come_from_trusted_reports_only(sites, now):
     r3 = {f.rule_id: f for f in evaluate_site("S-TEST", reports(sites, now, trusted, doubtful)).fired}["R3"]
     assert r3.record_ids == ("T", "D") and r3.trusted_record_ids == ("T",)
     assert r3.last_seen.day == 18
+
+
+def test_missing_observations_are_not_shown_as_good_news(sites, now):
+    chem_only = make_record(values={})
+    chem_only["values"] = {"ph": 7.1, "water-temperature": 18.0}
+    risk = evaluate_site("S-TEST", reports(sites, now, chem_only))
+    assert risk.hazard_assessed is False and risk.condition == "not assessed"
+    full = evaluate_site("S-TEST", reports(sites, now, make_record()))
+    assert full.hazard_assessed is True and full.condition == "good"

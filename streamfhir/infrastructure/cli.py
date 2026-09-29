@@ -106,7 +106,7 @@ def main(argv=None):
         for o in svc.site_overview():
             r = o.risk
             print("%-11s %-9s hazard %2d (corroborated %2d) %s  condition=%s(%d)  rules=%s  flag=%s" % (
-                o.site.site_id, r.level.upper(), r.hazard_points, r.confirmed_hazard_points, r.lane_points,
+                o.site.site_id, r.level.upper() if r.hazard_assessed else "NOT-ASSESSED", r.hazard_points, r.confirmed_hazard_points, r.lane_points,
                 r.condition, r.condition_points, [f.rule_id + ("" if f.corroborated else "?") for f in r.fired],
                 bool(o.flag_bundle)))
     elif cmd == "rules":

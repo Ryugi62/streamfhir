@@ -201,6 +201,7 @@
     "decisions": {
      "SYN-013": "confirm"
     },
+    "hazard_assessed": true,
     "needs_flag": false
    },
    "reports": [
@@ -398,6 +399,7 @@
     "decisions": {
      "SYN-013": "confirm"
     },
+    "hazard_assessed": true,
     "needs_flag": true
    },
    "reports": [
@@ -441,7 +443,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:f861fdd3-70dd-46b1-b45e-5e030191bd0a",
+      "fullUrl": "urn:uuid:29bfc6b7-4041-45ab-bd35-0690576d5271",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -493,7 +495,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:3b50da44-647a-4991-b540-2a74a9c3b9a5",
+      "fullUrl": "urn:uuid:3117d532-417b-4f1f-b6de-060313d81a38",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -539,7 +541,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:db89f7df-4190-4ae3-a0fc-4ae0e0a30dd4",
+      "fullUrl": "urn:uuid:81f362d3-af19-4a69-9be7-5700654c8981",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -613,7 +615,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:f861fdd3-70dd-46b1-b45e-5e030191bd0a",
+        "reference": "urn:uuid:29bfc6b7-4041-45ab-bd35-0690576d5271",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -621,7 +623,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:3b50da44-647a-4991-b540-2a74a9c3b9a5",
+        "reference": "urn:uuid:3117d532-417b-4f1f-b6de-060313d81a38",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -631,7 +633,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:87ee7ed7-c573-4c46-8c03-9a73779ebaa2",
+      "fullUrl": "urn:uuid:dd4579bd-7c2e-49f5-a1be-36ac5885e911",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -655,10 +657,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:db89f7df-4190-4ae3-a0fc-4ae0e0a30dd4"
+         "reference": "urn:uuid:81f362d3-af19-4a69-9be7-5700654c8981"
         }
        ],
-       "recorded": "2026-09-29T06:33:34+00:00",
+       "recorded": "2026-09-29T06:35:05+00:00",
        "activity": {
         "coding": [
          {
@@ -680,7 +682,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:3b50da44-647a-4991-b540-2a74a9c3b9a5",
+          "reference": "urn:uuid:3117d532-417b-4f1f-b6de-060313d81a38",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -850,6 +852,7 @@
     "decisions": {
      "SYN-013": "confirm"
     },
+    "hazard_assessed": true,
     "needs_flag": true
    },
    "reports": [
@@ -906,7 +909,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:8e1e879f-caa2-4551-9f90-0281d4981919",
+      "fullUrl": "urn:uuid:dd932ef2-8bcc-48f0-a618-a39277e7af54",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -958,7 +961,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:115598bc-6994-47fe-ae6d-3fc43dceb36c",
+      "fullUrl": "urn:uuid:0a978ca0-57b9-4b44-b72c-8f3bc24597d0",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1004,7 +1007,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:db0ae2f0-e0fe-4528-96b9-512a131f1bb1",
+      "fullUrl": "urn:uuid:4ae20a2e-6d6c-4dd5-97e5-2159c6eebc40",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1067,7 +1070,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:8e1e879f-caa2-4551-9f90-0281d4981919",
+        "reference": "urn:uuid:dd932ef2-8bcc-48f0-a618-a39277e7af54",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1075,7 +1078,7 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:115598bc-6994-47fe-ae6d-3fc43dceb36c",
+        "reference": "urn:uuid:0a978ca0-57b9-4b44-b72c-8f3bc24597d0",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1085,7 +1088,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a80ac45b-e867-415b-a571-4fb7b89cd664",
+      "fullUrl": "urn:uuid:9d8c4ef4-e066-43bf-89ac-8b66876a028d",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1109,10 +1112,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:db0ae2f0-e0fe-4528-96b9-512a131f1bb1"
+         "reference": "urn:uuid:4ae20a2e-6d6c-4dd5-97e5-2159c6eebc40"
         }
        ],
-       "recorded": "2026-09-29T06:33:34+00:00",
+       "recorded": "2026-09-29T06:35:05+00:00",
        "activity": {
         "coding": [
          {
@@ -1134,7 +1137,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:115598bc-6994-47fe-ae6d-3fc43dceb36c",
+          "reference": "urn:uuid:0a978ca0-57b9-4b44-b72c-8f3bc24597d0",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -1290,6 +1293,7 @@
     "decisions": {
      "SYN-013": "confirm"
     },
+    "hazard_assessed": true,
     "needs_flag": false
    },
    "reports": [
@@ -1385,6 +1389,7 @@
     "decisions": {
      "SYN-013": "confirm"
     },
+    "hazard_assessed": true,
     "needs_flag": false
    },
    "reports": [

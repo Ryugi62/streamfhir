@@ -1,4 +1,4 @@
-# StreamFHIR — SPEC (v0.3, 2026-09-29)
+# StreamFHIR — SPEC (v0.4, 2026-09-29)
 
 ## 0. One line
 StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.
@@ -111,5 +111,6 @@ FHIR is treated as an external format, so the mapper lives in `adapters/`; the d
 
 ## 10. Change log
 - v0.1 2026-09-29 first version.
+- v0.4 2026-09-29 after rounds 3-4: real public data import (WQP), 'not assessed' instead of good-by-default, Flag ifMatch, static preview notice, Organization performer for real data, nitrate unit check.
 - v0.3 2026-09-29 after round-2 judging: conditional update for Observation/Media (review propagates), confirm basis, 2-visit clearing, still-water sites, safe stand-down, category slicing, stamp_now, static review replay.
 - v0.2 2026-09-29 after 3 mock judges: hazard vs ecological condition split, corroboration from trusted reports only, reviewer confirm/reject, as-of window + clearing, nitrate basis, bloom jar/stick test, invertebrate sampling effort, idempotent FHIR writes, traceable/expiring Flag, 2 profiles, CapabilityStatement, Subscription example, citizen step form, map, static demo.

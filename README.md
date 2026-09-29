@@ -73,7 +73,7 @@ python3 -m streamfhir validate-remote SYN-001 --with-profile   # server-side $va
 python3 -m streamfhir build-static              # rebuild the server-less demo in docs/demo
 python3 -m streamfhir bench                     # throughput on your machine
 python3 -m streamfhir send SYN-010 --live --review reject    # apply a reviewer decision, then send
-python3 -m pip install pytest && python3 -m pytest -q     # 76 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 78 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -186,7 +186,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
 
 ## Evidence
-- **76 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-31 (see `SPEC.md`).
+- **78 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-31 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -194,12 +194,12 @@ Sample result (demo date 29 Sep 2026):
   - Stand-down only touches Flags that are active on the server.
   - Generated indicator and panel Observations and a Flag validate with **no issues** against the published profiles.
   - Broken resources are rejected by the profile.
-- **Real public data run (not citizen science):** `import-wqp` converts a snapshot of the **US Water Quality Portal** into StreamFHIR records. The source is Maryland and DC streams, September 2025 (pH, water temperature and nitrate), retrieved 2026-09-29 without an account; the query is in `data/real-wqp/SOURCE.txt`. The result, using the same pipeline:
+- **Real public data run (not citizen science):** `import-wqp` converts a snapshot of the **US Water Quality Portal** into StreamFHIR records. The source is Maryland and DC streams, September 2025, retrieved 2026-09-29 without an account; the query is in `data/real-wqp/SOURCE.txt`. The query asked for pH, water temperature and nitrate; the snapshot contains 81 pH and 80 temperature rows and **0 nitrate rows**. The result, using the same pipeline:
   - 161 source rows → **63 sampling visits at 45 real stations**, 126 values mapped.
   - **41 ready / 22 needing a look**, for three reasons: 18 pH and 17 temperature duplicates within one visit (the first value is kept and noted), and **4 pH values that the source labels with the unit "Molar"**. That unit error in the source is surfaced for a person, not silently fixed.
   - 378 FHIR resources.
   - A real pH Observation validates with no issues against the profile on HAPI (not stored).
-  - No hazard fires, because this dataset has no visual indicators.
+  - **What this run does not prove:** agency chemistry data contains none of the citizen observations the risk rules score (scum, smell, dead fish, people or animals in the water). All 45 real sites are therefore shown as **"Not assessed"**, not "Low". The run tests ingest, validation and FHIR mapping on real data, not the risk rules.
 
   Real data is not tagged `HTEST`, and organisation ids are not marked pseudonymised. Commands: `python3 -m streamfhir import-wqp`, then `python3 -m streamfhir --data data/real-wqp serve` (screenshots 8 and 9).
 - **Throughput:** about 5,200 records/s validated and mapped on one laptop core (`python3 -m streamfhir bench`, 3,000 records).
@@ -217,7 +217,7 @@ Sample result (demo date 29 Sep 2026):
 - The rules and thresholds are simple, hand-written and untuned. They have not been validated against lab results and must not be read as a health advisory.
 - Only one LOINC code is used. The other codes are prototype codes under `example.org`. The profiles are small differentials, validated with the HAPI server's validator rather than the official IG Publisher.
 - There is no authentication or persistence. Reviewer decisions live in memory and are shared by everyone using the same server. They are lost on restart, and the reviewer identity is a placeholder (`reviewer-demo`).
-- The Subscription is an example resource and was not exercised end to end.
+- The Subscription is an example resource and was not exercised end to end. Showing a notification would need a publicly reachable webhook receiver, or a local FHIR server; this prototype has neither (no hosting, and no Docker/Java on the build machine).
 - Photo URLs are placeholders, and there is no image analysis.
 - The static demo replays precomputed sample checks and single reviewer decisions. Checking your own record needs the local server.
 - Invertebrates are a coarse screen of three groups, not a biotic index. A published scheme such as the Riverfly ARMI would need its method text and local calibration; both are next steps.
@@ -232,7 +232,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records; data/real-wqp: real WQP snapshot + imported dataset
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     76 tests
+tests/                     78 tests
 ```
 
 ## License

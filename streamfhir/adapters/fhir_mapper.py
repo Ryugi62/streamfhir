@@ -194,6 +194,8 @@ class FhirMapper:
         record_notes = [prefix + i.message for i in report.issues if not i.field.startswith("values.")]
         performer = {"identifier": {"system": SID_OBSERVER, "value": a.observer},
                      "display": "Pseudonymous citizen scientist" if self.pseudonymous else "Monitoring organisation %s" % a.observer}
+        if not self.pseudonymous:
+            performer["type"] = "Organization"   # real monitoring organisations are Organizations; citizens stay untyped
         loc = self._location_entry(site)
         dev = self._device_entry()
         loc_ref = {"reference": loc["fullUrl"], "display": site.name}
