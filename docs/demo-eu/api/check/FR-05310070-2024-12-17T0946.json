@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+    "fullUrl": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0efe0a66-08e7-4b02-bef6-ab3e2e20386f",
+    "fullUrl": "urn:uuid:041de77f-b4d2-4ea7-910c-256eeac4533b",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:765aefe5-0ed1-46af-b57a-781b9cbc679f",
+    "fullUrl": "urn:uuid:221dcfcb-7d5c-4577-b575-c218abb8a719",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+      "reference": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:311fcc10-f987-4ae5-8891-1b887494b67a"
+       "reference": "urn:uuid:98f3a61a-a0e6-49eb-8824-4d43e2b42eac"
       },
       {
-       "reference": "urn:uuid:46258c73-9f25-4b72-92e1-bb55583f356a"
+       "reference": "urn:uuid:31c6c5b1-9edb-42fc-a308-951f7bbd0e33"
       },
       {
-       "reference": "urn:uuid:0497e91e-e952-42a3-811d-59dccf6f61d5"
+       "reference": "urn:uuid:2ff5a11b-fa05-4298-a72d-edefa1db417e"
       },
       {
-       "reference": "urn:uuid:ef6bc1c5-7cd6-49d4-91d9-c06b1c91859f"
+       "reference": "urn:uuid:3291f4d9-b7f5-4e75-ac94-e9fe4cb0c6d0"
       },
       {
-       "reference": "urn:uuid:2c7978b2-68a6-4bf8-b10b-ab734f5f7120"
+       "reference": "urn:uuid:da564f80-4430-49ea-9ba8-607b3e7ee252"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:311fcc10-f987-4ae5-8891-1b887494b67a",
+    "fullUrl": "urn:uuid:98f3a61a-a0e6-49eb-8824-4d43e2b42eac",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+      "reference": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:46258c73-9f25-4b72-92e1-bb55583f356a",
+    "fullUrl": "urn:uuid:31c6c5b1-9edb-42fc-a308-951f7bbd0e33",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+      "reference": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0497e91e-e952-42a3-811d-59dccf6f61d5",
+    "fullUrl": "urn:uuid:2ff5a11b-fa05-4298-a72d-edefa1db417e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+      "reference": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ef6bc1c5-7cd6-49d4-91d9-c06b1c91859f",
+    "fullUrl": "urn:uuid:3291f4d9-b7f5-4e75-ac94-e9fe4cb0c6d0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+      "reference": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2c7978b2-68a6-4bf8-b10b-ab734f5f7120",
+    "fullUrl": "urn:uuid:da564f80-4430-49ea-9ba8-607b3e7ee252",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:bf6c09b2-a568-4c26-82c4-98a81765feed",
+      "reference": "urn:uuid:062d7ce1-494a-46e7-b0e5-b8a1827e93f2",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e4239abf-fa03-4b95-89ef-f61474d40955",
+    "fullUrl": "urn:uuid:83b9ff52-9e46-49fa-ba59-1fed28321fb0",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310070-2024-12-17T0946",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:765aefe5-0ed1-46af-b57a-781b9cbc679f"
+       "reference": "urn:uuid:221dcfcb-7d5c-4577-b575-c218abb8a719"
       },
       {
-       "reference": "urn:uuid:311fcc10-f987-4ae5-8891-1b887494b67a"
+       "reference": "urn:uuid:98f3a61a-a0e6-49eb-8824-4d43e2b42eac"
       },
       {
-       "reference": "urn:uuid:46258c73-9f25-4b72-92e1-bb55583f356a"
+       "reference": "urn:uuid:31c6c5b1-9edb-42fc-a308-951f7bbd0e33"
       },
       {
-       "reference": "urn:uuid:0497e91e-e952-42a3-811d-59dccf6f61d5"
+       "reference": "urn:uuid:2ff5a11b-fa05-4298-a72d-edefa1db417e"
       },
       {
-       "reference": "urn:uuid:ef6bc1c5-7cd6-49d4-91d9-c06b1c91859f"
+       "reference": "urn:uuid:3291f4d9-b7f5-4e75-ac94-e9fe4cb0c6d0"
       },
       {
-       "reference": "urn:uuid:2c7978b2-68a6-4bf8-b10b-ab734f5f7120"
+       "reference": "urn:uuid:da564f80-4430-49ea-9ba8-607b3e7ee252"
       }
      ],
      "occurredDateTime": "2024-12-17T09:46:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:46+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:0efe0a66-08e7-4b02-bef6-ab3e2e20386f",
+        "reference": "urn:uuid:041de77f-b4d2-4ea7-910c-256eeac4533b",
         "display": "StreamFHIR 0.7.0"
        }
       }

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:628e2122-5ac8-478d-bed2-579dfc37383d",
+    "fullUrl": "urn:uuid:0cab6631-6af2-4523-acb6-aecdf624ef54",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:388f6071-02af-47e5-82ee-2e4722ce815d",
+    "fullUrl": "urn:uuid:fa1d0617-3628-4fb3-9dde-7f81e487c888",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:62031d2e-2a37-4ecd-aeb0-4fe56eb201e2",
+    "fullUrl": "urn:uuid:0ef0c80d-dd53-47b1-80f8-958e0664489c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:628e2122-5ac8-478d-bed2-579dfc37383d",
+      "reference": "urn:uuid:0cab6631-6af2-4523-acb6-aecdf624ef54",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-02-17T10:25:00+01:00",
@@ -161,16 +161,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:fa2a0764-e8e1-46ab-aeb1-1af1953e4dff"
+       "reference": "urn:uuid:36c4b3be-4863-47e4-ac09-be5af0536ffb"
       },
       {
-       "reference": "urn:uuid:0b8df66c-ad4a-484e-96cf-86fcce380c15"
+       "reference": "urn:uuid:eb774020-0afb-410b-aefe-b25f8d1f193c"
       },
       {
-       "reference": "urn:uuid:9fd2b3f2-9df6-4d70-a191-be17beeab7f3"
+       "reference": "urn:uuid:d799366c-9d79-469d-9e94-7d0b51f193a6"
       },
       {
-       "reference": "urn:uuid:3ab1d91c-1ffa-4ccd-8cee-a04fedb9646e"
+       "reference": "urn:uuid:f116ead5-f69c-4ed8-8f7f-cbe15c38a7de"
       }
      ]
     },
@@ -180,7 +180,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fa2a0764-e8e1-46ab-aeb1-1af1953e4dff",
+    "fullUrl": "urn:uuid:36c4b3be-4863-47e4-ac09-be5af0536ffb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +228,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:628e2122-5ac8-478d-bed2-579dfc37383d",
+      "reference": "urn:uuid:0cab6631-6af2-4523-acb6-aecdf624ef54",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-02-17T10:25:00+01:00",
@@ -255,7 +255,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0b8df66c-ad4a-484e-96cf-86fcce380c15",
+    "fullUrl": "urn:uuid:eb774020-0afb-410b-aefe-b25f8d1f193c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +303,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:628e2122-5ac8-478d-bed2-579dfc37383d",
+      "reference": "urn:uuid:0cab6631-6af2-4523-acb6-aecdf624ef54",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-02-17T10:25:00+01:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9fd2b3f2-9df6-4d70-a191-be17beeab7f3",
+    "fullUrl": "urn:uuid:d799366c-9d79-469d-9e94-7d0b51f193a6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +387,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:628e2122-5ac8-478d-bed2-579dfc37383d",
+      "reference": "urn:uuid:0cab6631-6af2-4523-acb6-aecdf624ef54",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-02-17T10:25:00+01:00",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3ab1d91c-1ffa-4ccd-8cee-a04fedb9646e",
+    "fullUrl": "urn:uuid:f116ead5-f69c-4ed8-8f7f-cbe15c38a7de",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +467,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:628e2122-5ac8-478d-bed2-579dfc37383d",
+      "reference": "urn:uuid:0cab6631-6af2-4523-acb6-aecdf624ef54",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-02-17T10:25:00+01:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b5c8147a-af47-471b-8102-11d8152e8a8b",
+    "fullUrl": "urn:uuid:2d9fef6e-11b4-4301-a887-71c9094b3a52",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S8-2025-02-17T1025",
@@ -513,23 +513,23 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:62031d2e-2a37-4ecd-aeb0-4fe56eb201e2"
+       "reference": "urn:uuid:0ef0c80d-dd53-47b1-80f8-958e0664489c"
       },
       {
-       "reference": "urn:uuid:fa2a0764-e8e1-46ab-aeb1-1af1953e4dff"
+       "reference": "urn:uuid:36c4b3be-4863-47e4-ac09-be5af0536ffb"
       },
       {
-       "reference": "urn:uuid:0b8df66c-ad4a-484e-96cf-86fcce380c15"
+       "reference": "urn:uuid:eb774020-0afb-410b-aefe-b25f8d1f193c"
       },
       {
-       "reference": "urn:uuid:9fd2b3f2-9df6-4d70-a191-be17beeab7f3"
+       "reference": "urn:uuid:d799366c-9d79-469d-9e94-7d0b51f193a6"
       },
       {
-       "reference": "urn:uuid:3ab1d91c-1ffa-4ccd-8cee-a04fedb9646e"
+       "reference": "urn:uuid:f116ead5-f69c-4ed8-8f7f-cbe15c38a7de"
       }
      ],
      "occurredDateTime": "2025-02-17T10:25:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -570,7 +570,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:388f6071-02af-47e5-82ee-2e4722ce815d",
+        "reference": "urn:uuid:fa1d0617-3628-4fb3-9dde-7f81e487c888",
         "display": "StreamFHIR 0.7.0"
        }
       }

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+    "fullUrl": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:26b9bebe-0419-4ae9-85ab-455edb21c282",
+    "fullUrl": "urn:uuid:0837b73a-292d-406a-9aaa-c6917dc90771",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dafeabec-21fa-463d-8c0f-2ab74736e1bc",
+    "fullUrl": "urn:uuid:f8a88d75-9e89-431f-9b39-ab20d89c5d82",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+      "reference": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
       "display": "Toulouse area · La Rivel à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:47:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:a818a394-6799-40fc-ba61-e5fc612be9ab"
+       "reference": "urn:uuid:34089196-4352-47a4-80d7-b49b20cdcc35"
       },
       {
-       "reference": "urn:uuid:ad4317d1-a2f5-407e-9e17-a63ec0c783ee"
+       "reference": "urn:uuid:7c0a6dd5-f802-459a-ba5f-a9bcbb73dc7b"
       },
       {
-       "reference": "urn:uuid:15f59234-39ae-4a41-9020-85e7cd137c3d"
+       "reference": "urn:uuid:df5eeb82-96d0-4c4e-a303-a4f9e2420fca"
       },
       {
-       "reference": "urn:uuid:5ba45136-a308-4970-ae56-d0cefb02b2e6"
+       "reference": "urn:uuid:a3fd60ec-a62d-405e-9c60-71180027fe99"
       },
       {
-       "reference": "urn:uuid:04108c34-21aa-4822-a78e-09e91d78e2f2"
+       "reference": "urn:uuid:a291b8b9-5e96-45e0-bf63-f7a7a74af72c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a818a394-6799-40fc-ba61-e5fc612be9ab",
+    "fullUrl": "urn:uuid:34089196-4352-47a4-80d7-b49b20cdcc35",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+      "reference": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
       "display": "Toulouse area · La Rivel à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:47:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ad4317d1-a2f5-407e-9e17-a63ec0c783ee",
+    "fullUrl": "urn:uuid:7c0a6dd5-f802-459a-ba5f-a9bcbb73dc7b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+      "reference": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
       "display": "Toulouse area · La Rivel à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:47:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:15f59234-39ae-4a41-9020-85e7cd137c3d",
+    "fullUrl": "urn:uuid:df5eeb82-96d0-4c4e-a303-a4f9e2420fca",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+      "reference": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
       "display": "Toulouse area · La Rivel à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:47:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5ba45136-a308-4970-ae56-d0cefb02b2e6",
+    "fullUrl": "urn:uuid:a3fd60ec-a62d-405e-9c60-71180027fe99",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+      "reference": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
       "display": "Toulouse area · La Rivel à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:47:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:04108c34-21aa-4822-a78e-09e91d78e2f2",
+    "fullUrl": "urn:uuid:a291b8b9-5e96-45e0-bf63-f7a7a74af72c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:92cdeb2c-6628-462a-9790-83a6dcd4b9d3",
+      "reference": "urn:uuid:2973d472-28ee-461c-8dc8-f2b67db00228",
       "display": "Toulouse area · La Rivel à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:47:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:abce14b4-b17e-4bdf-ad69-85553cdec44b",
+    "fullUrl": "urn:uuid:78782356-e897-44bb-bf41-b276103eeb3c",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05157550-2024-12-17T1147",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:dafeabec-21fa-463d-8c0f-2ab74736e1bc"
+       "reference": "urn:uuid:f8a88d75-9e89-431f-9b39-ab20d89c5d82"
       },
       {
-       "reference": "urn:uuid:a818a394-6799-40fc-ba61-e5fc612be9ab"
+       "reference": "urn:uuid:34089196-4352-47a4-80d7-b49b20cdcc35"
       },
       {
-       "reference": "urn:uuid:ad4317d1-a2f5-407e-9e17-a63ec0c783ee"
+       "reference": "urn:uuid:7c0a6dd5-f802-459a-ba5f-a9bcbb73dc7b"
       },
       {
-       "reference": "urn:uuid:15f59234-39ae-4a41-9020-85e7cd137c3d"
+       "reference": "urn:uuid:df5eeb82-96d0-4c4e-a303-a4f9e2420fca"
       },
       {
-       "reference": "urn:uuid:5ba45136-a308-4970-ae56-d0cefb02b2e6"
+       "reference": "urn:uuid:a3fd60ec-a62d-405e-9c60-71180027fe99"
       },
       {
-       "reference": "urn:uuid:04108c34-21aa-4822-a78e-09e91d78e2f2"
+       "reference": "urn:uuid:a291b8b9-5e96-45e0-bf63-f7a7a74af72c"
       }
      ],
      "occurredDateTime": "2024-12-17T11:47:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:46+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:26b9bebe-0419-4ae9-85ab-455edb21c282",
+        "reference": "urn:uuid:0837b73a-292d-406a-9aaa-c6917dc90771",
         "display": "StreamFHIR 0.7.0"
        }
       }

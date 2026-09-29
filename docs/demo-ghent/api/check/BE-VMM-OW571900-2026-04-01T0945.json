@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+    "fullUrl": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9f65a29d-e577-4a1c-b31b-0d585ba1a0a6",
+    "fullUrl": "urn:uuid:57982889-066e-440f-bea0-7924ee51d02b",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3fda78d8-a830-48bc-84cd-e34f7de1ccad",
+    "fullUrl": "urn:uuid:444ea566-2571-4b37-9a83-2ee369c0d1d0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -161,22 +161,22 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:63ec8922-bf19-4cff-9943-d4e0cdb57aaf"
+       "reference": "urn:uuid:150f2578-13a7-4afa-bef2-fca81cb77e22"
       },
       {
-       "reference": "urn:uuid:effa5dcd-506b-411b-a7bb-7f09193ebb0c"
+       "reference": "urn:uuid:e1da88fa-fbb7-4acc-8e99-69e11335abf0"
       },
       {
-       "reference": "urn:uuid:00b6ab27-179d-4f8e-a857-6135707036a6"
+       "reference": "urn:uuid:b1adfd81-520b-4bbb-b313-26703f0d99b6"
       },
       {
-       "reference": "urn:uuid:7b05932f-fcca-440a-a53e-1e2f4320da5a"
+       "reference": "urn:uuid:6d781b8b-e008-4aa0-a241-cb04bdf54441"
       },
       {
-       "reference": "urn:uuid:db3004e3-1b17-4b49-9ade-9ee89ea489f9"
+       "reference": "urn:uuid:0c1fbd83-8453-4a36-875f-1dddd703d680"
       },
       {
-       "reference": "urn:uuid:5416a5bf-1edd-4f61-adb7-3dbf7e6647b8"
+       "reference": "urn:uuid:b7535d24-5303-4264-8c4d-9d2a5c689fc6"
       }
      ]
     },
@@ -186,7 +186,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:63ec8922-bf19-4cff-9943-d4e0cdb57aaf",
+    "fullUrl": "urn:uuid:150f2578-13a7-4afa-bef2-fca81cb77e22",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -234,7 +234,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -261,7 +261,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:effa5dcd-506b-411b-a7bb-7f09193ebb0c",
+    "fullUrl": "urn:uuid:e1da88fa-fbb7-4acc-8e99-69e11335abf0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -309,7 +309,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -340,7 +340,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:00b6ab27-179d-4f8e-a857-6135707036a6",
+    "fullUrl": "urn:uuid:b1adfd81-520b-4bbb-b313-26703f0d99b6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -388,7 +388,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -415,7 +415,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7b05932f-fcca-440a-a53e-1e2f4320da5a",
+    "fullUrl": "urn:uuid:6d781b8b-e008-4aa0-a241-cb04bdf54441",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -463,7 +463,7 @@
       "text": "Phosphate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:db3004e3-1b17-4b49-9ade-9ee89ea489f9",
+    "fullUrl": "urn:uuid:0c1fbd83-8453-4a36-875f-1dddd703d680",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -547,7 +547,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -574,7 +574,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5416a5bf-1edd-4f61-adb7-3dbf7e6647b8",
+    "fullUrl": "urn:uuid:b7535d24-5303-4264-8c4d-9d2a5c689fc6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -627,7 +627,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:4632e9cb-def4-4933-9598-c02e55199e24",
+      "reference": "urn:uuid:40469652-6162-45bd-b18a-7c56d8b3a02c",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-04-01T09:45:12+02:00",
@@ -654,7 +654,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c7774af0-89a8-4a51-8a9b-48f6c90cb377",
+    "fullUrl": "urn:uuid:18994437-2f54-46e1-9d12-a765360c5107",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW571900-2026-04-01T0945",
@@ -673,29 +673,29 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:3fda78d8-a830-48bc-84cd-e34f7de1ccad"
+       "reference": "urn:uuid:444ea566-2571-4b37-9a83-2ee369c0d1d0"
       },
       {
-       "reference": "urn:uuid:63ec8922-bf19-4cff-9943-d4e0cdb57aaf"
+       "reference": "urn:uuid:150f2578-13a7-4afa-bef2-fca81cb77e22"
       },
       {
-       "reference": "urn:uuid:effa5dcd-506b-411b-a7bb-7f09193ebb0c"
+       "reference": "urn:uuid:e1da88fa-fbb7-4acc-8e99-69e11335abf0"
       },
       {
-       "reference": "urn:uuid:00b6ab27-179d-4f8e-a857-6135707036a6"
+       "reference": "urn:uuid:b1adfd81-520b-4bbb-b313-26703f0d99b6"
       },
       {
-       "reference": "urn:uuid:7b05932f-fcca-440a-a53e-1e2f4320da5a"
+       "reference": "urn:uuid:6d781b8b-e008-4aa0-a241-cb04bdf54441"
       },
       {
-       "reference": "urn:uuid:db3004e3-1b17-4b49-9ade-9ee89ea489f9"
+       "reference": "urn:uuid:0c1fbd83-8453-4a36-875f-1dddd703d680"
       },
       {
-       "reference": "urn:uuid:5416a5bf-1edd-4f61-adb7-3dbf7e6647b8"
+       "reference": "urn:uuid:b7535d24-5303-4264-8c4d-9d2a5c689fc6"
       }
      ],
      "occurredDateTime": "2026-04-01T09:45:12+02:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -736,7 +736,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:9f65a29d-e577-4a1c-b31b-0d585ba1a0a6",
+        "reference": "urn:uuid:57982889-066e-440f-bea0-7924ee51d02b",
         "display": "StreamFHIR 0.7.0"
        }
       }

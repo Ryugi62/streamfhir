@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+    "fullUrl": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dd7a4f7f-f6b4-4f2e-8f11-58c918ec7b7b",
+    "fullUrl": "urn:uuid:79a02b3d-8ed9-4c9c-9761-dd675f1608e2",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:443482cc-7a4c-4b39-ac0c-f415b64067e9",
+    "fullUrl": "urn:uuid:4d031a7b-1b82-455a-b168-1c6cd1bcd4b8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -161,22 +161,22 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:caa9987c-3b95-4dd3-a8bd-1beafa8f3bde"
+       "reference": "urn:uuid:d727a47e-9524-48bc-9d79-9925a2a73753"
       },
       {
-       "reference": "urn:uuid:065c69c0-2e18-4f78-adc2-597879588472"
+       "reference": "urn:uuid:c82cd262-fcba-4c9c-99c8-2b850e25f2b8"
       },
       {
-       "reference": "urn:uuid:3cf89f8f-3329-48e7-9e59-17f1ffeab28c"
+       "reference": "urn:uuid:f95a277f-347f-408f-aa43-ebc81202dbde"
       },
       {
-       "reference": "urn:uuid:11679a0f-a9d7-4255-9947-db8a88d90414"
+       "reference": "urn:uuid:439b8a0d-39eb-4845-88bf-e9fda4fd66af"
       },
       {
-       "reference": "urn:uuid:9410d2be-a3ab-48cf-9eae-16ef110079db"
+       "reference": "urn:uuid:74fe7038-67c0-4b94-a0ab-da0114b07095"
       },
       {
-       "reference": "urn:uuid:243e1409-874d-4a58-a3a1-51128e2c113c"
+       "reference": "urn:uuid:21fa0c2d-ad1b-434a-b5c0-405ab8a8c9e7"
       }
      ]
     },
@@ -186,7 +186,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:caa9987c-3b95-4dd3-a8bd-1beafa8f3bde",
+    "fullUrl": "urn:uuid:d727a47e-9524-48bc-9d79-9925a2a73753",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -234,7 +234,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -261,7 +261,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:065c69c0-2e18-4f78-adc2-597879588472",
+    "fullUrl": "urn:uuid:c82cd262-fcba-4c9c-99c8-2b850e25f2b8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -309,7 +309,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -340,7 +340,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3cf89f8f-3329-48e7-9e59-17f1ffeab28c",
+    "fullUrl": "urn:uuid:f95a277f-347f-408f-aa43-ebc81202dbde",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -388,7 +388,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -415,7 +415,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:11679a0f-a9d7-4255-9947-db8a88d90414",
+    "fullUrl": "urn:uuid:439b8a0d-39eb-4845-88bf-e9fda4fd66af",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -463,7 +463,7 @@
       "text": "Phosphate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9410d2be-a3ab-48cf-9eae-16ef110079db",
+    "fullUrl": "urn:uuid:74fe7038-67c0-4b94-a0ab-da0114b07095",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -547,7 +547,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -574,7 +574,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:243e1409-874d-4a58-a3a1-51128e2c113c",
+    "fullUrl": "urn:uuid:21fa0c2d-ad1b-434a-b5c0-405ab8a8c9e7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -627,7 +627,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:39b0344c-2ad7-4e25-9b23-f492abd698e6",
+      "reference": "urn:uuid:6315daed-3f7c-4213-be2b-d81afeb22300",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-08-11T11:58:24+02:00",
@@ -654,7 +654,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:93af51c7-10cf-4647-8eb9-c368909e7367",
+    "fullUrl": "urn:uuid:af7fb9f4-1f2f-4dee-87b0-78a45be98eaf",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW172100-2026-08-11T1158",
@@ -673,29 +673,29 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:443482cc-7a4c-4b39-ac0c-f415b64067e9"
+       "reference": "urn:uuid:4d031a7b-1b82-455a-b168-1c6cd1bcd4b8"
       },
       {
-       "reference": "urn:uuid:caa9987c-3b95-4dd3-a8bd-1beafa8f3bde"
+       "reference": "urn:uuid:d727a47e-9524-48bc-9d79-9925a2a73753"
       },
       {
-       "reference": "urn:uuid:065c69c0-2e18-4f78-adc2-597879588472"
+       "reference": "urn:uuid:c82cd262-fcba-4c9c-99c8-2b850e25f2b8"
       },
       {
-       "reference": "urn:uuid:3cf89f8f-3329-48e7-9e59-17f1ffeab28c"
+       "reference": "urn:uuid:f95a277f-347f-408f-aa43-ebc81202dbde"
       },
       {
-       "reference": "urn:uuid:11679a0f-a9d7-4255-9947-db8a88d90414"
+       "reference": "urn:uuid:439b8a0d-39eb-4845-88bf-e9fda4fd66af"
       },
       {
-       "reference": "urn:uuid:9410d2be-a3ab-48cf-9eae-16ef110079db"
+       "reference": "urn:uuid:74fe7038-67c0-4b94-a0ab-da0114b07095"
       },
       {
-       "reference": "urn:uuid:243e1409-874d-4a58-a3a1-51128e2c113c"
+       "reference": "urn:uuid:21fa0c2d-ad1b-434a-b5c0-405ab8a8c9e7"
       }
      ],
      "occurredDateTime": "2026-08-11T11:58:24+02:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -736,7 +736,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:dd7a4f7f-f6b4-4f2e-8f11-58c918ec7b7b",
+        "reference": "urn:uuid:79a02b3d-8ed9-4c9c-9761-dd675f1608e2",
         "display": "StreamFHIR 0.7.0"
        }
       }

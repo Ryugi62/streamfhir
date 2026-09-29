@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+    "fullUrl": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e10ef890-5bdb-471c-8053-d907e5646814",
+    "fullUrl": "urn:uuid:94c5c8c9-0b2f-4bbd-b191-a09483948f93",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:82d07c6f-879e-4995-9edc-c32b955fe3f4",
+    "fullUrl": "urn:uuid:bd6c6bb7-6589-465a-88d7-d332dc1720eb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+      "reference": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
       "display": "Toulouse area · L'Aussonnelle à Léguevin"
      },
      "effectiveDateTime": "2024-12-19T11:20:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:4cacb8e0-3867-43de-8b3a-eea27d3f4576"
+       "reference": "urn:uuid:91b5e71d-e246-4993-bf1b-500a88e6e1ef"
       },
       {
-       "reference": "urn:uuid:07fbb16f-fac9-42df-9da8-80b197fb969d"
+       "reference": "urn:uuid:545654dd-4204-4876-b58a-537dcd6507d8"
       },
       {
-       "reference": "urn:uuid:81ac1eca-7ac1-40c5-ac8a-3cef4290a8fc"
+       "reference": "urn:uuid:f813ae0c-f5ef-4c8a-9537-216b695fdace"
       },
       {
-       "reference": "urn:uuid:354708a4-8774-493f-b470-92d4f6a06087"
+       "reference": "urn:uuid:573f9baf-e0af-42bc-8bc9-9d8dcc622044"
       },
       {
-       "reference": "urn:uuid:e41763f0-5d40-4906-960d-4b55467dbcd7"
+       "reference": "urn:uuid:d4528709-7f12-4c00-8c97-a47ab107763b"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4cacb8e0-3867-43de-8b3a-eea27d3f4576",
+    "fullUrl": "urn:uuid:91b5e71d-e246-4993-bf1b-500a88e6e1ef",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+      "reference": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
       "display": "Toulouse area · L'Aussonnelle à Léguevin"
      },
      "effectiveDateTime": "2024-12-19T11:20:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:07fbb16f-fac9-42df-9da8-80b197fb969d",
+    "fullUrl": "urn:uuid:545654dd-4204-4876-b58a-537dcd6507d8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+      "reference": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
       "display": "Toulouse area · L'Aussonnelle à Léguevin"
      },
      "effectiveDateTime": "2024-12-19T11:20:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:81ac1eca-7ac1-40c5-ac8a-3cef4290a8fc",
+    "fullUrl": "urn:uuid:f813ae0c-f5ef-4c8a-9537-216b695fdace",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+      "reference": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
       "display": "Toulouse area · L'Aussonnelle à Léguevin"
      },
      "effectiveDateTime": "2024-12-19T11:20:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:354708a4-8774-493f-b470-92d4f6a06087",
+    "fullUrl": "urn:uuid:573f9baf-e0af-42bc-8bc9-9d8dcc622044",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+      "reference": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
       "display": "Toulouse area · L'Aussonnelle à Léguevin"
      },
      "effectiveDateTime": "2024-12-19T11:20:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e41763f0-5d40-4906-960d-4b55467dbcd7",
+    "fullUrl": "urn:uuid:d4528709-7f12-4c00-8c97-a47ab107763b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:17e06463-e293-4676-b79e-8431cb56005f",
+      "reference": "urn:uuid:b87b27dd-99de-4edd-b9a8-6e3aaf933432",
       "display": "Toulouse area · L'Aussonnelle à Léguevin"
      },
      "effectiveDateTime": "2024-12-19T11:20:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bf3e4281-42a4-42c6-8dbc-a2570eca2f1d",
+    "fullUrl": "urn:uuid:c3b55b6c-20fb-4026-951b-fcdc83064302",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159400-2024-12-19T1120",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:82d07c6f-879e-4995-9edc-c32b955fe3f4"
+       "reference": "urn:uuid:bd6c6bb7-6589-465a-88d7-d332dc1720eb"
       },
       {
-       "reference": "urn:uuid:4cacb8e0-3867-43de-8b3a-eea27d3f4576"
+       "reference": "urn:uuid:91b5e71d-e246-4993-bf1b-500a88e6e1ef"
       },
       {
-       "reference": "urn:uuid:07fbb16f-fac9-42df-9da8-80b197fb969d"
+       "reference": "urn:uuid:545654dd-4204-4876-b58a-537dcd6507d8"
       },
       {
-       "reference": "urn:uuid:81ac1eca-7ac1-40c5-ac8a-3cef4290a8fc"
+       "reference": "urn:uuid:f813ae0c-f5ef-4c8a-9537-216b695fdace"
       },
       {
-       "reference": "urn:uuid:354708a4-8774-493f-b470-92d4f6a06087"
+       "reference": "urn:uuid:573f9baf-e0af-42bc-8bc9-9d8dcc622044"
       },
       {
-       "reference": "urn:uuid:e41763f0-5d40-4906-960d-4b55467dbcd7"
+       "reference": "urn:uuid:d4528709-7f12-4c00-8c97-a47ab107763b"
       }
      ],
      "occurredDateTime": "2024-12-19T11:20:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:46+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:e10ef890-5bdb-471c-8053-d907e5646814",
+        "reference": "urn:uuid:94c5c8c9-0b2f-4bbd-b191-a09483948f93",
         "display": "StreamFHIR 0.7.0"
        }
       }

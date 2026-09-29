@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:47254d6b-6689-4546-9fdd-fd53b147becd",
+    "fullUrl": "urn:uuid:62d89178-761e-469e-8b18-fff281107148",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dd543319-3c84-40b7-9c88-63d68172a9bd",
+    "fullUrl": "urn:uuid:3112edf7-023f-49dd-bf56-045114c61cf6",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:223532ef-8429-422b-a815-e24a7bb32dc4",
+    "fullUrl": "urn:uuid:cb8ad716-6bc5-4ef0-9961-668038beb0d2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:47254d6b-6689-4546-9fdd-fd53b147becd",
+      "reference": "urn:uuid:62d89178-761e-469e-8b18-fff281107148",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2025-10-01T09:20:00+02:00",
@@ -161,13 +161,13 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:18faf038-5eb8-4ed7-a8d4-b8087108e3f5"
+       "reference": "urn:uuid:ac2ec029-f006-4e9c-b0d8-233989d0c236"
       },
       {
-       "reference": "urn:uuid:71bda871-e203-4f5a-8942-0a3d09a8deda"
+       "reference": "urn:uuid:4477d84e-df21-4a12-ab1f-25ff69620963"
       },
       {
-       "reference": "urn:uuid:b8455269-23e6-493b-99f9-788cc2fb9beb"
+       "reference": "urn:uuid:9b825ae1-9021-4aef-84ce-04bac77ff623"
       }
      ]
     },
@@ -177,7 +177,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:18faf038-5eb8-4ed7-a8d4-b8087108e3f5",
+    "fullUrl": "urn:uuid:ac2ec029-f006-4e9c-b0d8-233989d0c236",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -225,7 +225,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:47254d6b-6689-4546-9fdd-fd53b147becd",
+      "reference": "urn:uuid:62d89178-761e-469e-8b18-fff281107148",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2025-10-01T09:20:00+02:00",
@@ -252,7 +252,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:71bda871-e203-4f5a-8942-0a3d09a8deda",
+    "fullUrl": "urn:uuid:4477d84e-df21-4a12-ab1f-25ff69620963",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -300,7 +300,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:47254d6b-6689-4546-9fdd-fd53b147becd",
+      "reference": "urn:uuid:62d89178-761e-469e-8b18-fff281107148",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2025-10-01T09:20:00+02:00",
@@ -331,7 +331,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b8455269-23e6-493b-99f9-788cc2fb9beb",
+    "fullUrl": "urn:uuid:9b825ae1-9021-4aef-84ce-04bac77ff623",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -384,7 +384,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:47254d6b-6689-4546-9fdd-fd53b147becd",
+      "reference": "urn:uuid:62d89178-761e-469e-8b18-fff281107148",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2025-10-01T09:20:00+02:00",
@@ -411,7 +411,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:adc25f02-649e-4573-91df-d7f8b191e2c9",
+    "fullUrl": "urn:uuid:484103e9-d0a4-4f94-8dd6-0fd51138ab5e",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-Sn-2025-10-01T0920",
@@ -430,20 +430,20 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:223532ef-8429-422b-a815-e24a7bb32dc4"
+       "reference": "urn:uuid:cb8ad716-6bc5-4ef0-9961-668038beb0d2"
       },
       {
-       "reference": "urn:uuid:18faf038-5eb8-4ed7-a8d4-b8087108e3f5"
+       "reference": "urn:uuid:ac2ec029-f006-4e9c-b0d8-233989d0c236"
       },
       {
-       "reference": "urn:uuid:71bda871-e203-4f5a-8942-0a3d09a8deda"
+       "reference": "urn:uuid:4477d84e-df21-4a12-ab1f-25ff69620963"
       },
       {
-       "reference": "urn:uuid:b8455269-23e6-493b-99f9-788cc2fb9beb"
+       "reference": "urn:uuid:9b825ae1-9021-4aef-84ce-04bac77ff623"
       }
      ],
      "occurredDateTime": "2025-10-01T09:20:00+02:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -484,7 +484,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:dd543319-3c84-40b7-9c88-63d68172a9bd",
+        "reference": "urn:uuid:3112edf7-023f-49dd-bf56-045114c61cf6",
         "display": "StreamFHIR 0.7.0"
        }
       }

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:6b0ef160-e06c-44d2-a700-6357171818d8",
+    "fullUrl": "urn:uuid:2630a0ca-b530-4def-9918-9fdb38094dab",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e3a855bd-f05b-4070-acba-fd35e8ee6bd0",
+    "fullUrl": "urn:uuid:220c31e7-5e8c-4dba-86b1-f043cd269ff6",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fcdf7260-492e-43cb-b63e-d9321944d399",
+    "fullUrl": "urn:uuid:514be8e9-6d73-46c7-86e6-85389a00cf0b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:6b0ef160-e06c-44d2-a700-6357171818d8",
+      "reference": "urn:uuid:2630a0ca-b530-4def-9918-9fdb38094dab",
       "display": "Benevento · Tammaro, P.te Valentino"
      },
      "effectiveDateTime": "2025-01-20T09:45:00+01:00",
@@ -161,16 +161,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:9a3443a2-4046-434e-8910-d4b92c86eb81"
+       "reference": "urn:uuid:d5f9c9fd-7486-421b-9afd-3bf1120dcc91"
       },
       {
-       "reference": "urn:uuid:dc308c8d-6e2a-45d1-990b-092716350edb"
+       "reference": "urn:uuid:f420bf6d-8b54-4b00-baf4-6bd9844ff83a"
       },
       {
-       "reference": "urn:uuid:b95b1e12-d8a8-4df9-bb74-4aa38ef570b0"
+       "reference": "urn:uuid:3daf72d5-7b43-4f2c-bf3d-dd1cf161aa36"
       },
       {
-       "reference": "urn:uuid:025ab5da-02dc-4d74-9126-b43215b09f40"
+       "reference": "urn:uuid:4d47c7c0-bd3f-4911-8aa2-ca4e0f7bb1f6"
       }
      ]
     },
@@ -180,7 +180,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9a3443a2-4046-434e-8910-d4b92c86eb81",
+    "fullUrl": "urn:uuid:d5f9c9fd-7486-421b-9afd-3bf1120dcc91",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +228,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:6b0ef160-e06c-44d2-a700-6357171818d8",
+      "reference": "urn:uuid:2630a0ca-b530-4def-9918-9fdb38094dab",
       "display": "Benevento · Tammaro, P.te Valentino"
      },
      "effectiveDateTime": "2025-01-20T09:45:00+01:00",
@@ -255,7 +255,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dc308c8d-6e2a-45d1-990b-092716350edb",
+    "fullUrl": "urn:uuid:f420bf6d-8b54-4b00-baf4-6bd9844ff83a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +303,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:6b0ef160-e06c-44d2-a700-6357171818d8",
+      "reference": "urn:uuid:2630a0ca-b530-4def-9918-9fdb38094dab",
       "display": "Benevento · Tammaro, P.te Valentino"
      },
      "effectiveDateTime": "2025-01-20T09:45:00+01:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b95b1e12-d8a8-4df9-bb74-4aa38ef570b0",
+    "fullUrl": "urn:uuid:3daf72d5-7b43-4f2c-bf3d-dd1cf161aa36",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +387,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:6b0ef160-e06c-44d2-a700-6357171818d8",
+      "reference": "urn:uuid:2630a0ca-b530-4def-9918-9fdb38094dab",
       "display": "Benevento · Tammaro, P.te Valentino"
      },
      "effectiveDateTime": "2025-01-20T09:45:00+01:00",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:025ab5da-02dc-4d74-9126-b43215b09f40",
+    "fullUrl": "urn:uuid:4d47c7c0-bd3f-4911-8aa2-ca4e0f7bb1f6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +467,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:6b0ef160-e06c-44d2-a700-6357171818d8",
+      "reference": "urn:uuid:2630a0ca-b530-4def-9918-9fdb38094dab",
       "display": "Benevento · Tammaro, P.te Valentino"
      },
      "effectiveDateTime": "2025-01-20T09:45:00+01:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e3076af8-196c-4f2f-be67-77e2dee7cca1",
+    "fullUrl": "urn:uuid:7e926aa9-4950-440a-81eb-2490c8eedd1d",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-Ta3-2025-01-20T0945",
@@ -513,23 +513,23 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:fcdf7260-492e-43cb-b63e-d9321944d399"
+       "reference": "urn:uuid:514be8e9-6d73-46c7-86e6-85389a00cf0b"
       },
       {
-       "reference": "urn:uuid:9a3443a2-4046-434e-8910-d4b92c86eb81"
+       "reference": "urn:uuid:d5f9c9fd-7486-421b-9afd-3bf1120dcc91"
       },
       {
-       "reference": "urn:uuid:dc308c8d-6e2a-45d1-990b-092716350edb"
+       "reference": "urn:uuid:f420bf6d-8b54-4b00-baf4-6bd9844ff83a"
       },
       {
-       "reference": "urn:uuid:b95b1e12-d8a8-4df9-bb74-4aa38ef570b0"
+       "reference": "urn:uuid:3daf72d5-7b43-4f2c-bf3d-dd1cf161aa36"
       },
       {
-       "reference": "urn:uuid:025ab5da-02dc-4d74-9126-b43215b09f40"
+       "reference": "urn:uuid:4d47c7c0-bd3f-4911-8aa2-ca4e0f7bb1f6"
       }
      ],
      "occurredDateTime": "2025-01-20T09:45:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -570,7 +570,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:e3a855bd-f05b-4070-acba-fd35e8ee6bd0",
+        "reference": "urn:uuid:220c31e7-5e8c-4dba-86b1-f043cd269ff6",
         "display": "StreamFHIR 0.7.0"
        }
       }

@@ -442,7 +442,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:e318ab49-0230-4a46-986f-3f3d923ed0f0",
+      "fullUrl": "urn:uuid:f1fb397f-4a88-4b5c-9e60-b376ea4f2a72",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -489,7 +489,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:64c0fdcc-d5b2-4815-bedc-ddee423ffd93",
+      "fullUrl": "urn:uuid:aaf1a50f-257b-45db-81f2-568a746a053c",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -530,7 +530,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:36aa0353-0183-4ac8-bf55-64a77a1ef18d",
+      "fullUrl": "urn:uuid:8421e531-e7e4-4633-982b-f6baf49c98a0",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -603,7 +603,7 @@
         "text": "High health hazard at Central Portugal · Rio Vouga, Aveiro (5 corroborated of 5 hazard points: environment 0 / animal 3 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer). Expires 2023-04-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:e318ab49-0230-4a46-986f-3f3d923ed0f0",
+        "reference": "urn:uuid:f1fb397f-4a88-4b5c-9e60-b376ea4f2a72",
         "display": "Central Portugal · Rio Vouga, Aveiro"
        },
        "period": {
@@ -611,7 +611,7 @@
         "end": "2023-04-09T15:00:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:64c0fdcc-d5b2-4815-bedc-ddee423ffd93",
+        "reference": "urn:uuid:aaf1a50f-257b-45db-81f2-568a746a053c",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -621,7 +621,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:bdde8f72-17c6-4665-807d-2a7eb68e2770",
+      "fullUrl": "urn:uuid:134dedda-8aa8-4f8f-be38-d1a7708b6cf9",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-FWW-40.6527--8.5794",
@@ -640,10 +640,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:36aa0353-0183-4ac8-bf55-64a77a1ef18d"
+         "reference": "urn:uuid:8421e531-e7e4-4633-982b-f6baf49c98a0"
         }
        ],
-       "recorded": "2026-09-29T14:48:29+00:00",
+       "recorded": "2026-09-29T14:48:47+00:00",
        "activity": {
         "coding": [
          {
@@ -665,7 +665,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:64c0fdcc-d5b2-4815-bedc-ddee423ffd93",
+          "reference": "urn:uuid:aaf1a50f-257b-45db-81f2-568a746a053c",
           "display": "StreamFHIR 0.7.0"
          }
         }

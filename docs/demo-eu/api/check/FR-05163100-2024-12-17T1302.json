@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+    "fullUrl": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -64,7 +64,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cd88064e-f1de-4f5a-9d53-d3ee2bfa25cc",
+    "fullUrl": "urn:uuid:c026b221-6f27-47e1-84a0-ab52757e3724",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -105,7 +105,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b8a1f564-1887-4956-9f85-64b9b1d441d3",
+    "fullUrl": "urn:uuid:d0371484-2021-4ac8-b72c-442481cf8851",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -153,7 +153,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+      "reference": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)"
      },
      "effectiveDateTime": "2024-12-17T13:02:00+01:00",
@@ -169,19 +169,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:697934fc-174d-4e4b-ba2e-06f5ea9313d4"
+       "reference": "urn:uuid:bc333c92-4cb2-457f-b9ec-2f07d534a377"
       },
       {
-       "reference": "urn:uuid:8995cbfe-9fb1-4d5f-a6e7-2552a80673b5"
+       "reference": "urn:uuid:7c4e7fbb-696e-4a0a-a4bd-a2fb85aa8e98"
       },
       {
-       "reference": "urn:uuid:800be8e6-1343-4561-a9ed-1b955e2a8692"
+       "reference": "urn:uuid:79a52a62-02a9-4908-9332-ba32ac6a0f2a"
       },
       {
-       "reference": "urn:uuid:bf293d83-954e-4748-a514-44874fa61ecd"
+       "reference": "urn:uuid:728a909f-7df9-4b7a-b009-d68ae4a33ce7"
       },
       {
-       "reference": "urn:uuid:6fcb2879-11f2-46fe-8cc0-2dba7bd2a606"
+       "reference": "urn:uuid:7e2a60ca-c73f-4f16-9e28-7271416c5061"
       }
      ]
     },
@@ -191,7 +191,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:697934fc-174d-4e4b-ba2e-06f5ea9313d4",
+    "fullUrl": "urn:uuid:bc333c92-4cb2-457f-b9ec-2f07d534a377",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -249,7 +249,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+      "reference": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)"
      },
      "effectiveDateTime": "2024-12-17T13:02:00+01:00",
@@ -276,7 +276,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8995cbfe-9fb1-4d5f-a6e7-2552a80673b5",
+    "fullUrl": "urn:uuid:7c4e7fbb-696e-4a0a-a4bd-a2fb85aa8e98",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -329,7 +329,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+      "reference": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)"
      },
      "effectiveDateTime": "2024-12-17T13:02:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:800be8e6-1343-4561-a9ed-1b955e2a8692",
+    "fullUrl": "urn:uuid:79a52a62-02a9-4908-9332-ba32ac6a0f2a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+      "reference": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)"
      },
      "effectiveDateTime": "2024-12-17T13:02:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bf293d83-954e-4748-a514-44874fa61ecd",
+    "fullUrl": "urn:uuid:728a909f-7df9-4b7a-b009-d68ae4a33ce7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -504,7 +504,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+      "reference": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)"
      },
      "effectiveDateTime": "2024-12-17T13:02:00+01:00",
@@ -531,7 +531,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6fcb2879-11f2-46fe-8cc0-2dba7bd2a606",
+    "fullUrl": "urn:uuid:7e2a60ca-c73f-4f16-9e28-7271416c5061",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:7ba36017-bf7b-44d1-b4f1-8d4b0b7fd5af",
+      "reference": "urn:uuid:252d04b6-a58f-4bef-9f6e-9f2fad0e6d31",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)"
      },
      "effectiveDateTime": "2024-12-17T13:02:00+01:00",
@@ -610,7 +610,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:615638ec-24b7-495a-8fbd-0cf74a1859b7",
+    "fullUrl": "urn:uuid:e2ac0817-4e79-4d2f-991c-d986678ec609",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163100-2024-12-17T1302",
@@ -629,26 +629,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:b8a1f564-1887-4956-9f85-64b9b1d441d3"
+       "reference": "urn:uuid:d0371484-2021-4ac8-b72c-442481cf8851"
       },
       {
-       "reference": "urn:uuid:697934fc-174d-4e4b-ba2e-06f5ea9313d4"
+       "reference": "urn:uuid:bc333c92-4cb2-457f-b9ec-2f07d534a377"
       },
       {
-       "reference": "urn:uuid:8995cbfe-9fb1-4d5f-a6e7-2552a80673b5"
+       "reference": "urn:uuid:7c4e7fbb-696e-4a0a-a4bd-a2fb85aa8e98"
       },
       {
-       "reference": "urn:uuid:800be8e6-1343-4561-a9ed-1b955e2a8692"
+       "reference": "urn:uuid:79a52a62-02a9-4908-9332-ba32ac6a0f2a"
       },
       {
-       "reference": "urn:uuid:bf293d83-954e-4748-a514-44874fa61ecd"
+       "reference": "urn:uuid:728a909f-7df9-4b7a-b009-d68ae4a33ce7"
       },
       {
-       "reference": "urn:uuid:6fcb2879-11f2-46fe-8cc0-2dba7bd2a606"
+       "reference": "urn:uuid:7e2a60ca-c73f-4f16-9e28-7271416c5061"
       }
      ],
      "occurredDateTime": "2024-12-17T13:02:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:46+00:00",
      "activity": {
       "coding": [
        {
@@ -689,7 +689,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:cd88064e-f1de-4f5a-9d53-d3ee2bfa25cc",
+        "reference": "urn:uuid:c026b221-6f27-47e1-84a0-ab52757e3724",
         "display": "StreamFHIR 0.7.0"
        }
       }

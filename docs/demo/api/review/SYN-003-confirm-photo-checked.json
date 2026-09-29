@@ -558,7 +558,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:fd1d3daa-3430-4aa4-980a-213c2eb4e717",
+      "fullUrl": "urn:uuid:5e695b45-39a7-4f62-a6d8-54a0923cd31d",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -610,7 +610,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:073e4dad-da8f-43c5-9521-5bd6951ef0dc",
+      "fullUrl": "urn:uuid:6a2c7d2d-fd1f-4a33-90b3-afecd507827e",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -656,7 +656,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e6c1b33a-f735-451a-a6cf-3a47ba265815",
+      "fullUrl": "urn:uuid:e49e5711-dd3b-4c63-b8e1-1fce07b423f6",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -757,7 +757,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (confirmed by a reviewer); R6 People in contact with affected water (confirmed by a reviewer). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:fd1d3daa-3430-4aa4-980a-213c2eb4e717",
+        "reference": "urn:uuid:5e695b45-39a7-4f62-a6d8-54a0923cd31d",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -765,7 +765,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:073e4dad-da8f-43c5-9521-5bd6951ef0dc",
+        "reference": "urn:uuid:6a2c7d2d-fd1f-4a33-90b3-afecd507827e",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -775,7 +775,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:517c1527-2757-46aa-ac25-637526d9577a",
+      "fullUrl": "urn:uuid:9037ecd8-745e-42b4-a09c-9e5420552dec",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -799,10 +799,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:e6c1b33a-f735-451a-a6cf-3a47ba265815"
+         "reference": "urn:uuid:e49e5711-dd3b-4c63-b8e1-1fce07b423f6"
         }
        ],
-       "recorded": "2026-09-29T14:48:29+00:00",
+       "recorded": "2026-09-29T14:48:46+00:00",
        "activity": {
         "coding": [
          {
@@ -824,7 +824,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:073e4dad-da8f-43c5-9521-5bd6951ef0dc",
+          "reference": "urn:uuid:6a2c7d2d-fd1f-4a33-90b3-afecd507827e",
           "display": "StreamFHIR 0.7.0"
          }
         }

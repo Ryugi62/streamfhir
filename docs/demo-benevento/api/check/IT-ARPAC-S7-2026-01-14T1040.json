@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:88a2716e-4464-4cbf-af33-cbc4b020fb3d",
+    "fullUrl": "urn:uuid:006f7c24-ffd4-45a2-a4c6-c8701efc3c03",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ae8d185d-a5f8-49f1-87d2-93c04f4e6852",
+    "fullUrl": "urn:uuid:b356a649-dd9d-4a63-b55a-a545237176f9",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1f242f45-76bd-4fe0-8449-cd607bc740a8",
+    "fullUrl": "urn:uuid:d1ffd01b-9963-4c80-940a-d1911a38b55c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:88a2716e-4464-4cbf-af33-cbc4b020fb3d",
+      "reference": "urn:uuid:006f7c24-ffd4-45a2-a4c6-c8701efc3c03",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2026-01-14T10:40:00+01:00",
@@ -161,7 +161,7 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:52a85153-7637-4ef9-95fa-7fc410761b29"
+       "reference": "urn:uuid:a7667fa9-2c5e-4369-b1ac-8ea14fee28a0"
       }
      ]
     },
@@ -171,7 +171,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:52a85153-7637-4ef9-95fa-7fc410761b29",
+    "fullUrl": "urn:uuid:a7667fa9-2c5e-4369-b1ac-8ea14fee28a0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -224,7 +224,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:88a2716e-4464-4cbf-af33-cbc4b020fb3d",
+      "reference": "urn:uuid:006f7c24-ffd4-45a2-a4c6-c8701efc3c03",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2026-01-14T10:40:00+01:00",
@@ -251,7 +251,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d739b5f7-8ce1-40cc-93a5-60a14f916c66",
+    "fullUrl": "urn:uuid:3591b8aa-893a-4d5f-9185-5945c04dabba",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S7-2026-01-14T1040",
@@ -270,14 +270,14 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:1f242f45-76bd-4fe0-8449-cd607bc740a8"
+       "reference": "urn:uuid:d1ffd01b-9963-4c80-940a-d1911a38b55c"
       },
       {
-       "reference": "urn:uuid:52a85153-7637-4ef9-95fa-7fc410761b29"
+       "reference": "urn:uuid:a7667fa9-2c5e-4369-b1ac-8ea14fee28a0"
       }
      ],
      "occurredDateTime": "2026-01-14T10:40:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -318,7 +318,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ae8d185d-a5f8-49f1-87d2-93c04f4e6852",
+        "reference": "urn:uuid:b356a649-dd9d-4a63-b55a-a545237176f9",
         "display": "StreamFHIR 0.7.0"
        }
       }

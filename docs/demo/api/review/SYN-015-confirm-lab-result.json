@@ -558,7 +558,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:ae364d1d-43a4-4a87-879c-c0b7719aadc5",
+      "fullUrl": "urn:uuid:6f51201c-707a-43cc-a82f-23049547d8e8",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -610,7 +610,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:4a753d51-729a-4a16-a11e-b5400ed3f0ab",
+      "fullUrl": "urn:uuid:bd59f904-50df-4c58-a00f-95ee07d65f45",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -656,7 +656,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:1967d99c-d90f-49db-9a4a-f93cfba22340",
+      "fullUrl": "urn:uuid:f3b03e57-f970-402e-98d0-904fef7529ee",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -757,7 +757,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:ae364d1d-43a4-4a87-879c-c0b7719aadc5",
+        "reference": "urn:uuid:6f51201c-707a-43cc-a82f-23049547d8e8",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -765,7 +765,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:4a753d51-729a-4a16-a11e-b5400ed3f0ab",
+        "reference": "urn:uuid:bd59f904-50df-4c58-a00f-95ee07d65f45",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -775,7 +775,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:c4b880e9-4c4b-4ca4-bc96-26eba8c4290f",
+      "fullUrl": "urn:uuid:66320277-53e6-48fd-aff4-5318a733c264",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -799,10 +799,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:1967d99c-d90f-49db-9a4a-f93cfba22340"
+         "reference": "urn:uuid:f3b03e57-f970-402e-98d0-904fef7529ee"
         }
        ],
-       "recorded": "2026-09-29T14:48:29+00:00",
+       "recorded": "2026-09-29T14:48:46+00:00",
        "activity": {
         "coding": [
          {
@@ -824,7 +824,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:4a753d51-729a-4a16-a11e-b5400ed3f0ab",
+          "reference": "urn:uuid:bd59f904-50df-4c58-a00f-95ee07d65f45",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -1370,7 +1370,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:8e5791af-3553-417b-842c-d4e999cb93cc",
+      "fullUrl": "urn:uuid:bbc85f39-00f6-4f99-8a7e-c20abfc6e085",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -1422,7 +1422,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:eb48358d-c24a-4f54-bad0-a32bce053392",
+      "fullUrl": "urn:uuid:0ce0c773-bff9-4f4c-822e-51dee2c0eb45",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1468,7 +1468,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:b7b408e1-0fd2-436c-a003-cbcda6794886",
+      "fullUrl": "urn:uuid:d5f86ed1-646f-4f57-9f0b-413a3a55ac0e",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1558,7 +1558,7 @@
         "text": "High health hazard at Willow Creek - allotment gardens (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-11 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:8e5791af-3553-417b-842c-d4e999cb93cc",
+        "reference": "urn:uuid:bbc85f39-00f6-4f99-8a7e-c20abfc6e085",
         "display": "Willow Creek - allotment gardens"
        },
        "period": {
@@ -1566,7 +1566,7 @@
         "end": "2026-10-11T18:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:eb48358d-c24a-4f54-bad0-a32bce053392",
+        "reference": "urn:uuid:0ce0c773-bff9-4f4c-822e-51dee2c0eb45",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -1576,7 +1576,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e526a2df-a1eb-44be-abbc-f0eb2c732e23",
+      "fullUrl": "urn:uuid:fef47df8-7aeb-43bf-b61e-8b16bc411575",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-WILLOW",
@@ -1600,10 +1600,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:b7b408e1-0fd2-436c-a003-cbcda6794886"
+         "reference": "urn:uuid:d5f86ed1-646f-4f57-9f0b-413a3a55ac0e"
         }
        ],
-       "recorded": "2026-09-29T14:48:29+00:00",
+       "recorded": "2026-09-29T14:48:46+00:00",
        "activity": {
         "coding": [
          {
@@ -1625,7 +1625,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:eb48358d-c24a-4f54-bad0-a32bce053392",
+          "reference": "urn:uuid:0ce0c773-bff9-4f4c-822e-51dee2c0eb45",
           "display": "StreamFHIR 0.7.0"
          }
         }

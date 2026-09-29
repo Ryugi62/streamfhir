@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:fdbb1d91-be03-4321-bdce-c7ba98400760",
+    "fullUrl": "urn:uuid:9dde3037-7320-426e-a490-582899c8dc37",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:51cb32a6-4818-44f2-be6b-f61ee75e207e",
+    "fullUrl": "urn:uuid:bbcb3ad8-b21d-4689-ae79-3f7684b32216",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2245223c-a4d7-42b1-b8d1-6b7b0a859d3b",
+    "fullUrl": "urn:uuid:b2b5e4ba-e7a8-460e-8420-b98fa4f06a20",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:fdbb1d91-be03-4321-bdce-c7ba98400760",
+      "reference": "urn:uuid:9dde3037-7320-426e-a490-582899c8dc37",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -161,10 +161,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:ffcb9f07-e8c6-4598-bda2-cfa3e55f52e8"
+       "reference": "urn:uuid:e29fa343-a163-4ca1-aa4b-6343859d629b"
       },
       {
-       "reference": "urn:uuid:bbd84e51-131d-43fb-b9e7-b3aaaaf84bd0"
+       "reference": "urn:uuid:9dd980dd-e6e9-4ad8-8326-02b5ed0c7f8d"
       }
      ]
     },
@@ -174,7 +174,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ffcb9f07-e8c6-4598-bda2-cfa3e55f52e8",
+    "fullUrl": "urn:uuid:e29fa343-a163-4ca1-aa4b-6343859d629b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -227,7 +227,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:fdbb1d91-be03-4321-bdce-c7ba98400760",
+      "reference": "urn:uuid:9dde3037-7320-426e-a490-582899c8dc37",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -254,7 +254,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bbd84e51-131d-43fb-b9e7-b3aaaaf84bd0",
+    "fullUrl": "urn:uuid:9dd980dd-e6e9-4ad8-8326-02b5ed0c7f8d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -307,7 +307,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:fdbb1d91-be03-4321-bdce-c7ba98400760",
+      "reference": "urn:uuid:9dde3037-7320-426e-a490-582899c8dc37",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f106ed5d-6784-4ff3-a2c6-9a02a060bf80",
+    "fullUrl": "urn:uuid:7dee8275-bd5d-4313-b111-7d22b7b28f55",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW168900-2026-07-24T1039",
@@ -353,17 +353,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:2245223c-a4d7-42b1-b8d1-6b7b0a859d3b"
+       "reference": "urn:uuid:b2b5e4ba-e7a8-460e-8420-b98fa4f06a20"
       },
       {
-       "reference": "urn:uuid:ffcb9f07-e8c6-4598-bda2-cfa3e55f52e8"
+       "reference": "urn:uuid:e29fa343-a163-4ca1-aa4b-6343859d629b"
       },
       {
-       "reference": "urn:uuid:bbd84e51-131d-43fb-b9e7-b3aaaaf84bd0"
+       "reference": "urn:uuid:9dd980dd-e6e9-4ad8-8326-02b5ed0c7f8d"
       }
      ],
      "occurredDateTime": "2026-07-24T10:39:01+02:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:47+00:00",
      "activity": {
       "coding": [
        {
@@ -404,7 +404,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:51cb32a6-4818-44f2-be6b-f61ee75e207e",
+        "reference": "urn:uuid:bbcb3ad8-b21d-4689-ae79-3f7684b32216",
         "display": "StreamFHIR 0.7.0"
        }
       }

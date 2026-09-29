@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+    "fullUrl": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b15e55d7-53b6-4aef-b1a3-044597fca033",
+    "fullUrl": "urn:uuid:b991ebc1-2bdb-4449-9529-470745ef23fb",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d2f9a752-9668-4fa9-90a8-77b839885cb2",
+    "fullUrl": "urn:uuid:44c9848e-8257-4bd6-9273-78a1ddb5c0ff",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+      "reference": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:9033dfa0-6dfc-4278-a3c1-11b48330a47a"
+       "reference": "urn:uuid:136400fd-c720-4cf0-9962-27e026129b2d"
       },
       {
-       "reference": "urn:uuid:c88fd12d-207f-4655-974c-ead35e062050"
+       "reference": "urn:uuid:4dc07b1e-d696-4484-9433-5272ce6784b7"
       },
       {
-       "reference": "urn:uuid:273e082c-7f77-4965-8310-91e51ac77408"
+       "reference": "urn:uuid:2d652dd0-398d-4dff-b281-703ff43bee81"
       },
       {
-       "reference": "urn:uuid:d9fd8db2-a308-4228-8fd9-cd11a3a92588"
+       "reference": "urn:uuid:60238223-5ba3-4a5e-848a-6aa02ea89ea5"
       },
       {
-       "reference": "urn:uuid:ada94d5b-f761-4a1c-9d55-6453849c8550"
+       "reference": "urn:uuid:3699ff74-2149-4dc0-87ed-ce95ce4be38c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9033dfa0-6dfc-4278-a3c1-11b48330a47a",
+    "fullUrl": "urn:uuid:136400fd-c720-4cf0-9962-27e026129b2d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+      "reference": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c88fd12d-207f-4655-974c-ead35e062050",
+    "fullUrl": "urn:uuid:4dc07b1e-d696-4484-9433-5272ce6784b7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+      "reference": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:273e082c-7f77-4965-8310-91e51ac77408",
+    "fullUrl": "urn:uuid:2d652dd0-398d-4dff-b281-703ff43bee81",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+      "reference": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d9fd8db2-a308-4228-8fd9-cd11a3a92588",
+    "fullUrl": "urn:uuid:60238223-5ba3-4a5e-848a-6aa02ea89ea5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+      "reference": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ada94d5b-f761-4a1c-9d55-6453849c8550",
+    "fullUrl": "urn:uuid:3699ff74-2149-4dc0-87ed-ce95ce4be38c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:37d8bf45-f412-4d6a-afbe-b2eb13782bdb",
+      "reference": "urn:uuid:b467c353-2117-4587-9b78-1019df7726ee",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b4e9b7c7-e307-4403-bf89-fe45813fcb8a",
+    "fullUrl": "urn:uuid:f6b28e3a-ec8a-4319-b0c6-279b21febd88",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159300-2024-12-19T1150",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:d2f9a752-9668-4fa9-90a8-77b839885cb2"
+       "reference": "urn:uuid:44c9848e-8257-4bd6-9273-78a1ddb5c0ff"
       },
       {
-       "reference": "urn:uuid:9033dfa0-6dfc-4278-a3c1-11b48330a47a"
+       "reference": "urn:uuid:136400fd-c720-4cf0-9962-27e026129b2d"
       },
       {
-       "reference": "urn:uuid:c88fd12d-207f-4655-974c-ead35e062050"
+       "reference": "urn:uuid:4dc07b1e-d696-4484-9433-5272ce6784b7"
       },
       {
-       "reference": "urn:uuid:273e082c-7f77-4965-8310-91e51ac77408"
+       "reference": "urn:uuid:2d652dd0-398d-4dff-b281-703ff43bee81"
       },
       {
-       "reference": "urn:uuid:d9fd8db2-a308-4228-8fd9-cd11a3a92588"
+       "reference": "urn:uuid:60238223-5ba3-4a5e-848a-6aa02ea89ea5"
       },
       {
-       "reference": "urn:uuid:ada94d5b-f761-4a1c-9d55-6453849c8550"
+       "reference": "urn:uuid:3699ff74-2149-4dc0-87ed-ce95ce4be38c"
       }
      ],
      "occurredDateTime": "2024-12-19T11:50:00+01:00",
-     "recorded": "2026-09-29T14:48:29+00:00",
+     "recorded": "2026-09-29T14:48:46+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:b15e55d7-53b6-4aef-b1a3-044597fca033",
+        "reference": "urn:uuid:b991ebc1-2bdb-4449-9529-470745ef23fb",
         "display": "StreamFHIR 0.7.0"
        }
       }
