@@ -17,7 +17,7 @@
  "format": [
   "json"
  ],
- "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create (ifNoneExist on identifier) for Location and Device, conditional update by identifier for Observation, Media and Flag, and update-as-create for Provenance. Consumers find warnings with Flag?category=safety&status=active or subscribe to them (see Subscription example).",
+ "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create (ifNoneExist on identifier) for Location and Device, conditional update by identifier for Observation, Media and Flag, and update-as-create for Provenance. Consumers find warnings with Flag?category=safety&status=active (R4 defines neither search parameter for Flag, so the server must load the StreamFHIR SearchParameters flag-category and flag-status) or subscribe to them (see Subscription example).",
  "rest": [
   {
    "mode": "server",
@@ -146,11 +146,13 @@
       },
       {
        "name": "category",
-       "type": "token"
+       "type": "token",
+       "definition": "https://example.org/fhir/streamfhir/SearchParameter/flag-category"
       },
       {
        "name": "status",
-       "type": "token"
+       "type": "token",
+       "definition": "https://example.org/fhir/streamfhir/SearchParameter/flag-status"
       },
       {
        "name": "subject",

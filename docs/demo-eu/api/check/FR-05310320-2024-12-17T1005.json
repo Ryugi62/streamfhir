@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+    "fullUrl": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ebf0c57f-b63e-41c2-9f5e-fbd88762aecd",
+    "fullUrl": "urn:uuid:20830518-52ea-48c3-9ef5-c55b5820f574",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:06ad31a1-1e4e-4fbe-8e89-9b5cb53e9b27",
+    "fullUrl": "urn:uuid:2678ef7b-47ec-46cc-b179-aa8f263758c6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+      "reference": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:f57ab41f-a96c-46f5-9168-96f6e31b368f"
+       "reference": "urn:uuid:4b24ce15-1079-4f29-bf09-2b97ef1b4768"
       },
       {
-       "reference": "urn:uuid:b73b3d5a-4b8f-4a75-8a43-8b25f09f65e2"
+       "reference": "urn:uuid:3ed860f4-0deb-422b-a32b-05350e2cb524"
       },
       {
-       "reference": "urn:uuid:85c54372-bb9f-4bc0-a645-ece9e692d205"
+       "reference": "urn:uuid:94aac4e0-708c-4db8-877a-5e61e18a2066"
       },
       {
-       "reference": "urn:uuid:2b65d922-aafc-49e8-97e1-0d5c37aa4ac2"
+       "reference": "urn:uuid:7f888c13-370a-4f94-8adb-c9c9beca645a"
       },
       {
-       "reference": "urn:uuid:81c4a596-57e4-4b71-9954-2c10156d5647"
+       "reference": "urn:uuid:57cfd4bb-dad9-4b92-8a31-6db658f310f9"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f57ab41f-a96c-46f5-9168-96f6e31b368f",
+    "fullUrl": "urn:uuid:4b24ce15-1079-4f29-bf09-2b97ef1b4768",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+      "reference": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b73b3d5a-4b8f-4a75-8a43-8b25f09f65e2",
+    "fullUrl": "urn:uuid:3ed860f4-0deb-422b-a32b-05350e2cb524",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+      "reference": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:85c54372-bb9f-4bc0-a645-ece9e692d205",
+    "fullUrl": "urn:uuid:94aac4e0-708c-4db8-877a-5e61e18a2066",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -409,7 +409,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+      "reference": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2b65d922-aafc-49e8-97e1-0d5c37aa4ac2",
+    "fullUrl": "urn:uuid:7f888c13-370a-4f94-8adb-c9c9beca645a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+      "reference": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:81c4a596-57e4-4b71-9954-2c10156d5647",
+    "fullUrl": "urn:uuid:57cfd4bb-dad9-4b92-8a31-6db658f310f9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:6a5e5a65-6f04-4431-aadd-7acb01736eea",
+      "reference": "urn:uuid:d1714e73-8820-47cc-b804-e4cf398f8af1",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e50bffcc-2f74-4ff7-bd2c-ed952e65ed08",
+    "fullUrl": "urn:uuid:8e677204-58d3-4551-bc26-a65099842506",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310320-2024-12-17T1005",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:06ad31a1-1e4e-4fbe-8e89-9b5cb53e9b27"
+       "reference": "urn:uuid:2678ef7b-47ec-46cc-b179-aa8f263758c6"
       },
       {
-       "reference": "urn:uuid:f57ab41f-a96c-46f5-9168-96f6e31b368f"
+       "reference": "urn:uuid:4b24ce15-1079-4f29-bf09-2b97ef1b4768"
       },
       {
-       "reference": "urn:uuid:b73b3d5a-4b8f-4a75-8a43-8b25f09f65e2"
+       "reference": "urn:uuid:3ed860f4-0deb-422b-a32b-05350e2cb524"
       },
       {
-       "reference": "urn:uuid:85c54372-bb9f-4bc0-a645-ece9e692d205"
+       "reference": "urn:uuid:94aac4e0-708c-4db8-877a-5e61e18a2066"
       },
       {
-       "reference": "urn:uuid:2b65d922-aafc-49e8-97e1-0d5c37aa4ac2"
+       "reference": "urn:uuid:7f888c13-370a-4f94-8adb-c9c9beca645a"
       },
       {
-       "reference": "urn:uuid:81c4a596-57e4-4b71-9954-2c10156d5647"
+       "reference": "urn:uuid:57cfd4bb-dad9-4b92-8a31-6db658f310f9"
       }
      ],
      "occurredDateTime": "2024-12-17T10:05:00+01:00",
-     "recorded": "2026-09-29T14:32:48+00:00",
+     "recorded": "2026-09-29T14:48:29+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ebf0c57f-b63e-41c2-9f5e-fbd88762aecd",
+        "reference": "urn:uuid:20830518-52ea-48c3-9ef5-c55b5820f574",
         "display": "StreamFHIR 0.7.0"
        }
       }

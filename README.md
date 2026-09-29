@@ -44,7 +44,7 @@ StreamFHIR is a small **integration framework**: ports-and-adapters code where o
 ## Target users
 - **Citizen volunteers**, who see at once whether their record is ready, needs a look, or can't be shared yet — and why — plus plain advice ("keep dogs out of the water").
 - **Citizen-science coordinators and data reviewers**, who confirm doubtful reports (with a stated basis) or reject them in one tap.
-- **Municipal environment and public-health teams**, who receive standard FHIR warnings they can query (`Flag?category=safety&status=active`) or subscribe to.
+- **Municipal environment and public-health teams**, who receive standard FHIR warnings they can query (`Flag?category=safety&status=active` with the shipped SearchParameters, or `Flag?identifier=…`) or subscribe to.
 - **Researchers**, who combine citizen data with other One Health data through a standard API.
 
 ## Expected impact on ecosystems and human health
@@ -61,7 +61,7 @@ The OneAquaHealth project works in five research cities: Benevento, Coimbra, Ghe
 | Hub tool | StreamFHIR role |
 |---|---|
 | Citizen Science App | An input adapter maps the app's export into the StreamFHIR record, then validation, review and FHIR mapping run as shown here |
-| City Dashboards | A dashboard reads `Flag?category=safety&status=active`, or receives pushes through the Subscription example |
+| City Dashboards | A dashboard reads `Flag?category=safety&status=active` (with the two StreamFHIR SearchParameters loaded — R4 Flag has neither search parameter), or `Flag?identifier=…/sid/flag|<site>` on any server, or receives pushes through the Subscription example |
 | Resilience Map | Site `Location`s with their current hazard level and ecological condition |
 | GEOSSIP | The FHIR API gives health-side systems the same site data the geo side sees |
 
@@ -89,7 +89,7 @@ python3 -m streamfhir import-hubeau               # real Toulouse-area river dat
 python3 -m streamfhir --data data/real-eu-toulouse serve     # browse it (same as the /demo-eu/ page)
 python3 -m streamfhir eea-coverage                # EU (EEA Waterbase) code coverage near the 5 OneAquaHealth cities
 python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live   # agency + synthetic citizen nitrate, one EEA-code query
-python3 -m pip install pytest && python3 -m pytest -q     # 102 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 105 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -167,6 +167,7 @@ flowchart LR
 | `ValueSet-onehealth-hazard-rule.json` | the 6 health-hazard rules (R3–R8) — the only rules that can raise a Flag |
 | `ConceptMap-stream-indicator-to-eu-water.json` | pH, water temperature, nitrate (as NO3 only, `dependsOn` the nitrate basis) and phosphate → EEA WISE ObservedProperty and Sandre parameters; `$translate` works on HAPI |
 | `CodeSystem-eea-wise-observedproperty-fragment.json`, `CodeSystem-sandre-parametre-fragment.json` | `content = fragment`: only the 4 codes we emit, under the publishers' own URIs, so a validator knows these systems. The EEA and Sandre own the codes and publish no FHIR CodeSystem |
+| `SearchParameter-flag-category.json`, `SearchParameter-flag-status.json` | R4 defines no `category` or `status` search parameter for Flag, so a consumer's `Flag?category=safety&status=active` needs these two. The public HAPI test server does not activate custom SearchParameters (tested: HAPI-0524), so the live evidence uses `Flag?identifier=…` and `Flag?subject=…` instead |
 | `CapabilityStatement-streamfhir-client-requirements.json` | what a receiving server must support (`kind = requirements`) |
 | `Subscription-example-safety-flags.json` | R4 rest-hook subscription on safety Flags (example endpoint) |
 
@@ -210,7 +211,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moments:** at Mill Pond, a reviewer confirms report SYN-006 with basis *photo checked* (a trusted report whose photo waits for a check can be confirmed or rejected) → *High* and the Flag appears; at Willow Creek, confirming SYN-015 ("I visited") does the same. Undo returns it. This also works in the static demo, which replays precomputed single decisions (one at a time).
 
 ## Evidence
-- **102 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-47 (see `SPEC.md`).
+- **105 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-50 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -288,7 +289,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records; data/real-wqp (US) and data/real-eu-toulouse (France) real snapshots; data/eea-coverage
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     102 tests
+tests/                     105 tests
 ```
 
 ## License

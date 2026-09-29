@@ -269,3 +269,15 @@ def test_ac47_a_flag_whose_expiry_has_passed_is_inactive_and_nitrate_states_its_
         obs = [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"
                and e["resource"]["code"]["coding"][0]["code"] == "nitrate"][0]
         assert obs["valueQuantity"]["code"] == unit
+
+
+def test_ac50_flag_category_and_status_searches_are_defined_because_r4_flag_has_neither():
+    """AC-50: R4 Flag has no 'category' or 'status' search parameter, so StreamFHIR ships SearchParameters for both and
+    the CapabilityStatement points at them."""
+    from streamfhir.adapters.fhir_mapper import capability_statement, conformance_resources
+    sps = {r["code"]: r for r in conformance_resources() if r["resourceType"] == "SearchParameter"}
+    assert sps["category"]["expression"] == "Flag.category" and sps["status"]["expression"] == "Flag.status"
+    assert all(sp["base"] == ["Flag"] and sp["type"] == "token" for sp in sps.values())
+    flag = [r for r in capability_statement()["rest"][0]["resource"] if r["type"] == "Flag"][0]
+    defs = {p["name"]: p.get("definition") for p in flag["searchParam"]}
+    assert defs["category"] == sps["category"]["url"] and defs["status"] == sps["status"]["url"]

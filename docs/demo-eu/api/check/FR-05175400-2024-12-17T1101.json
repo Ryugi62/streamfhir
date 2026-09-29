@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+    "fullUrl": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d4b5723b-c145-4dc6-baeb-4766b6498940",
+    "fullUrl": "urn:uuid:a9fe4694-efd1-423f-8498-5e4f9184a618",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4e957e17-7dba-4893-9c78-a1a111039b08",
+    "fullUrl": "urn:uuid:000b5940-ffb6-40ed-ae80-ba64e159b550",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+      "reference": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:ebb12629-69cf-40d3-a045-a73a7a72f6aa"
+       "reference": "urn:uuid:f798d796-ff34-43a7-baf3-3e85ed0ab88a"
       },
       {
-       "reference": "urn:uuid:7a59f5da-584a-41be-ac50-1cac42f66d1a"
+       "reference": "urn:uuid:5b417b1c-1ba2-4b9a-a733-eb7df8901b93"
       },
       {
-       "reference": "urn:uuid:9715d1bf-8bb8-40bb-8ac7-edd51dfe174a"
+       "reference": "urn:uuid:136ed069-e2bc-4a6f-8203-a9415e9305cc"
       },
       {
-       "reference": "urn:uuid:7965048e-6ca4-4fec-8ab1-24bb29863ab9"
+       "reference": "urn:uuid:d91cdd2e-dcb6-4c1f-800f-e7200596ac4f"
       },
       {
-       "reference": "urn:uuid:4c2ecff2-fecf-4569-9898-aa33274ef836"
+       "reference": "urn:uuid:8af108dd-d1c0-4835-b52f-d392a9a17796"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ebb12629-69cf-40d3-a045-a73a7a72f6aa",
+    "fullUrl": "urn:uuid:f798d796-ff34-43a7-baf3-3e85ed0ab88a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+      "reference": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7a59f5da-584a-41be-ac50-1cac42f66d1a",
+    "fullUrl": "urn:uuid:5b417b1c-1ba2-4b9a-a733-eb7df8901b93",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+      "reference": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9715d1bf-8bb8-40bb-8ac7-edd51dfe174a",
+    "fullUrl": "urn:uuid:136ed069-e2bc-4a6f-8203-a9415e9305cc",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -405,7 +405,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+      "reference": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7965048e-6ca4-4fec-8ab1-24bb29863ab9",
+    "fullUrl": "urn:uuid:d91cdd2e-dcb6-4c1f-800f-e7200596ac4f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+      "reference": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4c2ecff2-fecf-4569-9898-aa33274ef836",
+    "fullUrl": "urn:uuid:8af108dd-d1c0-4835-b52f-d392a9a17796",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:22d4798f-abd2-413a-a374-bb47ad5992eb",
+      "reference": "urn:uuid:61083ba1-b7ff-409e-85c6-457b86161e90",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:787b8c4a-9641-4ccc-aa32-3c41e5cc21a7",
+    "fullUrl": "urn:uuid:9e8ac88c-f0e8-483b-8462-eac64ac3036a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05175400-2024-12-17T1101",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:4e957e17-7dba-4893-9c78-a1a111039b08"
+       "reference": "urn:uuid:000b5940-ffb6-40ed-ae80-ba64e159b550"
       },
       {
-       "reference": "urn:uuid:ebb12629-69cf-40d3-a045-a73a7a72f6aa"
+       "reference": "urn:uuid:f798d796-ff34-43a7-baf3-3e85ed0ab88a"
       },
       {
-       "reference": "urn:uuid:7a59f5da-584a-41be-ac50-1cac42f66d1a"
+       "reference": "urn:uuid:5b417b1c-1ba2-4b9a-a733-eb7df8901b93"
       },
       {
-       "reference": "urn:uuid:9715d1bf-8bb8-40bb-8ac7-edd51dfe174a"
+       "reference": "urn:uuid:136ed069-e2bc-4a6f-8203-a9415e9305cc"
       },
       {
-       "reference": "urn:uuid:7965048e-6ca4-4fec-8ab1-24bb29863ab9"
+       "reference": "urn:uuid:d91cdd2e-dcb6-4c1f-800f-e7200596ac4f"
       },
       {
-       "reference": "urn:uuid:4c2ecff2-fecf-4569-9898-aa33274ef836"
+       "reference": "urn:uuid:8af108dd-d1c0-4835-b52f-d392a9a17796"
       }
      ],
      "occurredDateTime": "2024-12-17T11:01:00+01:00",
-     "recorded": "2026-09-29T14:32:48+00:00",
+     "recorded": "2026-09-29T14:48:29+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:d4b5723b-c145-4dc6-baeb-4766b6498940",
+        "reference": "urn:uuid:a9fe4694-efd1-423f-8498-5e4f9184a618",
         "display": "StreamFHIR 0.7.0"
        }
       }

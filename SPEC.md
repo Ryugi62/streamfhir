@@ -104,6 +104,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-47 Given a Flag whose period.end is before build time, Then it is `inactive` (expired); nitrate values state their basis in the UCUM unit (`mg{NO3}/L`, `mg{N}/L`).
 - AC-48 Given orthophosphate reported as P, Then the value and unit (mg{P}/L) are kept and R2 compares its PO4 equivalent (x 3.066).
 - AC-49 Given photo_needs_review, Then an ok report with a photo can be confirmed (photo checked) or rejected by a reviewer.
+- AC-50 Given R4 Flag has no category/status search parameter, Then StreamFHIR ships SearchParameters flag-category and flag-status and the CapabilityStatement references them.
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)

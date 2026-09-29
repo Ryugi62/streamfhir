@@ -647,7 +647,8 @@ def _capability_statement() -> Dict[str, Any]:
         r = {"type": rtype, "interaction": [{"code": i} for i in interactions]}
         r.update(flags)
         if params:
-            r["searchParam"] = [{"name": n, "type": t} for n, t in params]
+            r["searchParam"] = [dict({"name": n, "type": t}, **({"definition": d} if d else {}))
+                                for n, t, d in ((p + (None,))[:3] for p in params)]
         return r
     return {
         "resourceType": "CapabilityStatement", "id": "streamfhir-client-requirements",
@@ -658,7 +659,9 @@ def _capability_statement() -> Dict[str, Any]:
         "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create "
                        "(ifNoneExist on identifier) for Location and Device, conditional update by identifier for Observation, Media and Flag, "
                        "and update-as-create for Provenance. Consumers find "
-                       "warnings with Flag?category=safety&status=active or subscribe to them (see Subscription example).",
+                       "warnings with Flag?category=safety&status=active (R4 defines neither search parameter for Flag, "
+                       "so the server must load the StreamFHIR SearchParameters flag-category and flag-status) or "
+                       "subscribe to them (see Subscription example).",
         "rest": [{"mode": "server", "interaction": [{"code": "transaction"}], "resource": [
             res("Location", ["create", "read", "search-type"], (("identifier", "token"),), conditionalCreate=True),
             res("Device", ["create", "read"], (("identifier", "token"),), conditionalCreate=True),
@@ -667,7 +670,8 @@ def _capability_statement() -> Dict[str, Any]:
                 (("identifier", "token"), ("subject", "reference"), ("code", "token")), conditionalUpdate=True),
             res("Provenance", ["update", "read"], updateCreate=True),
             res("Flag", ["update", "read", "search-type"],
-                (("identifier", "token"), ("category", "token"), ("status", "token"), ("subject", "reference")),
+                (("identifier", "token"), ("category", "token", SP_FLAG_CATEGORY), ("status", "token", SP_FLAG_STATUS),
+                 ("subject", "reference")),
                 conditionalUpdate=True),
         ]}]}
 
@@ -728,10 +732,27 @@ def concept_map() -> Dict[str, Any]:
     }
 
 
+SP_FLAG_CATEGORY = BASE + "/SearchParameter/flag-category"
+SP_FLAG_STATUS = BASE + "/SearchParameter/flag-status"
+
+
+def search_parameters() -> List[Dict[str, Any]]:
+    """R4 Flag has no 'category' or 'status' search parameter; a consumer needs both to find active safety warnings."""
+    def sp(sp_id, url, code, expr, desc):
+        return {"resourceType": "SearchParameter", "id": sp_id, "url": url, "version": VERSION, "name": code,
+                "status": "active", "experimental": True, "date": DATE, "publisher": "StreamFHIR hackathon prototype",
+                "description": desc, "code": code, "base": ["Flag"], "type": "token", "expression": expr,
+                "xpathUsage": "normal"}
+    return [sp("flag-category", SP_FLAG_CATEGORY, "category", "Flag.category",
+               "Flag category (e.g. safety). Not defined for Flag in FHIR R4, so StreamFHIR defines it."),
+            sp("flag-status", SP_FLAG_STATUS, "status", "Flag.status",
+               "Flag status (active | inactive | entered-in-error). Not defined for Flag in FHIR R4, so StreamFHIR defines it.")]
+
+
 def conformance_resources() -> List[Dict[str, Any]]:
     return [_with_text(r) for r in codesystem_resources() + external_fragment_codesystems()
             + [valueset_resource(), hazard_rule_valueset(), risk_level_valueset()] + structuredefinition_resources()
-            + [concept_map()]]
+            + [concept_map()] + search_parameters()]
 
 
 def conformance_bundle() -> Dict[str, Any]:

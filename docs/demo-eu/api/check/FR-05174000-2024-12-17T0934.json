@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+    "fullUrl": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:69ae1531-b2d0-4b99-a5b4-aef12df26cee",
+    "fullUrl": "urn:uuid:9774919d-65e8-41b3-858e-6d666c4bc85a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:21a083e2-ab1e-4318-9666-1819533b6686",
+    "fullUrl": "urn:uuid:fd2201aa-8187-4798-93ae-2e96335ff1da",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+      "reference": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:b008e5c9-ec41-46b2-963c-617f35948c0e"
+       "reference": "urn:uuid:dc6f7945-a7a1-40f5-b4d6-54229dde5cd8"
       },
       {
-       "reference": "urn:uuid:f9449f71-5d22-492e-8a8c-57765a195bcb"
+       "reference": "urn:uuid:462167d1-5a1d-4590-9ac1-775525389aa1"
       },
       {
-       "reference": "urn:uuid:3f825a28-c2c7-4711-8ccf-3b5e1ecd25b5"
+       "reference": "urn:uuid:99dc1d03-8e88-46be-b7da-2ba9e4e444d0"
       },
       {
-       "reference": "urn:uuid:009c1bea-59f1-438c-854e-8f0f845c7915"
+       "reference": "urn:uuid:9e0d1b92-c0de-4e66-866f-b005b638c2b0"
       },
       {
-       "reference": "urn:uuid:3351f55a-2db8-4308-8e24-62255674c099"
+       "reference": "urn:uuid:01e68a4d-a214-4e83-a84e-c5d05cb1bf33"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b008e5c9-ec41-46b2-963c-617f35948c0e",
+    "fullUrl": "urn:uuid:dc6f7945-a7a1-40f5-b4d6-54229dde5cd8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+      "reference": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f9449f71-5d22-492e-8a8c-57765a195bcb",
+    "fullUrl": "urn:uuid:462167d1-5a1d-4590-9ac1-775525389aa1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+      "reference": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3f825a28-c2c7-4711-8ccf-3b5e1ecd25b5",
+    "fullUrl": "urn:uuid:99dc1d03-8e88-46be-b7da-2ba9e4e444d0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+      "reference": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:009c1bea-59f1-438c-854e-8f0f845c7915",
+    "fullUrl": "urn:uuid:9e0d1b92-c0de-4e66-866f-b005b638c2b0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+      "reference": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3351f55a-2db8-4308-8e24-62255674c099",
+    "fullUrl": "urn:uuid:01e68a4d-a214-4e83-a84e-c5d05cb1bf33",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:31974483-6fdc-4c13-b651-1f26e36eeab8",
+      "reference": "urn:uuid:b3308710-4c26-4477-ba2c-46f8adb64c36",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5cb8d0b7-d783-4e76-b453-4ed4035a8508",
+    "fullUrl": "urn:uuid:b98323b5-6573-4fc2-ad3e-003967c83eeb",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05174000-2024-12-17T0934",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:21a083e2-ab1e-4318-9666-1819533b6686"
+       "reference": "urn:uuid:fd2201aa-8187-4798-93ae-2e96335ff1da"
       },
       {
-       "reference": "urn:uuid:b008e5c9-ec41-46b2-963c-617f35948c0e"
+       "reference": "urn:uuid:dc6f7945-a7a1-40f5-b4d6-54229dde5cd8"
       },
       {
-       "reference": "urn:uuid:f9449f71-5d22-492e-8a8c-57765a195bcb"
+       "reference": "urn:uuid:462167d1-5a1d-4590-9ac1-775525389aa1"
       },
       {
-       "reference": "urn:uuid:3f825a28-c2c7-4711-8ccf-3b5e1ecd25b5"
+       "reference": "urn:uuid:99dc1d03-8e88-46be-b7da-2ba9e4e444d0"
       },
       {
-       "reference": "urn:uuid:009c1bea-59f1-438c-854e-8f0f845c7915"
+       "reference": "urn:uuid:9e0d1b92-c0de-4e66-866f-b005b638c2b0"
       },
       {
-       "reference": "urn:uuid:3351f55a-2db8-4308-8e24-62255674c099"
+       "reference": "urn:uuid:01e68a4d-a214-4e83-a84e-c5d05cb1bf33"
       }
      ],
      "occurredDateTime": "2024-12-17T09:34:00+01:00",
-     "recorded": "2026-09-29T14:32:48+00:00",
+     "recorded": "2026-09-29T14:48:29+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:69ae1531-b2d0-4b99-a5b4-aef12df26cee",
+        "reference": "urn:uuid:9774919d-65e8-41b3-858e-6d666c4bc85a",
         "display": "StreamFHIR 0.7.0"
        }
       }

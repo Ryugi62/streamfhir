@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:4383d97c-7a7d-4397-ab16-8518ee286531",
+    "fullUrl": "urn:uuid:d1fa03d6-4ef1-48a5-a3c3-499abde34bba",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7adb9d54-81c8-4de2-8ab2-5e43d1df053c",
+    "fullUrl": "urn:uuid:c1ea8a1b-24fc-44eb-a3cd-b921b7338a2a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e3d804f8-d931-407d-aefb-65ad1fa1184c",
+    "fullUrl": "urn:uuid:d9a2db31-9d41-4617-9d39-39d4b8243ccb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:4383d97c-7a7d-4397-ab16-8518ee286531",
+      "reference": "urn:uuid:d1fa03d6-4ef1-48a5-a3c3-499abde34bba",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-10-20T11:00:00+02:00",
@@ -161,10 +161,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:91464b13-df78-48c4-b65d-43b360ab0b96"
+       "reference": "urn:uuid:271c9a62-1072-4044-b140-ec964821b616"
       },
       {
-       "reference": "urn:uuid:a45f8430-8e53-414d-91eb-33523c79a157"
+       "reference": "urn:uuid:45aa914c-db41-4790-a5fc-be877703cfbe"
       }
      ]
     },
@@ -174,7 +174,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:91464b13-df78-48c4-b65d-43b360ab0b96",
+    "fullUrl": "urn:uuid:271c9a62-1072-4044-b140-ec964821b616",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -222,7 +222,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:4383d97c-7a7d-4397-ab16-8518ee286531",
+      "reference": "urn:uuid:d1fa03d6-4ef1-48a5-a3c3-499abde34bba",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-10-20T11:00:00+02:00",
@@ -249,7 +249,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a45f8430-8e53-414d-91eb-33523c79a157",
+    "fullUrl": "urn:uuid:45aa914c-db41-4790-a5fc-be877703cfbe",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -297,7 +297,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:4383d97c-7a7d-4397-ab16-8518ee286531",
+      "reference": "urn:uuid:d1fa03d6-4ef1-48a5-a3c3-499abde34bba",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-10-20T11:00:00+02:00",
@@ -328,7 +328,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d341c24b-8ca2-4f24-a014-08bd2151c70d",
+    "fullUrl": "urn:uuid:9eee307d-61a8-4973-b6ae-6f32ca409046",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S7-2025-10-20T1100",
@@ -347,17 +347,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:e3d804f8-d931-407d-aefb-65ad1fa1184c"
+       "reference": "urn:uuid:d9a2db31-9d41-4617-9d39-39d4b8243ccb"
       },
       {
-       "reference": "urn:uuid:91464b13-df78-48c4-b65d-43b360ab0b96"
+       "reference": "urn:uuid:271c9a62-1072-4044-b140-ec964821b616"
       },
       {
-       "reference": "urn:uuid:a45f8430-8e53-414d-91eb-33523c79a157"
+       "reference": "urn:uuid:45aa914c-db41-4790-a5fc-be877703cfbe"
       }
      ],
      "occurredDateTime": "2025-10-20T11:00:00+02:00",
-     "recorded": "2026-09-29T14:32:49+00:00",
+     "recorded": "2026-09-29T14:48:29+00:00",
      "activity": {
       "coding": [
        {
@@ -398,7 +398,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:7adb9d54-81c8-4de2-8ab2-5e43d1df053c",
+        "reference": "urn:uuid:c1ea8a1b-24fc-44eb-a3cd-b921b7338a2a",
         "display": "StreamFHIR 0.7.0"
        }
       }

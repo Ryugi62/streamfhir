@@ -1,0 +1,23 @@
+{
+ "resourceType": "SearchParameter",
+ "id": "flag-status",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>SearchParameter: flag-status</p></div>"
+ },
+ "url": "https://example.org/fhir/streamfhir/SearchParameter/flag-status",
+ "version": "0.7.0",
+ "name": "status",
+ "status": "active",
+ "experimental": true,
+ "date": "2026-09-29",
+ "publisher": "StreamFHIR hackathon prototype",
+ "description": "Flag status (active | inactive | entered-in-error). Not defined for Flag in FHIR R4, so StreamFHIR defines it.",
+ "code": "status",
+ "base": [
+  "Flag"
+ ],
+ "type": "token",
+ "expression": "Flag.status",
+ "xpathUsage": "normal"
+}

@@ -74,3 +74,8 @@ Why the slicing (v0.4): with the old required binding on the whole `Observation.
 | Step | Command | Result |
 |---|---|---|
 | 29. Ghent (VMM) and Benevento (ARPA Campania) samplings through the same pipeline | `python3 -m streamfhir import-ghent`, `import-benevento`, then ad-hoc `$validate` (validation only) | Ghent `BE-VMM-OW168900-2026-09-09T1209` nitrate (as N) and pH Observations: **0 errors, 0 warnings**; Benevento `IT-ARPAC-Ta3-2025-05-27T1130` nitrate, nitrate basis, pH and temperature Observations: **0 errors, 0 warnings** |
+
+## v0.7.2 — Flag search parameters (2026-09-29, ~23:50 KST, found by a mock judge)
+| Step | Command | Result |
+|---|---|---|
+| 30. `Flag?category=…|safety&status=active` | GET on HAPI | error **HAPI-0524 "Unknown search parameter category for resource type Flag"**: R4 Flag defines neither `category` nor `status` as search parameters, so the query documented until v0.7.1 did not work on a standard R4 server. Fix: `SearchParameter/streamfhir-flag-category` and `…-flag-status` published (`_history/1`) and referenced from the CapabilityStatement; the public test server still answers HAPI-0524 after 3 minutes (it does not activate custom SearchParameters), so on it consumers use `Flag?identifier=https://example.org/fhir/streamfhir/sid/flag|S-ALDER-DN` (1 active safety Flag) or `Flag?subject=Location/…` |
