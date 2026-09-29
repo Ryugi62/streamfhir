@@ -29,9 +29,9 @@ def test_ac46_vmm_ghent_samples_become_laboratory_records_with_nitrate_as_n():
     records, stats = national_feeds.parse_vmm({"OW172100": VMM}, {s["site_id"]: s for s in sites}, since="2025-09-01")
     assert [r["record_id"] for r in records] == ["BE-VMM-OW172100-2026-09-08T1015"]
     r = records[0]
-    assert r["values"] == {"nitrate": 1.67, "nitrate-basis": "as-N", "ph": 7.6, "water-temperature": 18.2}
+    assert r["values"] == {"nitrate": 1.67, "nitrate-basis": "as-N", "ph": 7.6, "water-temperature": 18.2,
+                           "phosphate": 0.11, "phosphate-basis": "as-P"}
     assert r["origin"] == "vmm" and r["observer_name"] == "Vlaamse Milieumaatschappij (VMM)"
-    assert any("Orthophosphate" in n and "mg P/L" in n for n in r["source_info"])
     assert stats["older_than_since"] == 1
     site = {s["site_id"]: site_from_json(s) for s in sites}
     assert validate_record(r, site, NOW).status == "ok"
@@ -45,3 +45,24 @@ def test_ac46_arpac_benevento_samples_parse_italian_dates_and_keep_total_p_as_a_
     assert r["values"] == {"nitrate": 3.0, "nitrate-basis": "as-N", "ph": 7.9, "water-temperature": 16.4}
     assert any("Total phosphorus" in n and "<30" in n for n in r["source_info"])
     assert sites[0]["name"] == "Benevento · Sabato, Ponte Leproso"
+
+
+def test_ac48_orthophosphate_reported_as_p_is_scored_on_its_po4_equivalent_and_keeps_its_unit():
+    """AC-48: VMM orthophosphate (mg P/L) is imported with basis as-P; R2 compares 3.066 x P with 0.5 mg/L PO4;
+    the Observation keeps the reported value with unit mg{P}/L."""
+    from streamfhir.adapters.fhir_mapper import FhirMapper
+    from streamfhir.domain.risk import evaluate_site
+    sites = national_feeds.vmm_sites(VMM_STATIONS, city="Ghent")
+    records, _ = national_feeds.parse_vmm({"OW172100": VMM.replace("\t0,11\tmgP/L", "\t0,27\tmgP/L")},
+                                         {s["site_id"]: s for s in sites}, since="2025-09-01")
+    r = records[0]
+    assert r["values"]["phosphate"] == 0.27 and r["values"]["phosphate-basis"] == "as-P"
+    site = {s["site_id"]: site_from_json(s) for s in sites}
+    rep = validate_record(r, site, NOW)
+    assert rep.status == "ok"
+    risk = evaluate_site(sites[0]["site_id"], [rep], as_of=None)
+    assert "R2" in {f.rule_id for f in risk.fired}            # 0.27 x 3.066 = 0.83 mg/L PO4 >= 0.5
+    b = FhirMapper(test_data=False, pseudonymous=False).assessment_bundle(rep, site[sites[0]["site_id"]])
+    po4 = [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"
+           and e["resource"]["code"]["coding"][0]["code"] == "phosphate"][0]
+    assert po4["valueQuantity"]["value"] == 0.27 and po4["valueQuantity"]["code"] == "mg{P}/L"

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+    "fullUrl": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a5482188-e949-48cc-a244-7761453432f4",
+    "fullUrl": "urn:uuid:f91dc204-1e68-4ab1-bf18-d7d07de448a5",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f415b456-c088-4d6f-a3ea-d36ecd554e0f",
+    "fullUrl": "urn:uuid:91cbbf83-39bd-4fc3-81dd-f1522fb95a20",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+      "reference": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:9a9170b0-1f9e-4645-b044-703491a0bd77"
+       "reference": "urn:uuid:b8ac1d9f-60db-475f-b8a0-6580f97c5c91"
       },
       {
-       "reference": "urn:uuid:1f96909d-7802-4464-bef2-a2a0957b6835"
+       "reference": "urn:uuid:d228be9f-d529-4001-8374-bac974ff2655"
       },
       {
-       "reference": "urn:uuid:a1822bec-c8e0-4980-89d2-dd6fc24c7762"
+       "reference": "urn:uuid:b2a59008-309b-4aea-9421-3b6cb5196c52"
       },
       {
-       "reference": "urn:uuid:e7289fcd-4f98-4de8-9b45-712691f71a42"
+       "reference": "urn:uuid:45ee48f6-bfe3-43eb-a2f6-a68ef02ca57f"
       },
       {
-       "reference": "urn:uuid:db2cdb6e-2645-4c86-84e5-c5833d775178"
+       "reference": "urn:uuid:f10f367a-8303-4cf0-ba22-8e657bed2344"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9a9170b0-1f9e-4645-b044-703491a0bd77",
+    "fullUrl": "urn:uuid:b8ac1d9f-60db-475f-b8a0-6580f97c5c91",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+      "reference": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1f96909d-7802-4464-bef2-a2a0957b6835",
+    "fullUrl": "urn:uuid:d228be9f-d529-4001-8374-bac974ff2655",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+      "reference": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a1822bec-c8e0-4980-89d2-dd6fc24c7762",
+    "fullUrl": "urn:uuid:b2a59008-309b-4aea-9421-3b6cb5196c52",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+      "reference": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e7289fcd-4f98-4de8-9b45-712691f71a42",
+    "fullUrl": "urn:uuid:45ee48f6-bfe3-43eb-a2f6-a68ef02ca57f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+      "reference": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:db2cdb6e-2645-4c86-84e5-c5833d775178",
+    "fullUrl": "urn:uuid:f10f367a-8303-4cf0-ba22-8e657bed2344",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -543,7 +543,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.39 mg/L at Toulouse area · Le Courbet à Brax (final, record FR-05159300-2024-12-19T1150)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 0.39 mg/L at Toulouse area · Le Courbet à Brax (final, record FR-05159300-2024-12-19T1150)</p></div>"
      },
      "identifier": [
       {
@@ -568,7 +568,7 @@
        {
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
-        "display": "Phosphate (as PO4)"
+        "display": "Phosphate (orthophosphate)"
        },
        {
         "system": "https://id.eaufrance.fr/par",
@@ -576,10 +576,10 @@
         "display": "Orthophosphates (PO4)"
        }
       ],
-      "text": "Phosphate (as PO4)"
+      "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:4c2631d0-3554-410b-ac48-4774e513af34",
+      "reference": "urn:uuid:8fabb10c-b52f-48d8-8eec-c75d68d90253",
       "display": "Toulouse area · Le Courbet à Brax"
      },
      "effectiveDateTime": "2024-12-19T11:50:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cf3059c1-258a-4ef6-b5b0-6a799ac5a88d",
+    "fullUrl": "urn:uuid:8670bde7-4598-47ad-8803-5c3a6baff9b8",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159300-2024-12-19T1150",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:f415b456-c088-4d6f-a3ea-d36ecd554e0f"
+       "reference": "urn:uuid:91cbbf83-39bd-4fc3-81dd-f1522fb95a20"
       },
       {
-       "reference": "urn:uuid:9a9170b0-1f9e-4645-b044-703491a0bd77"
+       "reference": "urn:uuid:b8ac1d9f-60db-475f-b8a0-6580f97c5c91"
       },
       {
-       "reference": "urn:uuid:1f96909d-7802-4464-bef2-a2a0957b6835"
+       "reference": "urn:uuid:d228be9f-d529-4001-8374-bac974ff2655"
       },
       {
-       "reference": "urn:uuid:a1822bec-c8e0-4980-89d2-dd6fc24c7762"
+       "reference": "urn:uuid:b2a59008-309b-4aea-9421-3b6cb5196c52"
       },
       {
-       "reference": "urn:uuid:e7289fcd-4f98-4de8-9b45-712691f71a42"
+       "reference": "urn:uuid:45ee48f6-bfe3-43eb-a2f6-a68ef02ca57f"
       },
       {
-       "reference": "urn:uuid:db2cdb6e-2645-4c86-84e5-c5833d775178"
+       "reference": "urn:uuid:f10f367a-8303-4cf0-ba22-8e657bed2344"
       }
      ],
      "occurredDateTime": "2024-12-19T11:50:00+01:00",
-     "recorded": "2026-09-29T14:00:22+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:a5482188-e949-48cc-a244-7761453432f4",
+        "reference": "urn:uuid:f91dc204-1e68-4ab1-bf18-d7d07de448a5",
         "display": "StreamFHIR 0.7.0"
        }
       }

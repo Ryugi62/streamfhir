@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:23a80776-f022-4632-abba-0b9c00a74d52",
+    "fullUrl": "urn:uuid:9dbda66d-cbca-4d6b-8fdd-717d0ad5a2bc",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dddedacc-3d58-4d35-a46e-8adc37ee89ed",
+    "fullUrl": "urn:uuid:4103cdde-54b4-4045-96cb-9e41bfe2d4fe",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:92122b6d-aff5-41bd-8e85-48d540da7ded",
+    "fullUrl": "urn:uuid:b2d17cb1-0cc1-4e9b-a3f6-11a425b50396",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:23a80776-f022-4632-abba-0b9c00a74d52",
+      "reference": "urn:uuid:9dbda66d-cbca-4d6b-8fdd-717d0ad5a2bc",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2026-01-14T10:10:00+01:00",
@@ -161,7 +161,7 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:6915fd1d-c209-4e55-8c8a-86ba2b554021"
+       "reference": "urn:uuid:4fec178d-ca73-42b7-b67e-e79cc1a6a369"
       }
      ]
     },
@@ -171,7 +171,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6915fd1d-c209-4e55-8c8a-86ba2b554021",
+    "fullUrl": "urn:uuid:4fec178d-ca73-42b7-b67e-e79cc1a6a369",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -224,7 +224,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:23a80776-f022-4632-abba-0b9c00a74d52",
+      "reference": "urn:uuid:9dbda66d-cbca-4d6b-8fdd-717d0ad5a2bc",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2026-01-14T10:10:00+01:00",
@@ -251,7 +251,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:61f54e28-a8eb-4805-8e35-62f7fa148ca9",
+    "fullUrl": "urn:uuid:b62b34d9-0d4f-4f8c-b33d-b4f5456c794f",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-Sn-2026-01-14T1010",
@@ -270,14 +270,14 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:92122b6d-aff5-41bd-8e85-48d540da7ded"
+       "reference": "urn:uuid:b2d17cb1-0cc1-4e9b-a3f6-11a425b50396"
       },
       {
-       "reference": "urn:uuid:6915fd1d-c209-4e55-8c8a-86ba2b554021"
+       "reference": "urn:uuid:4fec178d-ca73-42b7-b67e-e79cc1a6a369"
       }
      ],
      "occurredDateTime": "2026-01-14T10:10:00+01:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -318,7 +318,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:dddedacc-3d58-4d35-a46e-8adc37ee89ed",
+        "reference": "urn:uuid:4103cdde-54b4-4045-96cb-9e41bfe2d4fe",
         "display": "StreamFHIR 0.7.0"
        }
       }

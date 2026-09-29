@@ -250,6 +250,8 @@ class FhirMapper:
             as_no3 = code != "nitrate" or a.values.get("nitrate-basis") == "as-NO3"
             if code == "nitrate" and as_no3:
                 coding.append(dict(NITRATE_LOINC))
+            if code == "phosphate" and a.values.get("phosphate-basis") == "as-P":
+                return coding          # the Sandre and EEA pairs in the crosswalk are for PO4 values
             if code in EU_WATER_CROSSWALK and as_no3:
                 eu, national = EU_WATER_CROSSWALK[code]
                 if code in EEA_EMITTED:
@@ -288,6 +290,8 @@ class FhirMapper:
             if code == "nitrate" and a.values.get("nitrate-basis") in NITRATE_UNITS:
                 display, ucum = NITRATE_UNITS[a.values["nitrate-basis"]]
                 obs["valueQuantity"].update(unit=display, code=ucum)
+            if code == "phosphate" and a.values.get("phosphate-basis") == "as-P":
+                obs["valueQuantity"].update(unit="mg/L as P", code="mg{P}/L")
             if notes:
                 obs["note"] = [{"text": t} for t in notes]
             if media_refs and code in PHOTO_EVIDENCE:

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:c92e9911-2430-4e00-b80a-c9e9f54516bb",
+    "fullUrl": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -33,7 +33,7 @@
      ],
      "status": "active",
      "name": "Ghent · Zeeschelde in Melle",
-     "description": "Real Flemish river monitoring station OW168900 (VMM)",
+     "description": "Real Flemish river monitoring station OW168900 (VMM); a tidal freshwater reach of the Scheldt estuary, while the thresholds were built for small non-tidal streams",
      "mode": "instance",
      "physicalType": {
       "coding": [
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ee445536-3650-4ef6-b985-77062cba58fe",
+    "fullUrl": "urn:uuid:637fdc21-dfd1-4435-af49-f9331eaede23",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1dbc6192-3100-477f-bff1-52966ffada21",
+    "fullUrl": "urn:uuid:c8e23f86-3949-4b84-86cb-e8fe3ee1e223",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -114,7 +114,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Ghent · Zeeschelde in Melle on 2026-08-12T11:48:31+02:00: 4 indicators (final, record BE-VMM-OW168900-2026-08-12T1148)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Ghent · Zeeschelde in Melle on 2026-08-12T11:48:31+02:00: 6 indicators (final, record BE-VMM-OW168900-2026-08-12T1148)</p></div>"
      },
      "identifier": [
       {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:c92e9911-2430-4e00-b80a-c9e9f54516bb",
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-08-12T11:48:31+02:00",
@@ -161,16 +161,22 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:688827b3-df7c-4d39-bf08-193c38a455bd"
+       "reference": "urn:uuid:399bbec0-2686-410a-a7b6-57879773c22d"
       },
       {
-       "reference": "urn:uuid:0368722a-2395-43d5-b3f2-9f40d2ccf903"
+       "reference": "urn:uuid:f1ca5f35-3f11-4f86-91f3-5164d1c7c8cb"
       },
       {
-       "reference": "urn:uuid:a8711e9e-b7ba-441e-8e56-33c41685a1a2"
+       "reference": "urn:uuid:d5e12e8f-c24d-4dac-ba4a-814e0b65f01b"
       },
       {
-       "reference": "urn:uuid:c23dc496-984f-4b3b-b21e-5b5aff79ccc9"
+       "reference": "urn:uuid:6780649e-e4ab-406c-ae72-ec6d3a804d60"
+      },
+      {
+       "reference": "urn:uuid:83b39ab6-14bc-44d0-9038-302efd468670"
+      },
+      {
+       "reference": "urn:uuid:edb2b61b-73e5-4159-a8e9-5218b72dc4b6"
       }
      ]
     },
@@ -180,7 +186,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:688827b3-df7c-4d39-bf08-193c38a455bd",
+    "fullUrl": "urn:uuid:399bbec0-2686-410a-a7b6-57879773c22d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +234,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:c92e9911-2430-4e00-b80a-c9e9f54516bb",
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-08-12T11:48:31+02:00",
@@ -255,7 +261,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0368722a-2395-43d5-b3f2-9f40d2ccf903",
+    "fullUrl": "urn:uuid:f1ca5f35-3f11-4f86-91f3-5164d1c7c8cb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +309,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:c92e9911-2430-4e00-b80a-c9e9f54516bb",
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-08-12T11:48:31+02:00",
@@ -334,7 +340,161 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a8711e9e-b7ba-441e-8e56-33c41685a1a2",
+    "fullUrl": "urn:uuid:d5e12e8f-c24d-4dac-ba4a-814e0b65f01b",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 0.335 mg/L at Ghent · Zeeschelde in Melle (final, record BE-VMM-OW168900-2026-08-12T1148)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW168900-2026-08-12T1148.phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (orthophosphate)"
+       }
+      ],
+      "text": "Phosphate (orthophosphate)"
+     },
+     "subject": {
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
+      "display": "Ghent · Zeeschelde in Melle"
+     },
+     "effectiveDateTime": "2026-08-12T11:48:31+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.335,
+      "unit": "mg/L as P",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg{P}/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW168900-2026-08-12T1148.phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6780649e-e4ab-406c-ae72-ec6d3a804d60",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate reporting basis: as-P at Ghent · Zeeschelde in Melle (final, record BE-VMM-OW168900-2026-08-12T1148)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW168900-2026-08-12T1148.phosphate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate-basis",
+        "display": "Phosphate reporting basis"
+       }
+      ],
+      "text": "Phosphate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
+      "display": "Ghent · Zeeschelde in Melle"
+     },
+     "effectiveDateTime": "2026-08-12T11:48:31+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "phosphate-basis-as-P",
+        "display": "Phosphate reporting basis: as-P"
+       }
+      ],
+      "text": "as-P"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW168900-2026-08-12T1148.phosphate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:83b39ab6-14bc-44d0-9038-302efd468670",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +547,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:c92e9911-2430-4e00-b80a-c9e9f54516bb",
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-08-12T11:48:31+02:00",
@@ -414,7 +574,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c23dc496-984f-4b3b-b21e-5b5aff79ccc9",
+    "fullUrl": "urn:uuid:edb2b61b-73e5-4159-a8e9-5218b72dc4b6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +627,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:c92e9911-2430-4e00-b80a-c9e9f54516bb",
+      "reference": "urn:uuid:806cb17f-6dd5-483b-9951-de5dc4d9ffd1",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-08-12T11:48:31+02:00",
@@ -494,7 +654,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3e6b0ceb-74ad-46c4-8d61-670869a422ed",
+    "fullUrl": "urn:uuid:d58069d6-c325-45d5-a991-67be14771ebd",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW168900-2026-08-12T1148",
@@ -513,23 +673,29 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:1dbc6192-3100-477f-bff1-52966ffada21"
+       "reference": "urn:uuid:c8e23f86-3949-4b84-86cb-e8fe3ee1e223"
       },
       {
-       "reference": "urn:uuid:688827b3-df7c-4d39-bf08-193c38a455bd"
+       "reference": "urn:uuid:399bbec0-2686-410a-a7b6-57879773c22d"
       },
       {
-       "reference": "urn:uuid:0368722a-2395-43d5-b3f2-9f40d2ccf903"
+       "reference": "urn:uuid:f1ca5f35-3f11-4f86-91f3-5164d1c7c8cb"
       },
       {
-       "reference": "urn:uuid:a8711e9e-b7ba-441e-8e56-33c41685a1a2"
+       "reference": "urn:uuid:d5e12e8f-c24d-4dac-ba4a-814e0b65f01b"
       },
       {
-       "reference": "urn:uuid:c23dc496-984f-4b3b-b21e-5b5aff79ccc9"
+       "reference": "urn:uuid:6780649e-e4ab-406c-ae72-ec6d3a804d60"
+      },
+      {
+       "reference": "urn:uuid:83b39ab6-14bc-44d0-9038-302efd468670"
+      },
+      {
+       "reference": "urn:uuid:edb2b61b-73e5-4159-a8e9-5218b72dc4b6"
       }
      ],
      "occurredDateTime": "2026-08-12T11:48:31+02:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -570,7 +736,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ee445536-3650-4ef6-b985-77062cba58fe",
+        "reference": "urn:uuid:637fdc21-dfd1-4435-af49-f9331eaede23",
         "display": "StreamFHIR 0.7.0"
        }
       }

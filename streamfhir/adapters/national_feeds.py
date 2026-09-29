@@ -5,8 +5,9 @@
 * Benevento - ARPA Campania open data "Monitoraggio Fiumi" (CSV per year; dates dd/mm/yyyy hh:mm local time;
   values may start with '<'). Licence: CC BY.
 
-Mapped: nitrate as N (VMM 'NO3-' mgN/L, ARPAC 'IC164'), pH, water temperature. Phosphorus is reported as P
-(orthophosphate in VMM, total P in ARPAC), while StreamFHIR phosphate is PO4, so it is kept as a note, not converted.
+Mapped: nitrate as N (VMM 'NO3-' mgN/L, ARPAC 'IC164'), pH, water temperature, and VMM orthophosphate as P
+('oPO4 f' mgP/L, basis as-P: the value is kept, the rule compares its PO4 equivalent). ARPAC reports total phosphorus,
+which is not orthophosphate, so it stays a note.
 """
 import csv
 import io
@@ -38,6 +39,8 @@ def _put(rec: Dict, code: str, value: float, name: str) -> None:
     rec["values"][code] = value
     if code == "nitrate":
         rec["values"]["nitrate-basis"] = "as-N"
+    if code == "phosphate":
+        rec["values"]["phosphate-basis"] = "as-P"
 
 
 def vmm_sites(stations: Iterable[Dict], city: str) -> List[Dict]:
@@ -65,10 +68,8 @@ def parse_vmm(texts: Dict[str, str], sites: Dict[str, Dict], since: Optional[str
                 rec = recs[rid] = _new(rid, site, when, "vmm", "VMM", "Vlaamse Milieumaatschappij (VMM)",
                                        "VMM Databank waterkwaliteit, station %s" % code)
             sym, sign, value, unit = row["Parameter Symbool"], (row.get("Teken") or "=").strip(), _num(row["Resultaat"]), (row.get("Eenheid") or "").strip()
-            target = {"NO3-": ("nitrate", "mgN/L"), "pH": ("ph", "-"), "T": ("water-temperature", "°C")}.get(sym)
-            if sym == "oPO4 f":
-                rec["source_info"].append("Orthophosphate %s%s mg P/L (StreamFHIR phosphate is PO4; kept as a note)." % (
-                    "" if sign == "=" else sign, row["Resultaat"]))
+            target = {"NO3-": ("nitrate", "mgN/L"), "pH": ("ph", "-"), "T": ("water-temperature", "°C"),
+                      "oPO4 f": ("phosphate", "mgP/L")}.get(sym)
             if target is None or value is None:
                 continue
             if sign != "=":

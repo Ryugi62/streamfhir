@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:2de06c0c-4ce3-42a9-8cfe-96b11a5dae3d",
+    "fullUrl": "urn:uuid:c46140ae-0c5c-4a77-bbbb-570f26aebfcc",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7b6173cd-f553-4cdd-bf82-150d2821f323",
+    "fullUrl": "urn:uuid:70645854-0139-4f4c-bc34-1a777c8b960c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6474f045-31ab-43be-9e66-88072b74c6d9",
+    "fullUrl": "urn:uuid:9233095c-7c65-49c2-af5b-c0610dd65883",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:2de06c0c-4ce3-42a9-8cfe-96b11a5dae3d",
+      "reference": "urn:uuid:c46140ae-0c5c-4a77-bbbb-570f26aebfcc",
       "display": "Toulouse area · MARQUISAT  PRISE CANAL"
      },
      "effectiveDateTime": "2025-10-22T13:05:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:61955994-3439-457e-a672-68e05a82c254"
+       "reference": "urn:uuid:14ee4a60-662f-48c4-a495-b57d9c018c74"
       },
       {
-       "reference": "urn:uuid:ddde4b66-5237-49ca-a8fc-838fca965515"
+       "reference": "urn:uuid:9f5a6e46-b37f-435d-9117-24f9fdfbb878"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:61955994-3439-457e-a672-68e05a82c254",
+    "fullUrl": "urn:uuid:14ee4a60-662f-48c4-a495-b57d9c018c74",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:2de06c0c-4ce3-42a9-8cfe-96b11a5dae3d",
+      "reference": "urn:uuid:c46140ae-0c5c-4a77-bbbb-570f26aebfcc",
       "display": "Toulouse area · MARQUISAT  PRISE CANAL"
      },
      "effectiveDateTime": "2025-10-22T13:05:00+02:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ddde4b66-5237-49ca-a8fc-838fca965515",
+    "fullUrl": "urn:uuid:9f5a6e46-b37f-435d-9117-24f9fdfbb878",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:2de06c0c-4ce3-42a9-8cfe-96b11a5dae3d",
+      "reference": "urn:uuid:c46140ae-0c5c-4a77-bbbb-570f26aebfcc",
       "display": "Toulouse area · MARQUISAT  PRISE CANAL"
      },
      "effectiveDateTime": "2025-10-22T13:05:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:45d37697-2952-48da-95d4-200ff9cdcfaa",
+    "fullUrl": "urn:uuid:3f3005bd-b5d2-45fc-b140-1e6d73decbf8",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000326-2025-10-22T1305",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:6474f045-31ab-43be-9e66-88072b74c6d9"
+       "reference": "urn:uuid:9233095c-7c65-49c2-af5b-c0610dd65883"
       },
       {
-       "reference": "urn:uuid:61955994-3439-457e-a672-68e05a82c254"
+       "reference": "urn:uuid:14ee4a60-662f-48c4-a495-b57d9c018c74"
       },
       {
-       "reference": "urn:uuid:ddde4b66-5237-49ca-a8fc-838fca965515"
+       "reference": "urn:uuid:9f5a6e46-b37f-435d-9117-24f9fdfbb878"
       }
      ],
      "occurredDateTime": "2025-10-22T13:05:00+02:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:7b6173cd-f553-4cdd-bf82-150d2821f323",
+        "reference": "urn:uuid:70645854-0139-4f4c-bc34-1a777c8b960c",
         "display": "StreamFHIR 0.7.0"
        }
       }

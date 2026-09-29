@@ -6,8 +6,8 @@
    {
     "severity": "warning",
     "field": "source",
-    "code": "source-note",
-    "message": "From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+    "code": "plausibility",
+    "message": "StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
    }
   ]
  },
@@ -16,7 +16,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+    "fullUrl": "urn:uuid:6c42d95a-9cc3-4ee4-90d9-450a37aac79d",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -63,7 +63,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3235c1c7-b39a-4a8e-812c-86aaec562ba2",
+    "fullUrl": "urn:uuid:308babba-ac1f-43a7-8faf-166626529d6b",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -104,7 +104,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183",
+    "fullUrl": "urn:uuid:32cf02f3-1acc-4265-88cf-956eea31ca1f",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -137,7 +137,7 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "reference": "urn:uuid:6c42d95a-9cc3-4ee4-90d9-450a37aac79d",
       "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
      "createdDateTime": "2023-03-25T14:40:00+01:00",
@@ -153,7 +153,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:64bd54e9-0fd2-4799-bfa4-1a9c4442748f",
+    "fullUrl": "urn:uuid:388c947d-50de-481d-942f-95c27d737d68",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -206,7 +206,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "reference": "urn:uuid:6c42d95a-9cc3-4ee4-90d9-450a37aac79d",
       "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
      "effectiveDateTime": "2023-03-25T14:40:00+01:00",
@@ -221,23 +221,23 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:04fb3b98-b06c-443b-9fa4-74cf87cbafbe"
+       "reference": "urn:uuid:e222f174-f156-4341-bb61-e6b4f8b7e3f2"
       },
       {
-       "reference": "urn:uuid:3fb555d2-699a-4c5c-b825-5373f186a9f1"
+       "reference": "urn:uuid:c7737ebf-b69f-4310-9ed1-0e82533d9fce"
       },
       {
-       "reference": "urn:uuid:8328d408-8c89-4365-af07-7882f09f5929"
+       "reference": "urn:uuid:e0a0f9b7-3067-41ec-b2fd-2e083279fb08"
       }
      ],
      "note": [
       {
-       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+       "text": "Needs review: StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183"
+       "reference": "urn:uuid:32cf02f3-1acc-4265-88cf-956eea31ca1f"
       }
      ]
     },
@@ -247,7 +247,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:04fb3b98-b06c-443b-9fa4-74cf87cbafbe",
+    "fullUrl": "urn:uuid:e222f174-f156-4341-bb61-e6b4f8b7e3f2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -300,7 +300,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "reference": "urn:uuid:6c42d95a-9cc3-4ee4-90d9-450a37aac79d",
       "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
      "effectiveDateTime": "2023-03-25T14:40:00+01:00",
@@ -325,12 +325,12 @@
      },
      "note": [
       {
-       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+       "text": "Needs review: StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183"
+       "reference": "urn:uuid:32cf02f3-1acc-4265-88cf-956eea31ca1f"
       }
      ]
     },
@@ -340,7 +340,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3fb555d2-699a-4c5c-b825-5373f186a9f1",
+    "fullUrl": "urn:uuid:c7737ebf-b69f-4310-9ed1-0e82533d9fce",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -393,7 +393,7 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "reference": "urn:uuid:6c42d95a-9cc3-4ee4-90d9-450a37aac79d",
       "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
      "effectiveDateTime": "2023-03-25T14:40:00+01:00",
@@ -409,7 +409,7 @@
      "valueBoolean": false,
      "note": [
       {
-       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+       "text": "Needs review: StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
       }
      ]
     },
@@ -419,7 +419,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8328d408-8c89-4365-af07-7882f09f5929",
+    "fullUrl": "urn:uuid:e0a0f9b7-3067-41ec-b2fd-2e083279fb08",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -472,7 +472,7 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "reference": "urn:uuid:6c42d95a-9cc3-4ee4-90d9-450a37aac79d",
       "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
      "effectiveDateTime": "2023-03-25T14:40:00+01:00",
@@ -497,7 +497,7 @@
      },
      "note": [
       {
-       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+       "text": "Needs review: StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
       }
      ]
     },
@@ -507,7 +507,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cc7c5ba0-590b-4b6d-8a0b-2f157f3800a4",
+    "fullUrl": "urn:uuid:2544a484-a734-49f5-a330-9c050361dd5c",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304440",
@@ -531,23 +531,23 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:64bd54e9-0fd2-4799-bfa4-1a9c4442748f"
+       "reference": "urn:uuid:388c947d-50de-481d-942f-95c27d737d68"
       },
       {
-       "reference": "urn:uuid:04fb3b98-b06c-443b-9fa4-74cf87cbafbe"
+       "reference": "urn:uuid:e222f174-f156-4341-bb61-e6b4f8b7e3f2"
       },
       {
-       "reference": "urn:uuid:3fb555d2-699a-4c5c-b825-5373f186a9f1"
+       "reference": "urn:uuid:c7737ebf-b69f-4310-9ed1-0e82533d9fce"
       },
       {
-       "reference": "urn:uuid:8328d408-8c89-4365-af07-7882f09f5929"
+       "reference": "urn:uuid:e0a0f9b7-3067-41ec-b2fd-2e083279fb08"
       },
       {
-       "reference": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183"
+       "reference": "urn:uuid:32cf02f3-1acc-4265-88cf-956eea31ca1f"
       }
      ],
      "occurredDateTime": "2023-03-25T14:40:00+01:00",
-     "recorded": "2026-09-29T14:00:22+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -587,7 +587,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:3235c1c7-b39a-4a8e-812c-86aaec562ba2",
+        "reference": "urn:uuid:308babba-ac1f-43a7-8faf-166626529d6b",
         "display": "StreamFHIR 0.7.0"
        }
       }

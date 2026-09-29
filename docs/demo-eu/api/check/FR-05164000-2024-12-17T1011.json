@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+    "fullUrl": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ab4cb5f8-2fdb-40f0-8952-519d8cb152e7",
+    "fullUrl": "urn:uuid:e30ff22f-e9cf-4a81-8ac8-a7589a37e76d",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:13891bc9-4fe1-45dc-8d72-f61e876981f8",
+    "fullUrl": "urn:uuid:81a61d72-a470-463f-bf5b-7ca36026d7c9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+      "reference": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:72c0b0df-75e9-4ad0-9199-344439a9ddc0"
+       "reference": "urn:uuid:3ac4b1b3-0af4-4af4-b227-77ef4a156ad1"
       },
       {
-       "reference": "urn:uuid:0dfb3768-5dc9-4fe9-9d8c-bc43d3f27f98"
+       "reference": "urn:uuid:04dfcb16-f0f9-4410-81f1-00efe2bd9b33"
       },
       {
-       "reference": "urn:uuid:6b9d6cc3-b8ec-4f22-b54d-ab0f68d4dd70"
+       "reference": "urn:uuid:207623d2-405f-4b2c-8958-01178c751b33"
       },
       {
-       "reference": "urn:uuid:b27c0e39-70d4-4ba8-8626-d9217f0fb95c"
+       "reference": "urn:uuid:95ce289d-5c83-4ce5-ba17-fe741c1804a1"
       },
       {
-       "reference": "urn:uuid:5fe0f7f6-eb26-404c-91bc-4838e96626f2"
+       "reference": "urn:uuid:6b03c71d-67cd-4831-99d3-638339418e36"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:72c0b0df-75e9-4ad0-9199-344439a9ddc0",
+    "fullUrl": "urn:uuid:3ac4b1b3-0af4-4af4-b227-77ef4a156ad1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+      "reference": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0dfb3768-5dc9-4fe9-9d8c-bc43d3f27f98",
+    "fullUrl": "urn:uuid:04dfcb16-f0f9-4410-81f1-00efe2bd9b33",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -335,7 +335,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+      "reference": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -362,7 +362,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6b9d6cc3-b8ec-4f22-b54d-ab0f68d4dd70",
+    "fullUrl": "urn:uuid:207623d2-405f-4b2c-8958-01178c751b33",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+      "reference": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b27c0e39-70d4-4ba8-8626-d9217f0fb95c",
+    "fullUrl": "urn:uuid:95ce289d-5c83-4ce5-ba17-fe741c1804a1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -458,7 +458,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.064 mg/L at Toulouse area · L'Ariège à Lacroix - Falgarde (final, record FR-05164000-2024-12-17T1011)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 0.064 mg/L at Toulouse area · L'Ariège à Lacroix - Falgarde (final, record FR-05164000-2024-12-17T1011)</p></div>"
      },
      "identifier": [
       {
@@ -483,7 +483,7 @@
        {
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
-        "display": "Phosphate (as PO4)"
+        "display": "Phosphate (orthophosphate)"
        },
        {
         "system": "https://id.eaufrance.fr/par",
@@ -491,10 +491,10 @@
         "display": "Orthophosphates (PO4)"
        }
       ],
-      "text": "Phosphate (as PO4)"
+      "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+      "reference": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5fe0f7f6-eb26-404c-91bc-4838e96626f2",
+    "fullUrl": "urn:uuid:6b03c71d-67cd-4831-99d3-638339418e36",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
+      "reference": "urn:uuid:aea12ee1-7a19-4638-b01e-616d404914ee",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:70713000-4708-42ff-a794-5fa39c134fb5",
+    "fullUrl": "urn:uuid:a365c8d8-e306-43d6-a17c-49edb658a93f",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05164000-2024-12-17T1011",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:13891bc9-4fe1-45dc-8d72-f61e876981f8"
+       "reference": "urn:uuid:81a61d72-a470-463f-bf5b-7ca36026d7c9"
       },
       {
-       "reference": "urn:uuid:72c0b0df-75e9-4ad0-9199-344439a9ddc0"
+       "reference": "urn:uuid:3ac4b1b3-0af4-4af4-b227-77ef4a156ad1"
       },
       {
-       "reference": "urn:uuid:0dfb3768-5dc9-4fe9-9d8c-bc43d3f27f98"
+       "reference": "urn:uuid:04dfcb16-f0f9-4410-81f1-00efe2bd9b33"
       },
       {
-       "reference": "urn:uuid:6b9d6cc3-b8ec-4f22-b54d-ab0f68d4dd70"
+       "reference": "urn:uuid:207623d2-405f-4b2c-8958-01178c751b33"
       },
       {
-       "reference": "urn:uuid:b27c0e39-70d4-4ba8-8626-d9217f0fb95c"
+       "reference": "urn:uuid:95ce289d-5c83-4ce5-ba17-fe741c1804a1"
       },
       {
-       "reference": "urn:uuid:5fe0f7f6-eb26-404c-91bc-4838e96626f2"
+       "reference": "urn:uuid:6b03c71d-67cd-4831-99d3-638339418e36"
       }
      ],
      "occurredDateTime": "2024-12-17T10:11:00+01:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ab4cb5f8-2fdb-40f0-8952-519d8cb152e7",
+        "reference": "urn:uuid:e30ff22f-e9cf-4a81-8ac8-a7589a37e76d",
         "display": "StreamFHIR 0.7.0"
        }
       }

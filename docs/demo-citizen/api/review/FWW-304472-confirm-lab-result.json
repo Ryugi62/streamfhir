@@ -153,7 +153,7 @@
     "skipped": 0
    }
   },
-  "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and Coimbra",
+  "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and in central Portugal",
   "banner": "Real volunteer observations from Earthwatch Europe's FreshWater Watch (open access, no formal licence; attribution Earthwatch Europe) within about 50 km of Toulouse and in central Portugal (Aveiro, Figueira da Foz; 40-55 km from Coimbra): one volunteer campaign in March 2023 plus a few other visits, single visits per site. Only fields whose meaning matches StreamFHIR indicators are scored; kit bands are notes. For real citizen data a photo counts only after a reviewer's photo check. Each site is shown as of its own visit date.",
   "photo_needs_review": true,
   "evaluate_each_site_at_its_latest_visit": true
@@ -421,14 +421,14 @@
       {
        "severity": "warning",
        "field": "source",
-       "code": "source-note",
-       "message": "From the source system: A blue-green scum was ticked on flowing water, where surface scums rarely form; a reviewer should check the photo before it counts."
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer ticked 'Blue_green_scum' (algae) with flow 'Steady' and colour 'Brown'; surface scums rarely form on flowing water, so a reviewer should check the photo before it counts."
       },
       {
        "severity": "warning",
        "field": "source",
-       "code": "source-note",
-       "message": "From the source system: An outfall pipe was discharging at the visit: a possible sewage signal for a reviewer to check."
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer noted 'Outfall_pipe_currently_discharging': a possible sewage signal for a reviewer to check."
       }
      ]
     }
@@ -438,7 +438,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:656ed689-3cb2-4d9e-b9c7-b741f44e040c",
+      "fullUrl": "urn:uuid:154dc351-2327-4377-beef-3e47ec66aecd",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -485,7 +485,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:78c54d8b-76db-4feb-81e8-d860e4ba4c3e",
+      "fullUrl": "urn:uuid:2319665f-e37f-41e6-96d4-b4f0ada32ff0",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -526,7 +526,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:28e00bb2-29cb-4cd2-a07d-ae7f3a321f19",
+      "fullUrl": "urn:uuid:d2b3617b-d819-40e2-b0bf-0656bf816026",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -599,7 +599,7 @@
         "text": "High health hazard at Central Portugal · Rio Vouga, Aveiro (5 corroborated of 5 hazard points: environment 0 / animal 3 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer). Expires 2023-04-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:656ed689-3cb2-4d9e-b9c7-b741f44e040c",
+        "reference": "urn:uuid:154dc351-2327-4377-beef-3e47ec66aecd",
         "display": "Central Portugal · Rio Vouga, Aveiro"
        },
        "period": {
@@ -607,7 +607,7 @@
         "end": "2023-04-09T15:00:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:78c54d8b-76db-4feb-81e8-d860e4ba4c3e",
+        "reference": "urn:uuid:2319665f-e37f-41e6-96d4-b4f0ada32ff0",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -617,7 +617,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:f3cb9339-5506-4f41-acb7-6a7b5b46b2ef",
+      "fullUrl": "urn:uuid:fc496c0e-6699-4e7c-a265-9224b9c469de",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-FWW-40.6527--8.5794",
@@ -636,10 +636,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:28e00bb2-29cb-4cd2-a07d-ae7f3a321f19"
+         "reference": "urn:uuid:d2b3617b-d819-40e2-b0bf-0656bf816026"
         }
        ],
-       "recorded": "2026-09-29T14:00:22+00:00",
+       "recorded": "2026-09-29T14:13:43+00:00",
        "activity": {
         "coding": [
          {
@@ -661,7 +661,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:78c54d8b-76db-4feb-81e8-d860e4ba4c3e",
+          "reference": "urn:uuid:2319665f-e37f-41e6-96d4-b4f0ada32ff0",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -1005,8 +1005,8 @@
       {
        "severity": "warning",
        "field": "source",
-       "code": "source-note",
-       "message": "From the source system: A blue-green scum was ticked on flowing water, where surface scums rarely form; a reviewer should check the photo before it counts."
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer ticked 'Blue_green_scum' (algae) with flow 'Steady' and colour 'Colourless'; surface scums rarely form on flowing water, so a reviewer should check the photo before it counts."
       }
      ]
     }
@@ -1185,8 +1185,8 @@
       {
        "severity": "warning",
        "field": "source",
-       "code": "source-note",
-       "message": "From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
       }
      ]
     }

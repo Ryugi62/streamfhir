@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+    "fullUrl": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2813a2b7-59a2-48f3-9065-5b34bffe746e",
+    "fullUrl": "urn:uuid:b4bc7ebc-0119-49f7-a125-f0ab6e7fdb2e",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6e4dc6a7-bd62-4f9c-a092-eb224092279e",
+    "fullUrl": "urn:uuid:eb2685b8-20a4-482e-ac33-7aec4120e350",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+      "reference": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:2579077f-638a-47bd-9485-eb47e9850b90"
+       "reference": "urn:uuid:2d445594-c31a-4c95-826d-f790057c91a0"
       },
       {
-       "reference": "urn:uuid:3ec069a3-5702-4887-bce1-548608d67c49"
+       "reference": "urn:uuid:945f2bde-ff1a-4cd1-b00a-4084733a4e18"
       },
       {
-       "reference": "urn:uuid:032950a1-f633-45bc-ae45-df682ca3563f"
+       "reference": "urn:uuid:14ceca20-20cc-406b-8622-53c30c8edb28"
       },
       {
-       "reference": "urn:uuid:41854d3a-d8f2-4392-ab41-7ba51a60cb78"
+       "reference": "urn:uuid:ea469967-7c62-4892-8a2f-bc3f2370d2d2"
       },
       {
-       "reference": "urn:uuid:2114ed3a-ae08-45d4-aa8a-69a86d570598"
+       "reference": "urn:uuid:cee8527e-c7f9-4bc1-abe7-cbb833b0c1d4"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2579077f-638a-47bd-9485-eb47e9850b90",
+    "fullUrl": "urn:uuid:2d445594-c31a-4c95-826d-f790057c91a0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+      "reference": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3ec069a3-5702-4887-bce1-548608d67c49",
+    "fullUrl": "urn:uuid:945f2bde-ff1a-4cd1-b00a-4084733a4e18",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+      "reference": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:032950a1-f633-45bc-ae45-df682ca3563f",
+    "fullUrl": "urn:uuid:14ceca20-20cc-406b-8622-53c30c8edb28",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -374,7 +374,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.35 mg/L at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 0.35 mg/L at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
      },
      "identifier": [
       {
@@ -399,7 +399,7 @@
        {
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
-        "display": "Phosphate (as PO4)"
+        "display": "Phosphate (orthophosphate)"
        },
        {
         "system": "https://id.eaufrance.fr/par",
@@ -407,10 +407,10 @@
         "display": "Orthophosphates (PO4)"
        }
       ],
-      "text": "Phosphate (as PO4)"
+      "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+      "reference": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:41854d3a-d8f2-4392-ab41-7ba51a60cb78",
+    "fullUrl": "urn:uuid:ea469967-7c62-4892-8a2f-bc3f2370d2d2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+      "reference": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2114ed3a-ae08-45d4-aa8a-69a86d570598",
+    "fullUrl": "urn:uuid:cee8527e-c7f9-4bc1-abe7-cbb833b0c1d4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:af07eaea-d770-4527-b7b9-e872ee534f13",
+      "reference": "urn:uuid:19829d16-7ad9-4aa8-929b-1b5ae3237705",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5fe699bc-b603-4ffd-bf3c-6aef52459e05",
+    "fullUrl": "urn:uuid:67e9b530-10f0-4689-b1ad-5b2acbc040b0",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310350-2024-12-17T1228",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:6e4dc6a7-bd62-4f9c-a092-eb224092279e"
+       "reference": "urn:uuid:eb2685b8-20a4-482e-ac33-7aec4120e350"
       },
       {
-       "reference": "urn:uuid:2579077f-638a-47bd-9485-eb47e9850b90"
+       "reference": "urn:uuid:2d445594-c31a-4c95-826d-f790057c91a0"
       },
       {
-       "reference": "urn:uuid:3ec069a3-5702-4887-bce1-548608d67c49"
+       "reference": "urn:uuid:945f2bde-ff1a-4cd1-b00a-4084733a4e18"
       },
       {
-       "reference": "urn:uuid:032950a1-f633-45bc-ae45-df682ca3563f"
+       "reference": "urn:uuid:14ceca20-20cc-406b-8622-53c30c8edb28"
       },
       {
-       "reference": "urn:uuid:41854d3a-d8f2-4392-ab41-7ba51a60cb78"
+       "reference": "urn:uuid:ea469967-7c62-4892-8a2f-bc3f2370d2d2"
       },
       {
-       "reference": "urn:uuid:2114ed3a-ae08-45d4-aa8a-69a86d570598"
+       "reference": "urn:uuid:cee8527e-c7f9-4bc1-abe7-cbb833b0c1d4"
       }
      ],
      "occurredDateTime": "2024-12-17T12:28:00+01:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:2813a2b7-59a2-48f3-9065-5b34bffe746e",
+        "reference": "urn:uuid:b4bc7ebc-0119-49f7-a125-f0ab6e7fdb2e",
         "display": "StreamFHIR 0.7.0"
        }
       }

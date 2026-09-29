@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+    "fullUrl": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ccd6ebea-01f9-4f83-aff8-69aa8af469ae",
+    "fullUrl": "urn:uuid:857b30bf-94e8-496e-a137-a43d30bd1406",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a518da6a-c2ac-4b36-9a00-4b61508d0127",
+    "fullUrl": "urn:uuid:7438bbe6-c29e-4aba-aae2-26b208175202",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+      "reference": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e0c43b5d-c61f-4b83-b251-d62e58cce431"
+       "reference": "urn:uuid:045a45cd-b635-45bc-9eb7-dac7ff0f709c"
       },
       {
-       "reference": "urn:uuid:5eec051e-4763-4ac0-b6c9-fad27f3da34d"
+       "reference": "urn:uuid:bdc3d3b6-efba-4d5a-8129-1520e82991d9"
       },
       {
-       "reference": "urn:uuid:f5a6ca41-39f3-432a-a312-ddcac0db9d53"
+       "reference": "urn:uuid:a5cc9534-ab3f-4642-b947-fee06a81aab8"
       },
       {
-       "reference": "urn:uuid:9ed03707-67e7-42f1-becb-6c7e4cf0e44c"
+       "reference": "urn:uuid:ff6e59b2-9075-4a53-8b25-ee0b0402a70d"
       },
       {
-       "reference": "urn:uuid:1950df01-eed9-4254-b365-cc02aec54b2e"
+       "reference": "urn:uuid:1ea33b2a-7257-47bc-9566-070b69359049"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e0c43b5d-c61f-4b83-b251-d62e58cce431",
+    "fullUrl": "urn:uuid:045a45cd-b635-45bc-9eb7-dac7ff0f709c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+      "reference": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5eec051e-4763-4ac0-b6c9-fad27f3da34d",
+    "fullUrl": "urn:uuid:bdc3d3b6-efba-4d5a-8129-1520e82991d9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+      "reference": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f5a6ca41-39f3-432a-a312-ddcac0db9d53",
+    "fullUrl": "urn:uuid:a5cc9534-ab3f-4642-b947-fee06a81aab8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -373,7 +373,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.1 mg/L at Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech) (final, record FR-05310440-2024-12-17T0837)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 0.1 mg/L at Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech) (final, record FR-05310440-2024-12-17T0837)</p></div>"
      },
      "identifier": [
       {
@@ -398,7 +398,7 @@
        {
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
-        "display": "Phosphate (as PO4)"
+        "display": "Phosphate (orthophosphate)"
        },
        {
         "system": "https://id.eaufrance.fr/par",
@@ -406,10 +406,10 @@
         "display": "Orthophosphates (PO4)"
        }
       ],
-      "text": "Phosphate (as PO4)"
+      "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+      "reference": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9ed03707-67e7-42f1-becb-6c7e4cf0e44c",
+    "fullUrl": "urn:uuid:ff6e59b2-9075-4a53-8b25-ee0b0402a70d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+      "reference": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1950df01-eed9-4254-b365-cc02aec54b2e",
+    "fullUrl": "urn:uuid:1ea33b2a-7257-47bc-9566-070b69359049",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:f01f4b10-0822-43e6-9aa2-42f86626f3c8",
+      "reference": "urn:uuid:23d6a820-2073-4c9f-afac-d09a485aa33a",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c3d15c1c-9f07-4371-88c0-ecb65e818a9f",
+    "fullUrl": "urn:uuid:de149609-4736-4b63-9ffa-8d4cc53048b7",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310440-2024-12-17T0837",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:a518da6a-c2ac-4b36-9a00-4b61508d0127"
+       "reference": "urn:uuid:7438bbe6-c29e-4aba-aae2-26b208175202"
       },
       {
-       "reference": "urn:uuid:e0c43b5d-c61f-4b83-b251-d62e58cce431"
+       "reference": "urn:uuid:045a45cd-b635-45bc-9eb7-dac7ff0f709c"
       },
       {
-       "reference": "urn:uuid:5eec051e-4763-4ac0-b6c9-fad27f3da34d"
+       "reference": "urn:uuid:bdc3d3b6-efba-4d5a-8129-1520e82991d9"
       },
       {
-       "reference": "urn:uuid:f5a6ca41-39f3-432a-a312-ddcac0db9d53"
+       "reference": "urn:uuid:a5cc9534-ab3f-4642-b947-fee06a81aab8"
       },
       {
-       "reference": "urn:uuid:9ed03707-67e7-42f1-becb-6c7e4cf0e44c"
+       "reference": "urn:uuid:ff6e59b2-9075-4a53-8b25-ee0b0402a70d"
       },
       {
-       "reference": "urn:uuid:1950df01-eed9-4254-b365-cc02aec54b2e"
+       "reference": "urn:uuid:1ea33b2a-7257-47bc-9566-070b69359049"
       }
      ],
      "occurredDateTime": "2024-12-17T08:37:00+01:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ccd6ebea-01f9-4f83-aff8-69aa8af469ae",
+        "reference": "urn:uuid:857b30bf-94e8-496e-a137-a43d30bd1406",
         "display": "StreamFHIR 0.7.0"
        }
       }

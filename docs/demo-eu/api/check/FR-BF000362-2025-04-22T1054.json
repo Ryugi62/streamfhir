@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:83713ee1-f324-49a5-962a-16d177b6c2b0",
+    "fullUrl": "urn:uuid:fec77fb6-a2d8-4e04-8499-b16eb2e4d62f",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5ad85348-f609-431b-be95-a55f3258274c",
+    "fullUrl": "urn:uuid:22257217-c0a6-4a97-9566-e2c939208908",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f725e7ae-f055-46e1-aa87-84de99f670b6",
+    "fullUrl": "urn:uuid:d1a88974-48ea-494f-9a01-c2bd8d5e2bb4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:83713ee1-f324-49a5-962a-16d177b6c2b0",
+      "reference": "urn:uuid:fec77fb6-a2d8-4e04-8499-b16eb2e4d62f",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-04-22T10:54:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:9a47f812-e7a4-44f6-8220-0d97788bf3fa"
+       "reference": "urn:uuid:aaba8cd5-400e-4a1a-9872-ed864b4efa5d"
       },
       {
-       "reference": "urn:uuid:e7e24251-5f06-4e04-b0ed-83e9b39b0162"
+       "reference": "urn:uuid:45875ca7-ada1-4703-90ad-fb936686bd49"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9a47f812-e7a4-44f6-8220-0d97788bf3fa",
+    "fullUrl": "urn:uuid:aaba8cd5-400e-4a1a-9872-ed864b4efa5d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:83713ee1-f324-49a5-962a-16d177b6c2b0",
+      "reference": "urn:uuid:fec77fb6-a2d8-4e04-8499-b16eb2e4d62f",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-04-22T10:54:00+02:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e7e24251-5f06-4e04-b0ed-83e9b39b0162",
+    "fullUrl": "urn:uuid:45875ca7-ada1-4703-90ad-fb936686bd49",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:83713ee1-f324-49a5-962a-16d177b6c2b0",
+      "reference": "urn:uuid:fec77fb6-a2d8-4e04-8499-b16eb2e4d62f",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-04-22T10:54:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b4f13034-900b-4504-b69a-23b657bfed84",
+    "fullUrl": "urn:uuid:33811da5-a8e8-4d56-908f-1eeb82e30075",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000362-2025-04-22T1054",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:f725e7ae-f055-46e1-aa87-84de99f670b6"
+       "reference": "urn:uuid:d1a88974-48ea-494f-9a01-c2bd8d5e2bb4"
       },
       {
-       "reference": "urn:uuid:9a47f812-e7a4-44f6-8220-0d97788bf3fa"
+       "reference": "urn:uuid:aaba8cd5-400e-4a1a-9872-ed864b4efa5d"
       },
       {
-       "reference": "urn:uuid:e7e24251-5f06-4e04-b0ed-83e9b39b0162"
+       "reference": "urn:uuid:45875ca7-ada1-4703-90ad-fb936686bd49"
       }
      ],
      "occurredDateTime": "2025-04-22T10:54:00+02:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:5ad85348-f609-431b-be95-a55f3258274c",
+        "reference": "urn:uuid:22257217-c0a6-4a97-9566-e2c939208908",
         "display": "StreamFHIR 0.7.0"
        }
       }

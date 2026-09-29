@@ -52,6 +52,7 @@ def test_ac45_implausible_scum_and_outfall_go_to_a_person_and_a_photo_alone_does
     rep = validate_record(records[0], site, NOW)
     msgs = " ".join(i.message for i in rep.issues)
     assert rep.status == "review" and "flowing water" in msgs and "outfall" in msgs.lower()
+    assert "StreamFHIR plausibility check" in msgs and "Blue_green_scum" in msgs     # our inference is labelled as ours
     risk = evaluate_site(sites[0]["site_id"], [rep], as_of=None, photo_corroborates=False)
     assert risk.level == "verify" and not risk.needs_flag
     # a reviewer who checked the photo and confirms makes it count

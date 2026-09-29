@@ -137,6 +137,7 @@
  ],
  "as_of": "2026-09-29T12:00:00+01:00",
  "dataset": {
+  "photo_needs_review": true,
   "synthetic": true
  },
  "sites": [
@@ -550,7 +551,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:840e9227-7c9a-43ed-adaf-48fbaf121920",
+      "fullUrl": "urn:uuid:165b41cd-e24d-4912-b46a-f030de56c4b5",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -602,7 +603,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:515be29e-764a-49a9-bcb9-1fbbdfbaef2a",
+      "fullUrl": "urn:uuid:f37dfb38-7671-40ca-a7e0-fbd402c2c0b7",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -648,7 +649,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:3cf81ea0-0b7a-439f-a336-fff08b6e2064",
+      "fullUrl": "urn:uuid:9e02b2d4-305c-4789-bf41-673dbfb7efeb",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -749,7 +750,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:840e9227-7c9a-43ed-adaf-48fbaf121920",
+        "reference": "urn:uuid:165b41cd-e24d-4912-b46a-f030de56c4b5",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -757,7 +758,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:515be29e-764a-49a9-bcb9-1fbbdfbaef2a",
+        "reference": "urn:uuid:f37dfb38-7671-40ca-a7e0-fbd402c2c0b7",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -767,7 +768,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:54a42bec-fdf7-4b4f-b06b-6b6181fd74fb",
+      "fullUrl": "urn:uuid:b70c8462-d618-4871-8bb7-f925c9373c07",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -791,10 +792,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:3cf81ea0-0b7a-439f-a336-fff08b6e2064"
+         "reference": "urn:uuid:9e02b2d4-305c-4789-bf41-673dbfb7efeb"
         }
        ],
-       "recorded": "2026-09-29T14:00:23+00:00",
+       "recorded": "2026-09-29T14:13:43+00:00",
        "activity": {
         "coding": [
          {
@@ -816,7 +817,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:515be29e-764a-49a9-bcb9-1fbbdfbaef2a",
+          "reference": "urn:uuid:f37dfb38-7671-40ca-a7e0-fbd402c2c0b7",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -890,8 +891,8 @@
       "observers": [
        "obs-05"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2026-09-18T11:20:00+01:00",
@@ -1098,7 +1099,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:a1507f48-ee9a-4eca-a555-548111283af2",
+      "fullUrl": "urn:uuid:4ffbf01c-a75a-4ef5-a550-2795252b83d5",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -1150,7 +1151,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:dfe94c84-914d-4dc5-a475-25cda269e3db",
+      "fullUrl": "urn:uuid:306ab887-3a30-4746-aa6f-ea32bda2bd4b",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1196,7 +1197,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:2b331fa7-f56b-46b6-811c-5b0222854976",
+      "fullUrl": "urn:uuid:d2fade55-72e8-47cd-a50a-32d9607c011c",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1309,7 +1310,7 @@
         "text": "High health hazard at Mill Pond inlet (11 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R5 Dead fish (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-06 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:a1507f48-ee9a-4eca-a555-548111283af2",
+        "reference": "urn:uuid:4ffbf01c-a75a-4ef5-a550-2795252b83d5",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1317,7 +1318,7 @@
         "end": "2026-10-06T18:40:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:dfe94c84-914d-4dc5-a475-25cda269e3db",
+        "reference": "urn:uuid:306ab887-3a30-4746-aa6f-ea32bda2bd4b",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -1327,7 +1328,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:0a13a48e-b175-41d4-9425-f9f91720ac14",
+      "fullUrl": "urn:uuid:bbf45ec2-85e2-4728-82de-fc64e5e45c56",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1351,10 +1352,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:2b331fa7-f56b-46b6-811c-5b0222854976"
+         "reference": "urn:uuid:d2fade55-72e8-47cd-a50a-32d9607c011c"
         }
        ],
-       "recorded": "2026-09-29T14:00:23+00:00",
+       "recorded": "2026-09-29T14:13:43+00:00",
        "activity": {
         "coding": [
          {
@@ -1376,7 +1377,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:dfe94c84-914d-4dc5-a475-25cda269e3db",
+          "reference": "urn:uuid:306ab887-3a30-4746-aa6f-ea32bda2bd4b",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -1451,8 +1452,8 @@
        "obs-02",
        "obs-07"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2026-09-17T09:00:00+01:00",
@@ -1519,8 +1520,8 @@
        "obs-02",
        "obs-07"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
       "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
       "first_seen": "2026-09-17T09:00:00+01:00",

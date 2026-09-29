@@ -142,7 +142,7 @@
   "label": "Real EU data: Ghent rivers (VMM, Flanders)",
   "import_stats": {
    "rows": 22248,
-   "mapped_values": 116,
+   "mapped_values": 154,
    "older_than_since": 150,
    "records": 39,
    "sites": 3
@@ -172,9 +172,33 @@
      "animal": 0,
      "human": 0
     },
-    "condition_points": 0,
-    "condition": "good",
-    "fired": [],
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment (screening)",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "BE-VMM-OW172100-2026-09-08T1340"
+      ],
+      "observers": [
+       "VMM"
+      ],
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2026-09-08T13:40:17+02:00",
+      "last_seen": "2026-09-08T13:40:17+02:00",
+      "trusted_record_ids": [
+       "BE-VMM-OW172100-2026-09-08T1340"
+      ]
+     }
+    ],
     "record_ids": [
      "BE-VMM-OW172100-2026-09-08T1340"
     ],
@@ -196,6 +220,8 @@
      "values": {
       "nitrate": 3.66,
       "nitrate-basis": "as-N",
+      "phosphate": 0.225,
+      "phosphate-basis": "as-P",
       "ph": 8.23,
       "water-temperature": 20.9
      },
@@ -221,6 +247,8 @@
      "values": {
       "nitrate": 5.6,
       "nitrate-basis": "as-N",
+      "phosphate": 0.301,
+      "phosphate-basis": "as-P",
       "ph": 7.78,
       "water-temperature": 15.6
      },
@@ -239,6 +267,8 @@
      "values": {
       "nitrate": 6.2,
       "nitrate-basis": "as-N",
+      "phosphate": 0.357,
+      "phosphate-basis": "as-P",
       "ph": 7.8,
       "water-temperature": 10.0
      },
@@ -257,6 +287,8 @@
      "values": {
       "nitrate": 5.6,
       "nitrate-basis": "as-N",
+      "phosphate": 0.269,
+      "phosphate-basis": "as-P",
       "ph": 7.5,
       "water-temperature": 8.3
      },
@@ -275,6 +307,8 @@
      "values": {
       "nitrate": 6.6,
       "nitrate-basis": "as-N",
+      "phosphate": 0.208,
+      "phosphate-basis": "as-P",
       "ph": 7.55,
       "water-temperature": 7.2
      },
@@ -293,6 +327,8 @@
      "values": {
       "nitrate": 5.9,
       "nitrate-basis": "as-N",
+      "phosphate": 0.191,
+      "phosphate-basis": "as-P",
       "ph": 7.81,
       "water-temperature": 6.9
      },
@@ -311,6 +347,8 @@
      "values": {
       "nitrate": 5.5,
       "nitrate-basis": "as-N",
+      "phosphate": 0.164,
+      "phosphate-basis": "as-P",
       "ph": 7.82,
       "water-temperature": 11.2
      },
@@ -329,6 +367,8 @@
      "values": {
       "nitrate": 4.3,
       "nitrate-basis": "as-N",
+      "phosphate": 0.104,
+      "phosphate-basis": "as-P",
       "ph": 8.44,
       "water-temperature": 13.4
      },
@@ -347,6 +387,8 @@
      "values": {
       "nitrate": 3.72,
       "nitrate-basis": "as-N",
+      "phosphate": 0.204,
+      "phosphate-basis": "as-P",
       "ph": 7.92,
       "water-temperature": 16.4
      },
@@ -365,6 +407,8 @@
      "values": {
       "nitrate": 3.71,
       "nitrate-basis": "as-N",
+      "phosphate": 0.44,
+      "phosphate-basis": "as-P",
       "ph": 7.75,
       "water-temperature": 18.7
      },
@@ -383,6 +427,8 @@
      "values": {
       "nitrate": 3.06,
       "nitrate-basis": "as-N",
+      "phosphate": 0.381,
+      "phosphate-basis": "as-P",
       "ph": 8.2,
       "water-temperature": 25.7
      },
@@ -401,6 +447,8 @@
      "values": {
       "nitrate": 1.93,
       "nitrate-basis": "as-N",
+      "phosphate": 0.42,
+      "phosphate-basis": "as-P",
       "ph": 8.37,
       "water-temperature": 23.3
      },
@@ -419,6 +467,8 @@
      "values": {
       "nitrate": 2.74,
       "nitrate-basis": "as-N",
+      "phosphate": 0.269,
+      "phosphate-basis": "as-P",
       "ph": 8.09,
       "water-temperature": 20.7
      },
@@ -451,9 +501,33 @@
      "animal": 0,
      "human": 0
     },
-    "condition_points": 0,
-    "condition": "good",
-    "fired": [],
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment (screening)",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "BE-VMM-OW571900-2026-09-03T0936"
+      ],
+      "observers": [
+       "VMM"
+      ],
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2026-09-03T09:36:43+02:00",
+      "last_seen": "2026-09-03T09:36:43+02:00",
+      "trusted_record_ids": [
+       "BE-VMM-OW571900-2026-09-03T0936"
+      ]
+     }
+    ],
     "record_ids": [
      "BE-VMM-OW571900-2026-09-03T0936"
     ],
@@ -475,6 +549,8 @@
      "values": {
       "nitrate": 2.39,
       "nitrate-basis": "as-N",
+      "phosphate": 0.207,
+      "phosphate-basis": "as-P",
       "ph": 7.99,
       "water-temperature": 16.5
      },
@@ -493,6 +569,8 @@
      "values": {
       "nitrate": 2.37,
       "nitrate-basis": "as-N",
+      "phosphate": 0.2,
+      "phosphate-basis": "as-P",
       "ph": 8.16,
       "water-temperature": 14.4
      },
@@ -511,6 +589,8 @@
      "values": {
       "nitrate": 3.46,
       "nitrate-basis": "as-N",
+      "phosphate": 0.272,
+      "phosphate-basis": "as-P",
       "ph": 7.69,
       "water-temperature": 12.0
      },
@@ -529,6 +609,8 @@
      "values": {
       "nitrate": 4.9,
       "nitrate-basis": "as-N",
+      "phosphate": 0.217,
+      "phosphate-basis": "as-P",
       "ph": 7.66,
       "water-temperature": 6.7
      },
@@ -547,6 +629,8 @@
      "values": {
       "nitrate": 8.5,
       "nitrate-basis": "as-N",
+      "phosphate": 0.186,
+      "phosphate-basis": "as-P",
       "ph": 7.73,
       "water-temperature": 7.1
      },
@@ -565,6 +649,8 @@
      "values": {
       "nitrate": 6.1,
       "nitrate-basis": "as-N",
+      "phosphate": 0.216,
+      "phosphate-basis": "as-P",
       "ph": 7.73,
       "water-temperature": 9.0
      },
@@ -583,6 +669,8 @@
      "values": {
       "nitrate": 6.2,
       "nitrate-basis": "as-N",
+      "phosphate": 0.141,
+      "phosphate-basis": "as-P",
       "ph": 7.74,
       "water-temperature": 11.6
      },
@@ -601,6 +689,8 @@
      "values": {
       "nitrate": 4.5,
       "nitrate-basis": "as-N",
+      "phosphate": 0.137,
+      "phosphate-basis": "as-P",
       "ph": 7.97,
       "water-temperature": 10.7
      },
@@ -619,6 +709,8 @@
      "values": {
       "nitrate": 3.26,
       "nitrate-basis": "as-N",
+      "phosphate": 0.173,
+      "phosphate-basis": "as-P",
       "ph": 8.0,
       "water-temperature": 15.7
      },
@@ -637,6 +729,8 @@
      "values": {
       "nitrate": 1.31,
       "nitrate-basis": "as-N",
+      "phosphate": 0.48,
+      "phosphate-basis": "as-P",
       "ph": 7.72,
       "water-temperature": 23.3
      },
@@ -655,6 +749,8 @@
      "values": {
       "nitrate": 0.61,
       "nitrate-basis": "as-N",
+      "phosphate": 0.71,
+      "phosphate-basis": "as-P",
       "ph": 7.84,
       "water-temperature": 24.9
      },
@@ -673,6 +769,8 @@
      "values": {
       "nitrate": 1.08,
       "nitrate-basis": "as-N",
+      "phosphate": 0.391,
+      "phosphate-basis": "as-P",
       "ph": 8.05,
       "water-temperature": 20.1
      },
@@ -691,7 +789,7 @@
     "lat": 51.00578,
     "lon": 3.80358,
     "water_body": "Zeeschelde in Melle",
-    "description": "Real Flemish river monitoring station OW168900 (VMM)",
+    "description": "Real Flemish river monitoring station OW168900 (VMM); a tidal freshwater reach of the Scheldt estuary, while the thresholds were built for small non-tidal streams",
     "flow": "flowing",
     "identifiers": []
    },
@@ -705,9 +803,33 @@
      "animal": 0,
      "human": 0
     },
-    "condition_points": 0,
-    "condition": "good",
-    "fired": [],
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment (screening)",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "BE-VMM-OW168900-2026-09-09T1209"
+      ],
+      "observers": [
+       "VMM"
+      ],
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2026-09-09T12:09:52+02:00",
+      "last_seen": "2026-09-09T12:09:52+02:00",
+      "trusted_record_ids": [
+       "BE-VMM-OW168900-2026-09-09T1209"
+      ]
+     }
+    ],
     "record_ids": [
      "BE-VMM-OW168900-2026-09-09T1209"
     ],
@@ -729,6 +851,8 @@
      "values": {
       "nitrate": 3.68,
       "nitrate-basis": "as-N",
+      "phosphate": 0.186,
+      "phosphate-basis": "as-P",
       "ph": 8.25,
       "water-temperature": 20.2
      },
@@ -747,6 +871,8 @@
      "values": {
       "nitrate": 5.2,
       "nitrate-basis": "as-N",
+      "phosphate": 0.292,
+      "phosphate-basis": "as-P",
       "ph": 7.76,
       "water-temperature": 15.2
      },
@@ -765,6 +891,8 @@
      "values": {
       "nitrate": 6.0,
       "nitrate-basis": "as-N",
+      "phosphate": 0.323,
+      "phosphate-basis": "as-P",
       "ph": 7.83,
       "water-temperature": 9.4
      },
@@ -783,6 +911,8 @@
      "values": {
       "nitrate": 6.0,
       "nitrate-basis": "as-N",
+      "phosphate": 0.217,
+      "phosphate-basis": "as-P",
       "ph": 7.78,
       "water-temperature": 9.2
      },
@@ -801,6 +931,8 @@
      "values": {
       "nitrate": 6.6,
       "nitrate-basis": "as-N",
+      "phosphate": 0.191,
+      "phosphate-basis": "as-P",
       "ph": 7.72,
       "water-temperature": 6.9
      },
@@ -819,6 +951,8 @@
      "values": {
       "nitrate": 5.7,
       "nitrate-basis": "as-N",
+      "phosphate": 0.173,
+      "phosphate-basis": "as-P",
       "ph": 7.77,
       "water-temperature": 6.1
      },
@@ -837,6 +971,8 @@
      "values": {
       "nitrate": 5.3,
       "nitrate-basis": "as-N",
+      "phosphate": 0.151,
+      "phosphate-basis": "as-P",
       "ph": 7.84,
       "water-temperature": 10.9
      },
@@ -855,6 +991,8 @@
      "values": {
       "nitrate": 4.0,
       "nitrate-basis": "as-N",
+      "phosphate": 0.079,
+      "phosphate-basis": "as-P",
       "ph": 8.53,
       "water-temperature": 14.1
      },
@@ -873,6 +1011,8 @@
      "values": {
       "nitrate": 3.73,
       "nitrate-basis": "as-N",
+      "phosphate": 0.208,
+      "phosphate-basis": "as-P",
       "ph": 8.14,
       "water-temperature": 16.2
      },
@@ -891,6 +1031,8 @@
      "values": {
       "nitrate": 3.58,
       "nitrate-basis": "as-N",
+      "phosphate": 0.397,
+      "phosphate-basis": "as-P",
       "ph": 7.74,
       "water-temperature": 19.0
      },
@@ -909,6 +1051,8 @@
      "values": {
       "nitrate": 2.77,
       "nitrate-basis": "as-N",
+      "phosphate": 0.309,
+      "phosphate-basis": "as-P",
       "ph": 8.28,
       "water-temperature": 25.1
      },
@@ -943,6 +1087,8 @@
      "values": {
       "nitrate": 1.65,
       "nitrate-basis": "as-N",
+      "phosphate": 0.335,
+      "phosphate-basis": "as-P",
       "ph": 8.35,
       "water-temperature": 23.5
      },
@@ -961,6 +1107,8 @@
      "values": {
       "nitrate": 2.8,
       "nitrate-basis": "as-N",
+      "phosphate": 0.238,
+      "phosphate-basis": "as-P",
       "ph": 8.07,
       "water-temperature": 20.8
      },

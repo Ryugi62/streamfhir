@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+    "fullUrl": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c7b552cc-d31e-48d4-af6d-5763a34dfa01",
+    "fullUrl": "urn:uuid:604862be-e81b-4991-8bb7-bff769c782ed",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c3aae3d6-991c-4c29-9171-5883f3358956",
+    "fullUrl": "urn:uuid:6107f603-6a48-4c1d-b8a2-714d8394a53b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+      "reference": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
       "display": "Toulouse area · La Sausse à Toulouse"
      },
      "effectiveDateTime": "2024-12-18T13:43:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e9e4cad4-9cfb-4ba5-b802-f3d9d64227f8"
+       "reference": "urn:uuid:5f28a1ac-8039-472f-bcd2-fd5b6e825a83"
       },
       {
-       "reference": "urn:uuid:fe21d4e2-ffe7-46e7-86df-0105fd4606b6"
+       "reference": "urn:uuid:ff0a72dc-68ce-46ee-b9b7-6e610ca01f06"
       },
       {
-       "reference": "urn:uuid:dc2de2bb-1ddc-410f-864a-859216b350c2"
+       "reference": "urn:uuid:a33f6e5a-7bb8-4ef0-8abe-c98ff992fb53"
       },
       {
-       "reference": "urn:uuid:e1b7d225-3e8e-4d72-9035-5aace56f9123"
+       "reference": "urn:uuid:c49861c0-3181-465c-85bc-08618dd65135"
       },
       {
-       "reference": "urn:uuid:8caeceba-ae42-4755-b94a-8665ec4115a9"
+       "reference": "urn:uuid:d83705f6-3b02-424f-b50f-e57b35376ca1"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e9e4cad4-9cfb-4ba5-b802-f3d9d64227f8",
+    "fullUrl": "urn:uuid:5f28a1ac-8039-472f-bcd2-fd5b6e825a83",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+      "reference": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
       "display": "Toulouse area · La Sausse à Toulouse"
      },
      "effectiveDateTime": "2024-12-18T13:43:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fe21d4e2-ffe7-46e7-86df-0105fd4606b6",
+    "fullUrl": "urn:uuid:ff0a72dc-68ce-46ee-b9b7-6e610ca01f06",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -289,7 +289,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 1.23 mg/L at Toulouse area · La Sausse à Toulouse (final, record FR-05157100-2024-12-18T1343)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 1.23 mg/L at Toulouse area · La Sausse à Toulouse (final, record FR-05157100-2024-12-18T1343)</p></div>"
      },
      "identifier": [
       {
@@ -314,7 +314,7 @@
        {
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
-        "display": "Phosphate (as PO4)"
+        "display": "Phosphate (orthophosphate)"
        },
        {
         "system": "https://id.eaufrance.fr/par",
@@ -322,10 +322,10 @@
         "display": "Orthophosphates (PO4)"
        }
       ],
-      "text": "Phosphate (as PO4)"
+      "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+      "reference": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
       "display": "Toulouse area · La Sausse à Toulouse"
      },
      "effectiveDateTime": "2024-12-18T13:43:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dc2de2bb-1ddc-410f-864a-859216b350c2",
+    "fullUrl": "urn:uuid:a33f6e5a-7bb8-4ef0-8abe-c98ff992fb53",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -415,7 +415,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+      "reference": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
       "display": "Toulouse area · La Sausse à Toulouse"
      },
      "effectiveDateTime": "2024-12-18T13:43:00+01:00",
@@ -442,7 +442,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e1b7d225-3e8e-4d72-9035-5aace56f9123",
+    "fullUrl": "urn:uuid:c49861c0-3181-465c-85bc-08618dd65135",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -490,7 +490,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+      "reference": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
       "display": "Toulouse area · La Sausse à Toulouse"
      },
      "effectiveDateTime": "2024-12-18T13:43:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8caeceba-ae42-4755-b94a-8665ec4115a9",
+    "fullUrl": "urn:uuid:d83705f6-3b02-424f-b50f-e57b35376ca1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:a7bc29fb-7653-400c-a92d-6041d81cd7b6",
+      "reference": "urn:uuid:03cca73d-ec09-415f-a61c-b7bb2caaa35a",
       "display": "Toulouse area · La Sausse à Toulouse"
      },
      "effectiveDateTime": "2024-12-18T13:43:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:45a99e47-7a4c-413d-bf6e-df4be2283ab1",
+    "fullUrl": "urn:uuid:924193f1-e484-4a1e-8842-e8679f24d034",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05157100-2024-12-18T1343",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:c3aae3d6-991c-4c29-9171-5883f3358956"
+       "reference": "urn:uuid:6107f603-6a48-4c1d-b8a2-714d8394a53b"
       },
       {
-       "reference": "urn:uuid:e9e4cad4-9cfb-4ba5-b802-f3d9d64227f8"
+       "reference": "urn:uuid:5f28a1ac-8039-472f-bcd2-fd5b6e825a83"
       },
       {
-       "reference": "urn:uuid:fe21d4e2-ffe7-46e7-86df-0105fd4606b6"
+       "reference": "urn:uuid:ff0a72dc-68ce-46ee-b9b7-6e610ca01f06"
       },
       {
-       "reference": "urn:uuid:dc2de2bb-1ddc-410f-864a-859216b350c2"
+       "reference": "urn:uuid:a33f6e5a-7bb8-4ef0-8abe-c98ff992fb53"
       },
       {
-       "reference": "urn:uuid:e1b7d225-3e8e-4d72-9035-5aace56f9123"
+       "reference": "urn:uuid:c49861c0-3181-465c-85bc-08618dd65135"
       },
       {
-       "reference": "urn:uuid:8caeceba-ae42-4755-b94a-8665ec4115a9"
+       "reference": "urn:uuid:d83705f6-3b02-424f-b50f-e57b35376ca1"
       }
      ],
      "occurredDateTime": "2024-12-18T13:43:00+01:00",
-     "recorded": "2026-09-29T14:00:22+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:c7b552cc-d31e-48d4-af6d-5763a34dfa01",
+        "reference": "urn:uuid:604862be-e81b-4991-8bb7-bff769c782ed",
         "display": "StreamFHIR 0.7.0"
        }
       }

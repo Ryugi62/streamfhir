@@ -137,6 +137,7 @@
  ],
  "as_of": "2026-09-29T12:00:00+01:00",
  "dataset": {
+  "photo_needs_review": true,
   "synthetic": true
  },
  "sites": [
@@ -552,7 +553,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:8f35603e-84f0-488a-bf39-c7236acce96f",
+      "fullUrl": "urn:uuid:aff170a8-9ff7-4428-adea-248ce470b986",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -604,7 +605,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:167e966c-5fa6-4e6b-bb50-deb98c970381",
+      "fullUrl": "urn:uuid:4793fe4a-71d4-41e6-8bd6-9110387b3dbb",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -650,7 +651,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:452548d1-e601-48dd-84a4-72dd1efead60",
+      "fullUrl": "urn:uuid:5a47245d-8f19-448e-a5c0-64aace2482dc",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -751,7 +752,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:8f35603e-84f0-488a-bf39-c7236acce96f",
+        "reference": "urn:uuid:aff170a8-9ff7-4428-adea-248ce470b986",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -759,7 +760,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:167e966c-5fa6-4e6b-bb50-deb98c970381",
+        "reference": "urn:uuid:4793fe4a-71d4-41e6-8bd6-9110387b3dbb",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -769,7 +770,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:6b6c299f-84dc-471b-8905-0e7f84257bb9",
+      "fullUrl": "urn:uuid:0bf44b7d-e200-4eb2-a4ca-3609d7b29be2",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -793,10 +794,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:452548d1-e601-48dd-84a4-72dd1efead60"
+         "reference": "urn:uuid:5a47245d-8f19-448e-a5c0-64aace2482dc"
         }
        ],
-       "recorded": "2026-09-29T14:00:23+00:00",
+       "recorded": "2026-09-29T14:13:43+00:00",
        "activity": {
         "coding": [
          {
@@ -818,7 +819,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:167e966c-5fa6-4e6b-bb50-deb98c970381",
+          "reference": "urn:uuid:4793fe4a-71d4-41e6-8bd6-9110387b3dbb",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -867,9 +868,9 @@
    },
    "risk": {
     "site_id": "S-MILL",
-    "level": "high",
+    "level": "verify",
     "hazard_points": 11,
-    "confirmed_hazard_points": 7,
+    "confirmed_hazard_points": 0,
     "lane_points": {
      "environment": 1,
      "animal": 8,
@@ -892,8 +893,8 @@
       "observers": [
        "obs-05"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2026-09-18T11:20:00+01:00",
@@ -919,8 +920,8 @@
        "obs-05",
        "obs-06"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
       "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
       "first_seen": "2026-09-18T11:20:00+01:00",
@@ -967,8 +968,8 @@
        "obs-05",
        "obs-06"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "exposure seen, but the hazard it depends on is not yet corroborated",
       "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
       "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
       "first_seen": "2026-09-18T11:20:00+01:00",
@@ -990,7 +991,7 @@
      "SYN-013": "confirm"
     },
     "hazard_assessed": true,
-    "needs_flag": true
+    "needs_flag": false
    },
    "reports": [
     {
@@ -1091,291 +1092,7 @@
      ]
     }
    ],
-   "flag_bundle": {
-    "resourceType": "Bundle",
-    "type": "transaction",
-    "entry": [
-     {
-      "fullUrl": "urn:uuid:e55003e1-b8fc-41c6-afb8-7858c95c6089",
-      "resource": {
-       "resourceType": "Location",
-       "meta": {
-        "security": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-          "code": "HTEST",
-          "display": "test health data"
-         },
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-          "code": "U",
-          "display": "unrestricted"
-         }
-        ]
-       },
-       "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Mill Pond inlet (S-MILL)</p></div>"
-       },
-       "identifier": [
-        {
-         "system": "https://example.org/fhir/streamfhir/sid/site",
-         "value": "S-MILL"
-        }
-       ],
-       "status": "active",
-       "name": "Mill Pond inlet",
-       "description": "Synthetic demo site: shallow pond inlet used by dog walkers.",
-       "mode": "instance",
-       "physicalType": {
-        "coding": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-          "code": "area",
-          "display": "Area"
-         }
-        ]
-       },
-       "position": {
-        "longitude": -8.412,
-        "latitude": 40.1985
-       }
-      },
-      "request": {
-       "method": "POST",
-       "url": "Location",
-       "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-MILL"
-      }
-     },
-     {
-      "fullUrl": "urn:uuid:c3f921c9-96d4-4a35-96cb-d2bcc71e68f2",
-      "resource": {
-       "resourceType": "Device",
-       "meta": {
-        "security": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-          "code": "HTEST",
-          "display": "test health data"
-         },
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-          "code": "U",
-          "display": "unrestricted"
-         }
-        ]
-       },
-       "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
-       },
-       "identifier": [
-        {
-         "system": "https://example.org/fhir/streamfhir/sid/device",
-         "value": "streamfhir-rule-engine"
-        }
-       ],
-       "deviceName": [
-        {
-         "name": "StreamFHIR mapper and rule engine",
-         "type": "user-friendly-name"
-        }
-       ],
-       "version": [
-        {
-         "value": "0.7.0"
-        }
-       ]
-      },
-      "request": {
-       "method": "POST",
-       "url": "Device",
-       "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
-      }
-     },
-     {
-      "fullUrl": "urn:uuid:71c47905-737a-449b-a553-ca767c2002bf",
-      "resource": {
-       "resourceType": "Flag",
-       "meta": {
-        "security": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-          "code": "HTEST",
-          "display": "test health data"
-         },
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-          "code": "U",
-          "display": "unrestricted"
-         }
-        ],
-        "profile": [
-         "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag"
-        ]
-       },
-       "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits &gt;= 7 days apart clear a hazard.</p></div>"
-       },
-       "extension": [
-        {
-         "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
-         "valueReference": {
-          "identifier": {
-           "system": "https://example.org/fhir/streamfhir/sid/record",
-           "value": "SYN-006"
-          },
-          "type": "Observation",
-          "display": "Citizen assessment SYN-006"
-         }
-        },
-        {
-         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
-         "valueCodeableConcept": {
-          "coding": [
-           {
-            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
-            "code": "R3",
-            "display": "Possible cyanobacterial bloom"
-           }
-          ]
-         }
-        },
-        {
-         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
-         "valueCodeableConcept": {
-          "coding": [
-           {
-            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
-            "code": "R7",
-            "display": "Pets or livestock in contact with affected water"
-           }
-          ]
-         }
-        }
-       ],
-       "identifier": [
-        {
-         "system": "https://example.org/fhir/streamfhir/sid/flag",
-         "value": "S-MILL"
-        }
-       ],
-       "status": "active",
-       "category": [
-        {
-         "coding": [
-          {
-           "system": "http://terminology.hl7.org/CodeSystem/flag-category",
-           "code": "safety",
-           "display": "Safety"
-          }
-         ]
-        }
-       ],
-       "code": {
-        "coding": [
-         {
-          "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-level",
-          "code": "high",
-          "display": "High health hazard"
-         }
-        ],
-        "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
-       },
-       "subject": {
-        "reference": "urn:uuid:e55003e1-b8fc-41c6-afb8-7858c95c6089",
-        "display": "Mill Pond inlet"
-       },
-       "period": {
-        "start": "2026-09-18T11:20:00+01:00",
-        "end": "2026-10-02T11:20:00+01:00"
-       },
-       "author": {
-        "reference": "urn:uuid:c3f921c9-96d4-4a35-96cb-d2bcc71e68f2",
-        "display": "StreamFHIR 0.7.0"
-       }
-      },
-      "request": {
-       "method": "PUT",
-       "url": "Flag?identifier=https://example.org/fhir/streamfhir/sid/flag|S-MILL"
-      }
-     },
-     {
-      "fullUrl": "urn:uuid:9b4527e4-cd18-472f-bc4b-2718e13aa089",
-      "resource": {
-       "resourceType": "Provenance",
-       "id": "streamfhir-prov-flag-S-MILL",
-       "meta": {
-        "security": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-          "code": "HTEST",
-          "display": "test health data"
-         },
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-          "code": "U",
-          "display": "unrestricted"
-         }
-        ]
-       },
-       "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Mill Pond inlet computed by StreamFHIR 0.7.0 from 1 citizen records</p></div>"
-       },
-       "target": [
-        {
-         "reference": "urn:uuid:71c47905-737a-449b-a553-ca767c2002bf"
-        }
-       ],
-       "recorded": "2026-09-29T14:00:23+00:00",
-       "activity": {
-        "coding": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
-          "code": "CREATE",
-          "display": "create"
-         }
-        ]
-       },
-       "agent": [
-        {
-         "type": {
-          "coding": [
-           {
-            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-            "code": "assembler",
-            "display": "Assembler"
-           }
-          ]
-         },
-         "who": {
-          "reference": "urn:uuid:c3f921c9-96d4-4a35-96cb-d2bcc71e68f2",
-          "display": "StreamFHIR 0.7.0"
-         }
-        }
-       ],
-       "entity": [
-        {
-         "role": "source",
-         "what": {
-          "identifier": {
-           "system": "https://example.org/fhir/streamfhir/sid/record",
-           "value": "SYN-006"
-          },
-          "type": "Observation"
-         }
-        }
-       ]
-      },
-      "request": {
-       "method": "PUT",
-       "url": "Provenance/streamfhir-prov-flag-S-MILL"
-      }
-     }
-    ]
-   }
+   "flag_bundle": null
   },
   {
    "site": {
@@ -1416,8 +1133,8 @@
        "obs-02",
        "obs-07"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2026-09-17T09:00:00+01:00",
@@ -1484,8 +1201,8 @@
        "obs-02",
        "obs-07"
       ],
-      "corroborated": true,
-      "corroboration": "trusted report with a photo attached",
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
       "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
       "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
       "first_seen": "2026-09-17T09:00:00+01:00",

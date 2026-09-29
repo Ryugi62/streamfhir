@@ -180,7 +180,10 @@ def validate_record(raw: Mapping[str, Any], sites: Mapping[str, Site], now: date
                             "The invertebrate count has no sampling time, so a zero cannot be told apart from 'barely looked'."))
 
     for note in raw.get("source_notes") or []:
-        issues.append(Issue(WARNING, "source", "source-note", "From the source system: %s" % note))
+        if note.startswith("CHECK:"):
+            issues.append(Issue(WARNING, "source", "plausibility", "StreamFHIR plausibility check: %s" % note[6:].strip()))
+        else:
+            issues.append(Issue(WARNING, "source", "source-note", "From the source system: %s" % note))
 
     photos = tuple(p for p in (raw.get("photos") or []) if isinstance(p, str) and p)
     if not photos:

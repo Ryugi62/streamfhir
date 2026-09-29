@@ -148,8 +148,10 @@ function labLine(p){
   if(!p) return "";
   const v = p.values || {}, b = p.below_limit || {}, parts = [];
   if(v.nitrate !== undefined) parts.push(`<b>Nitrate ${v.nitrate} mg/L</b>${v.nitrate >= 50 ? " (≥ 50: EU Nitrates Directive level)" : v.nitrate >= 25 ? " (≥ 25 screening value)" : ""}`);
-  if(v.phosphate !== undefined) parts.push(`<b>Orthophosphate ${v.phosphate} mg/L</b>${v.phosphate >= 0.5 ? " (≥ 0.5: French good/moderate boundary)" : ""}`);
+  if(v.phosphate !== undefined){ const po4 = v["phosphate-basis"] === "as-P" ? v.phosphate * 3.066 : v.phosphate;
+    parts.push(`<b>Orthophosphate ${v.phosphate} mg/L${v["phosphate-basis"] === "as-P" ? ` as P (= ${po4.toFixed(2)} as PO4)` : ""}</b>${po4 >= 0.5 ? " (≥ 0.5 as PO4: French good/moderate boundary)" : ""}`); }
   else if(b.phosphate !== undefined) parts.push(`Orthophosphate &lt; ${b.phosphate} mg/L (below lab limit)`);
+  else parts.push("orthophosphate not reported, so the nutrient rule rests on nitrate only");
   if(v.ph !== undefined) parts.push(`pH ${v.ph}`);
   if(v["water-temperature"] !== undefined) parts.push(`${v["water-temperature"]} °C`);
   return parts.join(" · ");
@@ -255,7 +257,7 @@ async function site(id){
     <div class="card" id="level"><div class="num">${r.hazard_points}<small>hazard points · ${r.confirmed_hazard_points} corroborated</small></div>
       <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
       <div class="row"><span class="chip ${LEVEL_CLASS[lvl(r)]}">${LEVEL[lvl(r)]}</span></div>
-      <p class="lead" style="margin:10px 0 0">${esc(VERDICT[lvl(r)])}</p>${lanes(r.lane_points)}
+      <p class="lead" style="margin:10px 0 0">${lvl(r) === "na" && x.reports.some(p => p.decision === "reject") ? `No trusted hazard evidence: ${x.reports.filter(p => p.decision === "reject").length} check(s) rejected by a reviewer.` : esc(VERDICT[lvl(r)])}</p>${lanes(r.lane_points)}
       <p class="help" style="margin:10px 0 0">${COND[r.condition]} (${r.condition_points} points) — tracked separately, never raises a warning on its own.</p></div></section>
     <section><h2>Health hazard: why</h2><div class="card"><ul class="plain">${hz.length ? hz.map(ruleItem).join("") : "<li>No hazard rule fired.</li>"}</ul></div></section>
     <section><h2>${isReal() ? "Agency samplings (lab chemistry)" : "Citizen checks"}</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(p.record_id)}</b>

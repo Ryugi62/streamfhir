@@ -69,6 +69,16 @@ def nitrate_as_no3(v: Values) -> Optional[float]:
     return x * NO3_PER_N if v.get("nitrate-basis") == "as-N" else x
 
 
+PO4_PER_P = 3.066
+
+
+def phosphate_as_po4(v: Values) -> Optional[float]:
+    x = _num(v, "phosphate")
+    if x is None:
+        return None
+    return x * PO4_PER_P if v.get("phosphate-basis") == "as-P" else x
+
+
 def _mean_score(v: Values) -> Optional[float]:
     s = [v[c] for c in SCORE_CODES if isinstance(v.get(c), int)]
     return sum(s) / len(s) if s else None
@@ -101,7 +111,7 @@ RULES: Tuple[Rule, ...] = (
          "for blooms, while high nitrate mainly signals run-off.",
          "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
          keys=("nitrate", "phosphate"),
-         record_test=lambda v: _ge(nitrate_as_no3(v), 25) or _ge(_num(v, "phosphate"), 0.5),
+         record_test=lambda v: _ge(nitrate_as_no3(v), 25) or _ge(phosphate_as_po4(v), 0.5),
          clear_keys=("nitrate", "phosphate")),
     Rule("R3", "Possible cyanobacterial bloom", HAZARD, {ANIMAL: 3, HUMAN: 2},
          "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test "

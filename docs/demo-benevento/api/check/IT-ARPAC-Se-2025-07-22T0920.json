@@ -16,7 +16,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
+    "fullUrl": "urn:uuid:c67ea9dd-0c1c-4059-8d6c-23badd31b99a",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -63,7 +63,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1bdb080c-4a53-4f63-8d25-942111a7a956",
+    "fullUrl": "urn:uuid:0451c01f-b411-498e-9988-0a5d03e0e026",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -104,7 +104,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dce851e3-4032-4121-8a10-826612e3ab32",
+    "fullUrl": "urn:uuid:2520f601-8fbd-4dc1-96e6-7b3d916ae9e9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -152,7 +152,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
+      "reference": "urn:uuid:c67ea9dd-0c1c-4059-8d6c-23badd31b99a",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -168,13 +168,13 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:51cb386a-2efb-49b3-9c59-c518b686cd16"
+       "reference": "urn:uuid:38a95d0c-29da-49cf-9d18-324545d5bc8b"
       },
       {
-       "reference": "urn:uuid:579cf8e7-11c2-4ad0-a2bd-95f2e3719c37"
+       "reference": "urn:uuid:7abc04fe-71e6-4518-bcea-734a41f5d595"
       },
       {
-       "reference": "urn:uuid:cb3b025f-ed4f-484d-abe8-187a138d6c69"
+       "reference": "urn:uuid:b014e00c-aea9-44c2-8392-8121c2a711d2"
       }
      ],
      "note": [
@@ -189,7 +189,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:51cb386a-2efb-49b3-9c59-c518b686cd16",
+    "fullUrl": "urn:uuid:38a95d0c-29da-49cf-9d18-324545d5bc8b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -237,7 +237,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
+      "reference": "urn:uuid:c67ea9dd-0c1c-4059-8d6c-23badd31b99a",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -269,7 +269,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:579cf8e7-11c2-4ad0-a2bd-95f2e3719c37",
+    "fullUrl": "urn:uuid:7abc04fe-71e6-4518-bcea-734a41f5d595",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -317,7 +317,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
+      "reference": "urn:uuid:c67ea9dd-0c1c-4059-8d6c-23badd31b99a",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -353,7 +353,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cb3b025f-ed4f-484d-abe8-187a138d6c69",
+    "fullUrl": "urn:uuid:b014e00c-aea9-44c2-8392-8121c2a711d2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -406,7 +406,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
+      "reference": "urn:uuid:c67ea9dd-0c1c-4059-8d6c-23badd31b99a",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -438,7 +438,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e7e5c501-e80e-4a19-bf68-41445c66d378",
+    "fullUrl": "urn:uuid:c6d83221-0318-4810-976c-c30ed63e1060",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-Se-2025-07-22T0920",
@@ -457,20 +457,20 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:dce851e3-4032-4121-8a10-826612e3ab32"
+       "reference": "urn:uuid:2520f601-8fbd-4dc1-96e6-7b3d916ae9e9"
       },
       {
-       "reference": "urn:uuid:51cb386a-2efb-49b3-9c59-c518b686cd16"
+       "reference": "urn:uuid:38a95d0c-29da-49cf-9d18-324545d5bc8b"
       },
       {
-       "reference": "urn:uuid:579cf8e7-11c2-4ad0-a2bd-95f2e3719c37"
+       "reference": "urn:uuid:7abc04fe-71e6-4518-bcea-734a41f5d595"
       },
       {
-       "reference": "urn:uuid:cb3b025f-ed4f-484d-abe8-187a138d6c69"
+       "reference": "urn:uuid:b014e00c-aea9-44c2-8392-8121c2a711d2"
       }
      ],
      "occurredDateTime": "2025-07-22T09:20:00+02:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -511,7 +511,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:1bdb080c-4a53-4f63-8d25-942111a7a956",
+        "reference": "urn:uuid:0451c01f-b411-498e-9988-0a5d03e0e026",
         "display": "StreamFHIR 0.7.0"
        }
       }

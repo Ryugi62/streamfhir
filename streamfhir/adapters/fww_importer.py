@@ -54,8 +54,9 @@ def _values(a: Dict) -> Tuple[Dict, List[str], List[str]]:
         v["surface"] = "algal-scum"
         flowing = (a.get("hydrological_water_flow") or "") in ("Steady", "Surging", "Fast")
         if flowing or colour == "Colourless":
-            notes.append("A blue-green scum was ticked on %s water, where surface scums rarely form; a reviewer should "
-                         "check the photo before it counts." % ("flowing" if flowing else "colourless"))
+            notes.append("CHECK: the volunteer ticked 'Blue_green_scum' (algae) with flow '%s' and colour '%s'; surface scums "
+                         "rarely form on %s water, so a reviewer should check the photo before it counts." % (
+                             a.get("hydrological_water_flow") or "?", colour or "?", "flowing" if flowing else "colourless"))
     elif "Oily_sheen" in surface:
         v["surface"] = "oily-sheen"
     elif "Foam" in surface:
@@ -72,7 +73,7 @@ def _values(a: Dict) -> Tuple[Dict, List[str], List[str]]:
         if "Animal_access" in (uses or ""):
             info.append("Water uses include animal access: animals can reach the water (not an observed contact).")
     if "Slurry" in surface:
-        notes.append("A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check.")
+        notes.append("CHECK: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check.")
     litter = a.get("ecological_litter")
     if litter not in NONE or litter == "None":
         v["litter"] = "none" if litter in ("None", "No") else "some"
@@ -83,7 +84,7 @@ def _values(a: Dict) -> Tuple[Dict, List[str], List[str]]:
     if sources not in NONE:
         info.append("Pollution sources noted: %s." % sources)
         if "Outfall_pipe_currently_discharging" in sources:
-            notes.append("An outfall pipe was discharging at the visit: a possible sewage signal for a reviewer to check.")
+            notes.append("CHECK: the volunteer noted 'Outfall_pipe_currently_discharging': a possible sewage signal for a reviewer to check.")
     return v, info, notes
 
 

@@ -16,7 +16,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:593aceff-752a-44f6-9317-1190c30914c2",
+    "fullUrl": "urn:uuid:68065ba3-b2a2-407e-9f8e-ac631edbf777",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -63,7 +63,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2f2cb87f-6466-4fcc-a8f5-3b18b72090c9",
+    "fullUrl": "urn:uuid:d320ecde-6164-4cb6-b0d4-cb1574e2cf5d",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -104,7 +104,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f873a523-2914-4be8-bce3-1b54250613a0",
+    "fullUrl": "urn:uuid:bc4f4ff5-1d75-4eff-a2c8-1a710147343d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -152,7 +152,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:593aceff-752a-44f6-9317-1190c30914c2",
+      "reference": "urn:uuid:68065ba3-b2a2-407e-9f8e-ac631edbf777",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-07-23T09:00:00+02:00",
@@ -168,13 +168,13 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:b859a9d6-5dc5-41a6-ac01-7547987ec8db"
+       "reference": "urn:uuid:12d5436a-9d9e-4e61-a9b3-efacefc28a7d"
       },
       {
-       "reference": "urn:uuid:bf9398e1-2fe3-4504-9f9e-d914ebab4bca"
+       "reference": "urn:uuid:fbdae6ac-6690-41c7-8e8b-3c2912eebf1e"
       },
       {
-       "reference": "urn:uuid:451e8303-245c-4322-8879-bed4a6f476c7"
+       "reference": "urn:uuid:bd16dbb0-4ebc-401e-a08a-d89b1b6b0abb"
       }
      ],
      "note": [
@@ -189,7 +189,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b859a9d6-5dc5-41a6-ac01-7547987ec8db",
+    "fullUrl": "urn:uuid:12d5436a-9d9e-4e61-a9b3-efacefc28a7d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -237,7 +237,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:593aceff-752a-44f6-9317-1190c30914c2",
+      "reference": "urn:uuid:68065ba3-b2a2-407e-9f8e-ac631edbf777",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-07-23T09:00:00+02:00",
@@ -269,7 +269,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bf9398e1-2fe3-4504-9f9e-d914ebab4bca",
+    "fullUrl": "urn:uuid:fbdae6ac-6690-41c7-8e8b-3c2912eebf1e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -317,7 +317,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:593aceff-752a-44f6-9317-1190c30914c2",
+      "reference": "urn:uuid:68065ba3-b2a2-407e-9f8e-ac631edbf777",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-07-23T09:00:00+02:00",
@@ -353,7 +353,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:451e8303-245c-4322-8879-bed4a6f476c7",
+    "fullUrl": "urn:uuid:bd16dbb0-4ebc-401e-a08a-d89b1b6b0abb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -406,7 +406,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:593aceff-752a-44f6-9317-1190c30914c2",
+      "reference": "urn:uuid:68065ba3-b2a2-407e-9f8e-ac631edbf777",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-07-23T09:00:00+02:00",
@@ -438,7 +438,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:079b2e9e-e2f3-4612-8b1a-8a813d69e8b2",
+    "fullUrl": "urn:uuid:ff94ac7b-6b25-4cc6-a538-7c8b2524c722",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-C9-2025-07-23T0900",
@@ -457,20 +457,20 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:f873a523-2914-4be8-bce3-1b54250613a0"
+       "reference": "urn:uuid:bc4f4ff5-1d75-4eff-a2c8-1a710147343d"
       },
       {
-       "reference": "urn:uuid:b859a9d6-5dc5-41a6-ac01-7547987ec8db"
+       "reference": "urn:uuid:12d5436a-9d9e-4e61-a9b3-efacefc28a7d"
       },
       {
-       "reference": "urn:uuid:bf9398e1-2fe3-4504-9f9e-d914ebab4bca"
+       "reference": "urn:uuid:fbdae6ac-6690-41c7-8e8b-3c2912eebf1e"
       },
       {
-       "reference": "urn:uuid:451e8303-245c-4322-8879-bed4a6f476c7"
+       "reference": "urn:uuid:bd16dbb0-4ebc-401e-a08a-d89b1b6b0abb"
       }
      ],
      "occurredDateTime": "2025-07-23T09:00:00+02:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -511,7 +511,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:2f2cb87f-6466-4fcc-a8f5-3b18b72090c9",
+        "reference": "urn:uuid:d320ecde-6164-4cb6-b0d4-cb1574e2cf5d",
         "display": "StreamFHIR 0.7.0"
        }
       }

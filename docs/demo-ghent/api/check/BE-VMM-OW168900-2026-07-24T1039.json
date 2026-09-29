@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
+    "fullUrl": "urn:uuid:075db271-66df-4a65-ae1d-d925b2d90146",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -33,7 +33,7 @@
      ],
      "status": "active",
      "name": "Ghent · Zeeschelde in Melle",
-     "description": "Real Flemish river monitoring station OW168900 (VMM)",
+     "description": "Real Flemish river monitoring station OW168900 (VMM); a tidal freshwater reach of the Scheldt estuary, while the thresholds were built for small non-tidal streams",
      "mode": "instance",
      "physicalType": {
       "coding": [
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e8860145-84c3-4704-94ab-a63dd9933571",
+    "fullUrl": "urn:uuid:8cec945f-dc15-4854-be9d-35097bc64846",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a7b7f02a-8dd7-470e-9a79-ca3cda387bd6",
+    "fullUrl": "urn:uuid:177cfc81-4339-4f85-b240-e091766f66a9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
+      "reference": "urn:uuid:075db271-66df-4a65-ae1d-d925b2d90146",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -161,10 +161,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e95d2eea-5537-4472-ab33-dee7118fcc2f"
+       "reference": "urn:uuid:bac445f0-21de-485c-a36b-8379a0d8c825"
       },
       {
-       "reference": "urn:uuid:c546bbd9-bd22-4fb5-aa02-2112a2ef52b6"
+       "reference": "urn:uuid:28317b80-c411-433d-9c5a-2d3183e20dfc"
       }
      ]
     },
@@ -174,7 +174,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e95d2eea-5537-4472-ab33-dee7118fcc2f",
+    "fullUrl": "urn:uuid:bac445f0-21de-485c-a36b-8379a0d8c825",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -227,7 +227,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
+      "reference": "urn:uuid:075db271-66df-4a65-ae1d-d925b2d90146",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -254,7 +254,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c546bbd9-bd22-4fb5-aa02-2112a2ef52b6",
+    "fullUrl": "urn:uuid:28317b80-c411-433d-9c5a-2d3183e20dfc",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -307,7 +307,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
+      "reference": "urn:uuid:075db271-66df-4a65-ae1d-d925b2d90146",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6f3dd122-adeb-4bf5-ba8b-16a90279cf9b",
+    "fullUrl": "urn:uuid:b9cccfca-35a9-4c0d-b88f-f0de8c1bb045",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW168900-2026-07-24T1039",
@@ -353,17 +353,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:a7b7f02a-8dd7-470e-9a79-ca3cda387bd6"
+       "reference": "urn:uuid:177cfc81-4339-4f85-b240-e091766f66a9"
       },
       {
-       "reference": "urn:uuid:e95d2eea-5537-4472-ab33-dee7118fcc2f"
+       "reference": "urn:uuid:bac445f0-21de-485c-a36b-8379a0d8c825"
       },
       {
-       "reference": "urn:uuid:c546bbd9-bd22-4fb5-aa02-2112a2ef52b6"
+       "reference": "urn:uuid:28317b80-c411-433d-9c5a-2d3183e20dfc"
       }
      ],
      "occurredDateTime": "2026-07-24T10:39:01+02:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -404,7 +404,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:e8860145-84c3-4704-94ab-a63dd9933571",
+        "reference": "urn:uuid:8cec945f-dc15-4854-be9d-35097bc64846",
         "display": "StreamFHIR 0.7.0"
        }
       }

@@ -303,7 +303,7 @@ def main(argv=None):
             "_note": "REAL citizen-science records from Earthwatch Europe FreshWater Watch (public ArcGIS view); source and licence note below.",
             "dataset": {"synthetic": False, "observer_kind": "citizen", "source_query": source[1] if len(source) > 1 else "",
                         "retrieved": source[-2] if len(source) > 2 else "", "import_stats": stats,
-                        "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and Coimbra",
+                        "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and in central Portugal",
                         "banner": "Real volunteer observations from Earthwatch Europe's FreshWater Watch (open access, no formal licence; "
                                   "attribution Earthwatch Europe) within about 50 km of Toulouse and in central Portugal (Aveiro, Figueira da "
                                   "Foz; 40-55 km from Coimbra): one volunteer campaign in March 2023 plus a few other visits, single visits "
@@ -322,6 +322,9 @@ def main(argv=None):
                         {"code": "OW571900", "name": "Leie-Grensleie in Gent", "lat": 51.03317, "lon": 3.64483},
                         {"code": "OW168900", "name": "Zeeschelde in Melle", "lat": 51.00578, "lon": 3.80358}]
             sites = nf.vmm_sites(stations, city="Ghent")
+            for x in sites:
+                if x["site_id"] == "BE-VMM-OW168900":
+                    x["description"] += "; a tidal freshwater reach of the Scheldt estuary, while the thresholds were built for small non-tidal streams"
             texts = {}
             for st in stations:
                 with open(os.path.join(folder, "vmm_%s.tsv" % st["code"]), encoding="utf-8") as fh:

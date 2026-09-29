@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+    "fullUrl": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b9ad14da-91d2-4623-9e3e-486bfcc4fd66",
+    "fullUrl": "urn:uuid:9461e91d-1279-4887-8505-009eb2a34ed3",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9f548340-248d-4bca-8c14-9fbe1743faa2",
+    "fullUrl": "urn:uuid:dda1a782-0486-4105-b453-754645a16de7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+      "reference": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:ca24c6f3-a43e-42b5-9bee-00939ebfbaad"
+       "reference": "urn:uuid:4cb3170d-0656-4144-a65e-0da2a94b46a3"
       },
       {
-       "reference": "urn:uuid:a31acf54-021d-4ad6-8100-c604edf6cf76"
+       "reference": "urn:uuid:8de34875-663f-4b3e-9a9d-7b5957c454aa"
       },
       {
-       "reference": "urn:uuid:f2171638-043b-48f5-8405-6ec0664d66f2"
+       "reference": "urn:uuid:87555044-f4cf-4bb9-837e-2708531d4c8c"
       },
       {
-       "reference": "urn:uuid:4aa2c5c0-0c6f-4754-b65d-c0d5398fa2a0"
+       "reference": "urn:uuid:df2038d0-6cf2-4c79-aa75-c662543c5708"
       },
       {
-       "reference": "urn:uuid:47275439-11a4-4221-b853-caf4bc61e265"
+       "reference": "urn:uuid:ed4e8cac-1ee0-4a6d-83a3-a5b20d613a36"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ca24c6f3-a43e-42b5-9bee-00939ebfbaad",
+    "fullUrl": "urn:uuid:4cb3170d-0656-4144-a65e-0da2a94b46a3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -204,7 +204,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.02 mg/L at Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud) (final, record FR-05163140-2024-12-17T1438)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (orthophosphate): 0.02 mg/L at Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud) (final, record FR-05163140-2024-12-17T1438)</p></div>"
      },
      "identifier": [
       {
@@ -229,7 +229,7 @@
        {
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
-        "display": "Phosphate (as PO4)"
+        "display": "Phosphate (orthophosphate)"
        },
        {
         "system": "https://id.eaufrance.fr/par",
@@ -237,10 +237,10 @@
         "display": "Orthophosphates (PO4)"
        }
       ],
-      "text": "Phosphate (as PO4)"
+      "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+      "reference": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a31acf54-021d-4ad6-8100-c604edf6cf76",
+    "fullUrl": "urn:uuid:8de34875-663f-4b3e-9a9d-7b5957c454aa",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+      "reference": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f2171638-043b-48f5-8405-6ec0664d66f2",
+    "fullUrl": "urn:uuid:87555044-f4cf-4bb9-837e-2708531d4c8c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+      "reference": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4aa2c5c0-0c6f-4754-b65d-c0d5398fa2a0",
+    "fullUrl": "urn:uuid:df2038d0-6cf2-4c79-aa75-c662543c5708",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+      "reference": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:47275439-11a4-4221-b853-caf4bc61e265",
+    "fullUrl": "urn:uuid:ed4e8cac-1ee0-4a6d-83a3-a5b20d613a36",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:303c84ad-8060-456f-9fa9-246a3e68236f",
+      "reference": "urn:uuid:3b621301-190b-4322-b828-75e2b698dad7",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ac8a91e1-1b3f-4db9-94d9-e1e7fd29836f",
+    "fullUrl": "urn:uuid:10f13455-1116-49c3-b6fd-f2d413638f9a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163140-2024-12-17T1438",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:9f548340-248d-4bca-8c14-9fbe1743faa2"
+       "reference": "urn:uuid:dda1a782-0486-4105-b453-754645a16de7"
       },
       {
-       "reference": "urn:uuid:ca24c6f3-a43e-42b5-9bee-00939ebfbaad"
+       "reference": "urn:uuid:4cb3170d-0656-4144-a65e-0da2a94b46a3"
       },
       {
-       "reference": "urn:uuid:a31acf54-021d-4ad6-8100-c604edf6cf76"
+       "reference": "urn:uuid:8de34875-663f-4b3e-9a9d-7b5957c454aa"
       },
       {
-       "reference": "urn:uuid:f2171638-043b-48f5-8405-6ec0664d66f2"
+       "reference": "urn:uuid:87555044-f4cf-4bb9-837e-2708531d4c8c"
       },
       {
-       "reference": "urn:uuid:4aa2c5c0-0c6f-4754-b65d-c0d5398fa2a0"
+       "reference": "urn:uuid:df2038d0-6cf2-4c79-aa75-c662543c5708"
       },
       {
-       "reference": "urn:uuid:47275439-11a4-4221-b853-caf4bc61e265"
+       "reference": "urn:uuid:ed4e8cac-1ee0-4a6d-83a3-a5b20d613a36"
       }
      ],
      "occurredDateTime": "2024-12-17T14:38:00+01:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:b9ad14da-91d2-4623-9e3e-486bfcc4fd66",
+        "reference": "urn:uuid:9461e91d-1279-4887-8505-009eb2a34ed3",
         "display": "StreamFHIR 0.7.0"
        }
       }

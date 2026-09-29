@@ -32,7 +32,7 @@
  ],
  "caseSensitive": true,
  "content": "complete",
- "count": 21,
+ "count": 22,
  "concept": [
   {
    "code": "stream-assessment",
@@ -86,8 +86,8 @@
   },
   {
    "code": "phosphate",
-   "display": "Phosphate (as PO4)",
-   "definition": "Phosphate measured with a colorimetric test kit."
+   "display": "Phosphate (orthophosphate)",
+   "definition": "Orthophosphate measured with a colorimetric test kit or in a lab; as PO4 unless phosphate-basis says as P."
   },
   {
    "code": "transparency",
@@ -98,6 +98,11 @@
    "code": "nitrate-basis",
    "display": "Nitrate reporting basis",
    "definition": "Whether the nitrate reading is expressed as nitrate (NO3) or as nitrogen (NO3-N); 1 mg/L as N = 4.43 mg/L as NO3."
+  },
+  {
+   "code": "phosphate-basis",
+   "display": "Phosphate reporting basis",
+   "definition": "Whether the phosphate value is expressed as phosphate (PO4) or as phosphorus (PO4-P); 1 mg/L as P = 3.066 mg/L as PO4."
   },
   {
    "code": "bloom-check",

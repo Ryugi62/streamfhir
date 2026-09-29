@@ -206,8 +206,8 @@ flowchart LR
 
 Sample result (demo date 29 Sep 2026):
 - **Records:** 7 ok, 5 need a look, 3 blocked.
-- **Sites:** 2 **High** (Flag raised), 1 **Needs verification**, 1 Moderate, 1 Low.
-- **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
+- **Sites:** 1 **High** (Alder Brook below the outfall: two independent observers), 2 **Needs verification**, 1 Moderate, 1 Low. Photos only count after a reviewer's photo check (`photo_needs_review`), the rule the real FreshWater Watch data showed is needed.
+- **Demo moments:** at Mill Pond, a reviewer confirms report SYN-008 with basis *photo checked* → *High* and the Flag appears; at Willow Creek, confirming SYN-015 ("I visited") does the same. Undo returns it. This also works in the static demo, which replays precomputed single decisions (one at a time).
 
 ## Evidence
 - **102 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-47 (see `SPEC.md`).

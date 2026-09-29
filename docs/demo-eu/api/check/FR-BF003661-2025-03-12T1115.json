@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
+    "fullUrl": "urn:uuid:23022150-ec95-4b77-9b82-590c3e3fcdbf",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:704d4a4b-c8fe-4622-b1a0-60022fc172a0",
+    "fullUrl": "urn:uuid:6e1bff65-03ac-4964-900f-93dc38d91ef8",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:40345de1-8239-4afa-ba94-e9c727bbec77",
+    "fullUrl": "urn:uuid:7f92ac09-b46a-4a26-b41d-a09c98fafdfb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
+      "reference": "urn:uuid:23022150-ec95-4b77-9b82-590c3e3fcdbf",
       "display": "Toulouse area · SECOURS ARIEGE"
      },
      "effectiveDateTime": "2025-03-12T11:15:00+01:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e026a32a-1731-4145-b933-a03e88a11707"
+       "reference": "urn:uuid:d067d85c-ed08-41f0-b859-7e12b1f42973"
       },
       {
-       "reference": "urn:uuid:20174ee2-d022-4ea9-a358-cbf985be170d"
+       "reference": "urn:uuid:63e6b075-40d4-4113-bf1b-3d3ec7112b1d"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e026a32a-1731-4145-b933-a03e88a11707",
+    "fullUrl": "urn:uuid:d067d85c-ed08-41f0-b859-7e12b1f42973",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
+      "reference": "urn:uuid:23022150-ec95-4b77-9b82-590c3e3fcdbf",
       "display": "Toulouse area · SECOURS ARIEGE"
      },
      "effectiveDateTime": "2025-03-12T11:15:00+01:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:20174ee2-d022-4ea9-a358-cbf985be170d",
+    "fullUrl": "urn:uuid:63e6b075-40d4-4113-bf1b-3d3ec7112b1d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
+      "reference": "urn:uuid:23022150-ec95-4b77-9b82-590c3e3fcdbf",
       "display": "Toulouse area · SECOURS ARIEGE"
      },
      "effectiveDateTime": "2025-03-12T11:15:00+01:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7fb94222-3513-423e-abd8-c9bd7f531ed0",
+    "fullUrl": "urn:uuid:4366ff8b-f172-48fc-a974-6bf8f0a38244",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF003661-2025-03-12T1115",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:40345de1-8239-4afa-ba94-e9c727bbec77"
+       "reference": "urn:uuid:7f92ac09-b46a-4a26-b41d-a09c98fafdfb"
       },
       {
-       "reference": "urn:uuid:e026a32a-1731-4145-b933-a03e88a11707"
+       "reference": "urn:uuid:d067d85c-ed08-41f0-b859-7e12b1f42973"
       },
       {
-       "reference": "urn:uuid:20174ee2-d022-4ea9-a358-cbf985be170d"
+       "reference": "urn:uuid:63e6b075-40d4-4113-bf1b-3d3ec7112b1d"
       }
      ],
      "occurredDateTime": "2025-03-12T11:15:00+01:00",
-     "recorded": "2026-09-29T14:00:23+00:00",
+     "recorded": "2026-09-29T14:13:43+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:704d4a4b-c8fe-4622-b1a0-60022fc172a0",
+        "reference": "urn:uuid:6e1bff65-03ac-4964-900f-93dc38d91ef8",
         "display": "StreamFHIR 0.7.0"
        }
       }
