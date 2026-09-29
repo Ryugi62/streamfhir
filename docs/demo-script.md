@@ -13,6 +13,6 @@ Setup before recording: `python3 -m streamfhir serve`, browser at `http://127.0.
 | 2:40–2:55 | Choose `SYN-005` → **Check this record** | "This one says pH 15 — impossible. 'Can't share yet', with one plain sentence on what to fix. Nothing is sent." |
 | 2:55–3:10 | Open "See the FHIR data" on SYN-010 briefly | "Codes are published as CodeSystems under an example canonical — we did not invent LOINC codes — with a ValueSet and a minimal profile." |
 | 3:10–3:30 | Terminal: `docs/evidence-hapi.md` (or re-run `python3 -m streamfhir validate-remote SYN-001 --with-profile`) | "We tested it live on the public HAPI FHIR R4 server with synthetic data: the transaction was accepted, a second visit reused the same Location, and the generated Observations validate against our profile with no issues — while a broken one is rejected." |
-| 3:30–3:40 | Back to Sites screen | "StreamFHIR: citizen observations that a health system can already read, trust-check and act on. Open source, MIT, 45 tests. Thank you." |
+| 3:30–3:40 | Back to Sites screen | "StreamFHIR: citizen observations that a health system can already read, trust-check and act on. Open source, MIT, 46 tests. Thank you." |
 
 Recording notes: keep the cursor still while speaking; zoom the browser to 110 % on desktop; total length must stay between 3 and 5 minutes.

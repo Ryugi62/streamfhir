@@ -55,7 +55,7 @@ python3 -m streamfhir export                   # write all Bundles to ./out
 python3 -m streamfhir send SYN-001             # dry run (default): nothing leaves your machine
 python3 -m streamfhir send SYN-001 --live      # POST to https://hapi.fhir.org/baseR4 (synthetic data only)
 python3 -m streamfhir validate-remote SYN-001  # ask the server to $validate a generated Observation
-python3 -m pip install pytest && python3 -m pytest -q   # 45 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q   # 46 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only ever does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`.
 
@@ -148,7 +148,7 @@ Thresholds marked "demo" are starting points for a local team to tune, not regul
 Result on the sample data: 2 sites **high** (Flag emitted), 2 **moderate**, 1 **low**; record statuses: 7 ok, 4 needs review, 3 blocked.
 
 ## Evidence
-- 45 automated tests (`pytest -q`), 0 network calls in tests.
+- 46 automated tests (`pytest -q`), 0 network calls in tests.
 - Live run against the public HAPI FHIR R4 server, synthetic data only: transaction accepted (HTTP 200, 21 resources), conditional create reused the existing Location on a second visit, generated Observations validate with **no issues** against the published StreamFHIR profile, and a deliberately broken Observation is rejected by the profile with 3 errors. Details and resource IDs: [docs/evidence-hapi.md](docs/evidence-hapi.md). (The public test server may purge data at any time.)
 - Screenshots (390 px and 1280 px, no horizontal scroll): [docs/screenshots](docs/screenshots).
 
@@ -176,7 +176,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, StructureDefinition
 data/                      synthetic sites and records
 docs/                      demo script, live evidence, screenshots
-tests/                     45 tests
+tests/                     46 tests
 ```
 
 ## License

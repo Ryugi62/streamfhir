@@ -11,10 +11,25 @@ FORBIDDEN = {
 }
 
 
-def _imports(path):
+def _resolve(mod, layer):
+    """Turn relative imports (from ..adapters import x) into absolute module names."""
+    if not mod.startswith("."):
+        return mod
+    dots = len(mod) - len(mod.lstrip("."))
+    parts = ["streamfhir", layer][: 2 - (dots - 1)]
+    rest = mod.lstrip(".")
+    return ".".join(parts + ([rest] if rest else []))
+
+
+def _imports(path, layer):
     with open(path) as fh:
         src = fh.read()
-    return re.findall(r"^\s*(?:from|import)\s+([\w\.]+)", src, re.M)
+    return [_resolve(m, layer) for m in re.findall(r"^\s*(?:from|import)\s+([\w\.]+)", src, re.M)]
+
+
+def test_relative_import_resolution():
+    assert _resolve("..adapters.fhir_mapper", "domain") == "streamfhir.adapters.fhir_mapper"
+    assert _resolve(".indicators", "domain") == "streamfhir.domain.indicators"
 
 
 def test_ac15_inner_layers_do_not_import_outer_layers_or_io():
@@ -22,5 +37,5 @@ def test_ac15_inner_layers_do_not_import_outer_layers_or_io():
         folder = os.path.join(ROOT, "streamfhir", layer)
         for name in os.listdir(folder):
             if name.endswith(".py"):
-                for mod in _imports(os.path.join(folder, name)):
+                for mod in _imports(os.path.join(folder, name), layer):
                     assert not any(mod == b or mod.startswith(b + ".") for b in banned), (layer, name, mod)
