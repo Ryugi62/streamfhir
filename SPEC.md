@@ -1,0 +1,92 @@
+# StreamFHIR — SPEC (v0.1, 2026-09-29)
+
+## 0. One line
+StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.
+Essence: *not* "another water-quality app", but "a citizen observation that a health information system can already read, trust-check and act on".
+
+## 1. Success criteria (numbers) · deadline (constant) · non-goals
+- Reference: the HL7 FHIR R4 base spec (Observation / Location / Provenance / Flag) and the public HAPI FHIR R4 test server (`https://hapi.fhir.org/baseR4`) — the integration target every health-IT judge recognises.
+- Success (all measurable in this repo):
+  - S1: 100 % of synthetic sample records (≥10 records, ≥3 sites) receive a validation status (`ok` / `review` / `blocked`) with ≥1 plain-language message for every non-`ok` record.
+  - S2: 100 % of non-`blocked` records map to a FHIR R4 `transaction` Bundle containing 1 `Location`, 1 panel `Observation`, ≥1 indicator `Observation`, 1 `Provenance`; 0 `blocked` records are exported.
+  - S3: every indicator code emitted exists in `fhir/CodeSystem-stream-indicator.json` (test-enforced); no LOINC/SNOMED code is used.
+  - S4: every site gets a risk level (`low`/`moderate`/`high`) with the fired rule IDs listed; every `high` site yields exactly 1 FHIR `Flag` with `subject` = that `Location`.
+  - S5: ≥25 automated tests pass (`python3 -m pytest -q`), 0 network calls in tests.
+  - S6: dry-run is the default for sending; a live POST to HAPI is only done with synthetic data and its response IDs are recorded in README.
+  - S7: UI renders at 390 px and 1280 px with no horizontal scroll; one primary action per screen.
+- Deadline: Devpost submission 2026-10-04 21:00 PDT (extended). Internal code freeze: 2026-09-30.
+- Non-goals: no ML model, no accuracy claims; no real citizen data; no user accounts; no claim that the record schema is the official OneAquaHealth app schema; no production hosting; not a regulatory water-quality compliance tool.
+
+## 2. Constraints
+- Hackathon rules (quoted): "All projects must include a public code repository (e.g., GitHub) with source code and documentation"; "Projects must be original and developed during the hackathon period".
+- Cost: 0. Python 3.9+ standard library only at runtime; `pytest` for tests.
+- Privacy: observers are pseudonymous IDs only; no names, emails or device IDs are stored or sent.
+
+## 3. Ubiquitous language (code names 1:1)
+| Term | Meaning | Code name |
+|---|---|---|
+| Site | A fixed stream reach that citizens revisit | `Site` |
+| Stream assessment record | One citizen visit: time, place, observer pseudonym, photos, indicator values | `StreamAssessment` (raw dict = "record") |
+| Indicator | One thing a citizen scores, measures or notices | `Indicator`, `INDICATORS` |
+| Issue | A validation finding with severity `error` or `warning` | `Issue` |
+| Validation status | `ok` / `review` (human must look) / `blocked` (cannot be shared) | `ValidationReport.status` |
+| Rule | An explainable One Health risk rule with lane and points | `Rule`, `RULES` |
+| Lane | One Health dimension: `environment`, `animal`, `human` | `LANES` |
+| Corroborated | A fired rule supported by ≥2 distinct observers or ≥1 photo | `FiredRule.corroborated` |
+| Site risk | Aggregated risk for a site over the recent window | `SiteRisk` |
+| Bundle | FHIR transaction Bundle | `assessment_bundle`, `risk_bundle` |
+
+## 4. Domain model
+- Entities: `Site`, `StreamAssessment`. Value objects: `Issue`, `ValidationReport`, `FiredRule`, `SiteRisk`, `Indicator`.
+- Domain services: `validate_record(raw, sites, now)`, `evaluate_site(site, reports)`.
+- Ports: `SiteRepository`, `RecordRepository`, `FhirTranslator`, `FhirServer`, `Clock`.
+
+## 5. Use cases (application)
+| UC | Input | Output | Rules |
+|---|---|---|---|
+| UC-1 CheckRecord | raw record dict | report + Bundle (or none if blocked) | never alter values; `review` → Observation.status `preliminary` + note |
+| UC-2 SiteRiskOverview | all stored records | per-site `SiteRisk` + Flag bundle for `high` | 14-day window ending at site's latest record; `blocked` records excluded |
+| UC-3 ShareBundle | Bundle, live flag | dry-run summary or server response | default dry-run; live only via explicit flag |
+
+## 6. Acceptance criteria (each → ≥1 test)
+- AC-1 Given a complete, plausible record, When validated, Then status is `ok` and there are 0 issues.
+- AC-2 Given a record without observer or without coordinates or with a future timestamp, When validated, Then status is `blocked`.
+- AC-3 Given pH 15 (outside 0–14), Then `blocked`; Given pH 4.2 (possible but implausible), Then `review` with a plausibility warning, and the value is kept unchanged.
+- AC-4 Given a dead-fish or algal-scum report with no photo, Then `review` with "photo needed".
+- AC-5 Given coordinates > 250 m from the registered site, Then `review` with a location-mismatch warning.
+- AC-6 Given an unknown indicator code or a score outside 1–10, Then `blocked`.
+- AC-7 Given a `review` record, When mapped, Then every indicator Observation has status `preliminary` and a note quoting the warning.
+- AC-8 Given an `ok` record, When mapped, Then the Bundle is `type: transaction`, the Location uses conditional create on the site identifier, Observations reference the Location via `urn:uuid`, and Provenance targets every Observation.
+- AC-9 Given any mapped Bundle, Then every coding in the StreamFHIR system exists in the published CodeSystem file.
+- AC-10 Given a site with sewage odour and people in the water reported by 2 observers, When evaluated, Then level is `high`, rules R4 and R6 fire, and the rule is corroborated.
+- AC-11 Given a site with only good scores, Then level is `low` and no Flag is emitted.
+- AC-12 Given a `high` site, When the risk bundle is built, Then it contains exactly 1 Flag with `subject` referencing the site Location and text listing fired rule IDs.
+- AC-13 Given dry-run (default), When sharing, Then no HTTP request is made and a summary with resource counts is returned.
+- AC-14 Given a live share with a fake transport returning a transaction-response, Then the created resource locations are returned.
+- AC-15 Given the domain and application packages, Then they import nothing from adapters/infrastructure (architecture test).
+- AC-16 Given the web server, When `POST /api/check` with a sample record, Then the JSON response has `report.status` and `bundle`.
+
+## 7. Architecture (Clean)
+```
+streamfhir/domain/ ← application/ ← adapters/ (fhir_mapper, hapi_client, json_repository, presenter) ← infrastructure/ (container, cli, web, static UI)
+```
+FHIR is treated as an external format, so the mapper lives in `adapters/`; the domain knows nothing about FHIR.
+
+## 8. UI acceptance criteria (Toss-style checklist, concretised)
+1. Mobile first: 390 px no horizontal scroll; 1280 px centred column.
+2. One question per screen: three screens (Sites, Site detail, Check a record); each has one primary button.
+3. Type scale: headings ≥22 px bold, body 16 px, helper 13 px.
+4. Spacing ≥24 px between sections, card radius 16 px, ≤1 shadow level.
+5. Primary CTA fixed at bottom, ≥52 px tall, full width.
+6. Number first: site card leads with the risk score (points) ≥28 px, verdict line below.
+7. Evidence folded: rules, FHIR JSON in `<details>` closed by default.
+8. Plain words: "Needs a quick look", "Can't share yet", "Ready to share"; FHIR terms get a one-line gloss.
+9. White background, one blue (#3182F6), status colours green/amber/red always paired with text.
+10. No external fonts/CDNs; only own API requests.
+
+## 9. Physical verification
+- Run the server, capture PNG screenshots at 390 px and 1280 px (headless Chromium if available).
+- POST one synthetic Bundle to HAPI R4 once (live), record returned IDs; run `$validate` on one generated Observation and record the OperationOutcome summary.
+
+## 10. Change log
+- v0.1 2026-09-29 first version.
