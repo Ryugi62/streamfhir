@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+    "fullUrl": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dc9b05cb-aa86-4cc0-b5b3-55416c2ba655",
+    "fullUrl": "urn:uuid:7d72c656-fcd3-411d-a0e5-b9089d55a1b6",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0437d463-11f4-4dfa-81d4-5eed1d183ad0",
+    "fullUrl": "urn:uuid:00045fb7-a272-400b-9c66-40e526334aa7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+      "reference": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:8253e361-6a3d-4c6b-96f9-14b06db1fd96"
+       "reference": "urn:uuid:cf1d73e2-ee84-41ab-af52-e31dbb638cba"
       },
       {
-       "reference": "urn:uuid:059285b6-0bd2-49ca-a212-8a4b9179d3aa"
+       "reference": "urn:uuid:d4cc5708-1465-42ec-b225-ace58a6adc33"
       },
       {
-       "reference": "urn:uuid:a57af70b-8fc6-49a9-a219-8f5556d2cfb2"
+       "reference": "urn:uuid:2744f0eb-f587-4c61-8fe1-2d741cec1daa"
       },
       {
-       "reference": "urn:uuid:1e157956-be98-4455-bfab-98ef2f861440"
+       "reference": "urn:uuid:7707f74a-ee1c-46db-be0f-95ae74a4893e"
       },
       {
-       "reference": "urn:uuid:3531521d-63b9-408f-bb16-db843f76f8ca"
+       "reference": "urn:uuid:18acaf99-eb00-4f35-a581-e2e2e10b177a"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8253e361-6a3d-4c6b-96f9-14b06db1fd96",
+    "fullUrl": "urn:uuid:cf1d73e2-ee84-41ab-af52-e31dbb638cba",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+      "reference": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:059285b6-0bd2-49ca-a212-8a4b9179d3aa",
+    "fullUrl": "urn:uuid:d4cc5708-1465-42ec-b225-ace58a6adc33",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+      "reference": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a57af70b-8fc6-49a9-a219-8f5556d2cfb2",
+    "fullUrl": "urn:uuid:2744f0eb-f587-4c61-8fe1-2d741cec1daa",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+      "reference": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1e157956-be98-4455-bfab-98ef2f861440",
+    "fullUrl": "urn:uuid:7707f74a-ee1c-46db-be0f-95ae74a4893e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+      "reference": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3531521d-63b9-408f-bb16-db843f76f8ca",
+    "fullUrl": "urn:uuid:18acaf99-eb00-4f35-a581-e2e2e10b177a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:808b7eaf-0d13-452d-9b12-fbc758f59415",
+      "reference": "urn:uuid:6eaf769e-45f8-4697-b3c2-29e47148ccc1",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f7cc0faf-568d-499c-81f5-2d4e0cd92f62",
+    "fullUrl": "urn:uuid:5b848c32-6507-4692-a65c-3e2884444ee2",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05165000-2024-12-17T1047",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:0437d463-11f4-4dfa-81d4-5eed1d183ad0"
+       "reference": "urn:uuid:00045fb7-a272-400b-9c66-40e526334aa7"
       },
       {
-       "reference": "urn:uuid:8253e361-6a3d-4c6b-96f9-14b06db1fd96"
+       "reference": "urn:uuid:cf1d73e2-ee84-41ab-af52-e31dbb638cba"
       },
       {
-       "reference": "urn:uuid:059285b6-0bd2-49ca-a212-8a4b9179d3aa"
+       "reference": "urn:uuid:d4cc5708-1465-42ec-b225-ace58a6adc33"
       },
       {
-       "reference": "urn:uuid:a57af70b-8fc6-49a9-a219-8f5556d2cfb2"
+       "reference": "urn:uuid:2744f0eb-f587-4c61-8fe1-2d741cec1daa"
       },
       {
-       "reference": "urn:uuid:1e157956-be98-4455-bfab-98ef2f861440"
+       "reference": "urn:uuid:7707f74a-ee1c-46db-be0f-95ae74a4893e"
       },
       {
-       "reference": "urn:uuid:3531521d-63b9-408f-bb16-db843f76f8ca"
+       "reference": "urn:uuid:18acaf99-eb00-4f35-a581-e2e2e10b177a"
       }
      ],
      "occurredDateTime": "2024-12-17T10:47:00+01:00",
-     "recorded": "2026-09-29T14:13:43+00:00",
+     "recorded": "2026-09-29T14:32:48+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:dc9b05cb-aa86-4cc0-b5b3-55416c2ba655",
+        "reference": "urn:uuid:7d72c656-fcd3-411d-a0e5-b9089d55a1b6",
         "display": "StreamFHIR 0.7.0"
        }
       }

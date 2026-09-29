@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+    "fullUrl": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c27b7485-13fb-48b5-84b8-0e87352ccbf8",
+    "fullUrl": "urn:uuid:15698e7a-b08f-457e-9d11-d9ad37eed337",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1681e5de-6343-4d0b-ba03-9c215e4243d0",
+    "fullUrl": "urn:uuid:d9008e0e-b38c-42d3-a55b-9e45698db7a5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -161,22 +161,22 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e9eea123-5e28-4af6-ba2d-9837bf333f63"
+       "reference": "urn:uuid:97c8644e-cc61-4e5a-95c6-dda2810ed2e0"
       },
       {
-       "reference": "urn:uuid:aa15ed09-2ab0-4cc1-b185-48f6f0a66087"
+       "reference": "urn:uuid:53db6a0b-d459-4381-8ff2-85e90807bbf0"
       },
       {
-       "reference": "urn:uuid:c5410562-972a-462b-94e8-b696995fcf51"
+       "reference": "urn:uuid:73783c05-5853-4d0f-aaf6-40d2250ba4d7"
       },
       {
-       "reference": "urn:uuid:b851259b-7d8e-4461-aa71-3b5b71e6324b"
+       "reference": "urn:uuid:2067047e-cfa2-49ed-a61a-6b1fa79753e9"
       },
       {
-       "reference": "urn:uuid:8e0af864-c13f-4666-acd0-a7ba36745840"
+       "reference": "urn:uuid:16bda9a3-693b-430d-96b4-44e18c7a30b1"
       },
       {
-       "reference": "urn:uuid:7614cfd1-aa65-4e3b-9d44-b8570c4bc20b"
+       "reference": "urn:uuid:91b1e4ed-0bae-4883-86c8-33c4d08541be"
       }
      ]
     },
@@ -186,7 +186,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e9eea123-5e28-4af6-ba2d-9837bf333f63",
+    "fullUrl": "urn:uuid:97c8644e-cc61-4e5a-95c6-dda2810ed2e0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -234,7 +234,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -261,7 +261,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:aa15ed09-2ab0-4cc1-b185-48f6f0a66087",
+    "fullUrl": "urn:uuid:53db6a0b-d459-4381-8ff2-85e90807bbf0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -309,7 +309,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -340,7 +340,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c5410562-972a-462b-94e8-b696995fcf51",
+    "fullUrl": "urn:uuid:73783c05-5853-4d0f-aaf6-40d2250ba4d7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -388,7 +388,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -415,7 +415,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b851259b-7d8e-4461-aa71-3b5b71e6324b",
+    "fullUrl": "urn:uuid:2067047e-cfa2-49ed-a61a-6b1fa79753e9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -463,7 +463,7 @@
       "text": "Phosphate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8e0af864-c13f-4666-acd0-a7ba36745840",
+    "fullUrl": "urn:uuid:16bda9a3-693b-430d-96b4-44e18c7a30b1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -547,7 +547,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -574,7 +574,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7614cfd1-aa65-4e3b-9d44-b8570c4bc20b",
+    "fullUrl": "urn:uuid:91b1e4ed-0bae-4883-86c8-33c4d08541be",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -627,7 +627,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:b652b133-3c7f-41ed-b693-0c7dd90ac360",
+      "reference": "urn:uuid:3ef95a84-3dbf-4808-a294-e99927a1c3ae",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-05-06T11:46:24+02:00",
@@ -654,7 +654,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:554082e0-2c0b-44a1-8e96-4638818f5317",
+    "fullUrl": "urn:uuid:9fb18ff0-678f-4ad4-a3eb-8075af022bdc",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW168900-2026-05-06T1146",
@@ -673,29 +673,29 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:1681e5de-6343-4d0b-ba03-9c215e4243d0"
+       "reference": "urn:uuid:d9008e0e-b38c-42d3-a55b-9e45698db7a5"
       },
       {
-       "reference": "urn:uuid:e9eea123-5e28-4af6-ba2d-9837bf333f63"
+       "reference": "urn:uuid:97c8644e-cc61-4e5a-95c6-dda2810ed2e0"
       },
       {
-       "reference": "urn:uuid:aa15ed09-2ab0-4cc1-b185-48f6f0a66087"
+       "reference": "urn:uuid:53db6a0b-d459-4381-8ff2-85e90807bbf0"
       },
       {
-       "reference": "urn:uuid:c5410562-972a-462b-94e8-b696995fcf51"
+       "reference": "urn:uuid:73783c05-5853-4d0f-aaf6-40d2250ba4d7"
       },
       {
-       "reference": "urn:uuid:b851259b-7d8e-4461-aa71-3b5b71e6324b"
+       "reference": "urn:uuid:2067047e-cfa2-49ed-a61a-6b1fa79753e9"
       },
       {
-       "reference": "urn:uuid:8e0af864-c13f-4666-acd0-a7ba36745840"
+       "reference": "urn:uuid:16bda9a3-693b-430d-96b4-44e18c7a30b1"
       },
       {
-       "reference": "urn:uuid:7614cfd1-aa65-4e3b-9d44-b8570c4bc20b"
+       "reference": "urn:uuid:91b1e4ed-0bae-4883-86c8-33c4d08541be"
       }
      ],
      "occurredDateTime": "2026-05-06T11:46:24+02:00",
-     "recorded": "2026-09-29T14:13:43+00:00",
+     "recorded": "2026-09-29T14:32:49+00:00",
      "activity": {
       "coding": [
        {
@@ -736,7 +736,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:c27b7485-13fb-48b5-84b8-0e87352ccbf8",
+        "reference": "urn:uuid:15698e7a-b08f-457e-9d11-d9ad37eed337",
         "display": "StreamFHIR 0.7.0"
        }
       }

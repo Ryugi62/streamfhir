@@ -137,6 +137,7 @@ function lanes(p){ return `<div class="lanes" aria-label="Health hazard points b
 const COND = {poor:"Ecological condition: poor", fair:"Ecological condition: fair", good:"Ecological condition: good", "not assessed":"Ecological condition: not assessed (no habitat, nutrient or invertebrate data)"};
 const lvl = r => r.hazard_assessed === false ? "na" : r.level;
 LEVEL.na = "Not assessed"; LEVEL["not-assessed"] = "Not assessed"; LEVEL_CLASS.na = "review"; VERDICT.na = "No visual hazard checks in the last 14 days, so nothing can be said about health hazards here.";
+const decidable = p => p.status === "review" || (p.photo_pending && cache && cache.dataset && cache.dataset.photo_needs_review);
 const isReal = () => !!(cache && cache.dataset && cache.dataset.synthetic === false && cache.dataset.observer_kind === "organisation");   /* real agency lab data */
 const CCOL = {poor:"var(--no)", fair:"var(--warn)", good:"var(--ok)", "not assessed":"var(--hint)"};
 const CCLASS = {poor:"blocked", fair:"review", good:"ok", "not assessed":"review"};
@@ -256,14 +257,14 @@ async function site(id){
     <div class="card" id="level"><div class="num">${r.hazard_points}<small>hazard points · ${r.confirmed_hazard_points} corroborated</small></div>
       <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
       <div class="row"><span class="chip ${LEVEL_CLASS[lvl(r)]}">${LEVEL[lvl(r)]}</span></div>
-      <p class="lead" style="margin:10px 0 0">${lvl(r) === "na" && x.reports.some(p => p.decision === "reject") ? `No trusted hazard evidence: ${x.reports.filter(p => p.decision === "reject").length} check(s) rejected by a reviewer.` : esc(VERDICT[lvl(r)])}</p>${lanes(r.lane_points)}
+      <p class="lead" style="margin:10px 0 0">${lvl(r) === "na" && x.reports.some(p => p.decision === "reject") ? `No trusted hazard evidence: ${(n => n + (n === 1 ? " check was" : " checks were"))(x.reports.filter(p => p.decision === "reject").length)} rejected by a reviewer.` : esc(VERDICT[lvl(r)])}</p>${lanes(r.lane_points)}
       <p class="help" style="margin:10px 0 0">${COND[r.condition]} (${r.condition_points} points) — tracked separately, never raises a warning on its own.</p></div></section>
-    <section><h2>Health hazard: why</h2><div class="card"><ul class="plain">${hz.length ? hz.map(ruleItem).join("") : "<li>No hazard rule fired.</li>"}</ul></div></section>
+    <section><h2>Health hazard: why</h2><div class="card"><ul class="plain">${hz.length ? hz.map(ruleItem).join("") : x.reports.some(p => p.decision === "reject") ? "<li>No hazard rule fired on trusted evidence.</li>" : "<li>No hazard rule fired.</li>"}</ul></div></section>
     <section><h2>${isReal() ? "Agency samplings (lab chemistry)" : "Citizen checks"}</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(p.record_id)}</b>
       <span class="chip ${p.decision==="reject"?"blocked":p.decision==="confirm"?"ok":p.status}">${p.decision ? DECISION[p.decision] + (p.basis ? " (" + esc(p.basis.replace("-", " ")) + ")" : "") : STATUS[p.status].big}</span></div>
       ${p.issues.map(i => `<div class="help">${esc(i.message)}</div>`).join("")}
       ${(p.photos || []).map((u, k) => `<div class="help"><a href="${esc(u)}" target="_blank" rel="noopener">Open the volunteer's photo${p.photos.length > 1 ? " " + (k + 1) : ""}</a> (real record; check it before confirming)</div>`).join("")}
-      ${p.status === "review" && window.STATIC_DEMO && staticDecision && !p.decision ? `<p class="help">The online demo replays one decision at a time — undo the current one first.</p>` : p.status === "review" ? `<div class="opts" style="margin-top:10px">${p.decision ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="">Undo decision</button>` :
+      ${decidable(p) && window.STATIC_DEMO && staticDecision && !p.decision ? `<p class="help">The online demo replays one decision at a time — undo the current one first.</p>` : decidable(p) ? `${p.status === "ok" ? `<p class="help">Photo attached, waiting for a reviewer's photo check before it counts.</p>` : ""}<div class="opts" style="margin-top:10px">${p.decision ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="">Undo decision</button>` :
         `<span class="help" style="width:100%">Confirm only with a basis:</span>
          <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="site-visit">Confirm · I visited</button>
          ${p.has_photo ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="photo-checked">Confirm · photo checked</button>` : ""}

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+    "fullUrl": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:be89d65c-34e4-4016-aca2-8a8f69c088b9",
+    "fullUrl": "urn:uuid:6ce96d43-1963-4b71-86c2-1efa55ef6228",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:28d66d75-56ae-41d4-8fd8-f8db831cf02c",
+    "fullUrl": "urn:uuid:da65119f-7635-4d03-9444-0da849da2038",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+      "reference": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
       "display": "Toulouse area · Le Visenc à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:28:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:4cfa9244-0094-4032-bb2d-0ef87e50ee5c"
+       "reference": "urn:uuid:180e7b73-61df-444a-823f-cb4cf15d1ed9"
       },
       {
-       "reference": "urn:uuid:100eb931-3aea-4c4d-8498-a847469a84c7"
+       "reference": "urn:uuid:37714508-01e5-403f-9a94-be469d24edb9"
       },
       {
-       "reference": "urn:uuid:27e10d54-febe-4c38-8651-a59433536e17"
+       "reference": "urn:uuid:096ac2a0-53ec-494b-aa95-b8272e021f97"
       },
       {
-       "reference": "urn:uuid:65201127-6092-49fa-ae0f-dc4155d1853e"
+       "reference": "urn:uuid:0c4c4c4e-2fec-4772-b6d0-356345f3c372"
       },
       {
-       "reference": "urn:uuid:0b46dc7c-e85d-4afa-84ba-c758ed9a8114"
+       "reference": "urn:uuid:151b9cd1-f864-46a3-be16-99575725f465"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4cfa9244-0094-4032-bb2d-0ef87e50ee5c",
+    "fullUrl": "urn:uuid:180e7b73-61df-444a-823f-cb4cf15d1ed9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+      "reference": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
       "display": "Toulouse area · Le Visenc à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:28:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:100eb931-3aea-4c4d-8498-a847469a84c7",
+    "fullUrl": "urn:uuid:37714508-01e5-403f-9a94-be469d24edb9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+      "reference": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
       "display": "Toulouse area · Le Visenc à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:28:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:27e10d54-febe-4c38-8651-a59433536e17",
+    "fullUrl": "urn:uuid:096ac2a0-53ec-494b-aa95-b8272e021f97",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+      "reference": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
       "display": "Toulouse area · Le Visenc à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:28:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:65201127-6092-49fa-ae0f-dc4155d1853e",
+    "fullUrl": "urn:uuid:0c4c4c4e-2fec-4772-b6d0-356345f3c372",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+      "reference": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
       "display": "Toulouse area · Le Visenc à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:28:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0b46dc7c-e85d-4afa-84ba-c758ed9a8114",
+    "fullUrl": "urn:uuid:151b9cd1-f864-46a3-be16-99575725f465",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (orthophosphate)"
      },
      "subject": {
-      "reference": "urn:uuid:50da8691-7786-4e86-8a0d-05d972f7d84f",
+      "reference": "urn:uuid:b40ef36d-0b0c-4d0f-ae95-debea149cfb1",
       "display": "Toulouse area · Le Visenc à Baziège"
      },
      "effectiveDateTime": "2024-12-17T11:28:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c9ab6099-9053-4dfc-8726-8b7ff6abd367",
+    "fullUrl": "urn:uuid:e5618054-19e3-42b8-ad82-c20eb9e6edb8",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05157600-2024-12-17T1128",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:28d66d75-56ae-41d4-8fd8-f8db831cf02c"
+       "reference": "urn:uuid:da65119f-7635-4d03-9444-0da849da2038"
       },
       {
-       "reference": "urn:uuid:4cfa9244-0094-4032-bb2d-0ef87e50ee5c"
+       "reference": "urn:uuid:180e7b73-61df-444a-823f-cb4cf15d1ed9"
       },
       {
-       "reference": "urn:uuid:100eb931-3aea-4c4d-8498-a847469a84c7"
+       "reference": "urn:uuid:37714508-01e5-403f-9a94-be469d24edb9"
       },
       {
-       "reference": "urn:uuid:27e10d54-febe-4c38-8651-a59433536e17"
+       "reference": "urn:uuid:096ac2a0-53ec-494b-aa95-b8272e021f97"
       },
       {
-       "reference": "urn:uuid:65201127-6092-49fa-ae0f-dc4155d1853e"
+       "reference": "urn:uuid:0c4c4c4e-2fec-4772-b6d0-356345f3c372"
       },
       {
-       "reference": "urn:uuid:0b46dc7c-e85d-4afa-84ba-c758ed9a8114"
+       "reference": "urn:uuid:151b9cd1-f864-46a3-be16-99575725f465"
       }
      ],
      "occurredDateTime": "2024-12-17T11:28:00+01:00",
-     "recorded": "2026-09-29T14:13:43+00:00",
+     "recorded": "2026-09-29T14:32:48+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:be89d65c-34e4-4016-aca2-8a8f69c088b9",
+        "reference": "urn:uuid:6ce96d43-1963-4b71-86c2-1efa55ef6228",
         "display": "StreamFHIR 0.7.0"
        }
       }

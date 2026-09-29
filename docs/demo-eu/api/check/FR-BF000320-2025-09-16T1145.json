@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:02c775b2-a65d-48d1-8be6-bc3610c77167",
+    "fullUrl": "urn:uuid:a624d5e5-f08d-4df9-8135-40524346d709",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c65b02f2-ab4d-40cd-b838-0a84df483f2f",
+    "fullUrl": "urn:uuid:f9b6bef7-3360-44ea-81c0-529e0a01e98e",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8e3cf9a4-b96e-4235-87d0-a18b4748859a",
+    "fullUrl": "urn:uuid:6101ebe1-e0b3-47ef-a020-0127a6e3c527",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:02c775b2-a65d-48d1-8be6-bc3610c77167",
+      "reference": "urn:uuid:a624d5e5-f08d-4df9-8135-40524346d709",
       "display": "Toulouse area · PERIPHERIE SUD SUD EST"
      },
      "effectiveDateTime": "2025-09-16T11:45:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:c35eff7f-6bfb-4e3c-8360-57c78fc803d9"
+       "reference": "urn:uuid:2e75cd32-828a-471b-8f6e-9135c616d0c4"
       },
       {
-       "reference": "urn:uuid:595997b1-1703-4724-a116-c5b5967a6a50"
+       "reference": "urn:uuid:0e119710-0d48-4897-bf6b-b58195067e30"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c35eff7f-6bfb-4e3c-8360-57c78fc803d9",
+    "fullUrl": "urn:uuid:2e75cd32-828a-471b-8f6e-9135c616d0c4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:02c775b2-a65d-48d1-8be6-bc3610c77167",
+      "reference": "urn:uuid:a624d5e5-f08d-4df9-8135-40524346d709",
       "display": "Toulouse area · PERIPHERIE SUD SUD EST"
      },
      "effectiveDateTime": "2025-09-16T11:45:00+02:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:595997b1-1703-4724-a116-c5b5967a6a50",
+    "fullUrl": "urn:uuid:0e119710-0d48-4897-bf6b-b58195067e30",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:02c775b2-a65d-48d1-8be6-bc3610c77167",
+      "reference": "urn:uuid:a624d5e5-f08d-4df9-8135-40524346d709",
       "display": "Toulouse area · PERIPHERIE SUD SUD EST"
      },
      "effectiveDateTime": "2025-09-16T11:45:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7d4ec6bd-e32e-4f16-b0cc-4fb28d21e105",
+    "fullUrl": "urn:uuid:6bafed0e-c5b2-49ba-aff7-74cc637d2005",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000320-2025-09-16T1145",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:8e3cf9a4-b96e-4235-87d0-a18b4748859a"
+       "reference": "urn:uuid:6101ebe1-e0b3-47ef-a020-0127a6e3c527"
       },
       {
-       "reference": "urn:uuid:c35eff7f-6bfb-4e3c-8360-57c78fc803d9"
+       "reference": "urn:uuid:2e75cd32-828a-471b-8f6e-9135c616d0c4"
       },
       {
-       "reference": "urn:uuid:595997b1-1703-4724-a116-c5b5967a6a50"
+       "reference": "urn:uuid:0e119710-0d48-4897-bf6b-b58195067e30"
       }
      ],
      "occurredDateTime": "2025-09-16T11:45:00+02:00",
-     "recorded": "2026-09-29T14:13:43+00:00",
+     "recorded": "2026-09-29T14:32:48+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:c65b02f2-ab4d-40cd-b838-0a84df483f2f",
+        "reference": "urn:uuid:f9b6bef7-3360-44ea-81c0-529e0a01e98e",
         "display": "StreamFHIR 0.7.0"
        }
       }

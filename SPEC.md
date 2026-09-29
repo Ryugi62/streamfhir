@@ -102,6 +102,8 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-45 Given FreshWater Watch (Earthwatch) volunteer records, Then only fields with a matching meaning are scored (blue-green scum, oily sheen, foam, colour, litter, animal access, swimming, photo), other colours become "other", kit bands stay notes, implausible scum ticks, slurry and discharging outfalls go to a person, animal access stays a note, and for real citizen data a photo counts only after a reviewer's check.
 - AC-46 Given the Ghent (VMM) and Benevento (ARPAC) open exports, Then the same record shape results: nitrate keeps its N basis, phosphorus as P stays a note, values below a limit or `n.d.` are never turned into numbers, and records are laboratory data.
 - AC-47 Given a Flag whose period.end is before build time, Then it is `inactive` (expired); nitrate values state their basis in the UCUM unit (`mg{NO3}/L`, `mg{N}/L`).
+- AC-48 Given orthophosphate reported as P, Then the value and unit (mg{P}/L) are kept and R2 compares its PO4 equivalent (x 3.066).
+- AC-49 Given photo_needs_review, Then an ok report with a photo can be confirmed (photo checked) or rejected by a reviewer.
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)

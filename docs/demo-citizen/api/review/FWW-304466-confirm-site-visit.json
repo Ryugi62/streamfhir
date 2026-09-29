@@ -1,0 +1,1733 @@
+{
+ "rules": [
+  {
+   "id": "R1",
+   "title": "Poor habitat",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "mean of the visual habitat scores <= 5 (of 10)",
+   "why": "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
+   "advice": "Share with the city's river restoration team; repeat the visual check each season.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R2",
+   "title": "Nutrient enrichment (screening)",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+   "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+   "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R3",
+   "title": "Possible cyanobacterial bloom",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "human": 2
+   },
+   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
+   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+   "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R4",
+   "title": "Sewage signal",
+   "kind": "hazard",
+   "points": {
+    "human": 3,
+    "environment": 1
+   },
+   "when": "odour = sewage or water-colour = milky-grey",
+   "why": "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
+   "advice": "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R5",
+   "title": "Dead fish",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "environment": 1
+   },
+   "when": "dead-fish = yes",
+   "why": "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
+   "advice": "Do not touch the fish; note how many and report to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R6",
+   "title": "People in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "human": 2
+   },
+   "when": "people-contact = yes while R3 or R4 fired at the site",
+   "why": "Exposure turns a water problem into a human-health problem.",
+   "advice": "Discourage paddling and swimming here until the signal has been checked.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R7",
+   "title": "Pets or livestock in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "animal": 2
+   },
+   "when": "animal-contact = yes while R3, R4 or R5 fired at the site",
+   "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+   "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R8",
+   "title": "Oil or chemical signal",
+   "kind": "hazard",
+   "points": {
+    "environment": 2,
+    "human": 1
+   },
+   "when": "surface = oily-sheen or odour = chemical",
+   "why": "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
+   "advice": "Avoid skin contact and report the sheen or smell to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R9",
+   "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
+   "kind": "condition",
+   "points": {
+    "human": 1
+   },
+   "when": "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value",
+   "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+   "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R10",
+   "title": "No mayfly, stonefly or caddisfly larvae found",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach",
+   "why": "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
+   "advice": "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  }
+ ],
+ "as_of": "2023-07-25T23:59:59+00:00",
+ "dataset": {
+  "synthetic": false,
+  "observer_kind": "citizen",
+  "source_query": "Coimbra https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/Global_Data_Set_(vs)_Public_view/FeatureServer/0/query?where=1%3D1&geometry=-8.93%2C39.71%2C-7.93%2C40.71&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&f=json",
+  "retrieved": "retrieved 2026-09-29T13:33:48",
+  "import_stats": {
+   "Coimbra": {
+    "features": 6,
+    "records": 6,
+    "skipped": 0
+   },
+   "Toulouse": {
+    "features": 19,
+    "records": 19,
+    "skipped": 0
+   }
+  },
+  "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and in central Portugal",
+  "banner": "Real volunteer observations from Earthwatch Europe's FreshWater Watch (open access, no formal licence; attribution Earthwatch Europe) within about 50 km of Toulouse and in central Portugal (Aveiro, Figueira da Foz; 40-55 km from Coimbra): one volunteer campaign in March 2023 plus a few other visits, single visits per site. Only fields whose meaning matches StreamFHIR indicators are scored; kit bands are notes. For real citizen data a photo counts only after a reviewer's photo check. Each site is shown as of its own visit date.",
+  "photo_needs_review": true,
+  "evaluate_each_site_at_its_latest_visit": true
+ },
+ "sites": [
+  {
+   "site": {
+    "site_id": "FWW-40.1719,-8.8896",
+    "name": "Central Portugal · Parque da Emide, Figueira da Foz",
+    "lat": 40.171861111111106,
+    "lon": -8.889638888888888,
+    "water_body": "Parque da Emide, Figueira da Foz",
+    "description": "Real citizen-science site (FreshWater Watch, Lake)",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-40.1719,-8.8896",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304465"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T14:10:00+01:00",
+    "window_end": "2023-03-26T14:10:00+01:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304465",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T14:10:00+01:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "green",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/334/attachments/298"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-40.6387,-8.6559",
+    "name": "Central Portugal · Drinks park small pond",
+    "lat": 40.638720000000035,
+    "lon": -8.655929999999955,
+    "water_body": "Drinks park small pond",
+    "description": "Real citizen-science site (FreshWater Watch, Pond)",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-40.6387,-8.6559",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304451"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-09T15:10:00+00:00",
+    "window_end": "2023-03-23T15:10:00+00:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304451",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-23T15:10:00+00:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "clear",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/320/attachments/291"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-40.2711,-8.7940",
+    "name": "Central Portugal · Lagoa da Vela, Figueira da Foz",
+    "lat": 40.27105555555555,
+    "lon": -8.793972222222223,
+    "water_body": "Lagoa da Vela, Figueira da Foz",
+    "description": "Real citizen-science site (FreshWater Watch, Lake)",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-40.2711,-8.7940",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304466"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T15:26:00+01:00",
+    "window_end": "2023-03-26T15:26:00+01:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304466",
+     "status": "ok",
+     "decision": "confirm",
+     "basis": "site-visit",
+     "observed_at": "2023-03-26T15:26:00+01:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "brown-turbid",
+      "people-contact": false,
+      "litter": "some"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/335/attachments/299"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-40.6527,-8.5794",
+    "name": "Central Portugal · Rio Vouga, Aveiro",
+    "lat": 40.65269,
+    "lon": -8.579376,
+    "water_body": "Rio Vouga, Aveiro",
+    "description": "Real citizen-science site (FreshWater Watch, Stream)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-40.6527,-8.5794",
+    "level": "verify",
+    "hazard_points": 5,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 3,
+     "human": 2
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [
+     {
+      "rule_id": "R3",
+      "title": "Possible cyanobacterial bloom",
+      "kind": "hazard",
+      "points": {
+       "animal": 3,
+       "human": 2
+      },
+      "record_ids": [
+       "FWW-304472"
+      ],
+      "observers": [
+       "fww-group-4b4922e9fdf8"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+      "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+      "first_seen": "2023-03-26T15:00:00+01:00",
+      "last_seen": "2023-03-26T15:00:00+01:00",
+      "trusted_record_ids": []
+     }
+    ],
+    "record_ids": [
+     "FWW-304472"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T15:00:00+01:00",
+    "window_end": "2023-03-26T15:00:00+01:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304472",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T15:00:00+01:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "brown-turbid",
+      "surface": "algal-scum",
+      "people-contact": false,
+      "litter": "some"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/341/attachments/305"
+     ],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer ticked 'Blue_green_scum' (algae) with flow 'Steady' and colour 'Brown'; surface scums rarely form on flowing water, so a reviewer should check the photo before it counts."
+      },
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer noted 'Outfall_pipe_currently_discharging': a possible sewage signal for a reviewer to check."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-40.5885,-8.6439",
+    "name": "Central Portugal · Estrela Lake",
+    "lat": 40.58852446097925,
+    "lon": -8.643853208953482,
+    "water_body": "Estrela Lake",
+    "description": "Real citizen-science site (FreshWater Watch, Lake)",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-40.5885,-8.6439",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304452"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-10T16:02:00+00:00",
+    "window_end": "2023-03-24T16:02:00+00:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304452",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-24T16:02:00+00:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "clear",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/321/attachments/292"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-40.6362,-8.6532",
+    "name": "Central Portugal · Lake city park Aveiro",
+    "lat": 40.63619444952124,
+    "lon": -8.653224383915115,
+    "water_body": "Lake city park Aveiro",
+    "description": "Real citizen-science site (FreshWater Watch, Lake)",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-40.6362,-8.6532",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304450"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-09T14:33:00+00:00",
+    "window_end": "2023-03-23T14:33:00+00:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304450",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-23T14:33:00+00:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "clear",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/319/attachments/290"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5924,1.4412",
+    "name": "Toulouse area · Garonne",
+    "lat": 43.59235625663561,
+    "lon": 1.4412069720630996,
+    "water_body": "Garonne",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5924,1.4412",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304442"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T15:10:00+02:00",
+    "window_end": "2023-03-26T15:10:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304442",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T15:10:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "other",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "some"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.6111,1.4186",
+    "name": "Toulouse area · Pont jumeaux",
+    "lat": 43.61108183926157,
+    "lon": 1.418609319634328,
+    "water_body": "Pont jumeaux",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.6111,1.4186",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304445"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T16:49:00+02:00",
+    "window_end": "2023-03-26T16:49:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304445",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T16:49:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.4806,1.4110",
+    "name": "Toulouse area · Ariège gasline",
+    "lat": 43.48055401299052,
+    "lon": 1.4110324017272975,
+    "water_body": "Ariège gasline",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.4806,1.4110",
+    "level": "verify",
+    "hazard_points": 5,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 3,
+     "human": 2
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [
+     {
+      "rule_id": "R3",
+      "title": "Possible cyanobacterial bloom",
+      "kind": "hazard",
+      "points": {
+       "animal": 3,
+       "human": 2
+      },
+      "record_ids": [
+       "FWW-304439"
+      ],
+      "observers": [
+       "fww-group-4b4922e9fdf8"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+      "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+      "first_seen": "2023-03-25T14:14:00+01:00",
+      "last_seen": "2023-03-25T14:14:00+01:00",
+      "trusted_record_ids": []
+     }
+    ],
+    "record_ids": [
+     "FWW-304439"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-11T14:14:00+01:00",
+    "window_end": "2023-03-25T14:14:00+01:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304439",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-25T14:14:00+01:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "clear",
+      "surface": "algal-scum",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/308/attachments/287"
+     ],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer ticked 'Blue_green_scum' (algae) with flow 'Steady' and colour 'Colourless'; surface scums rarely form on flowing water, so a reviewer should check the photo before it counts."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5722,1.4700",
+    "name": "Toulouse area · Canal du midi",
+    "lat": 43.57221459528476,
+    "lon": 1.4700259302050256,
+    "water_body": "Canal du midi",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5722,1.4700",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-308518"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-07-11T11:31:00+02:00",
+    "window_end": "2023-07-25T11:31:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-308518",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-07-25T11:31:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.6252,1.4008",
+    "name": "Toulouse area · Garonne",
+    "lat": 43.62520363512469,
+    "lon": 1.4008294589956165,
+    "water_body": "Garonne",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.6252,1.4008",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304448"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T16:54:00+02:00",
+    "window_end": "2023-03-26T16:54:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304448",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T16:54:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "other",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5114,1.3870",
+    "name": "Toulouse area · Garonne Pinsaguel Trainbridge",
+    "lat": 43.51135603725215,
+    "lon": 1.3869976298666182,
+    "water_body": "Garonne Pinsaguel Trainbridge",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5114,1.3870",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304440"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-11T14:40:00+01:00",
+    "window_end": "2023-03-25T14:40:00+01:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304440",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-25T14:40:00+01:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "clear",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/309/attachments/288"
+     ],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "plausibility",
+       "message": "StreamFHIR plausibility check: the volunteer reported 'Slurry' on the surface: a possible manure or sewage signal for a reviewer to check."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.4611,1.4170",
+    "name": "Toulouse area · Lèze Canyon",
+    "lat": 43.461143068426416,
+    "lon": 1.416981541321511,
+    "water_body": "Lèze Canyon",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.4611,1.4170",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304437"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-11T13:59:00+01:00",
+    "window_end": "2023-03-25T13:59:00+01:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304437",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-25T13:59:00+01:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "clear",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/306/attachments/285"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.8312,1.6980",
+    "name": "Toulouse area · Lac des Auzerals",
+    "lat": 43.83124989000004,
+    "lon": 1.6979940420000617,
+    "water_body": "Lac des Auzerals",
+    "description": "Real citizen-science site (FreshWater Watch, Lake)",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.8312,1.6980",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-7970"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2015-06-08T00:00:00+02:00",
+    "window_end": "2015-06-22T00:00:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-7970",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2015-06-22T00:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "observed_at",
+       "code": "stale",
+       "message": "This observation is more than a year old. It is kept, but it will not describe today's stream."
+      },
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: The source has no sampling time; midnight local time was used for the date."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5745,1.4690",
+    "name": "Toulouse area · Canal du midi",
+    "lat": 43.57452937245558,
+    "lon": 1.468965948852798,
+    "water_body": "Canal du midi",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5745,1.4690",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-308519"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-07-11T11:47:00+02:00",
+    "window_end": "2023-07-25T11:47:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-308519",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-07-25T11:47:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.4327,1.4372",
+    "name": "Toulouse area · Ariege",
+    "lat": 43.43265212979848,
+    "lon": 1.4372330586995474,
+    "water_body": "Ariege",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.4327,1.4372",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304446"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T16:51:00+02:00",
+    "window_end": "2023-03-26T16:51:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304446",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T16:51:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "other",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5717,1.4371",
+    "name": "Toulouse area · Garonne",
+    "lat": 43.57173126502197,
+    "lon": 1.437092530686101,
+    "water_body": "Garonne",
+    "description": "Real citizen-science site (FreshWater Watch, River)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5717,1.4371",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304443"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T16:45:00+02:00",
+    "window_end": "2023-03-26T16:45:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304443",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T16:45:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "other",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5655,1.4715",
+    "name": "Toulouse area · Canal du midi",
+    "lat": 43.56550759562727,
+    "lon": 1.4715194418062083,
+    "water_body": "Canal du midi",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5655,1.4715",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-308520"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-07-11T12:30:00+02:00",
+    "window_end": "2023-07-25T12:30:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-308520",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-07-25T12:30:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5701,1.4703",
+    "name": "Toulouse area · Canal du midi",
+    "lat": 43.57014902316402,
+    "lon": 1.4703059678037391,
+    "water_body": "Canal du midi",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5701,1.4703",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-308517"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-07-11T11:16:00+02:00",
+    "window_end": "2023-07-25T11:16:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-308517",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-07-25T11:16:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.8308,1.2989",
+    "name": "Toulouse area · canal grisollez",
+    "lat": 43.83076008130449,
+    "lon": 1.2988816909824834,
+    "water_body": "canal grisollez",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.8308,1.2989",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304458"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T19:12:00+02:00",
+    "window_end": "2023-03-26T19:12:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304458",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T19:12:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "clear",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "some"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5981,1.4562",
+    "name": "Toulouse area · Canal midi",
+    "lat": 43.59814872888618,
+    "lon": 1.4562410361210425,
+    "water_body": "Canal midi",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5981,1.4562",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304441"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T15:07:00+02:00",
+    "window_end": "2023-03-26T15:07:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304441",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T15:07:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "people-contact": false,
+      "litter": "some"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5903,1.4603",
+    "name": "Toulouse area · Canal du midi - pont demoiselles",
+    "lat": 43.59034004781214,
+    "lon": 1.4602618905268014,
+    "water_body": "Canal du midi - pont demoiselles",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5903,1.4603",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304438"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T14:07:00+02:00",
+    "window_end": "2023-03-26T14:07:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304438",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T14:07:00+02:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "green",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/307/attachments/286"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.6158,1.4363",
+    "name": "Toulouse area · Canal",
+    "lat": 43.615777386540344,
+    "lon": 1.4362567847597916,
+    "water_body": "Canal",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.6158,1.4363",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304444"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T16:48:00+02:00",
+    "window_end": "2023-03-26T16:48:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304444",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T16:48:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "green",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.8306,1.2979",
+    "name": "Toulouse area · puit grisolles",
+    "lat": 43.830578,
+    "lon": 1.2979149,
+    "water_body": "puit grisolles",
+    "description": "Real citizen-science site (FreshWater Watch, Other)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.8306,1.2979",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304459"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T19:24:00+02:00",
+    "window_end": "2023-03-26T19:24:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304459",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T19:24:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "clear",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FWW-43.5235,1.5189",
+    "name": "Toulouse area · Canal du midi écluse de Castanet",
+    "lat": 43.52345242,
+    "lon": 1.51891369,
+    "water_body": "Canal du midi écluse de Castanet",
+    "description": "Real citizen-science site (FreshWater Watch, Canal)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "FWW-43.5235,1.5189",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "FWW-304436"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2023-03-12T11:06:00+02:00",
+    "window_end": "2023-03-26T11:06:00+02:00",
+    "decisions": {
+     "FWW-304466": "confirm"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FWW-304436",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2023-03-26T11:06:00+02:00",
+     "has_photo": true,
+     "values": {
+      "water-colour": "green",
+      "surface": "none",
+      "people-contact": false,
+      "litter": "none"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [
+      "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/305/attachments/284"
+     ],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  }
+ ]
+}

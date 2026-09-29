@@ -1,0 +1,1441 @@
+{
+ "rules": [
+  {
+   "id": "R1",
+   "title": "Poor habitat",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "mean of the visual habitat scores <= 5 (of 10)",
+   "why": "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
+   "advice": "Share with the city's river restoration team; repeat the visual check each season.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R2",
+   "title": "Nutrient enrichment (screening)",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+   "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+   "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R3",
+   "title": "Possible cyanobacterial bloom",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "human": 2
+   },
+   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
+   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+   "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R4",
+   "title": "Sewage signal",
+   "kind": "hazard",
+   "points": {
+    "human": 3,
+    "environment": 1
+   },
+   "when": "odour = sewage or water-colour = milky-grey",
+   "why": "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
+   "advice": "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R5",
+   "title": "Dead fish",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "environment": 1
+   },
+   "when": "dead-fish = yes",
+   "why": "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
+   "advice": "Do not touch the fish; note how many and report to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R6",
+   "title": "People in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "human": 2
+   },
+   "when": "people-contact = yes while R3 or R4 fired at the site",
+   "why": "Exposure turns a water problem into a human-health problem.",
+   "advice": "Discourage paddling and swimming here until the signal has been checked.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R7",
+   "title": "Pets or livestock in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "animal": 2
+   },
+   "when": "animal-contact = yes while R3, R4 or R5 fired at the site",
+   "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+   "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R8",
+   "title": "Oil or chemical signal",
+   "kind": "hazard",
+   "points": {
+    "environment": 2,
+    "human": 1
+   },
+   "when": "surface = oily-sheen or odour = chemical",
+   "why": "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
+   "advice": "Avoid skin contact and report the sheen or smell to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R9",
+   "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
+   "kind": "condition",
+   "points": {
+    "human": 1
+   },
+   "when": "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value",
+   "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+   "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R10",
+   "title": "No mayfly, stonefly or caddisfly larvae found",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach",
+   "why": "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
+   "advice": "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  }
+ ],
+ "as_of": "2026-09-29T12:00:00+01:00",
+ "dataset": {
+  "photo_needs_review": true,
+  "synthetic": true
+ },
+ "sites": [
+  {
+   "site": {
+    "site_id": "S-ALDER-UP",
+    "name": "Alder Brook - upstream park reach",
+    "lat": 40.215,
+    "lon": -8.405,
+    "water_body": "Alder Brook (fictional)",
+    "description": "Synthetic demo site: park reach above the town centre.",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "S-ALDER-UP",
+    "level": "moderate",
+    "hazard_points": 3,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 2,
+     "animal": 0,
+     "human": 1
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [
+     {
+      "rule_id": "R8",
+      "title": "Oil or chemical signal",
+      "kind": "hazard",
+      "points": {
+       "environment": 2,
+       "human": 1
+      },
+      "record_ids": [
+       "SYN-013"
+      ],
+      "observers": [
+       "obs-06"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
+      "advice": "Avoid skin contact and report the sheen or smell to the environment authority.",
+      "first_seen": "2026-09-27T12:05:00+01:00",
+      "last_seen": "2026-09-27T12:05:00+01:00",
+      "trusted_record_ids": []
+     }
+    ],
+    "record_ids": [
+     "SYN-001",
+     "SYN-013"
+    ],
+    "excluded_record_ids": [
+     "SYN-002",
+     "SYN-012"
+    ],
+    "window_start": "2026-09-15T12:00:00+01:00",
+    "window_end": "2026-09-29T12:00:00+01:00",
+    "decisions": {
+     "SYN-002": "reject"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "SYN-001",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-16T08:40:00+01:00",
+     "has_photo": true,
+     "values": {
+      "channel-condition": 8,
+      "bank-stability": 8,
+      "riparian-zone": 9,
+      "instream-habitat": 7,
+      "water-temperature": 15.2,
+      "ph": 7.4,
+      "nitrate": 5,
+      "phosphate": 0.1,
+      "transparency": 110,
+      "water-colour": "clear",
+      "surface": "none",
+      "odour": "none",
+      "litter": "none",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": true,
+      "sensitive-invertebrates": 3,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [],
+     "issues": []
+    },
+    {
+     "record_id": "SYN-002",
+     "status": "ok",
+     "decision": "reject",
+     "basis": null,
+     "observed_at": "2026-09-24T17:15:00+01:00",
+     "has_photo": true,
+     "values": {
+      "channel-condition": 8,
+      "bank-stability": 7,
+      "riparian-zone": 9,
+      "instream-habitat": 8,
+      "water-temperature": 14.6,
+      "ph": 7.6,
+      "nitrate": 5,
+      "transparency": 105,
+      "water-colour": "clear",
+      "surface": "none",
+      "odour": "earthy",
+      "litter": "some",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": false,
+      "sensitive-invertebrates": 3,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [],
+     "issues": []
+    },
+    {
+     "record_id": "SYN-013",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-27T12:05:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-colour": "clear",
+      "surface": "oily-sheen",
+      "odour": "chemical",
+      "litter": "some",
+      "people-contact": false,
+      "animal-contact": false
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "values.surface",
+       "code": "photo-needed",
+       "message": "Surface film = oily-sheen is an important claim but no photo was attached. A reviewer should confirm it."
+      }
+     ]
+    },
+    {
+     "record_id": "SYN-012",
+     "status": "blocked",
+     "decision": null,
+     "basis": null,
+     "observed_at": null,
+     "has_photo": false,
+     "values": {},
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "error",
+       "field": "observed_at",
+       "code": "future-timestamp",
+       "message": "The observation time 2030-06-01T10:00:00+01:00 is in the future. Please check the phone's date."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "S-ALDER-DN",
+    "name": "Alder Brook - below storm outfall",
+    "lat": 40.2105,
+    "lon": -8.418,
+    "water_body": "Alder Brook (fictional)",
+    "description": "Synthetic demo site: 50 m below a storm-water outfall, next to a playground.",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "S-ALDER-DN",
+    "level": "high",
+    "hazard_points": 6,
+    "confirmed_hazard_points": 6,
+    "lane_points": {
+     "environment": 1,
+     "animal": 0,
+     "human": 5
+    },
+    "condition_points": 4,
+    "condition": "poor",
+    "fired": [
+     {
+      "rule_id": "R1",
+      "title": "Poor habitat",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ],
+      "observers": [
+       "obs-01",
+       "obs-03"
+      ],
+      "corroborated": true,
+      "corroboration": "2 independent observers",
+      "why": "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
+      "advice": "Share with the city's river restoration team; repeat the visual check each season.",
+      "first_seen": "2026-09-20T16:30:00+01:00",
+      "last_seen": "2026-09-25T15:50:00+01:00",
+      "trusted_record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ]
+     },
+     {
+      "rule_id": "R4",
+      "title": "Sewage signal",
+      "kind": "hazard",
+      "points": {
+       "human": 3,
+       "environment": 1
+      },
+      "record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ],
+      "observers": [
+       "obs-01",
+       "obs-03"
+      ],
+      "corroborated": true,
+      "corroboration": "2 independent observers",
+      "why": "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
+      "advice": "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
+      "first_seen": "2026-09-20T16:30:00+01:00",
+      "last_seen": "2026-09-25T15:50:00+01:00",
+      "trusted_record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ]
+     },
+     {
+      "rule_id": "R6",
+      "title": "People in contact with affected water",
+      "kind": "hazard",
+      "points": {
+       "human": 2
+      },
+      "record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ],
+      "observers": [
+       "obs-01",
+       "obs-03"
+      ],
+      "corroborated": true,
+      "corroboration": "2 independent observers",
+      "why": "Exposure turns a water problem into a human-health problem.",
+      "advice": "Discourage paddling and swimming here until the signal has been checked.",
+      "first_seen": "2026-09-20T16:30:00+01:00",
+      "last_seen": "2026-09-25T15:50:00+01:00",
+      "trusted_record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ]
+     },
+     {
+      "rule_id": "R10",
+      "title": "No mayfly, stonefly or caddisfly larvae found",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ],
+      "observers": [
+       "obs-01",
+       "obs-03"
+      ],
+      "corroborated": true,
+      "corroboration": "2 independent observers",
+      "why": "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
+      "advice": "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
+      "first_seen": "2026-09-20T16:30:00+01:00",
+      "last_seen": "2026-09-25T15:50:00+01:00",
+      "trusted_record_ids": [
+       "SYN-003",
+       "SYN-004"
+      ]
+     }
+    ],
+    "record_ids": [
+     "SYN-003",
+     "SYN-004"
+    ],
+    "excluded_record_ids": [
+     "SYN-005"
+    ],
+    "window_start": "2026-09-15T12:00:00+01:00",
+    "window_end": "2026-09-29T12:00:00+01:00",
+    "decisions": {
+     "SYN-002": "reject"
+    },
+    "hazard_assessed": true,
+    "needs_flag": true
+   },
+   "reports": [
+    {
+     "record_id": "SYN-003",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-20T16:30:00+01:00",
+     "has_photo": true,
+     "values": {
+      "channel-condition": 4,
+      "bank-stability": 3,
+      "riparian-zone": 3,
+      "instream-habitat": 4,
+      "water-temperature": 17.0,
+      "ph": 7.0,
+      "nitrate": 15,
+      "phosphate": 0.3,
+      "transparency": 25,
+      "water-colour": "milky-grey",
+      "surface": "foam",
+      "odour": "sewage",
+      "litter": "lots",
+      "dead-fish": false,
+      "people-contact": true,
+      "animal-contact": false,
+      "sensitive-invertebrates": 0,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [],
+     "issues": []
+    },
+    {
+     "record_id": "SYN-004",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-25T15:50:00+01:00",
+     "has_photo": false,
+     "values": {
+      "channel-condition": 3,
+      "bank-stability": 3,
+      "riparian-zone": 4,
+      "instream-habitat": 3,
+      "water-temperature": 16.4,
+      "water-colour": "milky-grey",
+      "odour": "sewage",
+      "litter": "lots",
+      "people-contact": true,
+      "animal-contact": false,
+      "sensitive-invertebrates": 0,
+      "kick-sample-minutes": 1.5
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": []
+    },
+    {
+     "record_id": "SYN-005",
+     "status": "blocked",
+     "decision": null,
+     "basis": null,
+     "observed_at": null,
+     "has_photo": false,
+     "values": {},
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "error",
+       "field": "values.ph",
+       "code": "out-of-range",
+       "message": "pH 15 is impossible (valid range 0-14). Please re-check the reading."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": {
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+     {
+      "fullUrl": "urn:uuid:ca575c21-8329-4f1a-912a-871a5c9e29ce",
+      "resource": {
+       "resourceType": "Location",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Alder Brook - below storm outfall (S-ALDER-DN)</p></div>"
+       },
+       "identifier": [
+        {
+         "system": "https://example.org/fhir/streamfhir/sid/site",
+         "value": "S-ALDER-DN"
+        }
+       ],
+       "status": "active",
+       "name": "Alder Brook - below storm outfall",
+       "description": "Synthetic demo site: 50 m below a storm-water outfall, next to a playground.",
+       "mode": "instance",
+       "physicalType": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+          "code": "area",
+          "display": "Area"
+         }
+        ]
+       },
+       "position": {
+        "longitude": -8.418,
+        "latitude": 40.2105
+       }
+      },
+      "request": {
+       "method": "POST",
+       "url": "Location",
+       "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-ALDER-DN"
+      }
+     },
+     {
+      "fullUrl": "urn:uuid:29a2cf4d-02b6-4534-8650-a7f6d42fc9f0",
+      "resource": {
+       "resourceType": "Device",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
+       },
+       "identifier": [
+        {
+         "system": "https://example.org/fhir/streamfhir/sid/device",
+         "value": "streamfhir-rule-engine"
+        }
+       ],
+       "deviceName": [
+        {
+         "name": "StreamFHIR mapper and rule engine",
+         "type": "user-friendly-name"
+        }
+       ],
+       "version": [
+        {
+         "value": "0.7.0"
+        }
+       ]
+      },
+      "request": {
+       "method": "POST",
+       "url": "Device",
+       "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+      }
+     },
+     {
+      "fullUrl": "urn:uuid:9527e3bf-8cef-4daa-8587-cf231454aaf1",
+      "resource": {
+       "resourceType": "Flag",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ],
+        "profile": [
+         "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag"
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits &gt;= 7 days apart clear a hazard.</p></div>"
+       },
+       "extension": [
+        {
+         "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
+         "valueReference": {
+          "identifier": {
+           "system": "https://example.org/fhir/streamfhir/sid/record",
+           "value": "SYN-003"
+          },
+          "type": "Observation",
+          "display": "Citizen assessment SYN-003"
+         }
+        },
+        {
+         "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
+         "valueReference": {
+          "identifier": {
+           "system": "https://example.org/fhir/streamfhir/sid/record",
+           "value": "SYN-004"
+          },
+          "type": "Observation",
+          "display": "Citizen assessment SYN-004"
+         }
+        },
+        {
+         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+         "valueCodeableConcept": {
+          "coding": [
+           {
+            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+            "code": "R4",
+            "display": "Sewage signal"
+           }
+          ]
+         }
+        },
+        {
+         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+         "valueCodeableConcept": {
+          "coding": [
+           {
+            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+            "code": "R6",
+            "display": "People in contact with affected water"
+           }
+          ]
+         }
+        }
+       ],
+       "identifier": [
+        {
+         "system": "https://example.org/fhir/streamfhir/sid/flag",
+         "value": "S-ALDER-DN"
+        }
+       ],
+       "status": "active",
+       "category": [
+        {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/flag-category",
+           "code": "safety",
+           "display": "Safety"
+          }
+         ]
+        }
+       ],
+       "code": {
+        "coding": [
+         {
+          "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-level",
+          "code": "high",
+          "display": "High health hazard"
+         }
+        ],
+        "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
+       },
+       "subject": {
+        "reference": "urn:uuid:ca575c21-8329-4f1a-912a-871a5c9e29ce",
+        "display": "Alder Brook - below storm outfall"
+       },
+       "period": {
+        "start": "2026-09-20T16:30:00+01:00",
+        "end": "2026-10-09T15:50:00+01:00"
+       },
+       "author": {
+        "reference": "urn:uuid:29a2cf4d-02b6-4534-8650-a7f6d42fc9f0",
+        "display": "StreamFHIR 0.7.0"
+       }
+      },
+      "request": {
+       "method": "PUT",
+       "url": "Flag?identifier=https://example.org/fhir/streamfhir/sid/flag|S-ALDER-DN"
+      }
+     },
+     {
+      "fullUrl": "urn:uuid:a6041341-bf5c-4fa1-8aca-40c9c99911d1",
+      "resource": {
+       "resourceType": "Provenance",
+       "id": "streamfhir-prov-flag-S-ALDER-DN",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Alder Brook - below storm outfall computed by StreamFHIR 0.7.0 from 2 citizen records</p></div>"
+       },
+       "target": [
+        {
+         "reference": "urn:uuid:9527e3bf-8cef-4daa-8587-cf231454aaf1"
+        }
+       ],
+       "recorded": "2026-09-29T14:32:48+00:00",
+       "activity": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code": "CREATE",
+          "display": "create"
+         }
+        ]
+       },
+       "agent": [
+        {
+         "type": {
+          "coding": [
+           {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "assembler",
+            "display": "Assembler"
+           }
+          ]
+         },
+         "who": {
+          "reference": "urn:uuid:29a2cf4d-02b6-4534-8650-a7f6d42fc9f0",
+          "display": "StreamFHIR 0.7.0"
+         }
+        }
+       ],
+       "entity": [
+        {
+         "role": "source",
+         "what": {
+          "identifier": {
+           "system": "https://example.org/fhir/streamfhir/sid/record",
+           "value": "SYN-003"
+          },
+          "type": "Observation"
+         }
+        },
+        {
+         "role": "source",
+         "what": {
+          "identifier": {
+           "system": "https://example.org/fhir/streamfhir/sid/record",
+           "value": "SYN-004"
+          },
+          "type": "Observation"
+         }
+        }
+       ]
+      },
+      "request": {
+       "method": "PUT",
+       "url": "Provenance/streamfhir-prov-flag-S-ALDER-DN"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "site": {
+    "site_id": "S-MILL",
+    "name": "Mill Pond inlet",
+    "lat": 40.1985,
+    "lon": -8.412,
+    "water_body": "Mill Pond (fictional)",
+    "description": "Synthetic demo site: shallow pond inlet used by dog walkers.",
+    "flow": "still",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "S-MILL",
+    "level": "verify",
+    "hazard_points": 11,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 1,
+     "animal": 8,
+     "human": 2
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment (screening)",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "SYN-006",
+       "SYN-008"
+      ],
+      "observers": [
+       "obs-05"
+      ],
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2026-09-18T11:20:00+01:00",
+      "last_seen": "2026-09-18T11:20:00+01:00",
+      "trusted_record_ids": [
+       "SYN-006"
+      ]
+     },
+     {
+      "rule_id": "R3",
+      "title": "Possible cyanobacterial bloom",
+      "kind": "hazard",
+      "points": {
+       "animal": 3,
+       "human": 2
+      },
+      "record_ids": [
+       "SYN-006",
+       "SYN-007",
+       "SYN-008"
+      ],
+      "observers": [
+       "obs-05",
+       "obs-06"
+      ],
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
+      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+      "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+      "first_seen": "2026-09-18T11:20:00+01:00",
+      "last_seen": "2026-09-18T11:20:00+01:00",
+      "trusted_record_ids": [
+       "SYN-006"
+      ]
+     },
+     {
+      "rule_id": "R5",
+      "title": "Dead fish",
+      "kind": "hazard",
+      "points": {
+       "animal": 3,
+       "environment": 1
+      },
+      "record_ids": [
+       "SYN-007"
+      ],
+      "observers": [
+       "obs-06"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
+      "advice": "Do not touch the fish; note how many and report to the environment authority.",
+      "first_seen": "2026-09-22T18:40:00+01:00",
+      "last_seen": "2026-09-22T18:40:00+01:00",
+      "trusted_record_ids": []
+     },
+     {
+      "rule_id": "R7",
+      "title": "Pets or livestock in contact with affected water",
+      "kind": "hazard",
+      "points": {
+       "animal": 2
+      },
+      "record_ids": [
+       "SYN-006",
+       "SYN-007",
+       "SYN-008"
+      ],
+      "observers": [
+       "obs-05",
+       "obs-06"
+      ],
+      "corroborated": false,
+      "corroboration": "exposure seen, but the hazard it depends on is not yet corroborated",
+      "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+      "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+      "first_seen": "2026-09-18T11:20:00+01:00",
+      "last_seen": "2026-09-18T11:20:00+01:00",
+      "trusted_record_ids": [
+       "SYN-006"
+      ]
+     }
+    ],
+    "record_ids": [
+     "SYN-006",
+     "SYN-007",
+     "SYN-008"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2026-09-15T12:00:00+01:00",
+    "window_end": "2026-09-29T12:00:00+01:00",
+    "decisions": {
+     "SYN-002": "reject"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "SYN-006",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-18T11:20:00+01:00",
+     "has_photo": true,
+     "values": {
+      "bank-stability": 6,
+      "riparian-zone": 4,
+      "instream-habitat": 5,
+      "water-temperature": 24.5,
+      "ph": 8.6,
+      "nitrate": 12,
+      "phosphate": 0.8,
+      "transparency": 30,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "odour": "earthy",
+      "litter": "some",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": true,
+      "nitrate-basis": "as-NO3",
+      "bloom-check": "floats-or-paints"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [],
+     "issues": []
+    },
+    {
+     "record_id": "SYN-007",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-22T18:40:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 25.1,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "dead-fish": true,
+      "animal-contact": true
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "values.surface",
+       "code": "photo-needed",
+       "message": "Surface film = algal-scum is an important claim but no photo was attached. A reviewer should confirm it."
+      },
+      {
+       "severity": "warning",
+       "field": "values.dead-fish",
+       "code": "photo-needed",
+       "message": "Dead fish seen = yes is an important claim but no photo was attached. A reviewer should confirm it."
+      }
+     ]
+    },
+    {
+     "record_id": "SYN-008",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-27T10:05:00+01:00",
+     "has_photo": true,
+     "values": {
+      "bank-stability": 5,
+      "riparian-zone": 4,
+      "instream-habitat": 5,
+      "water-temperature": 26.3,
+      "ph": 8.9,
+      "phosphate": 0.9,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "odour": "earthy",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": true,
+      "bloom-check": "not-done"
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "lat/lon",
+       "code": "location-mismatch",
+       "message": "The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "S-WILLOW",
+    "name": "Willow Creek - allotment gardens",
+    "lat": 40.225,
+    "lon": -8.39,
+    "water_body": "Willow Creek (fictional)",
+    "description": "Synthetic demo site: creek running past allotment gardens.",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "S-WILLOW",
+    "level": "verify",
+    "hazard_points": 7,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 5,
+     "human": 2
+    },
+    "condition_points": 3,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment (screening)",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "SYN-009",
+       "SYN-010"
+      ],
+      "observers": [
+       "obs-02",
+       "obs-07"
+      ],
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2026-09-17T09:00:00+01:00",
+      "last_seen": "2026-09-17T09:00:00+01:00",
+      "trusted_record_ids": [
+       "SYN-009"
+      ]
+     },
+     {
+      "rule_id": "R3",
+      "title": "Possible cyanobacterial bloom",
+      "kind": "hazard",
+      "points": {
+       "animal": 3,
+       "human": 2
+      },
+      "record_ids": [
+       "SYN-015"
+      ],
+      "observers": [
+       "obs-03"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+      "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+      "first_seen": "2026-09-27T18:20:00+01:00",
+      "last_seen": "2026-09-27T18:20:00+01:00",
+      "trusted_record_ids": []
+     },
+     {
+      "rule_id": "R7",
+      "title": "Pets or livestock in contact with affected water",
+      "kind": "hazard",
+      "points": {
+       "animal": 2
+      },
+      "record_ids": [
+       "SYN-015"
+      ],
+      "observers": [
+       "obs-03"
+      ],
+      "corroborated": false,
+      "corroboration": "exposure seen, but the hazard it depends on is not yet corroborated",
+      "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+      "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+      "first_seen": "2026-09-27T18:20:00+01:00",
+      "last_seen": "2026-09-27T18:20:00+01:00",
+      "trusted_record_ids": []
+     },
+     {
+      "rule_id": "R9",
+      "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
+      "kind": "condition",
+      "points": {
+       "human": 1
+      },
+      "record_ids": [
+       "SYN-009",
+       "SYN-010"
+      ],
+      "observers": [
+       "obs-02",
+       "obs-07"
+      ],
+      "corroborated": false,
+      "corroboration": "photo attached, awaiting a reviewer's photo check",
+      "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+      "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+      "first_seen": "2026-09-17T09:00:00+01:00",
+      "last_seen": "2026-09-17T09:00:00+01:00",
+      "trusted_record_ids": [
+       "SYN-009"
+      ]
+     }
+    ],
+    "record_ids": [
+     "SYN-009",
+     "SYN-010",
+     "SYN-015"
+    ],
+    "excluded_record_ids": [
+     "SYN-011"
+    ],
+    "window_start": "2026-09-15T12:00:00+01:00",
+    "window_end": "2026-09-29T12:00:00+01:00",
+    "decisions": {
+     "SYN-002": "reject"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "SYN-009",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-17T09:00:00+01:00",
+     "has_photo": true,
+     "values": {
+      "channel-condition": 6,
+      "bank-stability": 5,
+      "riparian-zone": 4,
+      "instream-habitat": 6,
+      "water-temperature": 16.8,
+      "ph": 7.2,
+      "nitrate": 12.4,
+      "phosphate": 1.2,
+      "transparency": 40,
+      "water-colour": "brown-turbid",
+      "surface": "none",
+      "odour": "earthy",
+      "litter": "some",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": false,
+      "sensitive-invertebrates": 1,
+      "nitrate-basis": "as-N",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [],
+     "issues": []
+    },
+    {
+     "record_id": "SYN-010",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-23T13:30:00+01:00",
+     "has_photo": true,
+     "values": {
+      "channel-condition": 6,
+      "bank-stability": 6,
+      "riparian-zone": 5,
+      "instream-habitat": 6,
+      "water-temperature": 17.5,
+      "ph": 4.2,
+      "nitrate": 60,
+      "phosphate": 1.0,
+      "water-colour": "brown-turbid",
+      "surface": "foam",
+      "odour": "earthy",
+      "litter": "some",
+      "people-contact": false,
+      "animal-contact": false,
+      "sensitive-invertebrates": 1,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "values.ph",
+       "code": "implausible",
+       "message": "pH 4.2 is unusual for a stream (typical 5.5-9.5). Kept as reported - a reviewer should confirm."
+      }
+     ]
+    },
+    {
+     "record_id": "SYN-011",
+     "status": "blocked",
+     "decision": null,
+     "basis": null,
+     "observed_at": null,
+     "has_photo": false,
+     "values": {},
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "error",
+       "field": "observer",
+       "code": "missing-field",
+       "message": "'observer' is missing. We need it to know who, where and when."
+      }
+     ]
+    },
+    {
+     "record_id": "SYN-015",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-27T18:20:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 22.0,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "bloom-check": "not-done",
+      "odour": "earthy",
+      "people-contact": false,
+      "animal-contact": true
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": false,
+     "photos": [],
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "values.surface",
+       "code": "photo-needed",
+       "message": "Surface film = algal-scum is an important claim but no photo was attached. A reviewer should confirm it."
+      }
+     ]
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "S-OAK",
+    "name": "Oak Stream - restored reach",
+    "lat": 40.204,
+    "lon": -8.395,
+    "water_body": "Oak Stream (fictional)",
+    "description": "Synthetic demo site: recently re-naturalised reach.",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "S-OAK",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "SYN-014"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2026-09-15T12:00:00+01:00",
+    "window_end": "2026-09-29T12:00:00+01:00",
+    "decisions": {
+     "SYN-002": "reject"
+    },
+    "hazard_assessed": true,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "SYN-014",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-21T10:45:00+01:00",
+     "has_photo": true,
+     "values": {
+      "channel-condition": 9,
+      "bank-stability": 8,
+      "riparian-zone": 8,
+      "instream-habitat": 9,
+      "water-temperature": 14.1,
+      "ph": 7.3,
+      "nitrate": 4,
+      "phosphate": 0.05,
+      "transparency": 120,
+      "water-colour": "clear",
+      "surface": "none",
+      "odour": "none",
+      "litter": "none",
+      "dead-fish": false,
+      "people-contact": true,
+      "animal-contact": true,
+      "sensitive-invertebrates": 3,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 3
+     },
+     "below_limit": {},
+     "observer_name": "",
+     "photo_pending": true,
+     "photos": [],
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  }
+ ]
+}

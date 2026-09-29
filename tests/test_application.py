@@ -150,3 +150,18 @@ def test_ac37_monitoring_dataset_is_evaluated_at_each_sites_latest_visit():
     assert {"R2", "R9"} <= rules(per_site)
     # a nutrient (condition) rule alone says nothing about health hazards
     assert [o.risk.hazard_assessed for o in per_site if o.site.site_id == "S-TEST"] == [False]
+
+
+def test_ac49_a_trusted_report_whose_photo_awaits_a_check_can_be_confirmed_when_photos_need_review():
+    """AC-49: with photo_needs_review, a reviewer can confirm (photo checked) or reject an ok report that has a photo."""
+    import pytest
+    rec = make_record(record_id="P-1", values={"surface": "algal-scum", "animal-contact": True})
+    plain = StreamFhirService(FakeSites(), FakeRecords([rec]), FhirMapper(), SpyServer(), FixedClock())
+    with pytest.raises(ValueError):
+        plain.review("P-1", "confirm", "photo-checked")
+    gated = StreamFhirService(FakeSites(), FakeRecords([rec]), FhirMapper(), SpyServer(), FixedClock(),
+                              photo_corroborates=False)
+    before = [o.risk.level for o in gated.site_overview() if o.site.site_id == "S-TEST"]
+    gated.review("P-1", "confirm", "photo-checked")
+    after = [o.risk.level for o in gated.site_overview() if o.site.site_id == "S-TEST"]
+    assert before == ["verify"] and after == ["high"]

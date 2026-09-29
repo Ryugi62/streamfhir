@@ -8,7 +8,7 @@ from typing import Any, Dict, List, Optional
 
 from ..domain.risk import CONFIRM, REJECT, SiteRisk, evaluate_site
 from ..domain.sites import Site
-from ..domain.validation import REVIEW, ValidationReport, validate_record
+from ..domain.validation import OK, REVIEW, ValidationReport, validate_record
 from .ports import Clock, FhirServer, FhirTranslator, RecordRepository, ReviewStore, SiteRepository
 
 
@@ -142,7 +142,9 @@ class StreamFhirService:
         if raw is None:
             raise KeyError(record_id)
         report = validate_record(raw, sites, self.clock.now())
-        if report.status != REVIEW:
-            raise ValueError("only records that need review can be confirmed or rejected")
+        photo_pending = (report.status == OK and report.assessment is not None and bool(report.assessment.photos)
+                         and not self.photo_corroborates)
+        if report.status != REVIEW and not photo_pending:
+            raise ValueError("only records that need review (or whose photo awaits a check) can be confirmed or rejected")
         self.reviews.set(record_id, decision, basis)
         return {"record_id": record_id, "decision": decision, "basis": basis}

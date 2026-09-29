@@ -701,6 +701,8 @@ def concept_map() -> Dict[str, Any]:
             if code == "nitrate":
                 t["dependsOn"] = [{"property": CS_INDICATOR + "#nitrate-basis", "system": CS_ANSWER, "value": "as-NO3"}]
                 t["comment"] = "Only readings expressed as NO3; readings as N are not mapped (1 mg/L as N = 4.43 mg/L as NO3)."
+            if code == "phosphate":
+                t["dependsOn"] = [{"property": CS_INDICATOR + "#phosphate-basis", "system": CS_ANSWER, "value": "as-PO4"}]
             if code == "phosphate" and target_index == 0:
                 t["equivalence"] = "inexact"
                 t["comment"] = ("Same substance, different basis: EEA Waterbase reports this determinand as mg{P}/L, StreamFHIR "

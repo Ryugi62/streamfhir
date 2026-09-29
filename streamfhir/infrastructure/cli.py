@@ -47,7 +47,9 @@ def build_static(svc, out):
     # precomputed single reviewer decisions, so Confirm/Reject also work in the static demo
     os.makedirs(os.path.join(out, "api", "review"), exist_ok=True)
     for rep in [svc.check_record(r).report for r in svc.records.all()]:
-        if rep.status != "review":
+        pending = (rep.status == "ok" and rep.assessment is not None and rep.assessment.photos
+                   and (dataset or {}).get("photo_needs_review"))
+        if rep.status != "review" and not pending:
             continue
         for decision, basis in (("confirm", "site-visit"), ("confirm", "photo-checked"), ("confirm", "lab-result"),
                                 ("reject", None)):

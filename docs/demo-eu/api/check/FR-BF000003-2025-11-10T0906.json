@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:a98cd0b2-e8b5-46db-a8da-5e217307a9fd",
+    "fullUrl": "urn:uuid:9086dc20-3176-481d-aa94-356dcafa54e2",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:181ec6db-94b2-43a4-b737-d66a08d04dd7",
+    "fullUrl": "urn:uuid:2428d9f4-430a-4c06-9dff-1b374a0ddf7c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7111da77-571d-43b3-a96d-e9441b6cf756",
+    "fullUrl": "urn:uuid:e104ba98-4df4-4678-87e6-d70adeeb7948",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:a98cd0b2-e8b5-46db-a8da-5e217307a9fd",
+      "reference": "urn:uuid:9086dc20-3176-481d-aa94-356dcafa54e2",
       "display": "Toulouse area · CLAIRFONT"
      },
      "effectiveDateTime": "2025-11-10T09:06:00+01:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:1258728b-1488-48ae-ba84-5a7d3db0a6de"
+       "reference": "urn:uuid:163e8b23-542d-47e9-b0e8-93246b5f6550"
       },
       {
-       "reference": "urn:uuid:0e48d4b3-6d33-4e4c-a8d5-ec8b4ae71c1b"
+       "reference": "urn:uuid:591622da-0757-4300-96b5-d10787a1eff0"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1258728b-1488-48ae-ba84-5a7d3db0a6de",
+    "fullUrl": "urn:uuid:163e8b23-542d-47e9-b0e8-93246b5f6550",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:a98cd0b2-e8b5-46db-a8da-5e217307a9fd",
+      "reference": "urn:uuid:9086dc20-3176-481d-aa94-356dcafa54e2",
       "display": "Toulouse area · CLAIRFONT"
      },
      "effectiveDateTime": "2025-11-10T09:06:00+01:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0e48d4b3-6d33-4e4c-a8d5-ec8b4ae71c1b",
+    "fullUrl": "urn:uuid:591622da-0757-4300-96b5-d10787a1eff0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:a98cd0b2-e8b5-46db-a8da-5e217307a9fd",
+      "reference": "urn:uuid:9086dc20-3176-481d-aa94-356dcafa54e2",
       "display": "Toulouse area · CLAIRFONT"
      },
      "effectiveDateTime": "2025-11-10T09:06:00+01:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:743348cd-ac89-49ec-99c7-fea7ab53c06f",
+    "fullUrl": "urn:uuid:acc84ab7-f9ac-480d-a64b-21f5a37e0a44",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000003-2025-11-10T0906",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:7111da77-571d-43b3-a96d-e9441b6cf756"
+       "reference": "urn:uuid:e104ba98-4df4-4678-87e6-d70adeeb7948"
       },
       {
-       "reference": "urn:uuid:1258728b-1488-48ae-ba84-5a7d3db0a6de"
+       "reference": "urn:uuid:163e8b23-542d-47e9-b0e8-93246b5f6550"
       },
       {
-       "reference": "urn:uuid:0e48d4b3-6d33-4e4c-a8d5-ec8b4ae71c1b"
+       "reference": "urn:uuid:591622da-0757-4300-96b5-d10787a1eff0"
       }
      ],
      "occurredDateTime": "2025-11-10T09:06:00+01:00",
-     "recorded": "2026-09-29T14:13:43+00:00",
+     "recorded": "2026-09-29T14:32:48+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:181ec6db-94b2-43a4-b737-d66a08d04dd7",
+        "reference": "urn:uuid:2428d9f4-430a-4c06-9dff-1b374a0ddf7c",
         "display": "StreamFHIR 0.7.0"
        }
       }

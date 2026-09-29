@@ -210,6 +210,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/334/attachments/298"
      ],
@@ -270,6 +271,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/320/attachments/291"
      ],
@@ -329,6 +331,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/335/attachments/299"
      ],
@@ -412,6 +415,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/341/attachments/305"
      ],
@@ -485,6 +489,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/321/attachments/292"
      ],
@@ -545,6 +550,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/319/attachments/290"
      ],
@@ -605,6 +611,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -663,6 +670,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -746,6 +754,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/308/attachments/287"
      ],
@@ -764,7 +773,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:272668f3-afd4-4994-8abb-969758fd3e75",
+      "fullUrl": "urn:uuid:77d4f24a-294f-45f2-ac32-1d04f84b09c5",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -811,7 +820,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:59200eeb-43f9-44ec-9f37-040f4cb30cd4",
+      "fullUrl": "urn:uuid:f7361985-3df1-4c81-9d96-401d7006cfcd",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -852,7 +861,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:4d7d41b0-b3a8-4136-b0ce-2e6f223892eb",
+      "fullUrl": "urn:uuid:0b368488-b4fd-45cc-94dc-7d470985d615",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -925,7 +934,7 @@
         "text": "High health hazard at Toulouse area · Ariège gasline (5 corroborated of 5 hazard points: environment 0 / animal 3 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer). Expires 2023-04-08 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:272668f3-afd4-4994-8abb-969758fd3e75",
+        "reference": "urn:uuid:77d4f24a-294f-45f2-ac32-1d04f84b09c5",
         "display": "Toulouse area · Ariège gasline"
        },
        "period": {
@@ -933,7 +942,7 @@
         "end": "2023-04-08T14:14:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:59200eeb-43f9-44ec-9f37-040f4cb30cd4",
+        "reference": "urn:uuid:f7361985-3df1-4c81-9d96-401d7006cfcd",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -943,7 +952,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e53f0966-3416-43c8-b1de-09c4db59b0b6",
+      "fullUrl": "urn:uuid:1075e9dc-b851-456e-9a4e-028b67ec7459",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-FWW-43.4806-1.4110",
@@ -962,10 +971,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:4d7d41b0-b3a8-4136-b0ce-2e6f223892eb"
+         "reference": "urn:uuid:0b368488-b4fd-45cc-94dc-7d470985d615"
         }
        ],
-       "recorded": "2026-09-29T14:13:43+00:00",
+       "recorded": "2026-09-29T14:32:49+00:00",
        "activity": {
         "coding": [
          {
@@ -987,7 +996,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:59200eeb-43f9-44ec-9f37-040f4cb30cd4",
+          "reference": "urn:uuid:f7361985-3df1-4c81-9d96-401d7006cfcd",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -1063,6 +1072,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1121,6 +1131,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1178,6 +1189,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/309/attachments/288"
      ],
@@ -1245,6 +1257,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/306/attachments/285"
      ],
@@ -1305,6 +1318,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -1374,6 +1388,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1432,6 +1447,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1490,6 +1506,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1546,6 +1563,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1602,6 +1620,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1660,6 +1679,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1717,6 +1737,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1774,6 +1795,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/307/attachments/286"
      ],
@@ -1834,6 +1856,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1892,6 +1915,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     }
@@ -1950,6 +1974,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [
       "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/305/attachments/284"
      ],

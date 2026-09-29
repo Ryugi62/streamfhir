@@ -212,6 +212,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [],
      "issues": []
     },
@@ -244,6 +245,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [],
      "issues": []
     },
@@ -264,6 +266,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -284,6 +287,7 @@
      "values": {},
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -473,6 +477,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [],
      "issues": []
     },
@@ -499,6 +504,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": []
     },
@@ -512,6 +518,7 @@
      "values": {},
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -528,7 +535,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:6e791233-94f4-40f1-b7df-686c05fccf9b",
+      "fullUrl": "urn:uuid:13d0f2ed-baf6-403a-87c2-c301d180c87e",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -580,7 +587,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:456ad1df-f9e0-4cb4-abe2-03476b546648",
+      "fullUrl": "urn:uuid:46ec5ebe-f456-4a6e-bbfe-9f12d8769103",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -626,7 +633,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:734d9e8a-4484-40b3-9168-d4ab1e3b02a9",
+      "fullUrl": "urn:uuid:28b56259-8f71-4116-89f4-759574b55bd9",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -727,7 +734,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:6e791233-94f4-40f1-b7df-686c05fccf9b",
+        "reference": "urn:uuid:13d0f2ed-baf6-403a-87c2-c301d180c87e",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -735,7 +742,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:456ad1df-f9e0-4cb4-abe2-03476b546648",
+        "reference": "urn:uuid:46ec5ebe-f456-4a6e-bbfe-9f12d8769103",
         "display": "StreamFHIR 0.7.0"
        }
       },
@@ -745,7 +752,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:9c8c0834-c184-401e-9d7b-265025c36168",
+      "fullUrl": "urn:uuid:9718a71a-aa07-48a1-a04e-3f7a1d631a93",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -769,10 +776,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:734d9e8a-4484-40b3-9168-d4ab1e3b02a9"
+         "reference": "urn:uuid:28b56259-8f71-4116-89f4-759574b55bd9"
         }
        ],
-       "recorded": "2026-09-29T14:13:43+00:00",
+       "recorded": "2026-09-29T14:32:48+00:00",
        "activity": {
         "coding": [
          {
@@ -794,7 +801,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:456ad1df-f9e0-4cb4-abe2-03476b546648",
+          "reference": "urn:uuid:46ec5ebe-f456-4a6e-bbfe-9f12d8769103",
           "display": "StreamFHIR 0.7.0"
          }
         }
@@ -997,6 +1004,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [],
      "issues": []
     },
@@ -1016,6 +1024,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -1056,6 +1065,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -1234,6 +1244,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [],
      "issues": []
     },
@@ -1265,6 +1276,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -1285,6 +1297,7 @@
      "values": {},
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -1313,6 +1326,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": false,
      "photos": [],
      "issues": [
       {
@@ -1393,6 +1407,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photo_pending": true,
      "photos": [],
      "issues": []
     }
