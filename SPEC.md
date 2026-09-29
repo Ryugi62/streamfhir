@@ -1,4 +1,4 @@
-# StreamFHIR — SPEC (v0.2, 2026-09-29)
+# StreamFHIR — SPEC (v0.3, 2026-09-29)
 
 ## 0. One line
 StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.
@@ -71,12 +71,20 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 ### v0.2 additions (after mock judging, see win-gate notes)
 - AC-17 Given hazard signals reported only by untrusted (review) or single photo-less reports, When evaluated, Then level is `verify` and no Flag is raised.
 - AC-18 Given a `review` record, When a reviewer confirms it, Then it counts as corroborated (site may become `high`); When rejected, Then it never counts and maps to `entered-in-error`; only `review` records can be decided.
-- AC-19 Given a later trusted visit that checked the same indicators without the signal, Then the earlier signal is cleared.
+- AC-19 (v0.3) Given a hazard, Then it clears only after 2 trusted visits >= 7 days apart that observed ALL the rule's clear keys without the signal; a condition rule clears after 1.
 - AC-20 Given an evaluation date (`as_of`), Then only records in the 14 days up to it count; the demo uses a fixed `demo_as_of`.
 - AC-21 Given nitrate without a basis, Then `review`; Given nitrate as N, Then thresholds use NO3 = N x 4.43; LOINC 9480-5 is only added for readings as NO3.
 - AC-22 Given a jar/stick test pointing to green or filamentous algae, Then the bloom rule (R3) does not fire.
-- AC-23 Given any mapped Bundle, Then every Observation and Media uses conditional create on its record identifier and Provenance uses PUT with a deterministic id.
+- AC-23 Given any mapped Bundle, Then every Observation and Media is a conditional update (PUT by record identifier, no '#' in URLs) and Provenance uses PUT with a deterministic id. (v0.3: was conditional create)
 - AC-24 Given a `high` site, Then the Flag links its trusted evidence via `flag-detail`, has `period.start`/`period.end`, its own Provenance, and is written by conditional update on the site identifier; a stand-down Bundle sets the same Flag `inactive`.
+
+### v0.3 additions (after round-2 judging)
+- AC-25 Given a reviewer confirmation without a basis (site-visit / photo-checked / lab-result), Then it is refused; the basis is recorded in Provenance.
+- AC-26 Given a still-water site, Then stream methods R1 and R10 do not fire.
+- AC-27 Given a record entered now from the form, Then it is stamped with the service clock (`stamp_now`), not the device clock.
+- AC-28 Given stand-down, Then an inactive Flag is only produced for sites whose Flag is active on the server, keeping its `period.start`.
+- AC-29 Given a partial later visit (not all clear keys observed), Then it does not clear a signal.
+- AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)
 ```
@@ -102,4 +110,5 @@ FHIR is treated as an external format, so the mapper lives in `adapters/`; the d
 
 ## 10. Change log
 - v0.1 2026-09-29 first version.
+- v0.3 2026-09-29 after round-2 judging: conditional update for Observation/Media (review propagates), confirm basis, 2-visit clearing, still-water sites, safe stand-down, category slicing, stamp_now, static review replay.
 - v0.2 2026-09-29 after 3 mock judges: hazard vs ecological condition split, corroboration from trusted reports only, reviewer confirm/reject, as-of window + clearing, nitrate basis, bloom jar/stick test, invertebrate sampling effort, idempotent FHIR writes, traceable/expiring Flag, 2 profiles, CapabilityStatement, Subscription example, citizen step form, map, static demo.

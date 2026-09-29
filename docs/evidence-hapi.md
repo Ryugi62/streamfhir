@@ -27,3 +27,14 @@ Only synthetic demo data was sent. All resources carry `meta.security = v3-ActRe
 | 9. Idempotency: send SYN-001 twice | `send SYN-001 --live` ×2 | both HTTP 200, 24 entries; same `Location/47839`, `Media/47820`, `Observation/47821…`; only `Provenance/streamfhir-prov-SYN-001` got a new version (`_history/2`). `GET Observation?identifier=…/sid/record\|SYN-001#ph` → **1** copy. Note: conditional create keeps the first stored copy, so resources first sent by v0.1 keep their v0.1 content. |
 | 10. Flags with stand-down | `send SYN-003 --live --flags --stand-down` | active: `Flag/49203` (S-ALDER-DN), `Flag/49205` (S-MILL); inactive: `Flag/49201` (S-ALDER-UP), `Flag/49209` (S-WILLOW), `Flag/49212` (S-OAK); one Provenance per Flag (`Provenance/streamfhir-prov-flag-<site>`) |
 | 11. Re-send Flags | `send SYN-006 --live --flags` | `Flag?identifier=…/sid/flag\|S-MILL` → **1** match, `Flag/49205` updated in place to version 2 (period 2026-09-18 → 2026-10-02, `flag-detail` → SYN-006) |
+
+## v0.3 re-run (2026-09-29, ~15:20–15:25 KST)
+Identifiers changed from `record#code` to `record.code` (no `#` in request URLs), and Observation/Media are now conditional updates.
+
+| Step | Command | Result |
+|---|---|---|
+| 12. Publish v0.3 conformance (category slicing, contact) | `publish-conformance --live` | HTTP 200, 7 resources updated (e.g. `StructureDefinition/streamfhir-stream-indicator-observation/_history/2`) |
+| 13. Profile checks | `validate-remote SYN-001 --with-profile` + ad-hoc | indicator: `No issues detected`; with an extra partner category: 0 errors (open slice); without the survey category: error `Slice 'Observation.category:survey': a matching slice is required, but not found`; Location with `physicalType=area`: `No issues detected` |
+| 14. Review decisions reach the server | `send SYN-010 --live`, then `send SYN-010 --live --review reject`, then `--review confirm --basis lab-result` | `Observation?identifier=…\|SYN-010.ph` → `Observation/49361` `preliminary` (v1) → `entered-in-error` (v2) → `final` (v3) |
+| 15. Idempotency with conditional update | `send SYN-001 --live` ×2 | both HTTP 200, 24 entries, same ids; `SYN-001.ph` → **1** copy (`Observation/49380`, still version 1: an unchanged re-send creates no new version) |
+| 16. Flag lifecycle | `send SYN-015 --live --review confirm --basis site-visit --flags`, then (new process, no decision) `send SYN-001 --live --flags --stand-down` | Willow `Flag/49209`: `active` v2 (period 2026-09-27 → 2026-10-11) → `inactive` v3, original start kept; S-OAK `Flag/49212` (inactive since the v0.2 run) untouched — stand-down no longer creates Flags for calm sites |

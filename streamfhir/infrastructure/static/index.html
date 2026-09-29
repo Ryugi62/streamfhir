@@ -145,7 +145,7 @@ function map(list){
   return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} demo sites coloured by hazard level">
     ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${x.risk.level==="high"?11:8}" fill="${x.risk.level==="verify" ? "none" : col[x.risk.level]}" stroke="${col[x.risk.level]}" stroke-width="${x.risk.level==="verify" ? 4 : 0}" opacity=".9"><title>${esc(x.site.name)}: ${LEVEL[x.risk.level]}</title></circle>
       <text x="${(X(x.site.lon) + (X(x.site.lon) > W/2 ? -15 : 15)).toFixed(1)}" y="${(Y(x.site.lat)+5).toFixed(1)}" text-anchor="${X(x.site.lon) > W/2 ? "end" : "start"}">${esc(x.site.name.split(" - ").map((t, i) => i ? t.split(" ")[0] : t).join(" · "))}</text></a>`).join("")}
-  </svg><figcaption class="help">● High (large) · ○ Needs verification (ring) · ● Moderate · ● Low. Schematic positions of the synthetic sites, no base map. Tap a dot to open the site.</figcaption></figure>`;
+  </svg><figcaption class="help"><span style="color:var(--no)">●</span> High (large) · <span style="color:var(--warn)">○</span> Needs verification (ring) · <span style="color:var(--warn)">●</span> Moderate · <span style="color:var(--ok)">●</span> Low. Schematic positions of the synthetic sites, no base map. Tap a dot to open the site.</figcaption></figure>`;
 }
 
 async function sites(){

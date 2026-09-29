@@ -429,7 +429,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:0effc6c5-a331-4569-9244-54a7c790eb12",
+      "fullUrl": "urn:uuid:a4914943-3e67-4bb5-a688-edda6e0ab225",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -481,7 +481,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a413f6af-1001-4452-9f79-313466c4961a",
+      "fullUrl": "urn:uuid:98acd949-6eeb-4393-9006-25100e0a6614",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -527,7 +527,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:eb14435a-fdc8-4ad6-ae0d-8312ced4768f",
+      "fullUrl": "urn:uuid:0ca7da90-78c5-4a47-b941-192352bff0a4",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -601,7 +601,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:0effc6c5-a331-4569-9244-54a7c790eb12",
+        "reference": "urn:uuid:a4914943-3e67-4bb5-a688-edda6e0ab225",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -609,7 +609,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:a413f6af-1001-4452-9f79-313466c4961a",
+        "reference": "urn:uuid:98acd949-6eeb-4393-9006-25100e0a6614",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -619,7 +619,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a9bedaac-a333-4725-89b8-04918a0a1584",
+      "fullUrl": "urn:uuid:9ca8f4e1-bb15-4f3c-8a52-370ffe995036",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -643,10 +643,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:eb14435a-fdc8-4ad6-ae0d-8312ced4768f"
+         "reference": "urn:uuid:0ca7da90-78c5-4a47-b941-192352bff0a4"
         }
        ],
-       "recorded": "2026-09-29T06:25:16+00:00",
+       "recorded": "2026-09-29T06:27:42+00:00",
        "activity": {
         "coding": [
          {
@@ -668,7 +668,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:a413f6af-1001-4452-9f79-313466c4961a",
+          "reference": "urn:uuid:98acd949-6eeb-4393-9006-25100e0a6614",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -891,7 +891,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:ac0bc2d3-ebbf-471a-88c4-71e5a235f25b",
+      "fullUrl": "urn:uuid:2cdc6920-67c7-4390-b801-8dce2813ffb1",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -943,7 +943,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:43818fdd-665a-49da-8f44-4844075166d6",
+      "fullUrl": "urn:uuid:15b0a5ca-584c-4598-b754-a369847842ad",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -989,7 +989,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:c798e090-3bbc-43c6-b79c-8bd0cdbf9bef",
+      "fullUrl": "urn:uuid:92f34c27-0a75-462a-adda-5dc53ce586e0",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1052,7 +1052,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:ac0bc2d3-ebbf-471a-88c4-71e5a235f25b",
+        "reference": "urn:uuid:2cdc6920-67c7-4390-b801-8dce2813ffb1",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1060,7 +1060,7 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:43818fdd-665a-49da-8f44-4844075166d6",
+        "reference": "urn:uuid:15b0a5ca-584c-4598-b754-a369847842ad",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1070,7 +1070,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:30bdecdc-e911-4ae7-857c-6b4bf5325900",
+      "fullUrl": "urn:uuid:55c7f37c-ba57-4cfd-a48b-873c866f40b0",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1094,10 +1094,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:c798e090-3bbc-43c6-b79c-8bd0cdbf9bef"
+         "reference": "urn:uuid:92f34c27-0a75-462a-adda-5dc53ce586e0"
         }
        ],
-       "recorded": "2026-09-29T06:25:16+00:00",
+       "recorded": "2026-09-29T06:27:42+00:00",
        "activity": {
         "coding": [
          {
@@ -1119,7 +1119,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:43818fdd-665a-49da-8f44-4844075166d6",
+          "reference": "urn:uuid:15b0a5ca-584c-4598-b754-a369847842ad",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -1341,7 +1341,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:e982cf94-dc50-4a14-a9d6-7339d4cac37f",
+      "fullUrl": "urn:uuid:418ac780-c01f-483e-9e25-e844c6c87fdd",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -1393,7 +1393,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a64e03d6-dabe-4e23-b0fd-5eebf4375862",
+      "fullUrl": "urn:uuid:03886b1b-5e06-4ff5-88dc-3ecc4170e2cd",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1439,7 +1439,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:6c3d9d1f-89eb-4a32-ad88-b4e3d82f6cbf",
+      "fullUrl": "urn:uuid:da5ff0a0-dedd-4c2f-9b3a-a7f5585233cd",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1502,7 +1502,7 @@
         "text": "High health hazard at Willow Creek - allotment gardens (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-11 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:e982cf94-dc50-4a14-a9d6-7339d4cac37f",
+        "reference": "urn:uuid:418ac780-c01f-483e-9e25-e844c6c87fdd",
         "display": "Willow Creek - allotment gardens"
        },
        "period": {
@@ -1510,7 +1510,7 @@
         "end": "2026-10-11T18:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:a64e03d6-dabe-4e23-b0fd-5eebf4375862",
+        "reference": "urn:uuid:03886b1b-5e06-4ff5-88dc-3ecc4170e2cd",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1520,7 +1520,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:6f1757f4-2400-4920-85d6-9728591c88c2",
+      "fullUrl": "urn:uuid:699ed582-a072-4651-a77d-8446a1a5f120",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-WILLOW",
@@ -1544,10 +1544,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:6c3d9d1f-89eb-4a32-ad88-b4e3d82f6cbf"
+         "reference": "urn:uuid:da5ff0a0-dedd-4c2f-9b3a-a7f5585233cd"
         }
        ],
-       "recorded": "2026-09-29T06:25:16+00:00",
+       "recorded": "2026-09-29T06:27:42+00:00",
        "activity": {
         "coding": [
          {
@@ -1569,7 +1569,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:a64e03d6-dabe-4e23-b0fd-5eebf4375862",
+          "reference": "urn:uuid:03886b1b-5e06-4ff5-88dc-3ecc4170e2cd",
           "display": "StreamFHIR 0.3.0"
          }
         }
