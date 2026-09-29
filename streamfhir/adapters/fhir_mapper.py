@@ -18,7 +18,7 @@ from ..domain.risk import CONFIRM, HAZARD, HIGH, LOW, MODERATE, REJECT, RULES, V
 from ..domain.sites import Site
 from ..domain.validation import REVIEW, ValidationReport
 
-VERSION = "0.5.1"
+VERSION = "0.7.0"
 DATE = "2026-09-29"
 BASE = "https://example.org/fhir/streamfhir"   # example canonical - replace when published
 CS_INDICATOR = BASE + "/CodeSystem/stream-indicator"
@@ -83,6 +83,7 @@ LEVEL_DEFINITION = {
     LOW: "Hazard points 0-1 in the 14-day window."}
 PHOTO_EVIDENCE = ("water-colour", "surface", "dead-fish", "bloom-check")
 DEVICE_ID = "streamfhir-rule-engine"
+NITRATE_UNITS = {"as-NO3": ("mg/L as NO3", "mg{NO3}/L"), "as-N": ("mg/L as N", "mg{N}/L")}   # basis stated on the value itself
 NITRATE_LOINC = {"system": LOINC, "code": "9480-5", "display": "Nitrate [Mass/volume] in Water"}
 
 
@@ -284,6 +285,9 @@ class FhirMapper:
                 obs["valueQuantity"] = dict(self._value(code, value["value"])["valueQuantity"], comparator=value["comparator"])
             else:
                 obs.update(self._value(code, value))
+            if code == "nitrate" and a.values.get("nitrate-basis") in NITRATE_UNITS:
+                display, ucum = NITRATE_UNITS[a.values["nitrate-basis"]]
+                obs["valueQuantity"].update(unit=display, code=ucum)
             if notes:
                 obs["note"] = [{"text": t} for t in notes]
             if media_refs and code in PHOTO_EVIDENCE:
@@ -359,11 +363,13 @@ class FhirMapper:
             start = min(f.first_seen for f in hazards if f.corroborated)
             last = max(f.last_seen for f in hazards if f.corroborated)
             period = {"start": _iso(start), "end": _iso(last + timedelta(days=14))}
+            expired = last + timedelta(days=14) < self._now()
             text = "%s at %s (%d corroborated of %d hazard points: %s). Rules: %s. Expires %s unless re-confirmed; expiry means " \
                    "no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard." % (
                 LEVEL_DISPLAY[risk.level], site.name, risk.confirmed_hazard_points, risk.hazard_points, lanes, rules,
                 period["end"][:10])
         else:
+            expired = False
             period = {"end": _iso(risk.window_end)}
             if previous_start:
                 period = {"start": previous_start, "end": _iso(risk.window_end)}
@@ -382,7 +388,7 @@ class FhirMapper:
                     {"system": CS_RULE, "code": f.rule_id, "display": f.title}]}}
                 for f in hazards if active and f.corroborated],
             "identifier": [{"system": SID_FLAG, "value": site.site_id}],
-            "status": "active" if active else "inactive",
+            "status": "active" if active and not expired else "inactive",
             "category": [{"coding": [{"system": FLAG_CATEGORY, "code": "safety", "display": "Safety"}]}],
             "code": {"coding": [{"system": CS_RISK, "code": risk.level, "display": LEVEL_DISPLAY[risk.level]}],
                      "text": text},
@@ -390,6 +396,8 @@ class FhirMapper:
             "period": period,
             "author": {"reference": dev["fullUrl"], "display": "StreamFHIR %s" % VERSION},
         }
+        if expired:
+            flag["text"] = narrative("EXPIRED on %s (no trusted report since): %s" % (period["end"][:10], text))
         if not flag["extension"]:
             del flag["extension"]
         prov_id = fhir_id("streamfhir-prov-flag-" + site.site_id)

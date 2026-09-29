@@ -1,4 +1,4 @@
-# StreamFHIR — SPEC (v0.5.1, 2026-09-29)
+# StreamFHIR — SPEC (v0.7, 2026-09-29)
 
 ## 0. One line
 StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.
@@ -99,8 +99,9 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-42 Given a trusted agency record, Then its condition rules count as agency results, not as unverified reports.
 - AC-43 Given a site where no hazard input was observed, Then the API level is `not-assessed`, never `low`.
 - AC-44 Given `interop-demo`, Then a real agency reading and a synthetic (HTEST) citizen reading at the same station carry the same EEA nitrate code.
-- AC-45 Given FreshWater Watch (Earthwatch) volunteer records, Then only fields with a matching meaning are scored (blue-green scum, oily sheen, foam, colour, litter, animal access, swimming, photo), other colours become "other", kit bands stay notes, and a photo-backed scum report with animal access raises a corroborated Flag.
+- AC-45 Given FreshWater Watch (Earthwatch) volunteer records, Then only fields with a matching meaning are scored (blue-green scum, oily sheen, foam, colour, litter, animal access, swimming, photo), other colours become "other", kit bands stay notes, implausible scum ticks, slurry and discharging outfalls go to a person, animal access stays a note, and for real citizen data a photo counts only after a reviewer's check.
 - AC-46 Given the Ghent (VMM) and Benevento (ARPAC) open exports, Then the same record shape results: nitrate keeps its N basis, phosphorus as P stays a note, values below a limit or `n.d.` are never turned into numbers, and records are laboratory data.
+- AC-47 Given a Flag whose period.end is before build time, Then it is `inactive` (expired); nitrate values state their basis in the UCUM unit (`mg{NO3}/L`, `mg{N}/L`).
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)

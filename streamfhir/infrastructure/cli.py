@@ -282,7 +282,8 @@ def main(argv=None):
         print(json.dumps(stats, indent=1))
     elif cmd == "import-fww":
         from ..adapters.fww_importer import parse_records, parse_sites
-        regions = {"Coimbra": "Coimbra region", "Toulouse": "Toulouse area"}
+        regions = {"Coimbra": "Central Portugal", "Toulouse": "Toulouse area"}
+        zones = {"Coimbra": "Europe/Lisbon", "Toulouse": "Europe/Paris"}
         sites, records, stats = [], [], {}
         for name in sorted(os.listdir(args.dir)):
             if not (name.startswith("fww-") and name.endswith(".json")):
@@ -291,7 +292,7 @@ def main(argv=None):
             with open(os.path.join(args.dir, name), encoding="utf-8") as fh:
                 payload = json.load(fh)
             ss = parse_sites(payload, region=regions.get(city, city))
-            rs, st = parse_records(payload, {x["site_id"]: x for x in ss})
+            rs, st = parse_records(payload, {x["site_id"]: x for x in ss}, tz=zones.get(city, "UTC"))
             sites += ss; records += rs; stats[city] = st
         with open(os.path.join(args.dir, "SOURCE.txt"), encoding="utf-8") as fh:
             source = fh.read().strip().splitlines()
@@ -304,9 +305,12 @@ def main(argv=None):
                         "retrieved": source[-2] if len(source) > 2 else "", "import_stats": stats,
                         "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and Coimbra",
                         "banner": "Real volunteer observations from Earthwatch Europe's FreshWater Watch (open access, no formal licence; "
-                                  "attribution Earthwatch Europe), within about 50 km of Toulouse and Coimbra, 2015-2023. Only fields whose "
-                                  "meaning matches StreamFHIR indicators are scored; kit bands for nitrate and phosphate are kept as notes.",
-                        "evaluate_each_site_at_its_latest_visit": True},
+                                  "attribution Earthwatch Europe) within about 50 km of Toulouse and in central Portugal (Aveiro, Figueira da "
+                                  "Foz; 40-55 km from Coimbra): one volunteer campaign in March 2023 plus a few other visits, single visits "
+                                  "per site. Only fields whose meaning matches StreamFHIR indicators are scored; kit bands are notes. "
+                                  "For real citizen data a photo counts only after a reviewer's photo check. Each site is shown as of its "
+                                  "own visit date.",
+                        "photo_needs_review": True, "evaluate_each_site_at_its_latest_visit": True},
             "demo_as_of": latest + "T23:59:59+00:00", "records": records})
         print(json.dumps(dict(stats, sites=len(sites), records=len(records)), indent=1))
     elif cmd in ("import-ghent", "import-benevento"):

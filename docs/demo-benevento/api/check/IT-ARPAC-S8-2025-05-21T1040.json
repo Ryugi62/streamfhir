@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:13d949b7-9c10-4d7e-b0dc-ad5f02498839",
+    "fullUrl": "urn:uuid:6d58e46e-3bc0-4ed7-bcd9-a061e9713308",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fb85ac19-78e1-4aa0-91ed-36672dd1433a",
+    "fullUrl": "urn:uuid:9d0a8ee1-90d8-448b-be2b-fbeb715d265c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:10b38389-b5e5-4aaf-913f-25b17f3c4e46",
+    "fullUrl": "urn:uuid:8598e502-d3ab-4313-aa5e-0cb6bcf56ffd",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:13d949b7-9c10-4d7e-b0dc-ad5f02498839",
+      "reference": "urn:uuid:6d58e46e-3bc0-4ed7-bcd9-a061e9713308",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-05-21T10:40:00+02:00",
@@ -161,16 +161,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:d2b614d0-9462-449d-89fb-4b392d8e1943"
+       "reference": "urn:uuid:4f650eb6-68c5-4246-ae2d-c1d04189312c"
       },
       {
-       "reference": "urn:uuid:ec44b06a-6b20-4055-98de-d110411f6d9a"
+       "reference": "urn:uuid:b4d651c3-1ac9-4ee3-b10e-02d6b45a956c"
       },
       {
-       "reference": "urn:uuid:51f5e663-f20e-4d72-a3b4-4c3d4c8fe2ca"
+       "reference": "urn:uuid:9a21c6d9-0c39-42fb-982c-6e2880caddcb"
       },
       {
-       "reference": "urn:uuid:1f4e1b6c-1214-4346-ac00-aa05a82b63e2"
+       "reference": "urn:uuid:0c58e0fa-a38f-42ea-8931-8b65532eeead"
       }
      ]
     },
@@ -180,7 +180,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d2b614d0-9462-449d-89fb-4b392d8e1943",
+    "fullUrl": "urn:uuid:4f650eb6-68c5-4246-ae2d-c1d04189312c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +228,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:13d949b7-9c10-4d7e-b0dc-ad5f02498839",
+      "reference": "urn:uuid:6d58e46e-3bc0-4ed7-bcd9-a061e9713308",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-05-21T10:40:00+02:00",
@@ -244,9 +244,9 @@
      ],
      "valueQuantity": {
       "value": 3.0,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      }
     },
     "request": {
@@ -255,7 +255,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ec44b06a-6b20-4055-98de-d110411f6d9a",
+    "fullUrl": "urn:uuid:b4d651c3-1ac9-4ee3-b10e-02d6b45a956c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +303,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:13d949b7-9c10-4d7e-b0dc-ad5f02498839",
+      "reference": "urn:uuid:6d58e46e-3bc0-4ed7-bcd9-a061e9713308",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-05-21T10:40:00+02:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:51f5e663-f20e-4d72-a3b4-4c3d4c8fe2ca",
+    "fullUrl": "urn:uuid:9a21c6d9-0c39-42fb-982c-6e2880caddcb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +387,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:13d949b7-9c10-4d7e-b0dc-ad5f02498839",
+      "reference": "urn:uuid:6d58e46e-3bc0-4ed7-bcd9-a061e9713308",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-05-21T10:40:00+02:00",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1f4e1b6c-1214-4346-ac00-aa05a82b63e2",
+    "fullUrl": "urn:uuid:0c58e0fa-a38f-42ea-8931-8b65532eeead",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +467,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:13d949b7-9c10-4d7e-b0dc-ad5f02498839",
+      "reference": "urn:uuid:6d58e46e-3bc0-4ed7-bcd9-a061e9713308",
       "display": "Benevento · Sabato, Ponte Leproso"
      },
      "effectiveDateTime": "2025-05-21T10:40:00+02:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4fe36ba4-dc19-438d-ad6b-47f46718e31e",
+    "fullUrl": "urn:uuid:c6b2d564-0c34-4dcf-9086-d10794d2b852",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S8-2025-05-21T1040",
@@ -509,27 +509,27 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S8-2025-05-21T1040 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S8 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S8-2025-05-21T1040 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S8 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:10b38389-b5e5-4aaf-913f-25b17f3c4e46"
+       "reference": "urn:uuid:8598e502-d3ab-4313-aa5e-0cb6bcf56ffd"
       },
       {
-       "reference": "urn:uuid:d2b614d0-9462-449d-89fb-4b392d8e1943"
+       "reference": "urn:uuid:4f650eb6-68c5-4246-ae2d-c1d04189312c"
       },
       {
-       "reference": "urn:uuid:ec44b06a-6b20-4055-98de-d110411f6d9a"
+       "reference": "urn:uuid:b4d651c3-1ac9-4ee3-b10e-02d6b45a956c"
       },
       {
-       "reference": "urn:uuid:51f5e663-f20e-4d72-a3b4-4c3d4c8fe2ca"
+       "reference": "urn:uuid:9a21c6d9-0c39-42fb-982c-6e2880caddcb"
       },
       {
-       "reference": "urn:uuid:1f4e1b6c-1214-4346-ac00-aa05a82b63e2"
+       "reference": "urn:uuid:0c58e0fa-a38f-42ea-8931-8b65532eeead"
       }
      ],
      "occurredDateTime": "2025-05-21T10:40:00+02:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -570,8 +570,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:fb85ac19-78e1-4aa0-91ed-36672dd1433a",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:9d0a8ee1-90d8-448b-be2b-fbeb715d265c",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

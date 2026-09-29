@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+    "fullUrl": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1f4ad1d5-c674-42e2-9a06-d074f4b6780b",
+    "fullUrl": "urn:uuid:2b3e08af-9e48-4e26-8cbc-44ab6d045c32",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8b1c60a7-8af4-491a-9888-87d12fe4ae63",
+    "fullUrl": "urn:uuid:7f32d928-57ee-4979-a9d5-ce7524713138",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+      "reference": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
       "display": "Toulouse area · Le Touch en aval de Fonsorbes"
      },
      "effectiveDateTime": "2024-12-16T12:12:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:f5e84cd4-f164-4ec9-a3a3-07738b7b3333"
+       "reference": "urn:uuid:37e0f3ae-475b-44b4-bbde-5e8e4cd3642c"
       },
       {
-       "reference": "urn:uuid:90504eee-ee30-4390-a307-b37a23fae967"
+       "reference": "urn:uuid:185801ad-8249-490f-894a-df0a8e9f3979"
       },
       {
-       "reference": "urn:uuid:9ffaeb66-28be-4a18-bbc3-6ad98416132f"
+       "reference": "urn:uuid:3fa83fb0-2681-4781-a17d-ee2cf2767f38"
       },
       {
-       "reference": "urn:uuid:935541b5-53f9-4e20-be12-89c8436382f0"
+       "reference": "urn:uuid:4a91bf3f-fc0c-4e18-92c9-3c6f1040994a"
       },
       {
-       "reference": "urn:uuid:1b45f3a1-af1b-4087-ba37-bedd00406682"
+       "reference": "urn:uuid:9d713fd6-6927-467e-b648-e743fe25fee4"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f5e84cd4-f164-4ec9-a3a3-07738b7b3333",
+    "fullUrl": "urn:uuid:37e0f3ae-475b-44b4-bbde-5e8e4cd3642c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+      "reference": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
       "display": "Toulouse area · Le Touch en aval de Fonsorbes"
      },
      "effectiveDateTime": "2024-12-16T12:12:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:90504eee-ee30-4390-a307-b37a23fae967",
+    "fullUrl": "urn:uuid:185801ad-8249-490f-894a-df0a8e9f3979",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+      "reference": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
       "display": "Toulouse area · Le Touch en aval de Fonsorbes"
      },
      "effectiveDateTime": "2024-12-16T12:12:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9ffaeb66-28be-4a18-bbc3-6ad98416132f",
+    "fullUrl": "urn:uuid:3fa83fb0-2681-4781-a17d-ee2cf2767f38",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+      "reference": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
       "display": "Toulouse area · Le Touch en aval de Fonsorbes"
      },
      "effectiveDateTime": "2024-12-16T12:12:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:935541b5-53f9-4e20-be12-89c8436382f0",
+    "fullUrl": "urn:uuid:4a91bf3f-fc0c-4e18-92c9-3c6f1040994a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+      "reference": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
       "display": "Toulouse area · Le Touch en aval de Fonsorbes"
      },
      "effectiveDateTime": "2024-12-16T12:12:00+01:00",
@@ -516,9 +516,9 @@
      ],
      "valueQuantity": {
       "value": 10.0,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1b45f3a1-af1b-4087-ba37-bedd00406682",
+    "fullUrl": "urn:uuid:9d713fd6-6927-467e-b648-e743fe25fee4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:be2f9490-b455-4f5c-a3ab-cfd7802f8e57",
+      "reference": "urn:uuid:beac9486-7deb-4c96-b3d3-21102c95ccbe",
       "display": "Toulouse area · Le Touch en aval de Fonsorbes"
      },
      "effectiveDateTime": "2024-12-16T12:12:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b84f5c22-4956-4023-ada3-42c7b58d28b3",
+    "fullUrl": "urn:uuid:c0e4fb19-f052-4ad9-8549-a42bcf463a06",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05162500-2024-12-16T1212",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05162500-2024-12-16T1212 was imported from Hub'Eau qualite_rivieres (Sandre), station 05162500 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05162500-2024-12-16T1212 was imported from Hub'Eau qualite_rivieres (Sandre), station 05162500 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:8b1c60a7-8af4-491a-9888-87d12fe4ae63"
+       "reference": "urn:uuid:7f32d928-57ee-4979-a9d5-ce7524713138"
       },
       {
-       "reference": "urn:uuid:f5e84cd4-f164-4ec9-a3a3-07738b7b3333"
+       "reference": "urn:uuid:37e0f3ae-475b-44b4-bbde-5e8e4cd3642c"
       },
       {
-       "reference": "urn:uuid:90504eee-ee30-4390-a307-b37a23fae967"
+       "reference": "urn:uuid:185801ad-8249-490f-894a-df0a8e9f3979"
       },
       {
-       "reference": "urn:uuid:9ffaeb66-28be-4a18-bbc3-6ad98416132f"
+       "reference": "urn:uuid:3fa83fb0-2681-4781-a17d-ee2cf2767f38"
       },
       {
-       "reference": "urn:uuid:935541b5-53f9-4e20-be12-89c8436382f0"
+       "reference": "urn:uuid:4a91bf3f-fc0c-4e18-92c9-3c6f1040994a"
       },
       {
-       "reference": "urn:uuid:1b45f3a1-af1b-4087-ba37-bedd00406682"
+       "reference": "urn:uuid:9d713fd6-6927-467e-b648-e743fe25fee4"
       }
      ],
      "occurredDateTime": "2024-12-16T12:12:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:1f4ad1d5-c674-42e2-9a06-d074f4b6780b",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:2b3e08af-9e48-4e26-8cbc-44ab6d045c32",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

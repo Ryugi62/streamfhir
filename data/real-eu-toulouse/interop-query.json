@@ -1,6 +1,6 @@
 {
  "_note": "Captured response of the live interop demo on the public HAPI R4 test server (it may purge data; re-create with: python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live).",
- "retrieved": "2026-09-29T13:26:14+00:00",
+ "retrieved": "2026-09-29T13:59:35+00:00",
  "site_id": "FR-05157550",
  "location": "Location/54630",
  "nitrate_query": "https://hapi.fhir.org/baseR4/Observation?code=http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty%7CCAS_14797-55-8&subject=Location/54630",
@@ -34,7 +34,7 @@
  "flags": [
   {
    "id": "Flag/54705",
-   "status": "active",
+   "status": "inactive",
    "code": "high",
    "period": {
     "start": "2024-12-17T14:47:00+01:00",
@@ -49,9 +49,9 @@
  ],
  "raw_nitrate_bundle": {
   "resourceType": "Bundle",
-  "id": "a88170fc-7b32-4486-a2c0-49d9e92b7100",
+  "id": "e75660c8-5ab1-4e6d-9648-5eb07f311e74",
   "meta": {
-   "lastUpdated": "2026-09-29T09:26:13.111-04:00"
+   "lastUpdated": "2026-09-29T09:59:33.753-04:00"
   },
   "type": "searchset",
   "total": 3,
@@ -68,9 +68,9 @@
      "resourceType": "Observation",
      "id": "54635",
      "meta": {
-      "versionId": "1",
-      "lastUpdated": "2026-09-29T09:15:55.374-04:00",
-      "source": "#vUdkpHL8BUHXNwXj",
+      "versionId": "2",
+      "lastUpdated": "2026-09-29T09:59:27.511-04:00",
+      "source": "#f3HiQw5TUm595u0M",
       "profile": [
        "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
       ],
@@ -146,9 +146,9 @@
      ],
      "valueQuantity": {
       "value": 62.0,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "search": {
@@ -161,9 +161,9 @@
      "resourceType": "Observation",
      "id": "54687",
      "meta": {
-      "versionId": "1",
-      "lastUpdated": "2026-09-29T09:24:52.961-04:00",
-      "source": "#LunHAAFI74SvhKx5",
+      "versionId": "2",
+      "lastUpdated": "2026-09-29T09:59:29.130-04:00",
+      "source": "#Scgp9TCVtPZmTY7i",
       "profile": [
        "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
       ],
@@ -243,9 +243,9 @@
      ],
      "valueQuantity": {
       "value": 50,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      },
      "note": [
       {
@@ -263,9 +263,9 @@
      "resourceType": "Observation",
      "id": "54697",
      "meta": {
-      "versionId": "1",
-      "lastUpdated": "2026-09-29T09:24:54.910-04:00",
-      "source": "#1phu7Rg14sos7OAh",
+      "versionId": "2",
+      "lastUpdated": "2026-09-29T09:59:30.947-04:00",
+      "source": "#DLJiv3Qr6GgAyny4",
       "profile": [
        "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
       ],
@@ -345,9 +345,9 @@
      ],
      "valueQuantity": {
       "value": 50,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      },
      "note": [
       {
@@ -363,9 +363,9 @@
  },
  "raw_flag_bundle": {
   "resourceType": "Bundle",
-  "id": "16444cef-f805-401a-a516-f40958bb8fd0",
+  "id": "aca71e8b-8eec-4101-80bf-5943b5292cdb",
   "meta": {
-   "lastUpdated": "2026-09-29T09:26:14.262-04:00"
+   "lastUpdated": "2026-09-29T09:59:34.944-04:00"
   },
   "type": "searchset",
   "total": 1,
@@ -382,9 +382,9 @@
      "resourceType": "Flag",
      "id": "54705",
      "meta": {
-      "versionId": "1",
-      "lastUpdated": "2026-09-29T09:24:56.498-04:00",
-      "source": "#Fe6FSQZwTjXBnMg7",
+      "versionId": "2",
+      "lastUpdated": "2026-09-29T09:59:32.527-04:00",
+      "source": "#vkaOgYqpdM8Rxjoi",
       "profile": [
        "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag"
       ],
@@ -403,7 +403,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Toulouse area · La Rivel à Baziège (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (2 independent observers); R7 Pets or livestock in contact with affected water (2 independent observers). Expires 2025-01-01 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits &gt;= 7 days apart clear a hazard.</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>EXPIRED on 2025-01-01 (no trusted report since): High health hazard at Toulouse area · La Rivel à Baziège (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (2 independent observers); R7 Pets or livestock in contact with affected water (2 independent observers). Expires 2025-01-01 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits &gt;= 7 days apart clear a hazard.</p></div>"
      },
      "extension": [
       {
@@ -459,7 +459,7 @@
        "value": "FR-05157550"
       }
      ],
-     "status": "active",
+     "status": "inactive",
      "category": [
       {
        "coding": [
@@ -491,7 +491,7 @@
      },
      "author": {
       "reference": "Device/47840",
-      "display": "StreamFHIR 0.5.1"
+      "display": "StreamFHIR 0.7.0"
      }
     },
     "search": {

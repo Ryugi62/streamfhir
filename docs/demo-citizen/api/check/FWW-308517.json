@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:8a8b851d-de84-4007-a583-fc7245f2004e",
+    "fullUrl": "urn:uuid:06d88853-429f-453f-9715-db7d9df149c5",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c5c7559f-80a1-4984-99e6-ff2c1ea1a70b",
+    "fullUrl": "urn:uuid:bad2a53e-945f-432c-a4fe-8c0ae07c8d4a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f29f5dc1-d763-4815-8432-cb0070650fe2",
+    "fullUrl": "urn:uuid:fcce3441-b8a8-412f-9716-0048996b5f70",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -119,7 +119,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Canal du midi on 2023-07-25T10:00:00+00:00: 2 indicators (final, record FWW-308517)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Canal du midi on 2023-07-25T11:16:00+02:00: 2 indicators (final, record FWW-308517)</p></div>"
      },
      "identifier": [
       {
@@ -150,10 +150,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:8a8b851d-de84-4007-a583-fc7245f2004e",
+      "reference": "urn:uuid:06d88853-429f-453f-9715-db7d9df149c5",
       "display": "Toulouse area · Canal du midi"
      },
-     "effectiveDateTime": "2023-07-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-07-25T11:16:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:078955e6-ba70-44db-b481-99a8da9eb364"
+       "reference": "urn:uuid:e604ad1f-d02b-4fbc-9404-2aaee89c2cf2"
       },
       {
-       "reference": "urn:uuid:99334d94-ab20-4868-9175-3085e6afff9e"
+       "reference": "urn:uuid:fb1407cd-c642-410f-bce1-3ae0e3fe8028"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:078955e6-ba70-44db-b481-99a8da9eb364",
+    "fullUrl": "urn:uuid:e604ad1f-d02b-4fbc-9404-2aaee89c2cf2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -231,10 +231,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:8a8b851d-de84-4007-a583-fc7245f2004e",
+      "reference": "urn:uuid:06d88853-429f-453f-9715-db7d9df149c5",
       "display": "Toulouse area · Canal du midi"
      },
-     "effectiveDateTime": "2023-07-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-07-25T11:16:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -261,7 +261,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:99334d94-ab20-4868-9175-3085e6afff9e",
+    "fullUrl": "urn:uuid:fb1407cd-c642-410f-bce1-3ae0e3fe8028",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -314,10 +314,10 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:8a8b851d-de84-4007-a583-fc7245f2004e",
+      "reference": "urn:uuid:06d88853-429f-453f-9715-db7d9df149c5",
       "display": "Toulouse area · Canal du midi"
      },
-     "effectiveDateTime": "2023-07-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-07-25T11:16:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -344,7 +344,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1eebffb0-14da-4f55-abd5-17c8b176388d",
+    "fullUrl": "urn:uuid:3ea2832a-6e41-4381-ba28-f50f3f06b8b3",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-308517",
@@ -364,21 +364,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-308517 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-308517 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:f29f5dc1-d763-4815-8432-cb0070650fe2"
+       "reference": "urn:uuid:fcce3441-b8a8-412f-9716-0048996b5f70"
       },
       {
-       "reference": "urn:uuid:078955e6-ba70-44db-b481-99a8da9eb364"
+       "reference": "urn:uuid:e604ad1f-d02b-4fbc-9404-2aaee89c2cf2"
       },
       {
-       "reference": "urn:uuid:99334d94-ab20-4868-9175-3085e6afff9e"
+       "reference": "urn:uuid:fb1407cd-c642-410f-bce1-3ae0e3fe8028"
       }
      ],
-     "occurredDateTime": "2023-07-25T10:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-07-25T11:16:00+02:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -418,8 +418,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:c5c7559f-80a1-4984-99e6-ff2c1ea1a70b",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:bad2a53e-945f-432c-a4fe-8c0ae07c8d4a",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

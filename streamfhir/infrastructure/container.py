@@ -38,4 +38,5 @@ def build_service(data_dir: str = DATA_DIR, fhir_base: str = None) -> StreamFhir
         HapiFhirServer(fhir_base or os.environ.get("STREAMFHIR_FHIR_BASE", DEFAULT_BASE)),
         clock,
         per_site_as_of=bool(meta.get("evaluate_each_site_at_its_latest_visit")),
+        photo_corroborates=not meta.get("photo_needs_review"),
     )

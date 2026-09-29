@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:e0e90acb-7f54-4295-ac54-2c48dda1025c",
+    "fullUrl": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:25cfef12-9935-4b65-9226-19810191e856",
+    "fullUrl": "urn:uuid:e8860145-84c3-4704-94ab-a63dd9933571",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:49362122-58a2-4b4a-b358-21cab5beb0ad",
+    "fullUrl": "urn:uuid:a7b7f02a-8dd7-470e-9a79-ca3cda387bd6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:e0e90acb-7f54-4295-ac54-2c48dda1025c",
+      "reference": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -161,10 +161,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:7ebf820a-a7df-46cb-9006-cd89b985f9c2"
+       "reference": "urn:uuid:e95d2eea-5537-4472-ab33-dee7118fcc2f"
       },
       {
-       "reference": "urn:uuid:9eb16fc0-2d31-401f-9e45-45c6ca6dc179"
+       "reference": "urn:uuid:c546bbd9-bd22-4fb5-aa02-2112a2ef52b6"
       }
      ]
     },
@@ -174,7 +174,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7ebf820a-a7df-46cb-9006-cd89b985f9c2",
+    "fullUrl": "urn:uuid:e95d2eea-5537-4472-ab33-dee7118fcc2f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -227,7 +227,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:e0e90acb-7f54-4295-ac54-2c48dda1025c",
+      "reference": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -254,7 +254,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9eb16fc0-2d31-401f-9e45-45c6ca6dc179",
+    "fullUrl": "urn:uuid:c546bbd9-bd22-4fb5-aa02-2112a2ef52b6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -307,7 +307,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:e0e90acb-7f54-4295-ac54-2c48dda1025c",
+      "reference": "urn:uuid:83b020f0-d9f5-4d96-b038-df89fb405593",
       "display": "Ghent · Zeeschelde in Melle"
      },
      "effectiveDateTime": "2026-07-24T10:39:01+02:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2b9ba28b-bd61-4abe-90e0-99b92f7a31f9",
+    "fullUrl": "urn:uuid:6f3dd122-adeb-4bf5-ba8b-16a90279cf9b",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW168900-2026-07-24T1039",
@@ -349,21 +349,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW168900-2026-07-24T1039 was imported from VMM Databank waterkwaliteit, station OW168900 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW168900-2026-07-24T1039 was imported from VMM Databank waterkwaliteit, station OW168900 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:49362122-58a2-4b4a-b358-21cab5beb0ad"
+       "reference": "urn:uuid:a7b7f02a-8dd7-470e-9a79-ca3cda387bd6"
       },
       {
-       "reference": "urn:uuid:7ebf820a-a7df-46cb-9006-cd89b985f9c2"
+       "reference": "urn:uuid:e95d2eea-5537-4472-ab33-dee7118fcc2f"
       },
       {
-       "reference": "urn:uuid:9eb16fc0-2d31-401f-9e45-45c6ca6dc179"
+       "reference": "urn:uuid:c546bbd9-bd22-4fb5-aa02-2112a2ef52b6"
       }
      ],
      "occurredDateTime": "2026-07-24T10:39:01+02:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -404,8 +404,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:25cfef12-9935-4b65-9226-19810191e856",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:e8860145-84c3-4704-94ab-a63dd9933571",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

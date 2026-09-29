@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+    "fullUrl": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -23,7 +23,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Coimbra region · Drinks park small pond (FWW-40.6387,-8.6559)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Central Portugal · Drinks park small pond (FWW-40.6387,-8.6559)</p></div>"
      },
      "identifier": [
       {
@@ -32,7 +32,7 @@
       }
      ],
      "status": "active",
-     "name": "Coimbra region · Drinks park small pond",
+     "name": "Central Portugal · Drinks park small pond",
      "description": "Real citizen-science site (FreshWater Watch, Pond)",
      "mode": "instance",
      "physicalType": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6d3112cf-32fd-40a8-937c-2c1759e24dc4",
+    "fullUrl": "urn:uuid:05a1fce1-72dd-453c-9a34-cf7027d2031e",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5",
+    "fullUrl": "urn:uuid:ae623347-f305-4bb1-a930-a19c1c4121f3",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -112,7 +112,7 @@
      "status": "completed",
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Coimbra region · Drinks park small pond, record FWW-304451</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Central Portugal · Drinks park small pond, record FWW-304451</p></div>"
      },
      "identifier": [
       {
@@ -130,10 +130,10 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
+      "reference": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
+      "display": "Central Portugal · Drinks park small pond"
      },
-     "createdDateTime": "2023-03-23T11:00:00+00:00",
+     "createdDateTime": "2023-03-23T15:10:00+00:00",
      "content": {
       "contentType": "image/jpeg",
       "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/320/attachments/291",
@@ -146,7 +146,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0d49b569-8f02-4d58-a72e-38a6291db3f9",
+    "fullUrl": "urn:uuid:b0913473-77f1-4a2c-865a-757356e29151",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -168,7 +168,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Coimbra region · Drinks park small pond on 2023-03-23T11:00:00+00:00: 5 indicators (final, record FWW-304451)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Central Portugal · Drinks park small pond on 2023-03-23T15:10:00+00:00: 4 indicators (final, record FWW-304451)</p></div>"
      },
      "identifier": [
       {
@@ -199,10 +199,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
+      "reference": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
+      "display": "Central Portugal · Drinks park small pond"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T15:10:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -214,24 +214,21 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:ed3692c8-b3e7-4d34-901a-29c8dc6cfba7"
+       "reference": "urn:uuid:aba28ce3-1963-4c59-8a46-9bbb9a518e77"
       },
       {
-       "reference": "urn:uuid:8e613aff-5516-43ca-bf3d-41826a10fc20"
+       "reference": "urn:uuid:a90ce78d-2613-44d4-bf1e-0273667bdbb2"
       },
       {
-       "reference": "urn:uuid:84460b82-8de2-4c44-ba22-d283b92ddc9c"
+       "reference": "urn:uuid:6bfce6c1-55cf-4766-8c64-96d3ffa48220"
       },
       {
-       "reference": "urn:uuid:674d09f3-5502-4b61-a602-0836e25db176"
-      },
-      {
-       "reference": "urn:uuid:afeed04c-9943-45c7-a022-294ded13ce41"
+       "reference": "urn:uuid:0b1edf16-4e99-4428-bb7d-cc0b46eb492a"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+       "reference": "urn:uuid:ae623347-f305-4bb1-a930-a19c1c4121f3"
       }
      ]
     },
@@ -241,7 +238,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ed3692c8-b3e7-4d34-901a-29c8dc6cfba7",
+    "fullUrl": "urn:uuid:aba28ce3-1963-4c59-8a46-9bbb9a518e77",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -263,7 +260,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Central Portugal · Drinks park small pond (final, record FWW-304451)</p></div>"
      },
      "identifier": [
       {
@@ -294,10 +291,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
+      "reference": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
+      "display": "Central Portugal · Drinks park small pond"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T15:10:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -319,7 +316,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+       "reference": "urn:uuid:ae623347-f305-4bb1-a930-a19c1c4121f3"
       }
      ]
     },
@@ -329,7 +326,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8e613aff-5516-43ca-bf3d-41826a10fc20",
+    "fullUrl": "urn:uuid:a90ce78d-2613-44d4-bf1e-0273667bdbb2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -351,7 +348,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Central Portugal · Drinks park small pond (final, record FWW-304451)</p></div>"
      },
      "identifier": [
       {
@@ -382,10 +379,10 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
+      "reference": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
+      "display": "Central Portugal · Drinks park small pond"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T15:10:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -407,7 +404,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+       "reference": "urn:uuid:ae623347-f305-4bb1-a930-a19c1c4121f3"
       }
      ]
     },
@@ -417,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:84460b82-8de2-4c44-ba22-d283b92ddc9c",
+    "fullUrl": "urn:uuid:6bfce6c1-55cf-4766-8c64-96d3ffa48220",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -439,81 +436,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: yes at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
-     },
-     "identifier": [
-      {
-       "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "FWW-304451.animal-contact"
-      }
-     ],
-     "status": "final",
-     "category": [
-      {
-       "coding": [
-        {
-         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
-        }
-       ]
-      }
-     ],
-     "code": {
-      "coding": [
-       {
-        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
-        "code": "animal-contact",
-        "display": "Pets or livestock in the water"
-       }
-      ],
-      "text": "Pets or livestock in the water"
-     },
-     "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
-     },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
-     "performer": [
-      {
-       "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "fww-group-4b4922e9fdf8"
-       },
-       "display": "Pseudonymous citizen scientist"
-      }
-     ],
-     "valueBoolean": true
-    },
-    "request": {
-     "method": "PUT",
-     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.animal-contact"
-    }
-   },
-   {
-    "fullUrl": "urn:uuid:674d09f3-5502-4b61-a602-0836e25db176",
-    "resource": {
-     "resourceType": "Observation",
-     "meta": {
-      "security": [
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-        "code": "U",
-        "display": "unrestricted"
-       },
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "code": "PSEUDED",
-        "display": "pseudonymized"
-       }
-      ],
-      "profile": [
-       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
-      ]
-     },
-     "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Central Portugal · Drinks park small pond (final, record FWW-304451)</p></div>"
      },
      "identifier": [
       {
@@ -544,10 +467,10 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
+      "reference": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
+      "display": "Central Portugal · Drinks park small pond"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T15:10:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -565,7 +488,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:afeed04c-9943-45c7-a022-294ded13ce41",
+    "fullUrl": "urn:uuid:0b1edf16-4e99-4428-bb7d-cc0b46eb492a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -587,7 +510,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Central Portugal · Drinks park small pond (final, record FWW-304451)</p></div>"
      },
      "identifier": [
       {
@@ -618,10 +541,10 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
-      "display": "Coimbra region · Drinks park small pond"
+      "reference": "urn:uuid:24dc910a-9e22-41ca-8aa4-594e17c44821",
+      "display": "Central Portugal · Drinks park small pond"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T15:10:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -648,7 +571,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b5c42d6a-f95a-4892-9590-814957abfea5",
+    "fullUrl": "urn:uuid:cd6cbfd2-8814-4e53-9c12-8c496bfb451f",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304451",
@@ -668,33 +591,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304451 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304451 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:0d49b569-8f02-4d58-a72e-38a6291db3f9"
+       "reference": "urn:uuid:b0913473-77f1-4a2c-865a-757356e29151"
       },
       {
-       "reference": "urn:uuid:ed3692c8-b3e7-4d34-901a-29c8dc6cfba7"
+       "reference": "urn:uuid:aba28ce3-1963-4c59-8a46-9bbb9a518e77"
       },
       {
-       "reference": "urn:uuid:8e613aff-5516-43ca-bf3d-41826a10fc20"
+       "reference": "urn:uuid:a90ce78d-2613-44d4-bf1e-0273667bdbb2"
       },
       {
-       "reference": "urn:uuid:84460b82-8de2-4c44-ba22-d283b92ddc9c"
+       "reference": "urn:uuid:6bfce6c1-55cf-4766-8c64-96d3ffa48220"
       },
       {
-       "reference": "urn:uuid:674d09f3-5502-4b61-a602-0836e25db176"
+       "reference": "urn:uuid:0b1edf16-4e99-4428-bb7d-cc0b46eb492a"
       },
       {
-       "reference": "urn:uuid:afeed04c-9943-45c7-a022-294ded13ce41"
-      },
-      {
-       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+       "reference": "urn:uuid:ae623347-f305-4bb1-a930-a19c1c4121f3"
       }
      ],
-     "occurredDateTime": "2023-03-23T11:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-03-23T15:10:00+00:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -734,8 +654,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:6d3112cf-32fd-40a8-937c-2c1759e24dc4",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:05a1fce1-72dd-453c-9a34-cf7027d2031e",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

@@ -203,7 +203,8 @@ def is_trusted(report: ValidationReport, decisions: Mapping[str, str]) -> bool:
     return d == CONFIRM or (d is None and report.status == OK)
 
 
-def _corroboration(rule_supporting: List[ValidationReport], decisions: Mapping[str, str]) -> Tuple[bool, str]:
+def _corroboration(rule_supporting: List[ValidationReport], decisions: Mapping[str, str],
+                   photo_corroborates: bool = True) -> Tuple[bool, str]:
     trusted = [r for r in rule_supporting if is_trusted(r, decisions)]
     observers = {r.assessment.observer for r in trusted}
     if any(decisions.get(r.record_id) == CONFIRM for r in trusted):
@@ -213,13 +214,15 @@ def _corroboration(rule_supporting: List[ValidationReport], decisions: Mapping[s
     if len(observers) >= 2:
         return True, "%d independent observers" % len(observers)
     if any(r.assessment.photos for r in trusted):
-        return True, "trusted report with a photo attached"
+        if photo_corroborates:
+            return True, "trusted report with a photo attached"
+        return False, "photo attached, awaiting a reviewer's photo check"
     return False, "single or unreviewed report - verify"
 
 
 def _fired(rule: Rule, supporting: List[ValidationReport], decisions: Mapping[str, str],
-           prerequisite_ok: bool = True) -> FiredRule:
-    ok, how = _corroboration(supporting, decisions)
+           prerequisite_ok: bool = True, photo_corroborates: bool = True) -> FiredRule:
+    ok, how = _corroboration(supporting, decisions, photo_corroborates)
     if not prerequisite_ok:
         ok, how = False, "exposure seen, but the hazard it depends on is not yet corroborated"
     trusted = [r for r in supporting if is_trusted(r, decisions)]
@@ -250,7 +253,7 @@ def _cleared(rule: Rule, supporting: List[ValidationReport], window: List[Valida
 
 def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Optional[datetime] = None,
                   decisions: Optional[Mapping[str, str]] = None, window_days: int = WINDOW_DAYS,
-                  still_water: bool = False) -> SiteRisk:
+                  still_water: bool = False, photo_corroborates: bool = True) -> SiteRisk:
     decisions = dict(decisions or {})
     usable = [r for r in reports if r.status != BLOCKED and r.assessment is not None
               and r.assessment.site_id == site_id and decisions.get(r.record_id) != REJECT]
@@ -272,7 +275,7 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
         if rule.record_test is not None:
             supporting = [r for r in window if rule.record_test(r.assessment.values)]
             if supporting and not _cleared(rule, supporting, window, decisions):
-                fired.append(_fired(rule, supporting, decisions))
+                fired.append(_fired(rule, supporting, decisions, photo_corroborates=photo_corroborates))
         else:
             prereq = [f for f in fired if f.rule_id in rule.requires_any]
             if not prereq:
@@ -281,7 +284,8 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
             supporting = [r for r in window if r.assessment.values.get(rule.contact_code) is True
                           and r.assessment.observed_at >= since - timedelta(days=window_days)]
             if supporting:
-                fired.append(_fired(rule, supporting, decisions, any(f.corroborated for f in prereq)))
+                fired.append(_fired(rule, supporting, decisions, any(f.corroborated for f in prereq),
+                                    photo_corroborates=photo_corroborates))
 
     lanes = {k: 0 for k in LANES}
     hazard = confirmed = condition_pts = 0

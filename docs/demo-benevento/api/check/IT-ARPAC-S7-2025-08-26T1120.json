@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:b5b281e2-97a9-46b5-8510-eb3d16b27a35",
+    "fullUrl": "urn:uuid:43be4ded-4c7e-4395-951f-fea16eb1b27b",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dd605945-3ff4-4e69-bf78-788b16e2a6ee",
+    "fullUrl": "urn:uuid:3a23e4ea-0a77-4727-8620-3c73d60cff77",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3dcabfe3-9038-48f9-a034-c831729438b1",
+    "fullUrl": "urn:uuid:bfe5bd03-e413-4f67-82d4-0a1b73532a1a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:b5b281e2-97a9-46b5-8510-eb3d16b27a35",
+      "reference": "urn:uuid:43be4ded-4c7e-4395-951f-fea16eb1b27b",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-08-26T11:20:00+02:00",
@@ -161,7 +161,7 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:4070c82e-3cbc-4f80-aa9c-0f8e9ff3179d"
+       "reference": "urn:uuid:7a7ec6fe-d9bf-4940-bcda-1ab93fdcf487"
       }
      ]
     },
@@ -171,7 +171,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4070c82e-3cbc-4f80-aa9c-0f8e9ff3179d",
+    "fullUrl": "urn:uuid:7a7ec6fe-d9bf-4940-bcda-1ab93fdcf487",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -224,7 +224,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:b5b281e2-97a9-46b5-8510-eb3d16b27a35",
+      "reference": "urn:uuid:43be4ded-4c7e-4395-951f-fea16eb1b27b",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-08-26T11:20:00+02:00",
@@ -251,7 +251,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b417e6d9-4919-4df8-8284-1111c7aac40e",
+    "fullUrl": "urn:uuid:71f8ed99-c67d-4e7c-9b35-0b65c1fd216c",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S7-2025-08-26T1120",
@@ -266,18 +266,18 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2025-08-26T1120 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2025-08-26T1120 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:3dcabfe3-9038-48f9-a034-c831729438b1"
+       "reference": "urn:uuid:bfe5bd03-e413-4f67-82d4-0a1b73532a1a"
       },
       {
-       "reference": "urn:uuid:4070c82e-3cbc-4f80-aa9c-0f8e9ff3179d"
+       "reference": "urn:uuid:7a7ec6fe-d9bf-4940-bcda-1ab93fdcf487"
       }
      ],
      "occurredDateTime": "2025-08-26T11:20:00+02:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -318,8 +318,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:dd605945-3ff4-4e69-bf78-788b16e2a6ee",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:3a23e4ea-0a77-4727-8620-3c73d60cff77",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:9ec4fde3-f359-435b-a840-550b36efa2f3",
+    "fullUrl": "urn:uuid:cacf08cc-1421-47b1-af1b-618edb48c72e",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2a9882d7-52af-4858-bc02-ba95a35bb2d9",
+    "fullUrl": "urn:uuid:0bb337cc-83de-4344-aae2-d70ee6476865",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2a766acf-d3f5-4c65-ba22-49f3bb60629d",
+    "fullUrl": "urn:uuid:f9c882c2-56d9-4afd-b5ab-398cc73c98b6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:9ec4fde3-f359-435b-a840-550b36efa2f3",
+      "reference": "urn:uuid:cacf08cc-1421-47b1-af1b-618edb48c72e",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-03-10T11:53:57+01:00",
@@ -161,16 +161,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e31a1711-8a6e-4709-82f5-86a501fb6b94"
+       "reference": "urn:uuid:e986f2e2-d9ee-4dfc-956c-8a566936991d"
       },
       {
-       "reference": "urn:uuid:3e3269e8-b3ca-4a15-9788-15de72e3e1f2"
+       "reference": "urn:uuid:295be982-798e-4081-bf7e-de2ede26455f"
       },
       {
-       "reference": "urn:uuid:bbfa07ca-d962-4da3-a713-012927879d0b"
+       "reference": "urn:uuid:3d166251-3f42-4fcf-94e2-49e3711b07ce"
       },
       {
-       "reference": "urn:uuid:56965660-7dc3-42ec-81d4-a31395574bd8"
+       "reference": "urn:uuid:33541f74-2a54-4bd2-8898-5ead65b6f7c8"
       }
      ]
     },
@@ -180,7 +180,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e31a1711-8a6e-4709-82f5-86a501fb6b94",
+    "fullUrl": "urn:uuid:e986f2e2-d9ee-4dfc-956c-8a566936991d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +228,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:9ec4fde3-f359-435b-a840-550b36efa2f3",
+      "reference": "urn:uuid:cacf08cc-1421-47b1-af1b-618edb48c72e",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-03-10T11:53:57+01:00",
@@ -244,9 +244,9 @@
      ],
      "valueQuantity": {
       "value": 6.2,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      }
     },
     "request": {
@@ -255,7 +255,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3e3269e8-b3ca-4a15-9788-15de72e3e1f2",
+    "fullUrl": "urn:uuid:295be982-798e-4081-bf7e-de2ede26455f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +303,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:9ec4fde3-f359-435b-a840-550b36efa2f3",
+      "reference": "urn:uuid:cacf08cc-1421-47b1-af1b-618edb48c72e",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-03-10T11:53:57+01:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bbfa07ca-d962-4da3-a713-012927879d0b",
+    "fullUrl": "urn:uuid:3d166251-3f42-4fcf-94e2-49e3711b07ce",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +387,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:9ec4fde3-f359-435b-a840-550b36efa2f3",
+      "reference": "urn:uuid:cacf08cc-1421-47b1-af1b-618edb48c72e",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-03-10T11:53:57+01:00",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:56965660-7dc3-42ec-81d4-a31395574bd8",
+    "fullUrl": "urn:uuid:33541f74-2a54-4bd2-8898-5ead65b6f7c8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +467,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:9ec4fde3-f359-435b-a840-550b36efa2f3",
+      "reference": "urn:uuid:cacf08cc-1421-47b1-af1b-618edb48c72e",
       "display": "Ghent · Leie-Grensleie in Gent"
      },
      "effectiveDateTime": "2026-03-10T11:53:57+01:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:57aa2920-c848-4229-8e2a-478d7a8e4370",
+    "fullUrl": "urn:uuid:943047c1-ba8f-439b-9390-6f0098b7089d",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW571900-2026-03-10T1153",
@@ -509,27 +509,27 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW571900-2026-03-10T1153 was imported from VMM Databank waterkwaliteit, station OW571900 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW571900-2026-03-10T1153 was imported from VMM Databank waterkwaliteit, station OW571900 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:2a766acf-d3f5-4c65-ba22-49f3bb60629d"
+       "reference": "urn:uuid:f9c882c2-56d9-4afd-b5ab-398cc73c98b6"
       },
       {
-       "reference": "urn:uuid:e31a1711-8a6e-4709-82f5-86a501fb6b94"
+       "reference": "urn:uuid:e986f2e2-d9ee-4dfc-956c-8a566936991d"
       },
       {
-       "reference": "urn:uuid:3e3269e8-b3ca-4a15-9788-15de72e3e1f2"
+       "reference": "urn:uuid:295be982-798e-4081-bf7e-de2ede26455f"
       },
       {
-       "reference": "urn:uuid:bbfa07ca-d962-4da3-a713-012927879d0b"
+       "reference": "urn:uuid:3d166251-3f42-4fcf-94e2-49e3711b07ce"
       },
       {
-       "reference": "urn:uuid:56965660-7dc3-42ec-81d4-a31395574bd8"
+       "reference": "urn:uuid:33541f74-2a54-4bd2-8898-5ead65b6f7c8"
       }
      ],
      "occurredDateTime": "2026-03-10T11:53:57+01:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -570,8 +570,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:2a9882d7-52af-4858-bc02-ba95a35bb2d9",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:0bb337cc-83de-4344-aae2-d70ee6476865",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

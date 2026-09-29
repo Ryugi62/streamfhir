@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+    "fullUrl": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9724ddc7-7b60-4156-87b7-226c57ac9cc3",
+    "fullUrl": "urn:uuid:1af6a7ba-f6e4-494e-b8ba-43a96577d74a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c4c84b76-ebcf-466b-b98a-ecb2806c90d2",
+    "fullUrl": "urn:uuid:d7e0e7a4-09c1-419a-8e0e-4d79bbbe2283",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+      "reference": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:0a3915ea-0b03-4e3b-aef5-59d6f6df1232"
+       "reference": "urn:uuid:ac153d5b-7929-4bcb-badd-5a5a8788e487"
       },
       {
-       "reference": "urn:uuid:b0ecabe5-1715-43a7-8fd8-119dd8fa430c"
+       "reference": "urn:uuid:06c7f556-5921-4f8d-a74b-4bfa0681522e"
       },
       {
-       "reference": "urn:uuid:0c97d204-2f2f-438b-a7ff-68c96f5dcb44"
+       "reference": "urn:uuid:9d5755d4-479b-4821-8469-3ccc18088060"
       },
       {
-       "reference": "urn:uuid:c348730a-a00a-48ca-b657-e90d858fcf00"
+       "reference": "urn:uuid:37e95b90-4c7c-4759-8e14-79a000afeb9a"
       },
       {
-       "reference": "urn:uuid:6448f627-aa94-48df-b71c-6c1d36646cec"
+       "reference": "urn:uuid:6130e707-b3c8-4d9b-b3e8-c0c3290e6d20"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0a3915ea-0b03-4e3b-aef5-59d6f6df1232",
+    "fullUrl": "urn:uuid:ac153d5b-7929-4bcb-badd-5a5a8788e487",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+      "reference": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b0ecabe5-1715-43a7-8fd8-119dd8fa430c",
+    "fullUrl": "urn:uuid:06c7f556-5921-4f8d-a74b-4bfa0681522e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+      "reference": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -346,9 +346,9 @@
      ],
      "valueQuantity": {
       "value": 4.62,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0c97d204-2f2f-438b-a7ff-68c96f5dcb44",
+    "fullUrl": "urn:uuid:9d5755d4-479b-4821-8469-3ccc18088060",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -405,7 +405,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+      "reference": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c348730a-a00a-48ca-b657-e90d858fcf00",
+    "fullUrl": "urn:uuid:37e95b90-4c7c-4759-8e14-79a000afeb9a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+      "reference": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6448f627-aa94-48df-b71c-6c1d36646cec",
+    "fullUrl": "urn:uuid:6130e707-b3c8-4d9b-b3e8-c0c3290e6d20",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:b0d138ac-789e-4906-93be-279bd263e0ae",
+      "reference": "urn:uuid:45f1747a-d4ab-4041-8e0b-c9bb3020375f",
       "display": "Toulouse area · La Garonne au Pont vieux de Muret"
      },
      "effectiveDateTime": "2024-12-17T11:01:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5cd06e76-ef63-4214-95b3-88634bc75412",
+    "fullUrl": "urn:uuid:01b27057-54d8-486c-9172-fd24572f304e",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05175400-2024-12-17T1101",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05175400-2024-12-17T1101 was imported from Hub'Eau qualite_rivieres (Sandre), station 05175400 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05175400-2024-12-17T1101 was imported from Hub'Eau qualite_rivieres (Sandre), station 05175400 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:c4c84b76-ebcf-466b-b98a-ecb2806c90d2"
+       "reference": "urn:uuid:d7e0e7a4-09c1-419a-8e0e-4d79bbbe2283"
       },
       {
-       "reference": "urn:uuid:0a3915ea-0b03-4e3b-aef5-59d6f6df1232"
+       "reference": "urn:uuid:ac153d5b-7929-4bcb-badd-5a5a8788e487"
       },
       {
-       "reference": "urn:uuid:b0ecabe5-1715-43a7-8fd8-119dd8fa430c"
+       "reference": "urn:uuid:06c7f556-5921-4f8d-a74b-4bfa0681522e"
       },
       {
-       "reference": "urn:uuid:0c97d204-2f2f-438b-a7ff-68c96f5dcb44"
+       "reference": "urn:uuid:9d5755d4-479b-4821-8469-3ccc18088060"
       },
       {
-       "reference": "urn:uuid:c348730a-a00a-48ca-b657-e90d858fcf00"
+       "reference": "urn:uuid:37e95b90-4c7c-4759-8e14-79a000afeb9a"
       },
       {
-       "reference": "urn:uuid:6448f627-aa94-48df-b71c-6c1d36646cec"
+       "reference": "urn:uuid:6130e707-b3c8-4d9b-b3e8-c0c3290e6d20"
       }
      ],
      "occurredDateTime": "2024-12-17T11:01:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:9724ddc7-7b60-4156-87b7-226c57ac9cc3",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:1af6a7ba-f6e4-494e-b8ba-43a96577d74a",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+    "fullUrl": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:44de88d9-1cdd-43ba-a003-624b7cedad87",
+    "fullUrl": "urn:uuid:ab4cb5f8-2fdb-40f0-8952-519d8cb152e7",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8930cbba-7c9b-4493-9762-300f8eeaf76d",
+    "fullUrl": "urn:uuid:13891bc9-4fe1-45dc-8d72-f61e876981f8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:2c23b02d-19a0-4104-ad24-836bcbaf06db"
+       "reference": "urn:uuid:72c0b0df-75e9-4ad0-9199-344439a9ddc0"
       },
       {
-       "reference": "urn:uuid:b5e1b0f2-7fa7-4743-9d1f-f1030451381e"
+       "reference": "urn:uuid:0dfb3768-5dc9-4fe9-9d8c-bc43d3f27f98"
       },
       {
-       "reference": "urn:uuid:2e563616-2adb-490d-855b-cc4b17d75c06"
+       "reference": "urn:uuid:6b9d6cc3-b8ec-4f22-b54d-ab0f68d4dd70"
       },
       {
-       "reference": "urn:uuid:7fcd4e1c-1774-4199-94f9-c5d57fd2fcec"
+       "reference": "urn:uuid:b27c0e39-70d4-4ba8-8626-d9217f0fb95c"
       },
       {
-       "reference": "urn:uuid:3c6c13fa-7955-460c-a6f5-d886f030040e"
+       "reference": "urn:uuid:5fe0f7f6-eb26-404c-91bc-4838e96626f2"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2c23b02d-19a0-4104-ad24-836bcbaf06db",
+    "fullUrl": "urn:uuid:72c0b0df-75e9-4ad0-9199-344439a9ddc0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b5e1b0f2-7fa7-4743-9d1f-f1030451381e",
+    "fullUrl": "urn:uuid:0dfb3768-5dc9-4fe9-9d8c-bc43d3f27f98",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -335,7 +335,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -351,9 +351,9 @@
      ],
      "valueQuantity": {
       "value": 8.68,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -362,7 +362,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2e563616-2adb-490d-855b-cc4b17d75c06",
+    "fullUrl": "urn:uuid:6b9d6cc3-b8ec-4f22-b54d-ab0f68d4dd70",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7fcd4e1c-1774-4199-94f9-c5d57fd2fcec",
+    "fullUrl": "urn:uuid:b27c0e39-70d4-4ba8-8626-d9217f0fb95c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3c6c13fa-7955-460c-a6f5-d886f030040e",
+    "fullUrl": "urn:uuid:5fe0f7f6-eb26-404c-91bc-4838e96626f2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:d1c9c726-75df-495b-96d4-fca98790e6b8",
+      "reference": "urn:uuid:23440a5c-6d61-4145-8e11-9006478e372c",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:11a3d9a6-9146-49ba-b7f9-eeb410ca6c1b",
+    "fullUrl": "urn:uuid:70713000-4708-42ff-a794-5fa39c134fb5",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05164000-2024-12-17T1011",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05164000-2024-12-17T1011 was imported from Hub'Eau qualite_rivieres (Sandre), station 05164000 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05164000-2024-12-17T1011 was imported from Hub'Eau qualite_rivieres (Sandre), station 05164000 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:8930cbba-7c9b-4493-9762-300f8eeaf76d"
+       "reference": "urn:uuid:13891bc9-4fe1-45dc-8d72-f61e876981f8"
       },
       {
-       "reference": "urn:uuid:2c23b02d-19a0-4104-ad24-836bcbaf06db"
+       "reference": "urn:uuid:72c0b0df-75e9-4ad0-9199-344439a9ddc0"
       },
       {
-       "reference": "urn:uuid:b5e1b0f2-7fa7-4743-9d1f-f1030451381e"
+       "reference": "urn:uuid:0dfb3768-5dc9-4fe9-9d8c-bc43d3f27f98"
       },
       {
-       "reference": "urn:uuid:2e563616-2adb-490d-855b-cc4b17d75c06"
+       "reference": "urn:uuid:6b9d6cc3-b8ec-4f22-b54d-ab0f68d4dd70"
       },
       {
-       "reference": "urn:uuid:7fcd4e1c-1774-4199-94f9-c5d57fd2fcec"
+       "reference": "urn:uuid:b27c0e39-70d4-4ba8-8626-d9217f0fb95c"
       },
       {
-       "reference": "urn:uuid:3c6c13fa-7955-460c-a6f5-d886f030040e"
+       "reference": "urn:uuid:5fe0f7f6-eb26-404c-91bc-4838e96626f2"
       }
      ],
      "occurredDateTime": "2024-12-17T10:11:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:44de88d9-1cdd-43ba-a003-624b7cedad87",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:ab4cb5f8-2fdb-40f0-8952-519d8cb152e7",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

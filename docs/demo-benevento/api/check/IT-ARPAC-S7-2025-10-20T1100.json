@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:b08ab311-bbc6-4310-861f-17e1ca438de6",
+    "fullUrl": "urn:uuid:08351907-c3da-4542-8643-d3010396efab",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5a36a480-2fea-47ae-ab39-c02c8a542624",
+    "fullUrl": "urn:uuid:c836e49c-213c-4473-b9e3-c9324f837ab8",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:85c8d8fa-4418-4b23-b890-05933a38f98b",
+    "fullUrl": "urn:uuid:c83162b7-e9ae-4bf5-9a7e-92abd4b05fd4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:b08ab311-bbc6-4310-861f-17e1ca438de6",
+      "reference": "urn:uuid:08351907-c3da-4542-8643-d3010396efab",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-10-20T11:00:00+02:00",
@@ -161,10 +161,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:024c8699-08e4-4e52-b3f2-7a4907187b3f"
+       "reference": "urn:uuid:820c2b4b-eead-4e77-b265-cfaa5d522acd"
       },
       {
-       "reference": "urn:uuid:eec8d018-90da-4441-9cea-30f765fdc631"
+       "reference": "urn:uuid:4ce30c28-af49-4cda-ba9d-91107c206d53"
       }
      ]
     },
@@ -174,7 +174,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:024c8699-08e4-4e52-b3f2-7a4907187b3f",
+    "fullUrl": "urn:uuid:820c2b4b-eead-4e77-b265-cfaa5d522acd",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -222,7 +222,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:b08ab311-bbc6-4310-861f-17e1ca438de6",
+      "reference": "urn:uuid:08351907-c3da-4542-8643-d3010396efab",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-10-20T11:00:00+02:00",
@@ -238,9 +238,9 @@
      ],
      "valueQuantity": {
       "value": 2.62,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      }
     },
     "request": {
@@ -249,7 +249,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:eec8d018-90da-4441-9cea-30f765fdc631",
+    "fullUrl": "urn:uuid:4ce30c28-af49-4cda-ba9d-91107c206d53",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -297,7 +297,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:b08ab311-bbc6-4310-861f-17e1ca438de6",
+      "reference": "urn:uuid:08351907-c3da-4542-8643-d3010396efab",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-10-20T11:00:00+02:00",
@@ -328,7 +328,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6cc16211-9785-4469-a6f3-781d99497d45",
+    "fullUrl": "urn:uuid:2483cee0-e399-48aa-b650-dfd6844838d0",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S7-2025-10-20T1100",
@@ -343,21 +343,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2025-10-20T1100 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2025-10-20T1100 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:85c8d8fa-4418-4b23-b890-05933a38f98b"
+       "reference": "urn:uuid:c83162b7-e9ae-4bf5-9a7e-92abd4b05fd4"
       },
       {
-       "reference": "urn:uuid:024c8699-08e4-4e52-b3f2-7a4907187b3f"
+       "reference": "urn:uuid:820c2b4b-eead-4e77-b265-cfaa5d522acd"
       },
       {
-       "reference": "urn:uuid:eec8d018-90da-4441-9cea-30f765fdc631"
+       "reference": "urn:uuid:4ce30c28-af49-4cda-ba9d-91107c206d53"
       }
      ],
      "occurredDateTime": "2025-10-20T11:00:00+02:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -398,8 +398,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:5a36a480-2fea-47ae-ab39-c02c8a542624",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:c836e49c-213c-4473-b9e3-c9324f837ab8",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:5cd21fd5-054c-42fa-a79f-a2c8cc7f9a91",
+    "fullUrl": "urn:uuid:23a80776-f022-4632-abba-0b9c00a74d52",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:47bee252-94f0-40b2-a53e-2552a4c92b0a",
+    "fullUrl": "urn:uuid:dddedacc-3d58-4d35-a46e-8adc37ee89ed",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c6719eda-67cf-48e8-a5d2-cb8648af2179",
+    "fullUrl": "urn:uuid:92122b6d-aff5-41bd-8e85-48d540da7ded",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:5cd21fd5-054c-42fa-a79f-a2c8cc7f9a91",
+      "reference": "urn:uuid:23a80776-f022-4632-abba-0b9c00a74d52",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2026-01-14T10:10:00+01:00",
@@ -161,7 +161,7 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:1675e240-f5f6-4a61-b177-8e82a8d86d0c"
+       "reference": "urn:uuid:6915fd1d-c209-4e55-8c8a-86ba2b554021"
       }
      ]
     },
@@ -171,7 +171,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1675e240-f5f6-4a61-b177-8e82a8d86d0c",
+    "fullUrl": "urn:uuid:6915fd1d-c209-4e55-8c8a-86ba2b554021",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -224,7 +224,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:5cd21fd5-054c-42fa-a79f-a2c8cc7f9a91",
+      "reference": "urn:uuid:23a80776-f022-4632-abba-0b9c00a74d52",
       "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
      },
      "effectiveDateTime": "2026-01-14T10:10:00+01:00",
@@ -251,7 +251,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2ba208ff-8f9b-462b-984d-8a444e657c7b",
+    "fullUrl": "urn:uuid:61f54e28-a8eb-4805-8e35-62f7fa148ca9",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-Sn-2026-01-14T1010",
@@ -266,18 +266,18 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-Sn-2026-01-14T1010 was imported from ARPA Campania open data, Monitoraggio Fiumi, station Sn and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-Sn-2026-01-14T1010 was imported from ARPA Campania open data, Monitoraggio Fiumi, station Sn and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:c6719eda-67cf-48e8-a5d2-cb8648af2179"
+       "reference": "urn:uuid:92122b6d-aff5-41bd-8e85-48d540da7ded"
       },
       {
-       "reference": "urn:uuid:1675e240-f5f6-4a61-b177-8e82a8d86d0c"
+       "reference": "urn:uuid:6915fd1d-c209-4e55-8c8a-86ba2b554021"
       }
      ],
      "occurredDateTime": "2026-01-14T10:10:00+01:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -318,8 +318,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:47bee252-94f0-40b2-a53e-2552a4c92b0a",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:dddedacc-3d58-4d35-a46e-8adc37ee89ed",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

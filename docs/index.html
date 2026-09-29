@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamFHIR demos</title>
+<style>
+:root{--bg:#f2f4f6;--card:#fff;--text:#191f28;--sub:#4e5968;--blue:#3182f6}
+@media (prefers-color-scheme: dark){:root{--bg:#101012;--card:#1c1c20;--text:#f2f4f6;--sub:#b0b8c1;--blue:#5c9dff}}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px}
+h1{font-size:28px;margin:0 0 8px}p{color:var(--sub);margin:0 0 20px}
+a.card{display:block;background:var(--card);border-radius:16px;padding:18px 20px;margin:0 0 12px;text-decoration:none;color:var(--text)}
+a.card:focus-visible{outline:3px solid var(--blue)}
+a.card b{display:block;font-size:18px;margin-bottom:4px}a.card span{color:var(--sub);font-size:14px}
+</style></head><body><main>
+<h1>StreamFHIR demos</h1>
+<p>Citizen stream checks become HL7 FHIR data a health team can read. Five views of the same app, no install. Source: <a href="https://github.com/Ryugi62/streamfhir">github.com/Ryugi62/streamfhir</a>.</p>
+<a class="card" href="demo/"><b>1 · The 60-second demo (synthetic)</b><span>Mill Pond is High, Willow Creek asks for verification, a reviewer confirms report SYN-015 and the warning appears.</span></a>
+<a class="card" href="demo-citizen/"><b>2 · Real citizen science (FreshWater Watch)</b><span>25 real volunteer records near Toulouse and in central Portugal. Two "blue-green scum" ticks on flowing water go to a reviewer with the volunteer's photo instead of raising an alarm.</span></a>
+<a class="card" href="demo-eu/"><b>3 · Real agency data: Toulouse (Hub'Eau)</b><span>52 river stations. La Rivel at Baziège: nitrate 62 mg/L, and "One query, two sources": one EU code returns agency and citizen readings together.</span></a>
+<a class="card" href="demo-ghent/"><b>4 · Real agency data: Ghent (VMM)</b><span>3 stations, 39 samplings, same importer shape.</span></a>
+<a class="card" href="demo-benevento/"><b>5 · Real agency data: Benevento (ARPA Campania)</b><span>6 stations, 32 samplings; pH values given as "n.d." go to a person.</span></a>
+</main></body></html>

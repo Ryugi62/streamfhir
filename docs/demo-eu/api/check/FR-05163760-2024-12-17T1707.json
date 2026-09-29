@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+    "fullUrl": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1ff099c1-e997-4ccf-bdc1-dd18163f8b09",
+    "fullUrl": "urn:uuid:ce5d43b8-4810-4b89-8782-07611e1f738a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6bc7424b-34d9-45bf-b492-bdf32766ac7b",
+    "fullUrl": "urn:uuid:ce5143a2-e946-4dbe-b27c-ef957dd2d17b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+      "reference": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
       "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
      },
      "effectiveDateTime": "2024-12-17T17:07:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:860325d0-1ded-447b-9b90-817af6cd181c"
+       "reference": "urn:uuid:31fa8d7b-55a8-49b9-8cbe-007eb66e2203"
       },
       {
-       "reference": "urn:uuid:4cfd122c-301e-463d-9915-7934c56bcdb0"
+       "reference": "urn:uuid:4686d4b2-3be7-4390-a143-64fd087f5187"
       },
       {
-       "reference": "urn:uuid:aa4fa2cb-259d-42ed-9ceb-2da6d66396f0"
+       "reference": "urn:uuid:4c7375d4-258c-4722-8ca0-9809f792f714"
       },
       {
-       "reference": "urn:uuid:a2ce76d3-cc1c-42f1-b58e-2ac31dbdf715"
+       "reference": "urn:uuid:3dcb112d-e056-4688-a6f9-75bd0db43b69"
       },
       {
-       "reference": "urn:uuid:d85d25c9-3321-4122-a47b-2c89e5cfffaf"
+       "reference": "urn:uuid:ea55c360-fe47-4aed-ab5e-e0d6b5b53d97"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:860325d0-1ded-447b-9b90-817af6cd181c",
+    "fullUrl": "urn:uuid:31fa8d7b-55a8-49b9-8cbe-007eb66e2203",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+      "reference": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
       "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
      },
      "effectiveDateTime": "2024-12-17T17:07:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4cfd122c-301e-463d-9915-7934c56bcdb0",
+    "fullUrl": "urn:uuid:4686d4b2-3be7-4390-a143-64fd087f5187",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+      "reference": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
       "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
      },
      "effectiveDateTime": "2024-12-17T17:07:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:aa4fa2cb-259d-42ed-9ceb-2da6d66396f0",
+    "fullUrl": "urn:uuid:4c7375d4-258c-4722-8ca0-9809f792f714",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+      "reference": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
       "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
      },
      "effectiveDateTime": "2024-12-17T17:07:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a2ce76d3-cc1c-42f1-b58e-2ac31dbdf715",
+    "fullUrl": "urn:uuid:3dcb112d-e056-4688-a6f9-75bd0db43b69",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+      "reference": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
       "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
      },
      "effectiveDateTime": "2024-12-17T17:07:00+01:00",
@@ -516,9 +516,9 @@
      ],
      "valueQuantity": {
       "value": 13.0,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d85d25c9-3321-4122-a47b-2c89e5cfffaf",
+    "fullUrl": "urn:uuid:ea55c360-fe47-4aed-ab5e-e0d6b5b53d97",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:197220af-7db3-42a4-9b15-fa4de7309515",
+      "reference": "urn:uuid:1f322249-a9be-4c72-ae20-08e03ffbb12d",
       "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
      },
      "effectiveDateTime": "2024-12-17T17:07:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bedbafd0-2344-49d0-bcd6-d017aef2f6ee",
+    "fullUrl": "urn:uuid:617d4b43-9fe1-437e-b96d-56e622afd00e",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163760-2024-12-17T1707",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163760-2024-12-17T1707 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163760 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163760-2024-12-17T1707 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163760 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:6bc7424b-34d9-45bf-b492-bdf32766ac7b"
+       "reference": "urn:uuid:ce5143a2-e946-4dbe-b27c-ef957dd2d17b"
       },
       {
-       "reference": "urn:uuid:860325d0-1ded-447b-9b90-817af6cd181c"
+       "reference": "urn:uuid:31fa8d7b-55a8-49b9-8cbe-007eb66e2203"
       },
       {
-       "reference": "urn:uuid:4cfd122c-301e-463d-9915-7934c56bcdb0"
+       "reference": "urn:uuid:4686d4b2-3be7-4390-a143-64fd087f5187"
       },
       {
-       "reference": "urn:uuid:aa4fa2cb-259d-42ed-9ceb-2da6d66396f0"
+       "reference": "urn:uuid:4c7375d4-258c-4722-8ca0-9809f792f714"
       },
       {
-       "reference": "urn:uuid:a2ce76d3-cc1c-42f1-b58e-2ac31dbdf715"
+       "reference": "urn:uuid:3dcb112d-e056-4688-a6f9-75bd0db43b69"
       },
       {
-       "reference": "urn:uuid:d85d25c9-3321-4122-a47b-2c89e5cfffaf"
+       "reference": "urn:uuid:ea55c360-fe47-4aed-ab5e-e0d6b5b53d97"
       }
      ],
      "occurredDateTime": "2024-12-17T17:07:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:1ff099c1-e997-4ccf-bdc1-dd18163f8b09",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:ce5d43b8-4810-4b89-8782-07611e1f738a",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

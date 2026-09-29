@@ -16,7 +16,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:2cd53f29-3543-48ff-9d3c-9d7f56e5b080",
+    "fullUrl": "urn:uuid:4d7e749a-0b76-4a54-9f47-47c38287375e",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -63,7 +63,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:05c9f41a-e4fb-4d4e-8e4b-605e4bd61d7a",
+    "fullUrl": "urn:uuid:4f79f6b9-367d-480c-bff1-5a32b724830e",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -77,7 +77,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -93,7 +93,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -104,7 +104,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:19c13442-0d86-454b-9ce9-5c74cf34ea2d",
+    "fullUrl": "urn:uuid:a792a71d-53f9-44ee-af90-3f4d3723115a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -152,7 +152,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:2cd53f29-3543-48ff-9d3c-9d7f56e5b080",
+      "reference": "urn:uuid:4d7e749a-0b76-4a54-9f47-47c38287375e",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-10-29T09:30:00+01:00",
@@ -168,13 +168,13 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:925074fe-b5bf-4d18-a461-2eeb976bc2bb"
+       "reference": "urn:uuid:08f95a17-51e3-4d26-8d74-0c02ebc2266b"
       },
       {
-       "reference": "urn:uuid:d762a8f7-259b-4a69-9022-0812012be150"
+       "reference": "urn:uuid:532a37f8-fa56-4381-ad54-8168bb5ce2c2"
       },
       {
-       "reference": "urn:uuid:9372cedb-3973-4f24-97a4-5e0c8bec9f97"
+       "reference": "urn:uuid:5d404889-763b-4deb-9f38-5c1df6d946e2"
       }
      ],
      "note": [
@@ -189,7 +189,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:925074fe-b5bf-4d18-a461-2eeb976bc2bb",
+    "fullUrl": "urn:uuid:08f95a17-51e3-4d26-8d74-0c02ebc2266b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -237,7 +237,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:2cd53f29-3543-48ff-9d3c-9d7f56e5b080",
+      "reference": "urn:uuid:4d7e749a-0b76-4a54-9f47-47c38287375e",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-10-29T09:30:00+01:00",
@@ -253,9 +253,9 @@
      ],
      "valueQuantity": {
       "value": 2.7,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      },
      "note": [
       {
@@ -269,7 +269,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d762a8f7-259b-4a69-9022-0812012be150",
+    "fullUrl": "urn:uuid:532a37f8-fa56-4381-ad54-8168bb5ce2c2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -317,7 +317,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:2cd53f29-3543-48ff-9d3c-9d7f56e5b080",
+      "reference": "urn:uuid:4d7e749a-0b76-4a54-9f47-47c38287375e",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-10-29T09:30:00+01:00",
@@ -353,7 +353,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9372cedb-3973-4f24-97a4-5e0c8bec9f97",
+    "fullUrl": "urn:uuid:5d404889-763b-4deb-9f38-5c1df6d946e2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -406,7 +406,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:2cd53f29-3543-48ff-9d3c-9d7f56e5b080",
+      "reference": "urn:uuid:4d7e749a-0b76-4a54-9f47-47c38287375e",
       "display": "Benevento · Calore, Masseria Di Gioia"
      },
      "effectiveDateTime": "2025-10-29T09:30:00+01:00",
@@ -438,7 +438,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e34eebd1-4962-42eb-a476-a49f8656cf2a",
+    "fullUrl": "urn:uuid:a35cde0f-e118-4d36-84be-dfd35efc058d",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-C9-2025-10-29T0930",
@@ -453,24 +453,24 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-C9-2025-10-29T0930 was imported from ARPA Campania open data, Monitoraggio Fiumi, station C9 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-C9-2025-10-29T0930 was imported from ARPA Campania open data, Monitoraggio Fiumi, station C9 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:19c13442-0d86-454b-9ce9-5c74cf34ea2d"
+       "reference": "urn:uuid:a792a71d-53f9-44ee-af90-3f4d3723115a"
       },
       {
-       "reference": "urn:uuid:925074fe-b5bf-4d18-a461-2eeb976bc2bb"
+       "reference": "urn:uuid:08f95a17-51e3-4d26-8d74-0c02ebc2266b"
       },
       {
-       "reference": "urn:uuid:d762a8f7-259b-4a69-9022-0812012be150"
+       "reference": "urn:uuid:532a37f8-fa56-4381-ad54-8168bb5ce2c2"
       },
       {
-       "reference": "urn:uuid:9372cedb-3973-4f24-97a4-5e0c8bec9f97"
+       "reference": "urn:uuid:5d404889-763b-4deb-9f38-5c1df6d946e2"
       }
      ],
      "occurredDateTime": "2025-10-29T09:30:00+01:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -511,8 +511,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:05c9f41a-e4fb-4d4e-8e4b-605e4bd61d7a",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:4f79f6b9-367d-480c-bff1-5a32b724830e",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

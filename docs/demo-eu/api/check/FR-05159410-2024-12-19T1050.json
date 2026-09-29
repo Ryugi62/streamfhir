@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+    "fullUrl": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:836a46a0-c5b5-4876-a41a-495b61ce3a6e",
+    "fullUrl": "urn:uuid:4be4c865-cb25-450e-9a7d-d2f107a441c5",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:87b75d96-9587-4f7b-b60a-3f7484dfbd57",
+    "fullUrl": "urn:uuid:b0a2ac5b-aa6f-41c9-a117-6ab68c3f9c35",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+      "reference": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
       "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
      },
      "effectiveDateTime": "2024-12-19T10:50:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:d72ada6f-9eb1-4480-880f-eee31f5a9fdd"
+       "reference": "urn:uuid:abb072f2-393d-4fe4-ac35-9f1d5d5dc885"
       },
       {
-       "reference": "urn:uuid:66d0ba81-dc2f-417a-b9e3-e45e73d46c2c"
+       "reference": "urn:uuid:8643fcf4-79d8-46e5-a555-2d78c7045b9c"
       },
       {
-       "reference": "urn:uuid:9ed0530c-b197-49bf-bc48-a99250341a21"
+       "reference": "urn:uuid:1e029eb7-092c-4c63-aa8e-10bd43c9271a"
       },
       {
-       "reference": "urn:uuid:69e53bbd-8fac-4326-a930-fe343ac5a58c"
+       "reference": "urn:uuid:907edfc3-633f-4a33-9d15-5b428e4df304"
       },
       {
-       "reference": "urn:uuid:6a6813f7-a4b2-4c2f-8fc8-a99344b5a701"
+       "reference": "urn:uuid:55cc8180-708d-4540-a712-66ded3bd13ff"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d72ada6f-9eb1-4480-880f-eee31f5a9fdd",
+    "fullUrl": "urn:uuid:abb072f2-393d-4fe4-ac35-9f1d5d5dc885",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+      "reference": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
       "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
      },
      "effectiveDateTime": "2024-12-19T10:50:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:66d0ba81-dc2f-417a-b9e3-e45e73d46c2c",
+    "fullUrl": "urn:uuid:8643fcf4-79d8-46e5-a555-2d78c7045b9c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+      "reference": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
       "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
      },
      "effectiveDateTime": "2024-12-19T10:50:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9ed0530c-b197-49bf-bc48-a99250341a21",
+    "fullUrl": "urn:uuid:1e029eb7-092c-4c63-aa8e-10bd43c9271a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+      "reference": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
       "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
      },
      "effectiveDateTime": "2024-12-19T10:50:00+01:00",
@@ -436,9 +436,9 @@
      ],
      "valueQuantity": {
       "value": 20.8,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:69e53bbd-8fac-4326-a930-fe343ac5a58c",
+    "fullUrl": "urn:uuid:907edfc3-633f-4a33-9d15-5b428e4df304",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+      "reference": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
       "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
      },
      "effectiveDateTime": "2024-12-19T10:50:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6a6813f7-a4b2-4c2f-8fc8-a99344b5a701",
+    "fullUrl": "urn:uuid:55cc8180-708d-4540-a712-66ded3bd13ff",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:b6a26cc9-cec6-4545-96ae-9171fc5981df",
+      "reference": "urn:uuid:07cb3abf-6311-486d-a11c-2e43d3ef78f8",
       "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
      },
      "effectiveDateTime": "2024-12-19T10:50:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:822a66f1-b78a-40c7-9423-3def87459ad5",
+    "fullUrl": "urn:uuid:ccf64591-488e-47d5-8303-97366b35739b",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159410-2024-12-19T1050",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159410-2024-12-19T1050 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159410 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159410-2024-12-19T1050 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159410 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:87b75d96-9587-4f7b-b60a-3f7484dfbd57"
+       "reference": "urn:uuid:b0a2ac5b-aa6f-41c9-a117-6ab68c3f9c35"
       },
       {
-       "reference": "urn:uuid:d72ada6f-9eb1-4480-880f-eee31f5a9fdd"
+       "reference": "urn:uuid:abb072f2-393d-4fe4-ac35-9f1d5d5dc885"
       },
       {
-       "reference": "urn:uuid:66d0ba81-dc2f-417a-b9e3-e45e73d46c2c"
+       "reference": "urn:uuid:8643fcf4-79d8-46e5-a555-2d78c7045b9c"
       },
       {
-       "reference": "urn:uuid:9ed0530c-b197-49bf-bc48-a99250341a21"
+       "reference": "urn:uuid:1e029eb7-092c-4c63-aa8e-10bd43c9271a"
       },
       {
-       "reference": "urn:uuid:69e53bbd-8fac-4326-a930-fe343ac5a58c"
+       "reference": "urn:uuid:907edfc3-633f-4a33-9d15-5b428e4df304"
       },
       {
-       "reference": "urn:uuid:6a6813f7-a4b2-4c2f-8fc8-a99344b5a701"
+       "reference": "urn:uuid:55cc8180-708d-4540-a712-66ded3bd13ff"
       }
      ],
      "occurredDateTime": "2024-12-19T10:50:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:836a46a0-c5b5-4876-a41a-495b61ce3a6e",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:4be4c865-cb25-450e-9a7d-d2f107a441c5",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

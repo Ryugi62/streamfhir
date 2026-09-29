@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+    "fullUrl": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fa0a8b44-13fe-4260-a5f1-d8ba70fdea37",
+    "fullUrl": "urn:uuid:3975fa41-84f5-48ed-af7d-7f673dd0a4ec",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3ebb71f3-fc5c-48ec-adab-2ac91951d2d2",
+    "fullUrl": "urn:uuid:827cbc20-df4e-4c79-a0b2-4fd6cd971bff",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+      "reference": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:4d47afc0-5d3b-4df0-98eb-023163785b0c"
+       "reference": "urn:uuid:0f05d423-c62d-4519-be24-3ca2722a07fd"
       },
       {
-       "reference": "urn:uuid:408f1e81-3c37-4c5c-8e1f-7e2dab8c5710"
+       "reference": "urn:uuid:29911668-97f7-4dbd-9217-a77371cff854"
       },
       {
-       "reference": "urn:uuid:d39ecc0e-811a-408e-a8d2-5ac91ab380ef"
+       "reference": "urn:uuid:2cc72765-9f12-4ca3-9940-e4eca7ad1dd9"
       },
       {
-       "reference": "urn:uuid:ad5084c1-96fe-4587-a57e-34374866a5b7"
+       "reference": "urn:uuid:a9669b70-fa6a-4691-b82f-f745876b8133"
       },
       {
-       "reference": "urn:uuid:70589b9e-12b4-40b5-8287-4f3f81cc4483"
+       "reference": "urn:uuid:c047d6f4-a341-40b2-86fb-80668eda3d6c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4d47afc0-5d3b-4df0-98eb-023163785b0c",
+    "fullUrl": "urn:uuid:0f05d423-c62d-4519-be24-3ca2722a07fd",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+      "reference": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -266,9 +266,9 @@
      ],
      "valueQuantity": {
       "value": 4.99,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:408f1e81-3c37-4c5c-8e1f-7e2dab8c5710",
+    "fullUrl": "urn:uuid:29911668-97f7-4dbd-9217-a77371cff854",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+      "reference": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d39ecc0e-811a-408e-a8d2-5ac91ab380ef",
+    "fullUrl": "urn:uuid:2cc72765-9f12-4ca3-9940-e4eca7ad1dd9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+      "reference": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ad5084c1-96fe-4587-a57e-34374866a5b7",
+    "fullUrl": "urn:uuid:a9669b70-fa6a-4691-b82f-f745876b8133",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+      "reference": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:70589b9e-12b4-40b5-8287-4f3f81cc4483",
+    "fullUrl": "urn:uuid:c047d6f4-a341-40b2-86fb-80668eda3d6c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:c2cad2f0-1572-4fda-80f5-093a1fd940d0",
+      "reference": "urn:uuid:b2ef5143-7ca8-4857-87ce-6763e5322058",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:03cb864c-68f0-4281-96e7-839447094421",
+    "fullUrl": "urn:uuid:d2df0cb5-5a07-450e-a8e4-660f00901339",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05174000-2024-12-17T0934",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05174000-2024-12-17T0934 was imported from Hub'Eau qualite_rivieres (Sandre), station 05174000 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05174000-2024-12-17T0934 was imported from Hub'Eau qualite_rivieres (Sandre), station 05174000 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:3ebb71f3-fc5c-48ec-adab-2ac91951d2d2"
+       "reference": "urn:uuid:827cbc20-df4e-4c79-a0b2-4fd6cd971bff"
       },
       {
-       "reference": "urn:uuid:4d47afc0-5d3b-4df0-98eb-023163785b0c"
+       "reference": "urn:uuid:0f05d423-c62d-4519-be24-3ca2722a07fd"
       },
       {
-       "reference": "urn:uuid:408f1e81-3c37-4c5c-8e1f-7e2dab8c5710"
+       "reference": "urn:uuid:29911668-97f7-4dbd-9217-a77371cff854"
       },
       {
-       "reference": "urn:uuid:d39ecc0e-811a-408e-a8d2-5ac91ab380ef"
+       "reference": "urn:uuid:2cc72765-9f12-4ca3-9940-e4eca7ad1dd9"
       },
       {
-       "reference": "urn:uuid:ad5084c1-96fe-4587-a57e-34374866a5b7"
+       "reference": "urn:uuid:a9669b70-fa6a-4691-b82f-f745876b8133"
       },
       {
-       "reference": "urn:uuid:70589b9e-12b4-40b5-8287-4f3f81cc4483"
+       "reference": "urn:uuid:c047d6f4-a341-40b2-86fb-80668eda3d6c"
       }
      ],
      "occurredDateTime": "2024-12-17T09:34:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:fa0a8b44-13fe-4260-a5f1-d8ba70fdea37",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:3975fa41-84f5-48ed-af7d-7f673dd0a4ec",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

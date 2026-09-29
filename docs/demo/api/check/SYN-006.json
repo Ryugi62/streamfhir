@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+    "fullUrl": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -61,7 +61,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7189288f-8897-4dc2-ae20-fe919ad87fff",
+    "fullUrl": "urn:uuid:46baa896-460c-42a5-8be7-3a0989d7c218",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -80,7 +80,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -96,7 +96,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -107,7 +107,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879",
+    "fullUrl": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -145,7 +145,7 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "createdDateTime": "2026-09-18T11:20:00+01:00",
@@ -161,7 +161,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c7985aa2-d1f3-42cd-a376-438e57eb9c2c",
+    "fullUrl": "urn:uuid:e8a6f45c-597f-458a-bac3-073b6e089d64",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -219,7 +219,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -234,60 +234,60 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:a447f704-71b5-4025-ba3a-1c4140ee7a69"
+       "reference": "urn:uuid:7e859b48-2626-471e-8c54-1523848178a0"
       },
       {
-       "reference": "urn:uuid:1abae9b7-1c01-4e63-94bb-bf781fd48f93"
+       "reference": "urn:uuid:15524842-0ef1-4774-b1c3-1cbe6d60e6ac"
       },
       {
-       "reference": "urn:uuid:1e39f8b3-bff7-4449-b105-95d09c76e3e2"
+       "reference": "urn:uuid:d8bfcbf5-442e-44cc-bd37-a21fdbdc65eb"
       },
       {
-       "reference": "urn:uuid:1681eb6c-eb6f-4268-aff6-65401ea7eef8"
+       "reference": "urn:uuid:b9d8cc37-4f94-4a7a-bd10-ba298189bac9"
       },
       {
-       "reference": "urn:uuid:7e82f4f1-203b-4f05-88f2-2c517a36032f"
+       "reference": "urn:uuid:b75b7ea2-018f-4bd3-a4aa-8102718f03ad"
       },
       {
-       "reference": "urn:uuid:ee0ec533-0624-44b9-a93b-d8441a1be27d"
+       "reference": "urn:uuid:6166980e-8945-4619-8cf0-114d08a8b128"
       },
       {
-       "reference": "urn:uuid:c1b1e899-ef0e-45e0-8f28-cf64fb7f9fb2"
+       "reference": "urn:uuid:79a364d2-8199-4b0f-a2e3-ccefb6b40f25"
       },
       {
-       "reference": "urn:uuid:64cbb41e-f94c-40e8-bd8b-3de034f161d6"
+       "reference": "urn:uuid:241fb2f5-0644-4bca-bbe2-b8d0d89d1a58"
       },
       {
-       "reference": "urn:uuid:895d133c-87b3-430d-86a4-6550d3329de9"
+       "reference": "urn:uuid:b1bb4fd4-6dcc-469d-916b-28902b3effe2"
       },
       {
-       "reference": "urn:uuid:87ea1c1f-33d8-44ff-9c82-0679d00170f1"
+       "reference": "urn:uuid:651aad6d-1f7f-495e-9217-cf9d0e1bb6b8"
       },
       {
-       "reference": "urn:uuid:6d448da9-7bc6-411a-8c0e-8e30e3e384d0"
+       "reference": "urn:uuid:eb73ec43-31d4-4e80-ac93-397871543860"
       },
       {
-       "reference": "urn:uuid:6f75002b-81a5-458a-a7a3-d5505935cfc2"
+       "reference": "urn:uuid:0964e15a-dd78-498d-a90c-bab24fc7bd14"
       },
       {
-       "reference": "urn:uuid:9a2bd0df-70f8-4240-88a8-bfd390cfc9c4"
+       "reference": "urn:uuid:1b222315-7fb1-4dbd-a7ab-348db016e080"
       },
       {
-       "reference": "urn:uuid:1ae08755-bd50-4ee7-aedb-af8a7cf4f28c"
+       "reference": "urn:uuid:969695b9-5b99-46cc-be20-e3c5b334a6be"
       },
       {
-       "reference": "urn:uuid:6b79c01b-7380-4ec0-b8f6-f50dede1b776"
+       "reference": "urn:uuid:7916fefb-c11e-4dfe-8f52-d8e0b769a78e"
       },
       {
-       "reference": "urn:uuid:5beb8917-7b3b-442d-a43c-84459769552b"
+       "reference": "urn:uuid:a7e3c782-32e3-4a10-83d5-465d2cf97d3d"
       },
       {
-       "reference": "urn:uuid:af30d22b-4b40-4375-9eb6-888c2c2f0713"
+       "reference": "urn:uuid:ff798139-59a4-46b1-ba1e-cb344b010aed"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879"
+       "reference": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4"
       }
      ]
     },
@@ -297,7 +297,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a447f704-71b5-4025-ba3a-1c4140ee7a69",
+    "fullUrl": "urn:uuid:7e859b48-2626-471e-8c54-1523848178a0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -355,7 +355,7 @@
       "text": "Bank stability score"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -376,7 +376,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1abae9b7-1c01-4e63-94bb-bf781fd48f93",
+    "fullUrl": "urn:uuid:15524842-0ef1-4774-b1c3-1cbe6d60e6ac",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -434,7 +434,7 @@
       "text": "Riparian zone score"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -455,7 +455,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1e39f8b3-bff7-4449-b105-95d09c76e3e2",
+    "fullUrl": "urn:uuid:d8bfcbf5-442e-44cc-bd37-a21fdbdc65eb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -513,7 +513,7 @@
       "text": "In-stream habitat score"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -534,7 +534,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1681eb6c-eb6f-4268-aff6-65401ea7eef8",
+    "fullUrl": "urn:uuid:b9d8cc37-4f94-4a7a-bd10-ba298189bac9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -597,7 +597,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -623,7 +623,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7e82f4f1-203b-4f05-88f2-2c517a36032f",
+    "fullUrl": "urn:uuid:b75b7ea2-018f-4bd3-a4aa-8102718f03ad",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -686,7 +686,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -712,7 +712,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ee0ec533-0624-44b9-a93b-d8441a1be27d",
+    "fullUrl": "urn:uuid:6166980e-8945-4619-8cf0-114d08a8b128",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -780,7 +780,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -795,9 +795,9 @@
      ],
      "valueQuantity": {
       "value": 12,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -806,7 +806,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c1b1e899-ef0e-45e0-8f28-cf64fb7f9fb2",
+    "fullUrl": "urn:uuid:79a364d2-8199-4b0f-a2e3-ccefb6b40f25",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -864,7 +864,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -890,7 +890,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:64cbb41e-f94c-40e8-bd8b-3de034f161d6",
+    "fullUrl": "urn:uuid:241fb2f5-0644-4bca-bbe2-b8d0d89d1a58",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -948,7 +948,7 @@
       "text": "Transparency tube depth"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -974,7 +974,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:895d133c-87b3-430d-86a4-6550d3329de9",
+    "fullUrl": "urn:uuid:b1bb4fd4-6dcc-469d-916b-28902b3effe2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1032,7 +1032,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1057,7 +1057,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879"
+       "reference": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4"
       }
      ]
     },
@@ -1067,7 +1067,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:87ea1c1f-33d8-44ff-9c82-0679d00170f1",
+    "fullUrl": "urn:uuid:651aad6d-1f7f-495e-9217-cf9d0e1bb6b8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1125,7 +1125,7 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1150,7 +1150,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879"
+       "reference": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4"
       }
      ]
     },
@@ -1160,7 +1160,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6d448da9-7bc6-411a-8c0e-8e30e3e384d0",
+    "fullUrl": "urn:uuid:eb73ec43-31d4-4e80-ac93-397871543860",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1218,7 +1218,7 @@
       "text": "Odour"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1248,7 +1248,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6f75002b-81a5-458a-a7a3-d5505935cfc2",
+    "fullUrl": "urn:uuid:0964e15a-dd78-498d-a90c-bab24fc7bd14",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1306,7 +1306,7 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1336,7 +1336,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9a2bd0df-70f8-4240-88a8-bfd390cfc9c4",
+    "fullUrl": "urn:uuid:1b222315-7fb1-4dbd-a7ab-348db016e080",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1394,7 +1394,7 @@
       "text": "Dead fish seen"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1410,7 +1410,7 @@
      "valueBoolean": false,
      "derivedFrom": [
       {
-       "reference": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879"
+       "reference": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4"
       }
      ]
     },
@@ -1420,7 +1420,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1ae08755-bd50-4ee7-aedb-af8a7cf4f28c",
+    "fullUrl": "urn:uuid:969695b9-5b99-46cc-be20-e3c5b334a6be",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1478,7 +1478,7 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1499,7 +1499,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6b79c01b-7380-4ec0-b8f6-f50dede1b776",
+    "fullUrl": "urn:uuid:7916fefb-c11e-4dfe-8f52-d8e0b769a78e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1557,7 +1557,7 @@
       "text": "Pets or livestock in the water"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1578,7 +1578,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5beb8917-7b3b-442d-a43c-84459769552b",
+    "fullUrl": "urn:uuid:a7e3c782-32e3-4a10-83d5-465d2cf97d3d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1636,7 +1636,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1666,7 +1666,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:af30d22b-4b40-4375-9eb6-888c2c2f0713",
+    "fullUrl": "urn:uuid:ff798139-59a4-46b1-ba1e-cb344b010aed",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1724,7 +1724,7 @@
       "text": "Bloom jar/stick test"
      },
      "subject": {
-      "reference": "urn:uuid:fd0703c8-22dd-4015-9d8d-90847b2e24f9",
+      "reference": "urn:uuid:6566d2f7-e3ac-4a7f-a595-1fa21e28e4ee",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-18T11:20:00+01:00",
@@ -1749,7 +1749,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879"
+       "reference": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4"
       }
      ]
     },
@@ -1759,7 +1759,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ab52c5c7-5797-46d9-92b3-2607547a38e8",
+    "fullUrl": "urn:uuid:15572897-1cd0-4163-a7cc-41a2055a00d1",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-SYN-006",
@@ -1784,69 +1784,69 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-006 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-006 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:c7985aa2-d1f3-42cd-a376-438e57eb9c2c"
+       "reference": "urn:uuid:e8a6f45c-597f-458a-bac3-073b6e089d64"
       },
       {
-       "reference": "urn:uuid:a447f704-71b5-4025-ba3a-1c4140ee7a69"
+       "reference": "urn:uuid:7e859b48-2626-471e-8c54-1523848178a0"
       },
       {
-       "reference": "urn:uuid:1abae9b7-1c01-4e63-94bb-bf781fd48f93"
+       "reference": "urn:uuid:15524842-0ef1-4774-b1c3-1cbe6d60e6ac"
       },
       {
-       "reference": "urn:uuid:1e39f8b3-bff7-4449-b105-95d09c76e3e2"
+       "reference": "urn:uuid:d8bfcbf5-442e-44cc-bd37-a21fdbdc65eb"
       },
       {
-       "reference": "urn:uuid:1681eb6c-eb6f-4268-aff6-65401ea7eef8"
+       "reference": "urn:uuid:b9d8cc37-4f94-4a7a-bd10-ba298189bac9"
       },
       {
-       "reference": "urn:uuid:7e82f4f1-203b-4f05-88f2-2c517a36032f"
+       "reference": "urn:uuid:b75b7ea2-018f-4bd3-a4aa-8102718f03ad"
       },
       {
-       "reference": "urn:uuid:ee0ec533-0624-44b9-a93b-d8441a1be27d"
+       "reference": "urn:uuid:6166980e-8945-4619-8cf0-114d08a8b128"
       },
       {
-       "reference": "urn:uuid:c1b1e899-ef0e-45e0-8f28-cf64fb7f9fb2"
+       "reference": "urn:uuid:79a364d2-8199-4b0f-a2e3-ccefb6b40f25"
       },
       {
-       "reference": "urn:uuid:64cbb41e-f94c-40e8-bd8b-3de034f161d6"
+       "reference": "urn:uuid:241fb2f5-0644-4bca-bbe2-b8d0d89d1a58"
       },
       {
-       "reference": "urn:uuid:895d133c-87b3-430d-86a4-6550d3329de9"
+       "reference": "urn:uuid:b1bb4fd4-6dcc-469d-916b-28902b3effe2"
       },
       {
-       "reference": "urn:uuid:87ea1c1f-33d8-44ff-9c82-0679d00170f1"
+       "reference": "urn:uuid:651aad6d-1f7f-495e-9217-cf9d0e1bb6b8"
       },
       {
-       "reference": "urn:uuid:6d448da9-7bc6-411a-8c0e-8e30e3e384d0"
+       "reference": "urn:uuid:eb73ec43-31d4-4e80-ac93-397871543860"
       },
       {
-       "reference": "urn:uuid:6f75002b-81a5-458a-a7a3-d5505935cfc2"
+       "reference": "urn:uuid:0964e15a-dd78-498d-a90c-bab24fc7bd14"
       },
       {
-       "reference": "urn:uuid:9a2bd0df-70f8-4240-88a8-bfd390cfc9c4"
+       "reference": "urn:uuid:1b222315-7fb1-4dbd-a7ab-348db016e080"
       },
       {
-       "reference": "urn:uuid:1ae08755-bd50-4ee7-aedb-af8a7cf4f28c"
+       "reference": "urn:uuid:969695b9-5b99-46cc-be20-e3c5b334a6be"
       },
       {
-       "reference": "urn:uuid:6b79c01b-7380-4ec0-b8f6-f50dede1b776"
+       "reference": "urn:uuid:7916fefb-c11e-4dfe-8f52-d8e0b769a78e"
       },
       {
-       "reference": "urn:uuid:5beb8917-7b3b-442d-a43c-84459769552b"
+       "reference": "urn:uuid:a7e3c782-32e3-4a10-83d5-465d2cf97d3d"
       },
       {
-       "reference": "urn:uuid:af30d22b-4b40-4375-9eb6-888c2c2f0713"
+       "reference": "urn:uuid:ff798139-59a4-46b1-ba1e-cb344b010aed"
       },
       {
-       "reference": "urn:uuid:a6bd0aab-ae2f-405d-9d96-7cae950c9879"
+       "reference": "urn:uuid:a09b561f-9949-4461-a722-f8393ff24fc4"
       }
      ],
      "occurredDateTime": "2026-09-18T11:20:00+01:00",
-     "recorded": "2026-09-29T13:35:56+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -1886,8 +1886,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:7189288f-8897-4dc2-ae20-fe919ad87fff",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:46baa896-460c-42a5-8be7-3a0989d7c218",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

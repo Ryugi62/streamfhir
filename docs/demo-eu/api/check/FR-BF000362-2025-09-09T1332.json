@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:7cfc31c8-d56b-416f-a278-5ad504c07ea3",
+    "fullUrl": "urn:uuid:6d78515c-b409-4914-8593-3791fefbc468",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3114254f-1412-4a71-b31f-3dc781457aa2",
+    "fullUrl": "urn:uuid:ca65c953-5cb3-45eb-abda-a82f1e9f897a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:27b67f82-de91-46f9-ad1a-e714a92593c6",
+    "fullUrl": "urn:uuid:286f133f-0212-4d21-9b88-da5fe60671b0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:7cfc31c8-d56b-416f-a278-5ad504c07ea3",
+      "reference": "urn:uuid:6d78515c-b409-4914-8593-3791fefbc468",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-09-09T13:32:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:028061c3-b8b9-4d61-b569-ab31180798ce"
+       "reference": "urn:uuid:58492410-6243-4436-92c0-3eb6a7153089"
       },
       {
-       "reference": "urn:uuid:3a5f5442-f864-41ef-ac95-bc5edfd56347"
+       "reference": "urn:uuid:01792ffd-4bb8-4f9f-8bbf-b8d7e888913d"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:028061c3-b8b9-4d61-b569-ab31180798ce",
+    "fullUrl": "urn:uuid:58492410-6243-4436-92c0-3eb6a7153089",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:7cfc31c8-d56b-416f-a278-5ad504c07ea3",
+      "reference": "urn:uuid:6d78515c-b409-4914-8593-3791fefbc468",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-09-09T13:32:00+02:00",
@@ -257,9 +257,9 @@
      ],
      "valueQuantity": {
       "value": 4.1,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3a5f5442-f864-41ef-ac95-bc5edfd56347",
+    "fullUrl": "urn:uuid:01792ffd-4bb8-4f9f-8bbf-b8d7e888913d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:7cfc31c8-d56b-416f-a278-5ad504c07ea3",
+      "reference": "urn:uuid:6d78515c-b409-4914-8593-3791fefbc468",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-09-09T13:32:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1dcb72ea-7f5b-4d5c-bfb7-8346a9800e57",
+    "fullUrl": "urn:uuid:3a44787b-057e-4f6b-8a5b-87f1824d938b",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000362-2025-09-09T1332",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000362-2025-09-09T1332 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000362 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000362-2025-09-09T1332 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000362 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:27b67f82-de91-46f9-ad1a-e714a92593c6"
+       "reference": "urn:uuid:286f133f-0212-4d21-9b88-da5fe60671b0"
       },
       {
-       "reference": "urn:uuid:028061c3-b8b9-4d61-b569-ab31180798ce"
+       "reference": "urn:uuid:58492410-6243-4436-92c0-3eb6a7153089"
       },
       {
-       "reference": "urn:uuid:3a5f5442-f864-41ef-ac95-bc5edfd56347"
+       "reference": "urn:uuid:01792ffd-4bb8-4f9f-8bbf-b8d7e888913d"
       }
      ],
      "occurredDateTime": "2025-09-09T13:32:00+02:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:3114254f-1412-4a71-b31f-3dc781457aa2",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:ca65c953-5cb3-45eb-abda-a82f1e9f897a",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

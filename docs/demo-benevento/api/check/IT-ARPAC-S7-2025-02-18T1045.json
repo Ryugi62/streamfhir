@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:ec0225a9-397c-48ef-b0cc-68e5405f1e5a",
+    "fullUrl": "urn:uuid:387ed4a4-d663-4a20-9ea0-82e582be99b1",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f63d3e1e-1c97-44dd-b53a-926e771e5876",
+    "fullUrl": "urn:uuid:62712eed-dcbf-4757-93a1-8334425ad628",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4e967912-98d3-4b80-879f-e5167a8843d1",
+    "fullUrl": "urn:uuid:a219b1e1-f8e0-4d07-b0d9-0361725cad5b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:ec0225a9-397c-48ef-b0cc-68e5405f1e5a",
+      "reference": "urn:uuid:387ed4a4-d663-4a20-9ea0-82e582be99b1",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-02-18T10:45:00+01:00",
@@ -161,16 +161,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:3faad97a-913d-4c73-91ae-f96993d550b5"
+       "reference": "urn:uuid:bef9340a-d0bf-4e65-8a9b-c1eae6a3e493"
       },
       {
-       "reference": "urn:uuid:5159c63e-03e3-4c8a-8646-2c41039f76a8"
+       "reference": "urn:uuid:95a3e9a8-8bcd-448f-85e5-f70cf6e6e277"
       },
       {
-       "reference": "urn:uuid:42286800-b795-47f8-a862-856d19fdee44"
+       "reference": "urn:uuid:73b53778-8f0c-4f91-b061-2f4863a2b310"
       },
       {
-       "reference": "urn:uuid:eccd8ba2-c357-46be-920b-9ffe3e79e228"
+       "reference": "urn:uuid:9084ae18-13c7-4a42-9f7f-930fc945650d"
       }
      ]
     },
@@ -180,7 +180,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3faad97a-913d-4c73-91ae-f96993d550b5",
+    "fullUrl": "urn:uuid:bef9340a-d0bf-4e65-8a9b-c1eae6a3e493",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +228,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:ec0225a9-397c-48ef-b0cc-68e5405f1e5a",
+      "reference": "urn:uuid:387ed4a4-d663-4a20-9ea0-82e582be99b1",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-02-18T10:45:00+01:00",
@@ -244,9 +244,9 @@
      ],
      "valueQuantity": {
       "value": 2.02,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      }
     },
     "request": {
@@ -255,7 +255,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5159c63e-03e3-4c8a-8646-2c41039f76a8",
+    "fullUrl": "urn:uuid:95a3e9a8-8bcd-448f-85e5-f70cf6e6e277",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +303,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:ec0225a9-397c-48ef-b0cc-68e5405f1e5a",
+      "reference": "urn:uuid:387ed4a4-d663-4a20-9ea0-82e582be99b1",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-02-18T10:45:00+01:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:42286800-b795-47f8-a862-856d19fdee44",
+    "fullUrl": "urn:uuid:73b53778-8f0c-4f91-b061-2f4863a2b310",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +387,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:ec0225a9-397c-48ef-b0cc-68e5405f1e5a",
+      "reference": "urn:uuid:387ed4a4-d663-4a20-9ea0-82e582be99b1",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-02-18T10:45:00+01:00",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:eccd8ba2-c357-46be-920b-9ffe3e79e228",
+    "fullUrl": "urn:uuid:9084ae18-13c7-4a42-9f7f-930fc945650d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +467,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:ec0225a9-397c-48ef-b0cc-68e5405f1e5a",
+      "reference": "urn:uuid:387ed4a4-d663-4a20-9ea0-82e582be99b1",
       "display": "Benevento · Sabato, Ponte SP3"
      },
      "effectiveDateTime": "2025-02-18T10:45:00+01:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:33b2aec5-1db5-431b-98d6-83ba44ed805d",
+    "fullUrl": "urn:uuid:2697fc2c-0de8-4197-a3bb-cc05a830eece",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-S7-2025-02-18T1045",
@@ -509,27 +509,27 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2025-02-18T1045 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2025-02-18T1045 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:4e967912-98d3-4b80-879f-e5167a8843d1"
+       "reference": "urn:uuid:a219b1e1-f8e0-4d07-b0d9-0361725cad5b"
       },
       {
-       "reference": "urn:uuid:3faad97a-913d-4c73-91ae-f96993d550b5"
+       "reference": "urn:uuid:bef9340a-d0bf-4e65-8a9b-c1eae6a3e493"
       },
       {
-       "reference": "urn:uuid:5159c63e-03e3-4c8a-8646-2c41039f76a8"
+       "reference": "urn:uuid:95a3e9a8-8bcd-448f-85e5-f70cf6e6e277"
       },
       {
-       "reference": "urn:uuid:42286800-b795-47f8-a862-856d19fdee44"
+       "reference": "urn:uuid:73b53778-8f0c-4f91-b061-2f4863a2b310"
       },
       {
-       "reference": "urn:uuid:eccd8ba2-c357-46be-920b-9ffe3e79e228"
+       "reference": "urn:uuid:9084ae18-13c7-4a42-9f7f-930fc945650d"
       }
      ],
      "occurredDateTime": "2025-02-18T10:45:00+01:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -570,8 +570,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:f63d3e1e-1c97-44dd-b53a-926e771e5876",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:62712eed-dcbf-4757-93a1-8334425ad628",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

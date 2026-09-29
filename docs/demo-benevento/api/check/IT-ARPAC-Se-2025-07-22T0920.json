@@ -16,7 +16,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+    "fullUrl": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -63,7 +63,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ce987158-70e5-4b9f-8ae6-910a08be81d0",
+    "fullUrl": "urn:uuid:1bdb080c-4a53-4f63-8d25-942111a7a956",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -77,7 +77,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -93,7 +93,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -104,7 +104,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:947d8ee0-f401-4165-9932-8143547697b7",
+    "fullUrl": "urn:uuid:dce851e3-4032-4121-8a10-826612e3ab32",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -152,7 +152,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -168,13 +168,13 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:89c39397-11a0-4692-a58d-265c232d5efa"
+       "reference": "urn:uuid:51cb386a-2efb-49b3-9c59-c518b686cd16"
       },
       {
-       "reference": "urn:uuid:492f9207-9260-4eac-adb3-d55bd689ecc7"
+       "reference": "urn:uuid:579cf8e7-11c2-4ad0-a2bd-95f2e3719c37"
       },
       {
-       "reference": "urn:uuid:9a23b10c-b04f-455c-9ea4-709b91f36888"
+       "reference": "urn:uuid:cb3b025f-ed4f-484d-abe8-187a138d6c69"
       }
      ],
      "note": [
@@ -189,7 +189,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:89c39397-11a0-4692-a58d-265c232d5efa",
+    "fullUrl": "urn:uuid:51cb386a-2efb-49b3-9c59-c518b686cd16",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -237,7 +237,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -253,9 +253,9 @@
      ],
      "valueQuantity": {
       "value": 1.0,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      },
      "note": [
       {
@@ -269,7 +269,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:492f9207-9260-4eac-adb3-d55bd689ecc7",
+    "fullUrl": "urn:uuid:579cf8e7-11c2-4ad0-a2bd-95f2e3719c37",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -317,7 +317,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -353,7 +353,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9a23b10c-b04f-455c-9ea4-709b91f36888",
+    "fullUrl": "urn:uuid:cb3b025f-ed4f-484d-abe8-187a138d6c69",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -406,7 +406,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "reference": "urn:uuid:1ac895ca-366c-487b-9a00-37f52823fafb",
       "display": "Benevento · Serretelle, Ponte Corvo"
      },
      "effectiveDateTime": "2025-07-22T09:20:00+02:00",
@@ -438,7 +438,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5365b0e6-e6c5-4e63-bc66-f1a185ba34af",
+    "fullUrl": "urn:uuid:e7e5c501-e80e-4a19-bf68-41445c66d378",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-IT-ARPAC-Se-2025-07-22T0920",
@@ -453,24 +453,24 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-Se-2025-07-22T0920 was imported from ARPA Campania open data, Monitoraggio Fiumi, station Se and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-Se-2025-07-22T0920 was imported from ARPA Campania open data, Monitoraggio Fiumi, station Se and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:947d8ee0-f401-4165-9932-8143547697b7"
+       "reference": "urn:uuid:dce851e3-4032-4121-8a10-826612e3ab32"
       },
       {
-       "reference": "urn:uuid:89c39397-11a0-4692-a58d-265c232d5efa"
+       "reference": "urn:uuid:51cb386a-2efb-49b3-9c59-c518b686cd16"
       },
       {
-       "reference": "urn:uuid:492f9207-9260-4eac-adb3-d55bd689ecc7"
+       "reference": "urn:uuid:579cf8e7-11c2-4ad0-a2bd-95f2e3719c37"
       },
       {
-       "reference": "urn:uuid:9a23b10c-b04f-455c-9ea4-709b91f36888"
+       "reference": "urn:uuid:cb3b025f-ed4f-484d-abe8-187a138d6c69"
       }
      ],
      "occurredDateTime": "2025-07-22T09:20:00+02:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -511,8 +511,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ce987158-70e5-4b9f-8ae6-910a08be81d0",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:1bdb080c-4a53-4f63-8d25-942111a7a956",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

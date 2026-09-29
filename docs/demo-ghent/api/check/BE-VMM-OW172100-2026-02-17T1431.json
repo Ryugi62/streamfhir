@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+    "fullUrl": "urn:uuid:694ec84a-b9a3-4379-8fc2-f45c20ae68e0",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f62e256f-b827-45c0-a978-2115af8e77cc",
+    "fullUrl": "urn:uuid:2da58c29-1493-4560-a2c9-850dd76c392a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a854d9e9-4c82-4a3b-9421-2ad80eaa018b",
+    "fullUrl": "urn:uuid:686b9d72-b429-4eab-85eb-e18446a557f2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -145,7 +145,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "reference": "urn:uuid:694ec84a-b9a3-4379-8fc2-f45c20ae68e0",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-02-17T14:31:39+01:00",
@@ -161,16 +161,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:b506c2da-5bcf-4117-b1d2-48c03ad0c43e"
+       "reference": "urn:uuid:d0d4bb9e-ede9-4124-a800-cbd16e8fc854"
       },
       {
-       "reference": "urn:uuid:0a8a0e6b-a24e-4ecb-a98d-1a972ca1f701"
+       "reference": "urn:uuid:74f91eb2-fb7b-4fb7-8477-94df1ab5797a"
       },
       {
-       "reference": "urn:uuid:b634124b-d6fe-4235-acad-ca78885ba65c"
+       "reference": "urn:uuid:df02616b-ad34-4b71-bd86-86467cbbaed3"
       },
       {
-       "reference": "urn:uuid:81275f10-dea9-4328-b1a9-d2695d6190eb"
+       "reference": "urn:uuid:be1b2a12-f9a3-47bb-a0db-ea5fe2d6bed9"
       }
      ]
     },
@@ -180,7 +180,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b506c2da-5bcf-4117-b1d2-48c03ad0c43e",
+    "fullUrl": "urn:uuid:d0d4bb9e-ede9-4124-a800-cbd16e8fc854",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -228,7 +228,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "reference": "urn:uuid:694ec84a-b9a3-4379-8fc2-f45c20ae68e0",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-02-17T14:31:39+01:00",
@@ -244,9 +244,9 @@
      ],
      "valueQuantity": {
       "value": 5.9,
-      "unit": "mg/L",
+      "unit": "mg/L as N",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{N}/L"
      }
     },
     "request": {
@@ -255,7 +255,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0a8a0e6b-a24e-4ecb-a98d-1a972ca1f701",
+    "fullUrl": "urn:uuid:74f91eb2-fb7b-4fb7-8477-94df1ab5797a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,7 +303,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "reference": "urn:uuid:694ec84a-b9a3-4379-8fc2-f45c20ae68e0",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-02-17T14:31:39+01:00",
@@ -334,7 +334,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b634124b-d6fe-4235-acad-ca78885ba65c",
+    "fullUrl": "urn:uuid:df02616b-ad34-4b71-bd86-86467cbbaed3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,7 +387,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "reference": "urn:uuid:694ec84a-b9a3-4379-8fc2-f45c20ae68e0",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-02-17T14:31:39+01:00",
@@ -414,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:81275f10-dea9-4328-b1a9-d2695d6190eb",
+    "fullUrl": "urn:uuid:be1b2a12-f9a3-47bb-a0db-ea5fe2d6bed9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -467,7 +467,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "reference": "urn:uuid:694ec84a-b9a3-4379-8fc2-f45c20ae68e0",
       "display": "Ghent · Bovenschelde in Gent"
      },
      "effectiveDateTime": "2026-02-17T14:31:39+01:00",
@@ -494,7 +494,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:46f0720f-281e-4e2f-a57f-053daeeb55da",
+    "fullUrl": "urn:uuid:6a2897cb-a2ea-4ed3-8d60-71c1de2ce98d",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-BE-VMM-OW172100-2026-02-17T1431",
@@ -509,27 +509,27 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW172100-2026-02-17T1431 was imported from VMM Databank waterkwaliteit, station OW172100 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW172100-2026-02-17T1431 was imported from VMM Databank waterkwaliteit, station OW172100 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:a854d9e9-4c82-4a3b-9421-2ad80eaa018b"
+       "reference": "urn:uuid:686b9d72-b429-4eab-85eb-e18446a557f2"
       },
       {
-       "reference": "urn:uuid:b506c2da-5bcf-4117-b1d2-48c03ad0c43e"
+       "reference": "urn:uuid:d0d4bb9e-ede9-4124-a800-cbd16e8fc854"
       },
       {
-       "reference": "urn:uuid:0a8a0e6b-a24e-4ecb-a98d-1a972ca1f701"
+       "reference": "urn:uuid:74f91eb2-fb7b-4fb7-8477-94df1ab5797a"
       },
       {
-       "reference": "urn:uuid:b634124b-d6fe-4235-acad-ca78885ba65c"
+       "reference": "urn:uuid:df02616b-ad34-4b71-bd86-86467cbbaed3"
       },
       {
-       "reference": "urn:uuid:81275f10-dea9-4328-b1a9-d2695d6190eb"
+       "reference": "urn:uuid:be1b2a12-f9a3-47bb-a0db-ea5fe2d6bed9"
       }
      ],
      "occurredDateTime": "2026-02-17T14:31:39+01:00",
-     "recorded": "2026-09-29T13:49:36+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -570,8 +570,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:f62e256f-b827-45c0-a978-2115af8e77cc",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:2da58c29-1493-4560-a2c9-850dd76c392a",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

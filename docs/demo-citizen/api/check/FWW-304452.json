@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
+    "fullUrl": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -23,7 +23,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Coimbra region · Estrela Lake (FWW-40.5885,-8.6439)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Central Portugal · Estrela Lake (FWW-40.5885,-8.6439)</p></div>"
      },
      "identifier": [
       {
@@ -32,7 +32,7 @@
       }
      ],
      "status": "active",
-     "name": "Coimbra region · Estrela Lake",
+     "name": "Central Portugal · Estrela Lake",
      "description": "Real citizen-science site (FreshWater Watch, Lake)",
      "mode": "instance",
      "physicalType": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6c99be63-7604-44c5-8649-cc756a58995c",
+    "fullUrl": "urn:uuid:c605ccd0-6ec2-4753-b638-cd3ad50beb7c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:010cba42-540b-4296-a663-51699d415b0f",
+    "fullUrl": "urn:uuid:dd83636b-79c6-41bc-bdac-849cd7b4ae29",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -112,7 +112,7 @@
      "status": "completed",
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Coimbra region · Estrela Lake, record FWW-304452</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Central Portugal · Estrela Lake, record FWW-304452</p></div>"
      },
      "identifier": [
       {
@@ -130,10 +130,10 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
+      "reference": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
+      "display": "Central Portugal · Estrela Lake"
      },
-     "createdDateTime": "2023-03-24T11:00:00+00:00",
+     "createdDateTime": "2023-03-24T16:02:00+00:00",
      "content": {
       "contentType": "image/jpeg",
       "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/321/attachments/292",
@@ -146,7 +146,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6ab83366-fe02-4835-b03b-e028babd1b9a",
+    "fullUrl": "urn:uuid:2d37458c-fb72-41e5-b012-a612ea1d247a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -168,7 +168,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Coimbra region · Estrela Lake on 2023-03-24T11:00:00+00:00: 5 indicators (final, record FWW-304452)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Central Portugal · Estrela Lake on 2023-03-24T16:02:00+00:00: 4 indicators (final, record FWW-304452)</p></div>"
      },
      "identifier": [
       {
@@ -199,10 +199,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
+      "reference": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
+      "display": "Central Portugal · Estrela Lake"
      },
-     "effectiveDateTime": "2023-03-24T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-24T16:02:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -214,24 +214,21 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:ed24f12a-6700-4725-b81f-c90a7fe67215"
+       "reference": "urn:uuid:55ee0d08-2521-4a85-8e93-85e019a28279"
       },
       {
-       "reference": "urn:uuid:6a955c9e-01f5-4f84-847d-ba6bea613725"
+       "reference": "urn:uuid:dd7b8743-2a6c-41fb-b5c0-ac1679bbaeb6"
       },
       {
-       "reference": "urn:uuid:0894a6af-ae91-45e7-914c-10ee0f825dac"
+       "reference": "urn:uuid:a77ee2de-249f-4cae-8075-5ac19c1052cc"
       },
       {
-       "reference": "urn:uuid:84abfed9-717d-4e0a-8924-d8719eefecb6"
-      },
-      {
-       "reference": "urn:uuid:8ede07e6-dff8-442d-9140-14106af9d3c2"
+       "reference": "urn:uuid:73441fd5-832f-4287-9e8b-3e81738ffb1e"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:010cba42-540b-4296-a663-51699d415b0f"
+       "reference": "urn:uuid:dd83636b-79c6-41bc-bdac-849cd7b4ae29"
       }
      ]
     },
@@ -241,7 +238,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ed24f12a-6700-4725-b81f-c90a7fe67215",
+    "fullUrl": "urn:uuid:55ee0d08-2521-4a85-8e93-85e019a28279",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -263,7 +260,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Coimbra region · Estrela Lake (final, record FWW-304452)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Central Portugal · Estrela Lake (final, record FWW-304452)</p></div>"
      },
      "identifier": [
       {
@@ -294,10 +291,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
+      "reference": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
+      "display": "Central Portugal · Estrela Lake"
      },
-     "effectiveDateTime": "2023-03-24T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-24T16:02:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -319,7 +316,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:010cba42-540b-4296-a663-51699d415b0f"
+       "reference": "urn:uuid:dd83636b-79c6-41bc-bdac-849cd7b4ae29"
       }
      ]
     },
@@ -329,7 +326,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6a955c9e-01f5-4f84-847d-ba6bea613725",
+    "fullUrl": "urn:uuid:dd7b8743-2a6c-41fb-b5c0-ac1679bbaeb6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -351,7 +348,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Coimbra region · Estrela Lake (final, record FWW-304452)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Central Portugal · Estrela Lake (final, record FWW-304452)</p></div>"
      },
      "identifier": [
       {
@@ -382,10 +379,10 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
+      "reference": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
+      "display": "Central Portugal · Estrela Lake"
      },
-     "effectiveDateTime": "2023-03-24T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-24T16:02:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -407,7 +404,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:010cba42-540b-4296-a663-51699d415b0f"
+       "reference": "urn:uuid:dd83636b-79c6-41bc-bdac-849cd7b4ae29"
       }
      ]
     },
@@ -417,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0894a6af-ae91-45e7-914c-10ee0f825dac",
+    "fullUrl": "urn:uuid:a77ee2de-249f-4cae-8075-5ac19c1052cc",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -439,81 +436,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: yes at Coimbra region · Estrela Lake (final, record FWW-304452)</p></div>"
-     },
-     "identifier": [
-      {
-       "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "FWW-304452.animal-contact"
-      }
-     ],
-     "status": "final",
-     "category": [
-      {
-       "coding": [
-        {
-         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
-        }
-       ]
-      }
-     ],
-     "code": {
-      "coding": [
-       {
-        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
-        "code": "animal-contact",
-        "display": "Pets or livestock in the water"
-       }
-      ],
-      "text": "Pets or livestock in the water"
-     },
-     "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
-     },
-     "effectiveDateTime": "2023-03-24T11:00:00+00:00",
-     "performer": [
-      {
-       "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "fww-group-4b4922e9fdf8"
-       },
-       "display": "Pseudonymous citizen scientist"
-      }
-     ],
-     "valueBoolean": true
-    },
-    "request": {
-     "method": "PUT",
-     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304452.animal-contact"
-    }
-   },
-   {
-    "fullUrl": "urn:uuid:84abfed9-717d-4e0a-8924-d8719eefecb6",
-    "resource": {
-     "resourceType": "Observation",
-     "meta": {
-      "security": [
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-        "code": "U",
-        "display": "unrestricted"
-       },
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "code": "PSEUDED",
-        "display": "pseudonymized"
-       }
-      ],
-      "profile": [
-       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
-      ]
-     },
-     "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Coimbra region · Estrela Lake (final, record FWW-304452)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Central Portugal · Estrela Lake (final, record FWW-304452)</p></div>"
      },
      "identifier": [
       {
@@ -544,10 +467,10 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
+      "reference": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
+      "display": "Central Portugal · Estrela Lake"
      },
-     "effectiveDateTime": "2023-03-24T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-24T16:02:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -565,7 +488,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8ede07e6-dff8-442d-9140-14106af9d3c2",
+    "fullUrl": "urn:uuid:73441fd5-832f-4287-9e8b-3e81738ffb1e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -587,7 +510,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Coimbra region · Estrela Lake (final, record FWW-304452)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Central Portugal · Estrela Lake (final, record FWW-304452)</p></div>"
      },
      "identifier": [
       {
@@ -618,10 +541,10 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:80df70cd-214c-4e7c-8f45-37fea18eed99",
-      "display": "Coimbra region · Estrela Lake"
+      "reference": "urn:uuid:ccab2a81-5dd3-400a-990f-fc6f1f9bd9e4",
+      "display": "Central Portugal · Estrela Lake"
      },
-     "effectiveDateTime": "2023-03-24T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-24T16:02:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -648,7 +571,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0f839beb-0323-4203-9fcc-55296d41bafe",
+    "fullUrl": "urn:uuid:6055fb17-6bb2-4d99-9b50-2dd9c06a8f1a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304452",
@@ -668,33 +591,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304452 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304452 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:6ab83366-fe02-4835-b03b-e028babd1b9a"
+       "reference": "urn:uuid:2d37458c-fb72-41e5-b012-a612ea1d247a"
       },
       {
-       "reference": "urn:uuid:ed24f12a-6700-4725-b81f-c90a7fe67215"
+       "reference": "urn:uuid:55ee0d08-2521-4a85-8e93-85e019a28279"
       },
       {
-       "reference": "urn:uuid:6a955c9e-01f5-4f84-847d-ba6bea613725"
+       "reference": "urn:uuid:dd7b8743-2a6c-41fb-b5c0-ac1679bbaeb6"
       },
       {
-       "reference": "urn:uuid:0894a6af-ae91-45e7-914c-10ee0f825dac"
+       "reference": "urn:uuid:a77ee2de-249f-4cae-8075-5ac19c1052cc"
       },
       {
-       "reference": "urn:uuid:84abfed9-717d-4e0a-8924-d8719eefecb6"
+       "reference": "urn:uuid:73441fd5-832f-4287-9e8b-3e81738ffb1e"
       },
       {
-       "reference": "urn:uuid:8ede07e6-dff8-442d-9140-14106af9d3c2"
-      },
-      {
-       "reference": "urn:uuid:010cba42-540b-4296-a663-51699d415b0f"
+       "reference": "urn:uuid:dd83636b-79c6-41bc-bdac-849cd7b4ae29"
       }
      ],
-     "occurredDateTime": "2023-03-24T11:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-03-24T16:02:00+00:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -734,8 +654,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:6c99be63-7604-44c5-8649-cc756a58995c",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:c605ccd0-6ec2-4753-b638-cd3ad50beb7c",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:8156d43b-954a-43e8-91d0-7286ce3a2378",
+    "fullUrl": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:38d27b18-cff1-47b9-8031-fd4227b516f0",
+    "fullUrl": "urn:uuid:704d4a4b-c8fe-4622-b1a0-60022fc172a0",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:08833fbe-0246-4b6e-bf59-1441fcffef01",
+    "fullUrl": "urn:uuid:40345de1-8239-4afa-ba94-e9c727bbec77",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:8156d43b-954a-43e8-91d0-7286ce3a2378",
+      "reference": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
       "display": "Toulouse area · SECOURS ARIEGE"
      },
      "effectiveDateTime": "2025-03-12T11:15:00+01:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:0c87c5cb-d831-44ca-bb77-08a5455bd712"
+       "reference": "urn:uuid:e026a32a-1731-4145-b933-a03e88a11707"
       },
       {
-       "reference": "urn:uuid:457dd9d5-eb6c-4861-afc8-833933949470"
+       "reference": "urn:uuid:20174ee2-d022-4ea9-a358-cbf985be170d"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0c87c5cb-d831-44ca-bb77-08a5455bd712",
+    "fullUrl": "urn:uuid:e026a32a-1731-4145-b933-a03e88a11707",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:8156d43b-954a-43e8-91d0-7286ce3a2378",
+      "reference": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
       "display": "Toulouse area · SECOURS ARIEGE"
      },
      "effectiveDateTime": "2025-03-12T11:15:00+01:00",
@@ -257,9 +257,9 @@
      ],
      "valueQuantity": {
       "value": 5.0,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:457dd9d5-eb6c-4861-afc8-833933949470",
+    "fullUrl": "urn:uuid:20174ee2-d022-4ea9-a358-cbf985be170d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:8156d43b-954a-43e8-91d0-7286ce3a2378",
+      "reference": "urn:uuid:366e0b59-77d9-45ab-b79f-2fe551221d5f",
       "display": "Toulouse area · SECOURS ARIEGE"
      },
      "effectiveDateTime": "2025-03-12T11:15:00+01:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ed26eb37-5df1-43b4-b581-2c2a4e191fb7",
+    "fullUrl": "urn:uuid:7fb94222-3513-423e-abd8-c9bd7f531ed0",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF003661-2025-03-12T1115",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF003661-2025-03-12T1115 was imported from Hub'Eau qualite_rivieres (Sandre), station BF003661 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF003661-2025-03-12T1115 was imported from Hub'Eau qualite_rivieres (Sandre), station BF003661 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:08833fbe-0246-4b6e-bf59-1441fcffef01"
+       "reference": "urn:uuid:40345de1-8239-4afa-ba94-e9c727bbec77"
       },
       {
-       "reference": "urn:uuid:0c87c5cb-d831-44ca-bb77-08a5455bd712"
+       "reference": "urn:uuid:e026a32a-1731-4145-b933-a03e88a11707"
       },
       {
-       "reference": "urn:uuid:457dd9d5-eb6c-4861-afc8-833933949470"
+       "reference": "urn:uuid:20174ee2-d022-4ea9-a358-cbf985be170d"
       }
      ],
      "occurredDateTime": "2025-03-12T11:15:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:38d27b18-cff1-47b9-8031-fd4227b516f0",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:704d4a4b-c8fe-4622-b1a0-60022fc172a0",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

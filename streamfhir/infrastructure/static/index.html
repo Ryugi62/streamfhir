@@ -141,7 +141,7 @@ const isReal = () => !!(cache && cache.dataset && cache.dataset.synthetic === fa
 const CCOL = {poor:"var(--no)", fair:"var(--warn)", good:"var(--ok)", "not assessed":"var(--hint)"};
 const CCLASS = {poor:"blocked", fair:"review", good:"ok", "not assessed":"review"};
 const CSHORT = {poor:"Condition: poor", fair:"Condition: fair", good:"Condition: good", "not assessed":"Condition: not assessed"};
-const fmtDate = t => t ? new Date(t).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
+const fmtDate = t => t ? new Date(String(t).slice(0, 10) + "T12:00:00Z").toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric", timeZone:"UTC"}) : "";
 function latestReport(x){ return x.reports.filter(p => p.observed_at).sort((a, b) => a.observed_at < b.observed_at ? 1 : -1)[0]; }
 function labLine(p){
   if(!p) return "";
@@ -153,7 +153,7 @@ function labLine(p){
   if(v["water-temperature"] !== undefined) parts.push(`${v["water-temperature"]} °C`);
   return parts.join(" · ");
 }
-const asOf = () => cache && cache.as_of ? new Date(cache.as_of).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
+const asOf = () => cache && cache.as_of ? fmtDate(cache.as_of) : "";
 
 function map(list){
   const lats = list.map(x => x.site.lat), lons = list.map(x => x.site.lon);
@@ -172,7 +172,9 @@ function map(list){
 
 function footnote(){
   if(cache && cache.dataset && cache.dataset.synthetic === false)
-    $("#foot").textContent = (cache.dataset.label ? cache.dataset.label + ": real" : "Real") + " public monitoring data" + (cache.dataset.label ? "" : " from the US Water Quality Portal") + " (not citizen science), imported as a snapshot. Codes under example.org are prototype codes, not official terminology.";
+    $("#foot").textContent = cache.dataset.observer_kind === "citizen"
+      ? (cache.dataset.label || "Real citizen science") + ": real volunteer observations (citizen science), imported as a snapshot. Codes under example.org are prototype codes, not official terminology."
+      : (cache.dataset.label ? cache.dataset.label + ": real" : "Real") + " public monitoring data" + (cache.dataset.label ? "" : " from the US Water Quality Portal") + " (not citizen science), imported as a snapshot. Codes under example.org are prototype codes, not official terminology.";
 }
 
 async function sites(){
@@ -184,7 +186,7 @@ async function sites(){
   const need = s.filter(x => x.risk.level === "high" || x.risk.level === "verify").length;
   if(lab) s.sort((a, b) => b.risk.condition_points - a.risk.condition_points);
   const enriched = s.filter(x => x.risk.fired.some(f => f.kind === "condition")).length;
-  $("#view").innerHTML = `<section><h1>${lab ? `${s.length} real stations · ${enriched} above a nutrient screening value · ${s.filter(x => x.risk.fired.some(f => f.rule_id === "R9")).length} above 50 mg/L nitrate` : real ? `${s.length} real citizen-science sites, ${need} with a corroborated warning` : `${s.length} stream sites, ${need} need action`}</h1>
+  $("#view").innerHTML = `<section><h1>${lab ? `${s.length} real stations · ${enriched} above a nutrient screening value · ${s.filter(x => x.risk.fired.some(f => f.rule_id === "R9")).length} above 50 mg/L nitrate` : real ? `${s.length} real citizen-science sites · ${s.filter(x => x.risk.level === "high").length} warnings · ${s.filter(x => x.risk.level === "verify").length} waiting for a reviewer` : `${s.length} stream sites, ${need} need action`}</h1>
     <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() && !perSite ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
     ${real && cache.dataset.banner ? `<p class="help" id="realnote">${esc(cache.dataset.banner)}</p>` : real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? ` Each station is evaluated at its own latest sampling; most have a single sampling in this snapshot. Record age is judged against the snapshot end (${esc(asOf())}).` : ""}</p>` : ""}
     ${map(s)}
@@ -215,7 +217,7 @@ async function interopPanel(siteId){
   let d; try { d = await api("/api/interop"); } catch(e){ return; }
   if(!d || d.site_id !== siteId) return;
   const rows = d.nitrate_results.map(r => `<tr><td>${r.synthetic ? "<b>SYNTHETIC</b> citizen check (test data)" : "Agency lab: " + esc(r.performer || "")}</td><td>${r.category}</td><td><b>${r.value_mg_per_l} mg/L</b></td><td>${esc(fmtDate(r.effective))}</td></tr>`).join("");
-  const fl = (d.flags || []).filter(f => f.status === "active").map(f => `<p class="help" style="margin:10px 0 0">…and the two synthetic citizen checks (scum + dogs in the water, two observers, photos kept for review) raise <b>${esc(f.id)}</b>: level <b>${esc(f.code)}</b>, rules ${f.rules.map(esc).join(", ")}, on this real station's Location.</p>`).join("");
+  const fl = (d.flags || []).map(f => `<p class="help" style="margin:10px 0 0">…and the two synthetic citizen checks (scum + dogs in the water, two observers, photos kept for review) raise <b>${esc(f.id)}</b> on this real station's Location: level <b>${esc(f.code)}</b>, rules ${f.rules.map(esc).join(", ")}, valid ${esc(fmtDate(f.period && f.period.start))} – ${esc(fmtDate(f.period && f.period.end))}, status <b>${esc(f.status)}</b>${f.status === "inactive" ? " (expired: a warning lapses 14 days after the last trusted report)" : ""}. This demo page itself loads the agency data only, so the station's own health hazard below stays "Not assessed".</p>`).join("");
   el.innerHTML = `<section><h2>One query, two sources</h2><div class="card">
     <p style="margin:0 0 8px">One FHIR search by the EU (EEA WISE) nitrate code at this station, run live on the public HAPI server on ${esc(fmtDate(d.retrieved))}:</p>
     <table><tr><th>Source</th><th>Category</th><th>Nitrate</th><th>Date</th></tr>${rows}</table>${fl}
@@ -258,6 +260,7 @@ async function site(id){
     <section><h2>${isReal() ? "Agency samplings (lab chemistry)" : "Citizen checks"}</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(p.record_id)}</b>
       <span class="chip ${p.decision==="reject"?"blocked":p.decision==="confirm"?"ok":p.status}">${p.decision ? DECISION[p.decision] + (p.basis ? " (" + esc(p.basis.replace("-", " ")) + ")" : "") : STATUS[p.status].big}</span></div>
       ${p.issues.map(i => `<div class="help">${esc(i.message)}</div>`).join("")}
+      ${(p.photos || []).map((u, k) => `<div class="help"><a href="${esc(u)}" target="_blank" rel="noopener">Open the volunteer's photo${p.photos.length > 1 ? " " + (k + 1) : ""}</a> (real record; check it before confirming)</div>`).join("")}
       ${p.status === "review" && window.STATIC_DEMO && staticDecision && !p.decision ? `<p class="help">The online demo replays one decision at a time — undo the current one first.</p>` : p.status === "review" ? `<div class="opts" style="margin-top:10px">${p.decision ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="">Undo decision</button>` :
         `<span class="help" style="width:100%">Confirm only with a basis:</span>
          <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="site-visit">Confirm · I visited</button>

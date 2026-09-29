@@ -5,7 +5,8 @@
 Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy Ecosystems, Healthy Communities*). **Track 7 — Digital Health Standards.**
 
 - **Live demo (no install):** https://ryugi62.github.io/streamfhir/demo/ — static page from [`docs/demo/`](docs/demo/); the sample records are precomputed.
-- **Real citizen-science demo:** https://ryugi62.github.io/streamfhir/demo-citizen/ — 25 real FreshWater Watch volunteer records near Toulouse and Coimbra; 2 reach a corroborated warning.
+- **All demos:** https://ryugi62.github.io/streamfhir/ (synthetic, real citizen science, Toulouse, Ghent, Benevento).
+- **Real citizen-science demo:** https://ryugi62.github.io/streamfhir/demo-citizen/ — 25 real FreshWater Watch volunteer records; two implausible *blue-green scum* ticks wait for a reviewer instead of raising alarms.
 - **Real EU data demo (no install):** https://ryugi62.github.io/streamfhir/demo-eu/ — 52 real river monitoring stations around **Toulouse** (a OneAquaHealth research city) from France's open Hub'Eau API, run through the same pipeline ([details](#real-european-data-toulouse-a-oneaquahealth-city)).
 - **Demo video (3:25):** https://youtu.be/xxEL--FC9tA
 - **Run the full app:** `python3 -m streamfhir serve` → http://127.0.0.1:8000 (Python 3.9+, no dependencies).
@@ -88,7 +89,7 @@ python3 -m streamfhir import-hubeau               # real Toulouse-area river dat
 python3 -m streamfhir --data data/real-eu-toulouse serve     # browse it (same as the /demo-eu/ page)
 python3 -m streamfhir eea-coverage                # EU (EEA Waterbase) code coverage near the 5 OneAquaHealth cities
 python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live   # agency + synthetic citizen nitrate, one EEA-code query
-python3 -m pip install pytest && python3 -m pytest -q     # 101 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 102 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -209,7 +210,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
 
 ## Evidence
-- **101 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-46 (see `SPEC.md`).
+- **102 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-47 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -247,12 +248,13 @@ The Toulouse importer's shape was reused for two more research cities' open agen
 - Demos: https://ryugi62.github.io/streamfhir/demo-ghent/ and https://ryugi62.github.io/streamfhir/demo-benevento/.
 - **Coverage of the five cities:** agency pipeline runs for Toulouse, Ghent and Benevento; real citizen records for Toulouse and the Coimbra region; Oslo not yet (Norway's Vannmiljø API needs a key, which we did not request) and no Portuguese agency run (the SNIRH server was unreachable from our machine).
 
-## Real citizen science (FreshWater Watch, near Toulouse and Coimbra)
-`import-fww` converts Earthwatch Europe's **FreshWater Watch** volunteer records (public ArcGIS view, no account; open access with no formal licence, attribution Earthwatch Europe; queries in `data/real-fww/SOURCE.txt`) within about 50 km (±0.5°) of the two OneAquaHealth cities that have any: Toulouse (19) and Coimbra (6; the sites are around Aveiro and Figueira da Foz). Benevento, Ghent and Oslo have none within that distance.
-- Only fields whose meaning matches StreamFHIR indicators are scored: water colour (Colourless/Brown/Green; any other colour, e.g. *Grey*, becomes *other*, not *milky-grey*), a *Blue_green_scum* algae report → algal scum, oily sheen, foam, litter, *Animal_access* → pets or livestock in contact (a proxy: animals can reach the water), *Swimming* → people in contact, and the volunteer's photo. Nitrate and phosphate kit colour bands, other algae types and pollution sources are kept as notes, not scored.
-- **25 real citizen records at 25 sites → 24 ready, 1 older than a year.** Evaluated at each site's own latest visit, **2 sites reach *High* with a corroborated warning from real volunteer data**: the Rio Vouga at Aveiro (blue-green scum with a photo, animals can access the water: R3 + R7) and the Ariège south of Toulouse (blue-green scum with a photo: R3). Both are from March 2023, so these are the warnings StreamFHIR *would have raised then*, not current conditions. Each rests on one photo-backed report, which is exactly the single-photo case the limitations section discusses.
-- Live on HAPI (validation only): the real Observations and the real-data Flag validate against the profiles with 0 errors, 0 warnings (evidence step 28).
-- Demo: https://ryugi62.github.io/streamfhir/demo-citizen/ (`python3 -m streamfhir --data data/real-fww serve`).
+## Real citizen science (FreshWater Watch, near Toulouse and in central Portugal)
+`import-fww` converts Earthwatch Europe's **FreshWater Watch** volunteer records (public ArcGIS view, no account; open access with no formal licence, attribution Earthwatch Europe; queries in `data/real-fww/SOURCE.txt`) within ±0.5° of the two OneAquaHealth cities that have any: Toulouse (19) and Coimbra (6, all around Aveiro and Figueira da Foz, 40–55 km away, so labelled *Central Portugal*). Benevento, Ghent and Oslo have none that close. 24 of the 25 records come from one volunteer campaign in March 2023, one visit per site.
+- Only fields whose meaning matches StreamFHIR indicators are scored: water colour (Colourless/Brown/Green; any other colour, e.g. *Grey*, becomes *other*, not *milky-grey*), a *Blue_green_scum* algae tick → algal scum, oily sheen, foam, litter, *Swimming* → people in contact, and the volunteer's photo. *Animal access* is a water use, not an observed contact, so it stays a note. Kit colour bands (nitrate as NO3-N, phosphate as PO4-P, as printed on the kit cards) and pollution sources stay notes.
+- **Plausibility gates send doubtful records to a person:** a blue-green scum ticked on flowing or colourless water, a slurry film, or an outfall pipe discharging → *needs a quick look*. For real citizen data a photo counts only after a reviewer's photo check (`photo_needs_review`; the synthetic demo keeps the original rule).
+- **Result: 25 records → 21 ready, 4 needing a look; 0 warnings raised, 2 sites waiting for a reviewer.** Both are volunteer ticks of *blue-green scum* on steady-flowing rivers: the Rio Vouga at Aveiro and the Ariège south of Toulouse. We opened the attached photos: one is a kit-card collage with a clear, shallow stream over gravel, the other a wide, clear, fast river; neither shows a scum. A reviewer would **reject** both (`entered-in-error`), so no false cyanobacteria alarm reaches a health system. Without these gates, the earlier rule (photo attached = corroborated) would have raised two false alarms on real data. This is the human-in-the-loop design working on real records.
+- Live on HAPI (validation only): the real Observations validate against the profiles with 0 errors, 0 warnings (evidence step 28).
+- Demo: https://ryugi62.github.io/streamfhir/demo-citizen/ — open Rio Vouga, open the volunteer's photo, press **Reject report**.
 
 ## Feasibility and scalability
 - **Runs anywhere Python runs:** standard library only, and stateless mapping. It can sit behind any citizen-science app as a nightly export job or a webhook.
@@ -286,7 +288,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records; data/real-wqp (US) and data/real-eu-toulouse (France) real snapshots; data/eea-coverage
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     101 tests
+tests/                     102 tests
 ```
 
 ## License

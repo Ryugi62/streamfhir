@@ -1,6 +1,6 @@
 {
  "_note": "Captured response of the live interop demo on the public HAPI R4 test server (it may purge data; re-create with: python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live).",
- "retrieved": "2026-09-29T13:26:14+00:00",
+ "retrieved": "2026-09-29T13:59:35+00:00",
  "site_id": "FR-05157550",
  "location": "Location/54630",
  "nitrate_query": "https://hapi.fhir.org/baseR4/Observation?code=http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty%7CCAS_14797-55-8&subject=Location/54630",
@@ -34,7 +34,7 @@
  "flags": [
   {
    "id": "Flag/54705",
-   "status": "active",
+   "status": "inactive",
    "code": "high",
    "period": {
     "start": "2024-12-17T14:47:00+01:00",

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+    "fullUrl": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -61,7 +61,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:692e7a80-105d-44ac-a747-4bf97565e2a6",
+    "fullUrl": "urn:uuid:d65782a5-c7dd-4771-b654-8baf81a83441",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -80,7 +80,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -96,7 +96,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -107,7 +107,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:094b92d3-4cde-43e1-82d0-9153651b73b8",
+    "fullUrl": "urn:uuid:fab18e96-19f0-4da3-8a02-7fe4099f4609",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -145,7 +145,7 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "createdDateTime": "2026-09-21T10:45:00+01:00",
@@ -161,7 +161,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c441419f-b57e-44fb-8b02-a0b336a8d01c",
+    "fullUrl": "urn:uuid:6ad3d681-514a-4129-a34b-16dd0f6af2ea",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -219,7 +219,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -234,66 +234,66 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:71d8197e-9d41-4a50-8761-de5e7c44bdf8"
+       "reference": "urn:uuid:689ff4f1-ee20-4b54-bda0-3594858ac29e"
       },
       {
-       "reference": "urn:uuid:a306d0a2-b2c3-49a1-9bba-8d507cd4b946"
+       "reference": "urn:uuid:9eae99a0-8450-4b36-92a4-d65f772126b9"
       },
       {
-       "reference": "urn:uuid:13ccd4d4-1c1f-4a56-b550-289b7eb1c63f"
+       "reference": "urn:uuid:48b29e68-d84a-4131-8869-6b4dd6ba960f"
       },
       {
-       "reference": "urn:uuid:68889b79-62c2-4e2f-9ad3-ccdf23c29ad9"
+       "reference": "urn:uuid:6532b5d0-048d-43cc-a556-6c4030e5edfd"
       },
       {
-       "reference": "urn:uuid:9a1eeb27-34d2-4fe1-baad-0cfdf9b25744"
+       "reference": "urn:uuid:636e4ead-0b63-4297-92cb-302878eacb74"
       },
       {
-       "reference": "urn:uuid:313e374e-6e99-4c71-ad84-0337cabc791f"
+       "reference": "urn:uuid:3057f018-dc67-48b7-8e6d-22a6f4d20fe0"
       },
       {
-       "reference": "urn:uuid:8e394419-8178-404c-a29a-38453c1ef096"
+       "reference": "urn:uuid:e3d6a41c-c944-44df-86f3-ead477788e95"
       },
       {
-       "reference": "urn:uuid:7c374266-f28a-4e23-9857-a40c703f32c1"
+       "reference": "urn:uuid:a3fd417e-d9fd-4209-a191-e3e5b936886a"
       },
       {
-       "reference": "urn:uuid:90dbd24c-72f6-4930-92cf-a65ae2f972cd"
+       "reference": "urn:uuid:e4d39202-fb52-4a38-8216-c3fce835755f"
       },
       {
-       "reference": "urn:uuid:0ee94a08-5a82-4474-a763-a3217683f642"
+       "reference": "urn:uuid:df145867-3fba-488a-b3ee-520b3614f410"
       },
       {
-       "reference": "urn:uuid:2360d013-3542-492f-a0c0-0eb70487f9f7"
+       "reference": "urn:uuid:2daf8328-e4b4-46d6-aa1a-4e99de878220"
       },
       {
-       "reference": "urn:uuid:c626c9fe-8931-4d31-8666-4502d0710d15"
+       "reference": "urn:uuid:340f37fd-a9ff-4817-a3e8-a54ff844cdd7"
       },
       {
-       "reference": "urn:uuid:ac0cc458-2b3e-402c-9faf-dc687306b708"
+       "reference": "urn:uuid:a5136b4e-103f-4d6b-ad5d-2629ca91e35c"
       },
       {
-       "reference": "urn:uuid:a34a81e0-e98e-4885-80ab-62750b2bfe19"
+       "reference": "urn:uuid:ed0abd87-2ea9-4fdd-87ff-92033af2ee12"
       },
       {
-       "reference": "urn:uuid:ec57d8ac-7960-45ca-b2c8-daea63589ef8"
+       "reference": "urn:uuid:709413db-993c-4b0f-80fe-0334abdc79f5"
       },
       {
-       "reference": "urn:uuid:7d982fd4-0cea-4760-bea9-9bef2bc621fd"
+       "reference": "urn:uuid:4b7827cf-4ccd-4364-b923-9d8e13d21fe5"
       },
       {
-       "reference": "urn:uuid:4e531be7-912d-4756-be50-246f6006314a"
+       "reference": "urn:uuid:d9748df0-9c70-431e-ab6f-856ca081ac5b"
       },
       {
-       "reference": "urn:uuid:a2005164-33c2-4126-a795-a8d1b2f250e6"
+       "reference": "urn:uuid:9e21c713-b22d-4c5b-81fe-3da362806664"
       },
       {
-       "reference": "urn:uuid:62bf69b4-60c7-4b2c-a585-a9a6b8486066"
+       "reference": "urn:uuid:d73f79eb-24bc-4e57-bef2-281acb04293b"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:094b92d3-4cde-43e1-82d0-9153651b73b8"
+       "reference": "urn:uuid:fab18e96-19f0-4da3-8a02-7fe4099f4609"
       }
      ]
     },
@@ -303,7 +303,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:71d8197e-9d41-4a50-8761-de5e7c44bdf8",
+    "fullUrl": "urn:uuid:689ff4f1-ee20-4b54-bda0-3594858ac29e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -361,7 +361,7 @@
       "text": "Channel condition score"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -382,7 +382,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a306d0a2-b2c3-49a1-9bba-8d507cd4b946",
+    "fullUrl": "urn:uuid:9eae99a0-8450-4b36-92a4-d65f772126b9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -440,7 +440,7 @@
       "text": "Bank stability score"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -461,7 +461,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:13ccd4d4-1c1f-4a56-b550-289b7eb1c63f",
+    "fullUrl": "urn:uuid:48b29e68-d84a-4131-8869-6b4dd6ba960f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -519,7 +519,7 @@
       "text": "Riparian zone score"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -540,7 +540,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:68889b79-62c2-4e2f-9ad3-ccdf23c29ad9",
+    "fullUrl": "urn:uuid:6532b5d0-048d-43cc-a556-6c4030e5edfd",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -598,7 +598,7 @@
       "text": "In-stream habitat score"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -619,7 +619,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9a1eeb27-34d2-4fe1-baad-0cfdf9b25744",
+    "fullUrl": "urn:uuid:636e4ead-0b63-4297-92cb-302878eacb74",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -682,7 +682,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -708,7 +708,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:313e374e-6e99-4c71-ad84-0337cabc791f",
+    "fullUrl": "urn:uuid:3057f018-dc67-48b7-8e6d-22a6f4d20fe0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -771,7 +771,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -797,7 +797,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8e394419-8178-404c-a29a-38453c1ef096",
+    "fullUrl": "urn:uuid:e3d6a41c-c944-44df-86f3-ead477788e95",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -865,7 +865,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -880,9 +880,9 @@
      ],
      "valueQuantity": {
       "value": 4,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -891,7 +891,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7c374266-f28a-4e23-9857-a40c703f32c1",
+    "fullUrl": "urn:uuid:a3fd417e-d9fd-4209-a191-e3e5b936886a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -949,7 +949,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -975,7 +975,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:90dbd24c-72f6-4930-92cf-a65ae2f972cd",
+    "fullUrl": "urn:uuid:e4d39202-fb52-4a38-8216-c3fce835755f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1033,7 +1033,7 @@
       "text": "Transparency tube depth"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1059,7 +1059,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0ee94a08-5a82-4474-a763-a3217683f642",
+    "fullUrl": "urn:uuid:df145867-3fba-488a-b3ee-520b3614f410",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1117,7 +1117,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1142,7 +1142,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:094b92d3-4cde-43e1-82d0-9153651b73b8"
+       "reference": "urn:uuid:fab18e96-19f0-4da3-8a02-7fe4099f4609"
       }
      ]
     },
@@ -1152,7 +1152,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2360d013-3542-492f-a0c0-0eb70487f9f7",
+    "fullUrl": "urn:uuid:2daf8328-e4b4-46d6-aa1a-4e99de878220",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1210,7 +1210,7 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1235,7 +1235,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:094b92d3-4cde-43e1-82d0-9153651b73b8"
+       "reference": "urn:uuid:fab18e96-19f0-4da3-8a02-7fe4099f4609"
       }
      ]
     },
@@ -1245,7 +1245,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c626c9fe-8931-4d31-8666-4502d0710d15",
+    "fullUrl": "urn:uuid:340f37fd-a9ff-4817-a3e8-a54ff844cdd7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1303,7 +1303,7 @@
       "text": "Odour"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1333,7 +1333,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ac0cc458-2b3e-402c-9faf-dc687306b708",
+    "fullUrl": "urn:uuid:a5136b4e-103f-4d6b-ad5d-2629ca91e35c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1391,7 +1391,7 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1421,7 +1421,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a34a81e0-e98e-4885-80ab-62750b2bfe19",
+    "fullUrl": "urn:uuid:ed0abd87-2ea9-4fdd-87ff-92033af2ee12",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1479,7 +1479,7 @@
       "text": "Dead fish seen"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1495,7 +1495,7 @@
      "valueBoolean": false,
      "derivedFrom": [
       {
-       "reference": "urn:uuid:094b92d3-4cde-43e1-82d0-9153651b73b8"
+       "reference": "urn:uuid:fab18e96-19f0-4da3-8a02-7fe4099f4609"
       }
      ]
     },
@@ -1505,7 +1505,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ec57d8ac-7960-45ca-b2c8-daea63589ef8",
+    "fullUrl": "urn:uuid:709413db-993c-4b0f-80fe-0334abdc79f5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1563,7 +1563,7 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1584,7 +1584,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7d982fd4-0cea-4760-bea9-9bef2bc621fd",
+    "fullUrl": "urn:uuid:4b7827cf-4ccd-4364-b923-9d8e13d21fe5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1642,7 +1642,7 @@
       "text": "Pets or livestock in the water"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1663,7 +1663,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4e531be7-912d-4756-be50-246f6006314a",
+    "fullUrl": "urn:uuid:d9748df0-9c70-431e-ab6f-856ca081ac5b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1721,7 +1721,7 @@
       "text": "Mayfly/stonefly/caddisfly groups found"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1742,7 +1742,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a2005164-33c2-4126-a795-a8d1b2f250e6",
+    "fullUrl": "urn:uuid:9e21c713-b22d-4c5b-81fe-3da362806664",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1800,7 +1800,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1830,7 +1830,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:62bf69b4-60c7-4b2c-a585-a9a6b8486066",
+    "fullUrl": "urn:uuid:d73f79eb-24bc-4e57-bef2-281acb04293b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1888,7 +1888,7 @@
       "text": "Kick-net sampling effort"
      },
      "subject": {
-      "reference": "urn:uuid:40d92cf8-6736-476b-9ad1-e4ce8353ff40",
+      "reference": "urn:uuid:b5d8e4f1-0a48-4634-8cf3-df7258268724",
       "display": "Oak Stream - restored reach"
      },
      "effectiveDateTime": "2026-09-21T10:45:00+01:00",
@@ -1914,7 +1914,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:15e35ef7-958c-43ae-903b-89a1fcd07119",
+    "fullUrl": "urn:uuid:e41c535b-7566-475c-bd03-4095a0e2a82d",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-SYN-014",
@@ -1939,75 +1939,75 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-014 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-014 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:c441419f-b57e-44fb-8b02-a0b336a8d01c"
+       "reference": "urn:uuid:6ad3d681-514a-4129-a34b-16dd0f6af2ea"
       },
       {
-       "reference": "urn:uuid:71d8197e-9d41-4a50-8761-de5e7c44bdf8"
+       "reference": "urn:uuid:689ff4f1-ee20-4b54-bda0-3594858ac29e"
       },
       {
-       "reference": "urn:uuid:a306d0a2-b2c3-49a1-9bba-8d507cd4b946"
+       "reference": "urn:uuid:9eae99a0-8450-4b36-92a4-d65f772126b9"
       },
       {
-       "reference": "urn:uuid:13ccd4d4-1c1f-4a56-b550-289b7eb1c63f"
+       "reference": "urn:uuid:48b29e68-d84a-4131-8869-6b4dd6ba960f"
       },
       {
-       "reference": "urn:uuid:68889b79-62c2-4e2f-9ad3-ccdf23c29ad9"
+       "reference": "urn:uuid:6532b5d0-048d-43cc-a556-6c4030e5edfd"
       },
       {
-       "reference": "urn:uuid:9a1eeb27-34d2-4fe1-baad-0cfdf9b25744"
+       "reference": "urn:uuid:636e4ead-0b63-4297-92cb-302878eacb74"
       },
       {
-       "reference": "urn:uuid:313e374e-6e99-4c71-ad84-0337cabc791f"
+       "reference": "urn:uuid:3057f018-dc67-48b7-8e6d-22a6f4d20fe0"
       },
       {
-       "reference": "urn:uuid:8e394419-8178-404c-a29a-38453c1ef096"
+       "reference": "urn:uuid:e3d6a41c-c944-44df-86f3-ead477788e95"
       },
       {
-       "reference": "urn:uuid:7c374266-f28a-4e23-9857-a40c703f32c1"
+       "reference": "urn:uuid:a3fd417e-d9fd-4209-a191-e3e5b936886a"
       },
       {
-       "reference": "urn:uuid:90dbd24c-72f6-4930-92cf-a65ae2f972cd"
+       "reference": "urn:uuid:e4d39202-fb52-4a38-8216-c3fce835755f"
       },
       {
-       "reference": "urn:uuid:0ee94a08-5a82-4474-a763-a3217683f642"
+       "reference": "urn:uuid:df145867-3fba-488a-b3ee-520b3614f410"
       },
       {
-       "reference": "urn:uuid:2360d013-3542-492f-a0c0-0eb70487f9f7"
+       "reference": "urn:uuid:2daf8328-e4b4-46d6-aa1a-4e99de878220"
       },
       {
-       "reference": "urn:uuid:c626c9fe-8931-4d31-8666-4502d0710d15"
+       "reference": "urn:uuid:340f37fd-a9ff-4817-a3e8-a54ff844cdd7"
       },
       {
-       "reference": "urn:uuid:ac0cc458-2b3e-402c-9faf-dc687306b708"
+       "reference": "urn:uuid:a5136b4e-103f-4d6b-ad5d-2629ca91e35c"
       },
       {
-       "reference": "urn:uuid:a34a81e0-e98e-4885-80ab-62750b2bfe19"
+       "reference": "urn:uuid:ed0abd87-2ea9-4fdd-87ff-92033af2ee12"
       },
       {
-       "reference": "urn:uuid:ec57d8ac-7960-45ca-b2c8-daea63589ef8"
+       "reference": "urn:uuid:709413db-993c-4b0f-80fe-0334abdc79f5"
       },
       {
-       "reference": "urn:uuid:7d982fd4-0cea-4760-bea9-9bef2bc621fd"
+       "reference": "urn:uuid:4b7827cf-4ccd-4364-b923-9d8e13d21fe5"
       },
       {
-       "reference": "urn:uuid:4e531be7-912d-4756-be50-246f6006314a"
+       "reference": "urn:uuid:d9748df0-9c70-431e-ab6f-856ca081ac5b"
       },
       {
-       "reference": "urn:uuid:a2005164-33c2-4126-a795-a8d1b2f250e6"
+       "reference": "urn:uuid:9e21c713-b22d-4c5b-81fe-3da362806664"
       },
       {
-       "reference": "urn:uuid:62bf69b4-60c7-4b2c-a585-a9a6b8486066"
+       "reference": "urn:uuid:d73f79eb-24bc-4e57-bef2-281acb04293b"
       },
       {
-       "reference": "urn:uuid:094b92d3-4cde-43e1-82d0-9153651b73b8"
+       "reference": "urn:uuid:fab18e96-19f0-4da3-8a02-7fe4099f4609"
       }
      ],
      "occurredDateTime": "2026-09-21T10:45:00+01:00",
-     "recorded": "2026-09-29T13:35:56+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -2047,8 +2047,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:692e7a80-105d-44ac-a747-4bf97565e2a6",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:d65782a5-c7dd-4771-b654-8baf81a83441",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

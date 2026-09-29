@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
+    "fullUrl": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -23,7 +23,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Coimbra region · Lake city park Aveiro (FWW-40.6362,-8.6532)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Central Portugal · Lake city park Aveiro (FWW-40.6362,-8.6532)</p></div>"
      },
      "identifier": [
       {
@@ -32,7 +32,7 @@
       }
      ],
      "status": "active",
-     "name": "Coimbra region · Lake city park Aveiro",
+     "name": "Central Portugal · Lake city park Aveiro",
      "description": "Real citizen-science site (FreshWater Watch, Lake)",
      "mode": "instance",
      "physicalType": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8c0d7818-5c21-4723-b651-02fe11af0cea",
+    "fullUrl": "urn:uuid:09b65710-5e3b-47b5-b479-8e86da05447a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:846b4468-9e0d-4965-9325-ad213fa57461",
+    "fullUrl": "urn:uuid:a8a1eb5d-94ea-4e67-a85c-f0acbceb32c5",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -112,7 +112,7 @@
      "status": "completed",
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Coimbra region · Lake city park Aveiro, record FWW-304450</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Central Portugal · Lake city park Aveiro, record FWW-304450</p></div>"
      },
      "identifier": [
       {
@@ -130,10 +130,10 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
+      "reference": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
+      "display": "Central Portugal · Lake city park Aveiro"
      },
-     "createdDateTime": "2023-03-23T11:00:00+00:00",
+     "createdDateTime": "2023-03-23T14:33:00+00:00",
      "content": {
       "contentType": "image/jpeg",
       "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/319/attachments/290",
@@ -146,7 +146,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7546c3c8-343e-49c5-847d-b8c2f7dafa52",
+    "fullUrl": "urn:uuid:45399241-cab7-4636-a75f-09658cf54b69",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -168,7 +168,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Coimbra region · Lake city park Aveiro on 2023-03-23T11:00:00+00:00: 5 indicators (final, record FWW-304450)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Central Portugal · Lake city park Aveiro on 2023-03-23T14:33:00+00:00: 4 indicators (final, record FWW-304450)</p></div>"
      },
      "identifier": [
       {
@@ -199,10 +199,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
+      "reference": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
+      "display": "Central Portugal · Lake city park Aveiro"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T14:33:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -214,24 +214,21 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:a4e8030b-116a-47ec-989e-240476f0f943"
+       "reference": "urn:uuid:942cff4d-5077-4f0c-9447-3ee489d1889f"
       },
       {
-       "reference": "urn:uuid:f66f47af-3e2c-4054-9cae-84fbd78ab18f"
+       "reference": "urn:uuid:1b3ae4ba-ce2f-47de-9abf-5c3e1f1e814a"
       },
       {
-       "reference": "urn:uuid:f19ece98-5b32-4ae4-a4ad-2d2aa61ffeca"
+       "reference": "urn:uuid:cf553e80-729a-400a-b50c-f9f516384d62"
       },
       {
-       "reference": "urn:uuid:e20218e6-9b26-41d1-a945-db60a19afb73"
-      },
-      {
-       "reference": "urn:uuid:7b168119-6b98-4377-b5b6-4a104b8eff11"
+       "reference": "urn:uuid:124731bd-f2f6-4805-8820-9487a3925145"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:846b4468-9e0d-4965-9325-ad213fa57461"
+       "reference": "urn:uuid:a8a1eb5d-94ea-4e67-a85c-f0acbceb32c5"
       }
      ]
     },
@@ -241,7 +238,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a4e8030b-116a-47ec-989e-240476f0f943",
+    "fullUrl": "urn:uuid:942cff4d-5077-4f0c-9447-3ee489d1889f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -263,7 +260,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Coimbra region · Lake city park Aveiro (final, record FWW-304450)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Central Portugal · Lake city park Aveiro (final, record FWW-304450)</p></div>"
      },
      "identifier": [
       {
@@ -294,10 +291,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
+      "reference": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
+      "display": "Central Portugal · Lake city park Aveiro"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T14:33:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -319,7 +316,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:846b4468-9e0d-4965-9325-ad213fa57461"
+       "reference": "urn:uuid:a8a1eb5d-94ea-4e67-a85c-f0acbceb32c5"
       }
      ]
     },
@@ -329,7 +326,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f66f47af-3e2c-4054-9cae-84fbd78ab18f",
+    "fullUrl": "urn:uuid:1b3ae4ba-ce2f-47de-9abf-5c3e1f1e814a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -351,7 +348,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Coimbra region · Lake city park Aveiro (final, record FWW-304450)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Central Portugal · Lake city park Aveiro (final, record FWW-304450)</p></div>"
      },
      "identifier": [
       {
@@ -382,10 +379,10 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
+      "reference": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
+      "display": "Central Portugal · Lake city park Aveiro"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T14:33:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -407,7 +404,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:846b4468-9e0d-4965-9325-ad213fa57461"
+       "reference": "urn:uuid:a8a1eb5d-94ea-4e67-a85c-f0acbceb32c5"
       }
      ]
     },
@@ -417,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f19ece98-5b32-4ae4-a4ad-2d2aa61ffeca",
+    "fullUrl": "urn:uuid:cf553e80-729a-400a-b50c-f9f516384d62",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -439,81 +436,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: yes at Coimbra region · Lake city park Aveiro (final, record FWW-304450)</p></div>"
-     },
-     "identifier": [
-      {
-       "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "FWW-304450.animal-contact"
-      }
-     ],
-     "status": "final",
-     "category": [
-      {
-       "coding": [
-        {
-         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
-        }
-       ]
-      }
-     ],
-     "code": {
-      "coding": [
-       {
-        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
-        "code": "animal-contact",
-        "display": "Pets or livestock in the water"
-       }
-      ],
-      "text": "Pets or livestock in the water"
-     },
-     "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
-     },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
-     "performer": [
-      {
-       "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "fww-group-4b4922e9fdf8"
-       },
-       "display": "Pseudonymous citizen scientist"
-      }
-     ],
-     "valueBoolean": true
-    },
-    "request": {
-     "method": "PUT",
-     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304450.animal-contact"
-    }
-   },
-   {
-    "fullUrl": "urn:uuid:e20218e6-9b26-41d1-a945-db60a19afb73",
-    "resource": {
-     "resourceType": "Observation",
-     "meta": {
-      "security": [
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-        "code": "U",
-        "display": "unrestricted"
-       },
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "code": "PSEUDED",
-        "display": "pseudonymized"
-       }
-      ],
-      "profile": [
-       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
-      ]
-     },
-     "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Coimbra region · Lake city park Aveiro (final, record FWW-304450)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Central Portugal · Lake city park Aveiro (final, record FWW-304450)</p></div>"
      },
      "identifier": [
       {
@@ -544,10 +467,10 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
+      "reference": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
+      "display": "Central Portugal · Lake city park Aveiro"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T14:33:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -565,7 +488,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7b168119-6b98-4377-b5b6-4a104b8eff11",
+    "fullUrl": "urn:uuid:124731bd-f2f6-4805-8820-9487a3925145",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -587,7 +510,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Coimbra region · Lake city park Aveiro (final, record FWW-304450)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Central Portugal · Lake city park Aveiro (final, record FWW-304450)</p></div>"
      },
      "identifier": [
       {
@@ -618,10 +541,10 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:09a63ee1-d818-4859-9168-86cf832f85d5",
-      "display": "Coimbra region · Lake city park Aveiro"
+      "reference": "urn:uuid:70153a35-864b-4ea9-8923-39f2a82d7292",
+      "display": "Central Portugal · Lake city park Aveiro"
      },
-     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "effectiveDateTime": "2023-03-23T14:33:00+00:00",
      "performer": [
       {
        "identifier": {
@@ -648,7 +571,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a1bd26e2-b0c2-48c6-be6e-2d0f09f3af21",
+    "fullUrl": "urn:uuid:8eba0759-26f3-4e08-a862-74a46f2bde6f",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304450",
@@ -668,33 +591,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304450 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304450 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:7546c3c8-343e-49c5-847d-b8c2f7dafa52"
+       "reference": "urn:uuid:45399241-cab7-4636-a75f-09658cf54b69"
       },
       {
-       "reference": "urn:uuid:a4e8030b-116a-47ec-989e-240476f0f943"
+       "reference": "urn:uuid:942cff4d-5077-4f0c-9447-3ee489d1889f"
       },
       {
-       "reference": "urn:uuid:f66f47af-3e2c-4054-9cae-84fbd78ab18f"
+       "reference": "urn:uuid:1b3ae4ba-ce2f-47de-9abf-5c3e1f1e814a"
       },
       {
-       "reference": "urn:uuid:f19ece98-5b32-4ae4-a4ad-2d2aa61ffeca"
+       "reference": "urn:uuid:cf553e80-729a-400a-b50c-f9f516384d62"
       },
       {
-       "reference": "urn:uuid:e20218e6-9b26-41d1-a945-db60a19afb73"
+       "reference": "urn:uuid:124731bd-f2f6-4805-8820-9487a3925145"
       },
       {
-       "reference": "urn:uuid:7b168119-6b98-4377-b5b6-4a104b8eff11"
-      },
-      {
-       "reference": "urn:uuid:846b4468-9e0d-4965-9325-ad213fa57461"
+       "reference": "urn:uuid:a8a1eb5d-94ea-4e67-a85c-f0acbceb32c5"
       }
      ],
-     "occurredDateTime": "2023-03-23T11:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-03-23T14:33:00+00:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -734,8 +654,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:8c0d7818-5c21-4723-b651-02fe11af0cea",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:09b65710-5e3b-47b5-b479-8e86da05447a",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

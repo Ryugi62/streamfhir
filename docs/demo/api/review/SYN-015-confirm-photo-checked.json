@@ -234,6 +234,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     },
     {
@@ -265,6 +266,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     },
     {
@@ -284,6 +286,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "warning",
@@ -303,6 +306,7 @@
      "values": {},
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "error",
@@ -491,6 +495,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     },
     {
@@ -516,6 +521,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     },
     {
@@ -528,6 +534,7 @@
      "values": {},
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "error",
@@ -543,7 +550,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:50ba0cfa-8075-4e4f-8510-f8052e7e29f0",
+      "fullUrl": "urn:uuid:ae5dd333-1289-445b-ac10-f4b176deef15",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -595,7 +602,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:f33c0a7d-b47e-4e43-b837-968dc3c0efcc",
+      "fullUrl": "urn:uuid:52f28688-d232-4c50-a052-d798c20da67d",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -614,7 +621,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
        },
        "identifier": [
         {
@@ -630,7 +637,7 @@
        ],
        "version": [
         {
-         "value": "0.5.1"
+         "value": "0.7.0"
         }
        ]
       },
@@ -641,7 +648,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:5ade1621-ea1b-48b4-9bb8-c310ae0205dd",
+      "fullUrl": "urn:uuid:9a8b631f-c50d-4add-af69-95b669b058ed",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -742,7 +749,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:50ba0cfa-8075-4e4f-8510-f8052e7e29f0",
+        "reference": "urn:uuid:ae5dd333-1289-445b-ac10-f4b176deef15",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -750,8 +757,8 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:f33c0a7d-b47e-4e43-b837-968dc3c0efcc",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:52f28688-d232-4c50-a052-d798c20da67d",
+        "display": "StreamFHIR 0.7.0"
        }
       },
       "request": {
@@ -760,7 +767,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:26c35e00-81e1-481c-a339-3c344cef29d2",
+      "fullUrl": "urn:uuid:9abd3fce-3f11-4eb7-9128-78d5a31bfa09",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -780,14 +787,14 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Alder Brook - below storm outfall computed by StreamFHIR 0.5.1 from 2 citizen records</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Alder Brook - below storm outfall computed by StreamFHIR 0.7.0 from 2 citizen records</p></div>"
        },
        "target": [
         {
-         "reference": "urn:uuid:5ade1621-ea1b-48b4-9bb8-c310ae0205dd"
+         "reference": "urn:uuid:9a8b631f-c50d-4add-af69-95b669b058ed"
         }
        ],
-       "recorded": "2026-09-29T13:35:56+00:00",
+       "recorded": "2026-09-29T14:00:23+00:00",
        "activity": {
         "coding": [
          {
@@ -809,8 +816,8 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:f33c0a7d-b47e-4e43-b837-968dc3c0efcc",
-          "display": "StreamFHIR 0.5.1"
+          "reference": "urn:uuid:52f28688-d232-4c50-a052-d798c20da67d",
+          "display": "StreamFHIR 0.7.0"
          }
         }
        ],
@@ -1012,6 +1019,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     },
     {
@@ -1030,6 +1038,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "warning",
@@ -1069,6 +1078,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "warning",
@@ -1084,7 +1094,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:0e041b89-5211-4ec4-aadf-bf296ce44ca7",
+      "fullUrl": "urn:uuid:4955c988-e5a8-4116-a066-a645e7705566",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -1136,7 +1146,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:cf61d993-8b86-423e-a79b-e646d6bfe24c",
+      "fullUrl": "urn:uuid:aed6def8-a8b1-4022-99b9-3a8cec9035e2",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1155,7 +1165,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
        },
        "identifier": [
         {
@@ -1171,7 +1181,7 @@
        ],
        "version": [
         {
-         "value": "0.5.1"
+         "value": "0.7.0"
         }
        ]
       },
@@ -1182,7 +1192,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e1dfff6d-421c-48ce-bfbf-7798232282e6",
+      "fullUrl": "urn:uuid:02e8c287-4266-4a34-bf24-e8b60dfd0708",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1272,7 +1282,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:0e041b89-5211-4ec4-aadf-bf296ce44ca7",
+        "reference": "urn:uuid:4955c988-e5a8-4116-a066-a645e7705566",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1280,8 +1290,8 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:cf61d993-8b86-423e-a79b-e646d6bfe24c",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:aed6def8-a8b1-4022-99b9-3a8cec9035e2",
+        "display": "StreamFHIR 0.7.0"
        }
       },
       "request": {
@@ -1290,7 +1300,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:fc51de5c-0900-4acf-a67f-c86a999a2a45",
+      "fullUrl": "urn:uuid:5985ad92-228a-4797-a8da-68bba238e510",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1310,14 +1320,14 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Mill Pond inlet computed by StreamFHIR 0.5.1 from 1 citizen records</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Mill Pond inlet computed by StreamFHIR 0.7.0 from 1 citizen records</p></div>"
        },
        "target": [
         {
-         "reference": "urn:uuid:e1dfff6d-421c-48ce-bfbf-7798232282e6"
+         "reference": "urn:uuid:02e8c287-4266-4a34-bf24-e8b60dfd0708"
         }
        ],
-       "recorded": "2026-09-29T13:35:56+00:00",
+       "recorded": "2026-09-29T14:00:23+00:00",
        "activity": {
         "coding": [
          {
@@ -1339,8 +1349,8 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:cf61d993-8b86-423e-a79b-e646d6bfe24c",
-          "display": "StreamFHIR 0.5.1"
+          "reference": "urn:uuid:aed6def8-a8b1-4022-99b9-3a8cec9035e2",
+          "display": "StreamFHIR 0.7.0"
          }
         }
        ],
@@ -1534,6 +1544,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     },
     {
@@ -1564,6 +1575,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "warning",
@@ -1583,6 +1595,7 @@
      "values": {},
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "error",
@@ -1610,6 +1623,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": [
       {
        "severity": "warning",
@@ -1625,7 +1639,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:52f588f8-8627-4d58-be53-b2a91083ca71",
+      "fullUrl": "urn:uuid:3df7330b-66b8-4e60-b96b-460f3bd82f82",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -1677,7 +1691,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:20916d52-75e8-42dc-b02e-f5688c995cb9",
+      "fullUrl": "urn:uuid:8cb83ed7-9eed-40c4-a278-65d26e5612b8",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1696,7 +1710,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
        },
        "identifier": [
         {
@@ -1712,7 +1726,7 @@
        ],
        "version": [
         {
-         "value": "0.5.1"
+         "value": "0.7.0"
         }
        ]
       },
@@ -1723,7 +1737,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:1b10b6bf-a479-426c-8ab4-2dbc6ceab346",
+      "fullUrl": "urn:uuid:6872908e-be40-4421-9939-a7969c86a183",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1813,7 +1827,7 @@
         "text": "High health hazard at Willow Creek - allotment gardens (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-11 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:52f588f8-8627-4d58-be53-b2a91083ca71",
+        "reference": "urn:uuid:3df7330b-66b8-4e60-b96b-460f3bd82f82",
         "display": "Willow Creek - allotment gardens"
        },
        "period": {
@@ -1821,8 +1835,8 @@
         "end": "2026-10-11T18:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:20916d52-75e8-42dc-b02e-f5688c995cb9",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:8cb83ed7-9eed-40c4-a278-65d26e5612b8",
+        "display": "StreamFHIR 0.7.0"
        }
       },
       "request": {
@@ -1831,7 +1845,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e7962897-794a-4b08-b9e3-18db21a05001",
+      "fullUrl": "urn:uuid:24dc2f88-4f15-4512-b62b-37a471f89d9c",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-WILLOW",
@@ -1851,14 +1865,14 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Willow Creek - allotment gardens computed by StreamFHIR 0.5.1 from 1 citizen records</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Willow Creek - allotment gardens computed by StreamFHIR 0.7.0 from 1 citizen records</p></div>"
        },
        "target": [
         {
-         "reference": "urn:uuid:1b10b6bf-a479-426c-8ab4-2dbc6ceab346"
+         "reference": "urn:uuid:6872908e-be40-4421-9939-a7969c86a183"
         }
        ],
-       "recorded": "2026-09-29T13:35:56+00:00",
+       "recorded": "2026-09-29T14:00:23+00:00",
        "activity": {
         "coding": [
          {
@@ -1880,8 +1894,8 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:20916d52-75e8-42dc-b02e-f5688c995cb9",
-          "display": "StreamFHIR 0.5.1"
+          "reference": "urn:uuid:8cb83ed7-9eed-40c4-a278-65d26e5612b8",
+          "display": "StreamFHIR 0.7.0"
          }
         }
        ],
@@ -1973,6 +1987,7 @@
      },
      "below_limit": {},
      "observer_name": "",
+     "photos": [],
      "issues": []
     }
    ],

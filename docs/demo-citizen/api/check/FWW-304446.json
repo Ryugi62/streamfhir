@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+    "fullUrl": "urn:uuid:8d57782e-ad5f-4eb7-a56e-974a77716db9",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:af703ae3-65be-4aa6-8af2-a78079dc12d7",
+    "fullUrl": "urn:uuid:0e179796-f52a-4ff8-8e24-bdf7e6445565",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:033a1b74-a60e-466f-8c7a-36e8733a359a",
+    "fullUrl": "urn:uuid:0a1f8620-d94a-4c0a-91a3-ad4d95c991b5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -119,7 +119,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Ariege on 2023-03-26T10:00:00+00:00: 5 indicators (final, record FWW-304446)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Ariege on 2023-03-26T16:51:00+02:00: 4 indicators (final, record FWW-304446)</p></div>"
      },
      "identifier": [
       {
@@ -150,10 +150,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "reference": "urn:uuid:8d57782e-ad5f-4eb7-a56e-974a77716db9",
       "display": "Toulouse area · Ariege"
      },
-     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-26T16:51:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -165,19 +165,16 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:291d7323-9562-4fc2-85b6-c5fdd36d1071"
+       "reference": "urn:uuid:064dc840-a63e-460a-9e8d-cc7d44f47da1"
       },
       {
-       "reference": "urn:uuid:6a1792e5-0c8d-454c-ae87-9022eb35cc53"
+       "reference": "urn:uuid:34e62825-58fa-41b2-b7bf-2f3a29c36265"
       },
       {
-       "reference": "urn:uuid:55997811-1def-4b8d-a1e5-7535b9be6399"
+       "reference": "urn:uuid:895893c6-1ee5-491f-a989-15611cbba7fb"
       },
       {
-       "reference": "urn:uuid:6bb895ce-5803-4322-bb16-b6a6ccb4379e"
-      },
-      {
-       "reference": "urn:uuid:e82cacbc-d750-42a1-8391-90c5e8c764dc"
+       "reference": "urn:uuid:c86f991d-8c43-440f-9d6b-ae2bddb0deec"
       }
      ]
     },
@@ -187,7 +184,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:291d7323-9562-4fc2-85b6-c5fdd36d1071",
+    "fullUrl": "urn:uuid:064dc840-a63e-460a-9e8d-cc7d44f47da1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,10 +237,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "reference": "urn:uuid:8d57782e-ad5f-4eb7-a56e-974a77716db9",
       "display": "Toulouse area · Ariege"
      },
-     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-26T16:51:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -270,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6a1792e5-0c8d-454c-ae87-9022eb35cc53",
+    "fullUrl": "urn:uuid:34e62825-58fa-41b2-b7bf-2f3a29c36265",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -323,10 +320,10 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "reference": "urn:uuid:8d57782e-ad5f-4eb7-a56e-974a77716db9",
       "display": "Toulouse area · Ariege"
      },
-     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-26T16:51:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -353,81 +350,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:55997811-1def-4b8d-a1e5-7535b9be6399",
-    "resource": {
-     "resourceType": "Observation",
-     "meta": {
-      "security": [
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-        "code": "U",
-        "display": "unrestricted"
-       },
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "code": "PSEUDED",
-        "display": "pseudonymized"
-       }
-      ],
-      "profile": [
-       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
-      ]
-     },
-     "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Toulouse area · Ariege (final, record FWW-304446)</p></div>"
-     },
-     "identifier": [
-      {
-       "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "FWW-304446.animal-contact"
-      }
-     ],
-     "status": "final",
-     "category": [
-      {
-       "coding": [
-        {
-         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
-        }
-       ]
-      }
-     ],
-     "code": {
-      "coding": [
-       {
-        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
-        "code": "animal-contact",
-        "display": "Pets or livestock in the water"
-       }
-      ],
-      "text": "Pets or livestock in the water"
-     },
-     "subject": {
-      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
-      "display": "Toulouse area · Ariege"
-     },
-     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
-     "performer": [
-      {
-       "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "fww-group-4b4922e9fdf8"
-       },
-       "display": "Pseudonymous citizen scientist"
-      }
-     ],
-     "valueBoolean": false
-    },
-    "request": {
-     "method": "PUT",
-     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446.animal-contact"
-    }
-   },
-   {
-    "fullUrl": "urn:uuid:6bb895ce-5803-4322-bb16-b6a6ccb4379e",
+    "fullUrl": "urn:uuid:895893c6-1ee5-491f-a989-15611cbba7fb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -480,10 +403,10 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "reference": "urn:uuid:8d57782e-ad5f-4eb7-a56e-974a77716db9",
       "display": "Toulouse area · Ariege"
      },
-     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-26T16:51:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -501,7 +424,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e82cacbc-d750-42a1-8391-90c5e8c764dc",
+    "fullUrl": "urn:uuid:c86f991d-8c43-440f-9d6b-ae2bddb0deec",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -554,10 +477,10 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "reference": "urn:uuid:8d57782e-ad5f-4eb7-a56e-974a77716db9",
       "display": "Toulouse area · Ariege"
      },
-     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-26T16:51:00+02:00",
      "performer": [
       {
        "identifier": {
@@ -584,7 +507,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fe1be2c8-da5d-4d86-8211-d25e1cc57d48",
+    "fullUrl": "urn:uuid:0741f5f0-9d3f-4532-9530-c1680d15f0b8",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304446",
@@ -604,30 +527,27 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304446 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304446 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:033a1b74-a60e-466f-8c7a-36e8733a359a"
+       "reference": "urn:uuid:0a1f8620-d94a-4c0a-91a3-ad4d95c991b5"
       },
       {
-       "reference": "urn:uuid:291d7323-9562-4fc2-85b6-c5fdd36d1071"
+       "reference": "urn:uuid:064dc840-a63e-460a-9e8d-cc7d44f47da1"
       },
       {
-       "reference": "urn:uuid:6a1792e5-0c8d-454c-ae87-9022eb35cc53"
+       "reference": "urn:uuid:34e62825-58fa-41b2-b7bf-2f3a29c36265"
       },
       {
-       "reference": "urn:uuid:55997811-1def-4b8d-a1e5-7535b9be6399"
+       "reference": "urn:uuid:895893c6-1ee5-491f-a989-15611cbba7fb"
       },
       {
-       "reference": "urn:uuid:6bb895ce-5803-4322-bb16-b6a6ccb4379e"
-      },
-      {
-       "reference": "urn:uuid:e82cacbc-d750-42a1-8391-90c5e8c764dc"
+       "reference": "urn:uuid:c86f991d-8c43-440f-9d6b-ae2bddb0deec"
       }
      ],
-     "occurredDateTime": "2023-03-26T10:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-03-26T16:51:00+02:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -667,8 +587,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:af703ae3-65be-4aa6-8af2-a78079dc12d7",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:0e179796-f52a-4ff8-8e24-bdf7e6445565",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

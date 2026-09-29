@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+    "fullUrl": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:33eb1f69-ad08-4bf3-ac35-d9530943c434",
+    "fullUrl": "urn:uuid:7181dd03-ecbc-43de-9800-167807d87e81",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:73f32fe7-0d83-4cec-81e3-3eea097e2a93",
+    "fullUrl": "urn:uuid:e844c3e0-97f1-4679-8837-1a0913aba59d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+      "reference": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:46355428-ed9c-47cb-834d-cd3eb260cb05"
+       "reference": "urn:uuid:c04ede28-a112-4a4a-8b8c-5c22dba59cc7"
       },
       {
-       "reference": "urn:uuid:deced042-9ef7-4e10-a3a0-5cc961abb750"
+       "reference": "urn:uuid:26b60360-f97f-4b4d-8765-91fe66709dba"
       },
       {
-       "reference": "urn:uuid:b3c07b28-debe-4f1a-879c-d2fced2c73e3"
+       "reference": "urn:uuid:ed33d417-fb48-47f7-b4ec-e7da51d867f0"
       },
       {
-       "reference": "urn:uuid:e8545af2-7d69-4cfc-a4ca-b21c58e2b563"
+       "reference": "urn:uuid:812c90b3-421d-4f2e-a252-2282c6864255"
       },
       {
-       "reference": "urn:uuid:38335fa7-3583-428e-bbf5-82a47404108a"
+       "reference": "urn:uuid:074e02cb-a4ff-4c32-aeaa-b9b70b8f56d7"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:46355428-ed9c-47cb-834d-cd3eb260cb05",
+    "fullUrl": "urn:uuid:c04ede28-a112-4a4a-8b8c-5c22dba59cc7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+      "reference": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:deced042-9ef7-4e10-a3a0-5cc961abb750",
+    "fullUrl": "urn:uuid:26b60360-f97f-4b4d-8765-91fe66709dba",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+      "reference": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b3c07b28-debe-4f1a-879c-d2fced2c73e3",
+    "fullUrl": "urn:uuid:ed33d417-fb48-47f7-b4ec-e7da51d867f0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+      "reference": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e8545af2-7d69-4cfc-a4ca-b21c58e2b563",
+    "fullUrl": "urn:uuid:812c90b3-421d-4f2e-a252-2282c6864255",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+      "reference": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -516,9 +516,9 @@
      ],
      "valueQuantity": {
       "value": 20.0,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:38335fa7-3583-428e-bbf5-82a47404108a",
+    "fullUrl": "urn:uuid:074e02cb-a4ff-4c32-aeaa-b9b70b8f56d7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:2e6619c0-f0bb-480c-aea7-4202d844a5fa",
+      "reference": "urn:uuid:f94330fb-ff3c-412e-a494-002dda19c049",
       "display": "Toulouse area · La Lèze à Labarthe-sur-Lèze"
      },
      "effectiveDateTime": "2024-12-17T10:47:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b9e36624-4014-4bd5-a0f0-ae98a020bd7a",
+    "fullUrl": "urn:uuid:f0bac36f-777f-4381-a920-8a8e4f895a34",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05165000-2024-12-17T1047",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05165000-2024-12-17T1047 was imported from Hub'Eau qualite_rivieres (Sandre), station 05165000 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05165000-2024-12-17T1047 was imported from Hub'Eau qualite_rivieres (Sandre), station 05165000 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:73f32fe7-0d83-4cec-81e3-3eea097e2a93"
+       "reference": "urn:uuid:e844c3e0-97f1-4679-8837-1a0913aba59d"
       },
       {
-       "reference": "urn:uuid:46355428-ed9c-47cb-834d-cd3eb260cb05"
+       "reference": "urn:uuid:c04ede28-a112-4a4a-8b8c-5c22dba59cc7"
       },
       {
-       "reference": "urn:uuid:deced042-9ef7-4e10-a3a0-5cc961abb750"
+       "reference": "urn:uuid:26b60360-f97f-4b4d-8765-91fe66709dba"
       },
       {
-       "reference": "urn:uuid:b3c07b28-debe-4f1a-879c-d2fced2c73e3"
+       "reference": "urn:uuid:ed33d417-fb48-47f7-b4ec-e7da51d867f0"
       },
       {
-       "reference": "urn:uuid:e8545af2-7d69-4cfc-a4ca-b21c58e2b563"
+       "reference": "urn:uuid:812c90b3-421d-4f2e-a252-2282c6864255"
       },
       {
-       "reference": "urn:uuid:38335fa7-3583-428e-bbf5-82a47404108a"
+       "reference": "urn:uuid:074e02cb-a4ff-4c32-aeaa-b9b70b8f56d7"
       }
      ],
      "occurredDateTime": "2024-12-17T10:47:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:33eb1f69-ad08-4bf3-ac35-d9530943c434",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:7181dd03-ecbc-43de-9800-167807d87e81",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:0e7caf9f-77bb-495e-b4ef-66f527e364f9",
+    "fullUrl": "urn:uuid:8626f8f7-099e-47f4-b709-eb3d3396d9fe",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1bb1c1e9-c9bf-49bc-b077-cb8f7665b6d0",
+    "fullUrl": "urn:uuid:5eeb059b-acba-4127-949e-737c4a7b7077",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ff213c80-4ed7-4f38-a35e-7aa052d42b15",
+    "fullUrl": "urn:uuid:63a20e19-d3c3-497e-8f88-4ccdd02654f8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:0e7caf9f-77bb-495e-b4ef-66f527e364f9",
+      "reference": "urn:uuid:8626f8f7-099e-47f4-b709-eb3d3396d9fe",
       "display": "Toulouse area · PERIPHERIE SUD SUD EST"
      },
      "effectiveDateTime": "2025-05-19T12:13:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:7534e63f-fb7e-45dc-9d2a-c276d08d78ac"
+       "reference": "urn:uuid:23935366-1276-4bf3-a4b4-1852e551f143"
       },
       {
-       "reference": "urn:uuid:4edb0155-e6fe-40f9-97bc-f702925925e7"
+       "reference": "urn:uuid:81a1c829-0d06-4cb2-a832-d42b719db89d"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7534e63f-fb7e-45dc-9d2a-c276d08d78ac",
+    "fullUrl": "urn:uuid:23935366-1276-4bf3-a4b4-1852e551f143",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:0e7caf9f-77bb-495e-b4ef-66f527e364f9",
+      "reference": "urn:uuid:8626f8f7-099e-47f4-b709-eb3d3396d9fe",
       "display": "Toulouse area · PERIPHERIE SUD SUD EST"
      },
      "effectiveDateTime": "2025-05-19T12:13:00+02:00",
@@ -257,9 +257,9 @@
      ],
      "valueQuantity": {
       "value": 3.2,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4edb0155-e6fe-40f9-97bc-f702925925e7",
+    "fullUrl": "urn:uuid:81a1c829-0d06-4cb2-a832-d42b719db89d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:0e7caf9f-77bb-495e-b4ef-66f527e364f9",
+      "reference": "urn:uuid:8626f8f7-099e-47f4-b709-eb3d3396d9fe",
       "display": "Toulouse area · PERIPHERIE SUD SUD EST"
      },
      "effectiveDateTime": "2025-05-19T12:13:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:955a25f7-7937-4511-b7a1-e089363bde37",
+    "fullUrl": "urn:uuid:d915e025-3c70-43fa-bf5b-684538956b8a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000320-2025-05-19T1213",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000320-2025-05-19T1213 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000320 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000320-2025-05-19T1213 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000320 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:ff213c80-4ed7-4f38-a35e-7aa052d42b15"
+       "reference": "urn:uuid:63a20e19-d3c3-497e-8f88-4ccdd02654f8"
       },
       {
-       "reference": "urn:uuid:7534e63f-fb7e-45dc-9d2a-c276d08d78ac"
+       "reference": "urn:uuid:23935366-1276-4bf3-a4b4-1852e551f143"
       },
       {
-       "reference": "urn:uuid:4edb0155-e6fe-40f9-97bc-f702925925e7"
+       "reference": "urn:uuid:81a1c829-0d06-4cb2-a832-d42b719db89d"
       }
      ],
      "occurredDateTime": "2025-05-19T12:13:00+02:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:1bb1c1e9-c9bf-49bc-b077-cb8f7665b6d0",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:5eeb059b-acba-4127-949e-737c4a7b7077",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

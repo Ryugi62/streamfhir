@@ -1,15 +1,22 @@
 {
  "report": {
   "record_id": "FWW-304440",
-  "status": "ok",
-  "issues": []
+  "status": "review",
+  "issues": [
+   {
+    "severity": "warning",
+    "field": "source",
+    "code": "source-note",
+    "message": "From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+   }
+  ]
  },
  "bundle": {
   "resourceType": "Bundle",
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
+    "fullUrl": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -23,7 +30,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Garonne_Pinsaguel_Trainbridge (FWW-43.5114,1.3870)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Garonne Pinsaguel Trainbridge (FWW-43.5114,1.3870)</p></div>"
      },
      "identifier": [
       {
@@ -32,7 +39,7 @@
       }
      ],
      "status": "active",
-     "name": "Toulouse area · Garonne_Pinsaguel_Trainbridge",
+     "name": "Toulouse area · Garonne Pinsaguel Trainbridge",
      "description": "Real citizen-science site (FreshWater Watch, River)",
      "mode": "instance",
      "physicalType": {
@@ -56,7 +63,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:df86ba7c-c6dc-46e6-932a-93cc3569eb1d",
+    "fullUrl": "urn:uuid:3235c1c7-b39a-4a8e-812c-86aaec562ba2",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +77,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +93,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +104,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ce07e2bb-dff0-426f-a453-9c68ccc25ffe",
+    "fullUrl": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -112,7 +119,7 @@
      "status": "completed",
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Toulouse area · Garonne_Pinsaguel_Trainbridge, record FWW-304440</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Toulouse area · Garonne Pinsaguel Trainbridge, record FWW-304440</p></div>"
      },
      "identifier": [
       {
@@ -130,10 +137,10 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
-      "display": "Toulouse area · Garonne_Pinsaguel_Trainbridge"
+      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
-     "createdDateTime": "2023-03-25T10:00:00+00:00",
+     "createdDateTime": "2023-03-25T14:40:00+01:00",
      "content": {
       "contentType": "image/jpeg",
       "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/309/attachments/288",
@@ -146,7 +153,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:776235bf-b3e7-453e-9296-f5c0f08d7feb",
+    "fullUrl": "urn:uuid:64bd54e9-0fd2-4799-bfa4-1a9c4442748f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -168,7 +175,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Garonne_Pinsaguel_Trainbridge on 2023-03-25T10:00:00+00:00: 4 indicators (final, record FWW-304440)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Garonne Pinsaguel Trainbridge on 2023-03-25T14:40:00+01:00: 3 indicators (preliminary, record FWW-304440)</p></div>"
      },
      "identifier": [
       {
@@ -176,7 +183,7 @@
        "value": "FWW-304440"
       }
      ],
-     "status": "final",
+     "status": "preliminary",
      "category": [
       {
        "coding": [
@@ -199,10 +206,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
-      "display": "Toulouse area · Garonne_Pinsaguel_Trainbridge"
+      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T14:40:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -214,21 +221,23 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:f9c65896-4670-4a11-9f80-6e1e8bd5bdef"
+       "reference": "urn:uuid:04fb3b98-b06c-443b-9fa4-74cf87cbafbe"
       },
       {
-       "reference": "urn:uuid:0e968ad4-929a-40d4-9ce4-714cf0241693"
+       "reference": "urn:uuid:3fb555d2-699a-4c5c-b825-5373f186a9f1"
       },
       {
-       "reference": "urn:uuid:e38964ca-a323-43ca-bc3a-87a85e2f46e3"
-      },
+       "reference": "urn:uuid:8328d408-8c89-4365-af07-7882f09f5929"
+      }
+     ],
+     "note": [
       {
-       "reference": "urn:uuid:0359b5f2-dd9e-494a-a290-5bc6d0dc37d5"
+       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:ce07e2bb-dff0-426f-a453-9c68ccc25ffe"
+       "reference": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183"
       }
      ]
     },
@@ -238,7 +247,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f9c65896-4670-4a11-9f80-6e1e8bd5bdef",
+    "fullUrl": "urn:uuid:04fb3b98-b06c-443b-9fa4-74cf87cbafbe",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -260,7 +269,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Toulouse area · Garonne_Pinsaguel_Trainbridge (final, record FWW-304440)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Toulouse area · Garonne Pinsaguel Trainbridge (preliminary, record FWW-304440)</p></div>"
      },
      "identifier": [
       {
@@ -268,7 +277,7 @@
        "value": "FWW-304440.water-colour"
       }
      ],
-     "status": "final",
+     "status": "preliminary",
      "category": [
       {
        "coding": [
@@ -291,10 +300,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
-      "display": "Toulouse area · Garonne_Pinsaguel_Trainbridge"
+      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T14:40:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -314,9 +323,14 @@
       ],
       "text": "clear"
      },
+     "note": [
+      {
+       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+      }
+     ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:ce07e2bb-dff0-426f-a453-9c68ccc25ffe"
+       "reference": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183"
       }
      ]
     },
@@ -326,7 +340,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0e968ad4-929a-40d4-9ce4-714cf0241693",
+    "fullUrl": "urn:uuid:3fb555d2-699a-4c5c-b825-5373f186a9f1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -348,81 +362,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Toulouse area · Garonne_Pinsaguel_Trainbridge (final, record FWW-304440)</p></div>"
-     },
-     "identifier": [
-      {
-       "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "FWW-304440.animal-contact"
-      }
-     ],
-     "status": "final",
-     "category": [
-      {
-       "coding": [
-        {
-         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
-        }
-       ]
-      }
-     ],
-     "code": {
-      "coding": [
-       {
-        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
-        "code": "animal-contact",
-        "display": "Pets or livestock in the water"
-       }
-      ],
-      "text": "Pets or livestock in the water"
-     },
-     "subject": {
-      "reference": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
-      "display": "Toulouse area · Garonne_Pinsaguel_Trainbridge"
-     },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
-     "performer": [
-      {
-       "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "fww-group-4b4922e9fdf8"
-       },
-       "display": "Pseudonymous citizen scientist"
-      }
-     ],
-     "valueBoolean": false
-    },
-    "request": {
-     "method": "PUT",
-     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304440.animal-contact"
-    }
-   },
-   {
-    "fullUrl": "urn:uuid:e38964ca-a323-43ca-bc3a-87a85e2f46e3",
-    "resource": {
-     "resourceType": "Observation",
-     "meta": {
-      "security": [
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-        "code": "U",
-        "display": "unrestricted"
-       },
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "code": "PSEUDED",
-        "display": "pseudonymized"
-       }
-      ],
-      "profile": [
-       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
-      ]
-     },
-     "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Garonne_Pinsaguel_Trainbridge (final, record FWW-304440)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Garonne Pinsaguel Trainbridge (preliminary, record FWW-304440)</p></div>"
      },
      "identifier": [
       {
@@ -430,7 +370,7 @@
        "value": "FWW-304440.people-contact"
       }
      ],
-     "status": "final",
+     "status": "preliminary",
      "category": [
       {
        "coding": [
@@ -453,10 +393,10 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
-      "display": "Toulouse area · Garonne_Pinsaguel_Trainbridge"
+      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T14:40:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -466,7 +406,12 @@
        "display": "Pseudonymous citizen scientist"
       }
      ],
-     "valueBoolean": false
+     "valueBoolean": false,
+     "note": [
+      {
+       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+      }
+     ]
     },
     "request": {
      "method": "PUT",
@@ -474,7 +419,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0359b5f2-dd9e-494a-a290-5bc6d0dc37d5",
+    "fullUrl": "urn:uuid:8328d408-8c89-4365-af07-7882f09f5929",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -496,7 +441,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Garonne_Pinsaguel_Trainbridge (final, record FWW-304440)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Garonne Pinsaguel Trainbridge (preliminary, record FWW-304440)</p></div>"
      },
      "identifier": [
       {
@@ -504,7 +449,7 @@
        "value": "FWW-304440.litter"
       }
      ],
-     "status": "final",
+     "status": "preliminary",
      "category": [
       {
        "coding": [
@@ -527,10 +472,10 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:1901b177-e13d-40dc-a842-26614f636795",
-      "display": "Toulouse area · Garonne_Pinsaguel_Trainbridge"
+      "reference": "urn:uuid:1d256043-a3ef-4be8-9122-19204adbd459",
+      "display": "Toulouse area · Garonne Pinsaguel Trainbridge"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T14:40:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -549,7 +494,12 @@
        }
       ],
       "text": "none"
-     }
+     },
+     "note": [
+      {
+       "text": "Needs review: From the source system: A slurry film was reported on the surface: a possible manure or sewage signal for a reviewer to check."
+      }
+     ]
     },
     "request": {
      "method": "PUT",
@@ -557,7 +507,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fb42694b-1047-42fd-a96e-cb2ff0f267d6",
+    "fullUrl": "urn:uuid:cc7c5ba0-590b-4b6d-8a0b-2f157f3800a4",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304440",
@@ -577,30 +527,27 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304440 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304440 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:776235bf-b3e7-453e-9296-f5c0f08d7feb"
+       "reference": "urn:uuid:64bd54e9-0fd2-4799-bfa4-1a9c4442748f"
       },
       {
-       "reference": "urn:uuid:f9c65896-4670-4a11-9f80-6e1e8bd5bdef"
+       "reference": "urn:uuid:04fb3b98-b06c-443b-9fa4-74cf87cbafbe"
       },
       {
-       "reference": "urn:uuid:0e968ad4-929a-40d4-9ce4-714cf0241693"
+       "reference": "urn:uuid:3fb555d2-699a-4c5c-b825-5373f186a9f1"
       },
       {
-       "reference": "urn:uuid:e38964ca-a323-43ca-bc3a-87a85e2f46e3"
+       "reference": "urn:uuid:8328d408-8c89-4365-af07-7882f09f5929"
       },
       {
-       "reference": "urn:uuid:0359b5f2-dd9e-494a-a290-5bc6d0dc37d5"
-      },
-      {
-       "reference": "urn:uuid:ce07e2bb-dff0-426f-a453-9c68ccc25ffe"
+       "reference": "urn:uuid:abecb904-ef4a-4246-9cd0-95ec41cd8183"
       }
      ],
-     "occurredDateTime": "2023-03-25T10:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-03-25T14:40:00+01:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -640,8 +587,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:df86ba7c-c6dc-46e6-932a-93cc3569eb1d",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:3235c1c7-b39a-4a8e-812c-86aaec562ba2",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

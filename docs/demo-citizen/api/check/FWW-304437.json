@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+    "fullUrl": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -23,7 +23,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Lèze_Canyon (FWW-43.4611,1.4170)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Lèze Canyon (FWW-43.4611,1.4170)</p></div>"
      },
      "identifier": [
       {
@@ -32,7 +32,7 @@
       }
      ],
      "status": "active",
-     "name": "Toulouse area · Lèze_Canyon",
+     "name": "Toulouse area · Lèze Canyon",
      "description": "Real citizen-science site (FreshWater Watch, River)",
      "mode": "instance",
      "physicalType": {
@@ -56,7 +56,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3be8628f-4c29-4ac7-b844-d09bfe56c433",
+    "fullUrl": "urn:uuid:da7c4f11-e764-46e2-a78a-b2cc835aa5d3",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -70,7 +70,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -86,7 +86,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -97,7 +97,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043",
+    "fullUrl": "urn:uuid:7ed4837b-25d5-4fcd-9a20-d6ee590e34d1",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -112,7 +112,7 @@
      "status": "completed",
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Toulouse area · Lèze_Canyon, record FWW-304437</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Toulouse area · Lèze Canyon, record FWW-304437</p></div>"
      },
      "identifier": [
       {
@@ -130,10 +130,10 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
+      "reference": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
+      "display": "Toulouse area · Lèze Canyon"
      },
-     "createdDateTime": "2023-03-25T10:00:00+00:00",
+     "createdDateTime": "2023-03-25T13:59:00+01:00",
      "content": {
       "contentType": "image/jpeg",
       "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/306/attachments/285",
@@ -146,7 +146,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fc555e43-68ac-424b-b1b1-e818fc2c1143",
+    "fullUrl": "urn:uuid:8b147297-e1b9-4af7-bc2c-505f4d2855e7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -168,7 +168,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Lèze_Canyon on 2023-03-25T10:00:00+00:00: 5 indicators (final, record FWW-304437)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Lèze Canyon on 2023-03-25T13:59:00+01:00: 4 indicators (final, record FWW-304437)</p></div>"
      },
      "identifier": [
       {
@@ -199,10 +199,10 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
+      "reference": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
+      "display": "Toulouse area · Lèze Canyon"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T13:59:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -214,24 +214,21 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:8d86e0eb-5ef4-49a3-bfa3-298ede7041f6"
+       "reference": "urn:uuid:3f72cf10-97dd-4f90-929a-f0004ee17767"
       },
       {
-       "reference": "urn:uuid:b437869c-fca4-4be4-8f34-ef1824b17086"
+       "reference": "urn:uuid:e4d94af6-9094-4636-9c18-f671abca57a7"
       },
       {
-       "reference": "urn:uuid:0cc95054-808f-4c63-b58a-c7776b4d8626"
+       "reference": "urn:uuid:1a0a2d61-e71c-4eca-847d-cc93e7cbe65b"
       },
       {
-       "reference": "urn:uuid:6f4b7bde-3c67-4f44-b64d-15b957f733c1"
-      },
-      {
-       "reference": "urn:uuid:19631d43-5969-443e-8572-b14278215988"
+       "reference": "urn:uuid:f1d980a6-42d3-4fb1-9ad4-ce3fb76a9342"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+       "reference": "urn:uuid:7ed4837b-25d5-4fcd-9a20-d6ee590e34d1"
       }
      ]
     },
@@ -241,7 +238,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8d86e0eb-5ef4-49a3-bfa3-298ede7041f6",
+    "fullUrl": "urn:uuid:3f72cf10-97dd-4f90-929a-f0004ee17767",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -263,7 +260,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Toulouse area · Lèze Canyon (final, record FWW-304437)</p></div>"
      },
      "identifier": [
       {
@@ -294,10 +291,10 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
+      "reference": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
+      "display": "Toulouse area · Lèze Canyon"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T13:59:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -319,7 +316,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+       "reference": "urn:uuid:7ed4837b-25d5-4fcd-9a20-d6ee590e34d1"
       }
      ]
     },
@@ -329,7 +326,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b437869c-fca4-4be4-8f34-ef1824b17086",
+    "fullUrl": "urn:uuid:e4d94af6-9094-4636-9c18-f671abca57a7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -351,7 +348,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Toulouse area · Lèze Canyon (final, record FWW-304437)</p></div>"
      },
      "identifier": [
       {
@@ -382,10 +379,10 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
+      "reference": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
+      "display": "Toulouse area · Lèze Canyon"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T13:59:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -407,7 +404,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+       "reference": "urn:uuid:7ed4837b-25d5-4fcd-9a20-d6ee590e34d1"
       }
      ]
     },
@@ -417,7 +414,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0cc95054-808f-4c63-b58a-c7776b4d8626",
+    "fullUrl": "urn:uuid:1a0a2d61-e71c-4eca-847d-cc93e7cbe65b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -439,81 +436,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
-     },
-     "identifier": [
-      {
-       "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "FWW-304437.animal-contact"
-      }
-     ],
-     "status": "final",
-     "category": [
-      {
-       "coding": [
-        {
-         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
-        }
-       ]
-      }
-     ],
-     "code": {
-      "coding": [
-       {
-        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
-        "code": "animal-contact",
-        "display": "Pets or livestock in the water"
-       }
-      ],
-      "text": "Pets or livestock in the water"
-     },
-     "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
-     },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
-     "performer": [
-      {
-       "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "fww-group-4b4922e9fdf8"
-       },
-       "display": "Pseudonymous citizen scientist"
-      }
-     ],
-     "valueBoolean": false
-    },
-    "request": {
-     "method": "PUT",
-     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.animal-contact"
-    }
-   },
-   {
-    "fullUrl": "urn:uuid:6f4b7bde-3c67-4f44-b64d-15b957f733c1",
-    "resource": {
-     "resourceType": "Observation",
-     "meta": {
-      "security": [
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-        "code": "U",
-        "display": "unrestricted"
-       },
-       {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "code": "PSEUDED",
-        "display": "pseudonymized"
-       }
-      ],
-      "profile": [
-       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
-      ]
-     },
-     "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Lèze Canyon (final, record FWW-304437)</p></div>"
      },
      "identifier": [
       {
@@ -544,10 +467,10 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
+      "reference": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
+      "display": "Toulouse area · Lèze Canyon"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T13:59:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -565,7 +488,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:19631d43-5969-443e-8572-b14278215988",
+    "fullUrl": "urn:uuid:f1d980a6-42d3-4fb1-9ad4-ce3fb76a9342",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -587,7 +510,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Lèze Canyon (final, record FWW-304437)</p></div>"
      },
      "identifier": [
       {
@@ -618,10 +541,10 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
-      "display": "Toulouse area · Lèze_Canyon"
+      "reference": "urn:uuid:2cbe8496-7241-474e-9070-233f0fcf5cea",
+      "display": "Toulouse area · Lèze Canyon"
      },
-     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "effectiveDateTime": "2023-03-25T13:59:00+01:00",
      "performer": [
       {
        "identifier": {
@@ -648,7 +571,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2c1da727-e0fb-4ec7-b33b-d95e7c5a2dca",
+    "fullUrl": "urn:uuid:886f72fe-3b52-45c6-ac58-2fa8d4c4fd3a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FWW-304437",
@@ -668,33 +591,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304437 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304437 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:fc555e43-68ac-424b-b1b1-e818fc2c1143"
+       "reference": "urn:uuid:8b147297-e1b9-4af7-bc2c-505f4d2855e7"
       },
       {
-       "reference": "urn:uuid:8d86e0eb-5ef4-49a3-bfa3-298ede7041f6"
+       "reference": "urn:uuid:3f72cf10-97dd-4f90-929a-f0004ee17767"
       },
       {
-       "reference": "urn:uuid:b437869c-fca4-4be4-8f34-ef1824b17086"
+       "reference": "urn:uuid:e4d94af6-9094-4636-9c18-f671abca57a7"
       },
       {
-       "reference": "urn:uuid:0cc95054-808f-4c63-b58a-c7776b4d8626"
+       "reference": "urn:uuid:1a0a2d61-e71c-4eca-847d-cc93e7cbe65b"
       },
       {
-       "reference": "urn:uuid:6f4b7bde-3c67-4f44-b64d-15b957f733c1"
+       "reference": "urn:uuid:f1d980a6-42d3-4fb1-9ad4-ce3fb76a9342"
       },
       {
-       "reference": "urn:uuid:19631d43-5969-443e-8572-b14278215988"
-      },
-      {
-       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+       "reference": "urn:uuid:7ed4837b-25d5-4fcd-9a20-d6ee590e34d1"
       }
      ],
-     "occurredDateTime": "2023-03-25T10:00:00+00:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "occurredDateTime": "2023-03-25T13:59:00+01:00",
+     "recorded": "2026-09-29T14:00:22+00:00",
      "activity": {
       "coding": [
        {
@@ -734,8 +654,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:3be8628f-4c29-4ac7-b844-d09bfe56c433",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:da7c4f11-e764-46e2-a78a-b2cc835aa5d3",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

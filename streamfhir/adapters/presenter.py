@@ -39,6 +39,7 @@ def overview_json(overview, as_of=None, dataset=None) -> dict:
                      "values": to_jsonable(r.assessment.values) if r.assessment else {},
                      "below_limit": to_jsonable(r.assessment.below_limit) if r.assessment else {},
                      "observer_name": r.assessment.observer_name if r.assessment else "",
+                     "photos": list(r.assessment.photos) if r.assessment and not r.assessment.synthetic else [],
                      "issues": to_jsonable(r.issues)} for r in o.reports],
         "flag_bundle": o.flag_bundle} for o in overview]}
 

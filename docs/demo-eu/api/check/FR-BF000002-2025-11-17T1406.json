@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:9e34f625-d248-42a1-91dd-643465923f05",
+    "fullUrl": "urn:uuid:22be06a0-1a17-44e1-a5f3-d20e3b5a01ff",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8eb5eeb0-8cee-41dc-8314-c8e5c443ec29",
+    "fullUrl": "urn:uuid:48aa00a7-4f23-43e3-b22a-949226cddef4",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.7.0</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.5.1"
+       "value": "0.7.0"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ce219a8c-d125-44e7-a554-a167ed57cc50",
+    "fullUrl": "urn:uuid:0a739387-bbc5-4f18-ac18-efa6f7cf88d5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:9e34f625-d248-42a1-91dd-643465923f05",
+      "reference": "urn:uuid:22be06a0-1a17-44e1-a5f3-d20e3b5a01ff",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-11-17T14:06:00+01:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:b33dc757-d26f-4e73-bd1e-cf8d03103deb"
+       "reference": "urn:uuid:d4b1c01a-353e-45b9-9253-60beed90bb12"
       },
       {
-       "reference": "urn:uuid:894f787c-1f80-465f-9860-4cf7caa15a32"
+       "reference": "urn:uuid:85917a57-7043-4992-a379-4a5150ec01c3"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b33dc757-d26f-4e73-bd1e-cf8d03103deb",
+    "fullUrl": "urn:uuid:d4b1c01a-353e-45b9-9253-60beed90bb12",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:9e34f625-d248-42a1-91dd-643465923f05",
+      "reference": "urn:uuid:22be06a0-1a17-44e1-a5f3-d20e3b5a01ff",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-11-17T14:06:00+01:00",
@@ -257,9 +257,9 @@
      ],
      "valueQuantity": {
       "value": 3.1,
-      "unit": "mg/L",
+      "unit": "mg/L as NO3",
       "system": "http://unitsofmeasure.org",
-      "code": "mg/L"
+      "code": "mg{NO3}/L"
      }
     },
     "request": {
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:894f787c-1f80-465f-9860-4cf7caa15a32",
+    "fullUrl": "urn:uuid:85917a57-7043-4992-a379-4a5150ec01c3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:9e34f625-d248-42a1-91dd-643465923f05",
+      "reference": "urn:uuid:22be06a0-1a17-44e1-a5f3-d20e3b5a01ff",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-11-17T14:06:00+01:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5e48d359-27c4-4da7-88a5-d5d592aaab1a",
+    "fullUrl": "urn:uuid:b6af4579-a13c-4fd3-ade7-f5490b4b9b5c",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000002-2025-11-17T1406",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000002-2025-11-17T1406 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000002 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000002-2025-11-17T1406 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000002 and assembled into FHIR by StreamFHIR 0.7.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:ce219a8c-d125-44e7-a554-a167ed57cc50"
+       "reference": "urn:uuid:0a739387-bbc5-4f18-ac18-efa6f7cf88d5"
       },
       {
-       "reference": "urn:uuid:b33dc757-d26f-4e73-bd1e-cf8d03103deb"
+       "reference": "urn:uuid:d4b1c01a-353e-45b9-9253-60beed90bb12"
       },
       {
-       "reference": "urn:uuid:894f787c-1f80-465f-9860-4cf7caa15a32"
+       "reference": "urn:uuid:85917a57-7043-4992-a379-4a5150ec01c3"
       }
      ],
      "occurredDateTime": "2025-11-17T14:06:00+01:00",
-     "recorded": "2026-09-29T13:35:57+00:00",
+     "recorded": "2026-09-29T14:00:23+00:00",
      "activity": {
       "coding": [
        {
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:8eb5eeb0-8cee-41dc-8314-c8e5c443ec29",
-        "display": "StreamFHIR 0.5.1"
+        "reference": "urn:uuid:48aa00a7-4f23-43e3-b22a-949226cddef4",
+        "display": "StreamFHIR 0.7.0"
        }
       }
      ],

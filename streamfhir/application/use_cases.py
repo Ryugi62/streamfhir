@@ -55,10 +55,12 @@ class SiteOverview:
 
 class StreamFhirService:
     def __init__(self, sites: SiteRepository, records: RecordRepository, translator: FhirTranslator,
-                 server: FhirServer, clock: Clock, reviews: Optional[ReviewStore] = None, per_site_as_of: bool = False):
+                 server: FhirServer, clock: Clock, reviews: Optional[ReviewStore] = None, per_site_as_of: bool = False,
+                 photo_corroborates: bool = True):
         """per_site_as_of: evaluate each site at its own latest visit (monitoring data sampled monthly),
         instead of the 14 days up to the clock (citizen data)."""
         self.per_site_as_of = per_site_as_of
+        self.photo_corroborates = photo_corroborates   # False for real citizen imports: a photo counts after a reviewer check
         self.sites = sites
         self.records = records
         self.translator = translator
@@ -97,7 +99,7 @@ class StreamFhirService:
         out = []
         for sid, site in sites.items():
             risk = evaluate_site(sid, by_site[sid], as_of=None if self.per_site_as_of else now, decisions=decisions,
-                                 still_water=site.still_water)
+                                 still_water=site.still_water, photo_corroborates=self.photo_corroborates)
             flag = self.translator.risk_bundle(risk, site) if risk.needs_flag else None
             site_decisions = {r.record_id: decisions[r.record_id] for r in by_site[sid] if r.record_id in decisions}
             bases = self._bases()

@@ -246,3 +246,26 @@ def test_ac39_flag_profile_constrains_subject_category_period_and_rule_citation(
     assert "status != 'active'" in els["Flag"]["constraint"][0]["expression"]
     with open(os.path.join(os.path.dirname(__file__), "..", "fhir", "StructureDefinition-stream-site-flag.json"), encoding="utf-8") as fh:
         assert json.load(fh) == sd, "run: python3 -m streamfhir build-fhir"
+
+
+def test_ac47_a_flag_whose_expiry_has_passed_is_inactive_and_nitrate_states_its_basis_in_the_unit():
+    """AC-47: Flag.status follows period.end at build time; every nitrate Observation carries its basis in the UCUM unit."""
+    from datetime import datetime, timezone
+    from streamfhir.adapters.fhir_mapper import FhirMapper
+    from streamfhir.domain.risk import evaluate_site
+    from streamfhir.domain.validation import validate_record
+    from tests.conftest import NOW, SITES, make_record
+    recs = [make_record(record_id="F-%d" % i, observer="obs-%d" % i, observed_at="2026-09-20T09:30:00+01:00",
+                        values={"surface": "algal-scum", "animal-contact": True}) for i in (1, 2)]
+    reps = [validate_record(r, SITES, NOW) for r in recs]
+    risk = evaluate_site("S-TEST", reps, as_of=NOW)
+    later = FhirMapper(now_fn=lambda: datetime(2026, 11, 1, tzinfo=timezone.utc)).risk_bundle(risk, SITES["S-TEST"])
+    now = FhirMapper(now_fn=lambda: NOW).risk_bundle(risk, SITES["S-TEST"])
+    status = lambda b: [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Flag"][0]["status"]
+    assert status(now) == "active" and status(later) == "inactive"
+    as_n = make_record(values={"nitrate": 3, "nitrate-basis": "as-N"})
+    for rec, unit in ((make_record(), "mg{NO3}/L"), (as_n, "mg{N}/L")):
+        b = FhirMapper().assessment_bundle(validate_record(rec, SITES, NOW), SITES["S-TEST"])
+        obs = [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"
+               and e["resource"]["code"]["coding"][0]["code"] == "nitrate"][0]
+        assert obs["valueQuantity"]["code"] == unit
