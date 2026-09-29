@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+    "fullUrl": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:34f3e763-75dd-4d85-b403-9f335eb79aec",
+    "fullUrl": "urn:uuid:4e4d0a2f-844e-4e25-bfa5-127d7bda7589",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:adf533a8-fab5-4893-99fc-780fca55a916",
+    "fullUrl": "urn:uuid:f25e2f31-17e4-476f-a67d-c4a21c26d354",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+      "reference": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
       "display": "Toulouse area · La Saudrune à l'aval du Bois Vert"
      },
      "effectiveDateTime": "2024-12-17T15:49:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:c1858303-7f68-49b1-b8df-83fa2fa2bf3c"
+       "reference": "urn:uuid:7ce05689-68a5-4b41-9998-a741737c8fd5"
       },
       {
-       "reference": "urn:uuid:b05eb595-be76-42dd-9826-a2966686d9a1"
+       "reference": "urn:uuid:ec97f5a9-802d-4e76-9272-16d6b07fafab"
       },
       {
-       "reference": "urn:uuid:774e8eea-76fa-41ca-b8b8-b4c3f6cfe329"
+       "reference": "urn:uuid:c8eead6f-bb96-4b3e-8e8f-f284b4da4716"
       },
       {
-       "reference": "urn:uuid:306b94e9-e3e4-499a-a646-26c23ced7c77"
+       "reference": "urn:uuid:9595d485-eeea-47e7-9be3-39577a8f9181"
       },
       {
-       "reference": "urn:uuid:595d899f-bacc-4230-8c11-38fdd74c0a7a"
+       "reference": "urn:uuid:30310e39-3a76-4a1b-a36b-27db954e3a3c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c1858303-7f68-49b1-b8df-83fa2fa2bf3c",
+    "fullUrl": "urn:uuid:7ce05689-68a5-4b41-9998-a741737c8fd5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+      "reference": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
       "display": "Toulouse area · La Saudrune à l'aval du Bois Vert"
      },
      "effectiveDateTime": "2024-12-17T15:49:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b05eb595-be76-42dd-9826-a2966686d9a1",
+    "fullUrl": "urn:uuid:ec97f5a9-802d-4e76-9272-16d6b07fafab",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+      "reference": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
       "display": "Toulouse area · La Saudrune à l'aval du Bois Vert"
      },
      "effectiveDateTime": "2024-12-17T15:49:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:774e8eea-76fa-41ca-b8b8-b4c3f6cfe329",
+    "fullUrl": "urn:uuid:c8eead6f-bb96-4b3e-8e8f-f284b4da4716",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -405,7 +405,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+      "reference": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
       "display": "Toulouse area · La Saudrune à l'aval du Bois Vert"
      },
      "effectiveDateTime": "2024-12-17T15:49:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:306b94e9-e3e4-499a-a646-26c23ced7c77",
+    "fullUrl": "urn:uuid:9595d485-eeea-47e7-9be3-39577a8f9181",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+      "reference": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
       "display": "Toulouse area · La Saudrune à l'aval du Bois Vert"
      },
      "effectiveDateTime": "2024-12-17T15:49:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:595d899f-bacc-4230-8c11-38fdd74c0a7a",
+    "fullUrl": "urn:uuid:30310e39-3a76-4a1b-a36b-27db954e3a3c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:2a9d43f4-f1f3-4057-8239-23d37a680a01",
+      "reference": "urn:uuid:53f0052f-5263-4507-8d4d-c00174f24550",
       "display": "Toulouse area · La Saudrune à l'aval du Bois Vert"
      },
      "effectiveDateTime": "2024-12-17T15:49:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:83cb8da2-0901-4adb-ac4b-8ec1a69a2e6e",
+    "fullUrl": "urn:uuid:87e67fb4-f7a0-4df4-9f88-49775d2181d7",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163700-2024-12-17T1549",
@@ -625,26 +625,26 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:adf533a8-fab5-4893-99fc-780fca55a916"
+       "reference": "urn:uuid:f25e2f31-17e4-476f-a67d-c4a21c26d354"
       },
       {
-       "reference": "urn:uuid:c1858303-7f68-49b1-b8df-83fa2fa2bf3c"
+       "reference": "urn:uuid:7ce05689-68a5-4b41-9998-a741737c8fd5"
       },
       {
-       "reference": "urn:uuid:b05eb595-be76-42dd-9826-a2966686d9a1"
+       "reference": "urn:uuid:ec97f5a9-802d-4e76-9272-16d6b07fafab"
       },
       {
-       "reference": "urn:uuid:774e8eea-76fa-41ca-b8b8-b4c3f6cfe329"
+       "reference": "urn:uuid:c8eead6f-bb96-4b3e-8e8f-f284b4da4716"
       },
       {
-       "reference": "urn:uuid:306b94e9-e3e4-499a-a646-26c23ced7c77"
+       "reference": "urn:uuid:9595d485-eeea-47e7-9be3-39577a8f9181"
       },
       {
-       "reference": "urn:uuid:595d899f-bacc-4230-8c11-38fdd74c0a7a"
+       "reference": "urn:uuid:30310e39-3a76-4a1b-a36b-27db954e3a3c"
       }
      ],
      "occurredDateTime": "2024-12-17T15:49:00+01:00",
-     "recorded": "2026-09-29T13:27:39+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
      "activity": {
       "coding": [
        {
@@ -685,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:34f3e763-75dd-4d85-b403-9f335eb79aec",
+        "reference": "urn:uuid:4e4d0a2f-844e-4e25-bfa5-127d7bda7589",
         "display": "StreamFHIR 0.5.1"
        }
       }

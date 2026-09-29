@@ -1,0 +1,762 @@
+{
+ "report": {
+  "record_id": "FWW-304437",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Lèze_Canyon (FWW-43.4611,1.4170)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FWW-43.4611,1.4170"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · Lèze_Canyon",
+     "description": "Real citizen-science site (FreshWater Watch, River)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.416981541321511,
+      "latitude": 43.461143068426416
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FWW-43.4611,1.4170"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:3be8628f-4c29-4ac7-b844-d09bfe56c433",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043",
+    "resource": {
+     "resourceType": "Media",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "status": "completed",
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Toulouse area · Lèze_Canyon, record FWW-304437</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437.photo-1"
+      }
+     ],
+     "type": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/media-type",
+        "code": "image",
+        "display": "Image"
+       }
+      ]
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "createdDateTime": "2023-03-25T10:00:00+00:00",
+     "content": {
+      "contentType": "image/jpeg",
+      "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/306/attachments/285",
+      "title": "Citizen photo 1"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Media?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.photo-1"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:fc555e43-68ac-424b-b1b1-e818fc2c1143",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Lèze_Canyon on 2023-03-25T10:00:00+00:00: 5 indicators (final, record FWW-304437)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:8d86e0eb-5ef4-49a3-bfa3-298ede7041f6"
+      },
+      {
+       "reference": "urn:uuid:b437869c-fca4-4be4-8f34-ef1824b17086"
+      },
+      {
+       "reference": "urn:uuid:0cc95054-808f-4c63-b58a-c7776b4d8626"
+      },
+      {
+       "reference": "urn:uuid:6f4b7bde-3c67-4f44-b64d-15b957f733c1"
+      },
+      {
+       "reference": "urn:uuid:19631d43-5969-443e-8572-b14278215988"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:8d86e0eb-5ef4-49a3-bfa3-298ede7041f6",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437.water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-clear",
+        "display": "Water colour: clear"
+       }
+      ],
+      "text": "clear"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b437869c-fca4-4be4-8f34-ef1824b17086",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437.surface"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-none",
+        "display": "Surface film: none"
+       }
+      ],
+      "text": "none"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:0cc95054-808f-4c63-b58a-c7776b4d8626",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437.animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6f4b7bde-3c67-4f44-b64d-15b957f733c1",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437.people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:19631d43-5969-443e-8572-b14278215988",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Lèze_Canyon (final, record FWW-304437)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304437.litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:52339643-81fd-4cbd-aa64-6a97c1150554",
+      "display": "Toulouse area · Lèze_Canyon"
+     },
+     "effectiveDateTime": "2023-03-25T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-none",
+        "display": "Litter: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304437.litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:2c1da727-e0fb-4ec7-b33b-d95e7c5a2dca",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FWW-304437",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304437 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:fc555e43-68ac-424b-b1b1-e818fc2c1143"
+      },
+      {
+       "reference": "urn:uuid:8d86e0eb-5ef4-49a3-bfa3-298ede7041f6"
+      },
+      {
+       "reference": "urn:uuid:b437869c-fca4-4be4-8f34-ef1824b17086"
+      },
+      {
+       "reference": "urn:uuid:0cc95054-808f-4c63-b58a-c7776b4d8626"
+      },
+      {
+       "reference": "urn:uuid:6f4b7bde-3c67-4f44-b64d-15b957f733c1"
+      },
+      {
+       "reference": "urn:uuid:19631d43-5969-443e-8572-b14278215988"
+      },
+      {
+       "reference": "urn:uuid:837a04a8-0ebf-4e22-836d-da1f815d1043"
+      }
+     ],
+     "occurredDateTime": "2023-03-25T10:00:00+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "fww-group-4b4922e9fdf8"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:3be8628f-4c29-4ac7-b844-d09bfe56c433",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FWW-304437"
+        },
+        "display": "Original citizen record (Earthwatch Europe FreshWater Watch, project 'BACKDROP: Water Institute Citizen River Observation Project')"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FWW-304437"
+    }
+   }
+  ]
+ }
+}

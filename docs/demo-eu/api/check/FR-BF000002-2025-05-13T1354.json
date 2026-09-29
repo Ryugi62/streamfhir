@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
+    "fullUrl": "urn:uuid:5f62a8da-a24b-4d20-8f39-f1e9fad4b411",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6bfe209f-1f57-4c50-af7d-72c070f89e90",
+    "fullUrl": "urn:uuid:4be9bd87-5697-427f-a66c-56796b68f348",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:043440c5-eb4c-4767-b0d5-9f7b2cd2e20b",
+    "fullUrl": "urn:uuid:a5bfa604-0ccb-43cd-be74-fd73d9e6b713",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
+      "reference": "urn:uuid:5f62a8da-a24b-4d20-8f39-f1e9fad4b411",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-05-13T13:54:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:0d84085b-d2fe-4d7f-81ce-5d995c459e83"
+       "reference": "urn:uuid:ca6f641c-11c6-4897-af3d-bd7f1114fb9c"
       },
       {
-       "reference": "urn:uuid:9528cde5-831a-4145-8371-ec723e0a754e"
+       "reference": "urn:uuid:b814c046-988d-43be-8f40-f1fb8c28149c"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0d84085b-d2fe-4d7f-81ce-5d995c459e83",
+    "fullUrl": "urn:uuid:ca6f641c-11c6-4897-af3d-bd7f1114fb9c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
+      "reference": "urn:uuid:5f62a8da-a24b-4d20-8f39-f1e9fad4b411",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-05-13T13:54:00+02:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9528cde5-831a-4145-8371-ec723e0a754e",
+    "fullUrl": "urn:uuid:b814c046-988d-43be-8f40-f1fb8c28149c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
+      "reference": "urn:uuid:5f62a8da-a24b-4d20-8f39-f1e9fad4b411",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-05-13T13:54:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:03c5527b-0f30-4e91-8bd2-909e3ecadaeb",
+    "fullUrl": "urn:uuid:293cd8eb-de26-438b-9a75-8a6d4067db82",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000002-2025-05-13T1354",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:043440c5-eb4c-4767-b0d5-9f7b2cd2e20b"
+       "reference": "urn:uuid:a5bfa604-0ccb-43cd-be74-fd73d9e6b713"
       },
       {
-       "reference": "urn:uuid:0d84085b-d2fe-4d7f-81ce-5d995c459e83"
+       "reference": "urn:uuid:ca6f641c-11c6-4897-af3d-bd7f1114fb9c"
       },
       {
-       "reference": "urn:uuid:9528cde5-831a-4145-8371-ec723e0a754e"
+       "reference": "urn:uuid:b814c046-988d-43be-8f40-f1fb8c28149c"
       }
      ],
      "occurredDateTime": "2025-05-13T13:54:00+02:00",
-     "recorded": "2026-09-29T13:27:39+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:6bfe209f-1f57-4c50-af7d-72c070f89e90",
+        "reference": "urn:uuid:4be9bd87-5697-427f-a66c-56796b68f348",
         "display": "StreamFHIR 0.5.1"
        }
       }

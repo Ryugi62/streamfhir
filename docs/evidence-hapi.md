@@ -64,3 +64,8 @@ Why the slicing (v0.4): with the old required binding on the whole `Observation.
 | 27. Synthetic citizen checks raise a Flag on a real station (v0.5.1) | `python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live` | agency sampling + 2 **synthetic** citizen checks (two observers, scum + dogs in the water, photos kept for review, each Observation noted "SYNTHETIC citizen check created for an interoperability demo…", `HTEST`) at La Rivel, Baziège (`Location/54630`); `Observation?code=<EEA nitrate>&subject=Location/54630` → `Observation/54635` (laboratory, 62.0), `Observation/54687` and `/54697` (survey, 50, synthetic); `Flag/54705` active, level `high`, rules R3 + R7, code text "SYNTHETIC DEMO – …". An earlier synthetic record with the agency's exact timestamp was deleted from the test server. **Captured response:** [`data/real-eu-toulouse/interop-query.json`](../data/real-eu-toulouse/interop-query.json) (for when the server has purged it). |
 
 **Negative controls, all rejected as expected (15):** steps 3b, 8c, 13, 18, 19 (×2), 22c (×3), 24 (×5), 25.
+
+## v0.6 — real citizen-science records (2026-09-29, ~22:45 KST)
+| Step | Command | Result |
+|---|---|---|
+| 28. Real FreshWater Watch volunteer record FWW-304472 (Rio Vouga, Aveiro; blue-green scum, photo, animal access) and the Flag it raises | `python3 -m streamfhir import-fww`, then ad-hoc `$validate` (validation only, nothing stored; subject pointed at `Location/54630` for reference resolution) | panel, `surface` and `animal-contact` Observations vs profiles: **0 errors, 0 warnings**; the real-data Flag (level `high`, R3 + R7) vs `stream-site-flag`: **0 errors, 0 warnings** |

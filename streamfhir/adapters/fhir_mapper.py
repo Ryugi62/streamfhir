@@ -340,7 +340,8 @@ class FhirMapper:
             "activity": {"coding": [{"system": DATA_OPERATION, "code": "CREATE", "display": "create"}]},
             "agent": agents,
             "entity": [{"role": "source", "what": _logical(SID_RECORD, a.record_id, display=(
-                "Original source record (%s)" % (a.source or a.origin)) if a.origin else "Original citizen record")}],
+                "Original source record (%s)" % (a.source or a.origin)) if a.origin else
+                "Original citizen record" + (" (%s)" % a.source if a.source else ""))}],
         }, "request": {"method": "PUT", "url": "Provenance/" + prov_id}})
         return {"resourceType": "Bundle", "type": "transaction", "entry": entries}
 

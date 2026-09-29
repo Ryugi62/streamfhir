@@ -141,6 +141,8 @@ def main(argv=None):
     ih.add_argument("--dir", default=os.path.join(ROOT, "data", "real-eu-toulouse"),
                     help="folder with stations.json, analyses.json, eea-sites.json and SOURCE.txt")
     ih.add_argument("--city", default="Toulouse area")
+    iff = sub.add_parser("import-fww", help="convert FreshWater Watch (Earthwatch) citizen-science snapshots into a StreamFHIR dataset")
+    iff.add_argument("--dir", default=os.path.join(ROOT, "data", "real-fww"), help="folder with fww-<City>.json and SOURCE.txt")
     ec = sub.add_parser("eea-coverage", help="summarise the EEA Waterbase snapshot near the five OneAquaHealth cities")
     ec.add_argument("--file", default=os.path.join(ROOT, "data", "eea-coverage", "waterbase-near-oah-cities.json"))
     io = sub.add_parser("interop-demo", help="send one real agency sampling + one synthetic citizen check at the same station, "
@@ -276,6 +278,35 @@ def main(argv=None):
                         "evaluate_each_site_at_its_latest_visit": True},
             "demo_as_of": latest + "T23:59:59+01:00", "records": records})
         print(json.dumps(stats, indent=1))
+    elif cmd == "import-fww":
+        from ..adapters.fww_importer import parse_records, parse_sites
+        regions = {"Coimbra": "Coimbra region", "Toulouse": "Toulouse area"}
+        sites, records, stats = [], [], {}
+        for name in sorted(os.listdir(args.dir)):
+            if not (name.startswith("fww-") and name.endswith(".json")):
+                continue
+            city = name[4:-5]
+            with open(os.path.join(args.dir, name), encoding="utf-8") as fh:
+                payload = json.load(fh)
+            ss = parse_sites(payload, region=regions.get(city, city))
+            rs, st = parse_records(payload, {x["site_id"]: x for x in ss})
+            sites += ss; records += rs; stats[city] = st
+        with open(os.path.join(args.dir, "SOURCE.txt"), encoding="utf-8") as fh:
+            source = fh.read().strip().splitlines()
+        latest = max(r["observed_at"][:10] for r in records)
+        _dump(os.path.join(args.dir, "sites.json"), {"_note": "REAL citizen-science sites (Earthwatch Europe FreshWater Watch).",
+                                                      "sites": sites})
+        _dump(os.path.join(args.dir, "assessments.json"), {
+            "_note": "REAL citizen-science records from Earthwatch Europe FreshWater Watch (public ArcGIS view); source and licence note below.",
+            "dataset": {"synthetic": False, "observer_kind": "citizen", "source_query": source[1] if len(source) > 1 else "",
+                        "retrieved": source[-2] if len(source) > 2 else "", "import_stats": stats,
+                        "label": "Real citizen science: FreshWater Watch volunteers near Toulouse and Coimbra",
+                        "banner": "Real volunteer observations from Earthwatch Europe's FreshWater Watch (open access, no formal licence; "
+                                  "attribution Earthwatch Europe), within about 50 km of Toulouse and Coimbra, 2015-2023. Only fields whose "
+                                  "meaning matches StreamFHIR indicators are scored; kit bands for nitrate and phosphate are kept as notes.",
+                        "evaluate_each_site_at_its_latest_visit": True},
+            "demo_as_of": latest + "T23:59:59+00:00", "records": records})
+        print(json.dumps(dict(stats, sites=len(sites), records=len(records)), indent=1))
     elif cmd == "eea-coverage":
         from ..adapters.waterbase_importer import coverage
         with open(args.file, encoding="utf-8") as fh:

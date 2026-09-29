@@ -1,0 +1,695 @@
+{
+ "report": {
+  "record_id": "FWW-304446",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Ariege (FWW-43.4327,1.4372)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FWW-43.4327,1.4372"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · Ariege",
+     "description": "Real citizen-science site (FreshWater Watch, River)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.4372330586995474,
+      "latitude": 43.43265212979848
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FWW-43.4327,1.4372"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:af703ae3-65be-4aa6-8af2-a78079dc12d7",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:033a1b74-a60e-466f-8c7a-36e8733a359a",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Ariege on 2023-03-26T10:00:00+00:00: 5 indicators (final, record FWW-304446)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304446"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "display": "Toulouse area · Ariege"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:291d7323-9562-4fc2-85b6-c5fdd36d1071"
+      },
+      {
+       "reference": "urn:uuid:6a1792e5-0c8d-454c-ae87-9022eb35cc53"
+      },
+      {
+       "reference": "urn:uuid:55997811-1def-4b8d-a1e5-7535b9be6399"
+      },
+      {
+       "reference": "urn:uuid:6bb895ce-5803-4322-bb16-b6a6ccb4379e"
+      },
+      {
+       "reference": "urn:uuid:e82cacbc-d750-42a1-8391-90c5e8c764dc"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:291d7323-9562-4fc2-85b6-c5fdd36d1071",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: other at Toulouse area · Ariege (final, record FWW-304446)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304446.water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "display": "Toulouse area · Ariege"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-other",
+        "display": "Water colour: other"
+       }
+      ],
+      "text": "other"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446.water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6a1792e5-0c8d-454c-ae87-9022eb35cc53",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Toulouse area · Ariege (final, record FWW-304446)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304446.surface"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "display": "Toulouse area · Ariege"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-none",
+        "display": "Surface film: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446.surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:55997811-1def-4b8d-a1e5-7535b9be6399",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Toulouse area · Ariege (final, record FWW-304446)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304446.animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "display": "Toulouse area · Ariege"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446.animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6bb895ce-5803-4322-bb16-b6a6ccb4379e",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Ariege (final, record FWW-304446)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304446.people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "display": "Toulouse area · Ariege"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446.people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:e82cacbc-d750-42a1-8391-90c5e8c764dc",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Ariege (final, record FWW-304446)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304446.litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:9103efc1-0daf-4c8d-a671-ee89c7190af2",
+      "display": "Toulouse area · Ariege"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-none",
+        "display": "Litter: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304446.litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:fe1be2c8-da5d-4d86-8211-d25e1cc57d48",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FWW-304446",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304446 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:033a1b74-a60e-466f-8c7a-36e8733a359a"
+      },
+      {
+       "reference": "urn:uuid:291d7323-9562-4fc2-85b6-c5fdd36d1071"
+      },
+      {
+       "reference": "urn:uuid:6a1792e5-0c8d-454c-ae87-9022eb35cc53"
+      },
+      {
+       "reference": "urn:uuid:55997811-1def-4b8d-a1e5-7535b9be6399"
+      },
+      {
+       "reference": "urn:uuid:6bb895ce-5803-4322-bb16-b6a6ccb4379e"
+      },
+      {
+       "reference": "urn:uuid:e82cacbc-d750-42a1-8391-90c5e8c764dc"
+      }
+     ],
+     "occurredDateTime": "2023-03-26T10:00:00+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "fww-group-4b4922e9fdf8"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:af703ae3-65be-4aa6-8af2-a78079dc12d7",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FWW-304446"
+        },
+        "display": "Original citizen record (Earthwatch Europe FreshWater Watch, project 'BACKDROP: Water Institute Citizen River Observation Project')"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FWW-304446"
+    }
+   }
+  ]
+ }
+}

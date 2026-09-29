@@ -1,0 +1,668 @@
+{
+ "report": {
+  "record_id": "FWW-304465",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Coimbra region · Parque da Emide, Figueira da Foz (FWW-40.1719,-8.8896)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FWW-40.1719,-8.8896"
+      }
+     ],
+     "status": "active",
+     "name": "Coimbra region · Parque da Emide, Figueira da Foz",
+     "description": "Real citizen-science site (FreshWater Watch, Lake)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": -8.889638888888888,
+      "latitude": 40.171861111111106
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FWW-40.1719,-8.8896"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b1a746db-1dbc-4c3a-8eef-c8c8b25ce998",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b99f0ae9-a5dd-4c22-98d1-b85f4400f83a",
+    "resource": {
+     "resourceType": "Media",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "status": "completed",
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Coimbra region · Parque da Emide, Figueira da Foz, record FWW-304465</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304465.photo-1"
+      }
+     ],
+     "type": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/media-type",
+        "code": "image",
+        "display": "Image"
+       }
+      ]
+     },
+     "subject": {
+      "reference": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+      "display": "Coimbra region · Parque da Emide, Figueira da Foz"
+     },
+     "createdDateTime": "2023-03-26T11:00:00+00:00",
+     "content": {
+      "contentType": "image/jpeg",
+      "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/334/attachments/298",
+      "title": "Citizen photo 1"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Media?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304465.photo-1"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:7274015e-1eaf-4167-af93-a6f464cceb22",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Coimbra region · Parque da Emide, Figueira da Foz on 2023-03-26T11:00:00+00:00: 4 indicators (final, record FWW-304465)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304465"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+      "display": "Coimbra region · Parque da Emide, Figueira da Foz"
+     },
+     "effectiveDateTime": "2023-03-26T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:55732e3c-5e5e-494e-a3b6-63b3485b7c15"
+      },
+      {
+       "reference": "urn:uuid:0b9bf52c-0758-49f7-956b-e831630174ef"
+      },
+      {
+       "reference": "urn:uuid:49d1dc91-6e4e-429c-8793-7df910ceb04a"
+      },
+      {
+       "reference": "urn:uuid:12da36c4-d986-4614-96f1-116ebee2c1d0"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:b99f0ae9-a5dd-4c22-98d1-b85f4400f83a"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304465"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:55732e3c-5e5e-494e-a3b6-63b3485b7c15",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: green at Coimbra region · Parque da Emide, Figueira da Foz (final, record FWW-304465)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304465.water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+      "display": "Coimbra region · Parque da Emide, Figueira da Foz"
+     },
+     "effectiveDateTime": "2023-03-26T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-green",
+        "display": "Water colour: green"
+       }
+      ],
+      "text": "green"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:b99f0ae9-a5dd-4c22-98d1-b85f4400f83a"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304465.water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:0b9bf52c-0758-49f7-956b-e831630174ef",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: yes at Coimbra region · Parque da Emide, Figueira da Foz (final, record FWW-304465)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304465.animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+      "display": "Coimbra region · Parque da Emide, Figueira da Foz"
+     },
+     "effectiveDateTime": "2023-03-26T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": true
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304465.animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:49d1dc91-6e4e-429c-8793-7df910ceb04a",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Coimbra region · Parque da Emide, Figueira da Foz (final, record FWW-304465)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304465.people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+      "display": "Coimbra region · Parque da Emide, Figueira da Foz"
+     },
+     "effectiveDateTime": "2023-03-26T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304465.people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:12da36c4-d986-4614-96f1-116ebee2c1d0",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Coimbra region · Parque da Emide, Figueira da Foz (final, record FWW-304465)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304465.litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:bd9ef85f-dea9-42d9-9e0a-b967b7985920",
+      "display": "Coimbra region · Parque da Emide, Figueira da Foz"
+     },
+     "effectiveDateTime": "2023-03-26T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-none",
+        "display": "Litter: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304465.litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:71c6cc26-e1d5-4a81-b758-02d4c5ebd7c2",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FWW-304465",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304465 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:7274015e-1eaf-4167-af93-a6f464cceb22"
+      },
+      {
+       "reference": "urn:uuid:55732e3c-5e5e-494e-a3b6-63b3485b7c15"
+      },
+      {
+       "reference": "urn:uuid:0b9bf52c-0758-49f7-956b-e831630174ef"
+      },
+      {
+       "reference": "urn:uuid:49d1dc91-6e4e-429c-8793-7df910ceb04a"
+      },
+      {
+       "reference": "urn:uuid:12da36c4-d986-4614-96f1-116ebee2c1d0"
+      },
+      {
+       "reference": "urn:uuid:b99f0ae9-a5dd-4c22-98d1-b85f4400f83a"
+      }
+     ],
+     "occurredDateTime": "2023-03-26T11:00:00+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "fww-group-4b4922e9fdf8"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:b1a746db-1dbc-4c3a-8eef-c8c8b25ce998",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FWW-304465"
+        },
+        "display": "Original citizen record (Earthwatch Europe FreshWater Watch, project 'BACKDROP: Water Institute Citizen River Observation Project')"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FWW-304465"
+    }
+   }
+  ]
+ }
+}

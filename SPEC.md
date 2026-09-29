@@ -16,7 +16,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
   - S6: dry-run is the default for sending; live POSTs to HAPI carry synthetic data, or public open data under its licence (Hub'Eau, Licence Ouverte) with its source in Provenance; response IDs are recorded in docs/evidence-hapi.md.
   - S7: UI renders at 390 px and 1280 px with no horizontal scroll; one primary action per screen.
 - Deadline: Devpost submission 2026-10-04 21:00 PDT (extended). Internal code freeze: 2026-09-30.
-- Non-goals: no ML model, no accuracy claims; no real citizen data (real agency data only as import tests); no user accounts; no claim that the record schema is the official OneAquaHealth app schema; no production hosting; not a regulatory water-quality compliance tool.
+- Non-goals: no ML model, no accuracy claims; real data only as import tests (agency data; FreshWater Watch volunteer records); no user accounts; no claim that the record schema is the official OneAquaHealth app schema; no production hosting; not a regulatory water-quality compliance tool.
 
 ## 2. Constraints
 - Hackathon rules (quoted): "All projects must include a public code repository (e.g., GitHub) with source code and documentation"; "Projects must be original and developed during the hackathon period".
@@ -99,6 +99,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-42 Given a trusted agency record, Then its condition rules count as agency results, not as unverified reports.
 - AC-43 Given a site where no hazard input was observed, Then the API level is `not-assessed`, never `low`.
 - AC-44 Given `interop-demo`, Then a real agency reading and a synthetic (HTEST) citizen reading at the same station carry the same EEA nitrate code.
+- AC-45 Given FreshWater Watch (Earthwatch) volunteer records, Then only fields with a matching meaning are scored (blue-green scum, oily sheen, foam, colour, litter, animal access, swimming, photo), other colours become "other", kit bands stay notes, and a photo-backed scum report with animal access raises a corroborated Flag.
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)

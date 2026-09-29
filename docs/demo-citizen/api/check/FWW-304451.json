@@ -1,0 +1,762 @@
+{
+ "report": {
+  "record_id": "FWW-304451",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Coimbra region · Drinks park small pond (FWW-40.6387,-8.6559)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FWW-40.6387,-8.6559"
+      }
+     ],
+     "status": "active",
+     "name": "Coimbra region · Drinks park small pond",
+     "description": "Real citizen-science site (FreshWater Watch, Pond)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": -8.655929999999955,
+      "latitude": 40.638720000000035
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FWW-40.6387,-8.6559"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6d3112cf-32fd-40a8-937c-2c1759e24dc4",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5",
+    "resource": {
+     "resourceType": "Media",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "status": "completed",
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Coimbra region · Drinks park small pond, record FWW-304451</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451.photo-1"
+      }
+     ],
+     "type": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/media-type",
+        "code": "image",
+        "display": "Image"
+       }
+      ]
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "createdDateTime": "2023-03-23T11:00:00+00:00",
+     "content": {
+      "contentType": "image/jpeg",
+      "url": "https://services3.arcgis.com/SQtySBftABENTpkx/arcgis/rest/services/GP_BACKDROP_Water_Institute_Citizen_River_Observation_Project_public_view/FeatureServer/2/320/attachments/291",
+      "title": "Citizen photo 1"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Media?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.photo-1"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:0d49b569-8f02-4d58-a72e-38a6291db3f9",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Coimbra region · Drinks park small pond on 2023-03-23T11:00:00+00:00: 5 indicators (final, record FWW-304451)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:ed3692c8-b3e7-4d34-901a-29c8dc6cfba7"
+      },
+      {
+       "reference": "urn:uuid:8e613aff-5516-43ca-bf3d-41826a10fc20"
+      },
+      {
+       "reference": "urn:uuid:84460b82-8de2-4c44-ba22-d283b92ddc9c"
+      },
+      {
+       "reference": "urn:uuid:674d09f3-5502-4b61-a602-0836e25db176"
+      },
+      {
+       "reference": "urn:uuid:afeed04c-9943-45c7-a022-294ded13ce41"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:ed3692c8-b3e7-4d34-901a-29c8dc6cfba7",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451.water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-clear",
+        "display": "Water colour: clear"
+       }
+      ],
+      "text": "clear"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:8e613aff-5516-43ca-bf3d-41826a10fc20",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451.surface"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-none",
+        "display": "Surface film: none"
+       }
+      ],
+      "text": "none"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:84460b82-8de2-4c44-ba22-d283b92ddc9c",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: yes at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451.animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": true
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:674d09f3-5502-4b61-a602-0836e25db176",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451.people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:afeed04c-9943-45c7-a022-294ded13ce41",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Coimbra region · Drinks park small pond (final, record FWW-304451)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304451.litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:8c035137-416b-4c2b-900c-2e45c3d44dfc",
+      "display": "Coimbra region · Drinks park small pond"
+     },
+     "effectiveDateTime": "2023-03-23T11:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-none",
+        "display": "Litter: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304451.litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b5c42d6a-f95a-4892-9590-814957abfea5",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FWW-304451",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304451 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:0d49b569-8f02-4d58-a72e-38a6291db3f9"
+      },
+      {
+       "reference": "urn:uuid:ed3692c8-b3e7-4d34-901a-29c8dc6cfba7"
+      },
+      {
+       "reference": "urn:uuid:8e613aff-5516-43ca-bf3d-41826a10fc20"
+      },
+      {
+       "reference": "urn:uuid:84460b82-8de2-4c44-ba22-d283b92ddc9c"
+      },
+      {
+       "reference": "urn:uuid:674d09f3-5502-4b61-a602-0836e25db176"
+      },
+      {
+       "reference": "urn:uuid:afeed04c-9943-45c7-a022-294ded13ce41"
+      },
+      {
+       "reference": "urn:uuid:1332edb4-4c6f-4f7c-bf7f-1060a23a1bc5"
+      }
+     ],
+     "occurredDateTime": "2023-03-23T11:00:00+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "fww-group-4b4922e9fdf8"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:6d3112cf-32fd-40a8-937c-2c1759e24dc4",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FWW-304451"
+        },
+        "display": "Original citizen record (Earthwatch Europe FreshWater Watch, project 'BACKDROP: Water Institute Citizen River Observation Project')"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FWW-304451"
+    }
+   }
+  ]
+ }
+}

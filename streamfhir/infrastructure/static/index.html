@@ -137,7 +137,7 @@ function lanes(p){ return `<div class="lanes" aria-label="Health hazard points b
 const COND = {poor:"Ecological condition: poor", fair:"Ecological condition: fair", good:"Ecological condition: good", "not assessed":"Ecological condition: not assessed (no habitat, nutrient or invertebrate data)"};
 const lvl = r => r.hazard_assessed === false ? "na" : r.level;
 LEVEL.na = "Not assessed"; LEVEL["not-assessed"] = "Not assessed"; LEVEL_CLASS.na = "review"; VERDICT.na = "No visual hazard checks in the last 14 days, so nothing can be said about health hazards here.";
-const isReal = () => !!(cache && cache.dataset && cache.dataset.synthetic === false);
+const isReal = () => !!(cache && cache.dataset && cache.dataset.synthetic === false && cache.dataset.observer_kind === "organisation");   /* real agency lab data */
 const CCOL = {poor:"var(--no)", fair:"var(--warn)", good:"var(--ok)", "not assessed":"var(--hint)"};
 const CCLASS = {poor:"blocked", fair:"review", good:"ok", "not assessed":"review"};
 const CSHORT = {poor:"Condition: poor", fair:"Condition: fair", good:"Condition: good", "not assessed":"Condition: not assessed"};
@@ -180,15 +180,15 @@ async function sites(){
   cache = cache || await api("/api/sites"); footnote();
   const order = {high:0, verify:1, moderate:2, low:3, "not-assessed":4};
   const s = cache.sites.slice().sort((a, b) => order[a.risk.level] - order[b.risk.level] || b.risk.hazard_points - a.risk.hazard_points || b.risk.condition_points - a.risk.condition_points);
-  const real = cache.dataset && cache.dataset.synthetic === false, perSite = real && cache.dataset.evaluate_each_site_at_its_latest_visit;
+  const real = cache.dataset && cache.dataset.synthetic === false, perSite = real && cache.dataset.evaluate_each_site_at_its_latest_visit, lab = isReal();
   const need = s.filter(x => x.risk.level === "high" || x.risk.level === "verify").length;
-  if(real) s.sort((a, b) => b.risk.condition_points - a.risk.condition_points);
+  if(lab) s.sort((a, b) => b.risk.condition_points - a.risk.condition_points);
   const enriched = s.filter(x => x.risk.fired.some(f => f.kind === "condition")).length;
-  $("#view").innerHTML = `<section><h1>${real ? `${s.length} real stations · ${enriched} above a nutrient screening value · ${s.filter(x => x.risk.fired.some(f => f.rule_id === "R9")).length} above 50 mg/L nitrate` : `${s.length} stream sites, ${need} need action`}</h1>
+  $("#view").innerHTML = `<section><h1>${lab ? `${s.length} real stations · ${enriched} above a nutrient screening value · ${s.filter(x => x.risk.fired.some(f => f.rule_id === "R9")).length} above 50 mg/L nitrate` : real ? `${s.length} real citizen-science sites, ${need} with a corroborated warning` : `${s.length} stream sites, ${need} need action`}</h1>
     <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() && !perSite ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
-    ${real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? ` Each station is evaluated at its own latest sampling; most have a single sampling in this snapshot. Record age is judged against the snapshot end (${esc(asOf())}).` : ""}</p>` : ""}
+    ${real && cache.dataset.banner ? `<p class="help" id="realnote">${esc(cache.dataset.banner)}</p>` : real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? ` Each station is evaluated at its own latest sampling; most have a single sampling in this snapshot. Record age is judged against the snapshot end (${esc(asOf())}).` : ""}</p>` : ""}
     ${map(s)}
-    <div class="grid">${s.map(x => real ? `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
+    <div class="grid">${s.map(x => lab ? `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
       <div class="row"><div class="num">${x.risk.condition_points}<small>condition points</small></div><span class="chip ${CCLASS[x.risk.condition]}">${CSHORT[x.risk.condition]}</span></div>
       <div class="site-name">${esc(x.site.name)}</div>
       <div class="help">${labLine(latestReport(x)) || "No nutrient values at the latest sampling."}</div>

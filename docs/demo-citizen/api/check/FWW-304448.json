@@ -1,0 +1,695 @@
+{
+ "report": {
+  "record_id": "FWW-304448",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Garonne (FWW-43.6252,1.4008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FWW-43.6252,1.4008"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · Garonne",
+     "description": "Real citizen-science site (FreshWater Watch, River)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.4008294589956165,
+      "latitude": 43.62520363512469
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FWW-43.6252,1.4008"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:136c56c7-d023-438f-986d-41528c6c12a6",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:8c20e5c4-4027-4861-8d32-03bea3a4d060",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Garonne on 2023-03-26T10:00:00+00:00: 5 indicators (final, record FWW-304448)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304448"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+      "display": "Toulouse area · Garonne"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:cfae0fb5-4c4d-45dd-8c47-ee38d5391612"
+      },
+      {
+       "reference": "urn:uuid:843064a7-f77f-41a9-853b-139fd5e8b983"
+      },
+      {
+       "reference": "urn:uuid:b8c3a6ca-81fe-475a-b5b9-d3096cde2a34"
+      },
+      {
+       "reference": "urn:uuid:6fe7ae7a-0355-41ee-8d51-e033a3669b6d"
+      },
+      {
+       "reference": "urn:uuid:88d8ec11-8233-4d0d-8351-41614e47c8fb"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304448"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:cfae0fb5-4c4d-45dd-8c47-ee38d5391612",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: other at Toulouse area · Garonne (final, record FWW-304448)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304448.water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+      "display": "Toulouse area · Garonne"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-other",
+        "display": "Water colour: other"
+       }
+      ],
+      "text": "other"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304448.water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:843064a7-f77f-41a9-853b-139fd5e8b983",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Toulouse area · Garonne (final, record FWW-304448)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304448.surface"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+      "display": "Toulouse area · Garonne"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-none",
+        "display": "Surface film: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304448.surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b8c3a6ca-81fe-475a-b5b9-d3096cde2a34",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Toulouse area · Garonne (final, record FWW-304448)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304448.animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+      "display": "Toulouse area · Garonne"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304448.animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6fe7ae7a-0355-41ee-8d51-e033a3669b6d",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Toulouse area · Garonne (final, record FWW-304448)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304448.people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+      "display": "Toulouse area · Garonne"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304448.people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:88d8ec11-8233-4d0d-8351-41614e47c8fb",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: none at Toulouse area · Garonne (final, record FWW-304448)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FWW-304448.litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:5a2c0c74-02fc-4e50-87aa-9039dc22d120",
+      "display": "Toulouse area · Garonne"
+     },
+     "effectiveDateTime": "2023-03-26T10:00:00+00:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "fww-group-4b4922e9fdf8"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-none",
+        "display": "Litter: none"
+       }
+      ],
+      "text": "none"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FWW-304448.litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:4307f38c-328b-4ca5-a28b-ba483f0e31bc",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FWW-304448",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FWW-304448 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:8c20e5c4-4027-4861-8d32-03bea3a4d060"
+      },
+      {
+       "reference": "urn:uuid:cfae0fb5-4c4d-45dd-8c47-ee38d5391612"
+      },
+      {
+       "reference": "urn:uuid:843064a7-f77f-41a9-853b-139fd5e8b983"
+      },
+      {
+       "reference": "urn:uuid:b8c3a6ca-81fe-475a-b5b9-d3096cde2a34"
+      },
+      {
+       "reference": "urn:uuid:6fe7ae7a-0355-41ee-8d51-e033a3669b6d"
+      },
+      {
+       "reference": "urn:uuid:88d8ec11-8233-4d0d-8351-41614e47c8fb"
+      }
+     ],
+     "occurredDateTime": "2023-03-26T10:00:00+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "fww-group-4b4922e9fdf8"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:136c56c7-d023-438f-986d-41528c6c12a6",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FWW-304448"
+        },
+        "display": "Original citizen record (Earthwatch Europe FreshWater Watch, project 'BACKDROP: Water Institute Citizen River Observation Project')"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FWW-304448"
+    }
+   }
+  ]
+ }
+}

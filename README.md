@@ -5,6 +5,7 @@
 Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy Ecosystems, Healthy Communities*). **Track 7 — Digital Health Standards.**
 
 - **Live demo (no install):** https://ryugi62.github.io/streamfhir/demo/ — static page from [`docs/demo/`](docs/demo/); the sample records are precomputed.
+- **Real citizen-science demo:** https://ryugi62.github.io/streamfhir/demo-citizen/ — 25 real FreshWater Watch volunteer records near Toulouse and Coimbra; 2 reach a corroborated warning.
 - **Real EU data demo (no install):** https://ryugi62.github.io/streamfhir/demo-eu/ — 52 real river monitoring stations around **Toulouse** (a OneAquaHealth research city) from France's open Hub'Eau API, run through the same pipeline ([details](#real-european-data-toulouse-a-oneaquahealth-city)).
 - **Demo video (3:25):** https://youtu.be/xxEL--FC9tA
 - **Run the full app:** `python3 -m streamfhir serve` → http://127.0.0.1:8000 (Python 3.9+, no dependencies).
@@ -87,7 +88,7 @@ python3 -m streamfhir import-hubeau               # real Toulouse-area river dat
 python3 -m streamfhir --data data/real-eu-toulouse serve     # browse it (same as the /demo-eu/ page)
 python3 -m streamfhir eea-coverage                # EU (EEA Waterbase) code coverage near the 5 OneAquaHealth cities
 python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live   # agency + synthetic citizen nitrate, one EEA-code query
-python3 -m pip install pytest && python3 -m pytest -q     # 97 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 99 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -208,7 +209,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
 
 ## Evidence
-- **97 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-44 (see `SPEC.md`).
+- **99 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-45 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -238,6 +239,13 @@ Sample result (demo date 29 Sep 2026):
 
 **The EU code layer reaches all five OneAquaHealth cities.** In the EEA Waterbase (WISE-6) aggregated table, surface-water monitoring sites within about 13 km of each research city report pH, temperature and nitrate under the same EEA codes: Benevento 12 sites, Coimbra 1, Ghent 3, Oslo 7 (no phosphate), Toulouse 10 (`python3 -m streamfhir eea-coverage`, snapshot in `data/eea-coverage/`). That table's latest reporting years for these sites are 2009–2012, and the sample-level table timed out on the public query service, so this is a coverage check of the codes, not a data run.
 
+## Real citizen science (FreshWater Watch, near Toulouse and Coimbra)
+`import-fww` converts Earthwatch Europe's **FreshWater Watch** volunteer records (public ArcGIS view, no account; open access with no formal licence, attribution Earthwatch Europe; queries in `data/real-fww/SOURCE.txt`) within about 50 km (±0.5°) of the two OneAquaHealth cities that have any: Toulouse (19) and Coimbra (6; the sites are around Aveiro and Figueira da Foz). Benevento, Ghent and Oslo have none within that distance.
+- Only fields whose meaning matches StreamFHIR indicators are scored: water colour (Colourless/Brown/Green; any other colour, e.g. *Grey*, becomes *other*, not *milky-grey*), a *Blue_green_scum* algae report → algal scum, oily sheen, foam, litter, *Animal_access* → pets or livestock in contact (a proxy: animals can reach the water), *Swimming* → people in contact, and the volunteer's photo. Nitrate and phosphate kit colour bands, other algae types and pollution sources are kept as notes, not scored.
+- **25 real citizen records at 25 sites → 24 ready, 1 older than a year.** Evaluated at each site's own latest visit, **2 sites reach *High* with a corroborated warning from real volunteer data**: the Rio Vouga at Aveiro (blue-green scum with a photo, animals can access the water: R3 + R7) and the Ariège south of Toulouse (blue-green scum with a photo: R3). Both are from March 2023, so these are the warnings StreamFHIR *would have raised then*, not current conditions. Each rests on one photo-backed report, which is exactly the single-photo case the limitations section discusses.
+- Live on HAPI (validation only): the real Observations and the real-data Flag validate against the profiles with 0 errors, 0 warnings (evidence step 28).
+- Demo: https://ryugi62.github.io/streamfhir/demo-citizen/ (`python3 -m streamfhir --data data/real-fww serve`).
+
 ## Feasibility and scalability
 - **Runs anywhere Python runs:** standard library only, and stateless mapping. It can sit behind any citizen-science app as a nightly export job or a webhook.
 - **Integrates through the standard:** any FHIR R4 server can store the Bundles (see the CapabilityStatement for what it must support). Downstream systems query or subscribe to `Flag`.
@@ -245,7 +253,7 @@ Sample result (demo date 29 Sep 2026):
 - **Pilot shape (proposal only):** a coordinator exports a week of app records, runs `export` or `send` against a FHIR test server, and a reviewer uses the Confirm/Reject screen. Everything runs remotely at zero cost, and no one has to travel.
 
 ## Limitations
-- Demo data is synthetic. The real runs use agency monitoring data (chemistry only): the US Water Quality Portal and France's Hub'Eau around Toulouse. Neither is citizen science. There has been no field test and there are no real users or partners.
+- Demo data is synthetic. The real runs are agency chemistry (the US Water Quality Portal; France's Hub'Eau around Toulouse) and 25 FreshWater Watch volunteer records near Toulouse and Coimbra (2015–2023). There has been no field test, and there are no real users or partners. FreshWater Watch data has no formal licence ("open access"); we attribute Earthwatch Europe and would ask them before any reuse beyond this prototype.
 - Of the 52 Toulouse-area stations, only 1 matched a code in the EEA site list we pulled (a small area query), so only that Location carries its EU `euMonitoringSiteCode`. Other OAH cities were checked for EU code coverage only, not run through the pipeline.
 - The record schema is representative, not the official OneAquaHealth schema.
 - The rules and thresholds are simple, hand-written and untuned. They have not been validated against lab results and must not be read as a health advisory.
@@ -270,7 +278,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records; data/real-wqp (US) and data/real-eu-toulouse (France) real snapshots; data/eea-coverage
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     97 tests
+tests/                     99 tests
 ```
 
 ## License

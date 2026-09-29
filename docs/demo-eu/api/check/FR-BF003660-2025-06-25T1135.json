@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:fdd610fd-a3cd-4b69-b0eb-5c1f19506580",
+    "fullUrl": "urn:uuid:7ad0a381-3597-437c-8ecd-1c5e4205a154",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4186bb13-e5e1-4254-ab09-23dea3a427fc",
+    "fullUrl": "urn:uuid:954f686b-7e4d-4b48-ba64-7d946dea3498",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f47539a0-7d12-4baa-abcb-0016fab55266",
+    "fullUrl": "urn:uuid:fd55a1af-e6d0-4235-b6dc-1fe613105932",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:fdd610fd-a3cd-4b69-b0eb-5c1f19506580",
+      "reference": "urn:uuid:7ad0a381-3597-437c-8ecd-1c5e4205a154",
       "display": "Toulouse area · SECOURS GARONNE"
      },
      "effectiveDateTime": "2025-06-25T11:35:00+02:00",
@@ -165,10 +165,10 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:ad82fdc4-7bd3-4889-a73d-ec3713abe47f"
+       "reference": "urn:uuid:8d0c2bf7-c37b-49fc-8660-272a21d0bbd5"
       },
       {
-       "reference": "urn:uuid:3f18e63b-dd19-4e99-9c83-6f1322de5261"
+       "reference": "urn:uuid:21805dfd-64c8-4098-accb-14bc4a669d13"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ad82fdc4-7bd3-4889-a73d-ec3713abe47f",
+    "fullUrl": "urn:uuid:8d0c2bf7-c37b-49fc-8660-272a21d0bbd5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:fdd610fd-a3cd-4b69-b0eb-5c1f19506580",
+      "reference": "urn:uuid:7ad0a381-3597-437c-8ecd-1c5e4205a154",
       "display": "Toulouse area · SECOURS GARONNE"
      },
      "effectiveDateTime": "2025-06-25T11:35:00+02:00",
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3f18e63b-dd19-4e99-9c83-6f1322de5261",
+    "fullUrl": "urn:uuid:21805dfd-64c8-4098-accb-14bc4a669d13",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:fdd610fd-a3cd-4b69-b0eb-5c1f19506580",
+      "reference": "urn:uuid:7ad0a381-3597-437c-8ecd-1c5e4205a154",
       "display": "Toulouse area · SECOURS GARONNE"
      },
      "effectiveDateTime": "2025-06-25T11:35:00+02:00",
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ce9591b3-25e6-4b7d-9f2e-70ab887af65e",
+    "fullUrl": "urn:uuid:c7dc517a-0715-4dd2-8abd-fb96efe46931",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF003660-2025-06-25T1135",
@@ -366,17 +366,17 @@
      },
      "target": [
       {
-       "reference": "urn:uuid:f47539a0-7d12-4baa-abcb-0016fab55266"
+       "reference": "urn:uuid:fd55a1af-e6d0-4235-b6dc-1fe613105932"
       },
       {
-       "reference": "urn:uuid:ad82fdc4-7bd3-4889-a73d-ec3713abe47f"
+       "reference": "urn:uuid:8d0c2bf7-c37b-49fc-8660-272a21d0bbd5"
       },
       {
-       "reference": "urn:uuid:3f18e63b-dd19-4e99-9c83-6f1322de5261"
+       "reference": "urn:uuid:21805dfd-64c8-4098-accb-14bc4a669d13"
       }
      ],
      "occurredDateTime": "2025-06-25T11:35:00+02:00",
-     "recorded": "2026-09-29T13:27:39+00:00",
+     "recorded": "2026-09-29T13:35:57+00:00",
      "activity": {
       "coding": [
        {
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:4186bb13-e5e1-4254-ab09-23dea3a427fc",
+        "reference": "urn:uuid:954f686b-7e4d-4b48-ba64-7d946dea3498",
         "display": "StreamFHIR 0.5.1"
        }
       }
