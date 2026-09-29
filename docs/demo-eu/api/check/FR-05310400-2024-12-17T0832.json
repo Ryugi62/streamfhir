@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+    "fullUrl": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4f2f541d-723b-4bb1-be5d-a665ab4307ab",
+    "fullUrl": "urn:uuid:bfcb1cb3-7811-4c96-beea-967d1f81eaad",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a0730fcc-f508-4e94-a099-5da8b06b41f3",
+    "fullUrl": "urn:uuid:f74c53f0-91fb-4f77-b0e1-0f6b2fedf634",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+      "reference": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
       "display": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l"
      },
      "effectiveDateTime": "2024-12-17T08:32:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:bb8bac3d-be44-42b1-a50a-fa175bdea1c8"
+       "reference": "urn:uuid:0f5c774e-ba29-4532-bb66-e7c0ea3818d8"
       },
       {
-       "reference": "urn:uuid:81af22da-b2a4-4a17-8c96-fae1b22f1867"
+       "reference": "urn:uuid:bf1cd70e-6182-4894-a0a6-9c7d8a1ec4d2"
       },
       {
-       "reference": "urn:uuid:dfd02cec-63cb-4d11-a9f5-f1846cd2e221"
+       "reference": "urn:uuid:17f7f28f-0d7e-4dec-a96f-3ca9f696a2d4"
       },
       {
-       "reference": "urn:uuid:571e5c35-4893-4fc3-b2cc-ff99147d67d3"
+       "reference": "urn:uuid:3f6070ba-fa66-46eb-aec7-9d7649307924"
       },
       {
-       "reference": "urn:uuid:38bdd8f3-2217-400c-9c66-eb77fd68df4d"
+       "reference": "urn:uuid:2c91622d-e33b-4ea2-9888-52a05f7de462"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bb8bac3d-be44-42b1-a50a-fa175bdea1c8",
+    "fullUrl": "urn:uuid:0f5c774e-ba29-4532-bb66-e7c0ea3818d8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+      "reference": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
       "display": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l"
      },
      "effectiveDateTime": "2024-12-17T08:32:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:81af22da-b2a4-4a17-8c96-fae1b22f1867",
+    "fullUrl": "urn:uuid:bf1cd70e-6182-4894-a0a6-9c7d8a1ec4d2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+      "reference": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
       "display": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l"
      },
      "effectiveDateTime": "2024-12-17T08:32:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dfd02cec-63cb-4d11-a9f5-f1846cd2e221",
+    "fullUrl": "urn:uuid:17f7f28f-0d7e-4dec-a96f-3ca9f696a2d4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+      "reference": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
       "display": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l"
      },
      "effectiveDateTime": "2024-12-17T08:32:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:571e5c35-4893-4fc3-b2cc-ff99147d67d3",
+    "fullUrl": "urn:uuid:3f6070ba-fa66-46eb-aec7-9d7649307924",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+      "reference": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
       "display": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l"
      },
      "effectiveDateTime": "2024-12-17T08:32:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:38bdd8f3-2217-400c-9c66-eb77fd68df4d",
+    "fullUrl": "urn:uuid:2c91622d-e33b-4ea2-9888-52a05f7de462",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:edc12843-dfeb-4b48-a41a-ac54293906b4",
+      "reference": "urn:uuid:4070f3cb-c55c-42d7-90ce-3cd3f3f95ff1",
       "display": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l"
      },
      "effectiveDateTime": "2024-12-17T08:32:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3f4a1957-1c99-4402-bb7e-36e868ef18ca",
+    "fullUrl": "urn:uuid:712e2c98-63cf-48ff-8fc2-bbf6c2319a24",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310400-2024-12-17T0832",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310400-2024-12-17T0832 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310400 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310400-2024-12-17T0832 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310400 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:a0730fcc-f508-4e94-a099-5da8b06b41f3"
+       "reference": "urn:uuid:f74c53f0-91fb-4f77-b0e1-0f6b2fedf634"
       },
       {
-       "reference": "urn:uuid:bb8bac3d-be44-42b1-a50a-fa175bdea1c8"
+       "reference": "urn:uuid:0f5c774e-ba29-4532-bb66-e7c0ea3818d8"
       },
       {
-       "reference": "urn:uuid:81af22da-b2a4-4a17-8c96-fae1b22f1867"
+       "reference": "urn:uuid:bf1cd70e-6182-4894-a0a6-9c7d8a1ec4d2"
       },
       {
-       "reference": "urn:uuid:dfd02cec-63cb-4d11-a9f5-f1846cd2e221"
+       "reference": "urn:uuid:17f7f28f-0d7e-4dec-a96f-3ca9f696a2d4"
       },
       {
-       "reference": "urn:uuid:571e5c35-4893-4fc3-b2cc-ff99147d67d3"
+       "reference": "urn:uuid:3f6070ba-fa66-46eb-aec7-9d7649307924"
       },
       {
-       "reference": "urn:uuid:38bdd8f3-2217-400c-9c66-eb77fd68df4d"
+       "reference": "urn:uuid:2c91622d-e33b-4ea2-9888-52a05f7de462"
       }
      ],
      "occurredDateTime": "2024-12-17T08:32:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:4f2f541d-723b-4bb1-be5d-a665ab4307ab",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:bfcb1cb3-7811-4c96-beea-967d1f81eaad",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

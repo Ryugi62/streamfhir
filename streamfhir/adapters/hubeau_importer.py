@@ -74,7 +74,7 @@ def parse_analyses(payload: Dict, stations: Dict[str, Dict]) -> Tuple[List[Dict]
             rec = {"record_id": "%s-%s%s" % (sid, row["date_prelevement"], ("T" + key[2][:5].replace(":", "")) if key[2] else ""),
                    "synthetic": False, "origin": "sandre", "site_id": sid, "observed_at": when,
                    "observer": row.get("code_producteur_analyse") or row.get("nom_producteur_analyse") or "unknown producer",
-                   "observer_name": row.get("nom_producteur_analyse") or "Producer %s" % row.get("code_producteur_analyse"),
+                   "observer_name": row.get("nom_producteur_analyse") or "a Hub'Eau data producer (code %s)" % row.get("code_producteur_analyse"),
                    "lat": st["lat"], "lon": st["lon"],
                    "photos": [], "values": {}, "below_limit": {}, "source_notes": notes, "source_info": [],
                    "source": "Hub'Eau qualite_rivieres (Sandre), station %s" % row["code_station"]}

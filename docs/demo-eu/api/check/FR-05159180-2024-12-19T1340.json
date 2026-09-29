@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+    "fullUrl": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3dfc2ee3-745a-4355-9f3a-0f947a08c6b2",
+    "fullUrl": "urn:uuid:2c0f4a5e-d8b6-44c8-aaac-16c8322ca8e8",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fd03d607-cfd4-41b8-9f6d-81f88c1d68f0",
+    "fullUrl": "urn:uuid:5f4643c2-4ea9-411e-b73b-74f48d5ce170",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+      "reference": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
       "display": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu"
      },
      "effectiveDateTime": "2024-12-19T13:40:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:2f92d21a-4408-430d-b8e4-9fb06bdf0bc2"
+       "reference": "urn:uuid:0b6edc53-18f9-4d35-963e-ed2550cd4b17"
       },
       {
-       "reference": "urn:uuid:fd27bc9f-18db-40e5-96ac-4e8699be491d"
+       "reference": "urn:uuid:d284c569-0e81-4a6d-bb7d-cd4860cef883"
       },
       {
-       "reference": "urn:uuid:5e7e2eb6-f689-403c-88e4-ce92237abab4"
+       "reference": "urn:uuid:216e9e1f-aaeb-4854-820c-05c410c93cf1"
       },
       {
-       "reference": "urn:uuid:6dfcb6d0-c303-4cd4-9eb9-2de0c631b644"
+       "reference": "urn:uuid:bd0996c7-d616-4854-a1ec-dc0b5eef5add"
       },
       {
-       "reference": "urn:uuid:d7b5240d-4625-41ff-b4ac-e5e8fd3b66a2"
+       "reference": "urn:uuid:1618fcd1-fa97-4956-b159-8a9aa0e54e1c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2f92d21a-4408-430d-b8e4-9fb06bdf0bc2",
+    "fullUrl": "urn:uuid:0b6edc53-18f9-4d35-963e-ed2550cd4b17",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+      "reference": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
       "display": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu"
      },
      "effectiveDateTime": "2024-12-19T13:40:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fd27bc9f-18db-40e5-96ac-4e8699be491d",
+    "fullUrl": "urn:uuid:d284c569-0e81-4a6d-bb7d-cd4860cef883",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+      "reference": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
       "display": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu"
      },
      "effectiveDateTime": "2024-12-19T13:40:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5e7e2eb6-f689-403c-88e4-ce92237abab4",
+    "fullUrl": "urn:uuid:216e9e1f-aaeb-4854-820c-05c410c93cf1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -415,7 +415,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+      "reference": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
       "display": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu"
      },
      "effectiveDateTime": "2024-12-19T13:40:00+01:00",
@@ -442,7 +442,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6dfcb6d0-c303-4cd4-9eb9-2de0c631b644",
+    "fullUrl": "urn:uuid:bd0996c7-d616-4854-a1ec-dc0b5eef5add",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -490,7 +490,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+      "reference": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
       "display": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu"
      },
      "effectiveDateTime": "2024-12-19T13:40:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d7b5240d-4625-41ff-b4ac-e5e8fd3b66a2",
+    "fullUrl": "urn:uuid:1618fcd1-fa97-4956-b159-8a9aa0e54e1c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:8e635c0f-07fd-46c9-aa4b-e76592e7ec2e",
+      "reference": "urn:uuid:ad598073-3060-4049-bf7b-d1e5445b374e",
       "display": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu"
      },
      "effectiveDateTime": "2024-12-19T13:40:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:183d2c8e-76aa-4564-9b95-84c7d4508b66",
+    "fullUrl": "urn:uuid:7fa2e83a-c210-4f17-8fef-d866cf5db56b",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159180-2024-12-19T1340",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159180-2024-12-19T1340 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159180 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159180-2024-12-19T1340 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159180 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:fd03d607-cfd4-41b8-9f6d-81f88c1d68f0"
+       "reference": "urn:uuid:5f4643c2-4ea9-411e-b73b-74f48d5ce170"
       },
       {
-       "reference": "urn:uuid:2f92d21a-4408-430d-b8e4-9fb06bdf0bc2"
+       "reference": "urn:uuid:0b6edc53-18f9-4d35-963e-ed2550cd4b17"
       },
       {
-       "reference": "urn:uuid:fd27bc9f-18db-40e5-96ac-4e8699be491d"
+       "reference": "urn:uuid:d284c569-0e81-4a6d-bb7d-cd4860cef883"
       },
       {
-       "reference": "urn:uuid:5e7e2eb6-f689-403c-88e4-ce92237abab4"
+       "reference": "urn:uuid:216e9e1f-aaeb-4854-820c-05c410c93cf1"
       },
       {
-       "reference": "urn:uuid:6dfcb6d0-c303-4cd4-9eb9-2de0c631b644"
+       "reference": "urn:uuid:bd0996c7-d616-4854-a1ec-dc0b5eef5add"
       },
       {
-       "reference": "urn:uuid:d7b5240d-4625-41ff-b4ac-e5e8fd3b66a2"
+       "reference": "urn:uuid:1618fcd1-fa97-4956-b159-8a9aa0e54e1c"
       }
      ],
      "occurredDateTime": "2024-12-19T13:40:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:3dfc2ee3-745a-4355-9f3a-0f947a08c6b2",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:2c0f4a5e-d8b6-44c8-aaac-16c8322ca8e8",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

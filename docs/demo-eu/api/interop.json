@@ -1,0 +1,50 @@
+{
+ "_note": "Captured response of the live interop demo on the public HAPI R4 test server (it may purge data; re-create with: python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live).",
+ "retrieved": "2026-09-29T13:26:14+00:00",
+ "site_id": "FR-05157550",
+ "location": "Location/54630",
+ "nitrate_query": "https://hapi.fhir.org/baseR4/Observation?code=http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty%7CCAS_14797-55-8&subject=Location/54630",
+ "flag_query": "https://hapi.fhir.org/baseR4/Flag?subject=Location/54630",
+ "nitrate_results": [
+  {
+   "id": "Observation/54635",
+   "category": "laboratory",
+   "value_mg_per_l": 62.0,
+   "effective": "2024-12-17T11:47:00+01:00",
+   "performer": "AGENCE DE L'EAU ADOUR GARONNE",
+   "synthetic": false
+  },
+  {
+   "id": "Observation/54687",
+   "category": "survey",
+   "value_mg_per_l": 50,
+   "effective": "2024-12-17T14:47:00+01:00",
+   "performer": "Pseudonymous citizen scientist",
+   "synthetic": true
+  },
+  {
+   "id": "Observation/54697",
+   "category": "survey",
+   "value_mg_per_l": 50,
+   "effective": "2024-12-18T14:47:00+01:00",
+   "performer": "Pseudonymous citizen scientist",
+   "synthetic": true
+  }
+ ],
+ "flags": [
+  {
+   "id": "Flag/54705",
+   "status": "active",
+   "code": "high",
+   "period": {
+    "start": "2024-12-17T14:47:00+01:00",
+    "end": "2025-01-01T14:47:00+01:00"
+   },
+   "rules": [
+    "R3",
+    "R7"
+   ],
+   "synthetic": true
+  }
+ ]
+}

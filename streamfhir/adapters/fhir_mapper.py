@@ -18,7 +18,7 @@ from ..domain.risk import CONFIRM, HAZARD, HIGH, LOW, MODERATE, REJECT, RULES, V
 from ..domain.sites import Site
 from ..domain.validation import REVIEW, ValidationReport
 
-VERSION = "0.4.0"
+VERSION = "0.5.1"
 DATE = "2026-09-29"
 BASE = "https://example.org/fhir/streamfhir"   # example canonical - replace when published
 CS_INDICATOR = BASE + "/CodeSystem/stream-indicator"

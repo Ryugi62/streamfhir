@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+    "fullUrl": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4bf4d9f8-b9bc-4358-be50-d4ff34416261",
+    "fullUrl": "urn:uuid:6c81d4e4-13f0-4451-a85d-2ec19715d26a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:46f6defa-2e4e-4d89-9bf0-7ab3e93b5f37",
+    "fullUrl": "urn:uuid:ff3e8255-6a36-4610-88ee-b5e6b5443d1e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+      "reference": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
       "display": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)"
      },
      "effectiveDateTime": "2024-12-16T09:28:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:a0eaa273-b173-4a52-8395-e24aa6877421"
+       "reference": "urn:uuid:5b3ef426-649c-4144-9373-5607cb4f1120"
       },
       {
-       "reference": "urn:uuid:8eeb1098-ab6e-46d2-9df5-1cd3e1e22448"
+       "reference": "urn:uuid:4f4e276a-3d23-4bdc-b3c4-cca2ae7f42a9"
       },
       {
-       "reference": "urn:uuid:087dd8c0-e956-4fe4-bb36-e55ea5b2d08a"
+       "reference": "urn:uuid:97603cf2-249f-472c-b143-1ff3c867a4aa"
       },
       {
-       "reference": "urn:uuid:981a67d3-9a59-4469-9991-7e52332e199f"
+       "reference": "urn:uuid:3c622a0c-f070-4b2c-aa1a-1fc4e07a2a76"
       },
       {
-       "reference": "urn:uuid:977987a4-b60d-4240-820a-7f374341e5bd"
+       "reference": "urn:uuid:4ba9e8b8-0fc6-405b-8442-a54adeeafd28"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a0eaa273-b173-4a52-8395-e24aa6877421",
+    "fullUrl": "urn:uuid:5b3ef426-649c-4144-9373-5607cb4f1120",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+      "reference": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
       "display": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)"
      },
      "effectiveDateTime": "2024-12-16T09:28:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8eeb1098-ab6e-46d2-9df5-1cd3e1e22448",
+    "fullUrl": "urn:uuid:4f4e276a-3d23-4bdc-b3c4-cca2ae7f42a9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+      "reference": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
       "display": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)"
      },
      "effectiveDateTime": "2024-12-16T09:28:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:087dd8c0-e956-4fe4-bb36-e55ea5b2d08a",
+    "fullUrl": "urn:uuid:97603cf2-249f-472c-b143-1ff3c867a4aa",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+      "reference": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
       "display": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)"
      },
      "effectiveDateTime": "2024-12-16T09:28:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:981a67d3-9a59-4469-9991-7e52332e199f",
+    "fullUrl": "urn:uuid:3c622a0c-f070-4b2c-aa1a-1fc4e07a2a76",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+      "reference": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
       "display": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)"
      },
      "effectiveDateTime": "2024-12-16T09:28:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:977987a4-b60d-4240-820a-7f374341e5bd",
+    "fullUrl": "urn:uuid:4ba9e8b8-0fc6-405b-8442-a54adeeafd28",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:52e775e3-fb8c-4dea-bc4b-123d1fde12d4",
+      "reference": "urn:uuid:48d4f003-01ee-4512-a3b8-d1473cf65a5e",
       "display": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)"
      },
      "effectiveDateTime": "2024-12-16T09:28:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c4ca93ff-5dd9-4ad1-8e5d-e5256e65d18a",
+    "fullUrl": "urn:uuid:5a19d371-52aa-452e-ba3b-d00d8cd93673",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310060-2024-12-16T0928",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310060-2024-12-16T0928 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310060 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310060-2024-12-16T0928 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310060 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:46f6defa-2e4e-4d89-9bf0-7ab3e93b5f37"
+       "reference": "urn:uuid:ff3e8255-6a36-4610-88ee-b5e6b5443d1e"
       },
       {
-       "reference": "urn:uuid:a0eaa273-b173-4a52-8395-e24aa6877421"
+       "reference": "urn:uuid:5b3ef426-649c-4144-9373-5607cb4f1120"
       },
       {
-       "reference": "urn:uuid:8eeb1098-ab6e-46d2-9df5-1cd3e1e22448"
+       "reference": "urn:uuid:4f4e276a-3d23-4bdc-b3c4-cca2ae7f42a9"
       },
       {
-       "reference": "urn:uuid:087dd8c0-e956-4fe4-bb36-e55ea5b2d08a"
+       "reference": "urn:uuid:97603cf2-249f-472c-b143-1ff3c867a4aa"
       },
       {
-       "reference": "urn:uuid:981a67d3-9a59-4469-9991-7e52332e199f"
+       "reference": "urn:uuid:3c622a0c-f070-4b2c-aa1a-1fc4e07a2a76"
       },
       {
-       "reference": "urn:uuid:977987a4-b60d-4240-820a-7f374341e5bd"
+       "reference": "urn:uuid:4ba9e8b8-0fc6-405b-8442-a54adeeafd28"
       }
      ],
      "occurredDateTime": "2024-12-16T09:28:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:4bf4d9f8-b9bc-4358-be50-d4ff34416261",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:6c81d4e4-13f0-4451-a85d-2ec19715d26a",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

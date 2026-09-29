@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+    "fullUrl": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b988e1d1-859a-4afa-bd54-ecc837f5b1ea",
+    "fullUrl": "urn:uuid:d1cf6f41-f054-4dae-bc9b-3ee6df13dd2b",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:035a4a94-e4f3-4266-85a7-60cb97051d14",
+    "fullUrl": "urn:uuid:cbe22fb4-e283-46d7-b884-5b19fe79828d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+      "reference": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:229be98d-b5c6-4d8e-9989-572586e57c98"
+       "reference": "urn:uuid:d20ad974-40d6-4491-be1e-93d0a0aeed5c"
       },
       {
-       "reference": "urn:uuid:662d04ac-b461-4937-8eed-2d2ffa090185"
+       "reference": "urn:uuid:2f9efc4a-2c63-4358-b4d1-5d1944785d50"
       },
       {
-       "reference": "urn:uuid:f7a21991-9e44-4edd-84c7-7adca9caece3"
+       "reference": "urn:uuid:1f998e65-9bb3-4a8a-9871-86945bdb1a5f"
       },
       {
-       "reference": "urn:uuid:f32ddb98-815d-456c-ac33-42bfeeec9fea"
+       "reference": "urn:uuid:121f75a8-efac-4f0e-8507-fba50a52c0aa"
       },
       {
-       "reference": "urn:uuid:d31b29dc-365b-4e5a-9380-6b65331d6d8e"
+       "reference": "urn:uuid:520abb27-95f9-43f6-90f1-81d5787a2e5c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:229be98d-b5c6-4d8e-9989-572586e57c98",
+    "fullUrl": "urn:uuid:d20ad974-40d6-4491-be1e-93d0a0aeed5c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+      "reference": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:662d04ac-b461-4937-8eed-2d2ffa090185",
+    "fullUrl": "urn:uuid:2f9efc4a-2c63-4358-b4d1-5d1944785d50",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+      "reference": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f7a21991-9e44-4edd-84c7-7adca9caece3",
+    "fullUrl": "urn:uuid:1f998e65-9bb3-4a8a-9871-86945bdb1a5f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+      "reference": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f32ddb98-815d-456c-ac33-42bfeeec9fea",
+    "fullUrl": "urn:uuid:121f75a8-efac-4f0e-8507-fba50a52c0aa",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+      "reference": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d31b29dc-365b-4e5a-9380-6b65331d6d8e",
+    "fullUrl": "urn:uuid:520abb27-95f9-43f6-90f1-81d5787a2e5c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
+      "reference": "urn:uuid:12c91ac6-7bea-40e7-9b70-ca0236f069ec",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5f368892-80b0-4f0c-ab1f-adf7453f4ca4",
+    "fullUrl": "urn:uuid:c6cd0f16-c49b-40df-905d-006742233c9d",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159000-2024-12-17T1439",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159000-2024-12-17T1439 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159000-2024-12-17T1439 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159000 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:035a4a94-e4f3-4266-85a7-60cb97051d14"
+       "reference": "urn:uuid:cbe22fb4-e283-46d7-b884-5b19fe79828d"
       },
       {
-       "reference": "urn:uuid:229be98d-b5c6-4d8e-9989-572586e57c98"
+       "reference": "urn:uuid:d20ad974-40d6-4491-be1e-93d0a0aeed5c"
       },
       {
-       "reference": "urn:uuid:662d04ac-b461-4937-8eed-2d2ffa090185"
+       "reference": "urn:uuid:2f9efc4a-2c63-4358-b4d1-5d1944785d50"
       },
       {
-       "reference": "urn:uuid:f7a21991-9e44-4edd-84c7-7adca9caece3"
+       "reference": "urn:uuid:1f998e65-9bb3-4a8a-9871-86945bdb1a5f"
       },
       {
-       "reference": "urn:uuid:f32ddb98-815d-456c-ac33-42bfeeec9fea"
+       "reference": "urn:uuid:121f75a8-efac-4f0e-8507-fba50a52c0aa"
       },
       {
-       "reference": "urn:uuid:d31b29dc-365b-4e5a-9380-6b65331d6d8e"
+       "reference": "urn:uuid:520abb27-95f9-43f6-90f1-81d5787a2e5c"
       }
      ],
      "occurredDateTime": "2024-12-17T14:39:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:b988e1d1-859a-4afa-bd54-ecc837f5b1ea",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:d1cf6f41-f054-4dae-bc9b-3ee6df13dd2b",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

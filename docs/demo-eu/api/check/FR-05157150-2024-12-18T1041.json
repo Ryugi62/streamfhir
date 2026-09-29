@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+    "fullUrl": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3efd6d47-cabd-4c4b-af01-6ff2be03bdfc",
+    "fullUrl": "urn:uuid:ec380f6e-fb5c-4403-b5a6-20b58b5af7af",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e00a875c-007e-43f2-a4cf-803187c64990",
+    "fullUrl": "urn:uuid:766055f6-0ec5-4bc7-8533-53ce9cc4a5c2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+      "reference": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
       "display": "Toulouse area · La Seillonne au niveau de Dremil Lafage"
      },
      "effectiveDateTime": "2024-12-18T10:41:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:13dcd44f-ee70-46af-81ad-b3060e20d88c"
+       "reference": "urn:uuid:5233ed96-73cc-4e47-9a99-1e9bd2548b50"
       },
       {
-       "reference": "urn:uuid:850a55c2-1c3a-43c3-8ed1-0b6f0c613dfd"
+       "reference": "urn:uuid:d6e36033-79e6-4074-8935-bbbc7ddba867"
       },
       {
-       "reference": "urn:uuid:210c6d7a-a6f6-4a57-88a5-b0a37e3196ad"
+       "reference": "urn:uuid:dc857c4d-9007-4d61-93f3-8077ce77d2b6"
       },
       {
-       "reference": "urn:uuid:a015b980-6e0d-4899-92d9-d114d391489f"
+       "reference": "urn:uuid:e40fcc28-9a32-47f4-90f2-a042a4e1d0a6"
       },
       {
-       "reference": "urn:uuid:13c1d453-9203-401e-93e0-98c04adc89ea"
+       "reference": "urn:uuid:7e7cbeb7-ea53-45fc-9976-78b0ee4215f7"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:13dcd44f-ee70-46af-81ad-b3060e20d88c",
+    "fullUrl": "urn:uuid:5233ed96-73cc-4e47-9a99-1e9bd2548b50",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+      "reference": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
       "display": "Toulouse area · La Seillonne au niveau de Dremil Lafage"
      },
      "effectiveDateTime": "2024-12-18T10:41:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:850a55c2-1c3a-43c3-8ed1-0b6f0c613dfd",
+    "fullUrl": "urn:uuid:d6e36033-79e6-4074-8935-bbbc7ddba867",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+      "reference": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
       "display": "Toulouse area · La Seillonne au niveau de Dremil Lafage"
      },
      "effectiveDateTime": "2024-12-18T10:41:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:210c6d7a-a6f6-4a57-88a5-b0a37e3196ad",
+    "fullUrl": "urn:uuid:dc857c4d-9007-4d61-93f3-8077ce77d2b6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+      "reference": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
       "display": "Toulouse area · La Seillonne au niveau de Dremil Lafage"
      },
      "effectiveDateTime": "2024-12-18T10:41:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a015b980-6e0d-4899-92d9-d114d391489f",
+    "fullUrl": "urn:uuid:e40fcc28-9a32-47f4-90f2-a042a4e1d0a6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+      "reference": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
       "display": "Toulouse area · La Seillonne au niveau de Dremil Lafage"
      },
      "effectiveDateTime": "2024-12-18T10:41:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:13c1d453-9203-401e-93e0-98c04adc89ea",
+    "fullUrl": "urn:uuid:7e7cbeb7-ea53-45fc-9976-78b0ee4215f7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:b40d0cc3-7565-4507-867e-7fc88746cc52",
+      "reference": "urn:uuid:9b3eac28-e310-4c2a-a579-85df36a68349",
       "display": "Toulouse area · La Seillonne au niveau de Dremil Lafage"
      },
      "effectiveDateTime": "2024-12-18T10:41:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1dfc6816-39e7-4a96-b8d4-82cf6f82d4dd",
+    "fullUrl": "urn:uuid:1a50f8c9-53ae-4de2-80ac-9750cc918c8b",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05157150-2024-12-18T1041",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05157150-2024-12-18T1041 was imported from Hub'Eau qualite_rivieres (Sandre), station 05157150 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05157150-2024-12-18T1041 was imported from Hub'Eau qualite_rivieres (Sandre), station 05157150 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:e00a875c-007e-43f2-a4cf-803187c64990"
+       "reference": "urn:uuid:766055f6-0ec5-4bc7-8533-53ce9cc4a5c2"
       },
       {
-       "reference": "urn:uuid:13dcd44f-ee70-46af-81ad-b3060e20d88c"
+       "reference": "urn:uuid:5233ed96-73cc-4e47-9a99-1e9bd2548b50"
       },
       {
-       "reference": "urn:uuid:850a55c2-1c3a-43c3-8ed1-0b6f0c613dfd"
+       "reference": "urn:uuid:d6e36033-79e6-4074-8935-bbbc7ddba867"
       },
       {
-       "reference": "urn:uuid:210c6d7a-a6f6-4a57-88a5-b0a37e3196ad"
+       "reference": "urn:uuid:dc857c4d-9007-4d61-93f3-8077ce77d2b6"
       },
       {
-       "reference": "urn:uuid:a015b980-6e0d-4899-92d9-d114d391489f"
+       "reference": "urn:uuid:e40fcc28-9a32-47f4-90f2-a042a4e1d0a6"
       },
       {
-       "reference": "urn:uuid:13c1d453-9203-401e-93e0-98c04adc89ea"
+       "reference": "urn:uuid:7e7cbeb7-ea53-45fc-9976-78b0ee4215f7"
       }
      ],
      "occurredDateTime": "2024-12-18T10:41:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:3efd6d47-cabd-4c4b-af01-6ff2be03bdfc",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:ec380f6e-fb5c-4403-b5a6-20b58b5af7af",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

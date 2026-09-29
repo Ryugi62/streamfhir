@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:a34f2971-0ec8-495c-96c4-1c73319baaf9",
+    "fullUrl": "urn:uuid:e6348d4d-e401-4c9f-b68a-8fa205282f19",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e24d1c0c-1483-4380-9348-75164c2d1fcc",
+    "fullUrl": "urn:uuid:48399a69-d418-433b-bd92-c2537b20a0dd",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:af4c34cd-c104-4c1d-8d14-25ab28ccf681",
+    "fullUrl": "urn:uuid:cc4db8cc-580a-4ab9-b0cf-7f1aed10fbc6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:a34f2971-0ec8-495c-96c4-1c73319baaf9",
+      "reference": "urn:uuid:e6348d4d-e401-4c9f-b68a-8fa205282f19",
       "display": "Toulouse area · MARQUISAT  PRISE CANAL"
      },
      "effectiveDateTime": "2025-08-20T12:58:00+02:00",
@@ -159,16 +159,16 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101735"
        },
-       "display": "Producer 03101735",
+       "display": "a Hub'Eau data producer (code 03101735)",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:a411c0f0-4b50-4468-9009-f4f6ec1522a8"
+       "reference": "urn:uuid:39adb7d8-9426-403a-bd41-41ba61bf6565"
       },
       {
-       "reference": "urn:uuid:321ea732-b17e-4ca0-bee0-439c7a70b571"
+       "reference": "urn:uuid:24d8ec49-e48b-470d-87b5-c307c9543b81"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a411c0f0-4b50-4468-9009-f4f6ec1522a8",
+    "fullUrl": "urn:uuid:39adb7d8-9426-403a-bd41-41ba61bf6565",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:a34f2971-0ec8-495c-96c4-1c73319baaf9",
+      "reference": "urn:uuid:e6348d4d-e401-4c9f-b68a-8fa205282f19",
       "display": "Toulouse area · MARQUISAT  PRISE CANAL"
      },
      "effectiveDateTime": "2025-08-20T12:58:00+02:00",
@@ -251,7 +251,7 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101735"
        },
-       "display": "Producer 03101735",
+       "display": "a Hub'Eau data producer (code 03101735)",
        "type": "Organization"
       }
      ],
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:321ea732-b17e-4ca0-bee0-439c7a70b571",
+    "fullUrl": "urn:uuid:24d8ec49-e48b-470d-87b5-c307c9543b81",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:a34f2971-0ec8-495c-96c4-1c73319baaf9",
+      "reference": "urn:uuid:e6348d4d-e401-4c9f-b68a-8fa205282f19",
       "display": "Toulouse area · MARQUISAT  PRISE CANAL"
      },
      "effectiveDateTime": "2025-08-20T12:58:00+02:00",
@@ -326,7 +326,7 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101735"
        },
-       "display": "Producer 03101735",
+       "display": "a Hub'Eau data producer (code 03101735)",
        "type": "Organization"
       }
      ],
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e9e53529-c3d5-4a75-b25e-5c6b470c9980",
+    "fullUrl": "urn:uuid:a88755aa-5a9d-4aeb-baf1-018e0b62dcdc",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000326-2025-08-20T1258",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000326-2025-08-20T1258 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000326 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000326-2025-08-20T1258 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000326 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:af4c34cd-c104-4c1d-8d14-25ab28ccf681"
+       "reference": "urn:uuid:cc4db8cc-580a-4ab9-b0cf-7f1aed10fbc6"
       },
       {
-       "reference": "urn:uuid:a411c0f0-4b50-4468-9009-f4f6ec1522a8"
+       "reference": "urn:uuid:39adb7d8-9426-403a-bd41-41ba61bf6565"
       },
       {
-       "reference": "urn:uuid:321ea732-b17e-4ca0-bee0-439c7a70b571"
+       "reference": "urn:uuid:24d8ec49-e48b-470d-87b5-c307c9543b81"
       }
      ],
      "occurredDateTime": "2025-08-20T12:58:00+02:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -402,7 +402,7 @@
          "system": "https://id.eaufrance.fr/int",
          "value": "03101735"
         },
-        "display": "Producer 03101735",
+        "display": "a Hub'Eau data producer (code 03101735)",
         "type": "Organization"
        }
       },
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:e24d1c0c-1483-4380-9348-75164c2d1fcc",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:48399a69-d418-433b-bd92-c2537b20a0dd",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

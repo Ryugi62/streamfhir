@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:27174182-431e-4906-a5cb-2c743d3e3b52",
+    "fullUrl": "urn:uuid:f323a7d6-caa5-41e9-aeb8-f39c5afdc338",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7cace3ce-5e61-436a-b412-ce19ae2093b7",
+    "fullUrl": "urn:uuid:d9d36dd9-b4ec-4d67-85eb-3cd2519a8476",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d3e5849a-c997-477a-b284-b5db843e09bb",
+    "fullUrl": "urn:uuid:c6d2bda1-7603-4343-b786-af8f1962a10e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:27174182-431e-4906-a5cb-2c743d3e3b52",
+      "reference": "urn:uuid:f323a7d6-caa5-41e9-aeb8-f39c5afdc338",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-05-12T11:29:00+02:00",
@@ -159,16 +159,16 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101404"
        },
-       "display": "Producer 03101404",
+       "display": "a Hub'Eau data producer (code 03101404)",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:aa346a3d-5060-4828-a7d7-80e445378097"
+       "reference": "urn:uuid:8ea11660-b0b5-4fa6-ac68-5b05b9bc914b"
       },
       {
-       "reference": "urn:uuid:ae6b656f-267c-40c5-afbe-0dade6928879"
+       "reference": "urn:uuid:a0635ec3-ed07-437c-a984-a9764cd8752e"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:aa346a3d-5060-4828-a7d7-80e445378097",
+    "fullUrl": "urn:uuid:8ea11660-b0b5-4fa6-ac68-5b05b9bc914b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:27174182-431e-4906-a5cb-2c743d3e3b52",
+      "reference": "urn:uuid:f323a7d6-caa5-41e9-aeb8-f39c5afdc338",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-05-12T11:29:00+02:00",
@@ -251,7 +251,7 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101404"
        },
-       "display": "Producer 03101404",
+       "display": "a Hub'Eau data producer (code 03101404)",
        "type": "Organization"
       }
      ],
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ae6b656f-267c-40c5-afbe-0dade6928879",
+    "fullUrl": "urn:uuid:a0635ec3-ed07-437c-a984-a9764cd8752e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:27174182-431e-4906-a5cb-2c743d3e3b52",
+      "reference": "urn:uuid:f323a7d6-caa5-41e9-aeb8-f39c5afdc338",
       "display": "Toulouse area · ST CAPRAIS PRISE CANAL"
      },
      "effectiveDateTime": "2025-05-12T11:29:00+02:00",
@@ -326,7 +326,7 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101404"
        },
-       "display": "Producer 03101404",
+       "display": "a Hub'Eau data producer (code 03101404)",
        "type": "Organization"
       }
      ],
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e66600a2-ffd0-47e1-b50c-20db96b85f1d",
+    "fullUrl": "urn:uuid:963d4183-42b3-4d96-9b35-d0e7b1acafde",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000362-2025-05-12T1129",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000362-2025-05-12T1129 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000362 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000362-2025-05-12T1129 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000362 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:d3e5849a-c997-477a-b284-b5db843e09bb"
+       "reference": "urn:uuid:c6d2bda1-7603-4343-b786-af8f1962a10e"
       },
       {
-       "reference": "urn:uuid:aa346a3d-5060-4828-a7d7-80e445378097"
+       "reference": "urn:uuid:8ea11660-b0b5-4fa6-ac68-5b05b9bc914b"
       },
       {
-       "reference": "urn:uuid:ae6b656f-267c-40c5-afbe-0dade6928879"
+       "reference": "urn:uuid:a0635ec3-ed07-437c-a984-a9764cd8752e"
       }
      ],
      "occurredDateTime": "2025-05-12T11:29:00+02:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -402,7 +402,7 @@
          "system": "https://id.eaufrance.fr/int",
          "value": "03101404"
         },
-        "display": "Producer 03101404",
+        "display": "a Hub'Eau data producer (code 03101404)",
         "type": "Organization"
        }
       },
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:7cace3ce-5e61-436a-b412-ce19ae2093b7",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:d9d36dd9-b4ec-4d67-85eb-3cd2519a8476",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

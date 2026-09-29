@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+    "fullUrl": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:07b96d9c-6075-4f89-aa44-9b8671e54c0c",
+    "fullUrl": "urn:uuid:a46f2e86-fb92-4445-b43f-2fa1b10f9dc1",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0a587d82-7578-4d83-9575-3dc3ecef4234",
+    "fullUrl": "urn:uuid:1f1d2fa8-da6c-4a9e-9a5b-1665f0486986",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+      "reference": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:145cf1e6-b50e-4864-a740-05bfe13aeb2f"
+       "reference": "urn:uuid:7257bf2a-04d5-452b-919f-25f20e4ff9cb"
       },
       {
-       "reference": "urn:uuid:870acf9b-234d-41cf-8a4f-7c828c0d0177"
+       "reference": "urn:uuid:de914120-c927-4b7e-b264-da9cdc81f5d2"
       },
       {
-       "reference": "urn:uuid:b1d181b6-0762-4b95-84d5-a401b036525d"
+       "reference": "urn:uuid:3a975060-0985-4a90-a2d5-f03c021f41d7"
       },
       {
-       "reference": "urn:uuid:b8537a80-ea3b-49c6-834b-2ce28b7d6c27"
+       "reference": "urn:uuid:6478c1aa-a60c-483a-8771-8345dc2922d3"
       },
       {
-       "reference": "urn:uuid:949fa26d-bedf-4b28-8701-4766edf018ca"
+       "reference": "urn:uuid:4fd439f1-63ff-4201-b051-2ecb02d43261"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:145cf1e6-b50e-4864-a740-05bfe13aeb2f",
+    "fullUrl": "urn:uuid:7257bf2a-04d5-452b-919f-25f20e4ff9cb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+      "reference": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:870acf9b-234d-41cf-8a4f-7c828c0d0177",
+    "fullUrl": "urn:uuid:de914120-c927-4b7e-b264-da9cdc81f5d2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+      "reference": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b1d181b6-0762-4b95-84d5-a401b036525d",
+    "fullUrl": "urn:uuid:3a975060-0985-4a90-a2d5-f03c021f41d7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -409,7 +409,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+      "reference": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b8537a80-ea3b-49c6-834b-2ce28b7d6c27",
+    "fullUrl": "urn:uuid:6478c1aa-a60c-483a-8771-8345dc2922d3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+      "reference": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:949fa26d-bedf-4b28-8701-4766edf018ca",
+    "fullUrl": "urn:uuid:4fd439f1-63ff-4201-b051-2ecb02d43261",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:f7965f0e-b859-4cb3-941c-da9ecd85e201",
+      "reference": "urn:uuid:4d181209-45cb-4d4b-b5ea-ca5ff042e539",
       "display": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)"
      },
      "effectiveDateTime": "2024-12-17T08:37:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:417d4134-f014-4bd8-9a9a-dc89899fe3e0",
+    "fullUrl": "urn:uuid:f10fbad8-4fbe-44ed-b5e2-29b105359ac4",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310440-2024-12-17T0837",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310440-2024-12-17T0837 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310440 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310440-2024-12-17T0837 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310440 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:0a587d82-7578-4d83-9575-3dc3ecef4234"
+       "reference": "urn:uuid:1f1d2fa8-da6c-4a9e-9a5b-1665f0486986"
       },
       {
-       "reference": "urn:uuid:145cf1e6-b50e-4864-a740-05bfe13aeb2f"
+       "reference": "urn:uuid:7257bf2a-04d5-452b-919f-25f20e4ff9cb"
       },
       {
-       "reference": "urn:uuid:870acf9b-234d-41cf-8a4f-7c828c0d0177"
+       "reference": "urn:uuid:de914120-c927-4b7e-b264-da9cdc81f5d2"
       },
       {
-       "reference": "urn:uuid:b1d181b6-0762-4b95-84d5-a401b036525d"
+       "reference": "urn:uuid:3a975060-0985-4a90-a2d5-f03c021f41d7"
       },
       {
-       "reference": "urn:uuid:b8537a80-ea3b-49c6-834b-2ce28b7d6c27"
+       "reference": "urn:uuid:6478c1aa-a60c-483a-8771-8345dc2922d3"
       },
       {
-       "reference": "urn:uuid:949fa26d-bedf-4b28-8701-4766edf018ca"
+       "reference": "urn:uuid:4fd439f1-63ff-4201-b051-2ecb02d43261"
       }
      ],
      "occurredDateTime": "2024-12-17T08:37:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:07b96d9c-6075-4f89-aa44-9b8671e54c0c",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:a46f2e86-fb92-4445-b43f-2fa1b10f9dc1",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

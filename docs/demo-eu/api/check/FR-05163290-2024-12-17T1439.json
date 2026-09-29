@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+    "fullUrl": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e5b62fee-650f-4cbc-ba40-c3122133df9e",
+    "fullUrl": "urn:uuid:8b5ff130-a2bf-4830-ab3b-aa0162160b2e",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1fe5cf18-daf6-4825-88aa-4c0d49407ec0",
+    "fullUrl": "urn:uuid:010fc879-b0f7-4701-8d2a-a06e9120c955",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+      "reference": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
       "display": "Toulouse area · La Garonne à l'entrée dans Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:0dfb2bb3-d365-4096-a0b8-63940ef24542"
+       "reference": "urn:uuid:8bdfcba1-d9e4-4527-a516-76d2cfe2e212"
       },
       {
-       "reference": "urn:uuid:f0ffbd81-61ab-4796-838a-fb2c60fcf63f"
+       "reference": "urn:uuid:2d2d9eb5-c931-45b1-8761-ad7816be7835"
       },
       {
-       "reference": "urn:uuid:fdb6e0cf-980d-42f0-a941-4f82e52e5b69"
+       "reference": "urn:uuid:be6207fb-2dca-4a2a-954f-2251ec1ef7f1"
       },
       {
-       "reference": "urn:uuid:00778252-7235-451c-984f-49f4e0fc8ee1"
+       "reference": "urn:uuid:a119af79-232e-42f9-9ef6-8abd27b1c420"
       },
       {
-       "reference": "urn:uuid:750d6df9-9ac4-4621-b4ff-031e0eee113e"
+       "reference": "urn:uuid:a4dfb559-a055-4cb2-b277-94454af82e2f"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0dfb2bb3-d365-4096-a0b8-63940ef24542",
+    "fullUrl": "urn:uuid:8bdfcba1-d9e4-4527-a516-76d2cfe2e212",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+      "reference": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
       "display": "Toulouse area · La Garonne à l'entrée dans Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f0ffbd81-61ab-4796-838a-fb2c60fcf63f",
+    "fullUrl": "urn:uuid:2d2d9eb5-c931-45b1-8761-ad7816be7835",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+      "reference": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
       "display": "Toulouse area · La Garonne à l'entrée dans Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fdb6e0cf-980d-42f0-a941-4f82e52e5b69",
+    "fullUrl": "urn:uuid:be6207fb-2dca-4a2a-954f-2251ec1ef7f1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+      "reference": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
       "display": "Toulouse area · La Garonne à l'entrée dans Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:00778252-7235-451c-984f-49f4e0fc8ee1",
+    "fullUrl": "urn:uuid:a119af79-232e-42f9-9ef6-8abd27b1c420",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+      "reference": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
       "display": "Toulouse area · La Garonne à l'entrée dans Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:750d6df9-9ac4-4621-b4ff-031e0eee113e",
+    "fullUrl": "urn:uuid:a4dfb559-a055-4cb2-b277-94454af82e2f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:609b8972-1a2d-4016-ad6b-614ae1771db8",
+      "reference": "urn:uuid:9f7d49dc-dd9b-40b6-a4ae-e52a3b63783b",
       "display": "Toulouse area · La Garonne à l'entrée dans Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a5039712-55d7-4b8d-9fef-a744184f8a4a",
+    "fullUrl": "urn:uuid:a22d11f0-b7d4-4d89-89cb-a4529c90da71",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163290-2024-12-17T1439",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163290-2024-12-17T1439 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163290 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163290-2024-12-17T1439 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163290 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:1fe5cf18-daf6-4825-88aa-4c0d49407ec0"
+       "reference": "urn:uuid:010fc879-b0f7-4701-8d2a-a06e9120c955"
       },
       {
-       "reference": "urn:uuid:0dfb2bb3-d365-4096-a0b8-63940ef24542"
+       "reference": "urn:uuid:8bdfcba1-d9e4-4527-a516-76d2cfe2e212"
       },
       {
-       "reference": "urn:uuid:f0ffbd81-61ab-4796-838a-fb2c60fcf63f"
+       "reference": "urn:uuid:2d2d9eb5-c931-45b1-8761-ad7816be7835"
       },
       {
-       "reference": "urn:uuid:fdb6e0cf-980d-42f0-a941-4f82e52e5b69"
+       "reference": "urn:uuid:be6207fb-2dca-4a2a-954f-2251ec1ef7f1"
       },
       {
-       "reference": "urn:uuid:00778252-7235-451c-984f-49f4e0fc8ee1"
+       "reference": "urn:uuid:a119af79-232e-42f9-9ef6-8abd27b1c420"
       },
       {
-       "reference": "urn:uuid:750d6df9-9ac4-4621-b4ff-031e0eee113e"
+       "reference": "urn:uuid:a4dfb559-a055-4cb2-b277-94454af82e2f"
       }
      ],
      "occurredDateTime": "2024-12-17T14:39:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:e5b62fee-650f-4cbc-ba40-c3122133df9e",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:8b5ff130-a2bf-4830-ab3b-aa0162160b2e",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

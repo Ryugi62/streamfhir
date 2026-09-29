@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+    "fullUrl": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:881f6bfc-4302-4795-bfdf-2c58320b9170",
+    "fullUrl": "urn:uuid:426e7643-4e6f-4c6b-85d9-e2225107d593",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c79617a9-3916-4bd8-a359-f06bfd2aecd0",
+    "fullUrl": "urn:uuid:c25157d9-6381-4463-9c86-6ab91e4ee6c1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+      "reference": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:c107a189-b64c-4072-b1c9-b1c69c7e19a6"
+       "reference": "urn:uuid:12dbb540-3369-40b8-86e8-ebaea3a94d5b"
       },
       {
-       "reference": "urn:uuid:c8899677-b1c7-494c-8c70-751a93602d58"
+       "reference": "urn:uuid:6ab1aea5-dbd1-4fb1-a398-552af716ccdb"
       },
       {
-       "reference": "urn:uuid:ffbbf3c3-8fe7-48d7-bf70-921b4dd44daf"
+       "reference": "urn:uuid:10c976d4-0111-463c-ae34-9bf89e19bf9f"
       },
       {
-       "reference": "urn:uuid:64e117ba-4163-4e43-a70d-2669c35191ea"
+       "reference": "urn:uuid:0a6c3bc9-b870-47bc-b205-ee7e06c86ebb"
       },
       {
-       "reference": "urn:uuid:1bfe7b80-3a28-45a6-9905-782082f09d80"
+       "reference": "urn:uuid:7b545b7b-5f5a-4d51-b58a-d07d372fd21a"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c107a189-b64c-4072-b1c9-b1c69c7e19a6",
+    "fullUrl": "urn:uuid:12dbb540-3369-40b8-86e8-ebaea3a94d5b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+      "reference": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c8899677-b1c7-494c-8c70-751a93602d58",
+    "fullUrl": "urn:uuid:6ab1aea5-dbd1-4fb1-a398-552af716ccdb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+      "reference": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ffbbf3c3-8fe7-48d7-bf70-921b4dd44daf",
+    "fullUrl": "urn:uuid:10c976d4-0111-463c-ae34-9bf89e19bf9f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+      "reference": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:64e117ba-4163-4e43-a70d-2669c35191ea",
+    "fullUrl": "urn:uuid:0a6c3bc9-b870-47bc-b205-ee7e06c86ebb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+      "reference": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1bfe7b80-3a28-45a6-9905-782082f09d80",
+    "fullUrl": "urn:uuid:7b545b7b-5f5a-4d51-b58a-d07d372fd21a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
+      "reference": "urn:uuid:61636276-affc-4d2b-92ba-6d744d18c1c9",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0e374b90-cdbe-4657-98bb-55368253fe8f",
+    "fullUrl": "urn:uuid:58057d80-c056-4937-9085-05c34297cd2c",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05160000-2024-12-17T1431",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05160000-2024-12-17T1431 was imported from Hub'Eau qualite_rivieres (Sandre), station 05160000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05160000-2024-12-17T1431 was imported from Hub'Eau qualite_rivieres (Sandre), station 05160000 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:c79617a9-3916-4bd8-a359-f06bfd2aecd0"
+       "reference": "urn:uuid:c25157d9-6381-4463-9c86-6ab91e4ee6c1"
       },
       {
-       "reference": "urn:uuid:c107a189-b64c-4072-b1c9-b1c69c7e19a6"
+       "reference": "urn:uuid:12dbb540-3369-40b8-86e8-ebaea3a94d5b"
       },
       {
-       "reference": "urn:uuid:c8899677-b1c7-494c-8c70-751a93602d58"
+       "reference": "urn:uuid:6ab1aea5-dbd1-4fb1-a398-552af716ccdb"
       },
       {
-       "reference": "urn:uuid:ffbbf3c3-8fe7-48d7-bf70-921b4dd44daf"
+       "reference": "urn:uuid:10c976d4-0111-463c-ae34-9bf89e19bf9f"
       },
       {
-       "reference": "urn:uuid:64e117ba-4163-4e43-a70d-2669c35191ea"
+       "reference": "urn:uuid:0a6c3bc9-b870-47bc-b205-ee7e06c86ebb"
       },
       {
-       "reference": "urn:uuid:1bfe7b80-3a28-45a6-9905-782082f09d80"
+       "reference": "urn:uuid:7b545b7b-5f5a-4d51-b58a-d07d372fd21a"
       }
      ],
      "occurredDateTime": "2024-12-17T14:31:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:881f6bfc-4302-4795-bfdf-2c58320b9170",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:426e7643-4e6f-4c6b-85d9-e2225107d593",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

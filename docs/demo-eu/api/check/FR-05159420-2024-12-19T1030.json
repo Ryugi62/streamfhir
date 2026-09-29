@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+    "fullUrl": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f9253c01-eba9-4bdc-a756-0670ab3b47bc",
+    "fullUrl": "urn:uuid:f66e4356-8e75-4373-96e9-2c19d11fc564",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e7f80e37-f1a9-4e50-aeef-1b5c10015bce",
+    "fullUrl": "urn:uuid:211273c4-4659-4fea-96e5-f6275e46b3a6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+      "reference": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
       "display": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles"
      },
      "effectiveDateTime": "2024-12-19T10:30:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:46657eca-e46b-492c-a97e-7217e0610d20"
+       "reference": "urn:uuid:f5e44455-882b-4c37-add3-31f8edaf2201"
       },
       {
-       "reference": "urn:uuid:93ba0ba3-2359-4540-a7cb-860a2db8d2e0"
+       "reference": "urn:uuid:be4e6969-0756-4e64-950d-07d73032a9b6"
       },
       {
-       "reference": "urn:uuid:2bd066d2-16a1-4040-b928-a4b7d14aff9c"
+       "reference": "urn:uuid:cd08dd19-0526-4115-9276-e38b4664cd34"
       },
       {
-       "reference": "urn:uuid:242f02d8-5c2a-4519-87e1-e238fa7b79c8"
+       "reference": "urn:uuid:4c668d46-6982-4e2a-a5a1-c5894d07d8be"
       },
       {
-       "reference": "urn:uuid:1cf3d213-c9fa-4270-a04e-a35280e90eb6"
+       "reference": "urn:uuid:59530fdd-6e0c-4245-9ae1-c291208e0a0c"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:46657eca-e46b-492c-a97e-7217e0610d20",
+    "fullUrl": "urn:uuid:f5e44455-882b-4c37-add3-31f8edaf2201",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+      "reference": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
       "display": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles"
      },
      "effectiveDateTime": "2024-12-19T10:30:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:93ba0ba3-2359-4540-a7cb-860a2db8d2e0",
+    "fullUrl": "urn:uuid:be4e6969-0756-4e64-950d-07d73032a9b6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -335,7 +335,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+      "reference": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
       "display": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles"
      },
      "effectiveDateTime": "2024-12-19T10:30:00+01:00",
@@ -362,7 +362,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2bd066d2-16a1-4040-b928-a4b7d14aff9c",
+    "fullUrl": "urn:uuid:cd08dd19-0526-4115-9276-e38b4664cd34",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+      "reference": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
       "display": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles"
      },
      "effectiveDateTime": "2024-12-19T10:30:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:242f02d8-5c2a-4519-87e1-e238fa7b79c8",
+    "fullUrl": "urn:uuid:4c668d46-6982-4e2a-a5a1-c5894d07d8be",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+      "reference": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
       "display": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles"
      },
      "effectiveDateTime": "2024-12-19T10:30:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1cf3d213-c9fa-4270-a04e-a35280e90eb6",
+    "fullUrl": "urn:uuid:59530fdd-6e0c-4245-9ae1-c291208e0a0c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:13a0114f-c462-4cd6-98d8-9889da6381b8",
+      "reference": "urn:uuid:32d7fa66-cc04-417d-baf8-86ece5046f62",
       "display": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles"
      },
      "effectiveDateTime": "2024-12-19T10:30:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:24d2682f-268f-4a1e-af86-4dbcf792ff32",
+    "fullUrl": "urn:uuid:2ede60a9-4470-4901-b894-3a896f2e5816",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159420-2024-12-19T1030",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159420-2024-12-19T1030 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159420 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159420-2024-12-19T1030 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159420 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:e7f80e37-f1a9-4e50-aeef-1b5c10015bce"
+       "reference": "urn:uuid:211273c4-4659-4fea-96e5-f6275e46b3a6"
       },
       {
-       "reference": "urn:uuid:46657eca-e46b-492c-a97e-7217e0610d20"
+       "reference": "urn:uuid:f5e44455-882b-4c37-add3-31f8edaf2201"
       },
       {
-       "reference": "urn:uuid:93ba0ba3-2359-4540-a7cb-860a2db8d2e0"
+       "reference": "urn:uuid:be4e6969-0756-4e64-950d-07d73032a9b6"
       },
       {
-       "reference": "urn:uuid:2bd066d2-16a1-4040-b928-a4b7d14aff9c"
+       "reference": "urn:uuid:cd08dd19-0526-4115-9276-e38b4664cd34"
       },
       {
-       "reference": "urn:uuid:242f02d8-5c2a-4519-87e1-e238fa7b79c8"
+       "reference": "urn:uuid:4c668d46-6982-4e2a-a5a1-c5894d07d8be"
       },
       {
-       "reference": "urn:uuid:1cf3d213-c9fa-4270-a04e-a35280e90eb6"
+       "reference": "urn:uuid:59530fdd-6e0c-4245-9ae1-c291208e0a0c"
       }
      ],
      "occurredDateTime": "2024-12-19T10:30:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:f9253c01-eba9-4bdc-a756-0670ab3b47bc",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:f66e4356-8e75-4373-96e9-2c19d11fc564",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

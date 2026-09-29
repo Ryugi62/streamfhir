@@ -35,6 +35,12 @@ def make_server(service, host: str = "127.0.0.1", port: int = 8000) -> Threading
                                                     service.records.dataset() if hasattr(service.records, "dataset") else None))
             if path == "/api/records":
                 return self._send(200, {"records": service.records.all()})
+            if path == "/api/interop":
+                cap = os.path.join(os.path.dirname(getattr(service.records, "path", "")), "interop-query.json")
+                if not os.path.isfile(cap):
+                    return self._send(404, {"error": "no captured interop query for this dataset"})
+                with open(cap, encoding="utf-8") as fh:
+                    return self._send(200, {k: v for k, v in json.load(fh).items() if not k.startswith("raw_")})
             name = "index.html" if path in ("/", "/index.html") else path.lstrip("/")
             full = os.path.normpath(os.path.join(STATIC, name))
             if not full.startswith(STATIC) or not os.path.isfile(full):

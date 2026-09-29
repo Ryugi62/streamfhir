@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+    "fullUrl": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7a0f4042-d8c2-4bc4-b6c9-b88d52676eaa",
+    "fullUrl": "urn:uuid:c8004af0-9dde-4ae6-b227-b59ea9b18184",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c32bb9da-99d1-4276-9a72-2c450602d77f",
+    "fullUrl": "urn:uuid:8ef0d52b-7e0e-49ea-8b2f-1ec61fdb325d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+      "reference": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
       "display": "Toulouse area · La Garonne en aval de Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:01:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:c53346c5-c173-4e56-9563-aa24702f8e73"
+       "reference": "urn:uuid:74f052b7-8b05-4bcb-90b4-e47f739ee980"
       },
       {
-       "reference": "urn:uuid:08facf8e-1c82-4ba1-a514-aced5defe9ed"
+       "reference": "urn:uuid:86877697-9a4b-452f-b6ec-7a3c7a4fb0da"
       },
       {
-       "reference": "urn:uuid:5e3bfd2f-fda0-493d-b273-02ea0e160102"
+       "reference": "urn:uuid:6b1343bc-6218-4998-96a8-d98c463829ff"
       },
       {
-       "reference": "urn:uuid:fa537c8f-3125-4a0a-a624-1e63745c5e3d"
+       "reference": "urn:uuid:aa23a599-db0f-42c2-a969-e766c66d43f6"
       },
       {
-       "reference": "urn:uuid:66ee47b0-6b61-4809-bc99-ba552d381858"
+       "reference": "urn:uuid:206d5952-4ba5-4c8a-b70a-2f3cd9194556"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c53346c5-c173-4e56-9563-aa24702f8e73",
+    "fullUrl": "urn:uuid:74f052b7-8b05-4bcb-90b4-e47f739ee980",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+      "reference": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
       "display": "Toulouse area · La Garonne en aval de Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:01:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:08facf8e-1c82-4ba1-a514-aced5defe9ed",
+    "fullUrl": "urn:uuid:86877697-9a4b-452f-b6ec-7a3c7a4fb0da",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+      "reference": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
       "display": "Toulouse area · La Garonne en aval de Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:01:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5e3bfd2f-fda0-493d-b273-02ea0e160102",
+    "fullUrl": "urn:uuid:6b1343bc-6218-4998-96a8-d98c463829ff",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+      "reference": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
       "display": "Toulouse area · La Garonne en aval de Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:01:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fa537c8f-3125-4a0a-a624-1e63745c5e3d",
+    "fullUrl": "urn:uuid:aa23a599-db0f-42c2-a969-e766c66d43f6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+      "reference": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
       "display": "Toulouse area · La Garonne en aval de Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:01:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:66ee47b0-6b61-4809-bc99-ba552d381858",
+    "fullUrl": "urn:uuid:206d5952-4ba5-4c8a-b70a-2f3cd9194556",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:58a997b8-e6fb-499f-9add-e1d2952a67f1",
+      "reference": "urn:uuid:0639d614-d889-4cbc-b964-6df0f91c4f49",
       "display": "Toulouse area · La Garonne en aval de Toulouse"
      },
      "effectiveDateTime": "2024-12-17T14:01:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7af6387d-d281-4314-af8b-edcdfd6c1084",
+    "fullUrl": "urn:uuid:fc4e4cf1-d333-40d7-9188-1439c3329fcb",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05161000-2024-12-17T1401",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05161000-2024-12-17T1401 was imported from Hub'Eau qualite_rivieres (Sandre), station 05161000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05161000-2024-12-17T1401 was imported from Hub'Eau qualite_rivieres (Sandre), station 05161000 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:c32bb9da-99d1-4276-9a72-2c450602d77f"
+       "reference": "urn:uuid:8ef0d52b-7e0e-49ea-8b2f-1ec61fdb325d"
       },
       {
-       "reference": "urn:uuid:c53346c5-c173-4e56-9563-aa24702f8e73"
+       "reference": "urn:uuid:74f052b7-8b05-4bcb-90b4-e47f739ee980"
       },
       {
-       "reference": "urn:uuid:08facf8e-1c82-4ba1-a514-aced5defe9ed"
+       "reference": "urn:uuid:86877697-9a4b-452f-b6ec-7a3c7a4fb0da"
       },
       {
-       "reference": "urn:uuid:5e3bfd2f-fda0-493d-b273-02ea0e160102"
+       "reference": "urn:uuid:6b1343bc-6218-4998-96a8-d98c463829ff"
       },
       {
-       "reference": "urn:uuid:fa537c8f-3125-4a0a-a624-1e63745c5e3d"
+       "reference": "urn:uuid:aa23a599-db0f-42c2-a969-e766c66d43f6"
       },
       {
-       "reference": "urn:uuid:66ee47b0-6b61-4809-bc99-ba552d381858"
+       "reference": "urn:uuid:206d5952-4ba5-4c8a-b70a-2f3cd9194556"
       }
      ],
      "occurredDateTime": "2024-12-17T14:01:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:7a0f4042-d8c2-4bc4-b6c9-b88d52676eaa",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:c8004af0-9dde-4ae6-b227-b59ea9b18184",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+    "fullUrl": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:758e8d0a-eae4-4d4b-8dd9-91d414275441",
+    "fullUrl": "urn:uuid:67d980f2-4139-4a5b-9d4c-7b0c49b56b6b",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4962493c-9b58-421c-b295-d3e0d504a419",
+    "fullUrl": "urn:uuid:bacf0b16-f209-4def-92da-be50c0e110a7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+      "reference": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
       "display": "Toulouse area · L'Hers Mort à l'aval de Castanet"
      },
      "effectiveDateTime": "2024-12-18T14:26:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:2d6a4876-5865-4a12-aa5b-b95ea764dc76"
+       "reference": "urn:uuid:db0bb1ba-be66-4f08-bdd9-e3e3da8e6e72"
       },
       {
-       "reference": "urn:uuid:ac727c87-2f9b-4f0d-bbe5-59f899cf2122"
+       "reference": "urn:uuid:da818ca0-f96d-4151-97fd-506c4cdf52e6"
       },
       {
-       "reference": "urn:uuid:646fcdd4-7250-44e5-b9e9-6c8375ff3223"
+       "reference": "urn:uuid:235d9489-03e0-4462-ac39-663f29c28b1c"
       },
       {
-       "reference": "urn:uuid:399eefb0-06e3-4eb1-929d-2dcd1b80915d"
+       "reference": "urn:uuid:798ae59b-bc36-42c6-8992-d34ddd61f1a1"
       },
       {
-       "reference": "urn:uuid:fbfa461a-0c27-40b8-9247-3038fa21eeb2"
+       "reference": "urn:uuid:769c8966-6c82-4b06-90fd-05dc04e9af3a"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2d6a4876-5865-4a12-aa5b-b95ea764dc76",
+    "fullUrl": "urn:uuid:db0bb1ba-be66-4f08-bdd9-e3e3da8e6e72",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+      "reference": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
       "display": "Toulouse area · L'Hers Mort à l'aval de Castanet"
      },
      "effectiveDateTime": "2024-12-18T14:26:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ac727c87-2f9b-4f0d-bbe5-59f899cf2122",
+    "fullUrl": "urn:uuid:da818ca0-f96d-4151-97fd-506c4cdf52e6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+      "reference": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
       "display": "Toulouse area · L'Hers Mort à l'aval de Castanet"
      },
      "effectiveDateTime": "2024-12-18T14:26:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:646fcdd4-7250-44e5-b9e9-6c8375ff3223",
+    "fullUrl": "urn:uuid:235d9489-03e0-4462-ac39-663f29c28b1c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+      "reference": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
       "display": "Toulouse area · L'Hers Mort à l'aval de Castanet"
      },
      "effectiveDateTime": "2024-12-18T14:26:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:399eefb0-06e3-4eb1-929d-2dcd1b80915d",
+    "fullUrl": "urn:uuid:798ae59b-bc36-42c6-8992-d34ddd61f1a1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+      "reference": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
       "display": "Toulouse area · L'Hers Mort à l'aval de Castanet"
      },
      "effectiveDateTime": "2024-12-18T14:26:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fbfa461a-0c27-40b8-9247-3038fa21eeb2",
+    "fullUrl": "urn:uuid:769c8966-6c82-4b06-90fd-05dc04e9af3a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:46a61ff1-c444-42da-b724-717ef1cc746a",
+      "reference": "urn:uuid:e0241a74-d1ec-45f6-9e32-a0e5f8516739",
       "display": "Toulouse area · L'Hers Mort à l'aval de Castanet"
      },
      "effectiveDateTime": "2024-12-18T14:26:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f394685f-0733-483a-8ba8-f70ddec589e1",
+    "fullUrl": "urn:uuid:74f5ff5c-2e50-4d5b-95ff-4a42ba88a70f",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05157360-2024-12-18T1426",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05157360-2024-12-18T1426 was imported from Hub'Eau qualite_rivieres (Sandre), station 05157360 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05157360-2024-12-18T1426 was imported from Hub'Eau qualite_rivieres (Sandre), station 05157360 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:4962493c-9b58-421c-b295-d3e0d504a419"
+       "reference": "urn:uuid:bacf0b16-f209-4def-92da-be50c0e110a7"
       },
       {
-       "reference": "urn:uuid:2d6a4876-5865-4a12-aa5b-b95ea764dc76"
+       "reference": "urn:uuid:db0bb1ba-be66-4f08-bdd9-e3e3da8e6e72"
       },
       {
-       "reference": "urn:uuid:ac727c87-2f9b-4f0d-bbe5-59f899cf2122"
+       "reference": "urn:uuid:da818ca0-f96d-4151-97fd-506c4cdf52e6"
       },
       {
-       "reference": "urn:uuid:646fcdd4-7250-44e5-b9e9-6c8375ff3223"
+       "reference": "urn:uuid:235d9489-03e0-4462-ac39-663f29c28b1c"
       },
       {
-       "reference": "urn:uuid:399eefb0-06e3-4eb1-929d-2dcd1b80915d"
+       "reference": "urn:uuid:798ae59b-bc36-42c6-8992-d34ddd61f1a1"
       },
       {
-       "reference": "urn:uuid:fbfa461a-0c27-40b8-9247-3038fa21eeb2"
+       "reference": "urn:uuid:769c8966-6c82-4b06-90fd-05dc04e9af3a"
       }
      ],
      "occurredDateTime": "2024-12-18T14:26:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:758e8d0a-eae4-4d4b-8dd9-91d414275441",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:67d980f2-4139-4a5b-9d4c-7b0c49b56b6b",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:c79cf343-e0c7-4560-9c37-64a22b999754",
+    "fullUrl": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:71cc5c19-66cc-4f79-9aff-6b241aafa181",
+    "fullUrl": "urn:uuid:6bfe209f-1f57-4c50-af7d-72c070f89e90",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f258b1af-8a05-4e3a-965d-4bde92fbeff1",
+    "fullUrl": "urn:uuid:043440c5-eb4c-4767-b0d5-9f7b2cd2e20b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:c79cf343-e0c7-4560-9c37-64a22b999754",
+      "reference": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-05-13T13:54:00+02:00",
@@ -159,16 +159,16 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101735"
        },
-       "display": "Producer 03101735",
+       "display": "a Hub'Eau data producer (code 03101735)",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:9bcaa7ba-da8b-42bc-b2fd-9bc7bf183385"
+       "reference": "urn:uuid:0d84085b-d2fe-4d7f-81ce-5d995c459e83"
       },
       {
-       "reference": "urn:uuid:4dd86223-3f91-4229-a708-4c4ce0b89c6f"
+       "reference": "urn:uuid:9528cde5-831a-4145-8371-ec723e0a754e"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9bcaa7ba-da8b-42bc-b2fd-9bc7bf183385",
+    "fullUrl": "urn:uuid:0d84085b-d2fe-4d7f-81ce-5d995c459e83",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -241,7 +241,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:c79cf343-e0c7-4560-9c37-64a22b999754",
+      "reference": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-05-13T13:54:00+02:00",
@@ -251,7 +251,7 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101735"
        },
-       "display": "Producer 03101735",
+       "display": "a Hub'Eau data producer (code 03101735)",
        "type": "Organization"
       }
      ],
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4dd86223-3f91-4229-a708-4c4ce0b89c6f",
+    "fullUrl": "urn:uuid:9528cde5-831a-4145-8371-ec723e0a754e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -316,7 +316,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:c79cf343-e0c7-4560-9c37-64a22b999754",
+      "reference": "urn:uuid:147a529c-17a4-41cc-a836-6956dfe49a2d",
       "display": "Toulouse area · PECH DAVID"
      },
      "effectiveDateTime": "2025-05-13T13:54:00+02:00",
@@ -326,7 +326,7 @@
         "system": "https://id.eaufrance.fr/int",
         "value": "03101735"
        },
-       "display": "Producer 03101735",
+       "display": "a Hub'Eau data producer (code 03101735)",
        "type": "Organization"
       }
      ],
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0db88726-8f4d-4f9c-aadb-c9fb7d8eff81",
+    "fullUrl": "urn:uuid:03c5527b-0f30-4e91-8bd2-909e3ecadaeb",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000002-2025-05-13T1354",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000002-2025-05-13T1354 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000002 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000002-2025-05-13T1354 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000002 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:f258b1af-8a05-4e3a-965d-4bde92fbeff1"
+       "reference": "urn:uuid:043440c5-eb4c-4767-b0d5-9f7b2cd2e20b"
       },
       {
-       "reference": "urn:uuid:9bcaa7ba-da8b-42bc-b2fd-9bc7bf183385"
+       "reference": "urn:uuid:0d84085b-d2fe-4d7f-81ce-5d995c459e83"
       },
       {
-       "reference": "urn:uuid:4dd86223-3f91-4229-a708-4c4ce0b89c6f"
+       "reference": "urn:uuid:9528cde5-831a-4145-8371-ec723e0a754e"
       }
      ],
      "occurredDateTime": "2025-05-13T13:54:00+02:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -402,7 +402,7 @@
          "system": "https://id.eaufrance.fr/int",
          "value": "03101735"
         },
-        "display": "Producer 03101735",
+        "display": "a Hub'Eau data producer (code 03101735)",
         "type": "Organization"
        }
       },
@@ -417,8 +417,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:71cc5c19-66cc-4f79-9aff-6b241aafa181",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:6bfe209f-1f57-4c50-af7d-72c070f89e90",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

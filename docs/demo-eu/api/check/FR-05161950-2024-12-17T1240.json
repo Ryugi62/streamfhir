@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+    "fullUrl": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ae1d43ea-15a0-4196-936e-46c0347a5362",
+    "fullUrl": "urn:uuid:d0276013-4e2a-4295-8d6e-46f29cdbd0e7",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5ed34b5b-646f-4a07-9698-38c107de1a6e",
+    "fullUrl": "urn:uuid:278e0e8b-7804-421e-85e2-26df14481516",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+      "reference": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
       "display": "Toulouse area · Le Touch à St-Michel du Touch"
      },
      "effectiveDateTime": "2024-12-17T12:40:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:80f473f1-7426-438a-8c24-52174e61b695"
+       "reference": "urn:uuid:a1d58ffe-72db-4601-8f4b-e4f9199bce27"
       },
       {
-       "reference": "urn:uuid:61b0f39b-30bb-4b67-9900-3642ce9959e6"
+       "reference": "urn:uuid:acb1137c-bd30-4cdf-a906-45639190eef9"
       },
       {
-       "reference": "urn:uuid:5dde9895-8441-4f25-a27c-4b0ef938424c"
+       "reference": "urn:uuid:8e1aee80-28ac-4405-94ce-95801ae3fd42"
       },
       {
-       "reference": "urn:uuid:19488123-a5a9-456b-88e6-76ab54e7b293"
+       "reference": "urn:uuid:1cc4f21a-6fef-4c94-b4d5-194f880f5b1d"
       },
       {
-       "reference": "urn:uuid:dfc3f397-668a-4c3b-ac26-bd8960acb45d"
+       "reference": "urn:uuid:990ff696-4494-40af-8833-601aa1ae1367"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:80f473f1-7426-438a-8c24-52174e61b695",
+    "fullUrl": "urn:uuid:a1d58ffe-72db-4601-8f4b-e4f9199bce27",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+      "reference": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
       "display": "Toulouse area · Le Touch à St-Michel du Touch"
      },
      "effectiveDateTime": "2024-12-17T12:40:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:61b0f39b-30bb-4b67-9900-3642ce9959e6",
+    "fullUrl": "urn:uuid:acb1137c-bd30-4cdf-a906-45639190eef9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+      "reference": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
       "display": "Toulouse area · Le Touch à St-Michel du Touch"
      },
      "effectiveDateTime": "2024-12-17T12:40:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5dde9895-8441-4f25-a27c-4b0ef938424c",
+    "fullUrl": "urn:uuid:8e1aee80-28ac-4405-94ce-95801ae3fd42",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -405,7 +405,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+      "reference": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
       "display": "Toulouse area · Le Touch à St-Michel du Touch"
      },
      "effectiveDateTime": "2024-12-17T12:40:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:19488123-a5a9-456b-88e6-76ab54e7b293",
+    "fullUrl": "urn:uuid:1cc4f21a-6fef-4c94-b4d5-194f880f5b1d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+      "reference": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
       "display": "Toulouse area · Le Touch à St-Michel du Touch"
      },
      "effectiveDateTime": "2024-12-17T12:40:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:dfc3f397-668a-4c3b-ac26-bd8960acb45d",
+    "fullUrl": "urn:uuid:990ff696-4494-40af-8833-601aa1ae1367",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:424f6605-06b5-45cb-aa46-c7160c192b6b",
+      "reference": "urn:uuid:b8775612-49dd-4448-a9d3-f171639e16a6",
       "display": "Toulouse area · Le Touch à St-Michel du Touch"
      },
      "effectiveDateTime": "2024-12-17T12:40:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:085cc631-06e2-4591-b752-b173928c4de7",
+    "fullUrl": "urn:uuid:afd2b89e-42a3-4c63-b30e-c1135e2fb284",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05161950-2024-12-17T1240",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05161950-2024-12-17T1240 was imported from Hub'Eau qualite_rivieres (Sandre), station 05161950 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05161950-2024-12-17T1240 was imported from Hub'Eau qualite_rivieres (Sandre), station 05161950 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:5ed34b5b-646f-4a07-9698-38c107de1a6e"
+       "reference": "urn:uuid:278e0e8b-7804-421e-85e2-26df14481516"
       },
       {
-       "reference": "urn:uuid:80f473f1-7426-438a-8c24-52174e61b695"
+       "reference": "urn:uuid:a1d58ffe-72db-4601-8f4b-e4f9199bce27"
       },
       {
-       "reference": "urn:uuid:61b0f39b-30bb-4b67-9900-3642ce9959e6"
+       "reference": "urn:uuid:acb1137c-bd30-4cdf-a906-45639190eef9"
       },
       {
-       "reference": "urn:uuid:5dde9895-8441-4f25-a27c-4b0ef938424c"
+       "reference": "urn:uuid:8e1aee80-28ac-4405-94ce-95801ae3fd42"
       },
       {
-       "reference": "urn:uuid:19488123-a5a9-456b-88e6-76ab54e7b293"
+       "reference": "urn:uuid:1cc4f21a-6fef-4c94-b4d5-194f880f5b1d"
       },
       {
-       "reference": "urn:uuid:dfc3f397-668a-4c3b-ac26-bd8960acb45d"
+       "reference": "urn:uuid:990ff696-4494-40af-8833-601aa1ae1367"
       }
      ],
      "occurredDateTime": "2024-12-17T12:40:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ae1d43ea-15a0-4196-936e-46c0347a5362",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:d0276013-4e2a-4295-8d6e-46f29cdbd0e7",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

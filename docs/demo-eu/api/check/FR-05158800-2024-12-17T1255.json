@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+    "fullUrl": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:db2eab31-e859-4338-a411-e8c8d6b370e0",
+    "fullUrl": "urn:uuid:9035d3ff-d9e1-4435-b64e-56d1800d1093",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2f0df961-63ec-4a5a-bff9-bb82216bc8e4",
+    "fullUrl": "urn:uuid:8d5cda1d-dfec-4d7e-b165-40631e2fde3f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "reference": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:6483e1d3-ad63-4f3a-9e84-a9102d902b2e"
+       "reference": "urn:uuid:287866ba-d00b-4ad8-8ebc-c452d33e7d44"
       },
       {
-       "reference": "urn:uuid:a32a77ad-65ee-470d-914d-ecf7b6faa559"
+       "reference": "urn:uuid:5294a0cd-f93f-4323-84a8-1057cee6a092"
       },
       {
-       "reference": "urn:uuid:7cd83bfc-d438-42d9-b79a-878874d68b21"
+       "reference": "urn:uuid:7f40bf9b-6cc6-4443-b862-4d47d80adb81"
       },
       {
-       "reference": "urn:uuid:d377c336-b3a3-422b-98ed-4600871be563"
+       "reference": "urn:uuid:05cb9b9c-0bb8-4d79-91f2-8aa394a2988f"
       },
       {
-       "reference": "urn:uuid:696ee967-ea92-4ee6-aeed-6fa923cd3f66"
+       "reference": "urn:uuid:e564bd9b-c3f2-431e-95e0-c7f0edb9e290"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6483e1d3-ad63-4f3a-9e84-a9102d902b2e",
+    "fullUrl": "urn:uuid:287866ba-d00b-4ad8-8ebc-c452d33e7d44",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "reference": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a32a77ad-65ee-470d-914d-ecf7b6faa559",
+    "fullUrl": "urn:uuid:5294a0cd-f93f-4323-84a8-1057cee6a092",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "reference": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7cd83bfc-d438-42d9-b79a-878874d68b21",
+    "fullUrl": "urn:uuid:7f40bf9b-6cc6-4443-b862-4d47d80adb81",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -414,7 +414,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "reference": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d377c336-b3a3-422b-98ed-4600871be563",
+    "fullUrl": "urn:uuid:05cb9b9c-0bb8-4d79-91f2-8aa394a2988f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "reference": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:696ee967-ea92-4ee6-aeed-6fa923cd3f66",
+    "fullUrl": "urn:uuid:e564bd9b-c3f2-431e-95e0-c7f0edb9e290",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "reference": "urn:uuid:18c981cc-3d45-4370-a208-b4582dd02341",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
@@ -612,7 +612,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:af9d2046-3a72-40ea-a521-be83edebf8ab",
+    "fullUrl": "urn:uuid:8133b53f-cd75-4cb0-a24e-1c63bfdb88f0",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05158800-2024-12-17T1255",
@@ -627,30 +627,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05158800-2024-12-17T1255 was imported from Hub'Eau qualite_rivieres (Sandre), station 05158800 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05158800-2024-12-17T1255 was imported from Hub'Eau qualite_rivieres (Sandre), station 05158800 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:2f0df961-63ec-4a5a-bff9-bb82216bc8e4"
+       "reference": "urn:uuid:8d5cda1d-dfec-4d7e-b165-40631e2fde3f"
       },
       {
-       "reference": "urn:uuid:6483e1d3-ad63-4f3a-9e84-a9102d902b2e"
+       "reference": "urn:uuid:287866ba-d00b-4ad8-8ebc-c452d33e7d44"
       },
       {
-       "reference": "urn:uuid:a32a77ad-65ee-470d-914d-ecf7b6faa559"
+       "reference": "urn:uuid:5294a0cd-f93f-4323-84a8-1057cee6a092"
       },
       {
-       "reference": "urn:uuid:7cd83bfc-d438-42d9-b79a-878874d68b21"
+       "reference": "urn:uuid:7f40bf9b-6cc6-4443-b862-4d47d80adb81"
       },
       {
-       "reference": "urn:uuid:d377c336-b3a3-422b-98ed-4600871be563"
+       "reference": "urn:uuid:05cb9b9c-0bb8-4d79-91f2-8aa394a2988f"
       },
       {
-       "reference": "urn:uuid:696ee967-ea92-4ee6-aeed-6fa923cd3f66"
+       "reference": "urn:uuid:e564bd9b-c3f2-431e-95e0-c7f0edb9e290"
       }
      ],
      "occurredDateTime": "2024-12-17T12:55:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -691,8 +691,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:db2eab31-e859-4338-a411-e8c8d6b370e0",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:9035d3ff-d9e1-4435-b64e-56d1800d1093",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

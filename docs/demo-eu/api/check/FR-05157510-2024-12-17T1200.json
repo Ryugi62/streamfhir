@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+    "fullUrl": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fcc2e309-b119-4b53-9217-91c1aba29218",
+    "fullUrl": "urn:uuid:708e28bf-38ea-49aa-b413-561e03a3bf15",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1fd4a288-e3e1-47c8-9a9e-66247f515ffb",
+    "fullUrl": "urn:uuid:268a3292-6ea8-408a-abad-4cd3c88e9fd1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+      "reference": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
       "display": "Toulouse area · Le Tissier à Montlaur"
      },
      "effectiveDateTime": "2024-12-17T12:00:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:68ebdd2b-6b2a-43ef-8cf0-1e2f5c836773"
+       "reference": "urn:uuid:0f138f0a-876e-4c92-9f86-c450177ca938"
       },
       {
-       "reference": "urn:uuid:8698c850-f0f9-461c-8f3f-c13a892eda9d"
+       "reference": "urn:uuid:d639e970-98b1-45c2-8feb-ea9b7899202b"
       },
       {
-       "reference": "urn:uuid:089772b2-adbf-4297-b883-3ddb2dc84167"
+       "reference": "urn:uuid:d8aacca3-d9f8-4499-9eec-777c979fe740"
       },
       {
-       "reference": "urn:uuid:5ec7426a-3eb5-4a37-b993-f650fd8f9495"
+       "reference": "urn:uuid:6b4f05b8-e970-4065-903f-908e4ce11c30"
       },
       {
-       "reference": "urn:uuid:54e62cf7-fbeb-45bf-9788-be3764ad2842"
+       "reference": "urn:uuid:007adaaf-905b-4299-b220-ea8d79f33cc3"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:68ebdd2b-6b2a-43ef-8cf0-1e2f5c836773",
+    "fullUrl": "urn:uuid:0f138f0a-876e-4c92-9f86-c450177ca938",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+      "reference": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
       "display": "Toulouse area · Le Tissier à Montlaur"
      },
      "effectiveDateTime": "2024-12-17T12:00:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8698c850-f0f9-461c-8f3f-c13a892eda9d",
+    "fullUrl": "urn:uuid:d639e970-98b1-45c2-8feb-ea9b7899202b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+      "reference": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
       "display": "Toulouse area · Le Tissier à Montlaur"
      },
      "effectiveDateTime": "2024-12-17T12:00:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:089772b2-adbf-4297-b883-3ddb2dc84167",
+    "fullUrl": "urn:uuid:d8aacca3-d9f8-4499-9eec-777c979fe740",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+      "reference": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
       "display": "Toulouse area · Le Tissier à Montlaur"
      },
      "effectiveDateTime": "2024-12-17T12:00:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5ec7426a-3eb5-4a37-b993-f650fd8f9495",
+    "fullUrl": "urn:uuid:6b4f05b8-e970-4065-903f-908e4ce11c30",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+      "reference": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
       "display": "Toulouse area · Le Tissier à Montlaur"
      },
      "effectiveDateTime": "2024-12-17T12:00:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:54e62cf7-fbeb-45bf-9788-be3764ad2842",
+    "fullUrl": "urn:uuid:007adaaf-905b-4299-b220-ea8d79f33cc3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:564f63c2-94f7-41fa-b931-a17abde805f3",
+      "reference": "urn:uuid:43ec2a2f-83e3-465e-9e9e-02e1ef709c2c",
       "display": "Toulouse area · Le Tissier à Montlaur"
      },
      "effectiveDateTime": "2024-12-17T12:00:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:71d19094-5a44-45bf-9f30-40a19c0e3298",
+    "fullUrl": "urn:uuid:2ac2c528-b299-4fee-826e-a7a85f9f94a4",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05157510-2024-12-17T1200",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05157510-2024-12-17T1200 was imported from Hub'Eau qualite_rivieres (Sandre), station 05157510 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05157510-2024-12-17T1200 was imported from Hub'Eau qualite_rivieres (Sandre), station 05157510 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:1fd4a288-e3e1-47c8-9a9e-66247f515ffb"
+       "reference": "urn:uuid:268a3292-6ea8-408a-abad-4cd3c88e9fd1"
       },
       {
-       "reference": "urn:uuid:68ebdd2b-6b2a-43ef-8cf0-1e2f5c836773"
+       "reference": "urn:uuid:0f138f0a-876e-4c92-9f86-c450177ca938"
       },
       {
-       "reference": "urn:uuid:8698c850-f0f9-461c-8f3f-c13a892eda9d"
+       "reference": "urn:uuid:d639e970-98b1-45c2-8feb-ea9b7899202b"
       },
       {
-       "reference": "urn:uuid:089772b2-adbf-4297-b883-3ddb2dc84167"
+       "reference": "urn:uuid:d8aacca3-d9f8-4499-9eec-777c979fe740"
       },
       {
-       "reference": "urn:uuid:5ec7426a-3eb5-4a37-b993-f650fd8f9495"
+       "reference": "urn:uuid:6b4f05b8-e970-4065-903f-908e4ce11c30"
       },
       {
-       "reference": "urn:uuid:54e62cf7-fbeb-45bf-9788-be3764ad2842"
+       "reference": "urn:uuid:007adaaf-905b-4299-b220-ea8d79f33cc3"
       }
      ],
      "occurredDateTime": "2024-12-17T12:00:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:fcc2e309-b119-4b53-9217-91c1aba29218",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:708e28bf-38ea-49aa-b413-561e03a3bf15",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

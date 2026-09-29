@@ -4,6 +4,7 @@ import json
 import os
 import sys
 import time
+from datetime import datetime, timezone
 
 from ..adapters.fhir_mapper import (SID_SITE, capability_statement, conformance_bundle, conformance_resources,
                                     subscription_example)
@@ -35,6 +36,10 @@ def build_static(svc, out):
     with open(os.path.join(out, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(html)
     dataset = svc.records.dataset() if hasattr(svc.records, "dataset") else None
+    captured = os.path.join(os.path.dirname(svc.records.path), "interop-query.json") if hasattr(svc.records, "path") else ""
+    if captured and os.path.exists(captured):
+        with open(captured, encoding="utf-8") as fh:
+            _dump(os.path.join(out, "api", "interop.json"), {k: v for k, v in json.load(fh).items() if not k.startswith("raw_")})
     _dump(os.path.join(out, "api", "sites.json"), overview_json(svc.site_overview(), svc.clock.now(), dataset))
     _dump(os.path.join(out, "api", "records.json"), {"records": svc.records.all()})
     for r in svc.records.all():
@@ -53,21 +58,48 @@ def build_static(svc, out):
     return len(svc.records.all())
 
 
+SYNTHETIC_NOTE = ("SYNTHETIC citizen check created for an interoperability demo at a real station; "
+                  "not a real volunteer report.")
+
+
 def interop_bundles(svc, site_id: str):
-    """One real agency sampling and one clearly synthetic citizen check at the same real station (for `interop-demo`)."""
+    """For `interop-demo`: the latest real agency sampling at a real station, two clearly SYNTHETIC citizen checks
+    at the same station (two observers, scum + dogs in the water, photos kept for review) and the Flag they raise."""
+    from datetime import timedelta
     from ..adapters.fhir_mapper import FhirMapper
+    from ..domain.risk import evaluate_site
+    from ..domain.validation import parse_time, validate_record
     recs = sorted([r for r in svc.records.all() if r["site_id"] == site_id and "nitrate" in r["values"]],
                   key=lambda r: r["observed_at"])
-    agency = svc.check_record(recs[-1]).bundle
-    site = svc.sites.all()[site_id]
-    citizen = {"record_id": "SYN-CITIZEN-%s" % site_id, "synthetic": True, "site_id": site_id,
-               "observed_at": recs[-1]["observed_at"], "observer": "obs-demo", "lat": site.lat, "lon": site.lon,
-               "gps_accuracy_m": 8, "photos": [],
-               "values": {"nitrate": 50, "nitrate-basis": "as-NO3", "water-colour": "clear", "surface": "none",
-                          "odour": "none", "people-contact": False, "animal-contact": False}}
-    from ..domain.validation import validate_record
-    rep = validate_record(citizen, svc.sites.all(), svc.clock.now())
-    return agency, FhirMapper(test_data=True, pseudonymous=True).assessment_bundle(rep, site)
+    agency_raw = recs[-1]
+    sites = svc.sites.all()
+    site = sites[site_id]
+    t0 = parse_time(agency_raw["observed_at"])
+    citizens = []
+    for n, (who, hours) in enumerate((("obs-demo-a", 3), ("obs-demo-b", 27)), 1):
+        citizens.append({"record_id": "SYN-CITIZEN-%s-%d" % (site_id, n), "synthetic": True, "site_id": site_id,
+                         "observed_at": (t0 + timedelta(hours=hours)).isoformat(), "observer": who,
+                         "lat": site.lat, "lon": site.lon, "gps_accuracy_m": 8,
+                         "photos": ["https://example.org/demo-photos/synthetic-%s-%d.jpg" % (site_id.lower(), n)],
+                         "values": {"nitrate": 50, "nitrate-basis": "as-NO3", "water-colour": "green",
+                                    "surface": "algal-scum", "odour": "none", "people-contact": False,
+                                    "animal-contact": True}})
+    now = svc.clock.now()
+    agency_rep = validate_record(agency_raw, sites, now)
+    cit_reps = [validate_record(c, sites, now) for c in citizens]
+    test_mapper = FhirMapper(test_data=True, pseudonymous=True)
+    cit_bundles = [test_mapper.assessment_bundle(r, site) for r in cit_reps]
+    for b in cit_bundles:
+        for e in b["entry"]:
+            if e["resource"]["resourceType"] in ("Observation", "Media"):
+                e["resource"]["note"] = [{"text": SYNTHETIC_NOTE}] + e["resource"].get("note", [])
+    risk = evaluate_site(site_id, [agency_rep] + cit_reps, as_of=max(r.assessment.observed_at for r in cit_reps))
+    flag = test_mapper.risk_bundle(risk, site)
+    if flag:
+        for e in flag["entry"]:
+            if e["resource"]["resourceType"] == "Flag":
+                e["resource"]["code"]["text"] = "SYNTHETIC DEMO - " + e["resource"]["code"]["text"]
+    return svc.check_record(agency_raw).bundle, cit_bundles, flag
 
 
 def main(argv=None):
@@ -251,19 +283,42 @@ def main(argv=None):
         print(json.dumps({c: dict(coverage(v["rows"]), surface_sites=len(v["surface_sites"])) for c, v in data["cities"].items()}, indent=1))
     elif cmd == "interop-demo":
         import urllib.parse
-        agency, citizen = interop_bundles(svc, args.site)
-        out = {"agency": svc.share(agency, live=args.live), "citizen": svc.share(citizen, live=args.live)}
+        agency, citizens, flag = interop_bundles(svc, args.site)
+        out = {"agency": svc.share(agency, live=args.live), "citizens": [svc.share(c, live=args.live) for c in citizens],
+               "flag": svc.share(flag, live=args.live) if flag else None}
         if args.live:
+            base = svc.server.base_url
             loc = [l for l in out["agency"]["locations"] if l.startswith("Location/")][0].split("/_history")[0]
-            q = "%s/Observation?code=%s&subject=%s" % (svc.server.base_url, urllib.parse.quote(
+
+            def get(url):
+                status, raw = svc.server.transport("GET", url, None, {"Accept": "application/fhir+json"})
+                return json.loads(raw.decode("utf-8"))
+            q = "%s/Observation?code=%s&subject=%s" % (base, urllib.parse.quote(
                 "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty|CAS_14797-55-8", safe=":/"), loc)
-            status, raw = svc.server.transport("GET", q, None, {"Accept": "application/fhir+json"})
-            found = json.loads(raw.decode("utf-8"))
-            out["query"] = q
-            out["found"] = [{"id": e["resource"]["id"], "category": e["resource"]["category"][0]["coding"][0]["code"],
-                             "value": e["resource"]["valueQuantity"]["value"],
-                             "security": [x["code"] for x in e["resource"]["meta"].get("security", [])]}
-                            for e in found.get("entry", [])]
+            fq = "%s/Flag?subject=%s" % (base, loc)
+            obs, flags = get(q), get(fq)
+            captured = {
+                "_note": "Captured response of the live interop demo on the public HAPI R4 test server (it may purge data; "
+                         "re-create with: python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live).",
+                "retrieved": datetime.now(timezone.utc).replace(microsecond=0).isoformat(), "site_id": args.site,
+                "location": loc, "nitrate_query": q, "flag_query": fq,
+                "nitrate_results": [{"id": "Observation/" + e["resource"]["id"],
+                                     "category": e["resource"]["category"][0]["coding"][0]["code"],
+                                     "value_mg_per_l": e["resource"]["valueQuantity"]["value"],
+                                     "effective": e["resource"]["effectiveDateTime"],
+                                     "performer": e["resource"]["performer"][0].get("display"),
+                                     "synthetic": "HTEST" in {x["code"] for x in e["resource"]["meta"].get("security", [])}}
+                                    for e in obs.get("entry", [])],
+                "flags": [{"id": "Flag/" + e["resource"]["id"], "status": e["resource"]["status"],
+                           "code": e["resource"]["code"]["coding"][0]["code"],
+                           "period": e["resource"].get("period"),
+                           "rules": [x["valueCodeableConcept"]["coding"][0]["code"] for x in e["resource"].get("extension", [])
+                                     if "valueCodeableConcept" in x],
+                           "synthetic": "HTEST" in {x["code"] for x in e["resource"]["meta"].get("security", [])}}
+                          for e in flags.get("entry", [])],
+                "raw_nitrate_bundle": obs, "raw_flag_bundle": flags}
+            _dump(os.path.join(args.data or os.path.join(ROOT, "data"), "interop-query.json"), captured)
+            out["captured"] = {k: v for k, v in captured.items() if not k.startswith("raw_")}
         print(json.dumps(out, indent=1))
     elif cmd == "bench":
         recs = [r for r in svc.records.all() if svc.check_record(r).bundle]

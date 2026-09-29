@@ -118,6 +118,7 @@ async function staticApi(path, body){
   const get = async p => (await fetch(p)).json();
   if(path === "/api/sites") return get(staticDecision ? `api/review/${staticDecision}.json` : "api/sites.json");
   if(path === "/api/records") return get("api/records.json");
+  if(path === "/api/interop") return get("api/interop.json");
   if(path === "/api/check"){
     const orig = (records || []).find(r => r.record_id === body.record.record_id);
     if(orig && JSON.stringify(orig) === JSON.stringify(body.record)) return get(`api/check/${encodeURIComponent(orig.record_id)}.json`);
@@ -162,8 +163,8 @@ function map(list){
   const X = lon => pad + (lon - c) * k + ((W - 2*pad) - (d - c) * k) / 2, Y = lat => H - pad - (lat - a) * k - ((H - 2*pad) - (b - a) * k) / 2;
   const col = {high:"var(--no)", verify:"var(--warn)", moderate:"var(--warn)", low:"var(--ok)", na:"var(--hint)"};
   if(isReal()) return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} real monitoring stations coloured by ecological condition">
-    ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${x.risk.condition_points ? 6 : 4}" fill="${CCOL[x.risk.condition]}" opacity=".9"><title>${esc(x.site.name)}: ${CSHORT[x.risk.condition]}</title></circle></a>`).join("")}
-  </svg><figcaption class="help"><span style="color:var(--no)">●</span> Poor · <span style="color:var(--warn)">●</span> Fair (larger) · <span style="color:var(--ok)">●</span> Good · <span style="color:var(--hint)">●</span> Not assessed — ecological condition from the real lab values. Schematic positions, no base map. Tap a dot to open the station.</figcaption></figure>`;
+    ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${x.risk.condition_points ? 6 : 4}" fill="${CCOL[x.risk.condition]}" opacity=".9" ${x.risk.fired.some(f => f.rule_id === "R9") ? `stroke="var(--no)" stroke-width="3"` : ""}><title>${esc(x.site.name)}: ${CSHORT[x.risk.condition]}</title></circle></a>`).join("")}
+  </svg><figcaption class="help"><span style="color:var(--no)">●</span> Poor · <span style="color:var(--warn)">●</span> Fair (larger) · <span style="color:var(--ok)">●</span> Good · <span style="color:var(--hint)">●</span> Not assessed · <span style="color:var(--no)">◯</span> red ring = a sample above 50 mg/L nitrate — ecological condition from the real lab values. Schematic positions, no base map. Tap a dot to open the station.</figcaption></figure>`;
   return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} demo sites coloured by hazard level">
     ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${list.length > 8 ? (x.risk.level==="high"?7:4) : (x.risk.level==="high"?11:8)}" fill="${x.risk.level==="verify" ? "none" : col[lvl(x.risk)]}" stroke="${col[lvl(x.risk)]}" stroke-width="${x.risk.level==="verify" ? 4 : 0}" opacity=".9"><title>${esc(x.site.name)}: ${LEVEL[x.risk.level]}</title></circle>
       ${list.length <= 8 ? `<text x="${(X(x.site.lon) + (X(x.site.lon) > W/2 ? -15 : 15)).toFixed(1)}" y="${(Y(x.site.lat)+5).toFixed(1)}" text-anchor="${X(x.site.lon) > W/2 ? "end" : "start"}">${esc(x.site.name.split(" - ").map((t, i) => i ? t.split(" ")[0] : t).join(" · "))}</text>` : ""}</a>`).join("")}
@@ -184,9 +185,9 @@ async function sites(){
   const need = s.filter(x => x.risk.level === "high" || x.risk.level === "verify").length;
   if(real) s.sort((a, b) => b.risk.condition_points - a.risk.condition_points);
   const enriched = s.filter(x => x.risk.fired.some(f => f.kind === "condition")).length;
-  $("#view").innerHTML = `<section><h1>${real ? `${s.length} real monitoring stations, ${enriched} above a nutrient screening value` : `${s.length} stream sites, ${need} need action`}</h1>
+  $("#view").innerHTML = `<section><h1>${real ? `${s.length} real stations · ${enriched} above a nutrient screening value · ${s.filter(x => x.risk.fired.some(f => f.rule_id === "R9")).length} above 50 mg/L nitrate` : `${s.length} stream sites, ${need} need action`}</h1>
     <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() && !perSite ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
-    ${real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? " Each site is evaluated at its own latest sampling, because agencies sample monthly." : ""}</p>` : ""}
+    ${real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? ` Each station is evaluated at its own latest sampling; most have a single sampling in this snapshot. Record age is judged against the snapshot end (${esc(asOf())}).` : ""}</p>` : ""}
     ${map(s)}
     <div class="grid">${s.map(x => real ? `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
       <div class="row"><div class="num">${x.risk.condition_points}<small>condition points</small></div><span class="chip ${CCLASS[x.risk.condition]}">${CSHORT[x.risk.condition]}</span></div>
@@ -210,6 +211,18 @@ function ruleItem(f){
     <div>${esc(f.why)}</div><div class="advice"><b>What to do:</b> ${esc(f.advice)}</div></li>`;
 }
 
+async function interopPanel(siteId){
+  const el = $("#interop"); if(!el) return;
+  let d; try { d = await api("/api/interop"); } catch(e){ return; }
+  if(!d || d.site_id !== siteId) return;
+  const rows = d.nitrate_results.map(r => `<tr><td>${r.synthetic ? "<b>SYNTHETIC</b> citizen check (test data)" : "Agency lab: " + esc(r.performer || "")}</td><td>${r.category}</td><td><b>${r.value_mg_per_l} mg/L</b></td><td>${esc(fmtDate(r.effective))}</td></tr>`).join("");
+  const fl = (d.flags || []).filter(f => f.status === "active").map(f => `<p class="help" style="margin:10px 0 0">…and the two synthetic citizen checks (scum + dogs in the water, two observers, photos kept for review) raise <b>${esc(f.id)}</b>: level <b>${esc(f.code)}</b>, rules ${f.rules.map(esc).join(", ")}, on this real station's Location.</p>`).join("");
+  el.innerHTML = `<section><h2>One query, two sources</h2><div class="card">
+    <p style="margin:0 0 8px">One FHIR search by the EU (EEA WISE) nitrate code at this station, run live on the public HAPI server on ${esc(fmtDate(d.retrieved))}:</p>
+    <table><tr><th>Source</th><th>Category</th><th>Nitrate</th><th>Date</th></tr>${rows}</table>${fl}
+    <p class="help" style="margin:10px 0 0"><a href="${esc(d.nitrate_query)}">Run the search live</a> (the test server may purge data) · captured response in the repo: <code>data/real-eu-toulouse/interop-query.json</code></p></div></section>`;
+}
+
 async function decide(id, decision, basis){
   const res = await api("/api/review", {record_id:id, decision, basis});
   if(res.error){ alert(res.error); return; }
@@ -230,6 +243,7 @@ async function site(id){
       <div class="row"><span class="chip ${CCLASS[r.condition]}">${CSHORT[r.condition]}</span>${cd.some(f => f.rule_id === "R9") ? ` <span class="chip blocked">Nitrate ≥ 50 mg/L</span>` : ""}</div>
       <p class="lead" style="margin:10px 0 0">${labLine(lp) || "No nutrient values at the latest sampling."}</p>
       <p class="help" style="margin:10px 0 0">Latest sampling ${esc(fmtDate(lp && lp.observed_at))} by ${esc((lp && lp.observer_name) || "the agency")} · ${x.reports.length} ${x.reports.length===1?"sampling":"samplings"} in the snapshot${x.reports.length===1 ? " — one sample is a screening signal, not a status class" : ""}. Condition classes are demo screening classes, not WFD status classes.</p></div></section>
+    <div id="interop"></div>
     ${cd.length ? `<section><h2>Ecological condition: why</h2><div class="card"><ul class="plain">${cd.map(ruleItem).join("")}</ul></div></section>` : ""}
     <section><h2>Health hazard</h2><div class="card"><p style="margin:0"><b>Not assessed.</b> Lab chemistry cannot see scum, sewage smell, dead fish, or people and dogs in the water. A citizen visual check at this station would fill that gap — that is what StreamFHIR is built for.</p></div></section>
     <section><h2>Agency samplings (lab chemistry)</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(fmtDate(p.observed_at))}</b><span class="chip ${p.status}">${STATUS[p.status].big}</span></div>
@@ -257,6 +271,7 @@ async function site(id){
       <p class="help">A warning record (FHIR Flag) is raised only when 5+ hazard points are corroborated by trusted reports (two independent observers, a photo, or a reviewer) in the 14 days up to the demo date. It expires 14 days after the last corroborating report; a hazard only clears after 2 trusted clear visits at least 7 days apart. Blocked and rejected reports never count.</p></details>
     ${x.flag_bundle ? `<details><summary>Warning record for health systems (FHIR Flag)</summary><p class="help">FHIR is the data standard hospitals and public-health agencies use to exchange records. This Flag points at the site (Location) and links the reports behind it.</p><pre>${esc(JSON.stringify(x.flag_bundle, null, 1))}</pre></details><div id="share"></div>` : ""}`;
   document.querySelectorAll("button[data-rec]").forEach(b => b.onclick = () => decide(b.dataset.rec, b.dataset.dec || null, b.dataset.basis || null));
+  if(real) interopPanel(id);
   if(x.flag_bundle){
     cta("Share warning record (dry run)", async () => {
       const res = await api("/api/share", {bundle:x.flag_bundle});

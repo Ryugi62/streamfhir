@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+    "fullUrl": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9cecf0f6-f6ae-49d1-8be9-3a5d6c0b53d3",
+    "fullUrl": "urn:uuid:eecc14a5-b5de-41bc-8c65-442f32e79070",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:03e509d9-ab36-4c88-8dcc-9230ac706bbc",
+    "fullUrl": "urn:uuid:2c6cd7af-037d-4355-a259-f8a3fd88fe26",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+      "reference": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:147cb9cd-775b-4a18-8041-a00c9871089f"
+       "reference": "urn:uuid:8910cf6c-f9cf-4190-94f5-54ec1540a8cb"
       },
       {
-       "reference": "urn:uuid:cbb4b19d-0382-432e-b974-774525a2fd3c"
+       "reference": "urn:uuid:f47db064-7fdf-46c9-b8d8-986f3baa6a55"
       },
       {
-       "reference": "urn:uuid:ef2d83f9-514c-4726-bacb-08552421ffee"
+       "reference": "urn:uuid:270bf4a9-2d9e-4997-9a10-c7b58a71489e"
       },
       {
-       "reference": "urn:uuid:05eae3bd-f00c-46b9-b728-e9a504c86878"
+       "reference": "urn:uuid:fb7f31a4-906b-408d-886e-fee500759be2"
       },
       {
-       "reference": "urn:uuid:aa083012-53e6-4361-a649-ca110133b8cf"
+       "reference": "urn:uuid:f6779cd7-1d28-4eb1-83ae-1ad7040cdd21"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:147cb9cd-775b-4a18-8041-a00c9871089f",
+    "fullUrl": "urn:uuid:8910cf6c-f9cf-4190-94f5-54ec1540a8cb",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -240,7 +240,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+      "reference": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -267,7 +267,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cbb4b19d-0382-432e-b974-774525a2fd3c",
+    "fullUrl": "urn:uuid:f47db064-7fdf-46c9-b8d8-986f3baa6a55",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+      "reference": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -352,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ef2d83f9-514c-4726-bacb-08552421ffee",
+    "fullUrl": "urn:uuid:270bf4a9-2d9e-4997-9a10-c7b58a71489e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+      "reference": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -437,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:05eae3bd-f00c-46b9-b728-e9a504c86878",
+    "fullUrl": "urn:uuid:fb7f31a4-906b-408d-886e-fee500759be2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -500,7 +500,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+      "reference": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -527,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:aa083012-53e6-4361-a649-ca110133b8cf",
+    "fullUrl": "urn:uuid:f6779cd7-1d28-4eb1-83ae-1ad7040cdd21",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -575,7 +575,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:7112b429-2cf3-410b-9b34-cf7a1ecf0e8c",
+      "reference": "urn:uuid:899411f9-ee4b-4d2b-8b69-fa1308b4089d",
       "display": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)"
      },
      "effectiveDateTime": "2024-12-17T14:38:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c86015a3-2f49-462d-ac9e-8f16a062de69",
+    "fullUrl": "urn:uuid:2c545bb0-15af-49f0-8e00-d232a14a1c6c",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163140-2024-12-17T1438",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163140-2024-12-17T1438 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163140 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163140-2024-12-17T1438 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163140 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:03e509d9-ab36-4c88-8dcc-9230ac706bbc"
+       "reference": "urn:uuid:2c6cd7af-037d-4355-a259-f8a3fd88fe26"
       },
       {
-       "reference": "urn:uuid:147cb9cd-775b-4a18-8041-a00c9871089f"
+       "reference": "urn:uuid:8910cf6c-f9cf-4190-94f5-54ec1540a8cb"
       },
       {
-       "reference": "urn:uuid:cbb4b19d-0382-432e-b974-774525a2fd3c"
+       "reference": "urn:uuid:f47db064-7fdf-46c9-b8d8-986f3baa6a55"
       },
       {
-       "reference": "urn:uuid:ef2d83f9-514c-4726-bacb-08552421ffee"
+       "reference": "urn:uuid:270bf4a9-2d9e-4997-9a10-c7b58a71489e"
       },
       {
-       "reference": "urn:uuid:05eae3bd-f00c-46b9-b728-e9a504c86878"
+       "reference": "urn:uuid:fb7f31a4-906b-408d-886e-fee500759be2"
       },
       {
-       "reference": "urn:uuid:aa083012-53e6-4361-a649-ca110133b8cf"
+       "reference": "urn:uuid:f6779cd7-1d28-4eb1-83ae-1ad7040cdd21"
       }
      ],
      "occurredDateTime": "2024-12-17T14:38:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:9cecf0f6-f6ae-49d1-8be9-3a5d6c0b53d3",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:eecc14a5-b5de-41bc-8c65-442f32e79070",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

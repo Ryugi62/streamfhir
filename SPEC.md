@@ -1,4 +1,4 @@
-# StreamFHIR — SPEC (v0.5, 2026-09-29)
+# StreamFHIR — SPEC (v0.5.1, 2026-09-29)
 
 ## 0. One line
 StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.

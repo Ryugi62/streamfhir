@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+    "fullUrl": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cda8a71e-1766-4150-9724-4b504104cfac",
+    "fullUrl": "urn:uuid:8496aa0c-bd05-44c9-b27d-fde36a187132",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0c50d0a6-3eb0-45f4-8811-cef83bafc32b",
+    "fullUrl": "urn:uuid:7798160d-d4c9-4ebd-ab68-74b5df15477f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+      "reference": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
       "display": "Toulouse area · La Saundrune en amont de la Garonne"
      },
      "effectiveDateTime": "2024-12-17T15:23:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:414a47fa-eb82-4a77-9959-1d8b09dc37d3"
+       "reference": "urn:uuid:6464c1a9-43a6-4088-8c8d-04284e27c860"
       },
       {
-       "reference": "urn:uuid:b3eea774-d981-4adb-bb75-bf0f79ef8be0"
+       "reference": "urn:uuid:967eab12-47b0-4c0b-a971-d06fe03c058b"
       },
       {
-       "reference": "urn:uuid:b6797a71-2fd8-4df8-99d6-106400b1e622"
+       "reference": "urn:uuid:36f3d480-bc88-48e6-be4a-49f85d4d1ed2"
       },
       {
-       "reference": "urn:uuid:71b8ff69-a800-4358-ae35-d16d88e8c3b8"
+       "reference": "urn:uuid:9b73aa0f-920e-4792-9f0e-cec936375455"
       },
       {
-       "reference": "urn:uuid:be0b375b-082b-4245-8cf0-e6757e3ba285"
+       "reference": "urn:uuid:06a84509-f43d-4d48-b1f2-c7a8481e26d2"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:414a47fa-eb82-4a77-9959-1d8b09dc37d3",
+    "fullUrl": "urn:uuid:6464c1a9-43a6-4088-8c8d-04284e27c860",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -250,7 +250,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+      "reference": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
       "display": "Toulouse area · La Saundrune en amont de la Garonne"
      },
      "effectiveDateTime": "2024-12-17T15:23:00+01:00",
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b3eea774-d981-4adb-bb75-bf0f79ef8be0",
+    "fullUrl": "urn:uuid:967eab12-47b0-4c0b-a971-d06fe03c058b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -325,7 +325,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+      "reference": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
       "display": "Toulouse area · La Saundrune en amont de la Garonne"
      },
      "effectiveDateTime": "2024-12-17T15:23:00+01:00",
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b6797a71-2fd8-4df8-99d6-106400b1e622",
+    "fullUrl": "urn:uuid:36f3d480-bc88-48e6-be4a-49f85d4d1ed2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -409,7 +409,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+      "reference": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
       "display": "Toulouse area · La Saundrune en amont de la Garonne"
      },
      "effectiveDateTime": "2024-12-17T15:23:00+01:00",
@@ -436,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:71b8ff69-a800-4358-ae35-d16d88e8c3b8",
+    "fullUrl": "urn:uuid:9b73aa0f-920e-4792-9f0e-cec936375455",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -494,7 +494,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+      "reference": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
       "display": "Toulouse area · La Saundrune en amont de la Garonne"
      },
      "effectiveDateTime": "2024-12-17T15:23:00+01:00",
@@ -521,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:be0b375b-082b-4245-8cf0-e6757e3ba285",
+    "fullUrl": "urn:uuid:06a84509-f43d-4d48-b1f2-c7a8481e26d2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:a3d93fc5-ad0b-424d-be59-a1654c4c2509",
+      "reference": "urn:uuid:11effbd9-f955-45fd-beec-a5969098e603",
       "display": "Toulouse area · La Saundrune en amont de la Garonne"
      },
      "effectiveDateTime": "2024-12-17T15:23:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:566b24c9-1ac0-42bf-a03c-43534096d8b7",
+    "fullUrl": "urn:uuid:ee269017-6ca3-4bd0-a207-568aa0fa719a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05163440-2024-12-17T1523",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163440-2024-12-17T1523 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163440 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163440-2024-12-17T1523 was imported from Hub'Eau qualite_rivieres (Sandre), station 05163440 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:0c50d0a6-3eb0-45f4-8811-cef83bafc32b"
+       "reference": "urn:uuid:7798160d-d4c9-4ebd-ab68-74b5df15477f"
       },
       {
-       "reference": "urn:uuid:414a47fa-eb82-4a77-9959-1d8b09dc37d3"
+       "reference": "urn:uuid:6464c1a9-43a6-4088-8c8d-04284e27c860"
       },
       {
-       "reference": "urn:uuid:b3eea774-d981-4adb-bb75-bf0f79ef8be0"
+       "reference": "urn:uuid:967eab12-47b0-4c0b-a971-d06fe03c058b"
       },
       {
-       "reference": "urn:uuid:b6797a71-2fd8-4df8-99d6-106400b1e622"
+       "reference": "urn:uuid:36f3d480-bc88-48e6-be4a-49f85d4d1ed2"
       },
       {
-       "reference": "urn:uuid:71b8ff69-a800-4358-ae35-d16d88e8c3b8"
+       "reference": "urn:uuid:9b73aa0f-920e-4792-9f0e-cec936375455"
       },
       {
-       "reference": "urn:uuid:be0b375b-082b-4245-8cf0-e6757e3ba285"
+       "reference": "urn:uuid:06a84509-f43d-4d48-b1f2-c7a8481e26d2"
       }
      ],
      "occurredDateTime": "2024-12-17T15:23:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:cda8a71e-1766-4150-9724-4b504104cfac",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:8496aa0c-bd05-44c9-b27d-fde36a187132",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

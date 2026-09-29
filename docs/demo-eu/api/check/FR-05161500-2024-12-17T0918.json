@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+    "fullUrl": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9f6c3620-aabf-4580-bb48-4e48d6b8fe8c",
+    "fullUrl": "urn:uuid:0fd0fdf9-e4d3-4fd2-b40d-b41e4b23411a",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7125903b-3359-4d49-ba76-4bff6b86f4df",
+    "fullUrl": "urn:uuid:02dcfc2c-1abb-4cfb-9020-62da380c6aa1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+      "reference": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
       "display": "Toulouse area · La Garonne au Syndicat Centre et Nord"
      },
      "effectiveDateTime": "2024-12-17T09:18:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:9b2e9e23-2545-4dac-8253-e231c3d0fabf"
+       "reference": "urn:uuid:63f7f253-61ab-4713-ae21-f1975284b8c1"
       },
       {
-       "reference": "urn:uuid:c176166f-58d7-4145-a05d-d237592f7ceb"
+       "reference": "urn:uuid:404cb708-ef64-46e2-bd28-8eb2e85eac12"
       },
       {
-       "reference": "urn:uuid:f8a1266e-ef36-4706-86ed-7780bf78df3b"
+       "reference": "urn:uuid:036e1c3e-ceb2-47be-8f5c-59d1033dfcdd"
       },
       {
-       "reference": "urn:uuid:5f06e03a-1321-461c-8ae1-9d44a14dd51d"
+       "reference": "urn:uuid:d7afaa8d-6823-49f7-a26e-6b16ae9e95bf"
       },
       {
-       "reference": "urn:uuid:4cf8b8ce-e9f7-4dfd-b1b5-17ee2d43cde7"
+       "reference": "urn:uuid:b11284fd-fd74-47db-8c20-32114723df78"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9b2e9e23-2545-4dac-8253-e231c3d0fabf",
+    "fullUrl": "urn:uuid:63f7f253-61ab-4713-ae21-f1975284b8c1",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+      "reference": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
       "display": "Toulouse area · La Garonne au Syndicat Centre et Nord"
      },
      "effectiveDateTime": "2024-12-17T09:18:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c176166f-58d7-4145-a05d-d237592f7ceb",
+    "fullUrl": "urn:uuid:404cb708-ef64-46e2-bd28-8eb2e85eac12",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -330,7 +330,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+      "reference": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
       "display": "Toulouse area · La Garonne au Syndicat Centre et Nord"
      },
      "effectiveDateTime": "2024-12-17T09:18:00+01:00",
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f8a1266e-ef36-4706-86ed-7780bf78df3b",
+    "fullUrl": "urn:uuid:036e1c3e-ceb2-47be-8f5c-59d1033dfcdd",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -420,7 +420,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+      "reference": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
       "display": "Toulouse area · La Garonne au Syndicat Centre et Nord"
      },
      "effectiveDateTime": "2024-12-17T09:18:00+01:00",
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5f06e03a-1321-461c-8ae1-9d44a14dd51d",
+    "fullUrl": "urn:uuid:d7afaa8d-6823-49f7-a26e-6b16ae9e95bf",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -495,7 +495,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+      "reference": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
       "display": "Toulouse area · La Garonne au Syndicat Centre et Nord"
      },
      "effectiveDateTime": "2024-12-17T09:18:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4cf8b8ce-e9f7-4dfd-b1b5-17ee2d43cde7",
+    "fullUrl": "urn:uuid:b11284fd-fd74-47db-8c20-32114723df78",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:89c50a0e-0eb4-4743-bb33-e393fb1140b5",
+      "reference": "urn:uuid:49a66483-c953-49a3-bd5d-ae54fc4ab31d",
       "display": "Toulouse area · La Garonne au Syndicat Centre et Nord"
      },
      "effectiveDateTime": "2024-12-17T09:18:00+01:00",
@@ -606,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c4b94f68-87a9-4cf8-84a0-07db2ee2721d",
+    "fullUrl": "urn:uuid:ec4b6830-667e-43cc-88e1-7b82852354df",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05161500-2024-12-17T0918",
@@ -621,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05161500-2024-12-17T0918 was imported from Hub'Eau qualite_rivieres (Sandre), station 05161500 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05161500-2024-12-17T0918 was imported from Hub'Eau qualite_rivieres (Sandre), station 05161500 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:7125903b-3359-4d49-ba76-4bff6b86f4df"
+       "reference": "urn:uuid:02dcfc2c-1abb-4cfb-9020-62da380c6aa1"
       },
       {
-       "reference": "urn:uuid:9b2e9e23-2545-4dac-8253-e231c3d0fabf"
+       "reference": "urn:uuid:63f7f253-61ab-4713-ae21-f1975284b8c1"
       },
       {
-       "reference": "urn:uuid:c176166f-58d7-4145-a05d-d237592f7ceb"
+       "reference": "urn:uuid:404cb708-ef64-46e2-bd28-8eb2e85eac12"
       },
       {
-       "reference": "urn:uuid:f8a1266e-ef36-4706-86ed-7780bf78df3b"
+       "reference": "urn:uuid:036e1c3e-ceb2-47be-8f5c-59d1033dfcdd"
       },
       {
-       "reference": "urn:uuid:5f06e03a-1321-461c-8ae1-9d44a14dd51d"
+       "reference": "urn:uuid:d7afaa8d-6823-49f7-a26e-6b16ae9e95bf"
       },
       {
-       "reference": "urn:uuid:4cf8b8ce-e9f7-4dfd-b1b5-17ee2d43cde7"
+       "reference": "urn:uuid:b11284fd-fd74-47db-8c20-32114723df78"
       }
      ],
      "occurredDateTime": "2024-12-17T09:18:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -685,8 +685,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:9f6c3620-aabf-4580-bb48-4e48d6b8fe8c",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:0fd0fdf9-e4d3-4fd2-b40d-b41e4b23411a",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

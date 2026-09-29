@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+    "fullUrl": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bd2f3fc9-f61b-421b-8175-2c4f7a88f2c5",
+    "fullUrl": "urn:uuid:de0642e4-54e5-4045-b9ee-a9eb55d5d778",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -74,7 +74,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
      },
      "identifier": [
       {
@@ -90,7 +90,7 @@
      ],
      "version": [
       {
-       "value": "0.4.0"
+       "value": "0.5.1"
       }
      ]
     },
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0aa1db7f-12f1-4cca-9822-ffec16fe9b3a",
+    "fullUrl": "urn:uuid:cf83c0e1-0caf-4f6d-a455-3c67377f2934",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -149,7 +149,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+      "reference": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
       "display": "Toulouse area · L'Aussonnelle à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T13:00:00+01:00",
@@ -165,19 +165,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:beaa7d46-2dbb-4346-859f-455407cd71f9"
+       "reference": "urn:uuid:55a2ca0f-a2bd-4661-b09f-03f5e24a1ff3"
       },
       {
-       "reference": "urn:uuid:03221226-755d-47c0-a87d-9b410dcdcc11"
+       "reference": "urn:uuid:168c1844-f5ae-4480-b289-ed05a3df9146"
       },
       {
-       "reference": "urn:uuid:8b9f8067-f015-4336-916a-d8a3350dcddc"
+       "reference": "urn:uuid:fa9b6740-ad71-455c-819e-203c1f22162a"
       },
       {
-       "reference": "urn:uuid:fa76fd95-5025-4894-8d11-37da6a229bb0"
+       "reference": "urn:uuid:c6f5cb4a-6cd1-4e3b-83da-d71ed906fe8f"
       },
       {
-       "reference": "urn:uuid:7c7c4c3a-5d8d-4765-81ce-d8ee466754bc"
+       "reference": "urn:uuid:6258c15f-3dbd-4fef-a5fa-8b1f948d7f0f"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:beaa7d46-2dbb-4346-859f-455407cd71f9",
+    "fullUrl": "urn:uuid:55a2ca0f-a2bd-4661-b09f-03f5e24a1ff3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -245,7 +245,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+      "reference": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
       "display": "Toulouse area · L'Aussonnelle à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T13:00:00+01:00",
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:03221226-755d-47c0-a87d-9b410dcdcc11",
+    "fullUrl": "urn:uuid:168c1844-f5ae-4480-b289-ed05a3df9146",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -335,7 +335,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+      "reference": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
       "display": "Toulouse area · L'Aussonnelle à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T13:00:00+01:00",
@@ -362,7 +362,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8b9f8067-f015-4336-916a-d8a3350dcddc",
+    "fullUrl": "urn:uuid:fa9b6740-ad71-455c-819e-203c1f22162a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -410,7 +410,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+      "reference": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
       "display": "Toulouse area · L'Aussonnelle à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T13:00:00+01:00",
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fa76fd95-5025-4894-8d11-37da6a229bb0",
+    "fullUrl": "urn:uuid:c6f5cb4a-6cd1-4e3b-83da-d71ed906fe8f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -499,7 +499,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+      "reference": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
       "display": "Toulouse area · L'Aussonnelle à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T13:00:00+01:00",
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7c7c4c3a-5d8d-4765-81ce-d8ee466754bc",
+    "fullUrl": "urn:uuid:6258c15f-3dbd-4fef-a5fa-8b1f948d7f0f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -579,7 +579,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:2e586b8b-3b37-475e-b247-bc6f052db82a",
+      "reference": "urn:uuid:2dd66f00-e750-41fe-b699-042c16781078",
       "display": "Toulouse area · L'Aussonnelle à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T13:00:00+01:00",
@@ -612,7 +612,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:31e95f2b-06b7-42bb-8652-1c17d7dd5482",
+    "fullUrl": "urn:uuid:613c2cf5-3d37-418e-ae77-e61450cf6226",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159250-2024-12-19T1300",
@@ -627,30 +627,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159250-2024-12-19T1300 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159250 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159250-2024-12-19T1300 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159250 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:0aa1db7f-12f1-4cca-9822-ffec16fe9b3a"
+       "reference": "urn:uuid:cf83c0e1-0caf-4f6d-a455-3c67377f2934"
       },
       {
-       "reference": "urn:uuid:beaa7d46-2dbb-4346-859f-455407cd71f9"
+       "reference": "urn:uuid:55a2ca0f-a2bd-4661-b09f-03f5e24a1ff3"
       },
       {
-       "reference": "urn:uuid:03221226-755d-47c0-a87d-9b410dcdcc11"
+       "reference": "urn:uuid:168c1844-f5ae-4480-b289-ed05a3df9146"
       },
       {
-       "reference": "urn:uuid:8b9f8067-f015-4336-916a-d8a3350dcddc"
+       "reference": "urn:uuid:fa9b6740-ad71-455c-819e-203c1f22162a"
       },
       {
-       "reference": "urn:uuid:fa76fd95-5025-4894-8d11-37da6a229bb0"
+       "reference": "urn:uuid:c6f5cb4a-6cd1-4e3b-83da-d71ed906fe8f"
       },
       {
-       "reference": "urn:uuid:7c7c4c3a-5d8d-4765-81ce-d8ee466754bc"
+       "reference": "urn:uuid:6258c15f-3dbd-4fef-a5fa-8b1f948d7f0f"
       }
      ],
      "occurredDateTime": "2024-12-19T13:00:00+01:00",
-     "recorded": "2026-09-29T13:17:05+00:00",
+     "recorded": "2026-09-29T13:27:39+00:00",
      "activity": {
       "coding": [
        {
@@ -691,8 +691,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:bd2f3fc9-f61b-421b-8175-2c4f7a88f2c5",
-        "display": "StreamFHIR 0.4.0"
+        "reference": "urn:uuid:de0642e4-54e5-4045-b9ee-a9eb55d5d778",
+        "display": "StreamFHIR 0.5.1"
        }
       }
      ],

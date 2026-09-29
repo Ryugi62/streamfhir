@@ -179,7 +179,8 @@ def test_ac44_interop_demo_puts_an_agency_and_a_citizen_nitrate_under_one_eea_co
     from streamfhir.infrastructure.cli import interop_bundles
     from streamfhir.infrastructure.container import build_service
     svc = build_service(os.path.join(os.path.dirname(__file__), "..", "data", "real-eu-toulouse"))
-    agency, citizen = interop_bundles(svc, "FR-05157550")
+    agency, citizens, flag = interop_bundles(svc, "FR-05157550")
+    citizen = citizens[0]
 
     def nitrate(b):
         return [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"
@@ -189,5 +190,11 @@ def test_ac44_interop_demo_puts_an_agency_and_a_citizen_nitrate_under_one_eea_co
         assert {"system": EEA_OBSERVED_PROPERTY, "code": "CAS_14797-55-8", "display": "Nitrate"} in o["code"]["coding"]
     assert a["category"][0]["coding"][0]["code"] == "laboratory" and c["category"][0]["coding"][0]["code"] == "survey"
     assert "HTEST" in {s["code"] for s in c["meta"]["security"]} and "HTEST" not in {s["code"] for s in a["meta"]["security"]}
+    assert c["note"][0]["text"].startswith("SYNTHETIC") and c["effectiveDateTime"] != a["effectiveDateTime"]
     loc = lambda b: [e for e in b["entry"] if e["resource"]["resourceType"] == "Location"][0]["request"]["ifNoneExist"]
     assert loc(agency) == loc(citizen)            # same station, conditional create -> one Location on the server
+    # two synthetic observers with photos (scum + dogs) corroborate a hazard: the Flag lands on the real station
+    f = [e["resource"] for e in flag["entry"] if e["resource"]["resourceType"] == "Flag"][0]
+    assert f["code"]["coding"][0]["code"] == "high" and f["code"]["text"].startswith("SYNTHETIC DEMO")
+    assert "HTEST" in {s["code"] for s in f["meta"]["security"]}
+    assert {x["valueCodeableConcept"]["coding"][0]["code"] for x in f["extension"] if "valueCodeableConcept" in x} >= {"R3", "R7"}
