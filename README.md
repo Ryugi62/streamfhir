@@ -4,7 +4,8 @@
 
 Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy Ecosystems, Healthy Communities*). **Track 7 — Digital Health Standards.**
 
-- **Try it without installing anything:** open the static demo in [`docs/demo/`](docs/demo/) (served as a web page once the repository is published, e.g. with GitHub Pages; the sample records are precomputed).
+- **Live demo (no install):** https://ryugi62.github.io/streamfhir/demo/ — static page from [`docs/demo/`](docs/demo/); the sample records are precomputed.
+- **Demo video (3:25):** https://youtu.be/xxEL--FC9tA
 - **Run the full app:** `python3 -m streamfhir serve` → http://127.0.0.1:8000 (Python 3.9+, no dependencies).
 
 ![Sites overview (mobile)](docs/screenshots/0-first-screen-mobile.png)
