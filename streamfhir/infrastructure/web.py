@@ -31,7 +31,8 @@ def make_server(service, host: str = "127.0.0.1", port: int = 8000) -> Threading
         def do_GET(self):
             path = self.path.split("?")[0]
             if path == "/api/sites":
-                return self._send(200, overview_json(service.site_overview(), service.clock.now()))
+                return self._send(200, overview_json(service.site_overview(), service.clock.now(),
+                                                    service.records.dataset() if hasattr(service.records, "dataset") else None))
             if path == "/api/records":
                 return self._send(200, {"records": service.records.all()})
             name = "index.html" if path in ("/", "/index.html") else path.lstrip("/")

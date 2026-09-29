@@ -84,10 +84,13 @@ def main(argv=None):
     sub.add_parser("build-fhir", help="regenerate fhir/ conformance resources")
     bs = sub.add_parser("build-static", help="write a server-less demo to docs/demo (GitHub Pages ready)")
     bs.add_argument("--out", default=os.path.join(ROOT, "docs", "demo"))
+    iw = sub.add_parser("import-wqp", help="convert a US Water Quality Portal Result+Station CSV snapshot into a StreamFHIR dataset")
+    iw.add_argument("--dir", default=os.path.join(ROOT, "data", "real-wqp"), help="folder with results.csv and stations.csv")
     bn = sub.add_parser("bench", help="measure validation + mapping throughput on this machine")
     bn.add_argument("-n", type=int, default=2000)
+    p.add_argument("--data", default=None, help="dataset folder (default: data/ synthetic demo)")
     args = p.parse_args(argv)
-    svc = build_service()
+    svc = build_service(args.data) if args.data else build_service()
     cmd = args.cmd or "serve"
 
     if cmd == "serve":
@@ -168,6 +171,24 @@ def main(argv=None):
     elif cmd == "build-static":
         n = build_static(svc, args.out)
         print("wrote static demo with %d precomputed checks to %s" % (n, args.out))
+    elif cmd == "import-wqp":
+        from ..adapters.wqp_importer import parse_results, parse_stations
+        with open(os.path.join(args.dir, "stations.csv"), encoding="utf-8") as fh:
+            sites = parse_stations(fh.read())
+        with open(os.path.join(args.dir, "results.csv"), encoding="utf-8") as fh:
+            records, stats = parse_results(fh.read(), {x["site_id"]: x for x in sites})
+        used = {r["site_id"] for r in records}
+        latest = max(r["observed_at"][:10] for r in records)
+        with open(os.path.join(args.dir, "SOURCE.txt"), encoding="utf-8") as fh:
+            source = fh.read().strip().splitlines()
+        _dump(os.path.join(args.dir, "sites.json"), {"_note": "REAL public stations from the US Water Quality Portal (not citizen science).",
+                                                      "sites": [x for x in sites if x["site_id"] in used]})
+        _dump(os.path.join(args.dir, "assessments.json"), {
+            "_note": "REAL public monitoring data imported from the US Water Quality Portal; source query and retrieval time below.",
+            "dataset": {"synthetic": False, "observer_kind": "organisation", "source_query": source[0],
+                        "retrieved": source[1] if len(source) > 1 else None, "import_stats": stats},
+            "demo_as_of": latest + "T23:59:59+00:00", "records": records})
+        print(json.dumps(dict(stats, sites=len(used)), indent=1))
     elif cmd == "bench":
         recs = [r for r in svc.records.all() if svc.check_record(r).bundle]
         t = time.perf_counter()

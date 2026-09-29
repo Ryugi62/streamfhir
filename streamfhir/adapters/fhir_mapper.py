@@ -99,7 +99,11 @@ def _logical(system: str, value: str, rtype: Optional[str] = None, display: Opti
 
 class FhirMapper:
     def __init__(self, id_factory: Optional[Callable[[], str]] = None,
-                 now_fn: Optional[Callable[[], datetime]] = None):
+                 now_fn: Optional[Callable[[], datetime]] = None, test_data: bool = True, pseudonymous: bool = True):
+        """test_data: tag every resource HTEST (synthetic demo data). pseudonymous: observers are pseudonyms
+        (citizens); False for real monitoring organisations, whose ids are public."""
+        self.test_data = test_data
+        self.pseudonymous = pseudonymous
         self._new_id = id_factory or (lambda: str(uuid.uuid4()))
         self._now = now_fn or (lambda: datetime.now(timezone.utc).replace(microsecond=0))
 
@@ -107,9 +111,9 @@ class FhirMapper:
     def _urn(self) -> str:
         return "urn:uuid:" + self._new_id()
 
-    @staticmethod
-    def _meta(profile: Optional[str] = None, pseudonymised: bool = False) -> Dict[str, Any]:
-        sec = [dict(TEST_DATA), dict(UNRESTRICTED)] + ([dict(PSEUDONYMISED)] if pseudonymised else [])
+    def _meta(self, profile: Optional[str] = None, pseudonymised: bool = False) -> Dict[str, Any]:
+        sec = ([dict(TEST_DATA)] if self.test_data else []) + [dict(UNRESTRICTED)] \
+            + ([dict(PSEUDONYMISED)] if pseudonymised and self.pseudonymous else [])
         meta: Dict[str, Any] = {"security": sec}
         if profile:
             meta["profile"] = [profile]
@@ -189,7 +193,7 @@ class FhirMapper:
         prefix = "Confirmed by reviewer: " if decision == CONFIRM else "Needs review: "
         record_notes = [prefix + i.message for i in report.issues if not i.field.startswith("values.")]
         performer = {"identifier": {"system": SID_OBSERVER, "value": a.observer},
-                     "display": "Pseudonymous citizen scientist"}
+                     "display": "Pseudonymous citizen scientist" if self.pseudonymous else "Monitoring organisation %s" % a.observer}
         loc = self._location_entry(site)
         dev = self._device_entry()
         loc_ref = {"reference": loc["fullUrl"], "display": site.name}

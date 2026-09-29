@@ -25,6 +25,10 @@ class JsonRecordRepository:
         with open(self.path, encoding="utf-8") as fh:
             return json.load(fh)["records"]
 
+    def dataset(self) -> Dict[str, Any]:
+        with open(self.path, encoding="utf-8") as fh:
+            return json.load(fh).get("dataset", {})
+
     def demo_as_of(self) -> Optional[str]:
         with open(self.path, encoding="utf-8") as fh:
             return json.load(fh).get("demo_as_of")

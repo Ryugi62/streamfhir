@@ -136,6 +136,9 @@
   }
  ],
  "as_of": "2026-09-29T12:00:00+01:00",
+ "dataset": {
+  "synthetic": true
+ },
  "sites": [
   {
    "site": {
@@ -436,7 +439,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:554e4320-3e2a-4bde-9073-e626f52f535d",
+      "fullUrl": "urn:uuid:a65890d5-727f-4fff-87c4-6d5eda1afe39",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -488,7 +491,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:5eb41294-b8a2-4aa5-8187-7229bfe99a38",
+      "fullUrl": "urn:uuid:ce6d3722-6655-479d-a601-d9be95d4c29a",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -534,7 +537,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:5792ab1a-ff2f-47ad-a92e-901f1e38e905",
+      "fullUrl": "urn:uuid:0f634add-7c6a-4a2b-9ad3-096394ecd7b8",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -608,7 +611,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:554e4320-3e2a-4bde-9073-e626f52f535d",
+        "reference": "urn:uuid:a65890d5-727f-4fff-87c4-6d5eda1afe39",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -616,7 +619,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:5eb41294-b8a2-4aa5-8187-7229bfe99a38",
+        "reference": "urn:uuid:ce6d3722-6655-479d-a601-d9be95d4c29a",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -626,7 +629,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e27242d3-a9ea-4e27-ac18-42e7708c929b",
+      "fullUrl": "urn:uuid:fb88b870-cf52-4644-916a-eaac2ed17ad7",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -650,10 +653,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:5792ab1a-ff2f-47ad-a92e-901f1e38e905"
+         "reference": "urn:uuid:0f634add-7c6a-4a2b-9ad3-096394ecd7b8"
         }
        ],
-       "recorded": "2026-09-29T06:30:54+00:00",
+       "recorded": "2026-09-29T06:33:34+00:00",
        "activity": {
         "coding": [
          {
@@ -675,7 +678,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:5eb41294-b8a2-4aa5-8187-7229bfe99a38",
+          "reference": "urn:uuid:ce6d3722-6655-479d-a601-d9be95d4c29a",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -905,7 +908,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:bb43f607-3011-402a-b96f-80358b895292",
+      "fullUrl": "urn:uuid:8a33a262-c301-4e8e-9a26-2ce22a1ec5d6",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -957,7 +960,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:1fa33f6b-7126-461a-aa9e-7986f7805eb0",
+      "fullUrl": "urn:uuid:10527b4a-97f7-4883-a97b-3f88990d13c5",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1003,7 +1006,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:ab07c1ad-0964-4c2d-b5f5-dd8a6e1bb596",
+      "fullUrl": "urn:uuid:87c2b3dd-4214-42b5-9ea7-3ea16ef2a268",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1077,7 +1080,7 @@
         "text": "High health hazard at Mill Pond inlet (11 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R5 Dead fish (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-06 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:bb43f607-3011-402a-b96f-80358b895292",
+        "reference": "urn:uuid:8a33a262-c301-4e8e-9a26-2ce22a1ec5d6",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1085,7 +1088,7 @@
         "end": "2026-10-06T18:40:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:1fa33f6b-7126-461a-aa9e-7986f7805eb0",
+        "reference": "urn:uuid:10527b4a-97f7-4883-a97b-3f88990d13c5",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1095,7 +1098,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:abaddfbc-6fed-45db-a461-123d08284737",
+      "fullUrl": "urn:uuid:445fe27d-e5e2-4eb0-9287-e2dbdf84e50a",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1119,10 +1122,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:ab07c1ad-0964-4c2d-b5f5-dd8a6e1bb596"
+         "reference": "urn:uuid:87c2b3dd-4214-42b5-9ea7-3ea16ef2a268"
         }
        ],
-       "recorded": "2026-09-29T06:30:54+00:00",
+       "recorded": "2026-09-29T06:33:34+00:00",
        "activity": {
         "coding": [
          {
@@ -1144,7 +1147,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:1fa33f6b-7126-461a-aa9e-7986f7805eb0",
+          "reference": "urn:uuid:10527b4a-97f7-4883-a97b-3f88990d13c5",
           "display": "StreamFHIR 0.3.0"
          }
         }

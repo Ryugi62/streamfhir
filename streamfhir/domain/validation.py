@@ -175,6 +175,9 @@ def validate_record(raw: Mapping[str, Any], sites: Mapping[str, Site], now: date
         issues.append(Issue(WARNING, "values.sensitive-invertebrates", "effort-missing",
                             "The invertebrate count has no sampling time, so a zero cannot be told apart from 'barely looked'."))
 
+    for note in raw.get("source_notes") or []:
+        issues.append(Issue(WARNING, "source", "source-note", "From the source system: %s" % note))
+
     photos = tuple(p for p in (raw.get("photos") or []) if isinstance(p, str) and p)
     if not photos:
         for code, value in values.items():

@@ -30,10 +30,11 @@ def build_service(data_dir: str = DATA_DIR, fhir_base: str = None) -> StreamFhir
     as_of = records.demo_as_of()
     clock = SystemClock() if (os.environ.get("STREAMFHIR_REAL_CLOCK") == "1" or not as_of) \
         else FixedClock(datetime.fromisoformat(as_of))
+    meta = records.dataset()
     return StreamFhirService(
         JsonSiteRepository(os.path.join(data_dir, "sites.json")),
         records,
-        FhirMapper(),
+        FhirMapper(test_data=meta.get("synthetic", True), pseudonymous=meta.get("observer_kind", "citizen") == "citizen"),
         HapiFhirServer(fhir_base or os.environ.get("STREAMFHIR_FHIR_BASE", DEFAULT_BASE)),
         clock,
     )

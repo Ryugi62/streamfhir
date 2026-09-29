@@ -21,8 +21,8 @@ def to_jsonable(obj: Any) -> Any:
     return obj
 
 
-def overview_json(overview, as_of=None) -> dict:
-    return {"rules": rules_table(), "as_of": to_jsonable(as_of), "sites": [{
+def overview_json(overview, as_of=None, dataset=None) -> dict:
+    return {"rules": rules_table(), "as_of": to_jsonable(as_of), "dataset": dataset or {"synthetic": True}, "sites": [{
         "site": to_jsonable(o.site),
         "risk": to_jsonable(o.risk),
         "reports": [{"record_id": r.record_id, "status": r.status, "decision": o.decisions.get(r.record_id),

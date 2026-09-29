@@ -1,0 +1,1087 @@
+{
+ "_note": "REAL public monitoring data imported from the US Water Quality Portal; source query and retrieval time below.",
+ "dataset": {
+  "synthetic": false,
+  "observer_kind": "organisation",
+  "source_query": "https://www.waterqualitydata.us/data/Result/search?statecode=US%3A24&statecode=US%3A11&siteType=Stream&characteristicName=pH&characteristicName=Nitrate&characteristicName=Temperature%2C%20water&startDateLo=09-01-2025&startDateHi=09-30-2025&mimeType=csv&dataProfile=narrowResult",
+  "retrieved": "2026-09-29T06:31:09Z",
+  "import_stats": {
+   "rows": 161,
+   "mapped_values": 126,
+   "skipped_rows": 35,
+   "records": 63
+  }
+ },
+ "demo_as_of": "2025-09-29T23:59:59+00:00",
+ "records": [
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-VEC0014:202509090956:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-VEC0014",
+   "observed_at": "2025-09-09T09:56:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.033025,
+   "lon": -76.787244,
+   "photos": [],
+   "values": {
+    "ph": 6.7,
+    "water-temperature": 21.7
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-UEG0001:202509231036:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-UEG0001",
+   "observed_at": "2025-09-23T10:36:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.21828,
+   "lon": -76.854359,
+   "photos": [],
+   "values": {
+    "ph": 7.4,
+    "water-temperature": 20.3
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-TPI01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TPI01",
+   "observed_at": "2025-09-15T10:39:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.971603,
+   "lon": -77.043732,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.23,
+    "ph": 7.39
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-GBL0010:202509251350:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-GBL0010",
+   "observed_at": "2025-09-25T13:50:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.002085,
+   "lon": -76.89098,
+   "photos": [],
+   "values": {
+    "water-temperature": 23.9,
+    "ph": 8.3
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-VEC0014:202509251105:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-VEC0014",
+   "observed_at": "2025-09-25T11:05:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.033025,
+   "lon": -76.787244,
+   "photos": [],
+   "values": {
+    "ph": 6.7,
+    "water-temperature": 21.9
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-NLO0008:202509091105:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-NLO0008",
+   "observed_at": "2025-09-09T11:05:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 38.43432,
+   "lon": -75.55322,
+   "photos": [],
+   "values": {
+    "ph": 7.3,
+    "water-temperature": 20.5
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-RCR01_250922_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR01",
+   "observed_at": "2025-09-22T10:38:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.98668333,
+   "lon": -77.0623,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.91,
+    "ph": 7.44
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-UEG0005:202509231210:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-UEG0005",
+   "observed_at": "2025-09-23T12:10:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.223533,
+   "lon": -76.858576,
+   "photos": [],
+   "values": {
+    "water-temperature": 22.9,
+    "ph": 7.4
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-VEC0021:202509090900:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-VEC0021",
+   "observed_at": "2025-09-09T09:00:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.026872,
+   "lon": -76.7955,
+   "photos": [],
+   "values": {
+    "ph": 7.1,
+    "water-temperature": 20.1
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-GBL0016:202509081150:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-GBL0016",
+   "observed_at": "2025-09-08T11:50:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.004862,
+   "lon": -76.881709,
+   "photos": [],
+   "values": {
+    "ph": 7.6,
+    "water-temperature": 17.9
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-GBT0002:202509251300:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-GBT0002",
+   "observed_at": "2025-09-25T13:00:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.000352,
+   "lon": -76.887248,
+   "photos": [],
+   "values": {
+    "ph": 7.2,
+    "water-temperature": 22.7
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-GBL0010:202509081310:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-GBL0010",
+   "observed_at": "2025-09-08T13:10:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.002085,
+   "lon": -76.89098,
+   "photos": [],
+   "values": {
+    "ph": 9.2,
+    "water-temperature": 25.5
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-RCR09_250909_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR09",
+   "observed_at": "2025-09-09T10:24:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.92165278,
+   "lon": -77.04966944,
+   "photos": [],
+   "values": {
+    "water-temperature": 17.75,
+    "ph": 8.1
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TPY01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TPY01",
+   "observed_at": "2025-09-15T10:07:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.936029,
+   "lon": -77.045445,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.01,
+    "ph": 7.17
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TKV01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TKV01",
+   "observed_at": "2025-09-15T10:00:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.93296667,
+   "lon": -77.05195833,
+   "photos": [],
+   "values": {
+    "ph": 7.35,
+    "water-temperature": 18.86
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-RCR09_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR09",
+   "observed_at": "2025-09-15T09:50:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.92165278,
+   "lon": -77.04966944,
+   "photos": [],
+   "values": {
+    "ph": 7.64,
+    "water-temperature": 20.4
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TNA01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TNA01",
+   "observed_at": "2025-09-16T11:25:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.910442,
+   "lon": -76.941757,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.94,
+    "ph": 7.18
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TWB05_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TWB05",
+   "observed_at": "2025-09-16T10:49:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.8915,
+   "lon": -76.91371667,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.57,
+    "ph": 6.93
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TPB01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TPB01",
+   "observed_at": "2025-09-16T10:47:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.87748333,
+   "lon": -76.96671667,
+   "photos": [],
+   "values": {
+    "ph": 7.18,
+    "water-temperature": 19.34
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-UEG0011:202509100950:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-UEG0011",
+   "observed_at": "2025-09-10T09:50:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.225879,
+   "lon": -76.866684,
+   "photos": [],
+   "values": {
+    "water-temperature": 17.5,
+    "ph": 7.1
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDEDAT05_WQX-NBP0023:20250904104100:SR",
+   "synthetic": false,
+   "site_id": "MDEDAT05_WQX-NBP0023",
+   "observed_at": "2025-09-04T10:41:00-04:00",
+   "observer": "MDEDAT05_WQX",
+   "lat": 39.537036119,
+   "lon": -78.611125801,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.3,
+    "ph": 7.8
+   },
+   "source_notes": [
+    "pH is reported with unit 'Molar' in the source; the value was kept as pH."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Department of Natural Resources"
+  },
+  {
+   "record_id": "DOEE-TFD01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TFD01",
+   "observed_at": "2025-09-16T10:33:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.86813333,
+   "lon": -76.95803333,
+   "photos": [],
+   "values": {
+    "ph": 7.27,
+    "water-temperature": 18.83
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TBR01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TBR01",
+   "observed_at": "2025-09-15T10:24:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.94581667,
+   "lon": -77.05105,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.41,
+    "ph": 7.33
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "21PA_WQX-2687451",
+   "synthetic": false,
+   "site_id": "21PA_WQX-WQN0263",
+   "observed_at": "2025-09-09T12:00:00-05:00",
+   "observer": "21PA_WQX",
+   "lat": 39.6936,
+   "lon": -76.1247,
+   "photos": [],
+   "values": {
+    "water-temperature": 18.96,
+    "ph": 6.8
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation PA DEPARTMENT OF ENVIRONMENTAL PROTECTION"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-UEG0011:202509231230:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-UEG0011",
+   "observed_at": "2025-09-23T12:30:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.225879,
+   "lon": -76.866684,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.5,
+    "ph": 7.2
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-VEC0021:202509251030:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-VEC0021",
+   "observed_at": "2025-09-25T10:30:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.026872,
+   "lon": -76.7955,
+   "photos": [],
+   "values": {
+    "water-temperature": 21.9,
+    "ph": 7.2
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-TFC01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TFC01",
+   "observed_at": "2025-09-16T11:11:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.882885,
+   "lon": -76.944244,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.43,
+    "ph": 7.6
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TOR01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TOR01",
+   "observed_at": "2025-09-16T09:47:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.81588333,
+   "lon": -77.00643333,
+   "photos": [],
+   "values": {
+    "ph": 7.93,
+    "water-temperature": 20.73
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-LPR0020:202509091030:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-LPR0020",
+   "observed_at": "2025-09-09T10:30:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 38.42338,
+   "lon": -75.5656,
+   "photos": [],
+   "values": {
+    "ph": 9.2,
+    "water-temperature": 22.8
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-TFB02_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TFB02",
+   "observed_at": "2025-09-15T11:04:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.915052,
+   "lon": -77.081496,
+   "photos": [],
+   "values": {
+    "ph": 6.85,
+    "water-temperature": 20.15
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-NLO0008:202509241055:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-NLO0008",
+   "observed_at": "2025-09-24T10:55:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 38.43432,
+   "lon": -75.55322,
+   "photos": [],
+   "values": {
+    "ph": 7.1,
+    "water-temperature": 23.4
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-TFS01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TFS01",
+   "observed_at": "2025-09-16T10:13:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.864014,
+   "lon": -76.976494,
+   "photos": [],
+   "values": {
+    "water-temperature": 18.99,
+    "ph": 7.63
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-RCR01_250909_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR01",
+   "observed_at": "2025-09-09T10:54:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.98668333,
+   "lon": -77.0623,
+   "photos": [],
+   "values": {
+    "water-temperature": 18.35,
+    "ph": 7.72
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TBK01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TBK01",
+   "observed_at": "2025-09-15T11:04:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.91978333,
+   "lon": -77.10043333,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.35,
+    "ph": 7.7
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-UEG0005:202509101010:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-UEG0005",
+   "observed_at": "2025-09-10T10:10:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.223533,
+   "lon": -76.858576,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.1,
+    "ph": 7.5
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-UEG0001:202509101030:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-UEG0001",
+   "observed_at": "2025-09-10T10:30:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.21828,
+   "lon": -76.854359,
+   "photos": [],
+   "values": {
+    "ph": 7.3,
+    "water-temperature": 18.3
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-LXT0252:202509101100:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-LXT0252",
+   "observed_at": "2025-09-10T11:00:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.211786,
+   "lon": -76.855014,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.9,
+    "ph": 8.0
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-TDA01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TDA01",
+   "observed_at": "2025-09-15T10:39:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.94586667,
+   "lon": -77.10698333,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.15,
+    "ph": 7.63
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TDO01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TDO01",
+   "observed_at": "2025-09-15T11:55:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.91554722,
+   "lon": -77.06141944,
+   "photos": [],
+   "values": {
+    "ph": 7.7,
+    "water-temperature": 19.2
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TWB01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TWB01",
+   "observed_at": "2025-09-16T11:12:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.9077,
+   "lon": -76.95291667,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.0,
+    "ph": 7.2
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-LPR0020:202509241020:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-LPR0020",
+   "observed_at": "2025-09-24T10:20:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 38.42338,
+   "lon": -75.5656,
+   "photos": [],
+   "values": {
+    "water-temperature": 24.0,
+    "ph": 8.3
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-RCR01_250902_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR01",
+   "observed_at": "2025-09-02T10:23:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.98668333,
+   "lon": -77.0623,
+   "photos": [],
+   "values": {
+    "water-temperature": 18.88,
+    "ph": 7.46
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-PTB01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-PTB01",
+   "observed_at": "2025-09-15T09:51:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.88652778,
+   "lon": -77.03771944,
+   "photos": [],
+   "values": {
+    "ph": 8.31,
+    "water-temperature": 24.56
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-GBL0016:202509251225:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-GBL0016",
+   "observed_at": "2025-09-25T12:25:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.004862,
+   "lon": -76.881709,
+   "photos": [],
+   "values": {
+    "ph": 7.6,
+    "water-temperature": 21.8
+   },
+   "source_notes": [
+    "pH was reported more than once in this activity; the first value was kept.",
+    "Temperature, water was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "DOEE-RCR09_250922_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR09",
+   "observed_at": "2025-09-22T10:16:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.92165278,
+   "lon": -77.04966944,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.66,
+    "ph": 7.67
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-THR01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-THR01",
+   "observed_at": "2025-09-16T11:45:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.90981667,
+   "lon": -76.96183333,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.69,
+    "ph": 7.06
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDEDAT05_WQX-NBP0103:20250904113800:SR",
+   "synthetic": false,
+   "site_id": "MDEDAT05_WQX-NBP0103",
+   "observed_at": "2025-09-04T11:38:00-04:00",
+   "observer": "MDEDAT05_WQX",
+   "lat": 39.582589328,
+   "lon": -78.731406444,
+   "photos": [],
+   "values": {
+    "ph": 8.3,
+    "water-temperature": 20.1
+   },
+   "source_notes": [
+    "pH is reported with unit 'Molar' in the source; the value was kept as pH."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Department of Natural Resources"
+  },
+  {
+   "record_id": "DOEE-RCR01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR01",
+   "observed_at": "2025-09-15T11:24:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.98668333,
+   "lon": -77.0623,
+   "photos": [],
+   "values": {
+    "ph": 7.09,
+    "water-temperature": 20.46
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TMH01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TMH01",
+   "observed_at": "2025-09-15T10:15:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.93808889,
+   "lon": -77.05323889,
+   "photos": [],
+   "values": {
+    "ph": 7.2,
+    "water-temperature": 19.1
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-RCR01_250929_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR01",
+   "observed_at": "2025-09-29T10:11:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.98668333,
+   "lon": -77.0623,
+   "photos": [],
+   "values": {
+    "ph": 7.4,
+    "water-temperature": 20.82
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDE_FIELDSERVICES_WQX-LXT0252:202509231128:FM:0.1",
+   "synthetic": false,
+   "site_id": "MDE_FIELDSERVICES_WQX-LXT0252",
+   "observed_at": "2025-09-23T11:28:00-04:00",
+   "observer": "MDE_FIELDSERVICES_WQX",
+   "lat": 39.211786,
+   "lon": -76.855014,
+   "photos": [],
+   "values": {
+    "ph": 8.4,
+    "water-temperature": 22.7
+   },
+   "source_notes": [
+    "Temperature, water was reported more than once in this activity; the first value was kept.",
+    "pH was reported more than once in this activity; the first value was kept."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Dept. of the Environment In House Water Data"
+  },
+  {
+   "record_id": "MDEDAT05_WQX-NBP0689:20250904141700:SR",
+   "synthetic": false,
+   "site_id": "MDEDAT05_WQX-NBP0689",
+   "observed_at": "2025-09-04T14:17:00-04:00",
+   "observer": "MDEDAT05_WQX",
+   "lat": 39.389264539,
+   "lon": -79.179479886,
+   "photos": [],
+   "values": {
+    "ph": 8.5,
+    "water-temperature": 18.8
+   },
+   "source_notes": [
+    "pH is reported with unit 'Molar' in the source; the value was kept as pH."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Department of Natural Resources"
+  },
+  {
+   "record_id": "DOEE-TWB06_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TWB06",
+   "observed_at": "2025-09-16T10:53:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.89136667,
+   "lon": -76.9142,
+   "photos": [],
+   "values": {
+    "ph": 7.34,
+    "water-temperature": 19.79
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "MDEDAT05_WQX-NBP0534:20250904132000:SR",
+   "synthetic": false,
+   "site_id": "MDEDAT05_WQX-NBP0534",
+   "observed_at": "2025-09-04T13:20:00-04:00",
+   "observer": "MDEDAT05_WQX",
+   "lat": 39.479259565,
+   "lon": -79.068085877,
+   "photos": [],
+   "values": {
+    "water-temperature": 15.7,
+    "ph": 8.3
+   },
+   "source_notes": [
+    "pH is reported with unit 'Molar' in the source; the value was kept as pH."
+   ],
+   "source": "US Water Quality Portal, organisation Maryland Department of Natural Resources"
+  },
+  {
+   "record_id": "DOEE-TDU01_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TDU01",
+   "observed_at": "2025-09-16T10:58:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.882362,
+   "lon": -76.963852,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.1,
+    "ph": 7.79
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TNS01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TNS01",
+   "observed_at": "2025-09-15T10:15:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.91974167,
+   "lon": -77.05608889,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.66,
+    "ph": 7.52
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TLU01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TLU01",
+   "observed_at": "2025-09-15T10:49:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.96178889,
+   "lon": -77.04151944,
+   "photos": [],
+   "values": {
+    "ph": 7.18,
+    "water-temperature": 21.19
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TFE01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TFE01",
+   "observed_at": "2025-09-15T11:10:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.988,
+   "lon": -77.04298333,
+   "photos": [],
+   "values": {
+    "ph": 7.05,
+    "water-temperature": 19.92
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-RCR09_250902_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR09",
+   "observed_at": "2025-09-02T09:59:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.92165278,
+   "lon": -77.04966944,
+   "photos": [],
+   "values": {
+    "water-temperature": 18.79,
+    "ph": 7.79
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TSO01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TSO01",
+   "observed_at": "2025-09-15T10:27:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.945431,
+   "lon": -77.051231,
+   "photos": [],
+   "values": {
+    "water-temperature": 19.41,
+    "ph": 7.28
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TPO01_250915_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TPO01",
+   "observed_at": "2025-09-15T11:05:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.98791667,
+   "lon": -77.04164167,
+   "photos": [],
+   "values": {
+    "ph": 7.11,
+    "water-temperature": 19.8
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-RCR09_250929_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-RCR09",
+   "observed_at": "2025-09-29T09:49:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.92165278,
+   "lon": -77.04966944,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.63,
+    "ph": 7.58
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  },
+  {
+   "record_id": "DOEE-TTX27_250916_0.1",
+   "synthetic": false,
+   "site_id": "DOEE-TTX27",
+   "observed_at": "2025-09-16T10:21:00-05:00",
+   "observer": "DOEE",
+   "lat": 38.8678,
+   "lon": -76.96865,
+   "photos": [],
+   "values": {
+    "water-temperature": 18.96,
+    "ph": 7.47
+   },
+   "source_notes": [],
+   "source": "US Water Quality Portal, organisation District Of Columbia Department Of Energy And Environment-water Quality Division  (State)"
+  }
+ ]
+}

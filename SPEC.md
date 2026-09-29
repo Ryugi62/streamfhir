@@ -84,6 +84,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-27 Given a record entered now from the form, Then it is stamped with the service clock (`stamp_now`), not the device clock.
 - AC-28 Given stand-down, Then an inactive Flag is only produced for sites whose Flag is active on the server, keeping its `period.start`.
 - AC-29 Given a partial later visit (not all clear keys observed), Then it does not clear a signal.
+- AC-31 Given a US Water Quality Portal Result+Station CSV, When imported, Then there is one record per sampling activity with real coordinates, source oddities (duplicates, odd units, missing time) become `review` notes, and the resources are not tagged HTEST/PSEUDED.
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)

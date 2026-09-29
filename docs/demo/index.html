@@ -86,7 +86,7 @@ details ul.plain{margin-top:8px}
     <nav aria-label="Main"><a href="#/" id="nav-sites">Sites</a><a href="#/new" id="nav-new">New check</a><a href="#/check" id="nav-check">Samples</a></nav>
   </header>
   <div id="view" aria-live="polite"><div class="skel"></div><div class="skel"></div></div>
-  <p class="foot">All sites and records are synthetic demo data. Codes under example.org are prototype codes, not official terminology.</p>
+  <p class="foot" id="foot">All sites and records are synthetic demo data. Codes under example.org are prototype codes, not official terminology.</p>
 </main>
 <div class="cta"><button id="cta" type="button">…</button></div>
 <script>window.STATIC_DEMO = true;</script>
@@ -145,18 +145,23 @@ function map(list){
   const col = {high:"var(--no)", verify:"var(--warn)", moderate:"var(--warn)", low:"var(--ok)"};
   return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} demo sites coloured by hazard level">
     ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${x.risk.level==="high"?11:8}" fill="${x.risk.level==="verify" ? "none" : col[x.risk.level]}" stroke="${col[x.risk.level]}" stroke-width="${x.risk.level==="verify" ? 4 : 0}" opacity=".9"><title>${esc(x.site.name)}: ${LEVEL[x.risk.level]}</title></circle>
-      <text x="${(X(x.site.lon) + (X(x.site.lon) > W/2 ? -15 : 15)).toFixed(1)}" y="${(Y(x.site.lat)+5).toFixed(1)}" text-anchor="${X(x.site.lon) > W/2 ? "end" : "start"}">${esc(x.site.name.split(" - ").map((t, i) => i ? t.split(" ")[0] : t).join(" · "))}</text></a>`).join("")}
-  </svg><figcaption class="help"><span style="color:var(--no)">●</span> High (large) · <span style="color:var(--warn)">○</span> Needs verification (ring) · <span style="color:var(--warn)">●</span> Moderate · <span style="color:var(--ok)">●</span> Low. Schematic positions of the synthetic sites, no base map. Tap a dot to open the site.</figcaption></figure>`;
+      ${list.length <= 8 ? `<text x="${(X(x.site.lon) + (X(x.site.lon) > W/2 ? -15 : 15)).toFixed(1)}" y="${(Y(x.site.lat)+5).toFixed(1)}" text-anchor="${X(x.site.lon) > W/2 ? "end" : "start"}">${esc(x.site.name.split(" - ").map((t, i) => i ? t.split(" ")[0] : t).join(" · "))}</text>` : ""}</a>`).join("")}
+  </svg><figcaption class="help"><span style="color:var(--no)">●</span> High (large) · <span style="color:var(--warn)">○</span> Needs verification (ring) · <span style="color:var(--warn)">●</span> Moderate · <span style="color:var(--ok)">●</span> Low. Schematic positions, no base map. Tap a dot to open the site.</figcaption></figure>`;
+}
+
+function footnote(){
+  if(cache && cache.dataset && cache.dataset.synthetic === false)
+    $("#foot").textContent = "Real public monitoring data from the US Water Quality Portal (not citizen science), imported as a snapshot. Codes under example.org are prototype codes, not official terminology.";
 }
 
 async function sites(){
   nav("sites");
-  cache = cache || await api("/api/sites");
+  cache = cache || await api("/api/sites"); footnote();
   const order = {high:0, verify:1, moderate:2, low:3};
   const s = cache.sites.slice().sort((a, b) => order[a.risk.level] - order[b.risk.level] || b.risk.hazard_points - a.risk.hazard_points);
   const need = s.filter(x => x.risk.level === "high" || x.risk.level === "verify").length;
   $("#view").innerHTML = `<section><h1>${s.length} stream sites, ${need} need action</h1>
-    <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() ? ` <span class="help">Demo date ${esc(asOf())}.</span>` : ""}</p>
+    <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
     ${map(s)}
     <div class="grid">${s.map(x => `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
       <div class="row"><div class="num">${x.risk.hazard_points}<small>hazard points</small></div><span class="chip ${LEVEL_CLASS[x.risk.level]}">${LEVEL[x.risk.level]}</span></div>
@@ -340,6 +345,7 @@ function route(){
   window.scrollTo(0,0);
 }
 window.addEventListener("hashchange", route); route();
+api("/api/sites").then(d => { cache = cache || d; footnote(); });
 </script>
 </body>
 </html>
