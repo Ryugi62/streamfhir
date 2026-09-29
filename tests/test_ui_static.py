@@ -22,3 +22,12 @@ def test_evidence_is_folded_and_status_is_announced():
     assert "<details>" in HTML and "<details open" not in HTML
     assert 'aria-live="polite"' in HTML and 'role="status"' in HTML
     assert '<nav aria-label="Main">' in HTML
+
+
+def test_ac38_real_datasets_lead_with_ecological_condition_not_hazard():
+    """Real agency data has no citizen hazard observations: the UI leads with condition and never says 'not corroborated' for a lab value."""
+    import os
+    html = open(os.path.join(os.path.dirname(__file__), "..", "streamfhir", "infrastructure", "static", "index.html"), encoding="utf-8").read()
+    assert "real monitoring stations" in html and "with nutrient enrichment" in html
+    assert "Agency lab value" in html and "Agency samplings (lab chemistry)" in html
+    assert "coloured by ecological condition" in html

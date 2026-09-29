@@ -148,7 +148,8 @@
     "lon": -8.405,
     "water_body": "Alder Brook (fictional)",
     "description": "Synthetic demo site: park reach above the town centre.",
-    "flow": "flowing"
+    "flow": "flowing",
+    "identifiers": []
    },
    "risk": {
     "site_id": "S-ALDER-UP",
@@ -264,7 +265,8 @@
     "lon": -8.418,
     "water_body": "Alder Brook (fictional)",
     "description": "Synthetic demo site: 50 m below a storm-water outfall, next to a playground.",
-    "flow": "flowing"
+    "flow": "flowing",
+    "identifiers": []
    },
    "risk": {
     "site_id": "S-ALDER-DN",
@@ -441,7 +443,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:7fe462ca-5abc-4967-9267-2fddc0f08a68",
+      "fullUrl": "urn:uuid:585635e4-6b17-4713-84b4-334ca29bf645",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -493,7 +495,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:c7aa4e3f-b8e8-4a66-8e54-9cd8a5103409",
+      "fullUrl": "urn:uuid:a56589d1-c92e-4604-85f5-640eab90ca9a",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -512,7 +514,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
        },
        "identifier": [
         {
@@ -528,7 +530,7 @@
        ],
        "version": [
         {
-         "value": "0.3.0"
+         "value": "0.4.0"
         }
        ]
       },
@@ -539,7 +541,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a4be09d8-656c-4afc-a678-69eda13a199a",
+      "fullUrl": "urn:uuid:1ab41a2d-030a-4163-94f3-0deaac8bd90f",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -637,7 +639,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:7fe462ca-5abc-4967-9267-2fddc0f08a68",
+        "reference": "urn:uuid:585635e4-6b17-4713-84b4-334ca29bf645",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -645,8 +647,8 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:c7aa4e3f-b8e8-4a66-8e54-9cd8a5103409",
-        "display": "StreamFHIR 0.3.0"
+        "reference": "urn:uuid:a56589d1-c92e-4604-85f5-640eab90ca9a",
+        "display": "StreamFHIR 0.4.0"
        }
       },
       "request": {
@@ -655,7 +657,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:0385decb-55f4-45ff-bee4-959e3089766b",
+      "fullUrl": "urn:uuid:5480ac7b-be97-4b18-bb55-77285055c22a",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -675,14 +677,14 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Alder Brook - below storm outfall computed by StreamFHIR 0.3.0 from 2 citizen records</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Alder Brook - below storm outfall computed by StreamFHIR 0.4.0 from 2 citizen records</p></div>"
        },
        "target": [
         {
-         "reference": "urn:uuid:a4be09d8-656c-4afc-a678-69eda13a199a"
+         "reference": "urn:uuid:1ab41a2d-030a-4163-94f3-0deaac8bd90f"
         }
        ],
-       "recorded": "2026-09-29T10:08:00+00:00",
+       "recorded": "2026-09-29T13:03:49+00:00",
        "activity": {
         "coding": [
          {
@@ -704,8 +706,8 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:c7aa4e3f-b8e8-4a66-8e54-9cd8a5103409",
-          "display": "StreamFHIR 0.3.0"
+          "reference": "urn:uuid:a56589d1-c92e-4604-85f5-640eab90ca9a",
+          "display": "StreamFHIR 0.4.0"
          }
         }
        ],
@@ -748,7 +750,8 @@
     "lon": -8.412,
     "water_body": "Mill Pond (fictional)",
     "description": "Synthetic demo site: shallow pond inlet used by dog walkers.",
-    "flow": "still"
+    "flow": "still",
+    "identifiers": []
    },
    "risk": {
     "site_id": "S-MILL",
@@ -931,7 +934,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:f1df4649-34cd-4932-97cd-230b3dece392",
+      "fullUrl": "urn:uuid:561656c1-8d38-412b-8f28-c82fb33b01f4",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -983,7 +986,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:1031da13-5bba-445b-b7f1-90eb9b4d1a97",
+      "fullUrl": "urn:uuid:4841cc1b-9ab2-4dc2-a126-c72adff9cd45",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1002,7 +1005,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
        },
        "identifier": [
         {
@@ -1018,7 +1021,7 @@
        ],
        "version": [
         {
-         "value": "0.3.0"
+         "value": "0.4.0"
         }
        ]
       },
@@ -1029,7 +1032,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:f7eaae17-aa4f-4219-a52c-ee7e0800717d",
+      "fullUrl": "urn:uuid:b1166479-97bf-4b58-9697-361044484f6b",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1116,7 +1119,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:f1df4649-34cd-4932-97cd-230b3dece392",
+        "reference": "urn:uuid:561656c1-8d38-412b-8f28-c82fb33b01f4",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1124,8 +1127,8 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:1031da13-5bba-445b-b7f1-90eb9b4d1a97",
-        "display": "StreamFHIR 0.3.0"
+        "reference": "urn:uuid:4841cc1b-9ab2-4dc2-a126-c72adff9cd45",
+        "display": "StreamFHIR 0.4.0"
        }
       },
       "request": {
@@ -1134,7 +1137,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:87964147-563d-4f2d-99b8-9dda069a97ae",
+      "fullUrl": "urn:uuid:1fe64cbc-ea90-494c-bdfa-23a861bec0c8",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1154,14 +1157,14 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Mill Pond inlet computed by StreamFHIR 0.3.0 from 1 citizen records</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Mill Pond inlet computed by StreamFHIR 0.4.0 from 1 citizen records</p></div>"
        },
        "target": [
         {
-         "reference": "urn:uuid:f7eaae17-aa4f-4219-a52c-ee7e0800717d"
+         "reference": "urn:uuid:b1166479-97bf-4b58-9697-361044484f6b"
         }
        ],
-       "recorded": "2026-09-29T10:08:00+00:00",
+       "recorded": "2026-09-29T13:03:49+00:00",
        "activity": {
         "coding": [
          {
@@ -1183,8 +1186,8 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:1031da13-5bba-445b-b7f1-90eb9b4d1a97",
-          "display": "StreamFHIR 0.3.0"
+          "reference": "urn:uuid:4841cc1b-9ab2-4dc2-a126-c72adff9cd45",
+          "display": "StreamFHIR 0.4.0"
          }
         }
        ],
@@ -1217,7 +1220,8 @@
     "lon": -8.39,
     "water_body": "Willow Creek (fictional)",
     "description": "Synthetic demo site: creek running past allotment gardens.",
-    "flow": "flowing"
+    "flow": "flowing",
+    "identifiers": []
    },
    "risk": {
     "site_id": "S-WILLOW",
@@ -1410,7 +1414,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:c6ba4cd4-a4fd-4a8d-b5d9-bd996f692053",
+      "fullUrl": "urn:uuid:6c98816f-8dbd-4a57-aa8e-a95a5a2ed8b8",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -1462,7 +1466,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:5c2fff5f-6473-4ae1-9edf-1cf6d5356239",
+      "fullUrl": "urn:uuid:ebdf5d71-67d6-47ab-801d-1031f09a4988",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1481,7 +1485,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
        },
        "identifier": [
         {
@@ -1497,7 +1501,7 @@
        ],
        "version": [
         {
-         "value": "0.3.0"
+         "value": "0.4.0"
         }
        ]
       },
@@ -1508,7 +1512,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:a30fb84d-f5f1-41e0-9301-edbe04e20ce0",
+      "fullUrl": "urn:uuid:cbe3fa00-df8a-4ed9-94e0-c2e4094d2ec4",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1595,7 +1599,7 @@
         "text": "High health hazard at Willow Creek - allotment gardens (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-11 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:c6ba4cd4-a4fd-4a8d-b5d9-bd996f692053",
+        "reference": "urn:uuid:6c98816f-8dbd-4a57-aa8e-a95a5a2ed8b8",
         "display": "Willow Creek - allotment gardens"
        },
        "period": {
@@ -1603,8 +1607,8 @@
         "end": "2026-10-11T18:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:5c2fff5f-6473-4ae1-9edf-1cf6d5356239",
-        "display": "StreamFHIR 0.3.0"
+        "reference": "urn:uuid:ebdf5d71-67d6-47ab-801d-1031f09a4988",
+        "display": "StreamFHIR 0.4.0"
        }
       },
       "request": {
@@ -1613,7 +1617,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:680de055-d55d-4806-9346-6cd2c2c6b1f2",
+      "fullUrl": "urn:uuid:501ef26c-6a0f-4ace-8dc9-b2c2ec52e814",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-WILLOW",
@@ -1633,14 +1637,14 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Willow Creek - allotment gardens computed by StreamFHIR 0.3.0 from 1 citizen records</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Willow Creek - allotment gardens computed by StreamFHIR 0.4.0 from 1 citizen records</p></div>"
        },
        "target": [
         {
-         "reference": "urn:uuid:a30fb84d-f5f1-41e0-9301-edbe04e20ce0"
+         "reference": "urn:uuid:cbe3fa00-df8a-4ed9-94e0-c2e4094d2ec4"
         }
        ],
-       "recorded": "2026-09-29T10:08:00+00:00",
+       "recorded": "2026-09-29T13:03:49+00:00",
        "activity": {
         "coding": [
          {
@@ -1662,8 +1666,8 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:5c2fff5f-6473-4ae1-9edf-1cf6d5356239",
-          "display": "StreamFHIR 0.3.0"
+          "reference": "urn:uuid:ebdf5d71-67d6-47ab-801d-1031f09a4988",
+          "display": "StreamFHIR 0.4.0"
          }
         }
        ],
@@ -1696,7 +1700,8 @@
     "lon": -8.395,
     "water_body": "Oak Stream (fictional)",
     "description": "Synthetic demo site: recently re-naturalised reach.",
-    "flow": "flowing"
+    "flow": "flowing",
+    "identifiers": []
    },
    "risk": {
     "site_id": "S-OAK",

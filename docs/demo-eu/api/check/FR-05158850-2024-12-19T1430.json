@@ -1,0 +1,627 @@
+{
+ "report": {
+  "record_id": "FR-05158850-2024-12-19T1430",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:3c1bcff8-87f2-4548-85b6-294e53e9a47f",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Le ruisseau du Panariol à Mondonville (FR-05158850)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FR-05158850"
+      },
+      {
+       "system": "https://id.eaufrance.fr/StationMesureEauxSurface",
+       "value": "05158850"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · Le ruisseau du Panariol à Mondonville",
+     "description": "Real French river monitoring station 05158850 (Hub'Eau / Sandre)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.301562418,
+      "latitude": 43.674356699
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FR-05158850"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:8756e8de-f9c4-4f64-8878-716535e04433",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.4.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:abb59b82-0f63-42c5-83ab-f2010086b5eb",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Le ruisseau du Panariol à Mondonville on 2024-12-19T14:30:00+01:00: 4 indicators (final, record FR-05158850-2024-12-19T1430)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05158850-2024-12-19T1430"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:3c1bcff8-87f2-4548-85b6-294e53e9a47f",
+      "display": "Toulouse area · Le ruisseau du Panariol à Mondonville"
+     },
+     "effectiveDateTime": "2024-12-19T14:30:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:18ce2d2c-848f-4328-b95d-ec776e601ca8"
+      },
+      {
+       "reference": "urn:uuid:50b9caa6-eaea-41bd-8abc-420b82163610"
+      },
+      {
+       "reference": "urn:uuid:6014f347-cec4-4b92-b37d-ff5f74b23989"
+      },
+      {
+       "reference": "urn:uuid:692e032f-1dba-4980-8747-9f004e3de352"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05158850-2024-12-19T1430"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:18ce2d2c-848f-4328-b95d-ec776e601ca8",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 61.5 mg/L at Toulouse area · Le ruisseau du Panariol à Mondonville (final, record FR-05158850-2024-12-19T1430)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05158850-2024-12-19T1430.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       },
+       {
+        "system": "http://loinc.org",
+        "code": "9480-5",
+        "display": "Nitrate [Mass/volume] in Water"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14797-55-8",
+        "display": "Nitrate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1340",
+        "display": "Nitrates"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:3c1bcff8-87f2-4548-85b6-294e53e9a47f",
+      "display": "Toulouse area · Le ruisseau du Panariol à Mondonville"
+     },
+     "effectiveDateTime": "2024-12-19T14:30:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 61.5,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05158850-2024-12-19T1430.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:50b9caa6-eaea-41bd-8abc-420b82163610",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-NO3 at Toulouse area · Le ruisseau du Panariol à Mondonville (final, record FR-05158850-2024-12-19T1430)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05158850-2024-12-19T1430.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:3c1bcff8-87f2-4548-85b6-294e53e9a47f",
+      "display": "Toulouse area · Le ruisseau du Panariol à Mondonville"
+     },
+     "effectiveDateTime": "2024-12-19T14:30:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-NO3",
+        "display": "Nitrate reporting basis: as-NO3"
+       }
+      ],
+      "text": "as-NO3"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05158850-2024-12-19T1430.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6014f347-cec4-4b92-b37d-ff5f74b23989",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 8.3 pH at Toulouse area · Le ruisseau du Panariol à Mondonville (final, record FR-05158850-2024-12-19T1430)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05158850-2024-12-19T1430.ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1302",
+        "display": "Potentiel en Hydrogène (pH)"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:3c1bcff8-87f2-4548-85b6-294e53e9a47f",
+      "display": "Toulouse area · Le ruisseau du Panariol à Mondonville"
+     },
+     "effectiveDateTime": "2024-12-19T14:30:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 8.3,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05158850-2024-12-19T1430.ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:692e032f-1dba-4980-8747-9f004e3de352",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 10.5 °C at Toulouse area · Le ruisseau du Panariol à Mondonville (final, record FR-05158850-2024-12-19T1430)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05158850-2024-12-19T1430.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1301",
+        "display": "Température de l'Eau"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:3c1bcff8-87f2-4548-85b6-294e53e9a47f",
+      "display": "Toulouse area · Le ruisseau du Panariol à Mondonville"
+     },
+     "effectiveDateTime": "2024-12-19T14:30:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 10.5,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05158850-2024-12-19T1430.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:c4ed1950-b8a8-443e-ac9a-177df87e896b",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FR-05158850-2024-12-19T1430",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05158850-2024-12-19T1430 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:abb59b82-0f63-42c5-83ab-f2010086b5eb"
+      },
+      {
+       "reference": "urn:uuid:18ce2d2c-848f-4328-b95d-ec776e601ca8"
+      },
+      {
+       "reference": "urn:uuid:50b9caa6-eaea-41bd-8abc-420b82163610"
+      },
+      {
+       "reference": "urn:uuid:6014f347-cec4-4b92-b37d-ff5f74b23989"
+      },
+      {
+       "reference": "urn:uuid:692e032f-1dba-4980-8747-9f004e3de352"
+      }
+     ],
+     "occurredDateTime": "2024-12-19T14:30:00+01:00",
+     "recorded": "2026-09-29T13:04:34+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        },
+        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:8756e8de-f9c4-4f64-8878-716535e04433",
+        "display": "StreamFHIR 0.4.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FR-05158850-2024-12-19T1430"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FR-05158850-2024-12-19T1430"
+    }
+   }
+  ]
+ }
+}

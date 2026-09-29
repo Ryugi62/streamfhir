@@ -1,0 +1,718 @@
+{
+ "report": {
+  "record_id": "FR-05159410-2024-12-19T1050",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · L'Aussonnelle au niveau de Léguevin (FR-05159410)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FR-05159410"
+      },
+      {
+       "system": "https://id.eaufrance.fr/StationMesureEauxSurface",
+       "value": "05159410"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · L'Aussonnelle au niveau de Léguevin",
+     "description": "Real French river monitoring station 05159410 (Hub'Eau / Sandre)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.269780879,
+      "latitude": 43.58484601
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FR-05159410"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:15a31e57-6e6f-46fc-afa6-f3370d21f461",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.4.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:54897aed-7649-40c0-b6b9-4a85792da105",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · L'Aussonnelle au niveau de Léguevin on 2024-12-19T10:50:00+01:00: 5 indicators (final, record FR-05159410-2024-12-19T1050)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159410-2024-12-19T1050"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+      "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
+     },
+     "effectiveDateTime": "2024-12-19T10:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:4691eaac-a5a6-4168-85c4-d88330396314"
+      },
+      {
+       "reference": "urn:uuid:ec947130-702c-47b6-a888-84b5f22e51d3"
+      },
+      {
+       "reference": "urn:uuid:3f627301-6ace-4d85-b316-6869f8874230"
+      },
+      {
+       "reference": "urn:uuid:9e302bc0-54a4-452d-b64a-4c86a0de9aab"
+      },
+      {
+       "reference": "urn:uuid:74f43874-4dd5-4f04-9a1d-e02d63495a4b"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159410-2024-12-19T1050"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:4691eaac-a5a6-4168-85c4-d88330396314",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 10.5 °C at Toulouse area · L'Aussonnelle au niveau de Léguevin (final, record FR-05159410-2024-12-19T1050)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159410-2024-12-19T1050.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1301",
+        "display": "Température de l'Eau"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+      "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
+     },
+     "effectiveDateTime": "2024-12-19T10:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 10.5,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159410-2024-12-19T1050.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:ec947130-702c-47b6-a888-84b5f22e51d3",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 7.7 pH at Toulouse area · L'Aussonnelle au niveau de Léguevin (final, record FR-05159410-2024-12-19T1050)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159410-2024-12-19T1050.ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1302",
+        "display": "Potentiel en Hydrogène (pH)"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+      "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
+     },
+     "effectiveDateTime": "2024-12-19T10:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 7.7,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159410-2024-12-19T1050.ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:3f627301-6ace-4d85-b316-6869f8874230",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 20.8 mg/L at Toulouse area · L'Aussonnelle au niveau de Léguevin (final, record FR-05159410-2024-12-19T1050)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159410-2024-12-19T1050.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       },
+       {
+        "system": "http://loinc.org",
+        "code": "9480-5",
+        "display": "Nitrate [Mass/volume] in Water"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14797-55-8",
+        "display": "Nitrate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1340",
+        "display": "Nitrates"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+      "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
+     },
+     "effectiveDateTime": "2024-12-19T10:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 20.8,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159410-2024-12-19T1050.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:9e302bc0-54a4-452d-b64a-4c86a0de9aab",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-NO3 at Toulouse area · L'Aussonnelle au niveau de Léguevin (final, record FR-05159410-2024-12-19T1050)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159410-2024-12-19T1050.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+      "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
+     },
+     "effectiveDateTime": "2024-12-19T10:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-NO3",
+        "display": "Nitrate reporting basis: as-NO3"
+       }
+      ],
+      "text": "as-NO3"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159410-2024-12-19T1050.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:74f43874-4dd5-4f04-9a1d-e02d63495a4b",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.98 mg/L at Toulouse area · L'Aussonnelle au niveau de Léguevin (final, record FR-05159410-2024-12-19T1050)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159410-2024-12-19T1050.phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14265-44-2",
+        "display": "Phosphate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1433",
+        "display": "Orthophosphates (PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:e0d997b4-9666-44ed-864d-25414564d72e",
+      "display": "Toulouse area · L'Aussonnelle au niveau de Léguevin"
+     },
+     "effectiveDateTime": "2024-12-19T10:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.98,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159410-2024-12-19T1050.phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:01d4393a-2049-4fd1-83cc-535e0e66ce1c",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FR-05159410-2024-12-19T1050",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159410-2024-12-19T1050 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:54897aed-7649-40c0-b6b9-4a85792da105"
+      },
+      {
+       "reference": "urn:uuid:4691eaac-a5a6-4168-85c4-d88330396314"
+      },
+      {
+       "reference": "urn:uuid:ec947130-702c-47b6-a888-84b5f22e51d3"
+      },
+      {
+       "reference": "urn:uuid:3f627301-6ace-4d85-b316-6869f8874230"
+      },
+      {
+       "reference": "urn:uuid:9e302bc0-54a4-452d-b64a-4c86a0de9aab"
+      },
+      {
+       "reference": "urn:uuid:74f43874-4dd5-4f04-9a1d-e02d63495a4b"
+      }
+     ],
+     "occurredDateTime": "2024-12-19T10:50:00+01:00",
+     "recorded": "2026-09-29T13:04:34+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        },
+        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:15a31e57-6e6f-46fc-afa6-f3370d21f461",
+        "display": "StreamFHIR 0.4.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FR-05159410-2024-12-19T1050"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FR-05159410-2024-12-19T1050"
+    }
+   }
+  ]
+ }
+}

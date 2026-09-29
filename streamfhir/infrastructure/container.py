@@ -37,4 +37,5 @@ def build_service(data_dir: str = DATA_DIR, fhir_base: str = None) -> StreamFhir
         FhirMapper(test_data=meta.get("synthetic", True), pseudonymous=meta.get("observer_kind", "citizen") == "citizen"),
         HapiFhirServer(fhir_base or os.environ.get("STREAMFHIR_FHIR_BASE", DEFAULT_BASE)),
         clock,
+        per_site_as_of=bool(meta.get("evaluate_each_site_at_its_latest_visit")),
     )

@@ -1,0 +1,48 @@
+{
+ "resourceType": "CodeSystem",
+ "id": "sandre-parametre-fragment",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CodeSystem: Sandre parameters (fragment)</p></div>"
+ },
+ "url": "https://id.eaufrance.fr/par",
+ "name": "SandreParametreFragment",
+ "title": "Sandre parameters (fragment)",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "publisher": "StreamFHIR hackathon prototype (codes owned by Sandre (France))",
+ "description": "Fragment of Sandre (France)'s vocabulary at https://id.eaufrance.fr/par: only the 4 codes StreamFHIR emits, with the labels the publisher shows (read 2026-09-29). Not an official FHIR representation.",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "caseSensitive": true,
+ "content": "fragment",
+ "count": 4,
+ "concept": [
+  {
+   "code": "1302",
+   "display": "Potentiel en Hydrogène (pH)"
+  },
+  {
+   "code": "1301",
+   "display": "Température de l'Eau"
+  },
+  {
+   "code": "1340",
+   "display": "Nitrates"
+  },
+  {
+   "code": "1433",
+   "display": "Orthophosphates (PO4)"
+  }
+ ]
+}

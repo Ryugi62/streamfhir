@@ -1,0 +1,718 @@
+{
+ "report": {
+  "record_id": "FR-05163760-2024-12-17T1707",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · La Saudrune à Villeneuve-Tolosane (FR-05163760)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FR-05163760"
+      },
+      {
+       "system": "https://id.eaufrance.fr/StationMesureEauxSurface",
+       "value": "05163760"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · La Saudrune à Villeneuve-Tolosane",
+     "description": "Real French river monitoring station 05163760 (Hub'Eau / Sandre)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.37208477,
+      "latitude": 43.529282091
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FR-05163760"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:ed3c9d8e-62d9-43ab-9ca8-d4c71e956122",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.4.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d4d2e83c-7437-42fa-9f6d-9acc5b433c89",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · La Saudrune à Villeneuve-Tolosane on 2024-12-17T17:07:00+01:00: 5 indicators (final, record FR-05163760-2024-12-17T1707)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05163760-2024-12-17T1707"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+      "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
+     },
+     "effectiveDateTime": "2024-12-17T17:07:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:a5a1516d-3ecf-47dc-8eba-e52163774887"
+      },
+      {
+       "reference": "urn:uuid:953dceee-6fcc-4afd-9dec-e40cbd13720c"
+      },
+      {
+       "reference": "urn:uuid:f386c660-f39d-439d-afbb-924af5e0a6b2"
+      },
+      {
+       "reference": "urn:uuid:f731b789-9472-4357-b6e1-18a0ed40a526"
+      },
+      {
+       "reference": "urn:uuid:d46aacbc-b233-4a22-988e-35f35674b321"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05163760-2024-12-17T1707"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:a5a1516d-3ecf-47dc-8eba-e52163774887",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.16 mg/L at Toulouse area · La Saudrune à Villeneuve-Tolosane (final, record FR-05163760-2024-12-17T1707)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05163760-2024-12-17T1707.phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14265-44-2",
+        "display": "Phosphate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1433",
+        "display": "Orthophosphates (PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+      "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
+     },
+     "effectiveDateTime": "2024-12-17T17:07:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.16,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05163760-2024-12-17T1707.phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:953dceee-6fcc-4afd-9dec-e40cbd13720c",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 8.1 pH at Toulouse area · La Saudrune à Villeneuve-Tolosane (final, record FR-05163760-2024-12-17T1707)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05163760-2024-12-17T1707.ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1302",
+        "display": "Potentiel en Hydrogène (pH)"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+      "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
+     },
+     "effectiveDateTime": "2024-12-17T17:07:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 8.1,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05163760-2024-12-17T1707.ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:f386c660-f39d-439d-afbb-924af5e0a6b2",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 7.0 °C at Toulouse area · La Saudrune à Villeneuve-Tolosane (final, record FR-05163760-2024-12-17T1707)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05163760-2024-12-17T1707.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1301",
+        "display": "Température de l'Eau"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+      "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
+     },
+     "effectiveDateTime": "2024-12-17T17:07:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 7.0,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05163760-2024-12-17T1707.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:f731b789-9472-4357-b6e1-18a0ed40a526",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 13.0 mg/L at Toulouse area · La Saudrune à Villeneuve-Tolosane (final, record FR-05163760-2024-12-17T1707)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05163760-2024-12-17T1707.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       },
+       {
+        "system": "http://loinc.org",
+        "code": "9480-5",
+        "display": "Nitrate [Mass/volume] in Water"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14797-55-8",
+        "display": "Nitrate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1340",
+        "display": "Nitrates"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+      "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
+     },
+     "effectiveDateTime": "2024-12-17T17:07:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 13.0,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05163760-2024-12-17T1707.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d46aacbc-b233-4a22-988e-35f35674b321",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-NO3 at Toulouse area · La Saudrune à Villeneuve-Tolosane (final, record FR-05163760-2024-12-17T1707)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05163760-2024-12-17T1707.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:745ec2fb-00cb-4374-bf70-cf500c01da3e",
+      "display": "Toulouse area · La Saudrune à Villeneuve-Tolosane"
+     },
+     "effectiveDateTime": "2024-12-17T17:07:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-NO3",
+        "display": "Nitrate reporting basis: as-NO3"
+       }
+      ],
+      "text": "as-NO3"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05163760-2024-12-17T1707.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:470b71aa-e7c8-4e02-b9d7-7a648e435c9b",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FR-05163760-2024-12-17T1707",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05163760-2024-12-17T1707 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:d4d2e83c-7437-42fa-9f6d-9acc5b433c89"
+      },
+      {
+       "reference": "urn:uuid:a5a1516d-3ecf-47dc-8eba-e52163774887"
+      },
+      {
+       "reference": "urn:uuid:953dceee-6fcc-4afd-9dec-e40cbd13720c"
+      },
+      {
+       "reference": "urn:uuid:f386c660-f39d-439d-afbb-924af5e0a6b2"
+      },
+      {
+       "reference": "urn:uuid:f731b789-9472-4357-b6e1-18a0ed40a526"
+      },
+      {
+       "reference": "urn:uuid:d46aacbc-b233-4a22-988e-35f35674b321"
+      }
+     ],
+     "occurredDateTime": "2024-12-17T17:07:00+01:00",
+     "recorded": "2026-09-29T13:04:34+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        },
+        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:ed3c9d8e-62d9-43ab-9ca8-d4c71e956122",
+        "display": "StreamFHIR 0.4.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FR-05163760-2024-12-17T1707"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FR-05163760-2024-12-17T1707"
+    }
+   }
+  ]
+ }
+}

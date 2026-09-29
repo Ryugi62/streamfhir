@@ -5,6 +5,11 @@ from typing import Any, Dict, List, Optional
 from ..domain.sites import Site
 
 
+def site_from_json(s: Dict[str, Any]) -> Site:
+    return Site(s["site_id"], s["name"], s["lat"], s["lon"], s["water_body"], s.get("description", ""),
+                s.get("flow", "flowing"), tuple((i["system"], i["value"]) for i in s.get("identifiers") or []))
+
+
 class JsonSiteRepository:
     def __init__(self, path: str):
         self.path = path
@@ -12,9 +17,7 @@ class JsonSiteRepository:
     def all(self) -> Dict[str, Site]:
         with open(self.path, encoding="utf-8") as fh:
             data = json.load(fh)
-        return {s["site_id"]: Site(s["site_id"], s["name"], s["lat"], s["lon"], s["water_body"], s.get("description", ""),
-                                s.get("flow", "flowing"))
-                for s in data["sites"]}
+        return {s["site_id"]: site_from_json(s) for s in data["sites"]}
 
 
 class JsonRecordRepository:

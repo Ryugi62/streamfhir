@@ -22,7 +22,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+    "fullUrl": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -74,7 +74,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bb633a86-7152-48d6-9f1f-9c4f7e651496",
+    "fullUrl": "urn:uuid:de489935-6681-45ff-8502-d3defb16a52c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -93,7 +93,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
      },
      "identifier": [
       {
@@ -109,7 +109,7 @@
      ],
      "version": [
       {
-       "value": "0.3.0"
+       "value": "0.4.0"
       }
      ]
     },
@@ -120,7 +120,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2196f962-c4a3-46c8-8dfd-94edd66140a7",
+    "fullUrl": "urn:uuid:ec62aefb-ff88-49ba-a580-c0828b52b700",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -178,7 +178,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+      "reference": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-22T18:40:00+01:00",
@@ -193,19 +193,19 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e96bd9c0-f6c6-46a8-add2-fd6a3f2bce99"
+       "reference": "urn:uuid:1d431b64-6734-47d9-9106-08ee988290a2"
       },
       {
-       "reference": "urn:uuid:5a3f413c-c5d3-49c4-b111-2bd313af692a"
+       "reference": "urn:uuid:5405d4b6-71ce-4d95-92e9-2caab37b577b"
       },
       {
-       "reference": "urn:uuid:ba7acfd1-8e9e-43fe-8685-be77772cdef7"
+       "reference": "urn:uuid:4149e151-f830-4e7d-be82-c7a7e658488b"
       },
       {
-       "reference": "urn:uuid:d8611222-da9c-4b4c-97a5-3000f2ee3001"
+       "reference": "urn:uuid:3b0b31e7-6866-4712-ad78-0add74c822c8"
       },
       {
-       "reference": "urn:uuid:28e0a7eb-01a6-4c91-9db8-4662491bb392"
+       "reference": "urn:uuid:f3fc1716-75c7-4c38-aabb-5cf05828f94e"
       }
      ],
      "note": [
@@ -223,7 +223,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e96bd9c0-f6c6-46a8-add2-fd6a3f2bce99",
+    "fullUrl": "urn:uuid:1d431b64-6734-47d9-9106-08ee988290a2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -276,12 +276,17 @@
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "water-temperature",
         "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
        }
       ],
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+      "reference": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-22T18:40:00+01:00",
@@ -307,7 +312,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5a3f413c-c5d3-49c4-b111-2bd313af692a",
+    "fullUrl": "urn:uuid:5405d4b6-71ce-4d95-92e9-2caab37b577b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -365,7 +370,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+      "reference": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-22T18:40:00+01:00",
@@ -395,7 +400,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ba7acfd1-8e9e-43fe-8685-be77772cdef7",
+    "fullUrl": "urn:uuid:4149e151-f830-4e7d-be82-c7a7e658488b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -453,7 +458,7 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+      "reference": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-22T18:40:00+01:00",
@@ -488,7 +493,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d8611222-da9c-4b4c-97a5-3000f2ee3001",
+    "fullUrl": "urn:uuid:3b0b31e7-6866-4712-ad78-0add74c822c8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -546,7 +551,7 @@
       "text": "Dead fish seen"
      },
      "subject": {
-      "reference": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+      "reference": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-22T18:40:00+01:00",
@@ -572,7 +577,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:28e0a7eb-01a6-4c91-9db8-4662491bb392",
+    "fullUrl": "urn:uuid:f3fc1716-75c7-4c38-aabb-5cf05828f94e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -630,7 +635,7 @@
       "text": "Pets or livestock in the water"
      },
      "subject": {
-      "reference": "urn:uuid:69279630-f625-4d57-abaf-d328ceaa47c3",
+      "reference": "urn:uuid:2fb247a7-d26e-414d-8fdc-27a37043568e",
       "display": "Mill Pond inlet"
      },
      "effectiveDateTime": "2026-09-22T18:40:00+01:00",
@@ -651,7 +656,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5c3326b7-fb75-4e61-996d-5e37a5c8870e",
+    "fullUrl": "urn:uuid:a746eff2-9366-4dfa-9bb8-a3005fd6e873",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-SYN-007",
@@ -676,30 +681,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-007 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.3.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-007 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:2196f962-c4a3-46c8-8dfd-94edd66140a7"
+       "reference": "urn:uuid:ec62aefb-ff88-49ba-a580-c0828b52b700"
       },
       {
-       "reference": "urn:uuid:e96bd9c0-f6c6-46a8-add2-fd6a3f2bce99"
+       "reference": "urn:uuid:1d431b64-6734-47d9-9106-08ee988290a2"
       },
       {
-       "reference": "urn:uuid:5a3f413c-c5d3-49c4-b111-2bd313af692a"
+       "reference": "urn:uuid:5405d4b6-71ce-4d95-92e9-2caab37b577b"
       },
       {
-       "reference": "urn:uuid:ba7acfd1-8e9e-43fe-8685-be77772cdef7"
+       "reference": "urn:uuid:4149e151-f830-4e7d-be82-c7a7e658488b"
       },
       {
-       "reference": "urn:uuid:d8611222-da9c-4b4c-97a5-3000f2ee3001"
+       "reference": "urn:uuid:3b0b31e7-6866-4712-ad78-0add74c822c8"
       },
       {
-       "reference": "urn:uuid:28e0a7eb-01a6-4c91-9db8-4662491bb392"
+       "reference": "urn:uuid:f3fc1716-75c7-4c38-aabb-5cf05828f94e"
       }
      ],
      "occurredDateTime": "2026-09-22T18:40:00+01:00",
-     "recorded": "2026-09-29T10:08:00+00:00",
+     "recorded": "2026-09-29T13:03:49+00:00",
      "activity": {
       "coding": [
        {
@@ -739,8 +744,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:bb633a86-7152-48d6-9f1f-9c4f7e651496",
-        "display": "StreamFHIR 0.3.0"
+        "reference": "urn:uuid:de489935-6681-45ff-8502-d3defb16a52c",
+        "display": "StreamFHIR 0.4.0"
        }
       }
      ],

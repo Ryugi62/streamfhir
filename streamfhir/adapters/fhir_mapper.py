@@ -18,7 +18,7 @@ from ..domain.risk import CONFIRM, HAZARD, HIGH, LOW, MODERATE, REJECT, RULES, V
 from ..domain.sites import Site
 from ..domain.validation import REVIEW, ValidationReport
 
-VERSION = "0.3.0"
+VERSION = "0.4.0"
 DATE = "2026-09-29"
 BASE = "https://example.org/fhir/streamfhir"   # example canonical - replace when published
 CS_INDICATOR = BASE + "/CodeSystem/stream-indicator"
@@ -39,6 +39,21 @@ SID_FLAG = BASE + "/sid/flag"
 
 UCUM = "http://unitsofmeasure.org"
 LOINC = "http://loinc.org"
+# European water-data vocabularies (resolvable URIs of their publishers; they publish no FHIR CodeSystem resources)
+EEA_OBSERVED_PROPERTY = "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty"   # EEA WISE determinands (Waterbase)
+EEA_SITE_SCHEME = "http://dd.eionet.europa.eu/vocabulary/wise/IdentifierScheme/"          # + euMonitoringSiteCode
+SANDRE_PARAMETER = "https://id.eaufrance.fr/par"                                          # French national parameter codes
+SANDRE_STATION = "https://id.eaufrance.fr/StationMesureEauxSurface"                       # French surface-water stations
+CM_EU_WATER = BASE + "/ConceptMap/stream-indicator-to-eu-water"
+# StreamFHIR indicator -> the same observed property in EU (EEA WISE) and French (Sandre) water-data vocabularies.
+# Codes and labels were read from the publishers on 2026-09-29 (dd.eionet.europa.eu, id.eaufrance.fr).
+EU_WATER_CROSSWALK = {
+    "ph": ((EEA_OBSERVED_PROPERTY, "EEA_3152-01-0", "pH"), (SANDRE_PARAMETER, "1302", "Potentiel en Hydrogène (pH)")),
+    "water-temperature": ((EEA_OBSERVED_PROPERTY, "EEA_3121-01-5", "Water temperature"),
+                          (SANDRE_PARAMETER, "1301", "Température de l'Eau")),
+    "nitrate": ((EEA_OBSERVED_PROPERTY, "CAS_14797-55-8", "Nitrate"), (SANDRE_PARAMETER, "1340", "Nitrates")),
+    "phosphate": ((EEA_OBSERVED_PROPERTY, "CAS_14265-44-2", "Phosphate"), (SANDRE_PARAMETER, "1433", "Orthophosphates (PO4)")),
+}
 OBS_CATEGORY = "http://terminology.hl7.org/CodeSystem/observation-category"
 ACT_REASON = "http://terminology.hl7.org/CodeSystem/v3-ActReason"
 OBS_VALUE = "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -138,7 +153,8 @@ class FhirMapper:
                 "resourceType": "Location",
                 "meta": self._meta(),
                 "text": narrative("Stream monitoring site %s (%s)" % (site.name, site.site_id)),
-                "identifier": [{"system": SID_SITE, "value": site.site_id}],
+                "identifier": [{"system": SID_SITE, "value": site.site_id}]
+                + [{"system": system, "value": value} for system, value in site.identifiers],
                 "status": "active",
                 "name": site.name,
                 "description": site.description or "Citizen-science stream monitoring site on %s" % site.water_body,
@@ -223,8 +239,14 @@ class FhirMapper:
             ind = INDICATORS[code]
             notes = [prefix + i.message for i in report.warnings_for(code)] + record_notes
             coding = [{"system": CS_INDICATOR, "code": code, "display": ind.display}]
-            if code == "nitrate" and a.values.get("nitrate-basis") == "as-NO3":
+            as_no3 = code != "nitrate" or a.values.get("nitrate-basis") == "as-NO3"
+            if code == "nitrate" and as_no3:
                 coding.append(dict(NITRATE_LOINC))
+            if code in EU_WATER_CROSSWALK and as_no3:
+                eu, national = EU_WATER_CROSSWALK[code]
+                coding.append(dict(zip(("system", "code", "display"), eu)))
+                if a.origin == "sandre":
+                    coding.append(dict(zip(("system", "code", "display"), national)))
             oid = "%s.%s" % (a.record_id, code)
             obs: Dict[str, Any] = {
                 "resourceType": "Observation",
@@ -415,6 +437,23 @@ def codesystem_resources() -> List[Dict[str, Any]]:
     ]
 
 
+def external_fragment_codesystems() -> List[Dict[str, Any]]:
+    """Fragments (content = fragment) of the two European water vocabularies, holding only the codes StreamFHIR emits,
+    so a FHIR validator knows these systems. The publishers own the codes; they publish no FHIR CodeSystem themselves."""
+    def frag(cs_id, url, name, title, owner, index):
+        concepts = [{"code": t[index][1], "display": t[index][2]} for t in EU_WATER_CROSSWALK.values()]
+        return {"resourceType": "CodeSystem", "id": cs_id, "url": url, "name": name, "title": title, "status": "draft",
+                "experimental": True, "date": DATE, "publisher": "StreamFHIR hackathon prototype (codes owned by %s)" % owner,
+                "description": "Fragment of %s's vocabulary at %s: only the %d codes StreamFHIR emits, with the labels "
+                               "the publisher shows (read 2026-09-29). Not an official FHIR representation." % (owner, url, len(concepts)),
+                "jurisdiction": [JURISDICTION_WORLD], "caseSensitive": True, "content": "fragment",
+                "count": len(concepts), "concept": concepts}
+    return [frag("eea-wise-observedproperty-fragment", EEA_OBSERVED_PROPERTY, "EeaWiseObservedPropertyFragment",
+                 "EEA WISE ObservedProperty (fragment)", "the European Environment Agency", 0),
+            frag("sandre-parametre-fragment", SANDRE_PARAMETER, "SandreParametreFragment",
+                 "Sandre parameters (fragment)", "Sandre (France)", 1)]
+
+
 def valueset_resource() -> Dict[str, Any]:
     return {"resourceType": "ValueSet", "id": "stream-indicator", "url": VS_INDICATOR, "version": VERSION,
             "name": "StreamIndicator", "title": "Citizen stream assessment indicators", "status": "draft",
@@ -439,8 +478,15 @@ def _common_elements() -> List[Dict[str, Any]]:
          "slicing": {"discriminator": [{"type": "pattern", "path": "$this"}], "rules": "open"}},
         {"id": "Observation.category:survey", "path": "Observation.category", "sliceName": "survey", "min": 1, "max": "1",
          "patternCodeableConcept": {"coding": [{"system": OBS_CATEGORY, "code": "survey"}]}},
-        {"id": "Observation.code", "path": "Observation.code",
-         "binding": {"strength": "required", "valueSet": VS_INDICATOR}},
+        # exactly one coding from the StreamFHIR indicator ValueSet; other codings (LOINC, EEA WISE, Sandre) are
+        # translations of the same concept, allowed by the open slicing
+        {"id": "Observation.code.coding", "path": "Observation.code.coding", "min": 1,
+         "slicing": {"discriminator": [{"type": "value", "path": "system"}], "rules": "open"}},
+        {"id": "Observation.code.coding:streamfhir", "path": "Observation.code.coding", "sliceName": "streamfhir",
+         "min": 1, "max": "1", "binding": {"strength": "required", "valueSet": VS_INDICATOR}},
+        {"id": "Observation.code.coding:streamfhir.system", "path": "Observation.code.coding.system", "min": 1,
+         "fixedUri": CS_INDICATOR},
+        {"id": "Observation.code.coding:streamfhir.code", "path": "Observation.code.coding.code", "min": 1},
         {"id": "Observation.subject", "path": "Observation.subject", "min": 1,
          "type": [{"code": "Reference", "targetProfile": ["http://hl7.org/fhir/StructureDefinition/Location"]}],
          "short": "The stream site"},
@@ -555,8 +601,39 @@ def _with_text(r: Dict[str, Any]) -> Dict[str, Any]:
     return out
 
 
+def concept_map() -> Dict[str, Any]:
+    """StreamFHIR indicators -> EEA WISE determinands and French Sandre parameters (what the mapper adds as extra codings)."""
+    def group(target_index, target_system, target_version):
+        els = []
+        for code, targets in EU_WATER_CROSSWALK.items():
+            system, tcode, display = targets[target_index]
+            t = {"code": tcode, "display": display, "equivalence": "equivalent"}
+            if code == "nitrate":
+                t["dependsOn"] = [{"property": CS_INDICATOR + "#nitrate-basis", "system": CS_ANSWER, "value": "as-NO3"}]
+                t["comment"] = "Only readings expressed as NO3; readings as N are not mapped (1 mg/L as N = 4.43 mg/L as NO3)."
+            if code == "phosphate":
+                t["comment"] = "StreamFHIR phosphate is expressed as PO4; convert before comparing with values reported as P."
+            els.append({"code": code, "display": INDICATORS[code].display, "target": [t]})
+        g = {"source": CS_INDICATOR, "target": target_system, "element": els}
+        if target_version:
+            g["targetVersion"] = target_version
+        return g
+    return {
+        "resourceType": "ConceptMap", "id": "stream-indicator-to-eu-water", "url": CM_EU_WATER, "version": VERSION,
+        "name": "StreamIndicatorToEuWater", "title": "StreamFHIR indicators to EEA WISE determinands and Sandre parameters",
+        "status": "draft", "experimental": True, "date": DATE, "publisher": "StreamFHIR (hackathon prototype)",
+        "jurisdiction": [JURISDICTION_WORLD],
+        "description": "Maps the four measured StreamFHIR indicators to the codes European water agencies already report with: "
+                       "EEA WISE ObservedProperty (Waterbase, EU-wide) and Sandre parameters (France). StreamFHIR adds these "
+                       "codes to each Observation, so a health system can query citizen and agency readings with one code.",
+        "sourceUri": VS_INDICATOR,
+        "group": [group(0, EEA_OBSERVED_PROPERTY, None), group(1, SANDRE_PARAMETER, None)],
+    }
+
+
 def conformance_resources() -> List[Dict[str, Any]]:
-    return [_with_text(r) for r in codesystem_resources() + [valueset_resource(), hazard_rule_valueset()] + structuredefinition_resources()]
+    return [_with_text(r) for r in codesystem_resources() + external_fragment_codesystems()
+            + [valueset_resource(), hazard_rule_valueset()] + structuredefinition_resources() + [concept_map()]]
 
 
 def conformance_bundle() -> Dict[str, Any]:

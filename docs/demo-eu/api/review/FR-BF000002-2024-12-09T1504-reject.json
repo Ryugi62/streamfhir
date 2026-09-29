@@ -1,0 +1,3844 @@
+{
+ "rules": [
+  {
+   "id": "R1",
+   "title": "Poor habitat",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "mean of the visual habitat scores <= 5 (of 10)",
+   "why": "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
+   "advice": "Share with the city's river restoration team; repeat the visual check each season.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R2",
+   "title": "Nutrient enrichment",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds)",
+   "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+   "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R3",
+   "title": "Possible cyanobacterial bloom",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "human": 2
+   },
+   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
+   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+   "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R4",
+   "title": "Sewage signal",
+   "kind": "hazard",
+   "points": {
+    "human": 3,
+    "environment": 1
+   },
+   "when": "odour = sewage or water-colour = milky-grey",
+   "why": "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
+   "advice": "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R5",
+   "title": "Dead fish",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "environment": 1
+   },
+   "when": "dead-fish = yes",
+   "why": "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
+   "advice": "Do not touch the fish; note how many and report to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R6",
+   "title": "People in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "human": 2
+   },
+   "when": "people-contact = yes while R3 or R4 fired at the site",
+   "why": "Exposure turns a water problem into a human-health problem.",
+   "advice": "Discourage paddling and swimming here until the signal has been checked.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R7",
+   "title": "Pets or livestock in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "animal": 2
+   },
+   "when": "animal-contact = yes while R3, R4 or R5 fired at the site",
+   "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+   "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R8",
+   "title": "Oil or chemical signal",
+   "kind": "hazard",
+   "points": {
+    "environment": 2,
+    "human": 1
+   },
+   "when": "surface = oily-sheen or odour = chemical",
+   "why": "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
+   "advice": "Avoid skin contact and report the sheen or smell to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R9",
+   "title": "Nitrate above drinking-water value",
+   "kind": "condition",
+   "points": {
+    "human": 1
+   },
+   "when": "nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor)",
+   "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+   "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R10",
+   "title": "No mayfly, stonefly or caddisfly larvae found",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach",
+   "why": "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
+   "advice": "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  }
+ ],
+ "as_of": "2025-12-15T23:59:59+01:00",
+ "dataset": {
+  "synthetic": false,
+  "observer_kind": "organisation",
+  "source_query": "https://hubeau.eaufrance.fr/api/v2/qualite_rivieres/analyse_pc?bbox=1.25,43.45,1.65,43.75&code_parametre=1302,1301,1340,1433&date_debut_prelevement=2024-12-09&size=5000",
+  "retrieved": "2026-09-29T12:54:21Z",
+  "import_stats": {
+   "rows": 231,
+   "mapped_values": 225,
+   "below_quantification_limit": 6,
+   "skipped_rows": 0,
+   "records": 95,
+   "records_without_values": 1,
+   "sites": 52,
+   "sites_with_eu_code": 1
+  },
+  "label": "Real EU data: Toulouse area rivers (Hub'Eau, France)",
+  "evaluate_each_site_at_its_latest_visit": true
+ },
+ "sites": [
+  {
+   "site": {
+    "site_id": "FR-05157100",
+    "name": "Toulouse area · La Sausse à Toulouse",
+    "lat": 43.646812257,
+    "lon": 1.483920545,
+    "water_body": "La Sausse",
+    "description": "Real French river monitoring station 05157100 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05157100"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05157100",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05157100-2024-12-18T1343"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-18T13:43:00+01:00",
+      "last_seen": "2024-12-18T13:43:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157100-2024-12-18T1343"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05157100-2024-12-18T1343"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-04T13:43:00+01:00",
+    "window_end": "2024-12-18T13:43:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05157100-2024-12-18T1343",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-18T13:43:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05157150",
+    "name": "Toulouse area · La Seillonne au niveau de Dremil Lafage",
+    "lat": 43.584866574,
+    "lon": 1.616522682,
+    "water_body": "La Seillonne",
+    "description": "Real French river monitoring station 05157150 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05157150"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05157150",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05157150-2024-12-18T1041"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-18T10:41:00+01:00",
+      "last_seen": "2024-12-18T10:41:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157150-2024-12-18T1041"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05157150-2024-12-18T1041"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-04T10:41:00+01:00",
+    "window_end": "2024-12-18T10:41:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05157150-2024-12-18T1041",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-18T10:41:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05157360",
+    "name": "Toulouse area · L'Hers Mort à l'aval de Castanet",
+    "lat": 43.545909907,
+    "lon": 1.501887793,
+    "water_body": "L'Hers Mort",
+    "description": "Real French river monitoring station 05157360 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05157360"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05157360",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05157360-2024-12-18T1426"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-18T14:26:00+01:00",
+      "last_seen": "2024-12-18T14:26:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157360-2024-12-18T1426"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05157360-2024-12-18T1426"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-04T14:26:00+01:00",
+    "window_end": "2024-12-18T14:26:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05157360-2024-12-18T1426",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-18T14:26:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05157510",
+    "name": "Toulouse area · Le Tissier à Montlaur",
+    "lat": 43.47472413,
+    "lon": 1.574851925,
+    "water_body": "Ruisseau de Tissier",
+    "description": "Real French river monitoring station 05157510 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05157510"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05157510",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05157510-2024-12-17T1200"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T12:00:00+01:00",
+      "last_seen": "2024-12-17T12:00:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157510-2024-12-17T1200"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05157510-2024-12-17T1200"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T12:00:00+01:00",
+    "window_end": "2024-12-17T12:00:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05157510-2024-12-17T1200",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T12:00:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05157550",
+    "name": "Toulouse area · La Rivel à Baziège",
+    "lat": 43.462748566,
+    "lon": 1.594926497,
+    "water_body": "Ruisseau de Rivel",
+    "description": "Real French river monitoring station 05157550 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05157550"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05157550",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 3,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05157550-2024-12-17T1147"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T11:47:00+01:00",
+      "last_seen": "2024-12-17T11:47:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157550-2024-12-17T1147"
+      ]
+     },
+     {
+      "rule_id": "R9",
+      "title": "Nitrate above drinking-water value",
+      "kind": "condition",
+      "points": {
+       "human": 1
+      },
+      "record_ids": [
+       "FR-05157550-2024-12-17T1147"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+      "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+      "first_seen": "2024-12-17T11:47:00+01:00",
+      "last_seen": "2024-12-17T11:47:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157550-2024-12-17T1147"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05157550-2024-12-17T1147"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T11:47:00+01:00",
+    "window_end": "2024-12-17T11:47:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05157550-2024-12-17T1147",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T11:47:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05157600",
+    "name": "Toulouse area · Le Visenc à Baziège",
+    "lat": 43.449560442,
+    "lon": 1.626050795,
+    "water_body": "Ruisseau de Visenc",
+    "description": "Real French river monitoring station 05157600 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05157600"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05157600",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05157600-2024-12-17T1128"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T11:28:00+01:00",
+      "last_seen": "2024-12-17T11:28:00+01:00",
+      "trusted_record_ids": [
+       "FR-05157600-2024-12-17T1128"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05157600-2024-12-17T1128"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T11:28:00+01:00",
+    "window_end": "2024-12-17T11:28:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05157600-2024-12-17T1128",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T11:28:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05158090",
+    "name": "Toulouse area · Le ruisseau de Laragou à Bonrepos-Riquet",
+    "lat": 43.682674019,
+    "lon": 1.608357511,
+    "water_body": "Ruisseau de Laragou",
+    "description": "Real French river monitoring station 05158090 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05158090"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05158090",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05158090-2024-12-18T1200"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-04T12:00:00+01:00",
+    "window_end": "2024-12-18T12:00:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05158090-2024-12-18T1200",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-18T12:00:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05158700",
+    "name": "Toulouse area · L'Aussonnelle à Seilh",
+    "lat": 43.696469609,
+    "lon": 1.358402052,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05158700 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05158700"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05158700",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05158700-2024-12-17T1347"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T13:47:00+01:00",
+    "window_end": "2024-12-17T13:47:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05158700-2024-12-17T1347",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T13:47:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05158800",
+    "name": "Toulouse area · Le Ruisseau du Panariol à Aussonne",
+    "lat": 43.679663671,
+    "lon": 1.318741736,
+    "water_body": "Ruisseau du Gajea",
+    "description": "Real French river monitoring station 05158800 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05158800"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05158800",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05158800-2024-12-17T1255"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T12:55:00+01:00",
+      "last_seen": "2024-12-17T12:55:00+01:00",
+      "trusted_record_ids": [
+       "FR-05158800-2024-12-17T1255"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05158800-2024-12-17T1255"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T12:55:00+01:00",
+    "window_end": "2024-12-17T12:55:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05158800-2024-12-17T1255",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T12:55:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05158850",
+    "name": "Toulouse area · Le ruisseau du Panariol à Mondonville",
+    "lat": 43.674356699,
+    "lon": 1.301562418,
+    "water_body": "Ruisseau du Gajea",
+    "description": "Real French river monitoring station 05158850 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05158850"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05158850",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 3,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05158850-2024-12-19T1430"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-19T14:30:00+01:00",
+      "last_seen": "2024-12-19T14:30:00+01:00",
+      "trusted_record_ids": [
+       "FR-05158850-2024-12-19T1430"
+      ]
+     },
+     {
+      "rule_id": "R9",
+      "title": "Nitrate above drinking-water value",
+      "kind": "condition",
+      "points": {
+       "human": 1
+      },
+      "record_ids": [
+       "FR-05158850-2024-12-19T1430"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+      "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+      "first_seen": "2024-12-19T14:30:00+01:00",
+      "last_seen": "2024-12-19T14:30:00+01:00",
+      "trusted_record_ids": [
+       "FR-05158850-2024-12-19T1430"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05158850-2024-12-19T1430"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T14:30:00+01:00",
+    "window_end": "2024-12-19T14:30:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05158850-2024-12-19T1430",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T14:30:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159000",
+    "name": "Toulouse area · L'Aussonnelle à Cornebarrieu",
+    "lat": 43.653155467,
+    "lon": 1.327303391,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05159000 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159000"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159000",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05159000-2024-12-17T1439"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T14:39:00+01:00",
+    "window_end": "2024-12-17T14:39:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159000-2024-12-17T1439",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T14:39:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159180",
+    "name": "Toulouse area · L'Aussonnelle au niveau de Cornebarieu",
+    "lat": 43.632785878,
+    "lon": 1.307935882,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05159180 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159180"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159180",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05159180-2024-12-19T1340"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T13:40:00+01:00",
+    "window_end": "2024-12-19T13:40:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159180-2024-12-19T1340",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T13:40:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159200",
+    "name": "Toulouse area · Le Ruisseau de Bassac à Colomiers",
+    "lat": 43.632055804,
+    "lon": 1.307288324,
+    "water_body": "Ruisseau de Bassac",
+    "description": "Real French river monitoring station 05159200 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159200"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159200",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05159200-2024-12-19T1410"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T14:10:00+01:00",
+    "window_end": "2024-12-19T14:10:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159200-2024-12-19T1410",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T14:10:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159250",
+    "name": "Toulouse area · L'Aussonnelle à Colomiers",
+    "lat": 43.627467128,
+    "lon": 1.301600578,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05159250 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159250"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159250",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05159250-2024-12-19T1300"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T13:00:00+01:00",
+    "window_end": "2024-12-19T13:00:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159250-2024-12-19T1300",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T13:00:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159260",
+    "name": "Toulouse area · Le Courbet à Pibrac",
+    "lat": 43.622467745,
+    "lon": 1.286981282,
+    "water_body": "Le Courbet",
+    "description": "Real French river monitoring station 05159260 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159260"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159260",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05159260-2024-12-16T1437"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-02T14:37:00+01:00",
+    "window_end": "2024-12-16T14:37:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159260-2024-12-16T1437",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-16T14:37:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159300",
+    "name": "Toulouse area · Le Courbet à Brax",
+    "lat": 43.607678073,
+    "lon": 1.251207405,
+    "water_body": "Le Courbet",
+    "description": "Real French river monitoring station 05159300 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159300"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159300",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05159300-2024-12-19T1150"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T11:50:00+01:00",
+    "window_end": "2024-12-19T11:50:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159300-2024-12-19T1150",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T11:50:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159400",
+    "name": "Toulouse area · L'Aussonnelle à Léguevin",
+    "lat": 43.594559795,
+    "lon": 1.280743893,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05159400 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159400"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159400",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05159400-2024-12-19T1120"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-19T11:20:00+01:00",
+      "last_seen": "2024-12-19T11:20:00+01:00",
+      "trusted_record_ids": [
+       "FR-05159400-2024-12-19T1120"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05159400-2024-12-19T1120"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T11:20:00+01:00",
+    "window_end": "2024-12-19T11:20:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159400-2024-12-19T1120",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T11:20:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159410",
+    "name": "Toulouse area · L'Aussonnelle au niveau de Léguevin",
+    "lat": 43.58484601,
+    "lon": 1.269780879,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05159410 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159410"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159410",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05159410-2024-12-19T1050"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-19T10:50:00+01:00",
+      "last_seen": "2024-12-19T10:50:00+01:00",
+      "trusted_record_ids": [
+       "FR-05159410-2024-12-19T1050"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05159410-2024-12-19T1050"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T10:50:00+01:00",
+    "window_end": "2024-12-19T10:50:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159410-2024-12-19T1050",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T10:50:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05159420",
+    "name": "Toulouse area · L'Aussonnelle au niveau de La Salvetat-Saint-Gilles",
+    "lat": 43.576297661,
+    "lon": 1.269865258,
+    "water_body": "L'Aussonnelle",
+    "description": "Real French river monitoring station 05159420 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05159420"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05159420",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05159420-2024-12-19T1030"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-19T10:30:00+01:00",
+      "last_seen": "2024-12-19T10:30:00+01:00",
+      "trusted_record_ids": [
+       "FR-05159420-2024-12-19T1030"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05159420-2024-12-19T1030"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-05T10:30:00+01:00",
+    "window_end": "2024-12-19T10:30:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05159420-2024-12-19T1030",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-19T10:30:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05160000",
+    "name": "Toulouse area · Le Canal Latéral au droit de Lespinasse",
+    "lat": 43.709489755,
+    "lon": 1.386478721,
+    "water_body": "Canal Latéral à la Garonne",
+    "description": "Real French river monitoring station 05160000 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05160000"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05160000",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05160000-2024-12-17T1431"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T14:31:00+01:00",
+    "window_end": "2024-12-17T14:31:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05160000-2024-12-17T1431",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T14:31:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05161000",
+    "name": "Toulouse area · La Garonne en aval de Toulouse",
+    "lat": 43.700396138,
+    "lon": 1.368139354,
+    "water_body": "La Garonne",
+    "description": "Real French river monitoring station 05161000 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05161000"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05161000",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05161000-2024-12-17T1401"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T14:01:00+01:00",
+    "window_end": "2024-12-17T14:01:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05161000-2024-12-17T1401",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T14:01:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05161500",
+    "name": "Toulouse area · La Garonne au Syndicat Centre et Nord",
+    "lat": 43.664021872,
+    "lon": 1.403577731,
+    "water_body": "La Garonne",
+    "description": "Real French river monitoring station 05161500 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05161500"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05161500",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05161500-2024-12-17T0918"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T09:18:00+01:00",
+    "window_end": "2024-12-17T09:18:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05161500-2024-12-17T0918",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T09:18:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05161900",
+    "name": "Toulouse area · La Garonne à Blagnac",
+    "lat": 43.624924498,
+    "lon": 1.400961721,
+    "water_body": "La Garonne",
+    "description": "Real French river monitoring station 05161900 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05161900"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05161900",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05161900-2024-12-17T1133"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T11:33:00+01:00",
+    "window_end": "2024-12-17T11:33:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05161900-2024-12-17T1133",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T11:33:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05161950",
+    "name": "Toulouse area · Le Touch à St-Michel du Touch",
+    "lat": 43.62079603,
+    "lon": 1.395626096,
+    "water_body": "Le Touch",
+    "description": "Real French river monitoring station 05161950 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05161950"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05161950",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05161950-2024-12-17T1240"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T12:40:00+01:00",
+    "window_end": "2024-12-17T12:40:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05161950-2024-12-17T1240",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T12:40:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05162500",
+    "name": "Toulouse area · Le Touch en aval de Fonsorbes",
+    "lat": 43.524037222,
+    "lon": 1.260271198,
+    "water_body": "Le Touch",
+    "description": "Real French river monitoring station 05162500 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05162500"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05162500",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05162500-2024-12-16T1212"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-02T12:12:00+01:00",
+    "window_end": "2024-12-16T12:12:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05162500-2024-12-16T1212",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-16T12:12:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163100",
+    "name": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (Coubertin)",
+    "lat": 43.585122999,
+    "lon": 1.430186212,
+    "water_body": "Bras Inférieur Garonne",
+    "description": "Real French river monitoring station 05163100 (Hub'Eau / Sandre), also reported to the EEA as FR05163100",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163100"
+     ],
+     [
+      "http://dd.eionet.europa.eu/vocabulary/wise/IdentifierScheme/euMonitoringSiteCode",
+      "FR05163100"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163100",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163100-2024-12-17T1302"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T13:02:00+01:00",
+    "window_end": "2024-12-17T13:02:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163100-2024-12-17T1302",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T13:02:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163140",
+    "name": "Toulouse area · Le Bras inférieur Garonne dans Toulouse (rocade sud)",
+    "lat": 43.570552789,
+    "lon": 1.430782683,
+    "water_body": "Bras Inférieur Garonne",
+    "description": "Real French river monitoring station 05163140 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163140"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163140",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163140-2024-12-17T1438"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T14:38:00+01:00",
+    "window_end": "2024-12-17T14:38:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163140-2024-12-17T1438",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T14:38:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163290",
+    "name": "Toulouse area · La Garonne à l'entrée dans Toulouse",
+    "lat": 43.572350837,
+    "lon": 1.436897496,
+    "water_body": "La Garonne",
+    "description": "Real French river monitoring station 05163290 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163290"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163290",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163290-2024-12-17T1439"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T14:39:00+01:00",
+    "window_end": "2024-12-17T14:39:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163290-2024-12-17T1439",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T14:39:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163440",
+    "name": "Toulouse area · La Saundrune en amont de la Garonne",
+    "lat": 43.543713847,
+    "lon": 1.423091162,
+    "water_body": "Ruisseau de la Saudrune",
+    "description": "Real French river monitoring station 05163440 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163440"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163440",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05163440-2024-12-17T1523"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T15:23:00+01:00",
+      "last_seen": "2024-12-17T15:23:00+01:00",
+      "trusted_record_ids": [
+       "FR-05163440-2024-12-17T1523"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05163440-2024-12-17T1523"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T15:23:00+01:00",
+    "window_end": "2024-12-17T15:23:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163440-2024-12-17T1523",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T15:23:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163700",
+    "name": "Toulouse area · La Saudrune à l'aval du Bois Vert",
+    "lat": 43.539047635,
+    "lon": 1.39332015,
+    "water_body": "Ruisseau de la Saudrune",
+    "description": "Real French river monitoring station 05163700 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163700"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163700",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163700-2024-12-17T1549"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T15:49:00+01:00",
+    "window_end": "2024-12-17T15:49:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163700-2024-12-17T1549",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T15:49:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163720",
+    "name": "Toulouse area · Le Roussimort à Portet-sur-Garonne",
+    "lat": 43.535386726,
+    "lon": 1.377107012,
+    "water_body": "Le Roussimort",
+    "description": "Real French river monitoring station 05163720 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163720"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163720",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163720-2024-12-17T1619"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T16:19:00+01:00",
+    "window_end": "2024-12-17T16:19:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163720-2024-12-17T1619",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T16:19:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163760",
+    "name": "Toulouse area · La Saudrune à Villeneuve-Tolosane",
+    "lat": 43.529282091,
+    "lon": 1.37208477,
+    "water_body": "Ruisseau de la Saudrune",
+    "description": "Real French river monitoring station 05163760 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163760"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163760",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163760-2024-12-17T1707"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T17:07:00+01:00",
+    "window_end": "2024-12-17T17:07:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163760-2024-12-17T1707",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T17:07:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05163780",
+    "name": "Toulouse area · La Saudrune à Seysses",
+    "lat": 43.493489837,
+    "lon": 1.326350189,
+    "water_body": "Ruisseau de la Saudrune",
+    "description": "Real French river monitoring station 05163780 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05163780"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05163780",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05163780-2024-12-16T0901"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-02T09:01:00+01:00",
+    "window_end": "2024-12-16T09:01:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05163780-2024-12-16T0901",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-16T09:01:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05164000",
+    "name": "Toulouse area · L'Ariège à Lacroix - Falgarde",
+    "lat": 43.499561998,
+    "lon": 1.406872377,
+    "water_body": "L'Ariège",
+    "description": "Real French river monitoring station 05164000 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05164000"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05164000",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05164000-2024-12-17T1011"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T10:11:00+01:00",
+    "window_end": "2024-12-17T10:11:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05164000-2024-12-17T1011",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T10:11:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05165000",
+    "name": "Toulouse area · La Lèze à Labarthe-sur-Lèze",
+    "lat": 43.450964783,
+    "lon": 1.406575617,
+    "water_body": "La Lèze",
+    "description": "Real French river monitoring station 05165000 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05165000"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05165000",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05165000-2024-12-17T1047"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T10:47:00+01:00",
+    "window_end": "2024-12-17T10:47:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05165000-2024-12-17T1047",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T10:47:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05165850",
+    "name": "Toulouse area · L'Ariège à Clermont-le-Fort",
+    "lat": 43.460528595,
+    "lon": 1.420603568,
+    "water_body": "L'Ariège",
+    "description": "Real French river monitoring station 05165850 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05165850"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05165850",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05165850-2024-12-17T1105"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T11:05:00+01:00",
+    "window_end": "2024-12-17T11:05:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05165850-2024-12-17T1105",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T11:05:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05174000",
+    "name": "Toulouse area · La Garonne en amont de l'Ariège",
+    "lat": 43.512148118,
+    "lon": 1.387766337,
+    "water_body": "La Garonne",
+    "description": "Real French river monitoring station 05174000 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05174000"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05174000",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05174000-2024-12-17T0934"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T09:34:00+01:00",
+    "window_end": "2024-12-17T09:34:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05174000-2024-12-17T0934",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T09:34:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05175400",
+    "name": "Toulouse area · La Garonne au Pont vieux de Muret",
+    "lat": 43.45805307,
+    "lon": 1.327566713,
+    "water_body": "La Garonne",
+    "description": "Real French river monitoring station 05175400 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05175400"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05175400",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05175400-2024-12-17T1101"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T11:01:00+01:00",
+    "window_end": "2024-12-17T11:01:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05175400-2024-12-17T1101",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T11:01:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310060",
+    "name": "Toulouse area · Ruisseau de l'Aussau à Muret (Av. d'Ox)",
+    "lat": 43.454627433,
+    "lon": 1.304011303,
+    "water_body": "Ruisseau de l'Aussau",
+    "description": "Real French river monitoring station 05310060 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310060"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310060",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05310060-2024-12-16T0928"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-16T09:28:00+01:00",
+      "last_seen": "2024-12-16T09:28:00+01:00",
+      "trusted_record_ids": [
+       "FR-05310060-2024-12-16T0928"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05310060-2024-12-16T0928"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-02T09:28:00+01:00",
+    "window_end": "2024-12-16T09:28:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310060-2024-12-16T0928",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-16T09:28:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310070",
+    "name": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)",
+    "lat": 43.5070022,
+    "lon": 1.380616229,
+    "water_body": "L'Ousse",
+    "description": "Real French river monitoring station 05310070 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310070"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310070",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05310070-2024-12-17T0946"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T09:46:00+01:00",
+    "window_end": "2024-12-17T09:46:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310070-2024-12-17T0946",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T09:46:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310310",
+    "name": "Toulouse area · Le Merdagnou à Plaisance-du-Touch (Ch. de la Béguère)",
+    "lat": 43.558284747,
+    "lon": 1.291730014,
+    "water_body": "Le Merdagnon",
+    "description": "Real French river monitoring station 05310310 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310310"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310310",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05310310-2024-12-16T1341"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-16T13:41:00+01:00",
+      "last_seen": "2024-12-16T13:41:00+01:00",
+      "trusted_record_ids": [
+       "FR-05310310-2024-12-16T1341"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05310310-2024-12-16T1341"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-02T13:41:00+01:00",
+    "window_end": "2024-12-16T13:41:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310310-2024-12-16T1341",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-16T13:41:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310320",
+    "name": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)",
+    "lat": 43.662127975,
+    "lon": 1.391097173,
+    "water_body": "Le Riou",
+    "description": "Real French river monitoring station 05310320 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310320"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310320",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-05310320-2024-12-17T1005"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T10:05:00+01:00",
+    "window_end": "2024-12-17T10:05:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310320-2024-12-17T1005",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T10:05:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310350",
+    "name": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)",
+    "lat": 43.719817023,
+    "lon": 1.331225801,
+    "water_body": "Ruisseau de la Capelette",
+    "description": "Real French river monitoring station 05310350 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310350"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310350",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 3,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05310350-2024-12-17T1228"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T12:28:00+01:00",
+      "last_seen": "2024-12-17T12:28:00+01:00",
+      "trusted_record_ids": [
+       "FR-05310350-2024-12-17T1228"
+      ]
+     },
+     {
+      "rule_id": "R9",
+      "title": "Nitrate above drinking-water value",
+      "kind": "condition",
+      "points": {
+       "human": 1
+      },
+      "record_ids": [
+       "FR-05310350-2024-12-17T1228"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+      "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+      "first_seen": "2024-12-17T12:28:00+01:00",
+      "last_seen": "2024-12-17T12:28:00+01:00",
+      "trusted_record_ids": [
+       "FR-05310350-2024-12-17T1228"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05310350-2024-12-17T1228"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T12:28:00+01:00",
+    "window_end": "2024-12-17T12:28:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310350-2024-12-17T1228",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T12:28:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310400",
+    "name": "Toulouse area · Ruisseau de Pichounelle entre Launaguet et L'Union (Ch. de l",
+    "lat": 43.663991363,
+    "lon": 1.457593352,
+    "water_body": "Ruisseau de Pichounelle",
+    "description": "Real French river monitoring station 05310400 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310400"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310400",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05310400-2024-12-17T0832"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T08:32:00+01:00",
+      "last_seen": "2024-12-17T08:32:00+01:00",
+      "trusted_record_ids": [
+       "FR-05310400-2024-12-17T0832"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05310400-2024-12-17T0832"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T08:32:00+01:00",
+    "window_end": "2024-12-17T08:32:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310400-2024-12-17T0832",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T08:32:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-05310440",
+    "name": "Toulouse area · Ruisseau de Gaujac à Bazus (Rte. de Garidech)",
+    "lat": 43.723448353,
+    "lon": 1.520089006,
+    "water_body": "Ruisseau de Gaujac",
+    "description": "Real French river monitoring station 05310440 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "05310440"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-05310440",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 2,
+    "condition": "fair",
+    "fired": [
+     {
+      "rule_id": "R2",
+      "title": "Nutrient enrichment",
+      "kind": "condition",
+      "points": {
+       "environment": 2
+      },
+      "record_ids": [
+       "FR-05310440-2024-12-17T0837"
+      ],
+      "observers": [
+       "AGENCE DE L'EAU ADOUR GARONNE"
+      ],
+      "corroborated": false,
+      "corroboration": "single or unreviewed report - verify",
+      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+      "first_seen": "2024-12-17T08:37:00+01:00",
+      "last_seen": "2024-12-17T08:37:00+01:00",
+      "trusted_record_ids": [
+       "FR-05310440-2024-12-17T0837"
+      ]
+     }
+    ],
+    "record_ids": [
+     "FR-05310440-2024-12-17T0837"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2024-12-03T08:37:00+01:00",
+    "window_end": "2024-12-17T08:37:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-05310440-2024-12-17T0837",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-17T08:37:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF000002",
+    "name": "Toulouse area · PECH DAVID",
+    "lat": 43.60934733,
+    "lon": 1.419491118,
+    "water_body": "PECH DAVID",
+    "description": "Real French river monitoring station BF000002 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF000002"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF000002",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF000002-2025-12-08T1026"
+    ],
+    "excluded_record_ids": [
+     "FR-BF000002-2024-12-09T1504"
+    ],
+    "window_start": "2025-11-24T10:26:00+01:00",
+    "window_end": "2025-12-08T10:26:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF000002-2024-12-09T1504",
+     "status": "review",
+     "decision": "reject",
+     "basis": null,
+     "observed_at": "2024-12-09T15:04:00+01:00",
+     "has_photo": false,
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "observed_at",
+       "code": "stale",
+       "message": "This observation is more than a year old. It is kept, but it will not describe today's stream."
+      }
+     ]
+    },
+    {
+     "record_id": "FR-BF000002-2025-01-07T1302",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-01-07T13:02:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-02-10T1353",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-10T13:53:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-03-05T0903",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-03-05T09:03:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-04-01T1313",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-04-01T13:13:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-05-13T1354",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-13T13:54:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-06-11T1050",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-06-11T10:50:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-07-08T1128",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-08T11:28:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-08-18T1242",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-08-18T12:42:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-09-08T1027",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-09-08T10:27:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-10-13T1127",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-13T11:27:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-11-17T1406",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-17T14:06:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000002-2025-12-08T1026",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-08T10:26:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF000003",
+    "name": "Toulouse area · CLAIRFONT",
+    "lat": 43.530994507,
+    "lon": 1.401312906,
+    "water_body": "CLAIRFONT",
+    "description": "Real French river monitoring station BF000003 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF000003"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF000003",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF000003-2025-12-15T0955"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-12-01T09:55:00+01:00",
+    "window_end": "2025-12-15T09:55:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF000003-2025-01-14T1339",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-01-14T13:39:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-02-03T1130",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-03T11:30:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-03-19T1215",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-03-19T12:15:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-04-07T1415",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-04-07T14:15:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-05-06T0959",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-06T09:59:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-05-27T1350",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-27T13:50:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-06-10T1139",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-06-10T11:39:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-07-01T1036",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-01T10:36:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-08-20T0919",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-08-20T09:19:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-10-06T1030",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-06T10:30:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-11-10T0906",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-10T09:06:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000003-2025-12-15T0955",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-15T09:55:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF000320",
+    "name": "Toulouse area · PERIPHERIE SUD SUD EST",
+    "lat": 43.522925386,
+    "lon": 1.436721106,
+    "water_body": "PERIPHERIE SUD SUD EST",
+    "description": "Real French river monitoring station BF000320 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF000320"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF000320",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF000320-2025-11-04T0938"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-10-21T09:38:00+01:00",
+    "window_end": "2025-11-04T09:38:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF000320-2024-12-16T1412",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2024-12-16T14:12:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000320-2025-01-30T1045",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-01-30T10:45:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000320-2025-05-19T1213",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-19T12:13:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000320-2025-07-22T1357",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-22T13:57:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000320-2025-09-16T1145",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-09-16T11:45:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000320-2025-11-04T0938",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-04T09:38:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF000326",
+    "name": "Toulouse area · MARQUISAT  PRISE CANAL",
+    "lat": 43.577005313,
+    "lon": 1.32825987,
+    "water_body": "MARQUISAT  PRISE CANAL",
+    "description": "Real French river monitoring station BF000326 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF000326"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF000326",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF000326-2025-12-09T0950"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-11-25T09:50:00+01:00",
+    "window_end": "2025-12-09T09:50:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF000326-2025-02-04T1124",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-04T11:24:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000326-2025-04-04T1018",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-04-04T10:18:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000326-2025-08-20T1258",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-08-20T12:58:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000326-2025-10-22T1305",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-22T13:05:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000326-2025-12-09T0950",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-09T09:50:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF000362",
+    "name": "Toulouse area · ST CAPRAIS PRISE CANAL",
+    "lat": 43.743209232,
+    "lon": 1.349538269,
+    "water_body": "ST CAPRAIS PRISE CANAL",
+    "description": "Real French river monitoring station BF000362 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF000362"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF000362",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF000362-2025-12-15T1016"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-12-01T10:16:00+01:00",
+    "window_end": "2025-12-15T10:16:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF000362-2025-01-06T1113",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-01-06T11:13:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-02-17T1332",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-17T13:32:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-03-17T1349",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-03-17T13:49:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-04-22T1054",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-04-22T10:54:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-05-12T1129",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-12T11:29:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-06-25T1039",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-06-25T10:39:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-07-15T1320",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-15T13:20:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-08-05T1500",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-08-05T15:00:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-09-09T1332",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-09-09T13:32:00+02:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-10-28T1300",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-28T13:00:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-11-10T1140",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-10T11:40:00+01:00",
+     "has_photo": false,
+     "issues": []
+    },
+    {
+     "record_id": "FR-BF000362-2025-12-15T1016",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-15T10:16:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF003660",
+    "name": "Toulouse area · SECOURS GARONNE",
+    "lat": 43.522925386,
+    "lon": 1.436721106,
+    "water_body": "SECOURS GARONNE",
+    "description": "Real French river monitoring station BF003660 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF003660"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF003660",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF003660-2025-06-25T1135"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-06-11T11:35:00+02:00",
+    "window_end": "2025-06-25T11:35:00+02:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF003660-2025-06-25T1135",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-06-25T11:35:00+02:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "FR-BF003661",
+    "name": "Toulouse area · SECOURS ARIEGE",
+    "lat": 43.522925386,
+    "lon": 1.436721106,
+    "water_body": "SECOURS ARIEGE",
+    "description": "Real French river monitoring station BF003661 (Hub'Eau / Sandre)",
+    "flow": "flowing",
+    "identifiers": [
+     [
+      "https://id.eaufrance.fr/StationMesureEauxSurface",
+      "BF003661"
+     ]
+    ]
+   },
+   "risk": {
+    "site_id": "FR-BF003661",
+    "level": "low",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "FR-BF003661-2025-03-12T1115"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-02-26T11:15:00+01:00",
+    "window_end": "2025-03-12T11:15:00+01:00",
+    "decisions": {
+     "FR-BF000002-2024-12-09T1504": "reject"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "FR-BF003661-2025-03-12T1115",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-03-12T11:15:00+01:00",
+     "has_photo": false,
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  }
+ ]
+}

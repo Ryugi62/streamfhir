@@ -1,4 +1,4 @@
-# StreamFHIR — SPEC (v0.4, 2026-09-29)
+# StreamFHIR — SPEC (v0.5, 2026-09-29)
 
 ## 0. One line
 StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.
@@ -16,7 +16,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
   - S6: dry-run is the default for sending; a live POST to HAPI is only done with synthetic data and its response IDs are recorded in README.
   - S7: UI renders at 390 px and 1280 px with no horizontal scroll; one primary action per screen.
 - Deadline: Devpost submission 2026-10-04 21:00 PDT (extended). Internal code freeze: 2026-09-30.
-- Non-goals: no ML model, no accuracy claims; no real citizen data; no user accounts; no claim that the record schema is the official OneAquaHealth app schema; no production hosting; not a regulatory water-quality compliance tool.
+- Non-goals: no ML model, no accuracy claims; no real citizen data (real agency data only as import tests); no user accounts; no claim that the record schema is the official OneAquaHealth app schema; no production hosting; not a regulatory water-quality compliance tool.
 
 ## 2. Constraints
 - Hackathon rules (quoted): "All projects must include a public code repository (e.g., GitHub) with source code and documentation"; "Projects must be original and developed during the hackathon period".
@@ -85,6 +85,14 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-28 Given stand-down, Then an inactive Flag is only produced for sites whose Flag is active on the server, keeping its `period.start`.
 - AC-29 Given a partial later visit (not all clear keys observed), Then it does not clear a signal.
 - AC-31 Given a US Water Quality Portal Result+Station CSV, When imported, Then there is one record per sampling activity with real coordinates, source oddities (duplicates, odd units, missing time) become `review` notes, and the resources are not tagged HTEST/PSEUDED.
+### v0.5 additions (real European data, EU water vocabularies)
+- AC-32 Given a Hub'Eau (France) station + analysis snapshot, When imported, Then there is one record per station and sampling time (Europe/Paris offset), nitrate (Sandre 1340, the NO3- ion) gets basis as-NO3, results below the quantification limit are counted and listed but not turned into numbers, and a result the producer did not qualify as 'Correcte' goes to a person.
+- AC-33 Given a French station that France also reports to the EEA, Then its Location keeps both the Sandre station code and the EEA euMonitoringSiteCode.
+- AC-34 Given pH, water temperature, nitrate as NO3 or phosphate, Then the Observation carries the EEA WISE ObservedProperty code; French records also carry the Sandre parameter code; nitrate as N gets neither the EEA nor the LOINC nitrate code.
+- AC-35 Given the ConceptMap, Then it maps exactly what the mapper emits (nitrate only as NO3, via dependsOn).
+- AC-36 Given EEA Waterbase aggregated rows, Then the coverage check counts sites and the latest year per quantity.
+- AC-37 Given a monitoring dataset flagged `evaluate_each_site_at_its_latest_visit`, Then each site is evaluated at its own latest sampling; a condition rule alone never makes the health hazard "assessed".
+- AC-38 Given a real dataset, Then the UI leads with ecological condition, colours the map by condition, and labels condition rules as agency lab values (no corroboration wording).
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)
@@ -110,6 +118,7 @@ FHIR is treated as an external format, so the mapper lives in `adapters/`; the d
 - POST one synthetic Bundle to HAPI R4 once (live), record returned IDs; run `$validate` on one generated Observation and record the OperationOutcome summary.
 
 ## 10. Change log
+- v0.5 2026-09-29 (night): real EU data (Hub'Eau, Toulouse area, 52 stations), EEA WISE + Sandre codings, ConceptMap + fragment CodeSystems, profile slices code.coding (one StreamFHIR coding required, translations allowed), per-site evaluation for monitoring data, EEA coverage check for the 5 OAH cities.
 - v0.1 2026-09-29 first version.
 - v0.4 2026-09-29 after rounds 3-4: real public data import (WQP), 'not assessed' instead of good-by-default, Flag ifMatch, static preview notice, Organization performer for real data, nitrate unit check.
 - v0.3 2026-09-29 after round-2 judging: conditional update for Observation/Media (review propagates), confirm basis, 2-visit clearing, still-water sites, safe stand-down, category slicing, stamp_now, static review replay.

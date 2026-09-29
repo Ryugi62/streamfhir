@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+    "fullUrl": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -61,7 +61,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1bad7a64-7329-4695-a5ea-a040b71ab595",
+    "fullUrl": "urn:uuid:d7245645-d60a-4014-b8fc-bc9e379dfabd",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -80,7 +80,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
      },
      "identifier": [
       {
@@ -96,7 +96,7 @@
      ],
      "version": [
       {
-       "value": "0.3.0"
+       "value": "0.4.0"
       }
      ]
     },
@@ -107,7 +107,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9fc5d7fb-39c9-4165-b5d0-fdbef303c1ae",
+    "fullUrl": "urn:uuid:d6980240-eb9b-4046-93e7-a6214035a9b0",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -145,7 +145,7 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "createdDateTime": "2026-09-16T08:40:00+01:00",
@@ -161,7 +161,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a05b67ab-3697-4218-9f29-9e35c679fc44",
+    "fullUrl": "urn:uuid:fff77cb1-c854-4779-9067-e88ddf04fcd8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -219,7 +219,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -234,66 +234,66 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:789dcfd1-3aab-411e-ab03-d1eab83fbcc5"
+       "reference": "urn:uuid:ec07423a-9c37-4498-b33d-f3ff6613be7a"
       },
       {
-       "reference": "urn:uuid:8dc1e94b-1bea-47db-b517-bde08f5f876e"
+       "reference": "urn:uuid:d221224d-6b74-4f34-883c-14c120395784"
       },
       {
-       "reference": "urn:uuid:3687d9d1-ff65-4ba7-a78c-93b085976c79"
+       "reference": "urn:uuid:29144a27-6838-41b9-8fd3-5aa27cf97ecf"
       },
       {
-       "reference": "urn:uuid:3bb2cabf-ba13-4ca7-8d5f-5ac1cab66454"
+       "reference": "urn:uuid:84cba3d9-34ba-49c9-8de1-3c94f0aceb72"
       },
       {
-       "reference": "urn:uuid:5930ceab-a685-48ac-9487-1a30bc2cc0e3"
+       "reference": "urn:uuid:f7028b0d-cfd8-46e1-9e7a-85dda350dcb9"
       },
       {
-       "reference": "urn:uuid:465816e6-95b8-40ff-8f6a-985c532735fc"
+       "reference": "urn:uuid:ad6a46aa-8771-4692-8734-3fc6ed400595"
       },
       {
-       "reference": "urn:uuid:abda5aba-4835-4838-aaee-d17cb38d7546"
+       "reference": "urn:uuid:b01e4162-b524-4e52-925f-ff2d2486426b"
       },
       {
-       "reference": "urn:uuid:ba89d07a-7641-43ab-9700-0520b4dbecf2"
+       "reference": "urn:uuid:452c0a30-c4de-4b73-9577-5d3bbcc469a2"
       },
       {
-       "reference": "urn:uuid:7ca3ecc0-a6c5-4c17-90c8-96f08d33b8b2"
+       "reference": "urn:uuid:26dfd28b-bafd-4536-9be6-27821054a40b"
       },
       {
-       "reference": "urn:uuid:be969891-7e01-402a-a4f4-c0d7d1ed39f3"
+       "reference": "urn:uuid:13205be2-0c63-43b0-a308-583bb8978e1a"
       },
       {
-       "reference": "urn:uuid:ed654863-dc2e-4c74-93a3-8da74c2ea8bc"
+       "reference": "urn:uuid:ec428b4e-1d0e-49eb-ad16-591b903f42e0"
       },
       {
-       "reference": "urn:uuid:9309dcde-739a-4a9d-a2ba-7ca60d32319c"
+       "reference": "urn:uuid:acbf5aed-02fd-4b1c-b2cd-a0c9189440e7"
       },
       {
-       "reference": "urn:uuid:1b26a0bb-0564-4b3c-a2a3-f091c3a2f4bf"
+       "reference": "urn:uuid:f542933c-66ea-418e-917a-b772d5506581"
       },
       {
-       "reference": "urn:uuid:0d759de8-b89d-4bac-9ef0-e9d1daaa21f1"
+       "reference": "urn:uuid:50ced1ac-73de-4cb0-bf83-913ed0e794f5"
       },
       {
-       "reference": "urn:uuid:82f60d18-50ee-48c9-bb79-2c629fd49088"
+       "reference": "urn:uuid:ba41ee0c-bc6f-4685-85b3-2abac61a9564"
       },
       {
-       "reference": "urn:uuid:1dae2734-408b-44b0-8911-9b1bd81863b5"
+       "reference": "urn:uuid:66d3520b-d7f3-4b5c-b2b3-f4fdb9217f2d"
       },
       {
-       "reference": "urn:uuid:94d5067e-d828-4da3-9d0e-6cb37af9c4ec"
+       "reference": "urn:uuid:c03ec90f-b079-4aaa-a297-cb75434d13ed"
       },
       {
-       "reference": "urn:uuid:f2bd8944-f08c-49e1-bfb9-84c5d15f999f"
+       "reference": "urn:uuid:a3082816-440f-40f4-b373-d0cbfd638d45"
       },
       {
-       "reference": "urn:uuid:9f87c6ab-40fb-4d7a-89c9-d3a5d755d121"
+       "reference": "urn:uuid:2c0b5d16-35a9-41ed-82ad-af344ccf900f"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:9fc5d7fb-39c9-4165-b5d0-fdbef303c1ae"
+       "reference": "urn:uuid:d6980240-eb9b-4046-93e7-a6214035a9b0"
       }
      ]
     },
@@ -303,7 +303,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:789dcfd1-3aab-411e-ab03-d1eab83fbcc5",
+    "fullUrl": "urn:uuid:ec07423a-9c37-4498-b33d-f3ff6613be7a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -361,7 +361,7 @@
       "text": "Channel condition score"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -382,7 +382,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8dc1e94b-1bea-47db-b517-bde08f5f876e",
+    "fullUrl": "urn:uuid:d221224d-6b74-4f34-883c-14c120395784",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -440,7 +440,7 @@
       "text": "Bank stability score"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -461,7 +461,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3687d9d1-ff65-4ba7-a78c-93b085976c79",
+    "fullUrl": "urn:uuid:29144a27-6838-41b9-8fd3-5aa27cf97ecf",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -519,7 +519,7 @@
       "text": "Riparian zone score"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -540,7 +540,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3bb2cabf-ba13-4ca7-8d5f-5ac1cab66454",
+    "fullUrl": "urn:uuid:84cba3d9-34ba-49c9-8de1-3c94f0aceb72",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -598,7 +598,7 @@
       "text": "In-stream habitat score"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -619,7 +619,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5930ceab-a685-48ac-9487-1a30bc2cc0e3",
+    "fullUrl": "urn:uuid:f7028b0d-cfd8-46e1-9e7a-85dda350dcb9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -672,12 +672,17 @@
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "water-temperature",
         "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
        }
       ],
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -703,7 +708,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:465816e6-95b8-40ff-8f6a-985c532735fc",
+    "fullUrl": "urn:uuid:ad6a46aa-8771-4692-8734-3fc6ed400595",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -756,12 +761,17 @@
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "ph",
         "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
        }
       ],
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -787,7 +797,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:abda5aba-4835-4838-aaee-d17cb38d7546",
+    "fullUrl": "urn:uuid:b01e4162-b524-4e52-925f-ff2d2486426b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -845,12 +855,17 @@
         "system": "http://loinc.org",
         "code": "9480-5",
         "display": "Nitrate [Mass/volume] in Water"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14797-55-8",
+        "display": "Nitrate"
        }
       ],
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -876,7 +891,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ba89d07a-7641-43ab-9700-0520b4dbecf2",
+    "fullUrl": "urn:uuid:452c0a30-c4de-4b73-9577-5d3bbcc469a2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -929,12 +944,17 @@
         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
         "code": "phosphate",
         "display": "Phosphate (as PO4)"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14265-44-2",
+        "display": "Phosphate"
        }
       ],
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -960,7 +980,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7ca3ecc0-a6c5-4c17-90c8-96f08d33b8b2",
+    "fullUrl": "urn:uuid:26dfd28b-bafd-4536-9be6-27821054a40b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1018,7 +1038,7 @@
       "text": "Transparency tube depth"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1044,7 +1064,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:be969891-7e01-402a-a4f4-c0d7d1ed39f3",
+    "fullUrl": "urn:uuid:13205be2-0c63-43b0-a308-583bb8978e1a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1102,7 +1122,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1127,7 +1147,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:9fc5d7fb-39c9-4165-b5d0-fdbef303c1ae"
+       "reference": "urn:uuid:d6980240-eb9b-4046-93e7-a6214035a9b0"
       }
      ]
     },
@@ -1137,7 +1157,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ed654863-dc2e-4c74-93a3-8da74c2ea8bc",
+    "fullUrl": "urn:uuid:ec428b4e-1d0e-49eb-ad16-591b903f42e0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1195,7 +1215,7 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1220,7 +1240,7 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:9fc5d7fb-39c9-4165-b5d0-fdbef303c1ae"
+       "reference": "urn:uuid:d6980240-eb9b-4046-93e7-a6214035a9b0"
       }
      ]
     },
@@ -1230,7 +1250,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9309dcde-739a-4a9d-a2ba-7ca60d32319c",
+    "fullUrl": "urn:uuid:acbf5aed-02fd-4b1c-b2cd-a0c9189440e7",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1288,7 +1308,7 @@
       "text": "Odour"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1318,7 +1338,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1b26a0bb-0564-4b3c-a2a3-f091c3a2f4bf",
+    "fullUrl": "urn:uuid:f542933c-66ea-418e-917a-b772d5506581",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1376,7 +1396,7 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1406,7 +1426,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0d759de8-b89d-4bac-9ef0-e9d1daaa21f1",
+    "fullUrl": "urn:uuid:50ced1ac-73de-4cb0-bf83-913ed0e794f5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1464,7 +1484,7 @@
       "text": "Dead fish seen"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1480,7 +1500,7 @@
      "valueBoolean": false,
      "derivedFrom": [
       {
-       "reference": "urn:uuid:9fc5d7fb-39c9-4165-b5d0-fdbef303c1ae"
+       "reference": "urn:uuid:d6980240-eb9b-4046-93e7-a6214035a9b0"
       }
      ]
     },
@@ -1490,7 +1510,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:82f60d18-50ee-48c9-bb79-2c629fd49088",
+    "fullUrl": "urn:uuid:ba41ee0c-bc6f-4685-85b3-2abac61a9564",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1548,7 +1568,7 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1569,7 +1589,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1dae2734-408b-44b0-8911-9b1bd81863b5",
+    "fullUrl": "urn:uuid:66d3520b-d7f3-4b5c-b2b3-f4fdb9217f2d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1627,7 +1647,7 @@
       "text": "Pets or livestock in the water"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1648,7 +1668,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:94d5067e-d828-4da3-9d0e-6cb37af9c4ec",
+    "fullUrl": "urn:uuid:c03ec90f-b079-4aaa-a297-cb75434d13ed",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1706,7 +1726,7 @@
       "text": "Mayfly/stonefly/caddisfly groups found"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1727,7 +1747,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f2bd8944-f08c-49e1-bfb9-84c5d15f999f",
+    "fullUrl": "urn:uuid:a3082816-440f-40f4-b373-d0cbfd638d45",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1785,7 +1805,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1815,7 +1835,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9f87c6ab-40fb-4d7a-89c9-d3a5d755d121",
+    "fullUrl": "urn:uuid:2c0b5d16-35a9-41ed-82ad-af344ccf900f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1873,7 +1893,7 @@
       "text": "Kick-net sampling effort"
      },
      "subject": {
-      "reference": "urn:uuid:aa523f1c-3b23-46e2-8c86-724c3722da34",
+      "reference": "urn:uuid:5d8cc004-5cf0-4b60-9f94-343200320927",
       "display": "Alder Brook - upstream park reach"
      },
      "effectiveDateTime": "2026-09-16T08:40:00+01:00",
@@ -1899,7 +1919,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0fa5f3ad-763b-4b9a-b1e2-abf635121a55",
+    "fullUrl": "urn:uuid:6f71a606-0dd3-4864-8979-5a1ccd87cffa",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-SYN-001",
@@ -1924,75 +1944,75 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-001 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.3.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-001 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:a05b67ab-3697-4218-9f29-9e35c679fc44"
+       "reference": "urn:uuid:fff77cb1-c854-4779-9067-e88ddf04fcd8"
       },
       {
-       "reference": "urn:uuid:789dcfd1-3aab-411e-ab03-d1eab83fbcc5"
+       "reference": "urn:uuid:ec07423a-9c37-4498-b33d-f3ff6613be7a"
       },
       {
-       "reference": "urn:uuid:8dc1e94b-1bea-47db-b517-bde08f5f876e"
+       "reference": "urn:uuid:d221224d-6b74-4f34-883c-14c120395784"
       },
       {
-       "reference": "urn:uuid:3687d9d1-ff65-4ba7-a78c-93b085976c79"
+       "reference": "urn:uuid:29144a27-6838-41b9-8fd3-5aa27cf97ecf"
       },
       {
-       "reference": "urn:uuid:3bb2cabf-ba13-4ca7-8d5f-5ac1cab66454"
+       "reference": "urn:uuid:84cba3d9-34ba-49c9-8de1-3c94f0aceb72"
       },
       {
-       "reference": "urn:uuid:5930ceab-a685-48ac-9487-1a30bc2cc0e3"
+       "reference": "urn:uuid:f7028b0d-cfd8-46e1-9e7a-85dda350dcb9"
       },
       {
-       "reference": "urn:uuid:465816e6-95b8-40ff-8f6a-985c532735fc"
+       "reference": "urn:uuid:ad6a46aa-8771-4692-8734-3fc6ed400595"
       },
       {
-       "reference": "urn:uuid:abda5aba-4835-4838-aaee-d17cb38d7546"
+       "reference": "urn:uuid:b01e4162-b524-4e52-925f-ff2d2486426b"
       },
       {
-       "reference": "urn:uuid:ba89d07a-7641-43ab-9700-0520b4dbecf2"
+       "reference": "urn:uuid:452c0a30-c4de-4b73-9577-5d3bbcc469a2"
       },
       {
-       "reference": "urn:uuid:7ca3ecc0-a6c5-4c17-90c8-96f08d33b8b2"
+       "reference": "urn:uuid:26dfd28b-bafd-4536-9be6-27821054a40b"
       },
       {
-       "reference": "urn:uuid:be969891-7e01-402a-a4f4-c0d7d1ed39f3"
+       "reference": "urn:uuid:13205be2-0c63-43b0-a308-583bb8978e1a"
       },
       {
-       "reference": "urn:uuid:ed654863-dc2e-4c74-93a3-8da74c2ea8bc"
+       "reference": "urn:uuid:ec428b4e-1d0e-49eb-ad16-591b903f42e0"
       },
       {
-       "reference": "urn:uuid:9309dcde-739a-4a9d-a2ba-7ca60d32319c"
+       "reference": "urn:uuid:acbf5aed-02fd-4b1c-b2cd-a0c9189440e7"
       },
       {
-       "reference": "urn:uuid:1b26a0bb-0564-4b3c-a2a3-f091c3a2f4bf"
+       "reference": "urn:uuid:f542933c-66ea-418e-917a-b772d5506581"
       },
       {
-       "reference": "urn:uuid:0d759de8-b89d-4bac-9ef0-e9d1daaa21f1"
+       "reference": "urn:uuid:50ced1ac-73de-4cb0-bf83-913ed0e794f5"
       },
       {
-       "reference": "urn:uuid:82f60d18-50ee-48c9-bb79-2c629fd49088"
+       "reference": "urn:uuid:ba41ee0c-bc6f-4685-85b3-2abac61a9564"
       },
       {
-       "reference": "urn:uuid:1dae2734-408b-44b0-8911-9b1bd81863b5"
+       "reference": "urn:uuid:66d3520b-d7f3-4b5c-b2b3-f4fdb9217f2d"
       },
       {
-       "reference": "urn:uuid:94d5067e-d828-4da3-9d0e-6cb37af9c4ec"
+       "reference": "urn:uuid:c03ec90f-b079-4aaa-a297-cb75434d13ed"
       },
       {
-       "reference": "urn:uuid:f2bd8944-f08c-49e1-bfb9-84c5d15f999f"
+       "reference": "urn:uuid:a3082816-440f-40f4-b373-d0cbfd638d45"
       },
       {
-       "reference": "urn:uuid:9f87c6ab-40fb-4d7a-89c9-d3a5d755d121"
+       "reference": "urn:uuid:2c0b5d16-35a9-41ed-82ad-af344ccf900f"
       },
       {
-       "reference": "urn:uuid:9fc5d7fb-39c9-4165-b5d0-fdbef303c1ae"
+       "reference": "urn:uuid:d6980240-eb9b-4046-93e7-a6214035a9b0"
       }
      ],
      "occurredDateTime": "2026-09-16T08:40:00+01:00",
-     "recorded": "2026-09-29T10:08:00+00:00",
+     "recorded": "2026-09-29T13:03:49+00:00",
      "activity": {
       "coding": [
        {
@@ -2032,8 +2052,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:1bad7a64-7329-4695-a5ea-a040b71ab595",
-        "display": "StreamFHIR 0.3.0"
+        "reference": "urn:uuid:d7245645-d60a-4014-b8fc-bc9e379dfabd",
+        "display": "StreamFHIR 0.4.0"
        }
       }
      ],

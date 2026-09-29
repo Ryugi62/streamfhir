@@ -5,6 +5,7 @@
 Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy Ecosystems, Healthy Communities*). **Track 7 — Digital Health Standards.**
 
 - **Live demo (no install):** https://ryugi62.github.io/streamfhir/demo/ — static page from [`docs/demo/`](docs/demo/); the sample records are precomputed.
+- **Real EU data demo (no install):** https://ryugi62.github.io/streamfhir/demo-eu/ — 52 real river monitoring stations around **Toulouse** (a OneAquaHealth research city) from France's open Hub'Eau API, run through the same pipeline ([details](#real-european-data-toulouse-a-oneaquahealth-city)).
 - **Demo video (3:25):** https://youtu.be/xxEL--FC9tA
 - **Run the full app:** `python3 -m streamfhir serve` → http://127.0.0.1:8000 (Python 3.9+, no dependencies).
 
@@ -16,9 +17,11 @@ A volunteer at a pond sees green scum and dogs swimming. Today that report stays
 2. **standard HL7 FHIR R4 data** (Location, Observations, Media, Provenance) that any FHIR server accepts, and
 3. an **explainable site warning** (a FHIR `Flag` on the site) — but only when **corroborated** by two independent observers, a photo, or a reviewer. One unverified report asks for verification instead of raising an alarm.
 
+Every measured reading also carries the code **European water agencies already report with** (EEA WISE, and Sandre for France), so a health system can put citizen and agency data side by side with one query. This is shown on **real data from Toulouse** and checked live on a public FHIR server.
+
 ## Track alignment
 **Track 7 — Digital Health Standards** ("Enable interoperability across systems — fragmented data and lack of standards — FHIR models, AI agents, and integration frameworks"), with a **Track 2** flavour (actionable One Health insight).
-StreamFHIR is a small **integration framework**: ports-and-adapters code where one adapter reads a citizen-science record and another writes FHIR R4 to any server. It ships **FHIR models** — 2 profiles, 1 extension, 4 CodeSystems, 2 ValueSets, a CapabilityStatement and a Subscription example — tested live on the public HAPI FHIR R4 server. We did not build an AI agent. The 10 rules are published as a CodeSystem (`onehealth-risk-rule`), and every active Flag cites each corroborated rule that raised it as a code from that CodeSystem (`flag-rule` extension), so an agent or a person can query exactly why a warning exists.
+StreamFHIR is a small **integration framework**: ports-and-adapters code where one adapter reads a citizen-science record and another writes FHIR R4 to any server. It ships **FHIR models** — 2 profiles, 1 extension, 4 CodeSystems, 2 ValueSets, a **ConceptMap to the EU water vocabularies** (EEA WISE, Sandre) with 2 fragment CodeSystems, a CapabilityStatement and a Subscription example — tested live on the public HAPI FHIR R4 server, including `$translate`. We did not build an AI agent. The 10 rules are published as a CodeSystem (`onehealth-risk-rule`), and every active Flag cites each corroborated rule that raised it as a code from that CodeSystem (`flag-rule` extension), so an agent or a person can query exactly why a warning exists.
 
 ## Problem
 - **Fragmented data** — every citizen-science tool has its own format. Environmental agencies, city dashboards and public-health teams cannot combine the data without re-keying it by hand.
@@ -60,6 +63,12 @@ The OneAquaHealth project works in five research cities: Benevento, Coimbra, Ghe
 | Resilience Map | Site `Location`s with their current hazard level and ecological condition |
 | GEOSSIP | The FHIR API gives health-side systems the same site data the geo side sees |
 
+**Adoption path, step by step (no partner assumed):**
+1. **Agency feed** through an importer: done for Toulouse with Hub'Eau (above). Each other country's open feed needs one adapter of the same shape.
+2. **Citizen Science App export** through one input adapter (we have not seen the app's schema).
+3. Both land in one FHIR server with the **same EEA codes**, so `Observation?code=http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty|CAS_14797-55-8` returns citizen and agency nitrate together (query tested live, evidence step 23).
+4. Corroborated citizen warnings reach the city dashboard as `Flag`s.
+
 ## Run it
 ```bash
 python3 -m streamfhir serve                     # web UI at http://127.0.0.1:8000 (dry run only)
@@ -74,7 +83,10 @@ python3 -m streamfhir validate-remote SYN-001 --with-profile   # server-side $va
 python3 -m streamfhir build-static              # rebuild the server-less demo in docs/demo
 python3 -m streamfhir bench                     # throughput on your machine
 python3 -m streamfhir send SYN-010 --live --review reject    # apply a reviewer decision, then send
-python3 -m pip install pytest && python3 -m pytest -q     # 81 tests, no network
+python3 -m streamfhir import-hubeau               # real Toulouse-area river data (Hub'Eau snapshot) -> data/real-eu-toulouse
+python3 -m streamfhir --data data/real-eu-toulouse serve     # browse it (same as the /demo-eu/ page)
+python3 -m streamfhir eea-coverage                # EU (EEA Waterbase) code coverage near the 5 OneAquaHealth cities
+python3 -m pip install pytest && python3 -m pytest -q     # 90 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -121,6 +133,8 @@ flowchart LR
 | One visit | panel `Observation` (profile *StreamAssessmentPanel*: `hasMember` 1..*, no value) | open slice `category:survey = observation-category#survey` (1..1; partner categories allowed) |
 | Visual scores 1–10, invertebrate count | `Observation.valueInteger` | profile *StreamIndicatorObservation*: value 1..1, no `hasMember` |
 | Readings (temperature, pH, nitrate, phosphate, transparency, sampling minutes) | `valueQuantity` with UCUM (`Cel`, `[pH]`, `mg/L`, `cm`, `min`) | nitrate also carries **LOINC 9480-5** *Nitrate [Mass/volume] in Water*, but only when the reading is expressed as NO3 |
+| The same four quantities (pH, temperature, nitrate as NO3, phosphate as PO4) | extra `code.coding` from **EEA WISE ObservedProperty** (`EEA_3152-01-0`, `EEA_3121-01-5`, `CAS_14797-55-8`, `CAS_14265-44-2`); French records also keep their **Sandre** parameter (`1302`, `1301`, `1340`, `1433`) | the profile requires exactly one StreamFHIR coding (slice `streamfhir`) and allows these translations; the `ConceptMap` states the mapping |
+| Real station (national / EU code) | extra `Location.identifier` (`https://id.eaufrance.fr/StationMesureEauxSurface`, and the EEA `euMonitoringSiteCode` when France reports the station to the EEA) | kept as the source gives them |
 | Colour, surface, odour, litter, nitrate basis, bloom test | `valueCodeableConcept` from the `stream-answer` CodeSystem | |
 | Dead fish, people or animals in the water | `valueBoolean` | |
 | Photos | `Media` (`type = image`), referenced by `derivedFrom` from the panel and the visual-claim indicators only | demo photo URLs are placeholders |
@@ -146,10 +160,12 @@ flowchart LR
 | `StructureDefinition-stream-indicator-observation.json` | indicator profile |
 | `StructureDefinition-flag-rule.json` | extension: a corroborated rule that raised the Flag, coded from `onehealth-risk-rule` (required binding to the hazard-rule ValueSet) |
 | `ValueSet-onehealth-hazard-rule.json` | the 6 health-hazard rules (R3–R8) — the only rules that can raise a Flag |
+| `ConceptMap-stream-indicator-to-eu-water.json` | pH, water temperature, nitrate (as NO3 only, `dependsOn` the nitrate basis) and phosphate → EEA WISE ObservedProperty and Sandre parameters; `$translate` works on HAPI |
+| `CodeSystem-eea-wise-observedproperty-fragment.json`, `CodeSystem-sandre-parametre-fragment.json` | `content = fragment`: only the 4 codes we emit, under the publishers' own URIs, so a validator knows these systems. The EEA and Sandre own the codes and publish no FHIR CodeSystem |
 | `CapabilityStatement-streamfhir-client-requirements.json` | what a receiving server must support (`kind = requirements`) |
 | `Subscription-example-safety-flags.json` | R4 rest-hook subscription on safety Flags (example endpoint) |
 
-**Terminology honesty.** All StreamFHIR codes live under the **example canonical `https://example.org/fhir/streamfhir/…`**. They are prototype codes, not LOINC or SNOMED CT. The one LOINC code used (9480-5) was confirmed with `$lookup` on tx.fhir.org (LOINC 2.82). We did not add LOINC or SNOMED codes for the other indicators because we could not confirm a matching code for citizen visual or test-strip observations. A production version would search further, move to a canonical URL it controls, and publish an Implementation Guide.
+**Terminology honesty.** All StreamFHIR codes live under the **example canonical `https://example.org/fhir/streamfhir/…`**. They are prototype codes, not LOINC or SNOMED CT. The one LOINC code used (9480-5) was confirmed with `$lookup` on tx.fhir.org (LOINC 2.82). The 4 EEA WISE codes and 4 Sandre codes were read from their publishers on 2026-09-29 (each `http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty/<code>` and `https://id.eaufrance.fr/par/<code>` resolves); the EEA reports phosphate as mg{P}/L while StreamFHIR uses PO4, which the ConceptMap notes. We did not add LOINC or SNOMED codes for the other indicators because we could not confirm a matching code for citizen visual or test-strip observations. A production version would search further, move to a canonical URL it controls, and publish an Implementation Guide.
 
 ## Rules (printed, explainable)
 **Health hazard** can raise a Flag. **Ecological condition** never raises a Flag on its own.
@@ -189,7 +205,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
 
 ## Evidence
-- **81 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-31 (see `SPEC.md`).
+- **90 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-38 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -208,6 +224,16 @@ Sample result (demo date 29 Sep 2026):
 - **Throughput:** about 5,200 records/s validated and mapped on one laptop core (`python3 -m streamfhir bench`, 3,000 records).
 - **Screenshots** at 390 px and 1280 px, no horizontal scroll: [docs/screenshots](docs/screenshots).
 
+## Real European data (Toulouse, a OneAquaHealth city)
+`import-hubeau` converts a snapshot of France's open river-quality API **Hub'Eau** (`qualite_rivieres`, Sandre codes, no account) into StreamFHIR records. Snapshot: every station in a box around Toulouse (lon 1.25–1.65, lat 43.45–43.75), pH, water temperature, nitrate and orthophosphate, samples from 9 Dec 2024 to 15 Dec 2025, retrieved 2026-09-29 (queries in `data/real-eu-toulouse/SOURCE.txt`). Same pipeline, same rules:
+- 231 source rows → **95 samplings at 52 real stations**, 225 values mapped, **700 FHIR resources**; every Observation carries the StreamFHIR code, the **EEA WISE code** and the **Sandre code** (225 each).
+- **94 ready / 1 needing a look** (older than a year at the snapshot date). 6 results below the laboratory's quantification limit are **not turned into numbers**: they are counted and listed with the record (`source_info`); one sampling had only such results and is left out (counted).
+- The ecological-condition rules run on the real values: **17 of 52 stations show nutrient enrichment (R2)** and **3 exceed the EU drinking-water value for nitrate (R9: 50 mg/L as NO3)** — La Rivel at Baziège, the Panariol at Mondonville and the Capelette at Merville. This is agency chemistry, so the health-hazard lanes stay *Not assessed*; they need the citizen observations StreamFHIR is built for.
+- A real pH Observation validates on HAPI against the profile with **0 errors and 0 warnings**, and the Location with its Sandre station code with 0 errors ([evidence](docs/evidence-hapi.md#v04--real-european-data-and-eu-water-vocabularies-2026-09-29-2145-2210-kst), steps 20–23).
+- Agencies sample about monthly, so this dataset is evaluated at each station's own latest sampling (`evaluate_each_site_at_its_latest_visit`); citizen data keeps the 14-day window.
+
+**The EU code layer reaches all five OneAquaHealth cities.** In the EEA Waterbase (WISE-6) aggregated table, surface-water monitoring sites within about 13 km of each research city report these same determinands: Benevento 12 sites, Coimbra 1, Ghent 3, Oslo 7 (pH, temperature and nitrate; no phosphate), Toulouse 10 (`python3 -m streamfhir eea-coverage`, snapshot in `data/eea-coverage/`). That aggregated table stops at 2007–2012 for these sites, and the sample-level table timed out on the public query service, so this is a coverage check, not a pipeline run. It shows the codes StreamFHIR adds are the ones every OAH country already reports with.
+
 ## Feasibility and scalability
 - **Runs anywhere Python runs:** standard library only, and stateless mapping. It can sit behind any citizen-science app as a nightly export job or a webhook.
 - **Integrates through the standard:** any FHIR R4 server can store the Bundles (see the CapabilityStatement for what it must support). Downstream systems query or subscribe to `Flag`.
@@ -215,7 +241,8 @@ Sample result (demo date 29 Sep 2026):
 - **Pilot shape (proposal only):** a coordinator exports a week of app records, runs `export` or `send` against a FHIR test server, and a reviewer uses the Confirm/Reject screen. Everything runs remotely at zero cost, and no one has to travel.
 
 ## Limitations
-- Demo data is synthetic. The one real run uses US agency monitoring data (chemistry only), not European citizen-science data. There has been no field test and there are no real users.
+- Demo data is synthetic. The real runs use agency monitoring data (chemistry only): the US Water Quality Portal and France's Hub'Eau around Toulouse. Neither is citizen science. There has been no field test and there are no real users or partners.
+- Of the 52 Toulouse-area stations, only 1 matched a code in the EEA site list we pulled (a small area query), so only that Location carries its EU `euMonitoringSiteCode`. Other OAH cities were checked for EU code coverage only, not run through the pipeline.
 - The record schema is representative, not the official OneAquaHealth schema.
 - The rules and thresholds are simple, hand-written and untuned. They have not been validated against lab results and must not be read as a health advisory.
 - Only one LOINC code is used. The other codes are prototype codes under `example.org`. The profiles are small differentials, validated with the HAPI server's validator rather than the official IG Publisher.
@@ -237,9 +264,9 @@ streamfhir/application/    use cases + ports
 streamfhir/adapters/       FHIR mapper, FHIR REST client, JSON repositories, presenter
 streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
-data/                      synthetic sites and records; data/real-wqp: real WQP snapshot + imported dataset
+data/                      synthetic sites and records; data/real-wqp (US) and data/real-eu-toulouse (France) real snapshots; data/eea-coverage
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     81 tests
+tests/                     90 tests
 ```
 
 ## License

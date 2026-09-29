@@ -1,6 +1,7 @@
 """Site entity and distance helper (pure)."""
 import math
 from dataclasses import dataclass
+from typing import Tuple
 
 
 @dataclass(frozen=True)
@@ -12,6 +13,7 @@ class Site:
     water_body: str
     description: str = ""
     flow: str = "flowing"          # "flowing" (stream reach) or "still" (pond, lake inlet)
+    identifiers: Tuple[Tuple[str, str], ...] = ()   # (system, value) ids the site already has elsewhere, e.g. national or EU station codes
 
     @property
     def still_water(self) -> bool:

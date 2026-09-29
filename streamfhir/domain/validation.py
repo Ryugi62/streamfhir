@@ -45,6 +45,7 @@ class StreamAssessment:
     photos: Tuple[str, ...]
     values: Dict[str, Any]
     synthetic: bool = False
+    origin: str = ""          # source system of a real record, e.g. "sandre" (French national water data)
 
 
 @dataclass(frozen=True)
@@ -193,6 +194,7 @@ def validate_record(raw: Mapping[str, Any], sites: Mapping[str, Site], now: date
     assessment = StreamAssessment(
         record_id=record_id, site_id=raw["site_id"], observed_at=observed_at, observer=str(raw["observer"]),
         lat=float(lat), lon=float(lon), gps_accuracy_m=acc if _num(acc) else None, photos=photos,
-        values=dict(values), synthetic=bool(raw.get("synthetic", False)))
+        values=dict(values), synthetic=bool(raw.get("synthetic", False)),
+        origin=str(raw.get("origin") or ""))
     status = REVIEW if issues else OK
     return ValidationReport(record_id, status, tuple(issues), assessment)

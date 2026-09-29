@@ -309,7 +309,7 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
         cond = "poor" if condition_pts >= POOR_CONDITION_POINTS else "fair" if condition_pts >= FAIR_CONDITION_POINTS else "good"
     return SiteRisk(site_id, level, hazard, confirmed, lanes, condition_pts, cond, tuple(fired),
                     tuple(r.record_id for r in window), excluded, start, as_of, decisions,
-                    hazard_assessed=observed(HAZARD) or bool(fired))
+                    hazard_assessed=observed(HAZARD) or any(f.kind == HAZARD for f in fired))
 
 
 def rules_table() -> List[Dict[str, object]]:

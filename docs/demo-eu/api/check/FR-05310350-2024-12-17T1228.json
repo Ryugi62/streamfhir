@@ -1,0 +1,718 @@
+{
+ "report": {
+  "record_id": "FR-05310350-2024-12-17T1228",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (FR-05310350)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "FR-05310350"
+      },
+      {
+       "system": "https://id.eaufrance.fr/StationMesureEauxSurface",
+       "value": "05310350"
+      }
+     ],
+     "status": "active",
+     "name": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)",
+     "description": "Real French river monitoring station 05310350 (Hub'Eau / Sandre)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 1.331225801,
+      "latitude": 43.719817023
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|FR-05310350"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d39419de-7359-4517-9305-417275f94abe",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.4.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.4.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6a2accdf-73de-4a9e-9bcc-99201f40fb12",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) on 2024-12-17T12:28:00+01:00: 5 indicators (final, record FR-05310350-2024-12-17T1228)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05310350-2024-12-17T1228"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
+     },
+     "effectiveDateTime": "2024-12-17T12:28:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:7d87a2c0-835d-4d7f-9a19-d2f46a636588"
+      },
+      {
+       "reference": "urn:uuid:2748ee2e-b875-47f5-9c3c-24f027783725"
+      },
+      {
+       "reference": "urn:uuid:c86cddac-6f52-474b-a7ad-b6bf5712cd80"
+      },
+      {
+       "reference": "urn:uuid:535a9cec-9606-428d-b11c-9c5e244f1d9f"
+      },
+      {
+       "reference": "urn:uuid:47e1d9fc-2180-4539-8f92-aacd83f08808"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05310350-2024-12-17T1228"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:7d87a2c0-835d-4d7f-9a19-d2f46a636588",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 9.0 °C at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05310350-2024-12-17T1228.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1301",
+        "display": "Température de l'Eau"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
+     },
+     "effectiveDateTime": "2024-12-17T12:28:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 9.0,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05310350-2024-12-17T1228.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:2748ee2e-b875-47f5-9c3c-24f027783725",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 8.5 pH at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05310350-2024-12-17T1228.ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1302",
+        "display": "Potentiel en Hydrogène (pH)"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
+     },
+     "effectiveDateTime": "2024-12-17T12:28:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 8.5,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05310350-2024-12-17T1228.ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:c86cddac-6f52-474b-a7ad-b6bf5712cd80",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.35 mg/L at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05310350-2024-12-17T1228.phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14265-44-2",
+        "display": "Phosphate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1433",
+        "display": "Orthophosphates (PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
+     },
+     "effectiveDateTime": "2024-12-17T12:28:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.35,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05310350-2024-12-17T1228.phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:535a9cec-9606-428d-b11c-9c5e244f1d9f",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 59.0 mg/L at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05310350-2024-12-17T1228.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       },
+       {
+        "system": "http://loinc.org",
+        "code": "9480-5",
+        "display": "Nitrate [Mass/volume] in Water"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "CAS_14797-55-8",
+        "display": "Nitrate"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1340",
+        "display": "Nitrates"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
+     },
+     "effectiveDateTime": "2024-12-17T12:28:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 59.0,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05310350-2024-12-17T1228.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:47e1d9fc-2180-4539-8f92-aacd83f08808",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-NO3 at Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) (final, record FR-05310350-2024-12-17T1228)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05310350-2024-12-17T1228.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
+     },
+     "effectiveDateTime": "2024-12-17T12:28:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+       },
+       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-NO3",
+        "display": "Nitrate reporting basis: as-NO3"
+       }
+      ],
+      "text": "as-NO3"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05310350-2024-12-17T1228.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:da8346ff-1a88-42eb-8792-4a4b20e47813",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-FR-05310350-2024-12-17T1228",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310350-2024-12-17T1228 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:6a2accdf-73de-4a9e-9bcc-99201f40fb12"
+      },
+      {
+       "reference": "urn:uuid:7d87a2c0-835d-4d7f-9a19-d2f46a636588"
+      },
+      {
+       "reference": "urn:uuid:2748ee2e-b875-47f5-9c3c-24f027783725"
+      },
+      {
+       "reference": "urn:uuid:c86cddac-6f52-474b-a7ad-b6bf5712cd80"
+      },
+      {
+       "reference": "urn:uuid:535a9cec-9606-428d-b11c-9c5e244f1d9f"
+      },
+      {
+       "reference": "urn:uuid:47e1d9fc-2180-4539-8f92-aacd83f08808"
+      }
+     ],
+     "occurredDateTime": "2024-12-17T12:28:00+01:00",
+     "recorded": "2026-09-29T13:04:35+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        },
+        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:d39419de-7359-4517-9305-417275f94abe",
+        "display": "StreamFHIR 0.4.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "FR-05310350-2024-12-17T1228"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-FR-05310350-2024-12-17T1228"
+    }
+   }
+  ]
+ }
+}

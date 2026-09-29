@@ -1,0 +1,48 @@
+{
+ "resourceType": "CodeSystem",
+ "id": "eea-wise-observedproperty-fragment",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CodeSystem: EEA WISE ObservedProperty (fragment)</p></div>"
+ },
+ "url": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+ "name": "EeaWiseObservedPropertyFragment",
+ "title": "EEA WISE ObservedProperty (fragment)",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "publisher": "StreamFHIR hackathon prototype (codes owned by the European Environment Agency)",
+ "description": "Fragment of the European Environment Agency's vocabulary at http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty: only the 4 codes StreamFHIR emits, with the labels the publisher shows (read 2026-09-29). Not an official FHIR representation.",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "caseSensitive": true,
+ "content": "fragment",
+ "count": 4,
+ "concept": [
+  {
+   "code": "EEA_3152-01-0",
+   "display": "pH"
+  },
+  {
+   "code": "EEA_3121-01-5",
+   "display": "Water temperature"
+  },
+  {
+   "code": "CAS_14797-55-8",
+   "display": "Nitrate"
+  },
+  {
+   "code": "CAS_14265-44-2",
+   "display": "Phosphate"
+  }
+ ]
+}

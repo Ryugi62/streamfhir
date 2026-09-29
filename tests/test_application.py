@@ -136,3 +136,17 @@ def test_stand_down_only_for_sites_with_an_active_flag_and_keeps_start():
     assert flags[0]["period"]["start"] == "2026-09-10T08:00:00+00:00"
     req = [e["request"] for b in bundles for e in b["entry"] if e["resource"]["resourceType"] == "Flag"][0]
     assert req["ifMatch"] == 'W/"4"'                                # optimistic locking on the version we read
+
+
+def test_ac37_monitoring_dataset_is_evaluated_at_each_sites_latest_visit():
+    """Agency sampling is monthly, so a 14-day window ending 'today' would leave every real site unassessed."""
+    old = make_record(record_id="M-1", observed_at="2026-07-01T09:00:00+00:00", photos=[])
+    old["values"] = {"ph": 7.5, "nitrate": 60, "nitrate-basis": "as-NO3"}     # lab chemistry only
+    default = service([old]).site_overview()
+    per_site = StreamFhirService(FakeSites(), FakeRecords([old]), FhirMapper(), SpyServer(), FixedClock(),
+                                 per_site_as_of=True).site_overview()
+    rules = lambda ov: {f.rule_id for o in ov if o.site.site_id == "S-TEST" for f in o.risk.fired}
+    assert rules(default) == set()
+    assert {"R2", "R9"} <= rules(per_site)
+    # a nutrient (condition) rule alone says nothing about health hazards
+    assert [o.risk.hazard_assessed for o in per_site if o.site.site_id == "S-TEST"] == [False]

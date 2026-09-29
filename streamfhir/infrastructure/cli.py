@@ -34,7 +34,8 @@ def build_static(svc, out):
     html = html.replace("<script>", "<script>window.STATIC_DEMO = true;</script>\n<script>", 1)
     with open(os.path.join(out, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(html)
-    _dump(os.path.join(out, "api", "sites.json"), overview_json(svc.site_overview(), svc.clock.now()))
+    dataset = svc.records.dataset() if hasattr(svc.records, "dataset") else None
+    _dump(os.path.join(out, "api", "sites.json"), overview_json(svc.site_overview(), svc.clock.now(), dataset))
     _dump(os.path.join(out, "api", "records.json"), {"records": svc.records.all()})
     for r in svc.records.all():
         _dump(os.path.join(out, "api", "check", "%s.json" % r["record_id"]), check_json(svc.check_record(r)))
@@ -47,7 +48,7 @@ def build_static(svc, out):
                                 ("reject", None)):
             svc.reviews.set(rep.record_id, decision, basis)
             name = "%s-%s%s.json" % (rep.record_id, decision, "-" + basis if basis else "")
-            _dump(os.path.join(out, "api", "review", name), overview_json(svc.site_overview(), svc.clock.now()))
+            _dump(os.path.join(out, "api", "review", name), overview_json(svc.site_overview(), svc.clock.now(), dataset))
             svc.reviews.set(rep.record_id, None)
     return len(svc.records.all())
 
@@ -79,6 +80,7 @@ def main(argv=None):
     v.add_argument("record_id")
     v.add_argument("--location-id", help="server id of an existing Location to reference (e.g. from a live send)")
     v.add_argument("--with-profile", action="store_true", help="keep meta.profile (needs publish-conformance first)")
+    v.add_argument("--code", help="validate the Observation carrying this code (e.g. nitrate), not the first one")
     pc = sub.add_parser("publish-conformance", help="PUT CodeSystems, ValueSet and profiles to the FHIR server (dry run unless --live)")
     pc.add_argument("--live", action="store_true")
     sub.add_parser("build-fhir", help="regenerate fhir/ conformance resources")
@@ -86,6 +88,12 @@ def main(argv=None):
     bs.add_argument("--out", default=os.path.join(ROOT, "docs", "demo"))
     iw = sub.add_parser("import-wqp", help="convert a US Water Quality Portal Result+Station CSV snapshot into a StreamFHIR dataset")
     iw.add_argument("--dir", default=os.path.join(ROOT, "data", "real-wqp"), help="folder with results.csv and stations.csv")
+    ih = sub.add_parser("import-hubeau", help="convert a Hub'Eau (France, Sandre) station + analysis JSON snapshot into a StreamFHIR dataset")
+    ih.add_argument("--dir", default=os.path.join(ROOT, "data", "real-eu-toulouse"),
+                    help="folder with stations.json, analyses.json, eea-sites.json and SOURCE.txt")
+    ih.add_argument("--city", default="Toulouse area")
+    ec = sub.add_parser("eea-coverage", help="summarise the EEA Waterbase snapshot near the five OneAquaHealth cities")
+    ec.add_argument("--file", default=os.path.join(ROOT, "data", "eea-coverage", "waterbase-near-oah-cities.json"))
     bn = sub.add_parser("bench", help="measure validation + mapping throughput on this machine")
     bn.add_argument("-n", type=int, default=2000)
     p.add_argument("--data", default=None, help="dataset folder (default: data/ synthetic demo)")
@@ -147,7 +155,8 @@ def main(argv=None):
     elif cmd == "validate-remote":
         res = svc.check_record(_record(svc, args.record_id))
         obs = [e["resource"] for e in res.bundle["entry"] if e["resource"]["resourceType"] == "Observation"
-               and "hasMember" not in e["resource"]][0]
+               and "hasMember" not in e["resource"]
+               and (not args.code or args.code in {c["code"] for c in e["resource"]["code"]["coding"]})][0]
         subject = ({"reference": "Location/%s" % args.location_id} if args.location_id else
                    {"identifier": {"system": SID_SITE, "value": res.report.assessment.site_id}})
         obs = dict(obs, subject=dict(subject, display=obs["subject"]["display"]))
@@ -189,6 +198,36 @@ def main(argv=None):
                         "retrieved": source[1] if len(source) > 1 else None, "import_stats": stats},
             "demo_as_of": latest + "T23:59:59+00:00", "records": records})
         print(json.dumps(dict(stats, sites=len(used)), indent=1))
+    elif cmd == "import-hubeau":
+        from ..adapters.hubeau_importer import parse_analyses, parse_stations
+
+        def load(name):
+            with open(os.path.join(args.dir, name), encoding="utf-8") as fh:
+                return json.load(fh)
+        eu = {x["monitoringSiteIdentifier"] for x in load("eea-sites.json")["sites"]}
+        sites = parse_stations(load("stations.json"), city=args.city, eu_site_codes=eu)
+        records, stats = parse_analyses(load("analyses.json"), {x["site_id"]: x for x in sites})
+        used = {r["site_id"] for r in records}
+        latest = max(r["observed_at"][:10] for r in records)
+        with open(os.path.join(args.dir, "SOURCE.txt"), encoding="utf-8") as fh:
+            source = fh.read().strip().splitlines()
+        stats["sites"] = len(used)
+        stats["sites_with_eu_code"] = sum(1 for x in sites if x["site_id"] in used and len(x["identifiers"]) > 1)
+        _dump(os.path.join(args.dir, "sites.json"), {
+            "_note": "REAL public French river monitoring stations (Hub'Eau / Sandre), not citizen science.",
+            "sites": [x for x in sites if x["site_id"] in used]})
+        _dump(os.path.join(args.dir, "assessments.json"), {
+            "_note": "REAL public monitoring data imported from Hub'Eau qualite_rivieres (France); source queries and retrieval time below.",
+            "dataset": {"synthetic": False, "observer_kind": "organisation", "source_query": source[1] if len(source) > 1 else source[0],
+                        "retrieved": source[-1], "import_stats": stats, "label": "Real EU data: %s rivers (Hub'Eau, France)" % args.city,
+                        "evaluate_each_site_at_its_latest_visit": True},
+            "demo_as_of": latest + "T23:59:59+01:00", "records": records})
+        print(json.dumps(stats, indent=1))
+    elif cmd == "eea-coverage":
+        from ..adapters.waterbase_importer import coverage
+        with open(args.file, encoding="utf-8") as fh:
+            data = json.load(fh)
+        print(json.dumps({c: dict(coverage(v["rows"]), surface_sites=len(v["surface_sites"])) for c, v in data["cities"].items()}, indent=1))
     elif cmd == "bench":
         recs = [r for r in svc.records.all() if svc.check_record(r).bundle]
         t = time.perf_counter()

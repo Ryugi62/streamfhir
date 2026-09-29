@@ -1,0 +1,149 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "stream-indicator-to-eu-water",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>ConceptMap: StreamFHIR indicators to EEA WISE determinands and Sandre parameters</p></div>"
+ },
+ "url": "https://example.org/fhir/streamfhir/ConceptMap/stream-indicator-to-eu-water",
+ "version": "0.4.0",
+ "name": "StreamIndicatorToEuWater",
+ "title": "StreamFHIR indicators to EEA WISE determinands and Sandre parameters",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "publisher": "StreamFHIR (hackathon prototype)",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "description": "Maps the four measured StreamFHIR indicators to the codes European water agencies already report with: EEA WISE ObservedProperty (Waterbase, EU-wide) and Sandre parameters (France). StreamFHIR adds these codes to each Observation, so a health system can query citizen and agency readings with one code.",
+ "sourceUri": "https://example.org/fhir/streamfhir/ValueSet/stream-indicator",
+ "group": [
+  {
+   "source": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+   "target": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+   "element": [
+    {
+     "code": "ph",
+     "display": "pH",
+     "target": [
+      {
+       "code": "EEA_3152-01-0",
+       "display": "pH",
+       "equivalence": "equivalent"
+      }
+     ]
+    },
+    {
+     "code": "water-temperature",
+     "display": "Water temperature",
+     "target": [
+      {
+       "code": "EEA_3121-01-5",
+       "display": "Water temperature",
+       "equivalence": "equivalent"
+      }
+     ]
+    },
+    {
+     "code": "nitrate",
+     "display": "Nitrate",
+     "target": [
+      {
+       "code": "CAS_14797-55-8",
+       "display": "Nitrate",
+       "equivalence": "equivalent",
+       "dependsOn": [
+        {
+         "property": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator#nitrate-basis",
+         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+         "value": "as-NO3"
+        }
+       ],
+       "comment": "Only readings expressed as NO3; readings as N are not mapped (1 mg/L as N = 4.43 mg/L as NO3)."
+      }
+     ]
+    },
+    {
+     "code": "phosphate",
+     "display": "Phosphate (as PO4)",
+     "target": [
+      {
+       "code": "CAS_14265-44-2",
+       "display": "Phosphate",
+       "equivalence": "equivalent",
+       "comment": "StreamFHIR phosphate is expressed as PO4; convert before comparing with values reported as P."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "source": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+   "target": "https://id.eaufrance.fr/par",
+   "element": [
+    {
+     "code": "ph",
+     "display": "pH",
+     "target": [
+      {
+       "code": "1302",
+       "display": "Potentiel en Hydrogène (pH)",
+       "equivalence": "equivalent"
+      }
+     ]
+    },
+    {
+     "code": "water-temperature",
+     "display": "Water temperature",
+     "target": [
+      {
+       "code": "1301",
+       "display": "Température de l'Eau",
+       "equivalence": "equivalent"
+      }
+     ]
+    },
+    {
+     "code": "nitrate",
+     "display": "Nitrate",
+     "target": [
+      {
+       "code": "1340",
+       "display": "Nitrates",
+       "equivalence": "equivalent",
+       "dependsOn": [
+        {
+         "property": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator#nitrate-basis",
+         "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+         "value": "as-NO3"
+        }
+       ],
+       "comment": "Only readings expressed as NO3; readings as N are not mapped (1 mg/L as N = 4.43 mg/L as NO3)."
+      }
+     ]
+    },
+    {
+     "code": "phosphate",
+     "display": "Phosphate (as PO4)",
+     "target": [
+      {
+       "code": "1433",
+       "display": "Orthophosphates (PO4)",
+       "equivalence": "equivalent",
+       "comment": "StreamFHIR phosphate is expressed as PO4; convert before comparing with values reported as P."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
