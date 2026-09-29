@@ -1,0 +1,49 @@
+{
+ "resourceType": "CodeSystem",
+ "id": "onehealth-risk-level",
+ "url": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-level",
+ "version": "0.2.0",
+ "name": "OneHealthRiskLevel",
+ "title": "StreamFHIR health hazard levels",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "publisher": "StreamFHIR hackathon prototype",
+ "description": "Site-level health hazard levels computed by the StreamFHIR rule engine. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "caseSensitive": true,
+ "content": "complete",
+ "count": 4,
+ "concept": [
+  {
+   "code": "high",
+   "display": "High health hazard",
+   "definition": "Corroborated hazard points >= 5 in the 14-day window: a FHIR Flag is raised."
+  },
+  {
+   "code": "verify",
+   "display": "Health hazard - verification requested",
+   "definition": "Hazard points >= 5 but not enough corroborated by trusted records: verification requested, no Flag."
+  },
+  {
+   "code": "moderate",
+   "display": "Moderate health hazard",
+   "definition": "Hazard points 2-4 in the 14-day window."
+  },
+  {
+   "code": "low",
+   "display": "Low health hazard",
+   "definition": "Hazard points 0-1 in the 14-day window."
+  }
+ ]
+}

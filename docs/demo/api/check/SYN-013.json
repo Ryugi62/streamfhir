@@ -1,0 +1,849 @@
+{
+ "report": {
+  "record_id": "SYN-013",
+  "status": "review",
+  "issues": [
+   {
+    "severity": "warning",
+    "field": "values.surface",
+    "code": "photo-needed",
+    "message": "Surface film = oily-sheen is an important claim but no photo was attached. A reviewer should confirm it."
+   }
+  ]
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Alder Brook - upstream park reach (S-ALDER-UP)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "S-ALDER-UP"
+      }
+     ],
+     "status": "active",
+     "name": "Alder Brook - upstream park reach",
+     "description": "Synthetic demo site: park reach above the town centre.",
+     "mode": "instance",
+     "position": {
+      "longitude": -8.405,
+      "latitude": 40.215
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-ALDER-UP"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:11c29b54-db45-4485-8194-c82c0b93981b",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.2.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.2.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:0cea04dd-66de-4a0d-aa1a-4d2ded47dfc0",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Alder Brook - upstream park reach on 2026-09-27T12:05:00+01:00: 6 indicators (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:bae1e4be-9e38-4ac3-9a84-23b6bc653606"
+      },
+      {
+       "reference": "urn:uuid:027988e8-f6cc-4065-8c35-ac60f59deb44"
+      },
+      {
+       "reference": "urn:uuid:2cac7624-dc98-4a15-81e3-f8a75a8a46a3"
+      },
+      {
+       "reference": "urn:uuid:a1911e65-1f9f-4068-8712-3ce61fc01fdd"
+      },
+      {
+       "reference": "urn:uuid:be76c314-a14f-4570-b4de-2a3d65f082a7"
+      },
+      {
+       "reference": "urn:uuid:a711a8c1-d6d3-46c8-aaf9-8ef7b1fa390a"
+      }
+     ],
+     "note": [
+      {
+       "text": "Needs review: Surface film = oily-sheen is an important claim but no photo was attached. A reviewer should confirm it."
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:bae1e4be-9e38-4ac3-9a84-23b6bc653606",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: clear at Alder Brook - upstream park reach (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013#water-colour"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-clear",
+        "display": "Water colour: clear"
+       }
+      ],
+      "text": "clear"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013#water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:027988e8-f6cc-4065-8c35-ac60f59deb44",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: oily-sheen at Alder Brook - upstream park reach (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013#surface"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-oily-sheen",
+        "display": "Surface film: oily-sheen"
+       }
+      ],
+      "text": "oily-sheen"
+     },
+     "note": [
+      {
+       "text": "Needs review: Surface film = oily-sheen is an important claim but no photo was attached. A reviewer should confirm it."
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013#surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:2cac7624-dc98-4a15-81e3-f8a75a8a46a3",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Odour: chemical at Alder Brook - upstream park reach (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013#odour"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "odour",
+        "display": "Odour"
+       }
+      ],
+      "text": "Odour"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "odour-chemical",
+        "display": "Odour: chemical"
+       }
+      ],
+      "text": "chemical"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013#odour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:a1911e65-1f9f-4068-8712-3ce61fc01fdd",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: some at Alder Brook - upstream park reach (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013#litter"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-some",
+        "display": "Litter: some"
+       }
+      ],
+      "text": "some"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013#litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:be76c314-a14f-4570-b4de-2a3d65f082a7",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Alder Brook - upstream park reach (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013#people-contact"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013#people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:a711a8c1-d6d3-46c8-aaf9-8ef7b1fa390a",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Alder Brook - upstream park reach (preliminary, record SYN-013)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-013#animal-contact"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:c8ae89e7-a020-4a99-8843-9a300aa0e3bb",
+      "display": "Alder Brook - upstream park reach"
+     },
+     "effectiveDateTime": "2026-09-27T12:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-06"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-013#animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:872602e3-9ccd-471a-a38a-332183311347",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-SYN-013",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-013 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.2.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:0cea04dd-66de-4a0d-aa1a-4d2ded47dfc0"
+      },
+      {
+       "reference": "urn:uuid:bae1e4be-9e38-4ac3-9a84-23b6bc653606"
+      },
+      {
+       "reference": "urn:uuid:027988e8-f6cc-4065-8c35-ac60f59deb44"
+      },
+      {
+       "reference": "urn:uuid:2cac7624-dc98-4a15-81e3-f8a75a8a46a3"
+      },
+      {
+       "reference": "urn:uuid:a1911e65-1f9f-4068-8712-3ce61fc01fdd"
+      },
+      {
+       "reference": "urn:uuid:be76c314-a14f-4570-b4de-2a3d65f082a7"
+      },
+      {
+       "reference": "urn:uuid:a711a8c1-d6d3-46c8-aaf9-8ef7b1fa390a"
+      }
+     ],
+     "occurredDateTime": "2026-09-27T12:05:00+01:00",
+     "recorded": "2026-09-29T06:13:49+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "obs-06"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:11c29b54-db45-4485-8194-c82c0b93981b",
+        "display": "StreamFHIR 0.2.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "SYN-013"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-SYN-013"
+    }
+   }
+  ]
+ }
+}

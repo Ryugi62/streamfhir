@@ -1,5 +1,5 @@
 {
- "_note": "SYNTHETIC demo records generated for the StreamFHIR prototype. They are not real observations. Photo URLs are placeholders on example.org.",
+ "_note": "SYNTHETIC demo records generated for the StreamFHIR prototype. They are not real observations. Photo URLs are placeholders on example.org. demo_as_of fixes the demo date so the 14-day window stays reproducible.",
  "records": [
   {
    "record_id": "SYN-001",
@@ -29,7 +29,10 @@
     "litter": "none",
     "dead-fish": false,
     "people-contact": false,
-    "animal-contact": true
+    "animal-contact": true,
+    "sensitive-invertebrates": 3,
+    "nitrate-basis": "as-NO3",
+    "kick-sample-minutes": 2
    }
   },
   {
@@ -59,7 +62,10 @@
     "litter": "some",
     "dead-fish": false,
     "people-contact": false,
-    "animal-contact": false
+    "animal-contact": false,
+    "sensitive-invertebrates": 3,
+    "nitrate-basis": "as-NO3",
+    "kick-sample-minutes": 2
    }
   },
   {
@@ -130,7 +136,10 @@
     "litter": "lots",
     "dead-fish": false,
     "people-contact": true,
-    "animal-contact": false
+    "animal-contact": false,
+    "sensitive-invertebrates": 0,
+    "nitrate-basis": "as-NO3",
+    "kick-sample-minutes": 2
    }
   },
   {
@@ -153,7 +162,9 @@
     "odour": "sewage",
     "litter": "lots",
     "people-contact": true,
-    "animal-contact": false
+    "animal-contact": false,
+    "sensitive-invertebrates": 0,
+    "kick-sample-minutes": 1.5
    }
   },
   {
@@ -192,7 +203,6 @@
     "https://example.org/demo-photos/syn-006.jpg"
    ],
    "values": {
-    "channel-condition": 5,
     "bank-stability": 6,
     "riparian-zone": 4,
     "instream-habitat": 5,
@@ -207,7 +217,9 @@
     "litter": "some",
     "dead-fish": false,
     "people-contact": false,
-    "animal-contact": true
+    "animal-contact": true,
+    "nitrate-basis": "as-NO3",
+    "bloom-check": "floats-or-paints"
    }
   },
   {
@@ -241,7 +253,6 @@
     "https://example.org/demo-photos/syn-008.jpg"
    ],
    "values": {
-    "channel-condition": 5,
     "bank-stability": 5,
     "riparian-zone": 4,
     "instream-habitat": 5,
@@ -253,7 +264,8 @@
     "odour": "earthy",
     "dead-fish": false,
     "people-contact": false,
-    "animal-contact": true
+    "animal-contact": true,
+    "bloom-check": "not-done"
    }
   },
   {
@@ -275,7 +287,7 @@
     "instream-habitat": 6,
     "water-temperature": 16.8,
     "ph": 7.2,
-    "nitrate": 55,
+    "nitrate": 12.4,
     "phosphate": 1.2,
     "transparency": 40,
     "water-colour": "brown-turbid",
@@ -284,7 +296,10 @@
     "litter": "some",
     "dead-fish": false,
     "people-contact": false,
-    "animal-contact": false
+    "animal-contact": false,
+    "sensitive-invertebrates": 1,
+    "nitrate-basis": "as-N",
+    "kick-sample-minutes": 2
    }
   },
   {
@@ -313,7 +328,10 @@
     "odour": "earthy",
     "litter": "some",
     "people-contact": false,
-    "animal-contact": false
+    "animal-contact": false,
+    "sensitive-invertebrates": 1,
+    "nitrate-basis": "as-NO3",
+    "kick-sample-minutes": 2
    }
   },
   {
@@ -333,7 +351,8 @@
     "bank-stability": 6,
     "riparian-zone": 5,
     "instream-habitat": 6,
-    "nitrate": 58
+    "nitrate": 58,
+    "nitrate-basis": "as-NO3"
    },
    "note_for_demo": "Observer pseudonym missing -> blocked"
   },
@@ -365,8 +384,32 @@
     "litter": "none",
     "dead-fish": false,
     "people-contact": true,
+    "animal-contact": true,
+    "sensitive-invertebrates": 3,
+    "nitrate-basis": "as-NO3",
+    "kick-sample-minutes": 3
+   }
+  },
+  {
+   "record_id": "SYN-015",
+   "synthetic": true,
+   "site_id": "S-WILLOW",
+   "observed_at": "2026-09-27T18:20:00+01:00",
+   "observer": "obs-03",
+   "lat": 40.2252,
+   "lon": -8.3903,
+   "gps_accuracy_m": 9,
+   "photos": [],
+   "values": {
+    "water-temperature": 22.0,
+    "water-colour": "green",
+    "surface": "algal-scum",
+    "bloom-check": "not-done",
+    "odour": "earthy",
+    "people-contact": false,
     "animal-contact": true
    }
   }
- ]
+ ],
+ "demo_as_of": "2026-09-29T12:00:00+01:00"
 }

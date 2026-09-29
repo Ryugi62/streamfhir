@@ -1,13 +1,14 @@
 {
  "resourceType": "StructureDefinition",
- "id": "stream-assessment-observation",
- "url": "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-observation",
- "version": "0.1.0",
- "name": "StreamAssessmentObservation",
- "title": "Citizen stream assessment Observation",
+ "id": "stream-indicator-observation",
+ "url": "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation",
+ "version": "0.2.0",
+ "name": "StreamIndicatorObservation",
+ "title": "Citizen stream indicator observation",
  "status": "draft",
  "experimental": true,
- "description": "Minimal profile: an Observation about a stream site (Location), made by a pseudonymous citizen scientist, coded from the StreamFHIR indicator value set. Example canonical, prototype only.",
+ "date": "2026-09-29",
+ "description": "One indicator (score, reading or observation) from a citizen visit to a stream site. Example canonical, prototype only.",
  "fhirVersion": "4.0.1",
  "kind": "resource",
  "abstract": false,
@@ -19,13 +20,21 @@
    {
     "id": "Observation",
     "path": "Observation",
-    "short": "Citizen stream assessment observation"
+    "short": "Citizen stream indicator observation"
    },
    {
     "id": "Observation.category",
     "path": "Observation.category",
     "min": 1,
-    "short": "Always includes observation-category#survey"
+    "max": "1",
+    "patternCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+       "code": "survey"
+      }
+     ]
+    }
    },
    {
     "id": "Observation.code",
@@ -65,6 +74,21 @@
     "min": 1,
     "max": "1",
     "short": "Pseudonymous observer (logical reference by identifier only)"
+   },
+   {
+    "id": "Observation.performer.identifier",
+    "path": "Observation.performer.identifier",
+    "min": 1
+   },
+   {
+    "id": "Observation.value[x]",
+    "path": "Observation.value[x]",
+    "min": 1
+   },
+   {
+    "id": "Observation.hasMember",
+    "path": "Observation.hasMember",
+    "max": "0"
    }
   ]
  }

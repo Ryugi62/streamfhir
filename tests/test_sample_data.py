@@ -15,4 +15,4 @@ def test_sample_data_is_synthetic_and_covers_all_statuses():
 
 def test_sample_overview_levels():
     levels = {o.site.site_id: o.risk.level for o in build_service().site_overview()}
-    assert set(levels.values()) == {"low", "moderate", "high"}
+    assert set(levels.values()) == {"low", "moderate", "verify", "high"}

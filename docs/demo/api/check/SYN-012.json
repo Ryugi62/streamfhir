@@ -1,0 +1,15 @@
+{
+ "report": {
+  "record_id": "SYN-012",
+  "status": "blocked",
+  "issues": [
+   {
+    "severity": "error",
+    "field": "observed_at",
+    "code": "future-timestamp",
+    "message": "The observation time 2030-06-01T10:00:00+01:00 is in the future. Please check the phone's date."
+   }
+  ]
+ },
+ "bundle": null
+}

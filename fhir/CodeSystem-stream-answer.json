@@ -2,17 +2,54 @@
  "resourceType": "CodeSystem",
  "id": "stream-answer",
  "url": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
- "version": "0.1.0",
+ "version": "0.2.0",
  "name": "StreamAnswer",
  "title": "Citizen stream assessment answers",
  "status": "draft",
  "experimental": true,
+ "date": "2026-09-29",
  "publisher": "StreamFHIR hackathon prototype",
  "description": "Answer codes for categorical stream assessment indicators. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
  "caseSensitive": true,
  "content": "complete",
- "count": 16,
+ "count": 21,
  "concept": [
+  {
+   "code": "nitrate-basis-as-NO3",
+   "display": "Nitrate reporting basis: as-NO3",
+   "definition": "Answer 'as-NO3' for indicator nitrate-basis."
+  },
+  {
+   "code": "nitrate-basis-as-N",
+   "display": "Nitrate reporting basis: as-N",
+   "definition": "Answer 'as-N' for indicator nitrate-basis."
+  },
+  {
+   "code": "bloom-not-done",
+   "display": "Bloom jar/stick test: not-done",
+   "definition": "Answer 'not-done' for indicator bloom-check."
+  },
+  {
+   "code": "bloom-floats-or-paints",
+   "display": "Bloom jar/stick test: floats-or-paints",
+   "definition": "Answer 'floats-or-paints' for indicator bloom-check."
+  },
+  {
+   "code": "bloom-settles-or-strings",
+   "display": "Bloom jar/stick test: settles-or-strings",
+   "definition": "Answer 'settles-or-strings' for indicator bloom-check."
+  },
   {
    "code": "colour-clear",
    "display": "Water colour: clear",

@@ -30,7 +30,7 @@ GOOD = {
     "photos": ["https://example.org/demo-photos/t-1.jpg"],
     "values": {
         "channel-condition": 8, "bank-stability": 7, "riparian-zone": 9, "instream-habitat": 7,
-        "water-temperature": 15.2, "ph": 7.4, "nitrate": 5, "phosphate": 0.1, "transparency": 110,
+        "water-temperature": 15.2, "ph": 7.4, "nitrate": 5, "nitrate-basis": "as-NO3", "phosphate": 0.1, "transparency": 110,
         "water-colour": "clear", "surface": "none", "odour": "none", "litter": "none",
         "dead-fish": False, "people-contact": False, "animal-contact": True,
     },

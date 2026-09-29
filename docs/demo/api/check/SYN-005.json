@@ -1,0 +1,15 @@
+{
+ "report": {
+  "record_id": "SYN-005",
+  "status": "blocked",
+  "issues": [
+   {
+    "severity": "error",
+    "field": "values.ph",
+    "code": "out-of-range",
+    "message": "pH 15 is impossible (valid range 0-14). Please re-check the reading."
+   }
+  ]
+ },
+ "bundle": null
+}

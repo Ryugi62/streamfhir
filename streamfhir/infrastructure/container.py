@@ -16,11 +16,24 @@ class SystemClock:
         return datetime.now(timezone.utc)
 
 
+class FixedClock:
+    """Demo clock: sample data is evaluated 'as of' a fixed date so the demo never goes stale."""
+    def __init__(self, at: datetime):
+        self.at = at
+
+    def now(self) -> datetime:
+        return self.at
+
+
 def build_service(data_dir: str = DATA_DIR, fhir_base: str = None) -> StreamFhirService:
+    records = JsonRecordRepository(os.path.join(data_dir, "assessments.json"))
+    as_of = records.demo_as_of()
+    clock = SystemClock() if (os.environ.get("STREAMFHIR_REAL_CLOCK") == "1" or not as_of) \
+        else FixedClock(datetime.fromisoformat(as_of))
     return StreamFhirService(
         JsonSiteRepository(os.path.join(data_dir, "sites.json")),
-        JsonRecordRepository(os.path.join(data_dir, "assessments.json")),
+        records,
         FhirMapper(),
         HapiFhirServer(fhir_base or os.environ.get("STREAMFHIR_FHIR_BASE", DEFAULT_BASE)),
-        SystemClock(),
+        clock,
     )

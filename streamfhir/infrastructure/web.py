@@ -31,7 +31,7 @@ def make_server(service, host: str = "127.0.0.1", port: int = 8000) -> Threading
         def do_GET(self):
             path = self.path.split("?")[0]
             if path == "/api/sites":
-                return self._send(200, overview_json(service.site_overview()))
+                return self._send(200, overview_json(service.site_overview(), service.clock.now()))
             if path == "/api/records":
                 return self._send(200, {"records": service.records.all()})
             name = "index.html" if path in ("/", "/index.html") else path.lstrip("/")
@@ -58,6 +58,13 @@ def make_server(service, host: str = "127.0.0.1", port: int = 8000) -> Threading
                     return self._send(400, {"error": "Send {\"bundle\": {...}}."})
                 live = bool(body.get("live")) and ALLOW_LIVE
                 return self._send(200, service.share(bundle, live=live))
+            if path == "/api/review":
+                try:
+                    return self._send(200, service.review(str(body.get("record_id")), body.get("decision")))
+                except KeyError:
+                    return self._send(404, {"error": "No such record."})
+                except ValueError as err:
+                    return self._send(400, {"error": str(err)})
             return self._send(404, {"error": "not found"})
 
     return ThreadingHTTPServer((host, port), Handler)

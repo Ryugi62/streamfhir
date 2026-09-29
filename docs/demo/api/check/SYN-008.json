@@ -1,0 +1,1609 @@
+{
+ "report": {
+  "record_id": "SYN-008",
+  "status": "review",
+  "issues": [
+   {
+    "severity": "warning",
+    "field": "lat/lon",
+    "code": "location-mismatch",
+    "message": "The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+   }
+  ]
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Mill Pond inlet (S-MILL)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "S-MILL"
+      }
+     ],
+     "status": "active",
+     "name": "Mill Pond inlet",
+     "description": "Synthetic demo site: shallow pond inlet used by dog walkers.",
+     "mode": "instance",
+     "position": {
+      "longitude": -8.412,
+      "latitude": 40.1985
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-MILL"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:46ffa871-e85e-4b39-a1fb-142a9c3e7597",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.2.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.2.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa",
+    "resource": {
+     "resourceType": "Media",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "status": "completed",
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Mill Pond inlet, record SYN-008</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#photo-1"
+      }
+     ],
+     "type": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/media-type",
+        "code": "image",
+        "display": "Image"
+       }
+      ]
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "createdDateTime": "2026-09-27T10:05:00+01:00",
+     "content": {
+      "contentType": "image/jpeg",
+      "url": "https://example.org/demo-photos/syn-008.jpg",
+      "title": "Citizen photo 1"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Media",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#photo-1"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:8b92791e-7415-4514-95d2-1ed426ba3314",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Mill Pond inlet on 2026-09-27T10:05:00+01:00: 13 indicators (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:b1aefbeb-81bf-43b0-ab5f-9c2b9d9e289b"
+      },
+      {
+       "reference": "urn:uuid:caa6d4d3-5608-4861-aa7a-f79bf55de943"
+      },
+      {
+       "reference": "urn:uuid:2db6e773-1cc4-4ef3-a2d4-d1c8a140bdf9"
+      },
+      {
+       "reference": "urn:uuid:95f388d5-2202-46b3-b6b4-5613450d63de"
+      },
+      {
+       "reference": "urn:uuid:204ae86f-8b94-4c83-a8d7-15938f93ff07"
+      },
+      {
+       "reference": "urn:uuid:618845e3-8ca4-4efe-bdd0-249f0e4d9aaf"
+      },
+      {
+       "reference": "urn:uuid:390eef58-0290-4376-b00d-e7d6df83b0c9"
+      },
+      {
+       "reference": "urn:uuid:4abe0e59-39ba-4811-a1a9-c88f10920565"
+      },
+      {
+       "reference": "urn:uuid:2818aec8-8707-49d5-ab79-6a893f3d2cdb"
+      },
+      {
+       "reference": "urn:uuid:c4d63d53-3172-4d09-92fa-90fcdd410312"
+      },
+      {
+       "reference": "urn:uuid:d6c8c636-ea09-456c-b91b-4b0de408a2e3"
+      },
+      {
+       "reference": "urn:uuid:cd10a872-a877-499d-8628-a517cb804831"
+      },
+      {
+       "reference": "urn:uuid:4fefe2e2-d60d-4511-a32b-bad7305c7136"
+      }
+     ],
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b1aefbeb-81bf-43b0-ab5f-9c2b9d9e289b",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Bank stability score: 5 at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#bank-stability"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "bank-stability",
+        "display": "Bank stability score"
+       }
+      ],
+      "text": "Bank stability score"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 5,
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#bank-stability"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:caa6d4d3-5608-4861-aa7a-f79bf55de943",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Riparian zone score: 4 at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#riparian-zone"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "riparian-zone",
+        "display": "Riparian zone score"
+       }
+      ],
+      "text": "Riparian zone score"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 4,
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#riparian-zone"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:2db6e773-1cc4-4ef3-a2d4-d1c8a140bdf9",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>In-stream habitat score: 5 at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#instream-habitat"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "instream-habitat",
+        "display": "In-stream habitat score"
+       }
+      ],
+      "text": "In-stream habitat score"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 5,
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#instream-habitat"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:95f388d5-2202-46b3-b6b4-5613450d63de",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 26.3 °C at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#water-temperature"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 26.3,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:204ae86f-8b94-4c83-a8d7-15938f93ff07",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 8.9 pH at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#ph"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 8.9,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:618845e3-8ca4-4efe-bdd0-249f0e4d9aaf",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 0.9 mg/L at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#phosphate"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.9,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:390eef58-0290-4376-b00d-e7d6df83b0c9",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: green at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#water-colour"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-green",
+        "display": "Water colour: green"
+       }
+      ],
+      "text": "green"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:4abe0e59-39ba-4811-a1a9-c88f10920565",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: algal-scum at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#surface"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-algal-scum",
+        "display": "Surface film: algal-scum"
+       }
+      ],
+      "text": "algal-scum"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:2818aec8-8707-49d5-ab79-6a893f3d2cdb",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Odour: earthy at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#odour"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "odour",
+        "display": "Odour"
+       }
+      ],
+      "text": "Odour"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "odour-earthy",
+        "display": "Odour: earthy"
+       }
+      ],
+      "text": "earthy"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#odour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:c4d63d53-3172-4d09-92fa-90fcdd410312",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dead fish seen: no at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#dead-fish"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "dead-fish",
+        "display": "Dead fish seen"
+       }
+      ],
+      "text": "Dead fish seen"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false,
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#dead-fish"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d6c8c636-ea09-456c-b91b-4b0de408a2e3",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#people-contact"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false,
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:cd10a872-a877-499d-8628-a517cb804831",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: yes at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#animal-contact"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": true,
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:4fefe2e2-d60d-4511-a32b-bad7305c7136",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Bloom jar/stick test: not-done at Mill Pond inlet (preliminary, record SYN-008)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-008#bloom-check"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "bloom-check",
+        "display": "Bloom jar/stick test"
+       }
+      ],
+      "text": "Bloom jar/stick test"
+     },
+     "subject": {
+      "reference": "urn:uuid:957dc9df-e9a9-4728-841b-093e1b3280ae",
+      "display": "Mill Pond inlet"
+     },
+     "effectiveDateTime": "2026-09-27T10:05:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-05"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "bloom-not-done",
+        "display": "Bloom jar/stick test: not-done"
+       }
+      ],
+      "text": "not-done"
+     },
+     "note": [
+      {
+       "text": "Needs review: The phone position is 400 m from 'Mill Pond inlet' (limit 250 m). Was this the right site?"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-008#bloom-check"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:36b29e6e-292f-4f0f-a404-7f724f5ea8b2",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-SYN-008",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-008 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.2.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:8b92791e-7415-4514-95d2-1ed426ba3314"
+      },
+      {
+       "reference": "urn:uuid:b1aefbeb-81bf-43b0-ab5f-9c2b9d9e289b"
+      },
+      {
+       "reference": "urn:uuid:caa6d4d3-5608-4861-aa7a-f79bf55de943"
+      },
+      {
+       "reference": "urn:uuid:2db6e773-1cc4-4ef3-a2d4-d1c8a140bdf9"
+      },
+      {
+       "reference": "urn:uuid:95f388d5-2202-46b3-b6b4-5613450d63de"
+      },
+      {
+       "reference": "urn:uuid:204ae86f-8b94-4c83-a8d7-15938f93ff07"
+      },
+      {
+       "reference": "urn:uuid:618845e3-8ca4-4efe-bdd0-249f0e4d9aaf"
+      },
+      {
+       "reference": "urn:uuid:390eef58-0290-4376-b00d-e7d6df83b0c9"
+      },
+      {
+       "reference": "urn:uuid:4abe0e59-39ba-4811-a1a9-c88f10920565"
+      },
+      {
+       "reference": "urn:uuid:2818aec8-8707-49d5-ab79-6a893f3d2cdb"
+      },
+      {
+       "reference": "urn:uuid:c4d63d53-3172-4d09-92fa-90fcdd410312"
+      },
+      {
+       "reference": "urn:uuid:d6c8c636-ea09-456c-b91b-4b0de408a2e3"
+      },
+      {
+       "reference": "urn:uuid:cd10a872-a877-499d-8628-a517cb804831"
+      },
+      {
+       "reference": "urn:uuid:4fefe2e2-d60d-4511-a32b-bad7305c7136"
+      },
+      {
+       "reference": "urn:uuid:6ac62b03-70dc-47ff-8c45-0fa5fe0694fa"
+      }
+     ],
+     "occurredDateTime": "2026-09-27T10:05:00+01:00",
+     "recorded": "2026-09-29T06:13:49+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "obs-05"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:46ffa871-e85e-4b39-a1fb-142a9c3e7597",
+        "display": "StreamFHIR 0.2.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "SYN-008"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-SYN-008"
+    }
+   }
+  ]
+ }
+}

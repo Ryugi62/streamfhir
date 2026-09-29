@@ -28,8 +28,14 @@ def test_ac8_bundle_is_transaction_with_conditional_location(sites, now):
     assert loc_entry["request"]["ifNoneExist"].startswith("identifier=")
     assert loc_entry["fullUrl"].startswith("urn:uuid:")
     obs = resources(b, "Observation")
-    assert len(obs) == 1 + 16  # panel + 16 indicators
+    assert len(obs) == 1 + 17  # panel + 17 indicators
     assert all(o["subject"]["reference"] == loc_entry["fullUrl"] for o in obs)
+    # idempotent re-send: every Observation and Media is a conditional create on its record identifier
+    for e in b["entry"]:
+        if e["resource"]["resourceType"] in ("Observation", "Media"):
+            assert e["request"]["ifNoneExist"].startswith("identifier=")
+        if e["resource"]["resourceType"] == "Provenance":
+            assert e["request"]["method"] == "PUT" and e["request"]["url"] == "Provenance/" + e["resource"]["id"]
 
 
 def test_ac8_panel_has_members_and_provenance_targets_every_observation(sites, now):
@@ -38,7 +44,7 @@ def test_ac8_panel_has_members_and_provenance_targets_every_observation(sites, n
     urls = {e["resource"]["resourceType"] + e["fullUrl"]: e["fullUrl"] for e in b["entry"]}
     obs_urls = {e["fullUrl"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"}
     panel = [o for o in resources(b, "Observation") if "hasMember" in o][0]
-    assert len(panel["hasMember"]) == 16
+    assert len(panel["hasMember"]) == 17
     prov = resources(b, "Provenance")[0]
     assert {t["reference"] for t in prov["target"]} >= obs_urls
     assert prov["agent"][0]["who"]["identifier"]["value"] == "obs-aaa"
@@ -70,7 +76,7 @@ def test_ok_record_is_final_and_tagged_as_test_data(sites, now):
     b = mapper().assessment_bundle(report, sites["S-TEST"])
     obs = resources(b, "Observation")
     assert {o["status"] for o in obs} == {"final"}
-    assert obs[0]["meta"]["security"][0]["code"] == "HTEST"
+    assert {c["code"] for c in obs[0]["meta"]["security"]} == {"HTEST", "U", "PSEUDED"}
 
 
 def test_blocked_record_is_not_mapped(sites, now):
@@ -130,3 +136,54 @@ def test_ac12_high_site_emits_exactly_one_flag_on_location(sites, now):
 def test_low_site_emits_no_flag(sites, now):
     risk = evaluate_site("S-TEST", [validate_record(make_record(), sites, now)])
     assert mapper().risk_bundle(risk, sites["S-TEST"]) is None
+
+
+def test_photo_is_evidence_only_for_visual_claims(sites, now):
+    report = validate_record(make_record(), sites, now)
+    obs = resources(mapper().assessment_bundle(report, sites["S-TEST"]), "Observation")
+    by_code = {o["code"]["coding"][0]["code"]: o for o in obs}
+    assert "derivedFrom" in by_code["surface"] and "derivedFrom" in by_code["stream-assessment"]
+    assert "derivedFrom" not in by_code["ph"] and "derivedFrom" not in by_code["water-temperature"]
+
+
+def test_loinc_nitrate_only_when_expressed_as_no3(sites, now):
+    m = mapper()
+    as_no3 = resources(m.assessment_bundle(validate_record(make_record(), sites, now), sites["S-TEST"]), "Observation")
+    as_n = resources(m.assessment_bundle(validate_record(make_record(values={"nitrate-basis": "as-N"}), sites, now),
+                                         sites["S-TEST"]), "Observation")
+    no3 = [o for o in as_no3 if o["code"]["coding"][0]["code"] == "nitrate"][0]
+    n = [o for o in as_n if o["code"]["coding"][0]["code"] == "nitrate"][0]
+    assert {"system": "http://loinc.org", "code": "9480-5", "display": "Nitrate [Mass/volume] in Water"} in no3["code"]["coding"]
+    assert all(c["system"] != "http://loinc.org" for c in n["code"]["coding"])
+
+
+def test_reviewer_decisions_change_status_and_provenance(sites, now):
+    report = validate_record(make_record(values={"ph": 4.2}), sites, now)
+    ok = mapper().assessment_bundle(report, sites["S-TEST"], "confirm")
+    assert {o["status"] for o in resources(ok, "Observation")} == {"final"}
+    roles = [a["type"]["coding"][0]["code"] for a in resources(ok, "Provenance")[0]["agent"]]
+    assert roles == ["author", "assembler", "verifier"]
+    bad = mapper().assessment_bundle(report, sites["S-TEST"], "reject")
+    assert {o["status"] for o in resources(bad, "Observation")} == {"entered-in-error"}
+
+
+def test_flag_is_traceable_expiring_and_updatable(sites, now):
+    r = make_record(values={"odour": "sewage", "people-contact": True})
+    risk = evaluate_site("S-TEST", [validate_record(r, sites, now)], as_of=now)
+    rb = mapper().risk_bundle(risk, sites["S-TEST"])
+    flag_entry = [e for e in rb["entry"] if e["resource"]["resourceType"] == "Flag"][0]
+    flag = flag_entry["resource"]
+    assert flag_entry["request"]["method"] == "PUT" and flag_entry["request"]["url"].startswith("Flag?identifier=")
+    assert flag["extension"][0]["url"] == "http://hl7.org/fhir/StructureDefinition/flag-detail"
+    assert flag["extension"][0]["valueReference"]["identifier"]["value"] == "T-1"
+    assert flag["period"]["end"] > flag["period"]["start"]
+    prov = resources(rb, "Provenance")[0]
+    assert prov["target"][0]["reference"] == flag_entry["fullUrl"]
+
+
+def test_stand_down_sets_same_flag_inactive(sites, now):
+    risk = evaluate_site("S-TEST", [validate_record(make_record(), sites, now)], as_of=now)
+    sd = mapper().stand_down_bundle(risk, sites["S-TEST"])
+    flag_entry = [e for e in sd["entry"] if e["resource"]["resourceType"] == "Flag"][0]
+    assert flag_entry["resource"]["status"] == "inactive"
+    assert flag_entry["request"]["url"].endswith("|S-TEST")

@@ -1,4 +1,4 @@
-# StreamFHIR — SPEC (v0.1, 2026-09-29)
+# StreamFHIR — SPEC (v0.2, 2026-09-29)
 
 ## 0. One line
 StreamFHIR turns a **citizen-science stream check** into **HL7 FHIR R4 data plus an explainable One Health risk flag** that an environmental or public-health system can consume without re-keying.
@@ -10,7 +10,8 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
   - S1: 100 % of synthetic sample records (≥10 records, ≥3 sites) receive a validation status (`ok` / `review` / `blocked`) with ≥1 plain-language message for every non-`ok` record.
   - S2: 100 % of non-`blocked` records map to a FHIR R4 `transaction` Bundle containing 1 `Location`, 1 panel `Observation`, ≥1 indicator `Observation`, 1 `Provenance`; 0 `blocked` records are exported.
   - S3: every indicator code emitted exists in `fhir/CodeSystem-stream-indicator.json` (test-enforced); no LOINC/SNOMED code is used.
-  - S4: every site gets a risk level (`low`/`moderate`/`high`) with the fired rule IDs listed; every `high` site yields exactly 1 FHIR `Flag` with `subject` = that `Location`.
+  - S4: every site gets a hazard level (`low`/`moderate`/`verify`/`high`) and a separate ecological condition with the fired rule IDs listed; every `high` site (>= 5 *corroborated* hazard points) yields exactly 1 FHIR `Flag` with `subject` = that `Location`; 0 Flags are raised from uncorroborated reports.
+  - S8: re-sending the same record to a FHIR server creates 0 duplicate resources (conditional create/update), measured live.
   - S5: ≥25 automated tests pass (`python3 -m pytest -q`), 0 network calls in tests.
   - S6: dry-run is the default for sending; a live POST to HAPI is only done with synthetic data and its response IDs are recorded in README.
   - S7: UI renders at 390 px and 1280 px with no horizontal scroll; one primary action per screen.
@@ -47,6 +48,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 | UC-1 CheckRecord | raw record dict | report + Bundle (or none if blocked) | never alter values; `review` → Observation.status `preliminary` + note |
 | UC-2 SiteRiskOverview | all stored records | per-site `SiteRisk` + Flag bundle for `high` | 14-day window ending at site's latest record; `blocked` records excluded |
 | UC-3 ShareBundle | Bundle, live flag | dry-run summary or server response | default dry-run; live only via explicit flag |
+| UC-4 ReviewRecord | record id, confirm/reject/undo | decision | only `review` records; decisions change corroboration and FHIR status |
 
 ## 6. Acceptance criteria (each → ≥1 test)
 - AC-1 Given a complete, plausible record, When validated, Then status is `ok` and there are 0 issues.
@@ -65,6 +67,16 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-14 Given a live share with a fake transport returning a transaction-response, Then the created resource locations are returned.
 - AC-15 Given the domain and application packages, Then they import nothing from adapters/infrastructure (architecture test).
 - AC-16 Given the web server, When `POST /api/check` with a sample record, Then the JSON response has `report.status` and `bundle`.
+
+### v0.2 additions (after mock judging, see win-gate notes)
+- AC-17 Given hazard signals reported only by untrusted (review) or single photo-less reports, When evaluated, Then level is `verify` and no Flag is raised.
+- AC-18 Given a `review` record, When a reviewer confirms it, Then it counts as corroborated (site may become `high`); When rejected, Then it never counts and maps to `entered-in-error`; only `review` records can be decided.
+- AC-19 Given a later trusted visit that checked the same indicators without the signal, Then the earlier signal is cleared.
+- AC-20 Given an evaluation date (`as_of`), Then only records in the 14 days up to it count; the demo uses a fixed `demo_as_of`.
+- AC-21 Given nitrate without a basis, Then `review`; Given nitrate as N, Then thresholds use NO3 = N x 4.43; LOINC 9480-5 is only added for readings as NO3.
+- AC-22 Given a jar/stick test pointing to green or filamentous algae, Then the bloom rule (R3) does not fire.
+- AC-23 Given any mapped Bundle, Then every Observation and Media uses conditional create on its record identifier and Provenance uses PUT with a deterministic id.
+- AC-24 Given a `high` site, Then the Flag links its trusted evidence via `flag-detail`, has `period.start`/`period.end`, its own Provenance, and is written by conditional update on the site identifier; a stand-down Bundle sets the same Flag `inactive`.
 
 ## 7. Architecture (Clean)
 ```
@@ -90,3 +102,4 @@ FHIR is treated as an external format, so the mapper lives in `adapters/`; the d
 
 ## 10. Change log
 - v0.1 2026-09-29 first version.
+- v0.2 2026-09-29 after 3 mock judges: hazard vs ecological condition split, corroboration from trusted reports only, reviewer confirm/reject, as-of window + clearing, nitrate basis, bloom jar/stick test, invertebrate sampling effort, idempotent FHIR writes, traceable/expiring Flag, 2 profiles, CapabilityStatement, Subscription example, citizen step form, map, static demo.

@@ -1,0 +1,1349 @@
+{
+ "report": {
+  "record_id": "SYN-004",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Alder Brook - below storm outfall (S-ALDER-DN)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "S-ALDER-DN"
+      }
+     ],
+     "status": "active",
+     "name": "Alder Brook - below storm outfall",
+     "description": "Synthetic demo site: 50 m below a storm-water outfall, next to a playground.",
+     "mode": "instance",
+     "position": {
+      "longitude": -8.418,
+      "latitude": 40.2105
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-ALDER-DN"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:53a9cd71-20cb-449c-9419-e6686dfddae1",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.2.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.2.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:05ef7b0d-10c4-4dee-8952-b59ad9f7e1db",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Alder Brook - below storm outfall on 2026-09-25T15:50:00+01:00: 12 indicators (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:d5709385-c30d-4f07-9006-54db1ae9bb67"
+      },
+      {
+       "reference": "urn:uuid:f7b01b3f-ca45-4093-8457-13099e29243c"
+      },
+      {
+       "reference": "urn:uuid:c2337ba2-2d01-48c3-8d48-e91ba86f56c5"
+      },
+      {
+       "reference": "urn:uuid:58111221-6bec-4307-94cf-9a344107ba53"
+      },
+      {
+       "reference": "urn:uuid:7a2be20c-1058-447a-b931-6d19cb531d74"
+      },
+      {
+       "reference": "urn:uuid:056d0455-536f-41ad-bda8-c2c07c5d7015"
+      },
+      {
+       "reference": "urn:uuid:368d1228-6f15-45e9-8059-a1d27bf91a18"
+      },
+      {
+       "reference": "urn:uuid:de102004-a280-4c01-8f4a-d6096fa09a54"
+      },
+      {
+       "reference": "urn:uuid:24cbcf58-655c-4f24-bbe0-ccb19d0f5121"
+      },
+      {
+       "reference": "urn:uuid:5dc94699-ec7f-4a4a-a8aa-57fec6c9435e"
+      },
+      {
+       "reference": "urn:uuid:cf5c1fdf-475a-4f1b-a5c7-75e8fddeb969"
+      },
+      {
+       "reference": "urn:uuid:b8aa7cd1-a5bc-43d9-92a0-d045b7a56e2e"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d5709385-c30d-4f07-9006-54db1ae9bb67",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Channel condition score: 3 at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#channel-condition"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "channel-condition",
+        "display": "Channel condition score"
+       }
+      ],
+      "text": "Channel condition score"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 3
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#channel-condition"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:f7b01b3f-ca45-4093-8457-13099e29243c",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Bank stability score: 3 at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#bank-stability"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "bank-stability",
+        "display": "Bank stability score"
+       }
+      ],
+      "text": "Bank stability score"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 3
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#bank-stability"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:c2337ba2-2d01-48c3-8d48-e91ba86f56c5",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Riparian zone score: 4 at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#riparian-zone"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "riparian-zone",
+        "display": "Riparian zone score"
+       }
+      ],
+      "text": "Riparian zone score"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 4
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#riparian-zone"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:58111221-6bec-4307-94cf-9a344107ba53",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>In-stream habitat score: 3 at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#instream-habitat"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "instream-habitat",
+        "display": "In-stream habitat score"
+       }
+      ],
+      "text": "In-stream habitat score"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 3
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#instream-habitat"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:7a2be20c-1058-447a-b931-6d19cb531d74",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 16.4 °C at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 16.4,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:056d0455-536f-41ad-bda8-c2c07c5d7015",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: milky-grey at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-milky-grey",
+        "display": "Water colour: milky-grey"
+       }
+      ],
+      "text": "milky-grey"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:368d1228-6f15-45e9-8059-a1d27bf91a18",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Odour: sewage at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#odour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "odour",
+        "display": "Odour"
+       }
+      ],
+      "text": "Odour"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "odour-sewage",
+        "display": "Odour: sewage"
+       }
+      ],
+      "text": "sewage"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#odour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:de102004-a280-4c01-8f4a-d6096fa09a54",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: lots at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-lots",
+        "display": "Litter: lots"
+       }
+      ],
+      "text": "lots"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:24cbcf58-655c-4f24-bbe0-ccb19d0f5121",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: yes at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": true
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:5dc94699-ec7f-4a4a-a8aa-57fec6c9435e",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:cf5c1fdf-475a-4f1b-a5c7-75e8fddeb969",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mayfly/stonefly/caddisfly groups found: 0 at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#sensitive-invertebrates"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "sensitive-invertebrates",
+        "display": "Mayfly/stonefly/caddisfly groups found"
+       }
+      ],
+      "text": "Mayfly/stonefly/caddisfly groups found"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 0
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#sensitive-invertebrates"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b8aa7cd1-a5bc-43d9-92a0-d045b7a56e2e",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Kick-net sampling effort: 1.5 min at Alder Brook - below storm outfall (final, record SYN-004)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-004#kick-sample-minutes"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "kick-sample-minutes",
+        "display": "Kick-net sampling effort"
+       }
+      ],
+      "text": "Kick-net sampling effort"
+     },
+     "subject": {
+      "reference": "urn:uuid:aceb8f7f-19f2-487d-835f-93b90989497c",
+      "display": "Alder Brook - below storm outfall"
+     },
+     "effectiveDateTime": "2026-09-25T15:50:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-03"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 1.5,
+      "unit": "min",
+      "system": "http://unitsofmeasure.org",
+      "code": "min"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#kick-sample-minutes"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:e849aa84-931b-4580-8b9c-d9055cc643f4",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-SYN-004",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-004 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.2.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:05ef7b0d-10c4-4dee-8952-b59ad9f7e1db"
+      },
+      {
+       "reference": "urn:uuid:d5709385-c30d-4f07-9006-54db1ae9bb67"
+      },
+      {
+       "reference": "urn:uuid:f7b01b3f-ca45-4093-8457-13099e29243c"
+      },
+      {
+       "reference": "urn:uuid:c2337ba2-2d01-48c3-8d48-e91ba86f56c5"
+      },
+      {
+       "reference": "urn:uuid:58111221-6bec-4307-94cf-9a344107ba53"
+      },
+      {
+       "reference": "urn:uuid:7a2be20c-1058-447a-b931-6d19cb531d74"
+      },
+      {
+       "reference": "urn:uuid:056d0455-536f-41ad-bda8-c2c07c5d7015"
+      },
+      {
+       "reference": "urn:uuid:368d1228-6f15-45e9-8059-a1d27bf91a18"
+      },
+      {
+       "reference": "urn:uuid:de102004-a280-4c01-8f4a-d6096fa09a54"
+      },
+      {
+       "reference": "urn:uuid:24cbcf58-655c-4f24-bbe0-ccb19d0f5121"
+      },
+      {
+       "reference": "urn:uuid:5dc94699-ec7f-4a4a-a8aa-57fec6c9435e"
+      },
+      {
+       "reference": "urn:uuid:cf5c1fdf-475a-4f1b-a5c7-75e8fddeb969"
+      },
+      {
+       "reference": "urn:uuid:b8aa7cd1-a5bc-43d9-92a0-d045b7a56e2e"
+      }
+     ],
+     "occurredDateTime": "2026-09-25T15:50:00+01:00",
+     "recorded": "2026-09-29T06:13:49+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "obs-03"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:53a9cd71-20cb-449c-9419-e6686dfddae1",
+        "display": "StreamFHIR 0.2.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "SYN-004"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-SYN-004"
+    }
+   }
+  ]
+ }
+}

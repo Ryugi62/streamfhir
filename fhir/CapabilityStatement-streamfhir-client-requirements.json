@@ -1,0 +1,161 @@
+{
+ "resourceType": "CapabilityStatement",
+ "id": "streamfhir-client-requirements",
+ "url": "https://example.org/fhir/streamfhir/CapabilityStatement/streamfhir-client-requirements",
+ "version": "0.2.0",
+ "name": "StreamFHIRClientRequirements",
+ "title": "What StreamFHIR needs from a FHIR R4 server",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "kind": "requirements",
+ "fhirVersion": "4.0.1",
+ "format": [
+  "json"
+ ],
+ "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create (ifNoneExist on identifier) and conditional update of Flag by identifier. Consumers find warnings with Flag?category=safety&status=active or subscribe to them (see Subscription example).",
+ "rest": [
+  {
+   "mode": "server",
+   "interaction": [
+    {
+     "code": "transaction"
+    }
+   ],
+   "resource": [
+    {
+     "type": "Location",
+     "interaction": [
+      {
+       "code": "create"
+      },
+      {
+       "code": "read"
+      },
+      {
+       "code": "search-type"
+      }
+     ],
+     "conditionalCreate": true,
+     "searchParam": [
+      {
+       "name": "identifier",
+       "type": "token"
+      }
+     ]
+    },
+    {
+     "type": "Device",
+     "interaction": [
+      {
+       "code": "create"
+      },
+      {
+       "code": "read"
+      }
+     ],
+     "conditionalCreate": true,
+     "searchParam": [
+      {
+       "name": "identifier",
+       "type": "token"
+      }
+     ]
+    },
+    {
+     "type": "Media",
+     "interaction": [
+      {
+       "code": "create"
+      },
+      {
+       "code": "read"
+      }
+     ],
+     "conditionalCreate": true,
+     "searchParam": [
+      {
+       "name": "identifier",
+       "type": "token"
+      }
+     ]
+    },
+    {
+     "type": "Observation",
+     "interaction": [
+      {
+       "code": "create"
+      },
+      {
+       "code": "read"
+      },
+      {
+       "code": "search-type"
+      }
+     ],
+     "conditionalCreate": true,
+     "searchParam": [
+      {
+       "name": "identifier",
+       "type": "token"
+      },
+      {
+       "name": "subject",
+       "type": "reference"
+      },
+      {
+       "name": "code",
+       "type": "token"
+      }
+     ]
+    },
+    {
+     "type": "Provenance",
+     "interaction": [
+      {
+       "code": "update"
+      },
+      {
+       "code": "read"
+      }
+     ],
+     "conditionalCreate": true
+    },
+    {
+     "type": "Flag",
+     "interaction": [
+      {
+       "code": "update"
+      },
+      {
+       "code": "read"
+      },
+      {
+       "code": "search-type"
+      }
+     ],
+     "conditionalCreate": true,
+     "searchParam": [
+      {
+       "name": "identifier",
+       "type": "token"
+      },
+      {
+       "name": "category",
+       "type": "token"
+      },
+      {
+       "name": "status",
+       "type": "token"
+      },
+      {
+       "name": "subject",
+       "type": "reference"
+      }
+     ],
+     "conditionalUpdate": true
+    }
+   ]
+  }
+ ]
+}

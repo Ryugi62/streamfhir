@@ -1,6 +1,6 @@
 """Adapter: JSON file repositories for sites and records."""
 import json
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from ..domain.sites import Site
 
@@ -23,3 +23,7 @@ class JsonRecordRepository:
     def all(self) -> List[Dict[str, Any]]:
         with open(self.path, encoding="utf-8") as fh:
             return json.load(fh)["records"]
+
+    def demo_as_of(self) -> Optional[str]:
+        with open(self.path, encoding="utf-8") as fh:
+            return json.load(fh).get("demo_as_of")

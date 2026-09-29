@@ -67,7 +67,7 @@ def test_ac13_dry_run_is_default_and_makes_no_call():
     out = svc.share(bundle)
     assert spy.calls == []
     assert out["mode"] == "dry-run"
-    assert out["resource_counts"]["Observation"] == 17
+    assert out["resource_counts"]["Observation"] == 18
 
 
 def test_ac14_live_share_returns_server_locations_via_fake_transport():
@@ -86,3 +86,25 @@ def test_ac14_live_share_returns_server_locations_via_fake_transport():
     assert out["locations"] == ["Observation/42/_history/1"]
     assert seen["method"] == "POST" and seen["url"] == "https://fhir.example.test/baseR4"
     assert seen["headers"]["Content-Type"] == "application/fhir+json"
+
+
+def test_uc4_review_confirm_turns_verify_into_high_with_flag():
+    rec = make_record(record_id="R-1", photos=[], values={"surface": "algal-scum", "water-temperature": 24.0,
+                                                           "animal-contact": True})
+    svc = service([rec])
+    before = {o.site.site_id: o for o in svc.site_overview()}["S-TEST"]
+    assert before.risk.level == "verify" and before.flag_bundle is None
+    svc.review("R-1", "confirm")
+    after = {o.site.site_id: o for o in svc.site_overview()}["S-TEST"]
+    assert after.risk.level == "high" and after.flag_bundle is not None
+    svc.review("R-1", "reject")
+    assert {o.site.site_id: o for o in svc.site_overview()}["S-TEST"].risk.level == "low"
+
+
+def test_uc4_only_review_records_can_be_decided():
+    svc = service([make_record(record_id="OK-1")])
+    try:
+        svc.review("OK-1", "confirm")
+        assert False, "expected ValueError"
+    except ValueError:
+        pass

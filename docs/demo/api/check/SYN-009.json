@@ -1,0 +1,2067 @@
+{
+ "report": {
+  "record_id": "SYN-009",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Willow Creek - allotment gardens (S-WILLOW)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "S-WILLOW"
+      }
+     ],
+     "status": "active",
+     "name": "Willow Creek - allotment gardens",
+     "description": "Synthetic demo site: creek running past allotment gardens.",
+     "mode": "instance",
+     "position": {
+      "longitude": -8.39,
+      "latitude": 40.225
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-WILLOW"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:59f20e35-2878-4ffe-8da4-e8de874e4869",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.2.0</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.2.0"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:4ebd4ba8-3133-4c22-b039-2a04888adc67",
+    "resource": {
+     "resourceType": "Media",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "status": "completed",
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen photo 1 of Willow Creek - allotment gardens, record SYN-009</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#photo-1"
+      }
+     ],
+     "type": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/media-type",
+        "code": "image",
+        "display": "Image"
+       }
+      ]
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "createdDateTime": "2026-09-17T09:00:00+01:00",
+     "content": {
+      "contentType": "image/jpeg",
+      "url": "https://example.org/demo-photos/syn-009.jpg",
+      "title": "Citizen photo 1"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Media",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#photo-1"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:2d2cfa6a-8b67-4188-b27c-3053e7b2dd45",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Willow Creek - allotment gardens on 2026-09-17T09:00:00+01:00: 19 indicators (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:ea194385-5988-4224-9ee4-2261630b2860"
+      },
+      {
+       "reference": "urn:uuid:c21a79be-2249-4e01-9cd0-16edaf220edd"
+      },
+      {
+       "reference": "urn:uuid:551c54c7-c04f-44a4-8f0f-600417f863d0"
+      },
+      {
+       "reference": "urn:uuid:943e8d04-7b9a-4f03-9204-849f744e4447"
+      },
+      {
+       "reference": "urn:uuid:7494272c-e839-4a9d-b61a-c47de9b139cf"
+      },
+      {
+       "reference": "urn:uuid:99d73698-8bdf-4097-84c6-f4e43b3e3f78"
+      },
+      {
+       "reference": "urn:uuid:255d542a-b90e-4046-8197-fbfb1573b64a"
+      },
+      {
+       "reference": "urn:uuid:852f1f7d-e447-4118-9f06-f642e10e6954"
+      },
+      {
+       "reference": "urn:uuid:e1af292c-474e-4325-9078-cdc79088adcd"
+      },
+      {
+       "reference": "urn:uuid:e0fdb0bf-3c00-4e9b-9635-2860fb404ff5"
+      },
+      {
+       "reference": "urn:uuid:5c375291-a497-4e93-9776-7fcf7d79e237"
+      },
+      {
+       "reference": "urn:uuid:20641ab9-8160-4da5-9a5c-e053b68f764a"
+      },
+      {
+       "reference": "urn:uuid:b5e89f0c-7c00-4798-9c6a-86b70e378a43"
+      },
+      {
+       "reference": "urn:uuid:e60d5a3b-de22-4505-b59a-b5b46c480568"
+      },
+      {
+       "reference": "urn:uuid:64a114aa-5bb8-41a2-b33d-672a207f2c5d"
+      },
+      {
+       "reference": "urn:uuid:1277563a-4b8a-4ca2-b109-2f24f38f6c14"
+      },
+      {
+       "reference": "urn:uuid:8290326a-e9c0-4ac7-82b3-98032350e6fa"
+      },
+      {
+       "reference": "urn:uuid:016c7216-edd8-44a6-b09f-e0a97adbed29"
+      },
+      {
+       "reference": "urn:uuid:5af1eba9-9862-4e02-b64a-ff6cd5221fa0"
+      }
+     ],
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:4ebd4ba8-3133-4c22-b039-2a04888adc67"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:ea194385-5988-4224-9ee4-2261630b2860",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Channel condition score: 6 at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#channel-condition"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "channel-condition",
+        "display": "Channel condition score"
+       }
+      ],
+      "text": "Channel condition score"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 6
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#channel-condition"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:c21a79be-2249-4e01-9cd0-16edaf220edd",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Bank stability score: 5 at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#bank-stability"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "bank-stability",
+        "display": "Bank stability score"
+       }
+      ],
+      "text": "Bank stability score"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 5
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#bank-stability"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:551c54c7-c04f-44a4-8f0f-600417f863d0",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Riparian zone score: 4 at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#riparian-zone"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "riparian-zone",
+        "display": "Riparian zone score"
+       }
+      ],
+      "text": "Riparian zone score"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 4
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#riparian-zone"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:943e8d04-7b9a-4f03-9204-849f744e4447",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>In-stream habitat score: 6 at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#instream-habitat"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "instream-habitat",
+        "display": "In-stream habitat score"
+       }
+      ],
+      "text": "In-stream habitat score"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 6
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#instream-habitat"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:7494272c-e839-4a9d-b61a-c47de9b139cf",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 16.8 °C at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 16.8,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:99d73698-8bdf-4097-84c6-f4e43b3e3f78",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 7.2 pH at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 7.2,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:255d542a-b90e-4046-8197-fbfb1573b64a",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 12.4 mg/L at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 12.4,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:852f1f7d-e447-4118-9f06-f642e10e6954",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): 1.2 mg/L at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 1.2,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:e1af292c-474e-4325-9078-cdc79088adcd",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Transparency tube depth: 40 cm at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#transparency"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "transparency",
+        "display": "Transparency tube depth"
+       }
+      ],
+      "text": "Transparency tube depth"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 40,
+      "unit": "cm",
+      "system": "http://unitsofmeasure.org",
+      "code": "cm"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#transparency"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:e0fdb0bf-3c00-4e9b-9635-2860fb404ff5",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water colour: brown-turbid at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#water-colour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-colour",
+        "display": "Water colour"
+       }
+      ],
+      "text": "Water colour"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "colour-brown-turbid",
+        "display": "Water colour: brown-turbid"
+       }
+      ],
+      "text": "brown-turbid"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:4ebd4ba8-3133-4c22-b039-2a04888adc67"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#water-colour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:5c375291-a497-4e93-9776-7fcf7d79e237",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Surface film: none at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#surface"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "surface",
+        "display": "Surface film"
+       }
+      ],
+      "text": "Surface film"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "surface-none",
+        "display": "Surface film: none"
+       }
+      ],
+      "text": "none"
+     },
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:4ebd4ba8-3133-4c22-b039-2a04888adc67"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#surface"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:20641ab9-8160-4da5-9a5c-e053b68f764a",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Odour: earthy at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#odour"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "odour",
+        "display": "Odour"
+       }
+      ],
+      "text": "Odour"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "odour-earthy",
+        "display": "Odour: earthy"
+       }
+      ],
+      "text": "earthy"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#odour"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b5e89f0c-7c00-4798-9c6a-86b70e378a43",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Litter: some at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#litter"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "litter",
+        "display": "Litter"
+       }
+      ],
+      "text": "Litter"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "litter-some",
+        "display": "Litter: some"
+       }
+      ],
+      "text": "some"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#litter"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:e60d5a3b-de22-4505-b59a-b5b46c480568",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dead fish seen: no at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#dead-fish"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "dead-fish",
+        "display": "Dead fish seen"
+       }
+      ],
+      "text": "Dead fish seen"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false,
+     "derivedFrom": [
+      {
+       "reference": "urn:uuid:4ebd4ba8-3133-4c22-b039-2a04888adc67"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#dead-fish"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:64a114aa-5bb8-41a2-b33d-672a207f2c5d",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>People in the water: no at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#people-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "people-contact",
+        "display": "People in the water"
+       }
+      ],
+      "text": "People in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#people-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:1277563a-4b8a-4ca2-b109-2f24f38f6c14",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Pets or livestock in the water: no at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#animal-contact"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "animal-contact",
+        "display": "Pets or livestock in the water"
+       }
+      ],
+      "text": "Pets or livestock in the water"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueBoolean": false
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#animal-contact"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:8290326a-e9c0-4ac7-82b3-98032350e6fa",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Mayfly/stonefly/caddisfly groups found: 1 at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#sensitive-invertebrates"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "sensitive-invertebrates",
+        "display": "Mayfly/stonefly/caddisfly groups found"
+       }
+      ],
+      "text": "Mayfly/stonefly/caddisfly groups found"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueInteger": 1
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#sensitive-invertebrates"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:016c7216-edd8-44a6-b09f-e0a97adbed29",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-N at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-N",
+        "display": "Nitrate reporting basis: as-N"
+       }
+      ],
+      "text": "as-N"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:5af1eba9-9862-4e02-b64a-ff6cd5221fa0",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Kick-net sampling effort: 2 min at Willow Creek - allotment gardens (final, record SYN-009)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "SYN-009#kick-sample-minutes"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "survey",
+         "display": "Survey"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "kick-sample-minutes",
+        "display": "Kick-net sampling effort"
+       }
+      ],
+      "text": "Kick-net sampling effort"
+     },
+     "subject": {
+      "reference": "urn:uuid:cb04b164-6d21-4052-9774-042a92fd4433",
+      "display": "Willow Creek - allotment gardens"
+     },
+     "effectiveDateTime": "2026-09-17T09:00:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "obs-07"
+       },
+       "display": "Pseudonymous citizen scientist"
+      }
+     ],
+     "valueQuantity": {
+      "value": 2,
+      "unit": "min",
+      "system": "http://unitsofmeasure.org",
+      "code": "min"
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Observation",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#kick-sample-minutes"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b492698e-6a05-412f-acd0-8f4663fcb300",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-SYN-009",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       },
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "code": "PSEUDED",
+        "display": "pseudonymized"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-009 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.2.0</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:2d2cfa6a-8b67-4188-b27c-3053e7b2dd45"
+      },
+      {
+       "reference": "urn:uuid:ea194385-5988-4224-9ee4-2261630b2860"
+      },
+      {
+       "reference": "urn:uuid:c21a79be-2249-4e01-9cd0-16edaf220edd"
+      },
+      {
+       "reference": "urn:uuid:551c54c7-c04f-44a4-8f0f-600417f863d0"
+      },
+      {
+       "reference": "urn:uuid:943e8d04-7b9a-4f03-9204-849f744e4447"
+      },
+      {
+       "reference": "urn:uuid:7494272c-e839-4a9d-b61a-c47de9b139cf"
+      },
+      {
+       "reference": "urn:uuid:99d73698-8bdf-4097-84c6-f4e43b3e3f78"
+      },
+      {
+       "reference": "urn:uuid:255d542a-b90e-4046-8197-fbfb1573b64a"
+      },
+      {
+       "reference": "urn:uuid:852f1f7d-e447-4118-9f06-f642e10e6954"
+      },
+      {
+       "reference": "urn:uuid:e1af292c-474e-4325-9078-cdc79088adcd"
+      },
+      {
+       "reference": "urn:uuid:e0fdb0bf-3c00-4e9b-9635-2860fb404ff5"
+      },
+      {
+       "reference": "urn:uuid:5c375291-a497-4e93-9776-7fcf7d79e237"
+      },
+      {
+       "reference": "urn:uuid:20641ab9-8160-4da5-9a5c-e053b68f764a"
+      },
+      {
+       "reference": "urn:uuid:b5e89f0c-7c00-4798-9c6a-86b70e378a43"
+      },
+      {
+       "reference": "urn:uuid:e60d5a3b-de22-4505-b59a-b5b46c480568"
+      },
+      {
+       "reference": "urn:uuid:64a114aa-5bb8-41a2-b33d-672a207f2c5d"
+      },
+      {
+       "reference": "urn:uuid:1277563a-4b8a-4ca2-b109-2f24f38f6c14"
+      },
+      {
+       "reference": "urn:uuid:8290326a-e9c0-4ac7-82b3-98032350e6fa"
+      },
+      {
+       "reference": "urn:uuid:016c7216-edd8-44a6-b09f-e0a97adbed29"
+      },
+      {
+       "reference": "urn:uuid:5af1eba9-9862-4e02-b64a-ff6cd5221fa0"
+      },
+      {
+       "reference": "urn:uuid:4ebd4ba8-3133-4c22-b039-2a04888adc67"
+      }
+     ],
+     "occurredDateTime": "2026-09-17T09:00:00+01:00",
+     "recorded": "2026-09-29T06:13:49+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "obs-07"
+        },
+        "display": "Pseudonymous citizen scientist"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:59f20e35-2878-4ffe-8da4-e8de874e4869",
+        "display": "StreamFHIR 0.2.0"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "SYN-009"
+        },
+        "display": "Original citizen record"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-SYN-009"
+    }
+   }
+  ]
+ }
+}

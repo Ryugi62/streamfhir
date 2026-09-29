@@ -1,0 +1,79 @@
+{
+ "resourceType": "CodeSystem",
+ "id": "onehealth-risk-rule",
+ "url": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+ "version": "0.2.0",
+ "name": "OneHealthRiskRule",
+ "title": "StreamFHIR explainable rules",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "publisher": "StreamFHIR hackathon prototype",
+ "description": "The printed rules (hazard and ecological condition) used by the StreamFHIR rule engine. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "caseSensitive": true,
+ "content": "complete",
+ "count": 10,
+ "concept": [
+  {
+   "code": "R1",
+   "display": "Poor habitat",
+   "definition": "[condition] When mean of the visual habitat scores <= 5 (of 10). Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life. Advice: Share with the city's river restoration team; repeat the visual check each season."
+  },
+  {
+   "code": "R2",
+   "display": "Nutrient enrichment",
+   "definition": "[condition] When nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds). Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria. Advice: Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring."
+  },
+  {
+   "code": "R3",
+   "display": "Possible cyanobacterial bloom",
+   "definition": "[hazard] When surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to harmless green or filamentous algae. Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. Advice: Keep dogs and children out of the water and report the bloom to the local authority for testing."
+  },
+  {
+   "code": "R4",
+   "display": "Sewage signal",
+   "definition": "[hazard] When odour = sewage or water-colour = milky-grey. Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals. Advice: Avoid touching the water, wash hands, and report it to the water utility or municipality."
+  },
+  {
+   "code": "R5",
+   "display": "Dead fish",
+   "definition": "[hazard] When dead-fish = yes. Fish kills point to low oxygen, toxins or pollution - an early warning for other animals. Advice: Do not touch the fish; note how many and report to the environment authority."
+  },
+  {
+   "code": "R6",
+   "display": "People in contact with affected water",
+   "definition": "[hazard] When people-contact = yes while R3 or R4 fired at the site. Exposure turns a water problem into a human-health problem. Advice: Discourage paddling and swimming here until the signal has been checked."
+  },
+  {
+   "code": "R7",
+   "display": "Pets or livestock in contact with affected water",
+   "definition": "[hazard] When animal-contact = yes while R3, R4 or R5 fired at the site. Dogs and livestock drink and swim in affected water and are often the first victims of blooms. Advice: Keep pets and livestock out of the water and away from scum on the shore."
+  },
+  {
+   "code": "R8",
+   "display": "Oil or chemical signal",
+   "definition": "[hazard] When surface = oily-sheen or odour = chemical. Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact. Advice: Avoid skin contact and report the sheen or smell to the environment authority."
+  },
+  {
+   "code": "R9",
+   "display": "Nitrate above drinking-water value",
+   "definition": "[condition] When nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor). Stream water is not drinking water, but this level signals run-off that may reach wells and supplies. Advice: Mention it to the water utility; private well owners nearby may want a lab test."
+  },
+  {
+   "code": "R10",
+   "display": "No mayfly, stonefly or caddisfly larvae found",
+   "definition": "[condition] When sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach. Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index. Advice: Repeat the sample in a riffle; if still none, share with the ecology team for a full index."
+  }
+ ]
+}

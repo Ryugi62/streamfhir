@@ -1,0 +1,15 @@
+{
+ "report": {
+  "record_id": "SYN-011",
+  "status": "blocked",
+  "issues": [
+   {
+    "severity": "error",
+    "field": "observer",
+    "code": "missing-field",
+    "message": "'observer' is missing. We need it to know who, where and when."
+   }
+  ]
+ },
+ "bundle": null
+}

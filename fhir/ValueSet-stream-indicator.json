@@ -2,11 +2,23 @@
  "resourceType": "ValueSet",
  "id": "stream-indicator",
  "url": "https://example.org/fhir/streamfhir/ValueSet/stream-indicator",
- "version": "0.1.0",
+ "version": "0.2.0",
  "name": "StreamIndicator",
  "title": "Citizen stream assessment indicators",
  "status": "draft",
  "experimental": true,
+ "date": "2026-09-29",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
  "description": "All codes from the StreamFHIR stream-indicator CodeSystem (example canonical).",
  "compose": {
   "include": [

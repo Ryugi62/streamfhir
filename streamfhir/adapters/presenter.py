@@ -21,11 +21,13 @@ def to_jsonable(obj: Any) -> Any:
     return obj
 
 
-def overview_json(overview) -> dict:
-    return {"rules": rules_table(), "sites": [{
+def overview_json(overview, as_of=None) -> dict:
+    return {"rules": rules_table(), "as_of": to_jsonable(as_of), "sites": [{
         "site": to_jsonable(o.site),
         "risk": to_jsonable(o.risk),
-        "reports": [{"record_id": r.record_id, "status": r.status, "issues": to_jsonable(r.issues)} for r in o.reports],
+        "reports": [{"record_id": r.record_id, "status": r.status, "decision": o.decisions.get(r.record_id),
+                     "observed_at": to_jsonable(r.assessment.observed_at) if r.assessment else None,
+                     "issues": to_jsonable(r.issues)} for r in o.reports],
         "flag_bundle": o.flag_bundle} for o in overview]}
 
 

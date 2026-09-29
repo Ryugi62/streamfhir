@@ -102,3 +102,15 @@ def test_unknown_site_blocks(sites, now):
 def test_every_issue_has_plain_message(sites, now):
     report = validate_record(make_record(values={"ph": 4.2}, gps_accuracy_m=120), sites, now)
     assert all(len(i.message) > 20 for i in report.issues)
+
+
+def test_invertebrate_count_above_3_blocks(sites, now):
+    report = validate_record(make_record(values={"sensitive-invertebrates": 4}), sites, now)
+    assert report.status == BLOCKED
+
+
+def test_nitrate_without_basis_needs_review(sites, now):
+    r = make_record()
+    del r["values"]["nitrate-basis"]
+    report = validate_record(r, sites, now)
+    assert report.status == REVIEW and "nitrate-basis-missing" in codes(report)

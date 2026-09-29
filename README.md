@@ -1,66 +1,83 @@
 # StreamFHIR
 
-**Citizen stream checks → HL7 FHIR R4 data + an explainable One Health risk flag that health systems can read.**
+**Citizen stream checks → HL7 FHIR R4 data + a One Health warning that health systems can read — raised only when the evidence is corroborated.**
 
-Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy Ecosystems, Healthy Communities*).
+Built for the OneAquaHealth IEEE Global Hackathon 2026 (*Healthy Waters, Healthy Ecosystems, Healthy Communities*). **Track 7 — Digital Health Standards.**
+
+- **Try it without installing anything:** open the static demo in [`docs/demo/`](docs/demo/) (served as a web page once the repository is published, e.g. with GitHub Pages; the sample records are precomputed).
+- **Run the full app:** `python3 -m streamfhir serve` → http://127.0.0.1:8000 (Python 3.9+, no dependencies).
 
 ![Sites overview (mobile)](docs/screenshots/0-first-screen-mobile.png)
 
-## Track alignment
-**Track 7 — Digital Health Standards** ("Enable interoperability across systems — fragmented data and lack of standards — FHIR models, AI agents, and integration frameworks"), with a **Track 2** flavour: the output is an actionable One Health signal, not just a data format.
+## In 30 seconds
+A volunteer at a pond sees green scum and dogs swimming. Today that report stays in one app. With StreamFHIR it becomes:
+1. a **validated** record (impossible values blocked, doubtful ones flagged for a person — never silently changed),
+2. **standard HL7 FHIR R4 data** (Location, Observations, Media, Provenance) that any FHIR server accepts, and
+3. an **explainable site warning** (a FHIR `Flag` on the site) — but only when **corroborated** by two independent observers, a photo, or a reviewer. One unverified report asks for verification instead of raising an alarm.
 
-StreamFHIR is the bridge between a citizen-science stream observation and the systems that protect human, animal and environmental health. It speaks the standard those systems already use: HL7 FHIR R4.
+## Track alignment
+**Track 7 — Digital Health Standards** ("Enable interoperability across systems — fragmented data and lack of standards — FHIR models, AI agents, and integration frameworks"), with a **Track 2** flavour (actionable One Health insight).
+StreamFHIR is a small **integration framework**: ports-and-adapters code where one adapter reads a citizen-science record and another writes FHIR R4 to any server. It ships **FHIR models** — 2 profiles, 4 CodeSystems, a ValueSet, a CapabilityStatement and a Subscription example — tested live on the public HAPI FHIR R4 server. We did not build an AI agent. The rules are published as a CodeSystem, so an agent or a person can cite exactly why a warning exists.
 
 ## Problem
-Citizens can now see and report what is happening in urban streams: sewage smell, green scum, dead fish, children paddling, dogs swimming. But those reports usually stay inside the app that collected them:
-
-- **Fragmented data** — each citizen-science tool has its own format, so an environmental agency, a municipal dashboard and a public-health team cannot combine them without manual re-keying.
-- **Trust gap** — a single citizen report may be wrong (a pH typo, a phone GPS 400 m off, a "dead fish" claim without a photo). Silent "cleaning" hides this; ignoring the report loses a real warning.
-- **The One Health link is invisible** — a bloom at a pond where dogs swim is an animal-health *and* human-health issue, but water data and health data rarely meet.
+- **Fragmented data** — every citizen-science tool has its own format. Environmental agencies, city dashboards and public-health teams cannot combine the data without re-keying it by hand.
+- **The trust gap** — a single citizen report may be wrong: a pH typo, a GPS fix 400 m off, a dead-fish claim with no photo. Silently "cleaning" such reports hides the problem, and ignoring them loses real warnings. Raising alarms on them erodes trust.
+- **The One Health link is invisible** — a bloom where dogs swim is an animal-health *and* a human-health issue, but water data and health data rarely meet.
 
 ## Solution
-StreamFHIR is a small, runnable pipeline with a plain-language web UI:
-
-1. **Ingest** a citizen stream assessment record (visual 1–10 habitat scores, test-strip readings, what you see/smell, who is in the water).
-2. **Validate** it with human-in-the-loop rules: impossible values block sharing; unusual values, missing photos for big claims, poor GPS or a position far from the site are flagged *"Needs a quick look"* — **values are never altered**; they are shared as `preliminary` with a note.
-3. **Map to HL7 FHIR R4**: `Location` (site, conditional create so a site is never duplicated), one `Observation` per indicator grouped by a panel `Observation`, `Media` for photos, `Provenance` for the pseudonymous observer and the software, all in one `transaction` Bundle. Published `CodeSystem`s, `ValueSet` and a minimal `StructureDefinition` profile.
-4. **Explain risk per site** with 9 printed rules across three One Health lanes (environment · animals · people). No machine learning and no accuracy claims — every point on the card traces back to a rule and to the records that triggered it, with a *corroboration* check (≥2 independent observers or a photo).
-5. **Emit a FHIR `Flag`** on the site `Location` when risk is high, so a public-health or environmental system can query or subscribe to it.
-6. **Share** the Bundles to any FHIR R4 server. Dry run by default; live POST was tested against the public HAPI FHIR R4 server with synthetic data ([evidence](docs/evidence-hapi.md)).
+| Step | What StreamFHIR does |
+|---|---|
+| **Ingest** | A citizen assessment covers: visual 1–10 habitat scores, test-strip readings (with the nitrate basis, as NO3 or as N), a simple jar/stick bloom test, what the volunteer sees and smells, a mayfly/stonefly/caddisfly count with sampling time, and who is in the water. Entry is a step-by-step form (one question group per screen) or an app export. |
+| **Validate** | Impossible values → *Can't share yet*. Unusual values, a missing photo for a big claim, poor GPS, a position far from the site, or a missing nitrate basis or sampling time → *Needs a quick look*. **Values are never altered.** Records needing a look are shared as `preliminary`, with the reason in a note. |
+| **Review** | A reviewer can **Confirm** or **Reject** each report that needs a look. A confirmed report becomes `final` and gets a Provenance `verifier`. A rejected report becomes `entered-in-error` and never counts. The site level updates immediately. |
+| **Map to FHIR R4** | One transaction Bundle per visit: `Location` (site), a panel `Observation` with `hasMember` links to one `Observation` per indicator, `Media` (photos), a `Device` (the software) and a `Provenance` (pseudonymous author, assembler, optional verifier, source record). Every resource uses conditional create, so **re-sending never duplicates** (verified live). |
+| **Explain** | 10 printed rules in two scores. **Health hazard** (6 rules, split into environment, animal and people lanes) is the only score that can raise a warning. **Ecological condition** (4 rules: habitat, nutrients, nitrate anchor, invertebrates) is tracked separately. Each rule shows why it fired, which reports support it, whether it is corroborated, and *what to do*. |
+| **Warn** | A FHIR `Flag` (`category = safety`) on the site `Location` when **≥5 corroborated hazard points** fall in the 14 days up to the evaluation date. It links its evidence with the core `flag-detail` extension, has its own Provenance, expires 14 days after the last trusted report, and is updated in place (conditional update by site). A later trusted clean visit clears the signal, and `--stand-down` sets the site's Flag to `inactive`. |
+| **Share** | POST to any FHIR R4 server. Dry run is the default. Live sending was tested against `https://hapi.fhir.org/baseR4` with synthetic data ([evidence](docs/evidence-hapi.md)). |
 
 ## Target users
-- **Citizen-science coordinators** who want their volunteers' observations to be reused by authorities.
-- **Municipal environment and public-health teams** who already run (or procure) FHIR-capable systems and dashboards.
-- **Researchers** combining citizen data with other One Health data sources.
-- **Citizens** themselves, who see immediately whether their record is ready, needs a look, or cannot be shared yet — and why.
+- **Citizen volunteers**, who see at once whether their record is ready, needs a look, or can't be shared yet — and why — plus plain advice ("keep dogs out of the water").
+- **Citizen-science coordinators and data reviewers**, who confirm or reject doubtful reports in one tap.
+- **Municipal environment and public-health teams**, who receive standard FHIR warnings they can query (`Flag?category=safety&status=active`) or subscribe to.
+- **Researchers**, who combine citizen data with other One Health data through a standard API.
 
-## Expected impact on ecosystem and human health
-- **Earlier awareness**: a site-level Flag (e.g. "possible toxic algal bloom + dogs in the water") can reach a public-health system on the same day the observations arrive, instead of waiting in a separate app.
-- **Better data quality without losing signals**: questionable reports are kept, labelled and routed to a person, not deleted or silently "fixed".
-- **One Health made visible**: every site card shows environment, animal and human points side by side, so a water problem is framed as the shared health problem it is.
-- **Reuse beyond one project**: because the output is standard FHIR, the same citizen record can feed several consumers (dashboards, surveillance systems, research repositories) without custom integrations.
+## Expected impact on ecosystems and human health
+- **Earlier, trusted awareness:** a corroborated warning (e.g. "possible cyanobacterial bloom + dogs in the water") can reach a public-health system as soon as the evidence exists, in a format it already reads.
+- **Fewer false alarms and less lost signal:** doubtful reports are kept, labelled and routed to a person. They are never deleted, never silently "fixed", and never allowed to trigger a warning on their own.
+- **One Health made visible:** every site shows environment, animal and people hazard side by side, with ecological condition beside them, so a water problem is framed as the shared health problem it is.
+- **Reuse:** one citizen record can feed dashboards, surveillance systems and research repositories without custom integrations.
 
-These are expected impacts of the design; no field deployment or outcome measurement has been done.
+These are expected impacts of the design. No field deployment or outcome measurement has been done.
 
-## Run it (one command, Python 3.9+, no dependencies)
+## How it could plug into OneAquaHealth (proposed, not integrated)
+The OneAquaHealth project works in five research cities: Benevento, Coimbra, Ghent, Oslo and Toulouse (listed on oneaquahealth.eu). Its Hub offers a Citizen Science App, City Dashboards, a Resilience Map and GEOSSIP (hackathon education session 5). A possible fit, **not built or agreed with anyone**:
+
+| Hub tool | StreamFHIR role |
+|---|---|
+| Citizen Science App | An input adapter maps the app's export into the StreamFHIR record, then validation, review and FHIR mapping run as shown here |
+| City Dashboards | A dashboard reads `Flag?category=safety&status=active`, or receives pushes through the Subscription example |
+| Resilience Map | Site `Location`s with their current hazard level and ecological condition |
+| GEOSSIP | The FHIR API gives health-side systems the same site data the geo side sees |
+
+## Run it
 ```bash
-python3 -m streamfhir serve        # open http://127.0.0.1:8000
+python3 -m streamfhir serve                     # web UI at http://127.0.0.1:8000 (dry run only)
+python3 -m streamfhir overview                  # hazard level per site (terminal)
+python3 -m streamfhir rules                     # all 10 rules with advice
+python3 -m streamfhir check SYN-010             # validate + FHIR Bundle for one record
+python3 -m streamfhir export                    # write all Bundles to ./out
+python3 -m streamfhir send SYN-001              # dry run (default): nothing leaves your machine
+python3 -m streamfhir send SYN-001 --live --flags   # POST to https://hapi.fhir.org/baseR4 (synthetic data only)
+python3 -m streamfhir publish-conformance --live    # put CodeSystems, ValueSet and profiles on the server
+python3 -m streamfhir validate-remote SYN-001 --with-profile   # server-side $validate against the profile
+python3 -m streamfhir build-static              # rebuild the server-less demo in docs/demo
+python3 -m streamfhir bench                     # throughput on your machine
+python3 -m pip install pytest && python3 -m pytest -q     # 66 tests, no network
 ```
-Other commands:
-```bash
-python3 -m streamfhir overview                 # risk level per site (terminal)
-python3 -m streamfhir rules                    # print all 9 rules
-python3 -m streamfhir check SYN-010            # validate + FHIR Bundle for one record
-python3 -m streamfhir export                   # write all Bundles to ./out
-python3 -m streamfhir send SYN-001             # dry run (default): nothing leaves your machine
-python3 -m streamfhir send SYN-001 --live      # POST to https://hapi.fhir.org/baseR4 (synthetic data only)
-python3 -m streamfhir validate-remote SYN-001  # ask the server to $validate a generated Observation
-python3 -m pip install pytest && python3 -m pytest -q   # 46 tests, no network
-```
-Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only ever does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`.
+Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
 ## Architecture
-Clean Architecture: dependencies point inwards; the domain knows nothing about FHIR, HTTP or files (enforced by `tests/test_architecture.py`).
+Clean Architecture: dependencies point inwards, and the domain knows nothing about FHIR, HTTP or files. `tests/test_architecture.py` enforces this, including relative imports.
 
 ```mermaid
 flowchart LR
@@ -75,12 +92,12 @@ flowchart LR
     PRES[presenter.py]
   end
   subgraph application
-    UC[use_cases.py<br/>CheckRecord · SiteRiskOverview · ShareBundle]
+    UC[use_cases.py<br/>Check · Overview · Share · Review]
     P[ports.py]
   end
   subgraph domain
     IND[indicators.py] --- VAL[validation.py]
-    VAL --- RISK[risk.py<br/>9 rules]
+    VAL --- RISK[risk.py<br/>10 rules, corroboration]
     SITE[sites.py]
   end
   WEB --> UC
@@ -92,91 +109,110 @@ flowchart LR
   REPO -. implements .-> P
   UC --> VAL & RISK
   HAPI -->|transaction Bundle| FHIR[(FHIR R4 server<br/>e.g. HAPI)]
+  FHIR -->|Flag?category=safety / Subscription| PH[Public-health or city system]
 ```
 
 ## FHIR R4 mapping
 | Source (citizen record) | FHIR R4 | Notes |
 |---|---|---|
-| `site_id`, site name, coordinates | `Location` (`identifier`, `name`, `position`, `mode=instance`) | `POST` with `ifNoneExist=identifier=…` → one Location per site, reused on every visit |
-| One visit (`record_id`, `observed_at`) | panel `Observation` (code `stream-assessment`) with `hasMember` → indicator Observations | `category = observation-category#survey` |
-| Visual score 1–10 (channel, banks, riparian zone, in-stream habitat) | `Observation.valueInteger` | codes from StreamFHIR `stream-indicator` CodeSystem |
-| Readings (temperature, pH, nitrate, phosphate, transparency) | `Observation.valueQuantity` with UCUM (`Cel`, `[pH]`, `mg/L`, `cm`) | |
-| Colour, surface film, odour, litter | `Observation.valueCodeableConcept` | codes from StreamFHIR `stream-answer` CodeSystem |
-| Dead fish, people / animals in water | `Observation.valueBoolean` | |
-| Photos | `Media` (`content.url`), referenced by `Observation.derivedFrom` | demo photo URLs are placeholders |
-| Observer pseudonym | `Observation.performer` and `Provenance.agent[author].who` as a **logical reference by identifier only** | no name, e-mail or device ID |
-| Software that built the Bundle | `Device` (conditional create) as `Provenance.agent[assembler]` and `Flag.author` | |
-| Validation warnings | `Observation.status = preliminary` + `Observation.note` quoting the warning | `ok` records → `final`; `blocked` records are not exported |
-| Synthetic / test data | `meta.security = v3-ActReason#HTEST` on every resource | |
-| High site risk | `Flag` (`category = flag-category#safety`, `subject = Location`, `code` from `onehealth-risk`, `period.start`) | text lists fired rules and whether each is corroborated |
+| `site_id`, name, coordinates | `Location` (`identifier`, `name`, `position`, `mode=instance`) | conditional create → one Location per site |
+| One visit | panel `Observation` (profile *StreamAssessmentPanel*: `hasMember` 1..*, no value) | `category = observation-category#survey` (pattern) |
+| Visual scores 1–10, invertebrate count | `Observation.valueInteger` | profile *StreamIndicatorObservation*: value 1..1, no `hasMember` |
+| Readings (temperature, pH, nitrate, phosphate, transparency, sampling minutes) | `valueQuantity` with UCUM (`Cel`, `[pH]`, `mg/L`, `cm`, `min`) | nitrate also carries **LOINC 9480-5** *Nitrate [Mass/volume] in Water*, but only when the reading is expressed as NO3 |
+| Colour, surface, odour, litter, nitrate basis, bloom test | `valueCodeableConcept` from the `stream-answer` CodeSystem | |
+| Dead fish, people or animals in the water | `valueBoolean` | |
+| Photos | `Media` (`type = image`), referenced by `derivedFrom` from the panel and the visual-claim indicators only | demo photo URLs are placeholders |
+| Observer pseudonym | `performer` and `Provenance.agent[author].who` as a logical reference by identifier | no name, e-mail or device ID; `meta.security` includes `PSEUDED` |
+| Reviewer decision | `status` `final` / `entered-in-error` + `Provenance.agent[verifier]` | |
+| Software | `Device`, as `Provenance.agent[assembler]` and `Flag.author` | |
+| Test data | `meta.security`: `v3-ActReason#HTEST` and `v3-Confidentiality#U` on every resource | |
+| Site warning | `Flag` (`category = flag-category#safety`, `subject = Location`, `code` from `onehealth-risk-level`, `period` start/end, `flag-detail` → evidence Observations) + `Provenance` | conditional update by `identifier = site`; `inactive` to stand down |
 
-**Why `Flag` and not `DetectedIssue` or `RiskAssessment`?** In FHIR R4, `DetectedIssue.patient` and `RiskAssessment.subject` can only point to a Patient (or Group); `Flag.subject` can point to a `Location`, which is exactly "a warning about this place".
+**Why `Flag` and not `DetectedIssue` or `RiskAssessment`?** In R4, `DetectedIssue.patient` and `RiskAssessment.subject` point to a Patient or Group. `Flag.subject` can point to a `Location`, which is exactly "a warning about this place".
+**Why no `Reference.type` on the observer?** No R4 resource fits a pseudonymous citizen. `Practitioner` implies a care role, and `RelatedPerson` needs a Patient. An untyped logical reference is valid R4.
 
 ### Conformance resources (`fhir/`)
 | File | What |
 |---|---|
-| `CodeSystem-stream-indicator.json` | 17 codes: panel + 16 indicators |
-| `CodeSystem-stream-answer.json` | 16 answer codes for categorical indicators |
-| `CodeSystem-onehealth-risk.json` | 3 risk levels + 9 rule codes (R1–R9) |
+| `CodeSystem-stream-indicator.json` | 21 codes: panel + 20 indicators (`valueSet` declared) |
+| `CodeSystem-stream-answer.json` | 21 answer codes |
+| `CodeSystem-onehealth-risk-level.json` | 4 levels: high, verify, moderate, low |
+| `CodeSystem-onehealth-risk-rule.json` | 10 rules with condition, reason and advice |
 | `ValueSet-stream-indicator.json` | all indicator codes |
-| `StructureDefinition-stream-assessment-observation.json` | minimal profile: `subject` 1..1 → Location, `category` 1..*, `code` required binding, `effectiveDateTime` 1..1, `performer` 1..1 |
+| `StructureDefinition-stream-assessment-panel.json` | panel profile |
+| `StructureDefinition-stream-indicator-observation.json` | indicator profile |
+| `CapabilityStatement-streamfhir-client-requirements.json` | what a receiving server must support (`kind = requirements`) |
+| `Subscription-example-safety-flags.json` | R4 rest-hook subscription on safety Flags (example endpoint) |
 
-**Terminology honesty:** all StreamFHIR codes live under the **example canonical `https://example.org/fhir/streamfhir/…`**. They are prototype codes, *not* LOINC or SNOMED CT codes; we did not use LOINC/SNOMED because we could not confirm genuine codes for these citizen indicators. The only external systems used are core HL7 terminology (`observation-category`, `provenance-participant-type`, `flag-category`, `v3-ActReason`, `v3-DataOperation`) and UCUM. A production version would map to LOINC/SNOMED CT where genuine codes exist and publish the rest in an Implementation Guide.
+**Terminology honesty.** All StreamFHIR codes live under the **example canonical `https://example.org/fhir/streamfhir/…`**. They are prototype codes, not LOINC or SNOMED CT. The one LOINC code used (9480-5) was confirmed with `$lookup` on tx.fhir.org (LOINC 2.82). We did not add LOINC or SNOMED codes for the other indicators because we could not confirm a matching code for citizen visual or test-strip observations. A production version would search further, move to a canonical URL it controls, and publish an Implementation Guide.
 
-## One Health risk rules (printed, explainable)
-Window: the 14 days before a site's latest check. Blocked records never count. **High** = 6+ points in total or 4+ points in one lane → a FHIR Flag is emitted. **Moderate** = 3–5. **Low** = 0–2. A rule is *corroborated* when supported by ≥2 distinct observers or ≥1 photo; otherwise the Flag text says "single report — verify".
+## Rules (printed, explainable)
+**Health hazard** can raise a Flag. **Ecological condition** never raises a Flag on its own.
 
-| Rule | When | Points |
-|---|---|---|
-| R1 Poor habitat | mean of the 4 visual scores ≤ 5 | +2 environment |
-| R2 Nutrient enrichment | nitrate ≥ 25 mg/L or phosphate ≥ 0.5 mg/L (demo thresholds) | +2 environment |
-| R3 Possible toxic algal bloom | surface = algal-scum, or colour = green with water ≥ 20 °C | +3 animal, +2 human |
-| R4 Sewage signal | odour = sewage or colour = milky-grey | +3 human, +1 environment |
-| R5 Dead fish | dead fish seen | +3 animal, +1 environment |
-| R6 People in contact with affected water | people in water while R3 or R4 fired | +2 human |
-| R7 Pets/livestock in contact with affected water | animals in water while R3, R4 or R5 fired | +2 animal |
-| R8 Oil or chemical signal | oily sheen or chemical odour | +2 environment, +1 human |
-| R9 Nitrate above drinking-water value | nitrate ≥ 50 mg/L (EU drinking-water parametric value, used only as an awareness anchor) | +1 human |
+| Rule | Kind | When | Points |
+|---|---|---|---|
+| R1 Poor habitat | condition | mean visual habitat score ≤ 5 | +2 env |
+| R2 Nutrient enrichment | condition | nitrate ≥ 25 mg/L as NO3 or phosphate ≥ 0.5 mg/L (demo thresholds) | +2 env |
+| R3 Possible cyanobacterial bloom | hazard | algal scum, or green water ≥ 20 °C — *not* if the jar/stick test points to green or filamentous algae | +3 animal, +2 people |
+| R4 Sewage signal | hazard | sewage odour or milky-grey water | +3 people, +1 env |
+| R5 Dead fish | hazard | dead fish seen | +3 animal, +1 env |
+| R6 People in contact with affected water | hazard | people in the water while R3 or R4 fired | +2 people |
+| R7 Pets or livestock in contact with affected water | hazard | animals in the water while R3, R4 or R5 fired | +2 animal |
+| R8 Oil or chemical signal | hazard | oily sheen or chemical odour | +2 env, +1 people |
+| R9 Nitrate above drinking-water value | condition | nitrate ≥ 50 mg/L as NO3 (EU drinking-water parametric value, used only as an awareness anchor) | +1 people |
+| R10 No mayfly, stonefly or caddisfly larvae | condition | count 0 after ≥ 1 min kick-net sampling in a flowing reach (a coarse screen, not a biotic index) | +2 env |
 
-Thresholds marked "demo" are starting points for a local team to tune, not regulatory limits. A visible scum is a reason to test, not proof of toxins.
+- **Levels:** *High* = ≥ 5 **corroborated** hazard points (a Flag is raised). *Needs verification* = ≥ 5 hazard points, not yet corroborated. *Moderate* = 2–4. *Low* = 0–1.
+- **Corroborated:** supported by trusted reports (status ok, or confirmed by a reviewer) from ≥ 2 independent observers, or by a trusted report with a photo attached, or by a reviewer's confirmation. Photos are not analysed; a reviewer is expected to look at them.
+- **Clearing:** a later trusted visit that checked the same things and did not see the signal clears the rule.
+- Thresholds marked "demo" are starting points for a local team to tune, not regulatory limits. A scum is a reason to test, not proof of toxins.
 
 ## Data
-- `data/sites.json` — 5 **synthetic** sites with fictional names; coordinates are illustrative and say nothing about any real stream.
-- `data/assessments.json` — 14 **synthetic** records from 7 pseudonymous observers, including deliberate problems (pH typo, future date, missing observer, GPS 400 m off, dead fish without photo) to show validation.
-- **Representative schema:** the record format is modelled on indicator families common in published citizen-science stream protocols (e.g. visual 1–10 habitat scoring as in the USDA NRCS *Stream Visual Assessment Protocol*, plus test-strip and transparency-tube readings). **It is not the official OneAquaHealth Citizen Science App schema**, which we could not inspect. Mapping another app's export into this record format is a small adapter.
+- `data/sites.json`: 5 **synthetic** sites. Names are fictional and the coordinates are illustrative.
+- `data/assessments.json`: 15 **synthetic** records from 7 pseudonymous observers. They include deliberate problems: a pH typo, a future date, a missing observer, a GPS fix 400 m off, and dead fish or scum reported without a photo.
+- **Representative schema:** indicator families are modelled on published citizen-science stream protocols. The habitat scoring is a 4-element subset in the style of the USDA NRCS *Stream Visual Assessment Protocol*; for European use, the River Habitat Survey is a natural next step. There are also test-strip and transparency-tube readings, jar/stick bloom tests, and an EPT presence screen. **This is not the official OneAquaHealth Citizen Science App schema**, which we could not inspect. Mapping another app's export into this format takes one input adapter.
 
-Result on the sample data: 2 sites **high** (Flag emitted), 2 **moderate**, 1 **low**; record statuses: 7 ok, 4 needs review, 3 blocked.
+Sample result (demo date 29 Sep 2026):
+- **Records:** 7 ok, 5 need a look, 3 blocked.
+- **Sites:** 2 **High** (Flag raised), 1 **Needs verification**, 1 Moderate, 1 Low.
+- **Demo moment:** confirming report SYN-015 at Willow Creek turns *Needs verification* into *High* and raises the Flag. Undo returns it.
 
 ## Evidence
-- 46 automated tests (`pytest -q`), 0 network calls in tests.
-- Live run against the public HAPI FHIR R4 server, synthetic data only: transaction accepted (HTTP 200, 21 resources), conditional create reused the existing Location on a second visit, generated Observations validate with **no issues** against the published StreamFHIR profile, and a deliberately broken Observation is rejected by the profile with 3 errors. Details and resource IDs: [docs/evidence-hapi.md](docs/evidence-hapi.md). (The public test server may purge data at any time.)
-- Screenshots (390 px and 1280 px, no horizontal scroll): [docs/screenshots](docs/screenshots).
+- **66 automated tests** (`pytest -q`), 0 network calls. They include an architecture test and acceptance tests AC-1 to AC-24 (see `SPEC.md`).
+- **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
+  - Transactions are accepted.
+  - Re-sending the same record creates **0 duplicates**, and Flags update in place.
+  - Generated indicator and panel Observations and a Flag validate with **no issues** against the published profiles.
+  - Broken resources are rejected by the profile.
+- **Throughput:** about 5,200 records/s validated and mapped on one laptop core (`python3 -m streamfhir bench`, 3,000 records).
+- **Screenshots** at 390 px and 1280 px, no horizontal scroll: [docs/screenshots](docs/screenshots).
 
 ## Feasibility and scalability
-- **Runs anywhere Python runs**; standard library only; stateless mapping, so it can sit behind any citizen-science app as a nightly export job or a webhook.
-- **Integrates with existing systems through the standard**: any FHIR R4 server (HAPI, cloud healthcare FHIR stores, etc.) can store the Bundles; downstream dashboards can query `Flag?category=safety` or use FHIR `Subscription` on `Flag` (not implemented here).
-- **Idempotent**: conditional create on site and software identifiers avoids duplicates when records are re-sent.
-- **Next steps**: map one real citizen-science app export (e.g. the OneAquaHealth app, with the project's permission) into the record format; review rule thresholds with freshwater ecologists; replace example canonicals with a published Implementation Guide and genuine LOINC/SNOMED CT codes where they exist.
+- **Runs anywhere Python runs:** standard library only, and stateless mapping. It can sit behind any citizen-science app as a nightly export job or a webhook.
+- **Integrates through the standard:** any FHIR R4 server can store the Bundles (see the CapabilityStatement for what it must support). Downstream systems query or subscribe to `Flag`.
+- **Safe to re-run:** conditional create and conditional update make re-sending idempotent (measured, see the evidence).
+- **Pilot shape (proposal only):** a coordinator exports a week of app records, runs `export` or `send` against a FHIR test server, and a reviewer uses the Confirm/Reject screen. Everything runs remotely at zero cost, and no one has to travel.
 
 ## Limitations
-- Synthetic data only; no field test, no real users.
+- Synthetic data only; no field test and no real users.
 - The record schema is representative, not the official OneAquaHealth schema.
-- Rules and thresholds are simple, hand-written and untuned; they are not validated against lab results and must not be read as a health advisory.
-- Prototype codes under `example.org`; no LOINC/SNOMED CT mapping yet; profile is minimal (no slicing, no invariants).
-- No authentication, no persistence layer, no FHIR Subscription; the web server binds to 127.0.0.1 and is for demo use.
-- Photo URLs are placeholders; no image analysis.
+- The rules and thresholds are simple, hand-written and untuned. They have not been validated against lab results and must not be read as a health advisory.
+- Only one LOINC code is used. The other codes are prototype codes under `example.org`. The profiles are minimal differentials (no slicing), validated by the HAPI server's validator rather than the official IG Publisher.
+- There is no authentication or persistence: reviewer decisions live in memory. The Subscription is an example resource and was not exercised end to end.
+- Photo URLs are placeholders, and there is no image analysis.
+- The static demo shows only precomputed sample records. Checking your own record and reviewing need the local server.
 
 ## Project layout
 ```
 SPEC.md                    purpose, numeric success criteria, Given/When/Then, non-goals
-streamfhir/domain/         indicators, validation, risk rules (pure Python, no I/O)
+streamfhir/domain/         indicators, validation, rules and corroboration (pure Python, no I/O)
 streamfhir/application/    use cases + ports
 streamfhir/adapters/       FHIR mapper, FHIR REST client, JSON repositories, presenter
 streamfhir/infrastructure/ CLI, web server, static UI, composition root
-fhir/                      CodeSystems, ValueSet, StructureDefinition
+fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records
-docs/                      demo script, live evidence, screenshots
-tests/                     46 tests
+docs/                      static demo, demo script, live evidence, screenshots
+tests/                     66 tests
 ```
 
 ## License

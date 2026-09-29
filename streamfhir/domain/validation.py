@@ -9,7 +9,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Mapping, Optional, Tuple
 
-from .indicators import BOOLEAN, CATEGORY, INDICATORS, QUANTITY, SCORE
+from .indicators import BOOLEAN, CATEGORY, COUNT, INDICATORS, QUANTITY, SCORE
 from .sites import Site, distance_m
 
 ERROR = "error"
@@ -87,6 +87,11 @@ def _check_value(code: str, value: Any, issues: List[Issue]) -> None:
         if not isinstance(value, int) or isinstance(value, bool) or not 1 <= value <= 10:
             issues.append(Issue(ERROR, f, "out-of-range",
                                 "%s must be a whole number from 1 to 10 (got %r)." % (ind.display, value)))
+    elif ind.kind == COUNT:
+        lo, hi = ind.hard_range
+        if not isinstance(value, int) or isinstance(value, bool) or not lo <= value <= hi:
+            issues.append(Issue(ERROR, f, "out-of-range",
+                                "%s must be a whole number from %d to %d (got %r)." % (ind.display, lo, hi, value)))
     elif ind.kind == QUANTITY:
         if not _num(value):
             issues.append(Issue(ERROR, f, "invalid-type", "%s must be a number (got %r)." % (ind.display, value)))
@@ -161,6 +166,14 @@ def validate_record(raw: Mapping[str, Any], sites: Mapping[str, Site], now: date
         values = {}
     for code, value in values.items():
         _check_value(code, value, issues)
+
+    if "nitrate" in values and "nitrate-basis" not in values:
+        issues.append(Issue(WARNING, "values.nitrate", "nitrate-basis-missing",
+                            "Nitrate %s mg/L has no basis. Is it 'as NO3' or 'as N'? They differ 4.43 times, so a reviewer should confirm."
+                            % _fmt(values["nitrate"]) if _num(values["nitrate"]) else "Nitrate has no basis (as NO3 or as N)."))
+    if "sensitive-invertebrates" in values and "kick-sample-minutes" not in values:
+        issues.append(Issue(WARNING, "values.sensitive-invertebrates", "effort-missing",
+                            "The invertebrate count has no sampling time, so a zero cannot be told apart from 'barely looked'."))
 
     photos = tuple(p for p in (raw.get("photos") or []) if isinstance(p, str) and p)
     if not photos:

@@ -48,3 +48,19 @@ def test_web_share_is_dry_run_even_if_live_requested_without_env():
         assert body["mode"] == "dry-run"
     finally:
         httpd.shutdown()
+
+
+def test_review_endpoint_confirms_and_changes_site_level():
+    httpd, base = _serve()
+    try:
+        def post(path, body):
+            req = urllib.request.Request(base + path, data=json.dumps(body).encode(),
+                                         headers={"Content-Type": "application/json"}, method="POST")
+            return json.loads(urllib.request.urlopen(req, timeout=5).read())
+        level = lambda: {s["site"]["site_id"]: s["risk"]["level"]
+                         for s in json.loads(urllib.request.urlopen(base + "/api/sites", timeout=5).read())["sites"]}
+        assert level()["S-WILLOW"] == "verify"
+        assert post("/api/review", {"record_id": "SYN-015", "decision": "confirm"})["decision"] == "confirm"
+        assert level()["S-WILLOW"] == "high"
+    finally:
+        httpd.shutdown()
