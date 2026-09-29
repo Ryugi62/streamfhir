@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+    "fullUrl": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:306bd28c-bf7a-4a63-b8b6-b1f21faaed3a",
+    "fullUrl": "urn:uuid:b988e1d1-859a-4afa-bd54-ecc837f5b1ea",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0b298c24-f3cc-483a-b4de-4e233d1cf946",
+    "fullUrl": "urn:uuid:035a4a94-e4f3-4266-85a7-60cb97051d14",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · L'Aussonnelle à Cornebarrieu on 2024-12-17T14:39:00+01:00: 5 indicators (final, record FR-05159000-2024-12-17T1439)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · L'Aussonnelle à Cornebarrieu on 2024-12-17T14:39:00+01:00: 5 indicators (final, record FR-05159000-2024-12-17T1439)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:73147800-2b9a-4b64-bd12-aad512213c83"
+       "reference": "urn:uuid:229be98d-b5c6-4d8e-9989-572586e57c98"
       },
       {
-       "reference": "urn:uuid:cf2f5fe9-8915-49fd-a938-012ccc92a569"
+       "reference": "urn:uuid:662d04ac-b461-4937-8eed-2d2ffa090185"
       },
       {
-       "reference": "urn:uuid:7fbdeb68-ee83-436a-b9b6-da17530a2242"
+       "reference": "urn:uuid:f7a21991-9e44-4edd-84c7-7adca9caece3"
       },
       {
-       "reference": "urn:uuid:8a074f16-8ef2-4965-a3d8-0c1306bac54a"
+       "reference": "urn:uuid:f32ddb98-815d-456c-ac33-42bfeeec9fea"
       },
       {
-       "reference": "urn:uuid:287c0b25-cf8e-4147-af9a-a44fbc4cc96d"
+       "reference": "urn:uuid:d31b29dc-365b-4e5a-9380-6b65331d6d8e"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:73147800-2b9a-4b64-bd12-aad512213c83",
+    "fullUrl": "urn:uuid:229be98d-b5c6-4d8e-9989-572586e57c98",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -250,17 +250,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cf2f5fe9-8915-49fd-a938-012ccc92a569",
+    "fullUrl": "urn:uuid:662d04ac-b461-4937-8eed-2d2ffa090185",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -308,8 +308,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -325,17 +325,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7fbdeb68-ee83-436a-b9b6-da17530a2242",
+    "fullUrl": "urn:uuid:f7a21991-9e44-4edd-84c7-7adca9caece3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,8 +387,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -414,17 +414,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:8a074f16-8ef2-4965-a3d8-0c1306bac54a",
+    "fullUrl": "urn:uuid:f32ddb98-815d-456c-ac33-42bfeeec9fea",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -472,8 +472,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -486,11 +486,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -499,17 +494,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -526,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:287c0b25-cf8e-4147-af9a-a44fbc4cc96d",
+    "fullUrl": "urn:uuid:d31b29dc-365b-4e5a-9380-6b65331d6d8e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -557,8 +552,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -584,17 +579,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:60703191-d5ce-425c-aa83-e533397bee85",
+      "reference": "urn:uuid:5cfe2c51-64ae-433e-93e5-e1c949e6a1f4",
       "display": "Toulouse area · L'Aussonnelle à Cornebarrieu"
      },
      "effectiveDateTime": "2024-12-17T14:39:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:df766e97-ca8e-4727-b013-27692dcce893",
+    "fullUrl": "urn:uuid:5f368892-80b0-4f0c-ab1f-adf7453f4ca4",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159000-2024-12-17T1439",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159000-2024-12-17T1439 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159000-2024-12-17T1439 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:0b298c24-f3cc-483a-b4de-4e233d1cf946"
+       "reference": "urn:uuid:035a4a94-e4f3-4266-85a7-60cb97051d14"
       },
       {
-       "reference": "urn:uuid:73147800-2b9a-4b64-bd12-aad512213c83"
+       "reference": "urn:uuid:229be98d-b5c6-4d8e-9989-572586e57c98"
       },
       {
-       "reference": "urn:uuid:cf2f5fe9-8915-49fd-a938-012ccc92a569"
+       "reference": "urn:uuid:662d04ac-b461-4937-8eed-2d2ffa090185"
       },
       {
-       "reference": "urn:uuid:7fbdeb68-ee83-436a-b9b6-da17530a2242"
+       "reference": "urn:uuid:f7a21991-9e44-4edd-84c7-7adca9caece3"
       },
       {
-       "reference": "urn:uuid:8a074f16-8ef2-4965-a3d8-0c1306bac54a"
+       "reference": "urn:uuid:f32ddb98-815d-456c-ac33-42bfeeec9fea"
       },
       {
-       "reference": "urn:uuid:287c0b25-cf8e-4147-af9a-a44fbc4cc96d"
+       "reference": "urn:uuid:d31b29dc-365b-4e5a-9380-6b65331d6d8e"
       }
      ],
      "occurredDateTime": "2024-12-17T14:39:00+01:00",
-     "recorded": "2026-09-29T13:04:34+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:306bd28c-bf7a-4a63-b8b6-b1f21faaed3a",
+        "reference": "urn:uuid:b988e1d1-859a-4afa-bd54-ecc837f5b1ea",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05159000-2024-12-17T1439"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05159000)"
        }
       }
      ]

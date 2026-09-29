@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:6464b8b4-3868-4919-b5af-3ad8519391f9",
+    "fullUrl": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ee2202de-99e8-46e0-8a74-c9f1126d4bb3",
+    "fullUrl": "urn:uuid:db2eab31-e859-4338-a411-e8c8d6b370e0",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:51313db9-8c02-4c27-8d43-fb1c9334bd15",
+    "fullUrl": "urn:uuid:2f0df961-63ec-4a5a-bff9-bb82216bc8e4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Le Ruisseau du Panariol à Aussonne on 2024-12-17T12:55:00+01:00: 4 indicators (final, record FR-05158800-2024-12-17T1255)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · Le Ruisseau du Panariol à Aussonne on 2024-12-17T12:55:00+01:00: 5 indicators (final, record FR-05158800-2024-12-17T1255)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,32 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:6464b8b4-3868-4919-b5af-3ad8519391f9",
+      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:29924393-51be-4b7a-b317-afa77f0ad8a9"
+       "reference": "urn:uuid:6483e1d3-ad63-4f3a-9e84-a9102d902b2e"
       },
       {
-       "reference": "urn:uuid:4232239f-e568-4c90-96a9-048019facc7b"
+       "reference": "urn:uuid:a32a77ad-65ee-470d-914d-ecf7b6faa559"
       },
       {
-       "reference": "urn:uuid:fc71c094-60b6-4c58-ab7b-cd6831b843bc"
+       "reference": "urn:uuid:7cd83bfc-d438-42d9-b79a-878874d68b21"
       },
       {
-       "reference": "urn:uuid:5377261d-98b0-43cf-ad88-75bbb933ac63"
+       "reference": "urn:uuid:d377c336-b3a3-422b-98ed-4600871be563"
+      },
+      {
+       "reference": "urn:uuid:696ee967-ea92-4ee6-aeed-6fa923cd3f66"
       }
      ]
     },
@@ -184,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:29924393-51be-4b7a-b317-afa77f0ad8a9",
+    "fullUrl": "urn:uuid:6483e1d3-ad63-4f3a-9e84-a9102d902b2e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -215,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -247,17 +250,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:6464b8b4-3868-4919-b5af-3ad8519391f9",
+      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -274,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4232239f-e568-4c90-96a9-048019facc7b",
+    "fullUrl": "urn:uuid:a32a77ad-65ee-470d-914d-ecf7b6faa559",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -305,8 +308,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -322,17 +325,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:6464b8b4-3868-4919-b5af-3ad8519391f9",
+      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -353,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:fc71c094-60b6-4c58-ab7b-cd6831b843bc",
+    "fullUrl": "urn:uuid:7cd83bfc-d438-42d9-b79a-878874d68b21",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -384,8 +387,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -411,17 +414,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:6464b8b4-3868-4919-b5af-3ad8519391f9",
+      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -438,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5377261d-98b0-43cf-ad88-75bbb933ac63",
+    "fullUrl": "urn:uuid:d377c336-b3a3-422b-98ed-4600871be563",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -469,8 +472,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -496,17 +499,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:6464b8b4-3868-4919-b5af-3ad8519391f9",
+      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
       "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
      },
      "effectiveDateTime": "2024-12-17T12:55:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -523,7 +526,93 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:95e7a323-24ef-422e-b567-5b86940bfb2f",
+    "fullUrl": "urn:uuid:696ee967-ea92-4ee6-aeed-6fa923cd3f66",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): {'comparator': '&lt;', 'value': 0.02} mg/L at Toulouse area · Le Ruisseau du Panariol à Aussonne (final, record FR-05158800-2024-12-17T1255)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05158800-2024-12-17T1255.phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1433",
+        "display": "Orthophosphates (PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:d244c1a0-93cb-4321-b226-bfa6f1ca95cd",
+      "display": "Toulouse area · Le Ruisseau du Panariol à Aussonne"
+     },
+     "effectiveDateTime": "2024-12-17T12:55:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
+       },
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.02,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L",
+      "comparator": "<"
+     },
+     "note": [
+      {
+       "text": "Below the laboratory's quantification limit (< 0.02 mg/L): the source reports no number, only the limit."
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05158800-2024-12-17T1255.phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:af9d2046-3a72-40ea-a521-be83edebf8ab",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05158800-2024-12-17T1255",
@@ -538,27 +627,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05158800-2024-12-17T1255 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05158800-2024-12-17T1255 was imported from Hub'Eau qualite_rivieres (Sandre), station 05158800 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:51313db9-8c02-4c27-8d43-fb1c9334bd15"
+       "reference": "urn:uuid:2f0df961-63ec-4a5a-bff9-bb82216bc8e4"
       },
       {
-       "reference": "urn:uuid:29924393-51be-4b7a-b317-afa77f0ad8a9"
+       "reference": "urn:uuid:6483e1d3-ad63-4f3a-9e84-a9102d902b2e"
       },
       {
-       "reference": "urn:uuid:4232239f-e568-4c90-96a9-048019facc7b"
+       "reference": "urn:uuid:a32a77ad-65ee-470d-914d-ecf7b6faa559"
       },
       {
-       "reference": "urn:uuid:fc71c094-60b6-4c58-ab7b-cd6831b843bc"
+       "reference": "urn:uuid:7cd83bfc-d438-42d9-b79a-878874d68b21"
       },
       {
-       "reference": "urn:uuid:5377261d-98b0-43cf-ad88-75bbb933ac63"
+       "reference": "urn:uuid:d377c336-b3a3-422b-98ed-4600871be563"
+      },
+      {
+       "reference": "urn:uuid:696ee967-ea92-4ee6-aeed-6fa923cd3f66"
       }
      ],
      "occurredDateTime": "2024-12-17T12:55:00+01:00",
-     "recorded": "2026-09-29T13:04:34+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -581,10 +673,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -599,7 +691,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:ee2202de-99e8-46e0-8a74-c9f1126d4bb3",
+        "reference": "urn:uuid:db2eab31-e859-4338-a411-e8c8d6b370e0",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -612,7 +704,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05158800-2024-12-17T1255"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05158800)"
        }
       }
      ]

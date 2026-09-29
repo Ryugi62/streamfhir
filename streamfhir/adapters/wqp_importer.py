@@ -54,7 +54,8 @@ def parse_results(csv_text: str, stations: Dict[str, Dict]) -> Tuple[List[Dict],
             if offset is None:
                 notes.append("The source time zone '%s' is unknown; UTC was assumed." % tz)
                 offset = "+00:00"
-            rec = {"record_id": aid, "synthetic": False, "site_id": sid, "observed_at": "%sT%s%s" % (date, time, offset),
+            rec = {"record_id": aid, "synthetic": False, "origin": "wqx", "observer_name": row.get("OrganizationFormalName", ""),
+                   "site_id": sid, "observed_at": "%sT%s%s" % (date, time, offset),
                    "observer": row.get("OrganizationIdentifier", ""), "lat": st["lat"] if st else None,
                    "lon": st["lon"] if st else None, "photos": [], "values": {}, "source_notes": notes,
                    "source": "US Water Quality Portal, organisation %s" % row.get("OrganizationFormalName", "")}

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+    "fullUrl": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d39419de-7359-4517-9305-417275f94abe",
+    "fullUrl": "urn:uuid:e5e33ecb-9e68-4543-8f6a-6502bb348ea7",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:6a2accdf-73de-4a9e-9bcc-99201f40fb12",
+    "fullUrl": "urn:uuid:93acb97b-9389-4aa9-8857-515062346d9b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) on 2024-12-17T12:28:00+01:00: 5 indicators (final, record FR-05310350-2024-12-17T1228)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette) on 2024-12-17T12:28:00+01:00: 5 indicators (final, record FR-05310350-2024-12-17T1228)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "reference": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:7d87a2c0-835d-4d7f-9a19-d2f46a636588"
+       "reference": "urn:uuid:9800edfc-7b7d-4b95-b154-0f01eed968de"
       },
       {
-       "reference": "urn:uuid:2748ee2e-b875-47f5-9c3c-24f027783725"
+       "reference": "urn:uuid:89a52dfd-d9b0-40c4-b2fa-ef4f48599fce"
       },
       {
-       "reference": "urn:uuid:c86cddac-6f52-474b-a7ad-b6bf5712cd80"
+       "reference": "urn:uuid:df7236b7-9deb-4f01-824f-e17054378169"
       },
       {
-       "reference": "urn:uuid:535a9cec-9606-428d-b11c-9c5e244f1d9f"
+       "reference": "urn:uuid:1a4755f3-ef02-400b-8741-5a1d1bce882b"
       },
       {
-       "reference": "urn:uuid:47e1d9fc-2180-4539-8f92-aacd83f08808"
+       "reference": "urn:uuid:836c317a-0f97-447c-9ba2-e4ed916b87b5"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7d87a2c0-835d-4d7f-9a19-d2f46a636588",
+    "fullUrl": "urn:uuid:9800edfc-7b7d-4b95-b154-0f01eed968de",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -245,17 +245,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "reference": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:2748ee2e-b875-47f5-9c3c-24f027783725",
+    "fullUrl": "urn:uuid:89a52dfd-d9b0-40c4-b2fa-ef4f48599fce",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,8 +303,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -330,17 +330,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "reference": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c86cddac-6f52-474b-a7ad-b6bf5712cd80",
+    "fullUrl": "urn:uuid:df7236b7-9deb-4f01-824f-e17054378169",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -388,8 +388,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -402,11 +402,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -415,17 +410,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "reference": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -442,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:535a9cec-9606-428d-b11c-9c5e244f1d9f",
+    "fullUrl": "urn:uuid:1a4755f3-ef02-400b-8741-5a1d1bce882b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -473,8 +468,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -505,17 +500,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "reference": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -532,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:47e1d9fc-2180-4539-8f92-aacd83f08808",
+    "fullUrl": "urn:uuid:836c317a-0f97-447c-9ba2-e4ed916b87b5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -563,8 +558,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -580,17 +575,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:6f90ae21-56c7-47e3-8942-d605d6c4aa53",
+      "reference": "urn:uuid:25721eb9-6564-4ab6-9110-75375aba84b0",
       "display": "Toulouse area · Ruisseau de la Capelette à Merville (Ch. de la Capelette)"
      },
      "effectiveDateTime": "2024-12-17T12:28:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:da8346ff-1a88-42eb-8792-4a4b20e47813",
+    "fullUrl": "urn:uuid:067294ec-04bf-422b-82e8-d5b6ae42fa30",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310350-2024-12-17T1228",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310350-2024-12-17T1228 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310350-2024-12-17T1228 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310350 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:6a2accdf-73de-4a9e-9bcc-99201f40fb12"
+       "reference": "urn:uuid:93acb97b-9389-4aa9-8857-515062346d9b"
       },
       {
-       "reference": "urn:uuid:7d87a2c0-835d-4d7f-9a19-d2f46a636588"
+       "reference": "urn:uuid:9800edfc-7b7d-4b95-b154-0f01eed968de"
       },
       {
-       "reference": "urn:uuid:2748ee2e-b875-47f5-9c3c-24f027783725"
+       "reference": "urn:uuid:89a52dfd-d9b0-40c4-b2fa-ef4f48599fce"
       },
       {
-       "reference": "urn:uuid:c86cddac-6f52-474b-a7ad-b6bf5712cd80"
+       "reference": "urn:uuid:df7236b7-9deb-4f01-824f-e17054378169"
       },
       {
-       "reference": "urn:uuid:535a9cec-9606-428d-b11c-9c5e244f1d9f"
+       "reference": "urn:uuid:1a4755f3-ef02-400b-8741-5a1d1bce882b"
       },
       {
-       "reference": "urn:uuid:47e1d9fc-2180-4539-8f92-aacd83f08808"
+       "reference": "urn:uuid:836c317a-0f97-447c-9ba2-e4ed916b87b5"
       }
      ],
      "occurredDateTime": "2024-12-17T12:28:00+01:00",
-     "recorded": "2026-09-29T13:04:35+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:d39419de-7359-4517-9305-417275f94abe",
+        "reference": "urn:uuid:e5e33ecb-9e68-4543-8f6a-6502bb348ea7",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05310350-2024-12-17T1228"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05310350)"
        }
       }
      ]

@@ -1,0 +1,154 @@
+{
+ "resourceType": "StructureDefinition",
+ "id": "stream-site-flag",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StructureDefinition: StreamFHIR site warning (Flag)</p></div>"
+ },
+ "url": "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag",
+ "version": "0.4.0",
+ "name": "StreamSiteFlag",
+ "title": "StreamFHIR site warning (Flag)",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "description": "A One Health safety warning about a stream site (a Location, not a patient). An active warning must cite at least one corroborated hazard rule. Example canonical, prototype only.",
+ "fhirVersion": "4.0.1",
+ "kind": "resource",
+ "abstract": false,
+ "type": "Flag",
+ "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Flag",
+ "derivation": "constraint",
+ "differential": {
+  "element": [
+   {
+    "id": "Flag",
+    "path": "Flag",
+    "short": "Site warning",
+    "constraint": [
+     {
+      "key": "ssf-1",
+      "severity": "error",
+      "human": "An active site warning cites at least one hazard rule (flag-rule extension)",
+      "expression": "status != 'active' or extension.where(url = 'https://example.org/fhir/streamfhir/StructureDefinition/flag-rule').exists()",
+      "source": "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag"
+     }
+    ]
+   },
+   {
+    "id": "Flag.extension",
+    "path": "Flag.extension",
+    "slicing": {
+     "discriminator": [
+      {
+       "type": "value",
+       "path": "url"
+      }
+     ],
+     "rules": "open"
+    }
+   },
+   {
+    "id": "Flag.extension:evidence",
+    "path": "Flag.extension",
+    "sliceName": "evidence",
+    "min": 0,
+    "max": "*",
+    "type": [
+     {
+      "code": "Extension",
+      "profile": [
+       "http://hl7.org/fhir/StructureDefinition/flag-detail"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Flag.extension:rule",
+    "path": "Flag.extension",
+    "sliceName": "rule",
+    "min": 0,
+    "max": "*",
+    "type": [
+     {
+      "code": "Extension",
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "Flag.identifier",
+    "path": "Flag.identifier",
+    "min": 1
+   },
+   {
+    "id": "Flag.category",
+    "path": "Flag.category",
+    "min": 1,
+    "slicing": {
+     "discriminator": [
+      {
+       "type": "pattern",
+       "path": "$this"
+      }
+     ],
+     "rules": "open"
+    }
+   },
+   {
+    "id": "Flag.category:safety",
+    "path": "Flag.category",
+    "sliceName": "safety",
+    "min": 1,
+    "max": "1",
+    "patternCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/flag-category",
+       "code": "safety"
+      }
+     ]
+    }
+   },
+   {
+    "id": "Flag.code",
+    "path": "Flag.code",
+    "binding": {
+     "strength": "required",
+     "valueSet": "https://example.org/fhir/streamfhir/ValueSet/onehealth-risk-level"
+    }
+   },
+   {
+    "id": "Flag.subject",
+    "path": "Flag.subject",
+    "type": [
+     {
+      "code": "Reference",
+      "targetProfile": [
+       "http://hl7.org/fhir/StructureDefinition/Location"
+      ]
+     }
+    ],
+    "short": "The stream site the warning is about"
+   },
+   {
+    "id": "Flag.period",
+    "path": "Flag.period",
+    "min": 1
+   },
+   {
+    "id": "Flag.period.end",
+    "path": "Flag.period.end",
+    "min": 1,
+    "short": "Expiry (14 days after the last trusted report)"
+   },
+   {
+    "id": "Flag.author",
+    "path": "Flag.author",
+    "min": 1
+   }
+  ]
+ }
+}

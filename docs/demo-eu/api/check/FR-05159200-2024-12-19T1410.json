@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:67c85b2d-26aa-423c-8b8e-6ca512e141bb",
+    "fullUrl": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:86792fbc-08f6-49b4-9397-aac0ebeaf324",
+    "fullUrl": "urn:uuid:f47a09c8-7fb2-4231-bda0-f8452a66a47c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1e691809-b9e7-40be-950c-6cb8040e8230",
+    "fullUrl": "urn:uuid:f0f27edb-26fa-400f-adca-45fca9e7da23",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Le Ruisseau de Bassac à Colomiers on 2024-12-19T14:10:00+01:00: 4 indicators (final, record FR-05159200-2024-12-19T1410)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · Le Ruisseau de Bassac à Colomiers on 2024-12-19T14:10:00+01:00: 5 indicators (final, record FR-05159200-2024-12-19T1410)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,32 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:67c85b2d-26aa-423c-8b8e-6ca512e141bb",
+      "reference": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
       "display": "Toulouse area · Le Ruisseau de Bassac à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T14:10:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:1d501846-9190-4d28-b961-ab352acd1c10"
+       "reference": "urn:uuid:d0bbc8e9-756e-4f66-a850-20f0139e73ef"
       },
       {
-       "reference": "urn:uuid:0c3adb63-5ae5-4461-9984-f5a6dd0ee678"
+       "reference": "urn:uuid:0fc83ffe-b32b-440f-8f2e-21be12745fac"
       },
       {
-       "reference": "urn:uuid:a108ba16-db09-4c57-8aaf-10616e53ab6f"
+       "reference": "urn:uuid:6b9f96ce-d05c-42fd-9fb2-3d8101d530a5"
       },
       {
-       "reference": "urn:uuid:5d52dc86-fa4d-464d-85ee-7208756b4c47"
+       "reference": "urn:uuid:1746af80-33c5-4802-b639-f419d04aca09"
+      },
+      {
+       "reference": "urn:uuid:ba138e96-d5a7-4766-b16b-615d9c37e9bb"
       }
      ]
     },
@@ -184,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1d501846-9190-4d28-b961-ab352acd1c10",
+    "fullUrl": "urn:uuid:d0bbc8e9-756e-4f66-a850-20f0139e73ef",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -215,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -242,17 +245,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:67c85b2d-26aa-423c-8b8e-6ca512e141bb",
+      "reference": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
       "display": "Toulouse area · Le Ruisseau de Bassac à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T14:10:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -269,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0c3adb63-5ae5-4461-9984-f5a6dd0ee678",
+    "fullUrl": "urn:uuid:0fc83ffe-b32b-440f-8f2e-21be12745fac",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -300,8 +303,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -327,17 +330,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:67c85b2d-26aa-423c-8b8e-6ca512e141bb",
+      "reference": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
       "display": "Toulouse area · Le Ruisseau de Bassac à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T14:10:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -354,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a108ba16-db09-4c57-8aaf-10616e53ab6f",
+    "fullUrl": "urn:uuid:6b9f96ce-d05c-42fd-9fb2-3d8101d530a5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -385,8 +388,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -417,17 +420,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:67c85b2d-26aa-423c-8b8e-6ca512e141bb",
+      "reference": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
       "display": "Toulouse area · Le Ruisseau de Bassac à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T14:10:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -444,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5d52dc86-fa4d-464d-85ee-7208756b4c47",
+    "fullUrl": "urn:uuid:1746af80-33c5-4802-b639-f419d04aca09",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -475,8 +478,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -492,17 +495,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:67c85b2d-26aa-423c-8b8e-6ca512e141bb",
+      "reference": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
       "display": "Toulouse area · Le Ruisseau de Bassac à Colomiers"
      },
      "effectiveDateTime": "2024-12-19T14:10:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -523,7 +526,93 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b25cf20b-928d-4b1e-a1da-4ff46940f5d3",
+    "fullUrl": "urn:uuid:ba138e96-d5a7-4766-b16b-615d9c37e9bb",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Phosphate (as PO4): {'comparator': '&lt;', 'value': 0.02} mg/L at Toulouse area · Le Ruisseau de Bassac à Colomiers (final, record FR-05159200-2024-12-19T1410)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "FR-05159200-2024-12-19T1410.phosphate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "phosphate",
+        "display": "Phosphate (as PO4)"
+       },
+       {
+        "system": "https://id.eaufrance.fr/par",
+        "code": "1433",
+        "display": "Orthophosphates (PO4)"
+       }
+      ],
+      "text": "Phosphate (as PO4)"
+     },
+     "subject": {
+      "reference": "urn:uuid:43af1839-97fb-4fe0-9592-c9d630f4f94d",
+      "display": "Toulouse area · Le Ruisseau de Bassac à Colomiers"
+     },
+     "effectiveDateTime": "2024-12-19T14:10:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
+       },
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 0.02,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L",
+      "comparator": "<"
+     },
+     "note": [
+      {
+       "text": "Below the laboratory's quantification limit (< 0.02 mg/L): the source reports no number, only the limit."
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|FR-05159200-2024-12-19T1410.phosphate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:1c94d4b7-0ce9-4bf6-ad9f-2f64356845a4",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05159200-2024-12-19T1410",
@@ -538,27 +627,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159200-2024-12-19T1410 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05159200-2024-12-19T1410 was imported from Hub'Eau qualite_rivieres (Sandre), station 05159200 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:1e691809-b9e7-40be-950c-6cb8040e8230"
+       "reference": "urn:uuid:f0f27edb-26fa-400f-adca-45fca9e7da23"
       },
       {
-       "reference": "urn:uuid:1d501846-9190-4d28-b961-ab352acd1c10"
+       "reference": "urn:uuid:d0bbc8e9-756e-4f66-a850-20f0139e73ef"
       },
       {
-       "reference": "urn:uuid:0c3adb63-5ae5-4461-9984-f5a6dd0ee678"
+       "reference": "urn:uuid:0fc83ffe-b32b-440f-8f2e-21be12745fac"
       },
       {
-       "reference": "urn:uuid:a108ba16-db09-4c57-8aaf-10616e53ab6f"
+       "reference": "urn:uuid:6b9f96ce-d05c-42fd-9fb2-3d8101d530a5"
       },
       {
-       "reference": "urn:uuid:5d52dc86-fa4d-464d-85ee-7208756b4c47"
+       "reference": "urn:uuid:1746af80-33c5-4802-b639-f419d04aca09"
+      },
+      {
+       "reference": "urn:uuid:ba138e96-d5a7-4766-b16b-615d9c37e9bb"
       }
      ],
      "occurredDateTime": "2024-12-19T14:10:00+01:00",
-     "recorded": "2026-09-29T13:04:34+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -581,10 +673,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -599,7 +691,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:86792fbc-08f6-49b4-9397-aac0ebeaf324",
+        "reference": "urn:uuid:f47a09c8-7fb2-4231-bda0-f8452a66a47c",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -612,7 +704,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05159200-2024-12-19T1410"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05159200)"
        }
       }
      ]

@@ -19,7 +19,8 @@ def _hub(code, par, lib, value, unit, rem="1", qual="1", day="2026-09-08", hour=
     return {"code_station": code, "date_prelevement": day, "heure_prelevement": hour, "code_parametre": par,
             "libelle_parametre": lib, "resultat": value, "symbole_unite": unit, "code_remarque": rem,
             "mnemo_remarque": "", "limite_quantification": 0.02, "code_qualification": qual,
-            "libelle_qualification": {"1": "Correcte", "3": "Incertaine"}[qual], "nom_producteur_analyse": "Agence de l'eau"}
+            "libelle_qualification": {"1": "Correcte", "3": "Incertaine"}[qual], "nom_producteur_analyse": "Agence de l'eau",
+            "code_producteur_analyse": "18310006400033"}
 
 
 HUB_ANALYSES = {"data": [
@@ -110,3 +111,83 @@ def test_ac35_concept_map_matches_what_the_mapper_emits():
     nitrate = [t for g in cm["group"] if g["target"] == EEA_OBSERVED_PROPERTY for el in g["element"]
                if el["code"] == "nitrate" for t in el["target"]][0]
     assert nitrate["dependsOn"][0]["value"] == "as-NO3"
+
+
+def _hub_bundle(i=0):
+    sites, records, _ = _hub_import()
+    site = {s["site_id"]: site_from_json(s) for s in sites}
+    b = FhirMapper(test_data=False, pseudonymous=False).assessment_bundle(validate_record(records[i], site, NOW), site[sites[0]["site_id"]])
+    return [e["resource"] for e in b["entry"]]
+
+
+def test_ac40_agency_records_are_laboratory_data_with_source_provenance_not_citizen_wording():
+    res = _hub_bundle()
+    obs = [r for r in res if r["resourceType"] == "Observation"]
+    cats = {c["code"] for r in obs for cat in r["category"] for c in cat["coding"]}
+    assert cats == {"laboratory"}
+    perf = obs[0]["performer"][0]
+    assert perf["identifier"] == {"system": "https://id.eaufrance.fr/int", "value": "18310006400033"}
+    assert perf["display"] == "Agence de l'eau" and perf["type"] == "Organization"
+    prov = [r for r in res if r["resourceType"] == "Provenance"][0]
+    assert "Hub'Eau" in prov["text"]["div"] and "Hub'Eau" in prov["entity"][0]["what"]["display"]
+    text = " ".join(r["text"]["div"] for r in res if "text" in r).lower()
+    assert "citizen" not in text
+
+
+def test_ac41_result_below_the_quantification_limit_is_a_comparator_observation():
+    res = _hub_bundle()
+    po4 = [r for r in res if r["resourceType"] == "Observation" and r["code"]["coding"][0]["code"] == "phosphate"][0]
+    assert po4["valueQuantity"]["comparator"] == "<" and po4["valueQuantity"]["value"] == 0.02
+    assert "quantification limit" in po4["note"][0]["text"]
+    assert {c["code"] for c in po4["code"]["coding"]} == {"phosphate", "1433"}      # EEA reports phosphate as P: not mapped
+
+
+def test_ac42_agency_lab_values_count_as_agency_results_not_unverified_reports():
+    from streamfhir.domain.risk import evaluate_site
+    sites, records, _ = _hub_import()
+    site = {s["site_id"]: site_from_json(s) for s in sites}
+    records[0]["values"]["nitrate"] = 31.0                          # a 'Correcte' (trusted) agency result above 25
+    reps = [validate_record(records[0], site, NOW)]
+    risk = evaluate_site(sites[0]["site_id"], reps, as_of=None)
+    r2 = [f for f in risk.fired if f.rule_id == "R2"][0]
+    assert r2.corroborated and "agency" in r2.corroboration
+
+
+def test_ac43_api_says_not_assessed_instead_of_low_when_no_hazard_input_was_observed():
+    from streamfhir.adapters.presenter import overview_json
+    from streamfhir.application.use_cases import SiteOverview
+    from streamfhir.domain.risk import evaluate_site
+    sites, records, _ = _hub_import()
+    site = {s["site_id"]: site_from_json(s) for s in sites}
+    reps = [validate_record(r, site, NOW) for r in records]
+    risk = evaluate_site(sites[0]["site_id"], reps, as_of=None)
+    ov = SiteOverview(site[sites[0]["site_id"]], risk, reps, None, {}, {})
+    assert overview_json([ov])["sites"][0]["risk"]["level"] == "not-assessed"
+
+
+def test_ac35_eea_phosphate_is_inexact_because_the_eea_reports_it_as_p():
+    cm = concept_map()
+    t = [t for g in cm["group"] if g["target"] == EEA_OBSERVED_PROPERTY for el in g["element"]
+         if el["code"] == "phosphate" for t in el["target"]][0]
+    assert t["equivalence"] == "inexact" and "3.066" in t["comment"]
+
+
+def test_ac44_interop_demo_puts_an_agency_and_a_citizen_nitrate_under_one_eea_code():
+    """AC-44: `interop-demo` sends one real agency sampling and one clearly synthetic citizen check at the same real
+    station; both nitrate Observations carry the EEA code, the citizen one is survey + HTEST, the agency one laboratory."""
+    import os
+    from streamfhir.infrastructure.cli import interop_bundles
+    from streamfhir.infrastructure.container import build_service
+    svc = build_service(os.path.join(os.path.dirname(__file__), "..", "data", "real-eu-toulouse"))
+    agency, citizen = interop_bundles(svc, "FR-05157550")
+
+    def nitrate(b):
+        return [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Observation"
+                and e["resource"]["code"]["coding"][0]["code"] == "nitrate"][0]
+    a, c = nitrate(agency), nitrate(citizen)
+    for o in (a, c):
+        assert {"system": EEA_OBSERVED_PROPERTY, "code": "CAS_14797-55-8", "display": "Nitrate"} in o["code"]["coding"]
+    assert a["category"][0]["coding"][0]["code"] == "laboratory" and c["category"][0]["coding"][0]["code"] == "survey"
+    assert "HTEST" in {s["code"] for s in c["meta"]["security"]} and "HTEST" not in {s["code"] for s in a["meta"]["security"]}
+    loc = lambda b: [e for e in b["entry"] if e["resource"]["resourceType"] == "Location"][0]["request"]["ifNoneExist"]
+    assert loc(agency) == loc(citizen)            # same station, conditional create -> one Location on the server

@@ -136,11 +136,23 @@ function lanes(p){ return `<div class="lanes" aria-label="Health hazard points b
   <div class="lane"><b>${p.human}</b><span>People</span></div></div>`; }
 const COND = {poor:"Ecological condition: poor", fair:"Ecological condition: fair", good:"Ecological condition: good", "not assessed":"Ecological condition: not assessed (no habitat, nutrient or invertebrate data)"};
 const lvl = r => r.hazard_assessed === false ? "na" : r.level;
-LEVEL.na = "Not assessed"; LEVEL_CLASS.na = "review"; VERDICT.na = "No visual hazard checks in the last 14 days, so nothing can be said about health hazards here.";
+LEVEL.na = "Not assessed"; LEVEL["not-assessed"] = "Not assessed"; LEVEL_CLASS.na = "review"; VERDICT.na = "No visual hazard checks in the last 14 days, so nothing can be said about health hazards here.";
 const isReal = () => !!(cache && cache.dataset && cache.dataset.synthetic === false);
 const CCOL = {poor:"var(--no)", fair:"var(--warn)", good:"var(--ok)", "not assessed":"var(--hint)"};
 const CCLASS = {poor:"blocked", fair:"review", good:"ok", "not assessed":"review"};
 const CSHORT = {poor:"Condition: poor", fair:"Condition: fair", good:"Condition: good", "not assessed":"Condition: not assessed"};
+const fmtDate = t => t ? new Date(t).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
+function latestReport(x){ return x.reports.filter(p => p.observed_at).sort((a, b) => a.observed_at < b.observed_at ? 1 : -1)[0]; }
+function labLine(p){
+  if(!p) return "";
+  const v = p.values || {}, b = p.below_limit || {}, parts = [];
+  if(v.nitrate !== undefined) parts.push(`<b>Nitrate ${v.nitrate} mg/L</b>${v.nitrate >= 50 ? " (≥ 50: EU Nitrates Directive level)" : v.nitrate >= 25 ? " (≥ 25 screening value)" : ""}`);
+  if(v.phosphate !== undefined) parts.push(`<b>Orthophosphate ${v.phosphate} mg/L</b>${v.phosphate >= 0.5 ? " (≥ 0.5: French good/moderate boundary)" : ""}`);
+  else if(b.phosphate !== undefined) parts.push(`Orthophosphate &lt; ${b.phosphate} mg/L (below lab limit)`);
+  if(v.ph !== undefined) parts.push(`pH ${v.ph}`);
+  if(v["water-temperature"] !== undefined) parts.push(`${v["water-temperature"]} °C`);
+  return parts.join(" · ");
+}
 const asOf = () => cache && cache.as_of ? new Date(cache.as_of).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
 
 function map(list){
@@ -166,27 +178,28 @@ function footnote(){
 async function sites(){
   nav("sites");
   cache = cache || await api("/api/sites"); footnote();
-  const order = {high:0, verify:1, moderate:2, low:3};
+  const order = {high:0, verify:1, moderate:2, low:3, "not-assessed":4};
   const s = cache.sites.slice().sort((a, b) => order[a.risk.level] - order[b.risk.level] || b.risk.hazard_points - a.risk.hazard_points || b.risk.condition_points - a.risk.condition_points);
   const real = cache.dataset && cache.dataset.synthetic === false, perSite = real && cache.dataset.evaluate_each_site_at_its_latest_visit;
   const need = s.filter(x => x.risk.level === "high" || x.risk.level === "verify").length;
   if(real) s.sort((a, b) => b.risk.condition_points - a.risk.condition_points);
   const enriched = s.filter(x => x.risk.fired.some(f => f.kind === "condition")).length;
-  $("#view").innerHTML = `<section><h1>${real ? `${s.length} real monitoring stations, ${enriched} with nutrient enrichment` : `${s.length} stream sites, ${need} need action`}</h1>
+  $("#view").innerHTML = `<section><h1>${real ? `${s.length} real monitoring stations, ${enriched} above a nutrient screening value` : `${s.length} stream sites, ${need} need action`}</h1>
     <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() && !perSite ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
     ${real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? " Each site is evaluated at its own latest sampling, because agencies sample monthly." : ""}</p>` : ""}
     ${map(s)}
     <div class="grid">${s.map(x => real ? `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
       <div class="row"><div class="num">${x.risk.condition_points}<small>condition points</small></div><span class="chip ${CCLASS[x.risk.condition]}">${CSHORT[x.risk.condition]}</span></div>
       <div class="site-name">${esc(x.site.name)}</div>
-      <div class="help">${x.risk.fired.filter(f => f.kind === "condition").map(f => esc(f.rule_id + " " + f.title)).join(" · ") || "No nutrient rule fired at the latest sampling."}</div>
-      <div class="help" style="margin-top:10px">Health hazard: not assessed (lab data only) · ${x.risk.record_ids.length} ${x.risk.record_ids.length===1?"sampling":"samplings"} used</div></a>` : `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
+      <div class="help">${labLine(latestReport(x)) || "No nutrient values at the latest sampling."}</div>
+      <div class="help" style="margin-top:6px">${x.risk.fired.filter(f => f.kind === "condition").map(f => esc(f.rule_id + " " + f.title)).join(" · ") || "No nutrient rule fired."}</div>
+      <div class="help" style="margin-top:10px">Latest sampling ${esc(fmtDate((latestReport(x) || {}).observed_at))} · ${x.reports.length} ${x.reports.length===1?"sampling":"samplings"} in the snapshot · health hazard not assessed (lab data only)</div></a>` : `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
       <div class="row"><div class="num">${x.risk.hazard_points}<small>hazard points</small></div><span class="chip ${LEVEL_CLASS[lvl(x.risk)]}">${LEVEL[lvl(x.risk)]}</span></div>
       <div class="site-name">${esc(x.site.name)}</div>
       <div class="help">${esc(VERDICT[lvl(x.risk)])}</div>
       ${lanes(x.risk.lane_points)}
       <div class="help" style="margin-top:10px">${COND[x.risk.condition]} · ${x.risk.record_ids.length} ${x.risk.record_ids.length===1?"check":"checks"} used</div></a>`).join("")}</div></section>`;
-  cta("Start a new stream check", () => location.hash = "#/new");
+  cta(real ? "Try a citizen check (demo form)" : "Start a new stream check", () => location.hash = "#/new");
 }
 
 function ruleItem(f){
@@ -210,7 +223,19 @@ async function site(id){
   const x = cache.sites.find(s => s.site.site_id === id);
   if(!x){ location.hash = "#/"; return; }
   const r = x.risk, hz = r.fired.filter(f => f.kind === "hazard"), cd = r.fired.filter(f => f.kind === "condition");
-  $("#view").innerHTML = `<section>
+  const real = isReal() && r.hazard_assessed === false, lp = latestReport(x);
+  $("#view").innerHTML = real ? `<section>
+    <div class="card" id="level"><div class="num">${r.condition_points}<small>condition points</small></div>
+      <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
+      <div class="row"><span class="chip ${CCLASS[r.condition]}">${CSHORT[r.condition]}</span>${cd.some(f => f.rule_id === "R9") ? ` <span class="chip blocked">Nitrate ≥ 50 mg/L</span>` : ""}</div>
+      <p class="lead" style="margin:10px 0 0">${labLine(lp) || "No nutrient values at the latest sampling."}</p>
+      <p class="help" style="margin:10px 0 0">Latest sampling ${esc(fmtDate(lp && lp.observed_at))} by ${esc((lp && lp.observer_name) || "the agency")} · ${x.reports.length} ${x.reports.length===1?"sampling":"samplings"} in the snapshot${x.reports.length===1 ? " — one sample is a screening signal, not a status class" : ""}. Condition classes are demo screening classes, not WFD status classes.</p></div></section>
+    ${cd.length ? `<section><h2>Ecological condition: why</h2><div class="card"><ul class="plain">${cd.map(ruleItem).join("")}</ul></div></section>` : ""}
+    <section><h2>Health hazard</h2><div class="card"><p style="margin:0"><b>Not assessed.</b> Lab chemistry cannot see scum, sewage smell, dead fish, or people and dogs in the water. A citizen visual check at this station would fill that gap — that is what StreamFHIR is built for.</p></div></section>
+    <section><h2>Agency samplings (lab chemistry)</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(fmtDate(p.observed_at))}</b><span class="chip ${p.status}">${STATUS[p.status].big}</span></div>
+      <div class="help">${labLine(p)} · record ${esc(p.record_id)}</div>${p.issues.map(i => `<div class="help">${esc(i.message)}</div>`).join("")}</li>`).join("")}</ul></div></section>
+    <details><summary>All ${cache.rules.length} rules (how points are counted)</summary>
+      <table><tr><th>Rule</th><th>When</th><th>Points</th></tr>${cache.rules.map(u => `<tr><td>${u.id} ${esc(u.title)} <span class="help">(${u.kind})</span></td><td>${esc(u.when)}</td><td>${u.kind === "condition" ? `+${Object.values(u.points).reduce((a,b)=>a+b,0)} condition` : Object.entries(u.points).map(([k,v])=>`+${v} ${k}`).join("<br>")}</td></tr>`).join("")}</table></details>` : `<section>
     <div class="card" id="level"><div class="num">${r.hazard_points}<small>hazard points · ${r.confirmed_hazard_points} corroborated</small></div>
       <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
       <div class="row"><span class="chip ${LEVEL_CLASS[lvl(r)]}">${LEVEL[lvl(r)]}</span></div>
@@ -245,7 +270,7 @@ async function check(){
   nav("check");
   records = records || (await api("/api/records")).records;
   $("#view").innerHTML = `<section><h1>Which record should we check?</h1>
-    <p class="lead">Pick a citizen visit. We check it, explain any problem in plain words, and turn it into FHIR data.</p>
+    <p class="lead">${isReal() ? "Pick an agency sampling" : "Pick a citizen visit"}. We check it, explain any problem in plain words, and turn it into FHIR data.</p>
     <label for="pick">Sample record</label>
     <select id="pick">${records.map(r => `<option value="${esc(r.record_id)}">${esc(r.record_id)} · ${esc(r.site_id)} · ${esc((r.observed_at||"").slice(0,10))}</option>`).join("")}</select>
     <details style="margin-top:12px"><summary>Edit the record (JSON)</summary><p class="help">Change a value — for example set "ph" to 15 — and check again.</p><textarea id="raw" spellcheck="false"></textarea></details>

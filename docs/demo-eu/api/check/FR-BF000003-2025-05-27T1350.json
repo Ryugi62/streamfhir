@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:f2c50350-da5e-4aa8-bd20-1216ce906473",
+    "fullUrl": "urn:uuid:c709fcf6-ca01-4524-9b15-609b7dada519",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9e168144-463a-4936-be8e-a638577f933f",
+    "fullUrl": "urn:uuid:9e0f84c4-1bc8-4f28-9f25-c0cb887edb94",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:cd5e444d-866d-4322-8eb4-31ebf43a5fdf",
+    "fullUrl": "urn:uuid:b66f5b67-1cc7-4ac9-bf35-2af472a0b43b",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · CLAIRFONT on 2025-05-27T13:50:00+02:00: 2 indicators (final, record FR-BF000003-2025-05-27T1350)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · CLAIRFONT on 2025-05-27T13:50:00+02:00: 2 indicators (final, record FR-BF000003-2025-05-27T1350)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,26 +149,26 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:f2c50350-da5e-4aa8-bd20-1216ce906473",
+      "reference": "urn:uuid:c709fcf6-ca01-4524-9b15-609b7dada519",
       "display": "Toulouse area · CLAIRFONT"
      },
      "effectiveDateTime": "2025-05-27T13:50:00+02:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "unknown producer"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "03101735"
        },
-       "display": "Monitoring organisation unknown producer",
+       "display": "Producer 03101735",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:86a6463d-bb45-4989-998a-307606f55b1b"
+       "reference": "urn:uuid:87c0260f-fe2d-491f-827a-e769e2523484"
       },
       {
-       "reference": "urn:uuid:96451c82-2799-4a76-aae4-347096e4c537"
+       "reference": "urn:uuid:d26a84dc-2c08-4545-9fe2-7a3021cda276"
       }
      ]
     },
@@ -178,7 +178,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:86a6463d-bb45-4989-998a-307606f55b1b",
+    "fullUrl": "urn:uuid:87c0260f-fe2d-491f-827a-e769e2523484",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -209,8 +209,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -241,17 +241,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:f2c50350-da5e-4aa8-bd20-1216ce906473",
+      "reference": "urn:uuid:c709fcf6-ca01-4524-9b15-609b7dada519",
       "display": "Toulouse area · CLAIRFONT"
      },
      "effectiveDateTime": "2025-05-27T13:50:00+02:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "unknown producer"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "03101735"
        },
-       "display": "Monitoring organisation unknown producer",
+       "display": "Producer 03101735",
        "type": "Organization"
       }
      ],
@@ -268,7 +268,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:96451c82-2799-4a76-aae4-347096e4c537",
+    "fullUrl": "urn:uuid:d26a84dc-2c08-4545-9fe2-7a3021cda276",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -299,8 +299,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -316,17 +316,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:f2c50350-da5e-4aa8-bd20-1216ce906473",
+      "reference": "urn:uuid:c709fcf6-ca01-4524-9b15-609b7dada519",
       "display": "Toulouse area · CLAIRFONT"
      },
      "effectiveDateTime": "2025-05-27T13:50:00+02:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "unknown producer"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "03101735"
        },
-       "display": "Monitoring organisation unknown producer",
+       "display": "Producer 03101735",
        "type": "Organization"
       }
      ],
@@ -347,7 +347,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c857261f-52f0-415e-9f83-c3ed4c2c655c",
+    "fullUrl": "urn:uuid:6c0619fe-9227-4cf4-bb95-a5f114305a40",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-BF000003-2025-05-27T1350",
@@ -362,21 +362,21 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000003-2025-05-27T1350 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-BF000003-2025-05-27T1350 was imported from Hub'Eau qualite_rivieres (Sandre), station BF000003 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:cd5e444d-866d-4322-8eb4-31ebf43a5fdf"
+       "reference": "urn:uuid:b66f5b67-1cc7-4ac9-bf35-2af472a0b43b"
       },
       {
-       "reference": "urn:uuid:86a6463d-bb45-4989-998a-307606f55b1b"
+       "reference": "urn:uuid:87c0260f-fe2d-491f-827a-e769e2523484"
       },
       {
-       "reference": "urn:uuid:96451c82-2799-4a76-aae4-347096e4c537"
+       "reference": "urn:uuid:d26a84dc-2c08-4545-9fe2-7a3021cda276"
       }
      ],
      "occurredDateTime": "2025-05-27T13:50:00+02:00",
-     "recorded": "2026-09-29T13:04:35+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -399,10 +399,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "unknown producer"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "03101735"
         },
-        "display": "Monitoring organisation unknown producer",
+        "display": "Producer 03101735",
         "type": "Organization"
        }
       },
@@ -417,7 +417,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:9e168144-463a-4936-be8e-a638577f933f",
+        "reference": "urn:uuid:9e0f84c4-1bc8-4f28-9f25-c0cb887edb94",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -430,7 +430,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-BF000003-2025-05-27T1350"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station BF000003)"
        }
       }
      ]

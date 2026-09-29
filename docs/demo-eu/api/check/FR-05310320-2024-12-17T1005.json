@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+    "fullUrl": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5e712048-ee03-4e70-b6f1-1dee3a7e0fbb",
+    "fullUrl": "urn:uuid:757cfa19-b98e-4d48-9172-f3206b682981",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d9d6319c-03bf-4756-9653-fb308a874497",
+    "fullUrl": "urn:uuid:5ae821aa-93b3-497a-b8d7-fe554bd9b1df",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos) on 2024-12-17T10:05:00+01:00: 5 indicators (final, record FR-05310320-2024-12-17T1005)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos) on 2024-12-17T10:05:00+01:00: 5 indicators (final, record FR-05310320-2024-12-17T1005)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+      "reference": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:5672c6ce-7731-44b3-a855-0e489c6e6a83"
+       "reference": "urn:uuid:36b8419a-d2b9-4ed1-94d6-61b1ea459777"
       },
       {
-       "reference": "urn:uuid:22079b0c-bc12-49d0-a7e7-a24b7f8b66f7"
+       "reference": "urn:uuid:df426e27-3c0d-4be9-8285-4216d8a2f0f4"
       },
       {
-       "reference": "urn:uuid:ae70345a-63c7-4570-9fb9-1a1a1b8b21c0"
+       "reference": "urn:uuid:8794da1b-f1b8-49d8-aad1-5ab1c76dba64"
       },
       {
-       "reference": "urn:uuid:1290a54b-88f5-4d53-9d55-366c008525fa"
+       "reference": "urn:uuid:fd7ae973-d69f-4c7c-905c-1343699b62b8"
       },
       {
-       "reference": "urn:uuid:d7f79342-d926-4ce8-9698-9e0f2af36eea"
+       "reference": "urn:uuid:840cf4e7-0e83-4dae-b2ca-80988ebbd13e"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:5672c6ce-7731-44b3-a855-0e489c6e6a83",
+    "fullUrl": "urn:uuid:36b8419a-d2b9-4ed1-94d6-61b1ea459777",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -250,17 +250,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+      "reference": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:22079b0c-bc12-49d0-a7e7-a24b7f8b66f7",
+    "fullUrl": "urn:uuid:df426e27-3c0d-4be9-8285-4216d8a2f0f4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -308,8 +308,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -325,17 +325,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+      "reference": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:ae70345a-63c7-4570-9fb9-1a1a1b8b21c0",
+    "fullUrl": "urn:uuid:8794da1b-f1b8-49d8-aad1-5ab1c76dba64",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,8 +387,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -401,11 +401,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -414,17 +409,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+      "reference": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -441,7 +436,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:1290a54b-88f5-4d53-9d55-366c008525fa",
+    "fullUrl": "urn:uuid:fd7ae973-d69f-4c7c-905c-1343699b62b8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -472,8 +467,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -499,17 +494,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+      "reference": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -526,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d7f79342-d926-4ce8-9698-9e0f2af36eea",
+    "fullUrl": "urn:uuid:840cf4e7-0e83-4dae-b2ca-80988ebbd13e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -557,8 +552,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -584,17 +579,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:bf075ad1-5e4e-43c0-9a8e-e208636817a4",
+      "reference": "urn:uuid:f036b6bb-b132-4978-9da6-a99352a3f49c",
       "display": "Toulouse area · Le Riou entre Beauzelle et Blagnac (Ch. de Cloutos)"
      },
      "effectiveDateTime": "2024-12-17T10:05:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:22a0c26a-64b5-4e9d-a4f2-0c9ae0f8413b",
+    "fullUrl": "urn:uuid:7fb4ec47-97f6-432b-85a9-f1ef9a17674a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310320-2024-12-17T1005",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310320-2024-12-17T1005 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310320-2024-12-17T1005 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310320 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:d9d6319c-03bf-4756-9653-fb308a874497"
+       "reference": "urn:uuid:5ae821aa-93b3-497a-b8d7-fe554bd9b1df"
       },
       {
-       "reference": "urn:uuid:5672c6ce-7731-44b3-a855-0e489c6e6a83"
+       "reference": "urn:uuid:36b8419a-d2b9-4ed1-94d6-61b1ea459777"
       },
       {
-       "reference": "urn:uuid:22079b0c-bc12-49d0-a7e7-a24b7f8b66f7"
+       "reference": "urn:uuid:df426e27-3c0d-4be9-8285-4216d8a2f0f4"
       },
       {
-       "reference": "urn:uuid:ae70345a-63c7-4570-9fb9-1a1a1b8b21c0"
+       "reference": "urn:uuid:8794da1b-f1b8-49d8-aad1-5ab1c76dba64"
       },
       {
-       "reference": "urn:uuid:1290a54b-88f5-4d53-9d55-366c008525fa"
+       "reference": "urn:uuid:fd7ae973-d69f-4c7c-905c-1343699b62b8"
       },
       {
-       "reference": "urn:uuid:d7f79342-d926-4ce8-9698-9e0f2af36eea"
+       "reference": "urn:uuid:840cf4e7-0e83-4dae-b2ca-80988ebbd13e"
       }
      ],
      "occurredDateTime": "2024-12-17T10:05:00+01:00",
-     "recorded": "2026-09-29T13:04:35+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:5e712048-ee03-4e70-b6f1-1dee3a7e0fbb",
+        "reference": "urn:uuid:757cfa19-b98e-4d48-9172-f3206b682981",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05310320-2024-12-17T1005"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05310320)"
        }
       }
      ]

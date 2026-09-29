@@ -24,7 +24,16 @@
    {
     "id": "Observation",
     "path": "Observation",
-    "short": "Citizen stream indicator observation"
+    "short": "Citizen stream indicator observation",
+    "constraint": [
+     {
+      "key": "sio-1",
+      "severity": "error",
+      "source": "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation",
+      "human": "Category is survey (citizen observation) or laboratory (agency sampling)",
+      "expression": "category.coding.where(system = 'http://terminology.hl7.org/CodeSystem/observation-category' and (code = 'survey' or code = 'laboratory')).exists()"
+     }
+    ]
    },
    {
     "id": "Observation.category",
@@ -44,13 +53,30 @@
     "id": "Observation.category:survey",
     "path": "Observation.category",
     "sliceName": "survey",
-    "min": 1,
+    "min": 0,
     "max": "1",
+    "short": "Citizen observation",
     "patternCodeableConcept": {
      "coding": [
       {
        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
        "code": "survey"
+      }
+     ]
+    }
+   },
+   {
+    "id": "Observation.category:laboratory",
+    "path": "Observation.category",
+    "sliceName": "laboratory",
+    "min": 0,
+    "max": "1",
+    "short": "Agency laboratory sampling",
+    "patternCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+       "code": "laboratory"
       }
      ]
     }

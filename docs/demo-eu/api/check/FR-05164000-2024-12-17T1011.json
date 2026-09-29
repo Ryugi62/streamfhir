@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+    "fullUrl": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e71c4ed7-65dc-4d9c-b7dc-de8105bd28f4",
+    "fullUrl": "urn:uuid:bce0ba6b-7bbb-4496-946a-ba0c50fd068e",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b73333be-07d4-4295-b312-844d6910b7d9",
+    "fullUrl": "urn:uuid:7826546e-f5fc-481a-a377-93cd8dfc5737",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · L'Ariège à Lacroix - Falgarde on 2024-12-17T10:11:00+01:00: 5 indicators (final, record FR-05164000-2024-12-17T1011)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · L'Ariège à Lacroix - Falgarde on 2024-12-17T10:11:00+01:00: 5 indicators (final, record FR-05164000-2024-12-17T1011)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+      "reference": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:514e5c10-458e-450d-92e3-60564c889eb6"
+       "reference": "urn:uuid:9dc2c135-2b70-4991-9d79-2687bf7c9c94"
       },
       {
-       "reference": "urn:uuid:4c9206b9-2614-4205-a5fd-675bd2e2529c"
+       "reference": "urn:uuid:efc5e044-1f15-410b-8e3b-d14ff6f2f4b3"
       },
       {
-       "reference": "urn:uuid:db3eed1f-0893-4718-bc16-7538a361f7cb"
+       "reference": "urn:uuid:9ced834b-242e-4be5-88c3-92de9841402e"
       },
       {
-       "reference": "urn:uuid:22dac40b-ba41-47c0-9408-cd58c1e5778f"
+       "reference": "urn:uuid:26e65b6a-9136-46aa-8333-3f3ee9bdd0a3"
       },
       {
-       "reference": "urn:uuid:a3c8bf76-76f3-444d-a131-4ed1fdcdc987"
+       "reference": "urn:uuid:eab46871-5a6d-4504-91bd-b29cf1da2871"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:514e5c10-458e-450d-92e3-60564c889eb6",
+    "fullUrl": "urn:uuid:9dc2c135-2b70-4991-9d79-2687bf7c9c94",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -245,17 +245,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+      "reference": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4c9206b9-2614-4205-a5fd-675bd2e2529c",
+    "fullUrl": "urn:uuid:efc5e044-1f15-410b-8e3b-d14ff6f2f4b3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,8 +303,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -335,17 +335,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+      "reference": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -362,7 +362,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:db3eed1f-0893-4718-bc16-7538a361f7cb",
+    "fullUrl": "urn:uuid:9ced834b-242e-4be5-88c3-92de9841402e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -393,8 +393,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -410,17 +410,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+      "reference": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:22dac40b-ba41-47c0-9408-cd58c1e5778f",
+    "fullUrl": "urn:uuid:26e65b6a-9136-46aa-8333-3f3ee9bdd0a3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -472,8 +472,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -486,11 +486,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -499,17 +494,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+      "reference": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -526,7 +521,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a3c8bf76-76f3-444d-a131-4ed1fdcdc987",
+    "fullUrl": "urn:uuid:eab46871-5a6d-4504-91bd-b29cf1da2871",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -557,8 +552,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -584,17 +579,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:1d638e38-4f14-49f8-a75c-c1e817b3b722",
+      "reference": "urn:uuid:b6e70944-b401-4709-bd13-dee028a48f42",
       "display": "Toulouse area · L'Ariège à Lacroix - Falgarde"
      },
      "effectiveDateTime": "2024-12-17T10:11:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f0029114-b544-4bbf-a6db-061d81376638",
+    "fullUrl": "urn:uuid:b0c81e7d-67a6-46b8-abbb-43244be134c7",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05164000-2024-12-17T1011",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05164000-2024-12-17T1011 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05164000-2024-12-17T1011 was imported from Hub'Eau qualite_rivieres (Sandre), station 05164000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:b73333be-07d4-4295-b312-844d6910b7d9"
+       "reference": "urn:uuid:7826546e-f5fc-481a-a377-93cd8dfc5737"
       },
       {
-       "reference": "urn:uuid:514e5c10-458e-450d-92e3-60564c889eb6"
+       "reference": "urn:uuid:9dc2c135-2b70-4991-9d79-2687bf7c9c94"
       },
       {
-       "reference": "urn:uuid:4c9206b9-2614-4205-a5fd-675bd2e2529c"
+       "reference": "urn:uuid:efc5e044-1f15-410b-8e3b-d14ff6f2f4b3"
       },
       {
-       "reference": "urn:uuid:db3eed1f-0893-4718-bc16-7538a361f7cb"
+       "reference": "urn:uuid:9ced834b-242e-4be5-88c3-92de9841402e"
       },
       {
-       "reference": "urn:uuid:22dac40b-ba41-47c0-9408-cd58c1e5778f"
+       "reference": "urn:uuid:26e65b6a-9136-46aa-8333-3f3ee9bdd0a3"
       },
       {
-       "reference": "urn:uuid:a3c8bf76-76f3-444d-a131-4ed1fdcdc987"
+       "reference": "urn:uuid:eab46871-5a6d-4504-91bd-b29cf1da2871"
       }
      ],
      "occurredDateTime": "2024-12-17T10:11:00+01:00",
-     "recorded": "2026-09-29T13:04:34+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:e71c4ed7-65dc-4d9c-b7dc-de8105bd28f4",
+        "reference": "urn:uuid:bce0ba6b-7bbb-4496-946a-ba0c50fd068e",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05164000-2024-12-17T1011"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05164000)"
        }
       }
      ]

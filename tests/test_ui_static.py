@@ -28,6 +28,6 @@ def test_ac38_real_datasets_lead_with_ecological_condition_not_hazard():
     """Real agency data has no citizen hazard observations: the UI leads with condition and never says 'not corroborated' for a lab value."""
     import os
     html = open(os.path.join(os.path.dirname(__file__), "..", "streamfhir", "infrastructure", "static", "index.html"), encoding="utf-8").read()
-    assert "real monitoring stations" in html and "with nutrient enrichment" in html
+    assert "real monitoring stations" in html and "above a nutrient screening value" in html
     assert "Agency lab value" in html and "Agency samplings (lab chemistry)" in html
     assert "coloured by ecological condition" in html

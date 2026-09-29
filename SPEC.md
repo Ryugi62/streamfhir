@@ -13,7 +13,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
   - S4: every site gets a hazard level (`low`/`moderate`/`verify`/`high`) and a separate ecological condition with the fired rule IDs listed; every `high` site (>= 5 *corroborated* hazard points) yields exactly 1 FHIR `Flag` with `subject` = that `Location`; 0 Flags are raised from uncorroborated reports.
   - S8: re-sending the same record to a FHIR server creates 0 duplicate resources (conditional create/update), measured live.
   - S5: ≥25 automated tests pass (`python3 -m pytest -q`), 0 network calls in tests.
-  - S6: dry-run is the default for sending; a live POST to HAPI is only done with synthetic data and its response IDs are recorded in README.
+  - S6: dry-run is the default for sending; live POSTs to HAPI carry synthetic data, or public open data under its licence (Hub'Eau, Licence Ouverte) with its source in Provenance; response IDs are recorded in docs/evidence-hapi.md.
   - S7: UI renders at 390 px and 1280 px with no horizontal scroll; one primary action per screen.
 - Deadline: Devpost submission 2026-10-04 21:00 PDT (extended). Internal code freeze: 2026-09-30.
 - Non-goals: no ML model, no accuracy claims; no real citizen data (real agency data only as import tests); no user accounts; no claim that the record schema is the official OneAquaHealth app schema; no production hosting; not a regulatory water-quality compliance tool.
@@ -93,6 +93,12 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-36 Given EEA Waterbase aggregated rows, Then the coverage check counts sites and the latest year per quantity.
 - AC-37 Given a monitoring dataset flagged `evaluate_each_site_at_its_latest_visit`, Then each site is evaluated at its own latest sampling; a condition rule alone never makes the health hazard "assessed".
 - AC-38 Given a real dataset, Then the UI leads with ecological condition, colours the map by condition, and labels condition rules as agency lab values (no corroboration wording).
+- AC-39 Given any Flag, Then it claims the stream-site-flag profile (Location subject, safety category, expiry, level from a required ValueSet, invariant ssf-1: an active Flag cites a hazard rule).
+- AC-40 Given an agency record, Then its Observations are `laboratory`, the performer is the organisation (Sandre code for French data), and no narrative calls it a citizen record.
+- AC-41 Given a result below the laboratory's quantification limit, Then it becomes an Observation with `comparator "<"` and the limit, never a number.
+- AC-42 Given a trusted agency record, Then its condition rules count as agency results, not as unverified reports.
+- AC-43 Given a site where no hazard input was observed, Then the API level is `not-assessed`, never `low`.
+- AC-44 Given `interop-demo`, Then a real agency reading and a synthetic (HTEST) citizen reading at the same station carry the same EEA nitrate code.
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+    "fullUrl": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:4c2b0588-ee46-41e0-814a-7299e6292ced",
+    "fullUrl": "urn:uuid:00085c1d-43c9-4846-8a3d-c3f998633b94",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:54a5ff41-66b0-4285-a817-3d7c0753ee13",
+    "fullUrl": "urn:uuid:129b4cbd-ba7c-419d-9822-694944d4c498",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · La Garonne en amont de l'Ariège on 2024-12-17T09:34:00+01:00: 5 indicators (final, record FR-05174000-2024-12-17T0934)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · La Garonne en amont de l'Ariège on 2024-12-17T09:34:00+01:00: 5 indicators (final, record FR-05174000-2024-12-17T0934)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+      "reference": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:7758b936-6248-4506-b8b6-a4bc5badb6c7"
+       "reference": "urn:uuid:aff0fb26-c9ad-470f-89ee-633d16dd8ba9"
       },
       {
-       "reference": "urn:uuid:a58d34c0-3d1c-4109-9580-56061c5ff293"
+       "reference": "urn:uuid:bab6b051-7274-44d7-9d48-d3541689606e"
       },
       {
-       "reference": "urn:uuid:c0b4b716-0404-4f8a-85ca-2fb1a63d7b8e"
+       "reference": "urn:uuid:4f003c6b-fcad-4210-8042-de0f62d64ac5"
       },
       {
-       "reference": "urn:uuid:f7a940c2-2bfa-46b1-9a56-a90185f5ef29"
+       "reference": "urn:uuid:9032eea6-405a-4369-9a47-fbeb1a35c27f"
       },
       {
-       "reference": "urn:uuid:af8db088-0b40-48e8-9874-6148ca6895b4"
+       "reference": "urn:uuid:f3700504-2549-464d-b795-5cee253c5ad8"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:7758b936-6248-4506-b8b6-a4bc5badb6c7",
+    "fullUrl": "urn:uuid:aff0fb26-c9ad-470f-89ee-633d16dd8ba9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -250,17 +250,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+      "reference": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -277,7 +277,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:a58d34c0-3d1c-4109-9580-56061c5ff293",
+    "fullUrl": "urn:uuid:bab6b051-7274-44d7-9d48-d3541689606e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -308,8 +308,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -325,17 +325,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+      "reference": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -356,7 +356,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:c0b4b716-0404-4f8a-85ca-2fb1a63d7b8e",
+    "fullUrl": "urn:uuid:4f003c6b-fcad-4210-8042-de0f62d64ac5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -387,8 +387,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -414,17 +414,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+      "reference": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -441,7 +441,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f7a940c2-2bfa-46b1-9a56-a90185f5ef29",
+    "fullUrl": "urn:uuid:9032eea6-405a-4369-9a47-fbeb1a35c27f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -472,8 +472,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -499,17 +499,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+      "reference": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:af8db088-0b40-48e8-9874-6148ca6895b4",
+    "fullUrl": "urn:uuid:f3700504-2549-464d-b795-5cee253c5ad8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -557,8 +557,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -571,11 +571,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -584,17 +579,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:1cc76a68-6969-43ad-98c0-9ca4f83a85f8",
+      "reference": "urn:uuid:e61a9ec7-828d-4d51-902b-34adbc18742e",
       "display": "Toulouse area · La Garonne en amont de l'Ariège"
      },
      "effectiveDateTime": "2024-12-17T09:34:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:3b37f55a-e16a-4458-b6e5-68bcbef24ec0",
+    "fullUrl": "urn:uuid:d02aa808-53a0-49c2-a6d2-246c32a3de0a",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05174000-2024-12-17T0934",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05174000-2024-12-17T0934 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05174000-2024-12-17T0934 was imported from Hub'Eau qualite_rivieres (Sandre), station 05174000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:54a5ff41-66b0-4285-a817-3d7c0753ee13"
+       "reference": "urn:uuid:129b4cbd-ba7c-419d-9822-694944d4c498"
       },
       {
-       "reference": "urn:uuid:7758b936-6248-4506-b8b6-a4bc5badb6c7"
+       "reference": "urn:uuid:aff0fb26-c9ad-470f-89ee-633d16dd8ba9"
       },
       {
-       "reference": "urn:uuid:a58d34c0-3d1c-4109-9580-56061c5ff293"
+       "reference": "urn:uuid:bab6b051-7274-44d7-9d48-d3541689606e"
       },
       {
-       "reference": "urn:uuid:c0b4b716-0404-4f8a-85ca-2fb1a63d7b8e"
+       "reference": "urn:uuid:4f003c6b-fcad-4210-8042-de0f62d64ac5"
       },
       {
-       "reference": "urn:uuid:f7a940c2-2bfa-46b1-9a56-a90185f5ef29"
+       "reference": "urn:uuid:9032eea6-405a-4369-9a47-fbeb1a35c27f"
       },
       {
-       "reference": "urn:uuid:af8db088-0b40-48e8-9874-6148ca6895b4"
+       "reference": "urn:uuid:f3700504-2549-464d-b795-5cee253c5ad8"
       }
      ],
      "occurredDateTime": "2024-12-17T09:34:00+01:00",
-     "recorded": "2026-09-29T13:04:35+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:4c2b0588-ee46-41e0-814a-7299e6292ced",
+        "reference": "urn:uuid:00085c1d-43c9-4846-8a3d-c3f998633b94",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05174000-2024-12-17T0934"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05174000)"
        }
       }
      ]

@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+    "fullUrl": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0e164d60-3f19-4084-af49-1f07d7f8534e",
+    "fullUrl": "urn:uuid:881f6bfc-4302-4795-bfdf-2c58320b9170",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:147345dc-71da-49b3-9c01-88aa1ba45168",
+    "fullUrl": "urn:uuid:c79617a9-3916-4bd8-a359-f06bfd2aecd0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · Le Canal Latéral au droit de Lespinasse on 2024-12-17T14:31:00+01:00: 5 indicators (final, record FR-05160000-2024-12-17T1431)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · Le Canal Latéral au droit de Lespinasse on 2024-12-17T14:31:00+01:00: 5 indicators (final, record FR-05160000-2024-12-17T1431)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:84926f93-4e80-4a94-b2e3-86425f17c1cb"
+       "reference": "urn:uuid:c107a189-b64c-4072-b1c9-b1c69c7e19a6"
       },
       {
-       "reference": "urn:uuid:f0f84121-fb2d-4cff-9260-cbe89a495940"
+       "reference": "urn:uuid:c8899677-b1c7-494c-8c70-751a93602d58"
       },
       {
-       "reference": "urn:uuid:0093dcda-61e8-46ef-9fed-e3b6ec3aee20"
+       "reference": "urn:uuid:ffbbf3c3-8fe7-48d7-bf70-921b4dd44daf"
       },
       {
-       "reference": "urn:uuid:eb741292-1344-452a-afa6-c09dc3a7b9a9"
+       "reference": "urn:uuid:64e117ba-4163-4e43-a70d-2669c35191ea"
       },
       {
-       "reference": "urn:uuid:e9958a6b-31ef-4fad-a879-dc017428f287"
+       "reference": "urn:uuid:1bfe7b80-3a28-45a6-9905-782082f09d80"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:84926f93-4e80-4a94-b2e3-86425f17c1cb",
+    "fullUrl": "urn:uuid:c107a189-b64c-4072-b1c9-b1c69c7e19a6",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -245,17 +245,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f0f84121-fb2d-4cff-9260-cbe89a495940",
+    "fullUrl": "urn:uuid:c8899677-b1c7-494c-8c70-751a93602d58",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,8 +303,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -317,11 +317,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -330,17 +325,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -357,7 +352,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0093dcda-61e8-46ef-9fed-e3b6ec3aee20",
+    "fullUrl": "urn:uuid:ffbbf3c3-8fe7-48d7-bf70-921b4dd44daf",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -388,8 +383,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -415,17 +410,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -442,7 +437,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:eb741292-1344-452a-afa6-c09dc3a7b9a9",
+    "fullUrl": "urn:uuid:64e117ba-4163-4e43-a70d-2669c35191ea",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -473,8 +468,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -505,17 +500,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -532,7 +527,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e9958a6b-31ef-4fad-a879-dc017428f287",
+    "fullUrl": "urn:uuid:1bfe7b80-3a28-45a6-9905-782082f09d80",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -563,8 +558,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -580,17 +575,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:46ff6ce7-d8c0-433d-8612-e13b2be7b6e1",
+      "reference": "urn:uuid:cff2d89d-d816-4a0d-bfb1-846488354f50",
       "display": "Toulouse area · Le Canal Latéral au droit de Lespinasse"
      },
      "effectiveDateTime": "2024-12-17T14:31:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:9f94c271-6d4a-459e-bfa5-8d5853c09547",
+    "fullUrl": "urn:uuid:0e374b90-cdbe-4657-98bb-55368253fe8f",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05160000-2024-12-17T1431",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05160000-2024-12-17T1431 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05160000-2024-12-17T1431 was imported from Hub'Eau qualite_rivieres (Sandre), station 05160000 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:147345dc-71da-49b3-9c01-88aa1ba45168"
+       "reference": "urn:uuid:c79617a9-3916-4bd8-a359-f06bfd2aecd0"
       },
       {
-       "reference": "urn:uuid:84926f93-4e80-4a94-b2e3-86425f17c1cb"
+       "reference": "urn:uuid:c107a189-b64c-4072-b1c9-b1c69c7e19a6"
       },
       {
-       "reference": "urn:uuid:f0f84121-fb2d-4cff-9260-cbe89a495940"
+       "reference": "urn:uuid:c8899677-b1c7-494c-8c70-751a93602d58"
       },
       {
-       "reference": "urn:uuid:0093dcda-61e8-46ef-9fed-e3b6ec3aee20"
+       "reference": "urn:uuid:ffbbf3c3-8fe7-48d7-bf70-921b4dd44daf"
       },
       {
-       "reference": "urn:uuid:eb741292-1344-452a-afa6-c09dc3a7b9a9"
+       "reference": "urn:uuid:64e117ba-4163-4e43-a70d-2669c35191ea"
       },
       {
-       "reference": "urn:uuid:e9958a6b-31ef-4fad-a879-dc017428f287"
+       "reference": "urn:uuid:1bfe7b80-3a28-45a6-9905-782082f09d80"
       }
      ],
      "occurredDateTime": "2024-12-17T14:31:00+01:00",
-     "recorded": "2026-09-29T13:04:34+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:0e164d60-3f19-4084-af49-1f07d7f8534e",
+        "reference": "urn:uuid:881f6bfc-4302-4795-bfdf-2c58320b9170",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05160000-2024-12-17T1431"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05160000)"
        }
       }
      ]

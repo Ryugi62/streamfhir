@@ -232,3 +232,17 @@ def test_flag_rule_extension_binds_to_hazard_rules_only():
     assert value["binding"] == {"strength": "required", "valueSet": VS_HAZARD_RULE}
     with open(os.path.join(ROOT, "fhir", "ValueSet-%s.json" % vs["id"])) as fh:
         assert json.load(fh) == vs, "run: python3 -m streamfhir build-fhir"
+
+
+def test_ac39_flag_profile_constrains_subject_category_period_and_rule_citation():
+    """AC-39: every Flag claims the stream-site-flag profile; the profile requires a Location subject, the safety
+    category, an expiry, and (invariant ssf-1) at least one cited hazard rule while active."""
+    import json, os
+    from streamfhir.adapters.fhir_mapper import PROFILE_FLAG, conformance_resources
+    sd = [r for r in conformance_resources() if r.get("url") == PROFILE_FLAG][0]
+    els = {e["id"]: e for e in sd["differential"]["element"]}
+    assert els["Flag.subject"]["type"][0]["targetProfile"] == ["http://hl7.org/fhir/StructureDefinition/Location"]
+    assert els["Flag.category:safety"]["min"] == 1 and els["Flag.period.end"]["min"] == 1
+    assert "status != 'active'" in els["Flag"]["constraint"][0]["expression"]
+    with open(os.path.join(os.path.dirname(__file__), "..", "fhir", "StructureDefinition-stream-site-flag.json"), encoding="utf-8") as fh:
+        assert json.load(fh) == sd, "run: python3 -m streamfhir build-fhir"

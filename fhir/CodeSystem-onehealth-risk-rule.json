@@ -41,8 +41,8 @@
   },
   {
    "code": "R2",
-   "display": "Nutrient enrichment",
-   "definition": "[condition] When nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds). Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria. Advice: Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring."
+   "display": "Nutrient enrichment (screening)",
+   "definition": "[condition] When nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class. Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off. Advice: Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring."
   },
   {
    "code": "R3",
@@ -76,8 +76,8 @@
   },
   {
    "code": "R9",
-   "display": "Nitrate above drinking-water value",
-   "definition": "[condition] When nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor). Stream water is not drinking water, but this level signals run-off that may reach wells and supplies. Advice: Mention it to the water utility; private well owners nearby may want a lab test."
+   "display": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
+   "definition": "[condition] When nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value. Stream water is not drinking water, but this level signals run-off that may reach wells and supplies. Advice: Mention it to the water utility; private well owners nearby may want a lab test."
   },
   {
    "code": "R10",

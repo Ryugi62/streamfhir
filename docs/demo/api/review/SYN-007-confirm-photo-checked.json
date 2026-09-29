@@ -15,13 +15,13 @@
   },
   {
    "id": "R2",
-   "title": "Nutrient enrichment",
+   "title": "Nutrient enrichment (screening)",
    "kind": "condition",
    "points": {
     "environment": 2
    },
-   "when": "nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds)",
-   "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+   "when": "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+   "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
    "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
    "flowing_only": false,
    "clears_after": "1 trusted clear visit"
@@ -110,12 +110,12 @@
   },
   {
    "id": "R9",
-   "title": "Nitrate above drinking-water value",
+   "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
    "kind": "condition",
    "points": {
     "human": 1
    },
-   "when": "nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor)",
+   "when": "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value",
    "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
    "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
    "flowing_only": false,
@@ -211,6 +211,29 @@
      "basis": null,
      "observed_at": "2026-09-16T08:40:00+01:00",
      "has_photo": true,
+     "values": {
+      "channel-condition": 8,
+      "bank-stability": 8,
+      "riparian-zone": 9,
+      "instream-habitat": 7,
+      "water-temperature": 15.2,
+      "ph": 7.4,
+      "nitrate": 5,
+      "phosphate": 0.1,
+      "transparency": 110,
+      "water-colour": "clear",
+      "surface": "none",
+      "odour": "none",
+      "litter": "none",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": true,
+      "sensitive-invertebrates": 3,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     },
     {
@@ -220,6 +243,28 @@
      "basis": null,
      "observed_at": "2026-09-24T17:15:00+01:00",
      "has_photo": true,
+     "values": {
+      "channel-condition": 8,
+      "bank-stability": 7,
+      "riparian-zone": 9,
+      "instream-habitat": 8,
+      "water-temperature": 14.6,
+      "ph": 7.6,
+      "nitrate": 5,
+      "transparency": 105,
+      "water-colour": "clear",
+      "surface": "none",
+      "odour": "earthy",
+      "litter": "some",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": false,
+      "sensitive-invertebrates": 3,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     },
     {
@@ -229,6 +274,16 @@
      "basis": null,
      "observed_at": "2026-09-27T12:05:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-colour": "clear",
+      "surface": "oily-sheen",
+      "odour": "chemical",
+      "litter": "some",
+      "people-contact": false,
+      "animal-contact": false
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "warning",
@@ -245,6 +300,9 @@
      "basis": null,
      "observed_at": null,
      "has_photo": false,
+     "values": {},
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "error",
@@ -410,6 +468,29 @@
      "basis": null,
      "observed_at": "2026-09-20T16:30:00+01:00",
      "has_photo": true,
+     "values": {
+      "channel-condition": 4,
+      "bank-stability": 3,
+      "riparian-zone": 3,
+      "instream-habitat": 4,
+      "water-temperature": 17.0,
+      "ph": 7.0,
+      "nitrate": 15,
+      "phosphate": 0.3,
+      "transparency": 25,
+      "water-colour": "milky-grey",
+      "surface": "foam",
+      "odour": "sewage",
+      "litter": "lots",
+      "dead-fish": false,
+      "people-contact": true,
+      "animal-contact": false,
+      "sensitive-invertebrates": 0,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     },
     {
@@ -419,6 +500,22 @@
      "basis": null,
      "observed_at": "2026-09-25T15:50:00+01:00",
      "has_photo": false,
+     "values": {
+      "channel-condition": 3,
+      "bank-stability": 3,
+      "riparian-zone": 4,
+      "instream-habitat": 3,
+      "water-temperature": 16.4,
+      "water-colour": "milky-grey",
+      "odour": "sewage",
+      "litter": "lots",
+      "people-contact": true,
+      "animal-contact": false,
+      "sensitive-invertebrates": 0,
+      "kick-sample-minutes": 1.5
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     },
     {
@@ -428,6 +525,9 @@
      "basis": null,
      "observed_at": null,
      "has_photo": false,
+     "values": {},
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "error",
@@ -443,7 +543,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:65437329-0fe0-4e7b-ad8b-dad59aa57283",
+      "fullUrl": "urn:uuid:d9dd89c8-cec5-4372-ae50-10e8bb964525",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -495,7 +595,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:46936c70-f5af-4cd4-99a4-675e75ad0ebf",
+      "fullUrl": "urn:uuid:3e5368c4-e843-40b0-8b63-9a89bce4dbec",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -541,7 +641,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:976aaba2-7ec4-40c0-972f-178876cd35a3",
+      "fullUrl": "urn:uuid:0a6ca7fc-b5ec-4b85-bdeb-250f194d0235",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -556,6 +656,9 @@
           "code": "U",
           "display": "unrestricted"
          }
+        ],
+        "profile": [
+         "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag"
         ]
        },
        "text": {
@@ -639,7 +742,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:65437329-0fe0-4e7b-ad8b-dad59aa57283",
+        "reference": "urn:uuid:d9dd89c8-cec5-4372-ae50-10e8bb964525",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -647,7 +750,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:46936c70-f5af-4cd4-99a4-675e75ad0ebf",
+        "reference": "urn:uuid:3e5368c4-e843-40b0-8b63-9a89bce4dbec",
         "display": "StreamFHIR 0.4.0"
        }
       },
@@ -657,7 +760,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:ee1418ab-2cf1-4c22-892b-0dba16545dec",
+      "fullUrl": "urn:uuid:e82222ad-f5bc-4bfc-b790-1d5222746870",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -681,10 +784,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:976aaba2-7ec4-40c0-972f-178876cd35a3"
+         "reference": "urn:uuid:0a6ca7fc-b5ec-4b85-bdeb-250f194d0235"
         }
        ],
-       "recorded": "2026-09-29T13:03:49+00:00",
+       "recorded": "2026-09-29T13:17:05+00:00",
        "activity": {
         "coding": [
          {
@@ -706,7 +809,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:46936c70-f5af-4cd4-99a4-675e75ad0ebf",
+          "reference": "urn:uuid:3e5368c4-e843-40b0-8b63-9a89bce4dbec",
           "display": "StreamFHIR 0.4.0"
          }
         }
@@ -768,7 +871,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -782,7 +885,7 @@
       ],
       "corroborated": true,
       "corroboration": "trusted report with a photo attached",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2026-09-18T11:20:00+01:00",
       "last_seen": "2026-09-18T11:20:00+01:00",
@@ -892,6 +995,27 @@
      "basis": null,
      "observed_at": "2026-09-18T11:20:00+01:00",
      "has_photo": true,
+     "values": {
+      "bank-stability": 6,
+      "riparian-zone": 4,
+      "instream-habitat": 5,
+      "water-temperature": 24.5,
+      "ph": 8.6,
+      "nitrate": 12,
+      "phosphate": 0.8,
+      "transparency": 30,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "odour": "earthy",
+      "litter": "some",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": true,
+      "nitrate-basis": "as-NO3",
+      "bloom-check": "floats-or-paints"
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     },
     {
@@ -901,6 +1025,15 @@
      "basis": "photo-checked",
      "observed_at": "2026-09-22T18:40:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 25.1,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "dead-fish": true,
+      "animal-contact": true
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "warning",
@@ -923,6 +1056,23 @@
      "basis": null,
      "observed_at": "2026-09-27T10:05:00+01:00",
      "has_photo": true,
+     "values": {
+      "bank-stability": 5,
+      "riparian-zone": 4,
+      "instream-habitat": 5,
+      "water-temperature": 26.3,
+      "ph": 8.9,
+      "phosphate": 0.9,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "odour": "earthy",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": true,
+      "bloom-check": "not-done"
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "warning",
@@ -938,7 +1088,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:440c273d-2be4-4e10-a8c5-39ec7b3fcb1a",
+      "fullUrl": "urn:uuid:188a55c1-ab2b-43f5-b349-ad0cf9ff51d3",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -990,7 +1140,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:5062f0b9-2279-4f10-8b6b-ce0d0afeb466",
+      "fullUrl": "urn:uuid:59e62ae9-d8b6-4b30-9bac-f498fe72f219",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1036,7 +1186,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:07a8717e-ddb7-4c3b-a8e5-1b42a2f0892d",
+      "fullUrl": "urn:uuid:087ca772-9c72-45eb-8473-c948d6732d28",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1051,6 +1201,9 @@
           "code": "U",
           "display": "unrestricted"
          }
+        ],
+        "profile": [
+         "https://example.org/fhir/streamfhir/StructureDefinition/stream-site-flag"
         ]
        },
        "text": {
@@ -1146,7 +1299,7 @@
         "text": "High health hazard at Mill Pond inlet (11 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R5 Dead fish (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-06 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:440c273d-2be4-4e10-a8c5-39ec7b3fcb1a",
+        "reference": "urn:uuid:188a55c1-ab2b-43f5-b349-ad0cf9ff51d3",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1154,7 +1307,7 @@
         "end": "2026-10-06T18:40:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:5062f0b9-2279-4f10-8b6b-ce0d0afeb466",
+        "reference": "urn:uuid:59e62ae9-d8b6-4b30-9bac-f498fe72f219",
         "display": "StreamFHIR 0.4.0"
        }
       },
@@ -1164,7 +1317,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:c6957287-3dc9-4f25-afa1-5d6b0792aff7",
+      "fullUrl": "urn:uuid:52dd8446-7e6f-4476-a506-696ad0f51f2c",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1188,10 +1341,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:07a8717e-ddb7-4c3b-a8e5-1b42a2f0892d"
+         "reference": "urn:uuid:087ca772-9c72-45eb-8473-c948d6732d28"
         }
        ],
-       "recorded": "2026-09-29T13:03:49+00:00",
+       "recorded": "2026-09-29T13:17:05+00:00",
        "activity": {
         "coding": [
          {
@@ -1213,7 +1366,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:5062f0b9-2279-4f10-8b6b-ce0d0afeb466",
+          "reference": "urn:uuid:59e62ae9-d8b6-4b30-9bac-f498fe72f219",
           "display": "StreamFHIR 0.4.0"
          }
         }
@@ -1275,7 +1428,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -1290,7 +1443,7 @@
       ],
       "corroborated": true,
       "corroboration": "trusted report with a photo attached",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2026-09-17T09:00:00+01:00",
       "last_seen": "2026-09-17T09:00:00+01:00",
@@ -1343,7 +1496,7 @@
      },
      {
       "rule_id": "R9",
-      "title": "Nitrate above drinking-water value",
+      "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
       "kind": "condition",
       "points": {
        "human": 1
@@ -1391,6 +1544,29 @@
      "basis": null,
      "observed_at": "2026-09-17T09:00:00+01:00",
      "has_photo": true,
+     "values": {
+      "channel-condition": 6,
+      "bank-stability": 5,
+      "riparian-zone": 4,
+      "instream-habitat": 6,
+      "water-temperature": 16.8,
+      "ph": 7.2,
+      "nitrate": 12.4,
+      "phosphate": 1.2,
+      "transparency": 40,
+      "water-colour": "brown-turbid",
+      "surface": "none",
+      "odour": "earthy",
+      "litter": "some",
+      "dead-fish": false,
+      "people-contact": false,
+      "animal-contact": false,
+      "sensitive-invertebrates": 1,
+      "nitrate-basis": "as-N",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     },
     {
@@ -1400,6 +1576,27 @@
      "basis": null,
      "observed_at": "2026-09-23T13:30:00+01:00",
      "has_photo": true,
+     "values": {
+      "channel-condition": 6,
+      "bank-stability": 6,
+      "riparian-zone": 5,
+      "instream-habitat": 6,
+      "water-temperature": 17.5,
+      "ph": 4.2,
+      "nitrate": 60,
+      "phosphate": 1.0,
+      "water-colour": "brown-turbid",
+      "surface": "foam",
+      "odour": "earthy",
+      "litter": "some",
+      "people-contact": false,
+      "animal-contact": false,
+      "sensitive-invertebrates": 1,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 2
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "warning",
@@ -1416,6 +1613,9 @@
      "basis": null,
      "observed_at": null,
      "has_photo": false,
+     "values": {},
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "error",
@@ -1432,6 +1632,17 @@
      "basis": null,
      "observed_at": "2026-09-27T18:20:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 22.0,
+      "water-colour": "green",
+      "surface": "algal-scum",
+      "bloom-check": "not-done",
+      "odour": "earthy",
+      "people-contact": false,
+      "animal-contact": true
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": [
       {
        "severity": "warning",
@@ -1488,6 +1699,29 @@
      "basis": null,
      "observed_at": "2026-09-21T10:45:00+01:00",
      "has_photo": true,
+     "values": {
+      "channel-condition": 9,
+      "bank-stability": 8,
+      "riparian-zone": 8,
+      "instream-habitat": 9,
+      "water-temperature": 14.1,
+      "ph": 7.3,
+      "nitrate": 4,
+      "phosphate": 0.05,
+      "transparency": 120,
+      "water-colour": "clear",
+      "surface": "none",
+      "odour": "none",
+      "litter": "none",
+      "dead-fish": false,
+      "people-contact": true,
+      "animal-contact": true,
+      "sensitive-invertebrates": 3,
+      "nitrate-basis": "as-NO3",
+      "kick-sample-minutes": 3
+     },
+     "below_limit": {},
+     "observer_name": "",
      "issues": []
     }
    ],

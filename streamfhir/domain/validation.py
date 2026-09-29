@@ -46,6 +46,9 @@ class StreamAssessment:
     values: Dict[str, Any]
     synthetic: bool = False
     origin: str = ""          # source system of a real record, e.g. "sandre" (French national water data)
+    source: str = ""          # where a real record came from (human-readable)
+    observer_name: str = ""   # display name of a monitoring organisation (real data)
+    below_limit: Dict[str, float] = field(default_factory=dict)   # indicator -> lab limit it was below (not a value)
 
 
 @dataclass(frozen=True)
@@ -195,6 +198,9 @@ def validate_record(raw: Mapping[str, Any], sites: Mapping[str, Site], now: date
         record_id=record_id, site_id=raw["site_id"], observed_at=observed_at, observer=str(raw["observer"]),
         lat=float(lat), lon=float(lon), gps_accuracy_m=acc if _num(acc) else None, photos=photos,
         values=dict(values), synthetic=bool(raw.get("synthetic", False)),
-        origin=str(raw.get("origin") or ""))
+        origin=str(raw.get("origin") or ""), source=str(raw.get("source") or ""),
+        observer_name=str(raw.get("observer_name") or ""),
+        below_limit={k: float(v) for k, v in (raw.get("below_limit") or {}).items()
+                     if k in INDICATORS and INDICATORS[k].kind == QUANTITY and _num(v)})
     status = REVIEW if issues else OK
     return ValidationReport(record_id, status, tuple(issues), assessment)

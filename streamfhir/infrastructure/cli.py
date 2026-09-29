@@ -53,6 +53,23 @@ def build_static(svc, out):
     return len(svc.records.all())
 
 
+def interop_bundles(svc, site_id: str):
+    """One real agency sampling and one clearly synthetic citizen check at the same real station (for `interop-demo`)."""
+    from ..adapters.fhir_mapper import FhirMapper
+    recs = sorted([r for r in svc.records.all() if r["site_id"] == site_id and "nitrate" in r["values"]],
+                  key=lambda r: r["observed_at"])
+    agency = svc.check_record(recs[-1]).bundle
+    site = svc.sites.all()[site_id]
+    citizen = {"record_id": "SYN-CITIZEN-%s" % site_id, "synthetic": True, "site_id": site_id,
+               "observed_at": recs[-1]["observed_at"], "observer": "obs-demo", "lat": site.lat, "lon": site.lon,
+               "gps_accuracy_m": 8, "photos": [],
+               "values": {"nitrate": 50, "nitrate-basis": "as-NO3", "water-colour": "clear", "surface": "none",
+                          "odour": "none", "people-contact": False, "animal-contact": False}}
+    from ..domain.validation import validate_record
+    rep = validate_record(citizen, svc.sites.all(), svc.clock.now())
+    return agency, FhirMapper(test_data=True, pseudonymous=True).assessment_bundle(rep, site)
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="streamfhir", description="Citizen stream checks -> HL7 FHIR R4 + One Health warnings")
     sub = p.add_subparsers(dest="cmd")
@@ -94,6 +111,10 @@ def main(argv=None):
     ih.add_argument("--city", default="Toulouse area")
     ec = sub.add_parser("eea-coverage", help="summarise the EEA Waterbase snapshot near the five OneAquaHealth cities")
     ec.add_argument("--file", default=os.path.join(ROOT, "data", "eea-coverage", "waterbase-near-oah-cities.json"))
+    io = sub.add_parser("interop-demo", help="send one real agency sampling + one synthetic citizen check at the same station, "
+                                            "then query both by the EEA nitrate code (dry run unless --live)")
+    io.add_argument("--site", default="FR-05157550")
+    io.add_argument("--live", action="store_true")
     bn = sub.add_parser("bench", help="measure validation + mapping throughput on this machine")
     bn.add_argument("-n", type=int, default=2000)
     p.add_argument("--data", default=None, help="dataset folder (default: data/ synthetic demo)")
@@ -228,6 +249,22 @@ def main(argv=None):
         with open(args.file, encoding="utf-8") as fh:
             data = json.load(fh)
         print(json.dumps({c: dict(coverage(v["rows"]), surface_sites=len(v["surface_sites"])) for c, v in data["cities"].items()}, indent=1))
+    elif cmd == "interop-demo":
+        import urllib.parse
+        agency, citizen = interop_bundles(svc, args.site)
+        out = {"agency": svc.share(agency, live=args.live), "citizen": svc.share(citizen, live=args.live)}
+        if args.live:
+            loc = [l for l in out["agency"]["locations"] if l.startswith("Location/")][0].split("/_history")[0]
+            q = "%s/Observation?code=%s&subject=%s" % (svc.server.base_url, urllib.parse.quote(
+                "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty|CAS_14797-55-8", safe=":/"), loc)
+            status, raw = svc.server.transport("GET", q, None, {"Accept": "application/fhir+json"})
+            found = json.loads(raw.decode("utf-8"))
+            out["query"] = q
+            out["found"] = [{"id": e["resource"]["id"], "category": e["resource"]["category"][0]["coding"][0]["code"],
+                             "value": e["resource"]["valueQuantity"]["value"],
+                             "security": [x["code"] for x in e["resource"]["meta"].get("security", [])]}
+                            for e in found.get("entry", [])]
+        print(json.dumps(out, indent=1))
     elif cmd == "bench":
         recs = [r for r in svc.records.all() if svc.check_record(r).bundle]
         t = time.perf_counter()

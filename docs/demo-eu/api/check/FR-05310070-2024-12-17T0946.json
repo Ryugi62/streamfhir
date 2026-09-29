@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+    "fullUrl": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -60,7 +60,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:07799ddc-d38d-43c2-89ad-2f6e7d4f32bf",
+    "fullUrl": "urn:uuid:83b6a726-cad3-4ea8-95b0-8b09b7fb4e10",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -101,7 +101,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:0789f333-f813-46d1-921e-e9c93793adc4",
+    "fullUrl": "urn:uuid:2d638b23-60f7-4b96-90f9-3c13396ab82d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -118,7 +118,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Citizen stream assessment of Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes) on 2024-12-17T09:46:00+01:00: 5 indicators (final, record FR-05310070-2024-12-17T0946)</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes) on 2024-12-17T09:46:00+01:00: 5 indicators (final, record FR-05310070-2024-12-17T0946)</p></div>"
      },
      "identifier": [
       {
@@ -132,8 +132,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -149,35 +149,35 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+      "reference": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:e0465c52-c1bf-4d4d-987e-e56d4a3e0189"
+       "reference": "urn:uuid:422be609-278a-4142-8934-b865b38388d8"
       },
       {
-       "reference": "urn:uuid:44b20052-1ab0-495d-8bab-2e9028608b02"
+       "reference": "urn:uuid:542c9994-0a74-494c-abe0-67ebff57dca9"
       },
       {
-       "reference": "urn:uuid:b0903c86-4c18-43b3-a146-5d4b5e8f1b0b"
+       "reference": "urn:uuid:13e453c6-412c-40e5-95ac-a96968a949a2"
       },
       {
-       "reference": "urn:uuid:de921132-d9d3-48ff-9f7b-4dab6bc2ff4e"
+       "reference": "urn:uuid:1ee2d920-1af0-48f3-a44b-1b99e76524d5"
       },
       {
-       "reference": "urn:uuid:d3d460f9-80db-4a91-9449-3b4bba85e520"
+       "reference": "urn:uuid:fc01cbdf-21aa-4da3-aec6-dfd22fa51f5e"
       }
      ]
     },
@@ -187,7 +187,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:e0465c52-c1bf-4d4d-987e-e56d4a3e0189",
+    "fullUrl": "urn:uuid:422be609-278a-4142-8934-b865b38388d8",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -218,8 +218,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -245,17 +245,17 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+      "reference": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -272,7 +272,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:44b20052-1ab0-495d-8bab-2e9028608b02",
+    "fullUrl": "urn:uuid:542c9994-0a74-494c-abe0-67ebff57dca9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -303,8 +303,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -330,17 +330,17 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+      "reference": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -357,7 +357,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b0903c86-4c18-43b3-a146-5d4b5e8f1b0b",
+    "fullUrl": "urn:uuid:13e453c6-412c-40e5-95ac-a96968a949a2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -388,8 +388,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -420,17 +420,17 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+      "reference": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -447,7 +447,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:de921132-d9d3-48ff-9f7b-4dab6bc2ff4e",
+    "fullUrl": "urn:uuid:1ee2d920-1af0-48f3-a44b-1b99e76524d5",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -478,8 +478,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -495,17 +495,17 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+      "reference": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -526,7 +526,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:d3d460f9-80db-4a91-9449-3b4bba85e520",
+    "fullUrl": "urn:uuid:fc01cbdf-21aa-4da3-aec6-dfd22fa51f5e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -557,8 +557,8 @@
        "coding": [
         {
          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-         "code": "survey",
-         "display": "Survey"
+         "code": "laboratory",
+         "display": "Laboratory"
         }
        ]
       }
@@ -571,11 +571,6 @@
         "display": "Phosphate (as PO4)"
        },
        {
-        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
-        "code": "CAS_14265-44-2",
-        "display": "Phosphate"
-       },
-       {
         "system": "https://id.eaufrance.fr/par",
         "code": "1433",
         "display": "Orthophosphates (PO4)"
@@ -584,17 +579,17 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:e6da5279-1a9f-4f63-ab1a-f880baa01994",
+      "reference": "urn:uuid:b04b4acc-3600-480c-bcb1-7dc9b6a69e3b",
       "display": "Toulouse area · L'Ousse à Pinsaguel (Rte. de Roquettes)"
      },
      "effectiveDateTime": "2024-12-17T09:46:00+01:00",
      "performer": [
       {
        "identifier": {
-        "system": "https://example.org/fhir/streamfhir/sid/observer",
-        "value": "AGENCE DE L'EAU ADOUR GARONNE"
+        "system": "https://id.eaufrance.fr/int",
+        "value": "18310006400033"
        },
-       "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+       "display": "AGENCE DE L'EAU ADOUR GARONNE",
        "type": "Organization"
       }
      ],
@@ -611,7 +606,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:52031598-af3c-467e-a797-7ef57db2a34c",
+    "fullUrl": "urn:uuid:6f9dc205-7c02-4c99-8b60-05f15464b2be",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-FR-05310070-2024-12-17T0946",
@@ -626,30 +621,30 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310070-2024-12-17T0946 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record FR-05310070-2024-12-17T0946 was imported from Hub'Eau qualite_rivieres (Sandre), station 05310070 and assembled into FHIR by StreamFHIR 0.4.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:0789f333-f813-46d1-921e-e9c93793adc4"
+       "reference": "urn:uuid:2d638b23-60f7-4b96-90f9-3c13396ab82d"
       },
       {
-       "reference": "urn:uuid:e0465c52-c1bf-4d4d-987e-e56d4a3e0189"
+       "reference": "urn:uuid:422be609-278a-4142-8934-b865b38388d8"
       },
       {
-       "reference": "urn:uuid:44b20052-1ab0-495d-8bab-2e9028608b02"
+       "reference": "urn:uuid:542c9994-0a74-494c-abe0-67ebff57dca9"
       },
       {
-       "reference": "urn:uuid:b0903c86-4c18-43b3-a146-5d4b5e8f1b0b"
+       "reference": "urn:uuid:13e453c6-412c-40e5-95ac-a96968a949a2"
       },
       {
-       "reference": "urn:uuid:de921132-d9d3-48ff-9f7b-4dab6bc2ff4e"
+       "reference": "urn:uuid:1ee2d920-1af0-48f3-a44b-1b99e76524d5"
       },
       {
-       "reference": "urn:uuid:d3d460f9-80db-4a91-9449-3b4bba85e520"
+       "reference": "urn:uuid:fc01cbdf-21aa-4da3-aec6-dfd22fa51f5e"
       }
      ],
      "occurredDateTime": "2024-12-17T09:46:00+01:00",
-     "recorded": "2026-09-29T13:04:35+00:00",
+     "recorded": "2026-09-29T13:17:05+00:00",
      "activity": {
       "coding": [
        {
@@ -672,10 +667,10 @@
        },
        "who": {
         "identifier": {
-         "system": "https://example.org/fhir/streamfhir/sid/observer",
-         "value": "AGENCE DE L'EAU ADOUR GARONNE"
+         "system": "https://id.eaufrance.fr/int",
+         "value": "18310006400033"
         },
-        "display": "Monitoring organisation AGENCE DE L'EAU ADOUR GARONNE",
+        "display": "AGENCE DE L'EAU ADOUR GARONNE",
         "type": "Organization"
        }
       },
@@ -690,7 +685,7 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:07799ddc-d38d-43c2-89ad-2f6e7d4f32bf",
+        "reference": "urn:uuid:83b6a726-cad3-4ea8-95b0-8b09b7fb4e10",
         "display": "StreamFHIR 0.4.0"
        }
       }
@@ -703,7 +698,7 @@
          "system": "https://example.org/fhir/streamfhir/sid/record",
          "value": "FR-05310070-2024-12-17T0946"
         },
-        "display": "Original citizen record"
+        "display": "Original source record (Hub'Eau qualite_rivieres (Sandre), station 05310070)"
        }
       }
      ]

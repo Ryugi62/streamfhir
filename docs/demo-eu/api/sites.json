@@ -15,13 +15,13 @@
   },
   {
    "id": "R2",
-   "title": "Nutrient enrichment",
+   "title": "Nutrient enrichment (screening)",
    "kind": "condition",
    "points": {
     "environment": 2
    },
-   "when": "nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds)",
-   "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+   "when": "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+   "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
    "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
    "flowing_only": false,
    "clears_after": "1 trusted clear visit"
@@ -110,12 +110,12 @@
   },
   {
    "id": "R9",
-   "title": "Nitrate above drinking-water value",
+   "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
    "kind": "condition",
    "points": {
     "human": 1
    },
-   "when": "nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor)",
+   "when": "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value",
    "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
    "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
    "flowing_only": false,
@@ -173,7 +173,7 @@
    },
    "risk": {
     "site_id": "FR-05157100",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -186,7 +186,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -195,11 +195,11 @@
        "FR-05157100-2024-12-18T1343"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-18T13:43:00+01:00",
       "last_seen": "2024-12-18T13:43:00+01:00",
@@ -226,6 +226,15 @@
      "basis": null,
      "observed_at": "2024-12-18T13:43:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 9.4,
+      "phosphate": 1.23,
+      "nitrate": 26.0,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.1
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -249,7 +258,7 @@
    },
    "risk": {
     "site_id": "FR-05157150",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -262,7 +271,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -271,11 +280,11 @@
        "FR-05157150-2024-12-18T1041"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-18T10:41:00+01:00",
       "last_seen": "2024-12-18T10:41:00+01:00",
@@ -302,6 +311,15 @@
      "basis": null,
      "observed_at": "2024-12-18T10:41:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.053,
+      "water-temperature": 8.2,
+      "ph": 8.5,
+      "nitrate": 37.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -325,7 +343,7 @@
    },
    "risk": {
     "site_id": "FR-05157360",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -338,7 +356,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -347,11 +365,11 @@
        "FR-05157360-2024-12-18T1426"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-18T14:26:00+01:00",
       "last_seen": "2024-12-18T14:26:00+01:00",
@@ -378,6 +396,15 @@
      "basis": null,
      "observed_at": "2024-12-18T14:26:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 9.1,
+      "phosphate": 0.23,
+      "ph": 8.3,
+      "nitrate": 34.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -401,7 +428,7 @@
    },
    "risk": {
     "site_id": "FR-05157510",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -414,7 +441,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -423,11 +450,11 @@
        "FR-05157510-2024-12-17T1200"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T12:00:00+01:00",
       "last_seen": "2024-12-17T12:00:00+01:00",
@@ -454,6 +481,15 @@
      "basis": null,
      "observed_at": "2024-12-17T12:00:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 7.8,
+      "ph": 8.4,
+      "nitrate": 36.0,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.16
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -477,7 +513,7 @@
    },
    "risk": {
     "site_id": "FR-05157550",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -490,7 +526,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -499,11 +535,11 @@
        "FR-05157550-2024-12-17T1147"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T11:47:00+01:00",
       "last_seen": "2024-12-17T11:47:00+01:00",
@@ -513,7 +549,7 @@
      },
      {
       "rule_id": "R9",
-      "title": "Nitrate above drinking-water value",
+      "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
       "kind": "condition",
       "points": {
        "human": 1
@@ -522,10 +558,10 @@
        "FR-05157550-2024-12-17T1147"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
       "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
       "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
       "first_seen": "2024-12-17T11:47:00+01:00",
@@ -553,6 +589,15 @@
      "basis": null,
      "observed_at": "2024-12-17T11:47:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 8.3,
+      "water-temperature": 8.5,
+      "nitrate": 62.0,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.056
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -576,7 +621,7 @@
    },
    "risk": {
     "site_id": "FR-05157600",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -589,7 +634,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -598,11 +643,11 @@
        "FR-05157600-2024-12-17T1128"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T11:28:00+01:00",
       "last_seen": "2024-12-17T11:28:00+01:00",
@@ -629,6 +674,15 @@
      "basis": null,
      "observed_at": "2024-12-17T11:28:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 28.0,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 8.1,
+      "ph": 8.3,
+      "phosphate": 0.7
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -652,7 +706,7 @@
    },
    "risk": {
     "site_id": "FR-05158090",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -681,6 +735,15 @@
      "basis": null,
      "observed_at": "2024-12-18T12:00:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 19.0,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 7.7,
+      "ph": 8.2,
+      "phosphate": 0.035
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -704,7 +767,7 @@
    },
    "risk": {
     "site_id": "FR-05158700",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -733,6 +796,15 @@
      "basis": null,
      "observed_at": "2024-12-17T13:47:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 20.5,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 7.0,
+      "phosphate": 0.38,
+      "ph": 8.3
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -756,7 +828,7 @@
    },
    "risk": {
     "site_id": "FR-05158800",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -769,7 +841,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -778,11 +850,11 @@
        "FR-05158800-2024-12-17T1255"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T12:55:00+01:00",
       "last_seen": "2024-12-17T12:55:00+01:00",
@@ -809,6 +881,16 @@
      "basis": null,
      "observed_at": "2024-12-17T12:55:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 25.8,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 7.0,
+      "ph": 8.1
+     },
+     "below_limit": {
+      "phosphate": 0.02
+     },
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -832,7 +914,7 @@
    },
    "risk": {
     "site_id": "FR-05158850",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -845,7 +927,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -854,11 +936,11 @@
        "FR-05158850-2024-12-19T1430"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-19T14:30:00+01:00",
       "last_seen": "2024-12-19T14:30:00+01:00",
@@ -868,7 +950,7 @@
      },
      {
       "rule_id": "R9",
-      "title": "Nitrate above drinking-water value",
+      "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
       "kind": "condition",
       "points": {
        "human": 1
@@ -877,10 +959,10 @@
        "FR-05158850-2024-12-19T1430"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
       "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
       "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
       "first_seen": "2024-12-19T14:30:00+01:00",
@@ -908,6 +990,16 @@
      "basis": null,
      "observed_at": "2024-12-19T14:30:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 61.5,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.3,
+      "water-temperature": 10.5
+     },
+     "below_limit": {
+      "phosphate": 0.02
+     },
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -931,7 +1023,7 @@
    },
    "risk": {
     "site_id": "FR-05159000",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -960,6 +1052,15 @@
      "basis": null,
      "observed_at": "2024-12-17T14:39:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 11.9,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 6.0,
+      "phosphate": 0.36,
+      "ph": 8.1
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -983,7 +1084,7 @@
    },
    "risk": {
     "site_id": "FR-05159180",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1012,6 +1113,15 @@
      "basis": null,
      "observed_at": "2024-12-19T13:40:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.47,
+      "water-temperature": 9.4,
+      "nitrate": 21.7,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.0
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1035,7 +1145,7 @@
    },
    "risk": {
     "site_id": "FR-05159200",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1064,6 +1174,16 @@
      "basis": null,
      "observed_at": "2024-12-19T14:10:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 8.1,
+      "water-temperature": 12.0,
+      "nitrate": 7.4,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {
+      "phosphate": 0.02
+     },
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1087,7 +1207,7 @@
    },
    "risk": {
     "site_id": "FR-05159250",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1116,6 +1236,16 @@
      "basis": null,
      "observed_at": "2024-12-19T13:00:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 8.5,
+      "nitrate": 22.9,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.1
+     },
+     "below_limit": {
+      "phosphate": 0.02
+     },
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1139,7 +1269,7 @@
    },
    "risk": {
     "site_id": "FR-05159260",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1168,6 +1298,15 @@
      "basis": null,
      "observed_at": "2024-12-16T14:37:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 21.1,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 6.0,
+      "ph": 8.0,
+      "phosphate": 0.34
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1191,7 +1330,7 @@
    },
    "risk": {
     "site_id": "FR-05159300",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1220,6 +1359,15 @@
      "basis": null,
      "observed_at": "2024-12-19T11:50:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 7.9,
+      "water-temperature": 7.8,
+      "nitrate": 23.2,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.39
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1243,7 +1391,7 @@
    },
    "risk": {
     "site_id": "FR-05159400",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1256,7 +1404,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -1265,11 +1413,11 @@
        "FR-05159400-2024-12-19T1120"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-19T11:20:00+01:00",
       "last_seen": "2024-12-19T11:20:00+01:00",
@@ -1296,6 +1444,15 @@
      "basis": null,
      "observed_at": "2024-12-19T11:20:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 26.2,
+      "nitrate-basis": "as-NO3",
+      "ph": 7.8,
+      "water-temperature": 9.3,
+      "phosphate": 0.67
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1319,7 +1476,7 @@
    },
    "risk": {
     "site_id": "FR-05159410",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1332,7 +1489,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -1341,11 +1498,11 @@
        "FR-05159410-2024-12-19T1050"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-19T10:50:00+01:00",
       "last_seen": "2024-12-19T10:50:00+01:00",
@@ -1372,6 +1529,15 @@
      "basis": null,
      "observed_at": "2024-12-19T10:50:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 10.5,
+      "ph": 7.7,
+      "nitrate": 20.8,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.98
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1395,7 +1561,7 @@
    },
    "risk": {
     "site_id": "FR-05159420",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1408,7 +1574,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -1417,11 +1583,11 @@
        "FR-05159420-2024-12-19T1030"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-19T10:30:00+01:00",
       "last_seen": "2024-12-19T10:30:00+01:00",
@@ -1448,6 +1614,15 @@
      "basis": null,
      "observed_at": "2024-12-19T10:30:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 7.6,
+      "nitrate": 31.7,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.1,
+      "phosphate": 0.37
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1471,7 +1646,7 @@
    },
    "risk": {
     "site_id": "FR-05160000",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1500,6 +1675,15 @@
      "basis": null,
      "observed_at": "2024-12-17T14:31:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 7.0,
+      "phosphate": 0.04,
+      "ph": 8.1,
+      "nitrate": 5.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1523,7 +1707,7 @@
    },
    "risk": {
     "site_id": "FR-05161000",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1552,6 +1736,15 @@
      "basis": null,
      "observed_at": "2024-12-17T14:01:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 8.3,
+      "water-temperature": 8.0,
+      "nitrate": 8.1,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.08
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1575,7 +1768,7 @@
    },
    "risk": {
     "site_id": "FR-05161500",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1604,6 +1797,15 @@
      "basis": null,
      "observed_at": "2024-12-17T09:18:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 8.0,
+      "water-temperature": 7.0,
+      "nitrate": 7.4,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.06
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1627,7 +1829,7 @@
    },
    "risk": {
     "site_id": "FR-05161900",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1656,6 +1858,15 @@
      "basis": null,
      "observed_at": "2024-12-17T11:33:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.8,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 7.0,
+      "phosphate": 0.03,
+      "ph": 8.4
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1679,7 +1890,7 @@
    },
    "risk": {
     "site_id": "FR-05161950",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1708,6 +1919,15 @@
      "basis": null,
      "observed_at": "2024-12-17T12:40:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.09,
+      "nitrate": 8.0,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 6.0,
+      "ph": 8.3
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1731,7 +1951,7 @@
    },
    "risk": {
     "site_id": "FR-05162500",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1760,6 +1980,15 @@
      "basis": null,
      "observed_at": "2024-12-16T12:12:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 8.3,
+      "phosphate": 0.06,
+      "water-temperature": 7.0,
+      "nitrate": 10.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1787,7 +2016,7 @@
    },
    "risk": {
     "site_id": "FR-05163100",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1816,6 +2045,15 @@
      "basis": null,
      "observed_at": "2024-12-17T13:02:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 7.0,
+      "phosphate": 0.02,
+      "ph": 8.3,
+      "nitrate": 5.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1839,7 +2077,7 @@
    },
    "risk": {
     "site_id": "FR-05163140",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1868,6 +2106,15 @@
      "basis": null,
      "observed_at": "2024-12-17T14:38:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.02,
+      "water-temperature": 9.0,
+      "ph": 8.3,
+      "nitrate": 5.4,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1891,7 +2138,7 @@
    },
    "risk": {
     "site_id": "FR-05163290",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1920,6 +2167,15 @@
      "basis": null,
      "observed_at": "2024-12-17T14:39:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.7,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.3,
+      "phosphate": 0.03,
+      "water-temperature": 7.0
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -1943,7 +2199,7 @@
    },
    "risk": {
     "site_id": "FR-05163440",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -1956,7 +2212,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -1965,11 +2221,11 @@
        "FR-05163440-2024-12-17T1523"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T15:23:00+01:00",
       "last_seen": "2024-12-17T15:23:00+01:00",
@@ -1996,6 +2252,15 @@
      "basis": null,
      "observed_at": "2024-12-17T15:23:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 12.3,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 1.3,
+      "water-temperature": 10.0,
+      "ph": 7.6
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2019,7 +2284,7 @@
    },
    "risk": {
     "site_id": "FR-05163700",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2048,6 +2313,15 @@
      "basis": null,
      "observed_at": "2024-12-17T15:49:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.03,
+      "nitrate": 10.6,
+      "nitrate-basis": "as-NO3",
+      "ph": 7.7,
+      "water-temperature": 11.0
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2071,7 +2345,7 @@
    },
    "risk": {
     "site_id": "FR-05163720",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2100,6 +2374,15 @@
      "basis": null,
      "observed_at": "2024-12-17T16:19:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.03,
+      "ph": 7.5,
+      "water-temperature": 13.0,
+      "nitrate": 2.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2123,7 +2406,7 @@
    },
    "risk": {
     "site_id": "FR-05163760",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2152,6 +2435,15 @@
      "basis": null,
      "observed_at": "2024-12-17T17:07:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.16,
+      "ph": 8.1,
+      "water-temperature": 7.0,
+      "nitrate": 13.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2175,7 +2467,7 @@
    },
    "risk": {
     "site_id": "FR-05163780",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2204,6 +2496,16 @@
      "basis": null,
      "observed_at": "2024-12-16T09:01:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.5,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 5.0,
+      "ph": 8.0
+     },
+     "below_limit": {
+      "phosphate": 0.02
+     },
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2227,7 +2529,7 @@
    },
    "risk": {
     "site_id": "FR-05164000",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2256,6 +2558,15 @@
      "basis": null,
      "observed_at": "2024-12-17T10:11:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 8.1,
+      "nitrate": 8.68,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.064,
+      "water-temperature": 6.2
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2279,7 +2590,7 @@
    },
    "risk": {
     "site_id": "FR-05165000",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2308,6 +2619,15 @@
      "basis": null,
      "observed_at": "2024-12-17T10:47:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 6.9,
+      "ph": 7.8,
+      "phosphate": 0.078,
+      "nitrate": 20.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2331,7 +2651,7 @@
    },
    "risk": {
     "site_id": "FR-05165850",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2360,6 +2680,15 @@
      "basis": null,
      "observed_at": "2024-12-17T11:05:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 8.01,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.3,
+      "water-temperature": 6.4,
+      "phosphate": 0.061
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2383,7 +2712,7 @@
    },
    "risk": {
     "site_id": "FR-05174000",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2412,6 +2741,15 @@
      "basis": null,
      "observed_at": "2024-12-17T09:34:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.99,
+      "nitrate-basis": "as-NO3",
+      "ph": 7.9,
+      "water-temperature": 6.8,
+      "phosphate": 0.096
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2435,7 +2773,7 @@
    },
    "risk": {
     "site_id": "FR-05175400",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2464,6 +2802,15 @@
      "basis": null,
      "observed_at": "2024-12-17T11:01:00+01:00",
      "has_photo": false,
+     "values": {
+      "phosphate": 0.03,
+      "nitrate": 4.62,
+      "nitrate-basis": "as-NO3",
+      "water-temperature": 7.1,
+      "ph": 8.5
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2487,7 +2834,7 @@
    },
    "risk": {
     "site_id": "FR-05310060",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2500,7 +2847,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -2509,11 +2856,11 @@
        "FR-05310060-2024-12-16T0928"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-16T09:28:00+01:00",
       "last_seen": "2024-12-16T09:28:00+01:00",
@@ -2540,6 +2887,15 @@
      "basis": null,
      "observed_at": "2024-12-16T09:28:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 5.0,
+      "ph": 8.3,
+      "phosphate": 0.11,
+      "nitrate": 43.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2563,7 +2919,7 @@
    },
    "risk": {
     "site_id": "FR-05310070",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2592,6 +2948,15 @@
      "basis": null,
      "observed_at": "2024-12-17T09:46:00+01:00",
      "has_photo": false,
+     "values": {
+      "ph": 7.7,
+      "water-temperature": 4.3,
+      "nitrate": 12.0,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.24
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2615,7 +2980,7 @@
    },
    "risk": {
     "site_id": "FR-05310310",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2628,7 +2993,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -2637,11 +3002,11 @@
        "FR-05310310-2024-12-16T1341"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-16T13:41:00+01:00",
       "last_seen": "2024-12-16T13:41:00+01:00",
@@ -2668,6 +3033,15 @@
      "basis": null,
      "observed_at": "2024-12-16T13:41:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 9.2,
+      "nitrate-basis": "as-NO3",
+      "ph": 7.8,
+      "water-temperature": 6.0,
+      "phosphate": 1.1
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2691,7 +3065,7 @@
    },
    "risk": {
     "site_id": "FR-05310320",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2720,6 +3094,15 @@
      "basis": null,
      "observed_at": "2024-12-17T10:05:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 10.5,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.14,
+      "water-temperature": 6.0,
+      "ph": 8.2
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2743,7 +3126,7 @@
    },
    "risk": {
     "site_id": "FR-05310350",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2756,7 +3139,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -2765,11 +3148,11 @@
        "FR-05310350-2024-12-17T1228"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T12:28:00+01:00",
       "last_seen": "2024-12-17T12:28:00+01:00",
@@ -2779,7 +3162,7 @@
      },
      {
       "rule_id": "R9",
-      "title": "Nitrate above drinking-water value",
+      "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
       "kind": "condition",
       "points": {
        "human": 1
@@ -2788,10 +3171,10 @@
        "FR-05310350-2024-12-17T1228"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
       "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
       "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
       "first_seen": "2024-12-17T12:28:00+01:00",
@@ -2819,6 +3202,15 @@
      "basis": null,
      "observed_at": "2024-12-17T12:28:00+01:00",
      "has_photo": false,
+     "values": {
+      "water-temperature": 9.0,
+      "ph": 8.5,
+      "phosphate": 0.35,
+      "nitrate": 59.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2842,7 +3234,7 @@
    },
    "risk": {
     "site_id": "FR-05310400",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2855,7 +3247,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -2864,11 +3256,11 @@
        "FR-05310400-2024-12-17T0832"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T08:32:00+01:00",
       "last_seen": "2024-12-17T08:32:00+01:00",
@@ -2895,6 +3287,15 @@
      "basis": null,
      "observed_at": "2024-12-17T08:32:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 20.0,
+      "nitrate-basis": "as-NO3",
+      "ph": 8.3,
+      "water-temperature": 5.0,
+      "phosphate": 0.58
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2918,7 +3319,7 @@
    },
    "risk": {
     "site_id": "FR-05310440",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -2931,7 +3332,7 @@
     "fired": [
      {
       "rule_id": "R2",
-      "title": "Nutrient enrichment",
+      "title": "Nutrient enrichment (screening)",
       "kind": "condition",
       "points": {
        "environment": 2
@@ -2940,11 +3341,11 @@
        "FR-05310440-2024-12-17T0837"
       ],
       "observers": [
-       "AGENCE DE L'EAU ADOUR GARONNE"
+       "18310006400033"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
-      "why": "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+      "corroborated": true,
+      "corroboration": "agency monitoring result (laboratory), not a citizen report",
+      "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
       "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
       "first_seen": "2024-12-17T08:37:00+01:00",
       "last_seen": "2024-12-17T08:37:00+01:00",
@@ -2971,6 +3372,15 @@
      "basis": null,
      "observed_at": "2024-12-17T08:37:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 27.3,
+      "nitrate-basis": "as-NO3",
+      "phosphate": 0.1,
+      "water-temperature": 6.0,
+      "ph": 8.1
+     },
+     "below_limit": {},
+     "observer_name": "AGENCE DE L'EAU ADOUR GARONNE",
      "issues": []
     }
    ],
@@ -2994,7 +3404,7 @@
    },
    "risk": {
     "site_id": "FR-BF000002",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3023,6 +3433,12 @@
      "basis": null,
      "observed_at": "2024-12-09T15:04:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 6.1,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": [
       {
        "severity": "warning",
@@ -3039,6 +3455,12 @@
      "basis": null,
      "observed_at": "2025-01-07T13:02:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3048,6 +3470,12 @@
      "basis": null,
      "observed_at": "2025-02-10T13:53:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.4,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3057,6 +3485,12 @@
      "basis": null,
      "observed_at": "2025-03-05T09:03:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.2,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3066,6 +3500,12 @@
      "basis": null,
      "observed_at": "2025-04-01T13:13:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3075,6 +3515,12 @@
      "basis": null,
      "observed_at": "2025-05-13T13:54:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3084,6 +3530,12 @@
      "basis": null,
      "observed_at": "2025-06-11T10:50:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.5,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3093,6 +3545,12 @@
      "basis": null,
      "observed_at": "2025-07-08T11:28:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3102,6 +3560,12 @@
      "basis": null,
      "observed_at": "2025-08-18T12:42:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3111,6 +3575,12 @@
      "basis": null,
      "observed_at": "2025-09-08T10:27:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.7,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3120,6 +3590,12 @@
      "basis": null,
      "observed_at": "2025-10-13T11:27:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.1,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3129,6 +3605,12 @@
      "basis": null,
      "observed_at": "2025-11-17T14:06:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.1,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3138,6 +3620,12 @@
      "basis": null,
      "observed_at": "2025-12-08T10:26:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.3,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     }
    ],
@@ -3161,7 +3649,7 @@
    },
    "risk": {
     "site_id": "FR-BF000003",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3190,6 +3678,12 @@
      "basis": null,
      "observed_at": "2025-01-14T13:39:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.9,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3199,6 +3693,12 @@
      "basis": null,
      "observed_at": "2025-02-03T11:30:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3208,6 +3708,12 @@
      "basis": null,
      "observed_at": "2025-03-19T12:15:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.4,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3217,6 +3723,12 @@
      "basis": null,
      "observed_at": "2025-04-07T14:15:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3226,6 +3738,12 @@
      "basis": null,
      "observed_at": "2025-05-06T09:59:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.7,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3235,6 +3753,12 @@
      "basis": null,
      "observed_at": "2025-05-27T13:50:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.7,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3244,6 +3768,12 @@
      "basis": null,
      "observed_at": "2025-06-10T11:39:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3253,6 +3783,12 @@
      "basis": null,
      "observed_at": "2025-07-01T10:36:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.7,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3262,6 +3798,12 @@
      "basis": null,
      "observed_at": "2025-08-20T09:19:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3271,6 +3813,12 @@
      "basis": null,
      "observed_at": "2025-10-06T10:30:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.1,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3280,6 +3828,12 @@
      "basis": null,
      "observed_at": "2025-11-10T09:06:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 8.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3289,6 +3843,12 @@
      "basis": null,
      "observed_at": "2025-12-15T09:55:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     }
    ],
@@ -3312,7 +3872,7 @@
    },
    "risk": {
     "site_id": "FR-BF000320",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3341,6 +3901,12 @@
      "basis": null,
      "observed_at": "2024-12-16T14:12:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 7.2,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3350,6 +3916,12 @@
      "basis": null,
      "observed_at": "2025-01-30T10:45:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 6.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3359,6 +3931,12 @@
      "basis": null,
      "observed_at": "2025-05-19T12:13:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.2,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3368,6 +3946,12 @@
      "basis": null,
      "observed_at": "2025-07-22T13:57:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.3,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3377,6 +3961,12 @@
      "basis": null,
      "observed_at": "2025-09-16T11:45:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3386,6 +3976,12 @@
      "basis": null,
      "observed_at": "2025-11-04T09:38:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.2,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     }
    ],
@@ -3409,7 +4005,7 @@
    },
    "risk": {
     "site_id": "FR-BF000326",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3438,6 +4034,12 @@
      "basis": null,
      "observed_at": "2025-02-04T11:24:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.2,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3447,6 +4049,12 @@
      "basis": null,
      "observed_at": "2025-04-04T10:18:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 1.7,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3456,6 +4064,12 @@
      "basis": null,
      "observed_at": "2025-08-20T12:58:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.8,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3465,6 +4079,12 @@
      "basis": null,
      "observed_at": "2025-10-22T13:05:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     },
     {
@@ -3474,6 +4094,12 @@
      "basis": null,
      "observed_at": "2025-12-09T09:50:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.4,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101735",
      "issues": []
     }
    ],
@@ -3497,7 +4123,7 @@
    },
    "risk": {
     "site_id": "FR-BF000362",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3526,6 +4152,12 @@
      "basis": null,
      "observed_at": "2025-01-06T11:13:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.3,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3535,6 +4167,12 @@
      "basis": null,
      "observed_at": "2025-02-17T13:32:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.5,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3544,6 +4182,12 @@
      "basis": null,
      "observed_at": "2025-03-17T13:49:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.9,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3553,6 +4197,12 @@
      "basis": null,
      "observed_at": "2025-04-22T10:54:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.9,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3562,6 +4212,12 @@
      "basis": null,
      "observed_at": "2025-05-12T11:29:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.7,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3571,6 +4227,12 @@
      "basis": null,
      "observed_at": "2025-06-25T10:39:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.9,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3580,6 +4242,12 @@
      "basis": null,
      "observed_at": "2025-07-15T13:20:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.4,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3589,6 +4257,12 @@
      "basis": null,
      "observed_at": "2025-08-05T15:00:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.3,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3598,6 +4272,12 @@
      "basis": null,
      "observed_at": "2025-09-09T13:32:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 4.1,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3607,6 +4287,12 @@
      "basis": null,
      "observed_at": "2025-10-28T13:00:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 2.9,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3616,6 +4302,12 @@
      "basis": null,
      "observed_at": "2025-11-10T11:40:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.2,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     },
     {
@@ -3625,6 +4317,12 @@
      "basis": null,
      "observed_at": "2025-12-15T10:16:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.6,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     }
    ],
@@ -3648,7 +4346,7 @@
    },
    "risk": {
     "site_id": "FR-BF003660",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3677,6 +4375,12 @@
      "basis": null,
      "observed_at": "2025-06-25T11:35:00+02:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 3.1,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     }
    ],
@@ -3700,7 +4404,7 @@
    },
    "risk": {
     "site_id": "FR-BF003661",
-    "level": "low",
+    "level": "not-assessed",
     "hazard_points": 0,
     "confirmed_hazard_points": 0,
     "lane_points": {
@@ -3729,6 +4433,12 @@
      "basis": null,
      "observed_at": "2025-03-12T11:15:00+01:00",
      "has_photo": false,
+     "values": {
+      "nitrate": 5.0,
+      "nitrate-basis": "as-NO3"
+     },
+     "below_limit": {},
+     "observer_name": "Producer 03101404",
      "issues": []
     }
    ],

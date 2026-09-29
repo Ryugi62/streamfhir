@@ -73,8 +73,10 @@ def parse_analyses(payload: Dict, stations: Dict[str, Dict]) -> Tuple[List[Dict]
             when, notes = _stamp(row["date_prelevement"], row.get("heure_prelevement") or "")
             rec = {"record_id": "%s-%s%s" % (sid, row["date_prelevement"], ("T" + key[2][:5].replace(":", "")) if key[2] else ""),
                    "synthetic": False, "origin": "sandre", "site_id": sid, "observed_at": when,
-                   "observer": row.get("nom_producteur_analyse") or "unknown producer", "lat": st["lat"], "lon": st["lon"],
-                   "photos": [], "values": {}, "source_notes": notes, "source_info": [],
+                   "observer": row.get("code_producteur_analyse") or row.get("nom_producteur_analyse") or "unknown producer",
+                   "observer_name": row.get("nom_producteur_analyse") or "Producer %s" % row.get("code_producteur_analyse"),
+                   "lat": st["lat"], "lon": st["lon"],
+                   "photos": [], "values": {}, "below_limit": {}, "source_notes": notes, "source_info": [],
                    "source": "Hub'Eau qualite_rivieres (Sandre), station %s" % row["code_station"]}
             recs[key] = rec
         mapped = PARAMS.get(row.get("code_parametre"))
@@ -86,6 +88,9 @@ def parse_analyses(payload: Dict, stations: Dict[str, Dict]) -> Tuple[List[Dict]
         remark = str(row.get("code_remarque") or "")
         if remark in BELOW_LIMIT:
             stats["below_quantification_limit"] += 1
+            limit = row.get("limite_quantification") if remark == "10" else row.get("limite_detection")
+            if isinstance(limit, (int, float)) and unit in units and code not in rec["below_limit"]:
+                rec["below_limit"][code] = limit
             rec["source_info"].append("%s was below the %s limit (< %s %s); it was not imported as a number." % (
                 name, BELOW_LIMIT[remark], row.get("limite_quantification") if remark == "10" else row.get("limite_detection"), unit))
             continue
@@ -109,7 +114,7 @@ def parse_analyses(payload: Dict, stations: Dict[str, Dict]) -> Tuple[List[Dict]
         if code == "nitrate":
             rec["values"]["nitrate-basis"] = "as-NO3"    # Sandre 1340 is the nitrate ion NO3- by definition
         stats["mapped_values"] += 1
-    records = [r for r in recs.values() if r["values"] or r["source_notes"]]
+    records = [r for r in recs.values() if r["values"] or r["source_notes"] or r["below_limit"]]
     stats["records"] = len(records)
     stats["records_without_values"] = len(recs) - len(records)
     return records, stats

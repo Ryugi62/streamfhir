@@ -79,8 +79,8 @@
       {
        "code": "CAS_14265-44-2",
        "display": "Phosphate",
-       "equivalence": "equivalent",
-       "comment": "StreamFHIR phosphate is expressed as PO4; convert before comparing with values reported as P."
+       "equivalence": "inexact",
+       "comment": "Same substance, different basis: EEA Waterbase reports this determinand as mg{P}/L, StreamFHIR as mg PO4/L (1 mg/L as P = 3.066 mg/L as PO4). StreamFHIR therefore does not add this code to Observations; convert before pooling."
       }
      ]
     }
@@ -139,7 +139,7 @@
        "code": "1433",
        "display": "Orthophosphates (PO4)",
        "equivalence": "equivalent",
-       "comment": "StreamFHIR phosphate is expressed as PO4; convert before comparing with values reported as P."
+       "comment": "Both as PO4 (Sandre 1433 is orthophosphate, reported in mg(PO4)/L)."
       }
      ]
     }

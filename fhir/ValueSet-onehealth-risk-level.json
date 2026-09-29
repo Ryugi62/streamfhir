@@ -1,0 +1,34 @@
+{
+ "resourceType": "ValueSet",
+ "id": "onehealth-risk-level",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>ValueSet: StreamFHIR health hazard levels</p></div>"
+ },
+ "url": "https://example.org/fhir/streamfhir/ValueSet/onehealth-risk-level",
+ "version": "0.4.0",
+ "name": "OneHealthRiskLevel",
+ "title": "StreamFHIR health hazard levels",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "jurisdiction": [
+  {
+   "coding": [
+    {
+     "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+     "code": "001",
+     "display": "World"
+    }
+   ]
+  }
+ ],
+ "description": "All health hazard levels of the StreamFHIR rule engine (example canonical).",
+ "compose": {
+  "include": [
+   {
+    "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-level"
+   }
+  ]
+ }
+}

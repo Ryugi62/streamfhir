@@ -94,9 +94,11 @@ RULES: Tuple[Rule, ...] = (
          "Share with the city's river restoration team; repeat the visual check each season.",
          keys=SCORE_CODES, record_test=lambda v: _mean_score(v) is not None and _mean_score(v) <= 5,
          clear_keys=SCORE_CODES, flowing_only=True),
-    Rule("R2", "Nutrient enrichment", CONDITION, {ENVIRONMENT: 2},
-         "nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds)",
-         "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
+    Rule("R2", "Nutrient enrichment (screening)", CONDITION, {ENVIRONMENT: 2},
+         "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) "
+         "or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+         "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most "
+         "for blooms, while high nitrate mainly signals run-off.",
          "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
          keys=("nitrate", "phosphate"),
          record_test=lambda v: _ge(nitrate_as_no3(v), 25) or _ge(_num(v, "phosphate"), 0.5),
@@ -137,8 +139,9 @@ RULES: Tuple[Rule, ...] = (
          keys=("surface", "odour"),
          record_test=lambda v: v.get("surface") == "oily-sheen" or v.get("odour") == "chemical",
          clear_keys=("surface", "odour")),
-    Rule("R9", "Nitrate above drinking-water value", CONDITION, {HUMAN: 1},
-         "nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor)",
+    Rule("R9", "Nitrate above 50 mg/L (EU Nitrates Directive level)", CONDITION, {HUMAN: 1},
+         "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface "
+         "fresh water as affected by pollution; it is also the EU drinking-water parametric value",
          "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
          "Mention it to the water utility; private well owners nearby may want a lab test.",
          keys=("nitrate",), record_test=lambda v: _ge(nitrate_as_no3(v), 50), clear_keys=("nitrate",)),
@@ -205,6 +208,8 @@ def _corroboration(rule_supporting: List[ValidationReport], decisions: Mapping[s
     observers = {r.assessment.observer for r in trusted}
     if any(decisions.get(r.record_id) == CONFIRM for r in trusted):
         return True, "confirmed by a reviewer"
+    if trusted and all(r.assessment.origin for r in trusted):
+        return True, "agency monitoring result (laboratory), not a citizen report"
     if len(observers) >= 2:
         return True, "%d independent observers" % len(observers)
     if any(r.assessment.photos for r in trusted):

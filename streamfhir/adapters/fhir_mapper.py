@@ -30,6 +30,8 @@ VS_INDICATOR = BASE + "/ValueSet/stream-indicator"
 VS_HAZARD_RULE = BASE + "/ValueSet/onehealth-hazard-rule"
 PROFILE_PANEL = BASE + "/StructureDefinition/stream-assessment-panel"
 PROFILE_OBS = BASE + "/StructureDefinition/stream-indicator-observation"
+PROFILE_FLAG = BASE + "/StructureDefinition/stream-site-flag"
+VS_RISK_LEVEL = BASE + "/ValueSet/onehealth-risk-level"
 SID_SITE = BASE + "/sid/site"
 SID_OBSERVER = BASE + "/sid/observer"
 SID_REVIEWER = BASE + "/sid/reviewer"
@@ -44,6 +46,8 @@ EEA_OBSERVED_PROPERTY = "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProp
 EEA_SITE_SCHEME = "http://dd.eionet.europa.eu/vocabulary/wise/IdentifierScheme/"          # + euMonitoringSiteCode
 SANDRE_PARAMETER = "https://id.eaufrance.fr/par"                                          # French national parameter codes
 SANDRE_STATION = "https://id.eaufrance.fr/StationMesureEauxSurface"                       # French surface-water stations
+SANDRE_INTERVENANT = "https://id.eaufrance.fr/int"                                        # French water-data organisations
+EEA_EMITTED = ("ph", "water-temperature", "nitrate")   # the EEA reports phosphate as P, StreamFHIR as PO4: not emitted
 CM_EU_WATER = BASE + "/ConceptMap/stream-indicator-to-eu-water"
 # StreamFHIR indicator -> the same observed property in EU (EEA WISE) and French (Sandre) water-data vocabularies.
 # Codes and labels were read from the publishers on 2026-09-29 (dd.eionet.europa.eu, id.eaufrance.fr).
@@ -212,6 +216,9 @@ class FhirMapper:
         record_notes = [prefix + i.message for i in report.issues if not i.field.startswith("values.")]
         performer = {"identifier": {"system": SID_OBSERVER, "value": a.observer},
                      "display": "Pseudonymous citizen scientist" if self.pseudonymous else "Monitoring organisation %s" % a.observer}
+        if a.origin == "sandre":
+            performer = {"identifier": {"system": SANDRE_INTERVENANT, "value": a.observer},
+                         "display": a.observer_name or "Organisation %s" % a.observer}
         if not self.pseudonymous:
             performer["type"] = "Organization"   # real monitoring organisations are Organizations; citizens stay untyped
         loc = self._location_entry(site)
@@ -233,20 +240,31 @@ class FhirMapper:
             entries.append(e)
             media_refs.append({"reference": e["fullUrl"]})
 
-        category = [{"coding": [{"system": OBS_CATEGORY, "code": "survey", "display": "Survey"}]}]
+        category = ([{"coding": [{"system": OBS_CATEGORY, "code": "laboratory", "display": "Laboratory"}]}] if a.origin
+                    else [{"coding": [{"system": OBS_CATEGORY, "code": "survey", "display": "Survey"}]}])
         member_entries = []
-        for code, value in a.values.items():
-            ind = INDICATORS[code]
-            notes = [prefix + i.message for i in report.warnings_for(code)] + record_notes
-            coding = [{"system": CS_INDICATOR, "code": code, "display": ind.display}]
+
+        def codings(code: str) -> List[Dict[str, str]]:
+            coding = [{"system": CS_INDICATOR, "code": code, "display": INDICATORS[code].display}]
             as_no3 = code != "nitrate" or a.values.get("nitrate-basis") == "as-NO3"
             if code == "nitrate" and as_no3:
                 coding.append(dict(NITRATE_LOINC))
             if code in EU_WATER_CROSSWALK and as_no3:
                 eu, national = EU_WATER_CROSSWALK[code]
-                coding.append(dict(zip(("system", "code", "display"), eu)))
+                if code in EEA_EMITTED:
+                    coding.append(dict(zip(("system", "code", "display"), eu)))
                 if a.origin == "sandre":
                     coding.append(dict(zip(("system", "code", "display"), national)))
+            return coding
+
+        below = [(code, {"comparator": "<", "value": limit}) for code, limit in a.below_limit.items() if code not in a.values]
+        for code, value in list(a.values.items()) + below:
+            ind = INDICATORS[code]
+            notes = [prefix + i.message for i in report.warnings_for(code)] + record_notes
+            if isinstance(value, dict):
+                notes = ["Below the laboratory's quantification limit (< %s %s): the source reports no number, only the limit."
+                         % (_plain(value["value"]), UNIT_DISPLAY.get(ind.unit, ind.unit))] + notes
+            coding = codings(code)
             oid = "%s.%s" % (a.record_id, code)
             obs: Dict[str, Any] = {
                 "resourceType": "Observation",
@@ -262,7 +280,10 @@ class FhirMapper:
                 "effectiveDateTime": _iso(a.observed_at),
                 "performer": [performer],
             }
-            obs.update(self._value(code, value))
+            if isinstance(value, dict):
+                obs["valueQuantity"] = dict(self._value(code, value["value"])["valueQuantity"], comparator=value["comparator"])
+            else:
+                obs.update(self._value(code, value))
             if notes:
                 obs["note"] = [{"text": t} for t in notes]
             if media_refs and code in PHOTO_EVIDENCE:
@@ -273,8 +294,9 @@ class FhirMapper:
         panel = {
             "resourceType": "Observation",
             "meta": self._meta(PROFILE_PANEL, pseudonymised=True),
-            "text": narrative("Citizen stream assessment of %s on %s: %d indicators (%s, record %s)" % (
-                site.name, _iso(a.observed_at), len(member_entries), status, a.record_id)),
+            "text": narrative("%s of %s on %s: %d indicators (%s, record %s)" % (
+                "Agency sampling" if a.origin else "Citizen stream assessment", site.name, _iso(a.observed_at),
+                len(member_entries), status, a.record_id)),
             "identifier": [{"system": SID_RECORD, "value": a.record_id}],
             "status": status,
             "category": category,
@@ -307,15 +329,18 @@ class FhirMapper:
             "resourceType": "Provenance",
             "id": prov_id,
             "meta": self._meta(pseudonymised=True),
-            "text": narrative("Record %s was reported by a pseudonymous citizen scientist and assembled into FHIR by "
-                              "StreamFHIR %s%s" % (a.record_id, VERSION,
-                                                   "; reviewer decision: " + decision if decision else "")),
+            "text": narrative(("Record %s was imported from %s and assembled into FHIR by StreamFHIR %s%s" % (
+                a.record_id, a.source or a.origin, VERSION, "; reviewer decision: " + decision if decision else ""))
+                if a.origin else
+                "Record %s was reported by a pseudonymous citizen scientist and assembled into FHIR by "
+                "StreamFHIR %s%s" % (a.record_id, VERSION, "; reviewer decision: " + decision if decision else "")),
             "target": targets,
             "occurredDateTime": _iso(a.observed_at),
             "recorded": _iso(self._now()),
             "activity": {"coding": [{"system": DATA_OPERATION, "code": "CREATE", "display": "create"}]},
             "agent": agents,
-            "entity": [{"role": "source", "what": _logical(SID_RECORD, a.record_id, display="Original citizen record")}],
+            "entity": [{"role": "source", "what": _logical(SID_RECORD, a.record_id, display=(
+                "Original source record (%s)" % (a.source or a.origin)) if a.origin else "Original citizen record")}],
         }, "request": {"method": "PUT", "url": "Provenance/" + prov_id}})
         return {"resourceType": "Bundle", "type": "transaction", "entry": entries}
 
@@ -347,7 +372,7 @@ class FhirMapper:
                 "; unconfirmed signals remain: " + ", ".join(cleared) if cleared else "")
         flag = {
             "resourceType": "Flag",
-            "meta": self._meta(),
+            "meta": self._meta(PROFILE_FLAG),
             "text": narrative(text),
             "extension": [{"url": FLAG_DETAIL, "valueReference": _logical(SID_RECORD, rid, "Observation",
                                                                            "Citizen assessment " + rid)}
@@ -446,7 +471,8 @@ def external_fragment_codesystems() -> List[Dict[str, Any]]:
                 "experimental": True, "date": DATE, "publisher": "StreamFHIR hackathon prototype (codes owned by %s)" % owner,
                 "description": "Fragment of %s's vocabulary at %s: only the %d codes StreamFHIR emits, with the labels "
                                "the publisher shows (read 2026-09-29). Not an official FHIR representation." % (owner, url, len(concepts)),
-                "jurisdiction": [JURISDICTION_WORLD], "caseSensitive": True, "content": "fragment",
+                "jurisdiction": [{"coding": [{"system": "http://unstats.un.org/unsd/methods/m49/m49.htm", "code": "150",
+                                              "display": "Europe"}]}], "caseSensitive": True, "content": "fragment",
                 "count": len(concepts), "concept": concepts}
     return [frag("eea-wise-observedproperty-fragment", EEA_OBSERVED_PROPERTY, "EeaWiseObservedPropertyFragment",
                  "EEA WISE ObservedProperty (fragment)", "the European Environment Agency", 0),
@@ -476,8 +502,11 @@ def _common_elements() -> List[Dict[str, Any]]:
     return [
         {"id": "Observation.category", "path": "Observation.category", "min": 1,
          "slicing": {"discriminator": [{"type": "pattern", "path": "$this"}], "rules": "open"}},
-        {"id": "Observation.category:survey", "path": "Observation.category", "sliceName": "survey", "min": 1, "max": "1",
-         "patternCodeableConcept": {"coding": [{"system": OBS_CATEGORY, "code": "survey"}]}},
+        {"id": "Observation.category:survey", "path": "Observation.category", "sliceName": "survey", "min": 0, "max": "1",
+         "short": "Citizen observation", "patternCodeableConcept": {"coding": [{"system": OBS_CATEGORY, "code": "survey"}]}},
+        {"id": "Observation.category:laboratory", "path": "Observation.category", "sliceName": "laboratory", "min": 0,
+         "max": "1", "short": "Agency laboratory sampling",
+         "patternCodeableConcept": {"coding": [{"system": OBS_CATEGORY, "code": "laboratory"}]}},
         # exactly one coding from the StreamFHIR indicator ValueSet; other codings (LOINC, EEA WISE, Sandre) are
         # translations of the same concept, allowed by the open slicing
         {"id": "Observation.code.coding", "path": "Observation.code.coding", "min": 1,
@@ -503,7 +532,11 @@ def _sd(sd_id: str, url: str, name: str, title: str, description: str, extra: Li
         "title": title, "status": "draft", "experimental": True, "date": DATE, "description": description,
         "fhirVersion": "4.0.1", "kind": "resource", "abstract": False, "type": "Observation",
         "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation", "derivation": "constraint",
-        "differential": {"element": [{"id": "Observation", "path": "Observation", "short": title}]
+        "differential": {"element": [{"id": "Observation", "path": "Observation", "short": title, "constraint": [
+            {"key": "sio-1", "severity": "error", "source": url,
+             "human": "Category is survey (citizen observation) or laboratory (agency sampling)",
+             "expression": "category.coding.where(system = '%s' and (code = 'survey' or code = 'laboratory')).exists()"
+                           % OBS_CATEGORY}]}]
                          + _common_elements() + extra}}
 
 
@@ -531,8 +564,52 @@ def flag_rule_extension() -> Dict[str, Any]:
         ]}}
 
 
+def risk_level_valueset() -> Dict[str, Any]:
+    return {"resourceType": "ValueSet", "id": "onehealth-risk-level", "url": VS_RISK_LEVEL, "version": VERSION,
+            "name": "OneHealthRiskLevel", "title": "StreamFHIR health hazard levels", "status": "draft",
+            "experimental": True, "date": DATE, "jurisdiction": [JURISDICTION_WORLD],
+            "description": "All health hazard levels of the StreamFHIR rule engine (example canonical).",
+            "compose": {"include": [{"system": CS_RISK}]}}
+
+
+def site_flag_profile() -> Dict[str, Any]:
+    """Flag profile: a safety warning about a place, citing its evidence and the rules that raised it."""
+    return {
+        "resourceType": "StructureDefinition", "id": "stream-site-flag", "url": PROFILE_FLAG, "version": VERSION,
+        "name": "StreamSiteFlag", "title": "StreamFHIR site warning (Flag)", "status": "draft", "experimental": True,
+        "date": DATE, "description": "A One Health safety warning about a stream site (a Location, not a patient). "
+        "An active warning must cite at least one corroborated hazard rule. Example canonical, prototype only.",
+        "fhirVersion": "4.0.1", "kind": "resource", "abstract": False, "type": "Flag",
+        "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Flag", "derivation": "constraint",
+        "differential": {"element": [
+            {"id": "Flag", "path": "Flag", "short": "Site warning",
+             "constraint": [{"key": "ssf-1", "severity": "error",
+                             "human": "An active site warning cites at least one hazard rule (flag-rule extension)",
+                             "expression": "status != 'active' or extension.where(url = '%s').exists()" % EXT_FLAG_RULE,
+                             "source": PROFILE_FLAG}]},
+            {"id": "Flag.extension", "path": "Flag.extension",
+             "slicing": {"discriminator": [{"type": "value", "path": "url"}], "rules": "open"}},
+            {"id": "Flag.extension:evidence", "path": "Flag.extension", "sliceName": "evidence", "min": 0, "max": "*",
+             "type": [{"code": "Extension", "profile": [FLAG_DETAIL]}]},
+            {"id": "Flag.extension:rule", "path": "Flag.extension", "sliceName": "rule", "min": 0, "max": "*",
+             "type": [{"code": "Extension", "profile": [EXT_FLAG_RULE]}]},
+            {"id": "Flag.identifier", "path": "Flag.identifier", "min": 1},
+            {"id": "Flag.category", "path": "Flag.category", "min": 1,
+             "slicing": {"discriminator": [{"type": "pattern", "path": "$this"}], "rules": "open"}},
+            {"id": "Flag.category:safety", "path": "Flag.category", "sliceName": "safety", "min": 1, "max": "1",
+             "patternCodeableConcept": {"coding": [{"system": FLAG_CATEGORY, "code": "safety"}]}},
+            {"id": "Flag.code", "path": "Flag.code", "binding": {"strength": "required", "valueSet": VS_RISK_LEVEL}},
+            {"id": "Flag.subject", "path": "Flag.subject",
+             "type": [{"code": "Reference", "targetProfile": ["http://hl7.org/fhir/StructureDefinition/Location"]}],
+             "short": "The stream site the warning is about"},
+            {"id": "Flag.period", "path": "Flag.period", "min": 1},
+            {"id": "Flag.period.end", "path": "Flag.period.end", "min": 1, "short": "Expiry (14 days after the last trusted report)"},
+            {"id": "Flag.author", "path": "Flag.author", "min": 1},
+        ]}}
+
+
 def structuredefinition_resources() -> List[Dict[str, Any]]:
-    return [flag_rule_extension(),
+    return [flag_rule_extension(), site_flag_profile(),
         _sd("stream-assessment-panel", PROFILE_PANEL, "StreamAssessmentPanel", "Citizen stream assessment panel",
             "One citizen visit to a stream site: groups the indicator Observations via hasMember and carries no value. "
             "Example canonical, prototype only.",
@@ -611,8 +688,13 @@ def concept_map() -> Dict[str, Any]:
             if code == "nitrate":
                 t["dependsOn"] = [{"property": CS_INDICATOR + "#nitrate-basis", "system": CS_ANSWER, "value": "as-NO3"}]
                 t["comment"] = "Only readings expressed as NO3; readings as N are not mapped (1 mg/L as N = 4.43 mg/L as NO3)."
-            if code == "phosphate":
-                t["comment"] = "StreamFHIR phosphate is expressed as PO4; convert before comparing with values reported as P."
+            if code == "phosphate" and target_index == 0:
+                t["equivalence"] = "inexact"
+                t["comment"] = ("Same substance, different basis: EEA Waterbase reports this determinand as mg{P}/L, StreamFHIR "
+                                "as mg PO4/L (1 mg/L as P = 3.066 mg/L as PO4). StreamFHIR therefore does not add this code "
+                                "to Observations; convert before pooling.")
+            elif code == "phosphate":
+                t["comment"] = "Both as PO4 (Sandre 1433 is orthophosphate, reported in mg(PO4)/L)."
             els.append({"code": code, "display": INDICATORS[code].display, "target": [t]})
         g = {"source": CS_INDICATOR, "target": target_system, "element": els}
         if target_version:
@@ -633,7 +715,8 @@ def concept_map() -> Dict[str, Any]:
 
 def conformance_resources() -> List[Dict[str, Any]]:
     return [_with_text(r) for r in codesystem_resources() + external_fragment_codesystems()
-            + [valueset_resource(), hazard_rule_valueset()] + structuredefinition_resources() + [concept_map()]]
+            + [valueset_resource(), hazard_rule_valueset(), risk_level_valueset()] + structuredefinition_resources()
+            + [concept_map()]]
 
 
 def conformance_bundle() -> Dict[str, Any]:
