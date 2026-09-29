@@ -31,6 +31,8 @@ MODERATE_HAZARD_POINTS = 2
 POOR_CONDITION_POINTS = 4
 FAIR_CONDITION_POINTS = 2
 WINDOW_DAYS = 14
+CLEAR_VISITS = 2           # a health hazard is only cleared by >= 2 trusted clear visits ...
+CLEAR_SPAN_DAYS = 7        # ... at least 7 days apart (scums move with wind within hours)
 NO3_PER_N = 4.43           # 62 g/mol NO3 / 14 g/mol N
 
 CONFIRM, REJECT = "confirm", "reject"
@@ -51,6 +53,8 @@ class Rule:
     record_test: Optional[Callable[[Values], bool]] = None     # evaluated per record
     requires_any: Tuple[str, ...] = ()                           # contact rules: prerequisite hazards
     contact_code: Optional[str] = None
+    clear_keys: Tuple[str, ...] = ()                             # ALL must be observed to count as a clear visit
+    flowing_only: bool = False                                   # stream methods, skipped at still-water sites
 
 
 def _num(v: Values, code: str) -> Optional[float]:
@@ -88,31 +92,34 @@ RULES: Tuple[Rule, ...] = (
          "mean of the visual habitat scores <= 5 (of 10)",
          "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
          "Share with the city's river restoration team; repeat the visual check each season.",
-         keys=SCORE_CODES, record_test=lambda v: _mean_score(v) is not None and _mean_score(v) <= 5),
+         keys=SCORE_CODES, record_test=lambda v: _mean_score(v) is not None and _mean_score(v) <= 5,
+         clear_keys=SCORE_CODES, flowing_only=True),
     Rule("R2", "Nutrient enrichment", CONDITION, {ENVIRONMENT: 2},
          "nitrate >= 25 mg/L as NO3 or phosphate >= 0.5 mg/L (demo thresholds)",
          "Extra nutrients feed algae; algae use up oxygen and can include toxin-producing cyanobacteria.",
          "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
          keys=("nitrate", "phosphate"),
-         record_test=lambda v: _ge(nitrate_as_no3(v), 25) or _ge(_num(v, "phosphate"), 0.5)),
+         record_test=lambda v: _ge(nitrate_as_no3(v), 25) or _ge(_num(v, "phosphate"), 0.5),
+         clear_keys=("nitrate", "phosphate")),
     Rule("R3", "Possible cyanobacterial bloom", HAZARD, {ANIMAL: 3, HUMAN: 2},
          "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test "
          "points to harmless green or filamentous algae",
          "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. "
          "Only a lab test can confirm toxins.",
          "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
-         keys=("surface", "water-colour", "bloom-check"), record_test=_bloom),
+         keys=("surface", "water-colour", "bloom-check"), record_test=_bloom, clear_keys=("surface", "water-colour")),
     Rule("R4", "Sewage signal", HAZARD, {HUMAN: 3, ENVIRONMENT: 1},
          "odour = sewage or water-colour = milky-grey",
          "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
          "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
          keys=("odour", "water-colour"),
-         record_test=lambda v: v.get("odour") == "sewage" or v.get("water-colour") == "milky-grey"),
+         record_test=lambda v: v.get("odour") == "sewage" or v.get("water-colour") == "milky-grey",
+         clear_keys=("odour", "water-colour")),
     Rule("R5", "Dead fish", HAZARD, {ANIMAL: 3, ENVIRONMENT: 1},
          "dead-fish = yes",
          "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
          "Do not touch the fish; note how many and report to the environment authority.",
-         keys=("dead-fish",), record_test=lambda v: v.get("dead-fish") is True),
+         keys=("dead-fish",), record_test=lambda v: v.get("dead-fish") is True, clear_keys=("dead-fish",)),
     Rule("R6", "People in contact with affected water", HAZARD, {HUMAN: 2},
          "people-contact = yes while R3 or R4 fired at the site",
          "Exposure turns a water problem into a human-health problem.",
@@ -128,18 +135,20 @@ RULES: Tuple[Rule, ...] = (
          "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
          "Avoid skin contact and report the sheen or smell to the environment authority.",
          keys=("surface", "odour"),
-         record_test=lambda v: v.get("surface") == "oily-sheen" or v.get("odour") == "chemical"),
+         record_test=lambda v: v.get("surface") == "oily-sheen" or v.get("odour") == "chemical",
+         clear_keys=("surface", "odour")),
     Rule("R9", "Nitrate above drinking-water value", CONDITION, {HUMAN: 1},
          "nitrate >= 50 mg/L as NO3 (the EU drinking-water parametric value, used only as an awareness anchor)",
          "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
          "Mention it to the water utility; private well owners nearby may want a lab test.",
-         keys=("nitrate",), record_test=lambda v: _ge(nitrate_as_no3(v), 50)),
+         keys=("nitrate",), record_test=lambda v: _ge(nitrate_as_no3(v), 50), clear_keys=("nitrate",)),
     Rule("R10", "No mayfly, stonefly or caddisfly larvae found", CONDITION, {ENVIRONMENT: 2},
          "sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach",
          "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions "
          "over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
          "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
-         keys=("sensitive-invertebrates", "kick-sample-minutes"), record_test=_invertebrates_absent),
+         keys=("sensitive-invertebrates", "kick-sample-minutes"), record_test=_invertebrates_absent,
+         clear_keys=("sensitive-invertebrates", "kick-sample-minutes"), flowing_only=True),
 )
 
 
@@ -216,12 +225,26 @@ def _fired(rule: Rule, supporting: List[ValidationReport], decisions: Mapping[st
                      tuple(r.record_id for r in trusted))
 
 
-def _has_keys(r: ValidationReport, keys: Sequence[str]) -> bool:
-    return any(k in r.assessment.values for k in keys)
+def _observed_all(r: ValidationReport, keys: Sequence[str]) -> bool:
+    return bool(keys) and all(k in r.assessment.values for k in keys)
+
+
+def _cleared(rule: Rule, supporting: List[ValidationReport], window: List[ValidationReport],
+             decisions: Mapping[str, str]) -> bool:
+    """A signal is cleared only by later trusted visits that observed ALL of the rule's clear_keys without it.
+    Hazards need CLEAR_VISITS such visits spanning >= CLEAR_SPAN_DAYS; condition rules need one."""
+    last = max(r.assessment.observed_at for r in supporting)
+    clears = sorted(r.assessment.observed_at for r in window
+                    if r.assessment.observed_at > last and is_trusted(r, decisions)
+                    and _observed_all(r, rule.clear_keys) and not rule.record_test(r.assessment.values))
+    if rule.kind != HAZARD:
+        return len(clears) >= 1
+    return len(clears) >= CLEAR_VISITS and (clears[-1] - clears[0]) >= timedelta(days=CLEAR_SPAN_DAYS)
 
 
 def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Optional[datetime] = None,
-                  decisions: Optional[Mapping[str, str]] = None, window_days: int = WINDOW_DAYS) -> SiteRisk:
+                  decisions: Optional[Mapping[str, str]] = None, window_days: int = WINDOW_DAYS,
+                  still_water: bool = False) -> SiteRisk:
     decisions = dict(decisions or {})
     usable = [r for r in reports if r.status != BLOCKED and r.assessment is not None
               and r.assessment.site_id == site_id and decisions.get(r.record_id) != REJECT]
@@ -238,14 +261,11 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
 
     fired: List[FiredRule] = []
     for rule in RULES:
+        if rule.flowing_only and still_water:
+            continue
         if rule.record_test is not None:
             supporting = [r for r in window if rule.record_test(r.assessment.values)]
-            # a later trusted record that looked at the same things and did NOT see the signal clears it
-            clears = [r.assessment.observed_at for r in window
-                      if is_trusted(r, decisions) and _has_keys(r, rule.keys) and not rule.record_test(r.assessment.values)]
-            if clears:
-                supporting = [r for r in supporting if r.assessment.observed_at > max(clears)]
-            if supporting:
+            if supporting and not _cleared(rule, supporting, window, decisions):
                 fired.append(_fired(rule, supporting, decisions))
         else:
             prereq = [f for f in fired if f.rule_id in rule.requires_any]
@@ -284,4 +304,6 @@ def evaluate_site(site_id: str, reports: Sequence[ValidationReport], as_of: Opti
 
 def rules_table() -> List[Dict[str, object]]:
     return [{"id": r.rule_id, "title": r.title, "kind": r.kind, "points": dict(r.points), "when": r.condition_text,
-             "why": r.why, "advice": r.advice} for r in RULES]
+             "why": r.why, "advice": r.advice, "flowing_only": r.flowing_only,
+             "clears_after": "%d trusted clear visits >= %d days apart" % (CLEAR_VISITS, CLEAR_SPAN_DAYS)
+             if r.kind == HAZARD else "1 trusted clear visit"} for r in RULES]

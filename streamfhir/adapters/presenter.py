@@ -26,6 +26,7 @@ def overview_json(overview, as_of=None) -> dict:
         "site": to_jsonable(o.site),
         "risk": to_jsonable(o.risk),
         "reports": [{"record_id": r.record_id, "status": r.status, "decision": o.decisions.get(r.record_id),
+                     "basis": (o.bases or {}).get(r.record_id),
                      "observed_at": to_jsonable(r.assessment.observed_at) if r.assessment else None,
                      "issues": to_jsonable(r.issues)} for r in o.reports],
         "flag_bundle": o.flag_bundle} for o in overview]}

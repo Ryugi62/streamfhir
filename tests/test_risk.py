@@ -108,11 +108,30 @@ def test_rejected_record_never_counts_and_confirmed_counts(sites, now):
     assert {f.rule_id: f for f in confirmed.fired}["R5"].corroboration == "confirmed by a reviewer"
 
 
-def test_later_trusted_clear_visit_clears_the_signal(sites, now):
-    bad = make_record(record_id="OLD", observed_at="2026-09-20T09:00:00+00:00", values={"odour": "sewage"})
-    clear = make_record(record_id="NEW", observed_at="2026-09-24T09:00:00+00:00")
-    risk = evaluate_site("S-TEST", reports(sites, now, bad, clear))
-    assert "R4" not in {f.rule_id for f in risk.fired}
+def test_hazard_needs_two_trusted_clear_visits_a_week_apart(sites, now):
+    bad = make_record(record_id="OLD", observed_at="2026-09-16T09:00:00+00:00", values={"odour": "sewage"})
+    clear1 = make_record(record_id="C1", observed_at="2026-09-18T09:00:00+00:00")
+    clear2 = make_record(record_id="C2", observed_at="2026-09-26T09:00:00+00:00")
+    fired = lambda *r: {f.rule_id for f in evaluate_site("S-TEST", reports(sites, now, *r), as_of=now).fired}
+    assert "R4" in fired(bad, clear1)             # one clear visit is not enough for a hazard
+    assert "R4" not in fired(bad, clear1, clear2)  # two, 8 days apart, clear it
+
+
+def test_partial_visit_does_not_clear_a_signal(sites, now):
+    bad = make_record(record_id="OLD", observed_at="2026-09-16T09:00:00+00:00", values={"surface": "algal-scum"})
+    p1 = make_record(record_id="P1", observed_at="2026-09-18T09:00:00+00:00")
+    p2 = make_record(record_id="P2", observed_at="2026-09-26T09:00:00+00:00")
+    for p in (p1, p2):
+        del p["values"]["surface"]                 # looked at colour only, not at the surface
+    assert "R3" in {f.rule_id for f in evaluate_site("S-TEST", reports(sites, now, bad, p1, p2), as_of=now).fired}
+
+
+def test_stream_methods_are_skipped_at_still_water_sites(sites, now):
+    r = make_record(values={"channel-condition": 2, "bank-stability": 2, "riparian-zone": 2, "instream-habitat": 2,
+                            "sensitive-invertebrates": 0, "kick-sample-minutes": 2})
+    flowing = {f.rule_id for f in evaluate_site("S-TEST", reports(sites, now, r)).fired}
+    still = {f.rule_id for f in evaluate_site("S-TEST", reports(sites, now, r), still_water=True).fired}
+    assert {"R1", "R10"} <= flowing and not ({"R1", "R10"} & still)
 
 
 def test_window_is_relative_to_as_of_date(sites, now):

@@ -1,6 +1,10 @@
 {
  "resourceType": "Subscription",
  "id": "streamfhir-safety-flags",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Subscription: Notify a public-health or environment system when StreamFHIR raises or changes a site warning.</p></div>"
+ },
  "status": "requested",
  "reason": "Notify a public-health or environment system when StreamFHIR raises or changes a site warning.",
  "criteria": "Flag?category=http://terminology.hl7.org/CodeSystem/flag-category|safety",

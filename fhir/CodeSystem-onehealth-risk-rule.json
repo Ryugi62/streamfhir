@@ -1,14 +1,23 @@
 {
  "resourceType": "CodeSystem",
  "id": "onehealth-risk-rule",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CodeSystem: StreamFHIR explainable rules</p></div>"
+ },
  "url": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
- "version": "0.2.0",
+ "version": "0.3.0",
  "name": "OneHealthRiskRule",
  "title": "StreamFHIR explainable rules",
  "status": "draft",
  "experimental": true,
  "date": "2026-09-29",
  "publisher": "StreamFHIR hackathon prototype",
+ "contact": [
+  {
+   "name": "StreamFHIR team"
+  }
+ ],
  "description": "The printed rules (hazard and ecological condition) used by the StreamFHIR rule engine. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
  "jurisdiction": [
   {

@@ -51,7 +51,7 @@ def make_server(service, host: str = "127.0.0.1", port: int = 8000) -> Threading
                 record = body.get("record")
                 if not isinstance(record, dict):
                     return self._send(400, {"error": "Send {\"record\": {...}}."})
-                return self._send(200, check_json(service.check_record(record)))
+                return self._send(200, check_json(service.check_record(record, stamp_now=bool(body.get("stamp_now")))))
             if path == "/api/share":
                 bundle = body.get("bundle")
                 if not isinstance(bundle, dict):
@@ -60,7 +60,7 @@ def make_server(service, host: str = "127.0.0.1", port: int = 8000) -> Threading
                 return self._send(200, service.share(bundle, live=live))
             if path == "/api/review":
                 try:
-                    return self._send(200, service.review(str(body.get("record_id")), body.get("decision")))
+                    return self._send(200, service.review(str(body.get("record_id")), body.get("decision"), body.get("basis")))
                 except KeyError:
                     return self._send(404, {"error": "No such record."})
                 except ValueError as err:

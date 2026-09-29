@@ -11,6 +11,11 @@ class Site:
     lon: float
     water_body: str
     description: str = ""
+    flow: str = "flowing"          # "flowing" (stream reach) or "still" (pond, lake inlet)
+
+    @property
+    def still_water(self) -> bool:
+        return self.flow == "still"
 
 
 def distance_m(lat1: float, lon1: float, lat2: float, lon2: float) -> float:

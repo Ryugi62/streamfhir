@@ -7,6 +7,7 @@ External codes used: core HL7 terminology, UCUM, and exactly one LOINC code
 LOINC 2.82) - added only when the reading is expressed as NO3.
 """
 import re
+import urllib.parse
 import uuid
 from datetime import datetime, timedelta, timezone
 from typing import Any, Callable, Dict, List, Optional
@@ -17,7 +18,7 @@ from ..domain.risk import CONFIRM, HAZARD, HIGH, LOW, MODERATE, REJECT, RULES, V
 from ..domain.sites import Site
 from ..domain.validation import REVIEW, ValidationReport
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 DATE = "2026-09-29"
 BASE = "https://example.org/fhir/streamfhir"   # example canonical - replace when published
 CS_INDICATOR = BASE + "/CodeSystem/stream-indicator"
@@ -116,8 +117,13 @@ class FhirMapper:
 
     @staticmethod
     def _create(rtype: str, system: str, value: str) -> Dict[str, str]:
-        """Conditional create: re-sending the same record never duplicates resources."""
+        """Conditional create (sites, software): created once, never duplicated."""
         return {"method": "POST", "url": rtype, "ifNoneExist": "identifier=%s|%s" % (system, value)}
+
+    @staticmethod
+    def _upsert(rtype: str, system: str, value: str) -> Dict[str, str]:
+        """Conditional update: re-sending never duplicates, and a later status change (review) reaches the server."""
+        return {"method": "PUT", "url": "%s?identifier=%s" % (rtype, urllib.parse.quote("%s|%s" % (system, value), safe=":/|"))}
 
     def _location_entry(self, site: Site) -> Dict[str, Any]:
         return {
@@ -131,6 +137,8 @@ class FhirMapper:
                 "name": site.name,
                 "description": site.description or "Citizen-science stream monitoring site on %s" % site.water_body,
                 "mode": "instance",
+                "physicalType": {"coding": [{"system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                                             "code": "area", "display": "Area"}]},
                 "position": {"longitude": site.lon, "latitude": site.lat},
             },
             "request": self._create("Location", SID_SITE, site.site_id),
@@ -167,8 +175,8 @@ class FhirMapper:
         raise ValueError(code)
 
     # ---------- UC-1 ----------
-    def assessment_bundle(self, report: ValidationReport, site: Site,
-                          decision: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    def assessment_bundle(self, report: ValidationReport, site: Site, decision: Optional[str] = None,
+                          basis: Optional[str] = None) -> Optional[Dict[str, Any]]:
         a = report.assessment
         if a is None:
             return None
@@ -189,7 +197,7 @@ class FhirMapper:
 
         media_refs = []
         for n, url in enumerate(a.photos, 1):
-            mid = "%s#photo-%d" % (a.record_id, n)
+            mid = "%s.photo-%d" % (a.record_id, n)
             e = {"fullUrl": self._urn(), "resource": {
                 "resourceType": "Media", "meta": self._meta(), "status": "completed",
                 "text": narrative("Citizen photo %d of %s, record %s" % (n, site.name, a.record_id)),
@@ -197,7 +205,7 @@ class FhirMapper:
                 "type": {"coding": [{"system": MEDIA_TYPE, "code": "image", "display": "Image"}]},
                 "subject": loc_ref, "createdDateTime": _iso(a.observed_at),
                 "content": {"contentType": "image/jpeg", "url": url, "title": "Citizen photo %d" % n}},
-                "request": self._create("Media", SID_RECORD, mid)}
+                "request": self._upsert("Media", SID_RECORD, mid)}
             entries.append(e)
             media_refs.append({"reference": e["fullUrl"]})
 
@@ -209,7 +217,7 @@ class FhirMapper:
             coding = [{"system": CS_INDICATOR, "code": code, "display": ind.display}]
             if code == "nitrate" and a.values.get("nitrate-basis") == "as-NO3":
                 coding.append(dict(NITRATE_LOINC))
-            oid = "%s#%s" % (a.record_id, code)
+            oid = "%s.%s" % (a.record_id, code)
             obs: Dict[str, Any] = {
                 "resourceType": "Observation",
                 "meta": self._meta(PROFILE_OBS, pseudonymised=True),
@@ -230,7 +238,7 @@ class FhirMapper:
             if media_refs and code in PHOTO_EVIDENCE:
                 obs["derivedFrom"] = media_refs
             member_entries.append({"fullUrl": self._urn(), "resource": obs,
-                                   "request": self._create("Observation", SID_RECORD, oid)})
+                                   "request": self._upsert("Observation", SID_RECORD, oid)})
 
         panel = {
             "resourceType": "Observation",
@@ -251,7 +259,7 @@ class FhirMapper:
         if media_refs:
             panel["derivedFrom"] = media_refs
         panel_entry = {"fullUrl": self._urn(), "resource": panel,
-                       "request": self._create("Observation", SID_RECORD, a.record_id)}
+                       "request": self._upsert("Observation", SID_RECORD, a.record_id)}
         entries += [panel_entry] + member_entries
 
         targets = [{"reference": e["fullUrl"]} for e in [panel_entry] + member_entries] + media_refs
@@ -262,7 +270,8 @@ class FhirMapper:
         ]
         if decision in (CONFIRM, REJECT):
             agents.append({"type": {"coding": [{"system": PARTICIPANT_TYPE, "code": "verifier", "display": "Verifier"}]},
-                           "who": _logical(SID_REVIEWER, "reviewer-demo", display="Data reviewer (%s)" % decision)})
+                           "who": _logical(SID_REVIEWER, "reviewer-demo", display="Data reviewer (%s%s)" % (
+                               decision, ", basis: " + basis if basis else ""))})
         prov_id = fhir_id("streamfhir-prov-" + a.record_id)
         entries.append({"fullUrl": self._urn(), "resource": {
             "resourceType": "Provenance",
@@ -281,7 +290,7 @@ class FhirMapper:
         return {"resourceType": "Bundle", "type": "transaction", "entry": entries}
 
     # ---------- UC-2 ----------
-    def _flag_bundle(self, risk: SiteRisk, site: Site, active: bool) -> Dict[str, Any]:
+    def _flag_bundle(self, risk: SiteRisk, site: Site, active: bool, previous_start: Optional[str] = None) -> Dict[str, Any]:
         loc = self._location_entry(site)
         dev = self._device_entry()
         hazards = [f for f in risk.fired if f.kind == HAZARD]
@@ -298,6 +307,8 @@ class FhirMapper:
                 period["end"][:10])
         else:
             period = {"end": _iso(risk.window_end)}
+            if previous_start:
+                period = {"start": previous_start, "end": _iso(risk.window_end)}
             text = "No current corroborated health hazard at %s (%s)." % (site.name, LEVEL_DISPLAY[risk.level])
         flag = {
             "resourceType": "Flag",
@@ -343,9 +354,9 @@ class FhirMapper:
         """Active Flag for a site whose corroborated hazard reaches the threshold (else None)."""
         return self._flag_bundle(risk, site, active=True) if risk.needs_flag else None
 
-    def stand_down_bundle(self, risk: SiteRisk, site: Site) -> Dict[str, Any]:
-        """Set the site's Flag (same identifier) to inactive when the hazard is gone."""
-        return self._flag_bundle(risk, site, active=False)
+    def stand_down_bundle(self, risk: SiteRisk, site: Site, previous_start: Optional[str] = None) -> Dict[str, Any]:
+        """Set the site's existing Flag (same identifier) to inactive, keeping its original start."""
+        return self._flag_bundle(risk, site, active=False, previous_start=previous_start)
 
 
 # ---------- conformance resources (published in fhir/) ----------
@@ -353,6 +364,7 @@ def _cs(cs_id: str, url: str, name: str, title: str, description: str, concepts:
         value_set: Optional[str] = None) -> Dict[str, Any]:
     cs = {"resourceType": "CodeSystem", "id": cs_id, "url": url, "version": VERSION, "name": name, "title": title,
           "status": "draft", "experimental": True, "date": DATE, "publisher": "StreamFHIR hackathon prototype",
+          "contact": [{"name": "StreamFHIR team"}],
           "description": description + " Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
           "jurisdiction": [JURISDICTION_WORLD], "caseSensitive": True, "content": "complete",
           "count": len(concepts), "concept": concepts}
@@ -394,7 +406,9 @@ def valueset_resource() -> Dict[str, Any]:
 
 def _common_elements() -> List[Dict[str, Any]]:
     return [
-        {"id": "Observation.category", "path": "Observation.category", "min": 1, "max": "1",
+        {"id": "Observation.category", "path": "Observation.category", "min": 1,
+         "slicing": {"discriminator": [{"type": "pattern", "path": "$this"}], "rules": "open"}},
+        {"id": "Observation.category:survey", "path": "Observation.category", "sliceName": "survey", "min": 1, "max": "1",
          "patternCodeableConcept": {"coding": [{"system": OBS_CATEGORY, "code": "survey"}]}},
         {"id": "Observation.code", "path": "Observation.code",
          "binding": {"strength": "required", "valueSet": VS_INDICATOR}},
@@ -436,9 +450,13 @@ def structuredefinition_resources() -> List[Dict[str, Any]]:
 
 def capability_statement() -> Dict[str, Any]:
     """What StreamFHIR needs from a receiving FHIR server (kind = requirements)."""
-    def res(rtype, interactions, params=()):
-        r = {"type": rtype, "interaction": [{"code": i} for i in interactions],
-             "conditionalCreate": True}
+    return _with_text(_capability_statement())
+
+
+def _capability_statement() -> Dict[str, Any]:
+    def res(rtype, interactions, params=(), **flags):
+        r = {"type": rtype, "interaction": [{"code": i} for i in interactions]}
+        r.update(flags)
         if params:
             r["searchParam"] = [{"name": n, "type": t} for n, t in params]
         return r
@@ -449,32 +467,43 @@ def capability_statement() -> Dict[str, Any]:
         "status": "draft", "experimental": True, "date": DATE, "kind": "requirements", "fhirVersion": "4.0.1",
         "format": ["json"],
         "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create "
-                       "(ifNoneExist on identifier) and conditional update of Flag by identifier. Consumers find "
+                       "(ifNoneExist on identifier) for Location and Device, conditional update by identifier for Observation, Media and Flag, "
+                       "and update-as-create for Provenance. Consumers find "
                        "warnings with Flag?category=safety&status=active or subscribe to them (see Subscription example).",
         "rest": [{"mode": "server", "interaction": [{"code": "transaction"}], "resource": [
-            res("Location", ["create", "read", "search-type"], (("identifier", "token"),)),
-            res("Device", ["create", "read"], (("identifier", "token"),)),
-            res("Media", ["create", "read"], (("identifier", "token"),)),
-            res("Observation", ["create", "read", "search-type"],
-                (("identifier", "token"), ("subject", "reference"), ("code", "token"))),
-            res("Provenance", ["update", "read"]),
-            dict(res("Flag", ["update", "read", "search-type"],
-                     (("identifier", "token"), ("category", "token"), ("status", "token"), ("subject", "reference"))),
-                 conditionalUpdate=True),
+            res("Location", ["create", "read", "search-type"], (("identifier", "token"),), conditionalCreate=True),
+            res("Device", ["create", "read"], (("identifier", "token"),), conditionalCreate=True),
+            res("Media", ["update", "read"], (("identifier", "token"),), conditionalUpdate=True),
+            res("Observation", ["update", "read", "search-type"],
+                (("identifier", "token"), ("subject", "reference"), ("code", "token")), conditionalUpdate=True),
+            res("Provenance", ["update", "read"], updateCreate=True),
+            res("Flag", ["update", "read", "search-type"],
+                (("identifier", "token"), ("category", "token"), ("status", "token"), ("subject", "reference")),
+                conditionalUpdate=True),
         ]}]}
 
 
 def subscription_example() -> Dict[str, Any]:
-    return {
+    return _with_text({
         "resourceType": "Subscription", "id": "streamfhir-safety-flags", "status": "requested",
         "reason": "Notify a public-health or environment system when StreamFHIR raises or changes a site warning.",
         "criteria": "Flag?category=http://terminology.hl7.org/CodeSystem/flag-category|safety",
         "channel": {"type": "rest-hook", "endpoint": "https://health-system.example.org/fhir-notify",
-                    "payload": "application/fhir+json"}}
+                    "payload": "application/fhir+json"}})
+
+
+def _with_text(r: Dict[str, Any]) -> Dict[str, Any]:
+    if "text" in r:
+        return r
+    label = r.get("title") or r.get("reason") or r["id"]
+    out = {k: v for k, v in r.items() if k in ("resourceType", "id")}
+    out["text"] = narrative("%s: %s" % (r["resourceType"], label))
+    out.update({k: v for k, v in r.items() if k not in ("resourceType", "id")})
+    return out
 
 
 def conformance_resources() -> List[Dict[str, Any]]:
-    return codesystem_resources() + [valueset_resource()] + structuredefinition_resources()
+    return [_with_text(r) for r in codesystem_resources() + [valueset_resource()] + structuredefinition_resources()]
 
 
 def conformance_bundle() -> Dict[str, Any]:

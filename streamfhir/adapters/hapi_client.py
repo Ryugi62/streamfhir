@@ -4,6 +4,7 @@ Network access only happens through ``transport`` so tests can inject a fake.
 """
 import json
 import urllib.error
+import urllib.parse
 import urllib.request
 from typing import Any, Callable, Dict, Optional, Tuple
 
@@ -33,6 +34,15 @@ class HapiFhirServer:
         locations = [e.get("response", {}).get("location") for e in body.get("entry", [])]
         return {"status": status, "server": self.base_url, "locations": [l for l in locations if l],
                 "outcome": body if body.get("resourceType") == "OperationOutcome" else None}
+
+    def find_flag(self, site_id: str) -> Optional[Dict[str, Any]]:
+        from .fhir_mapper import SID_FLAG
+        url = "%s/Flag?identifier=%s" % (self.base_url, urllib.parse.quote("%s|%s" % (SID_FLAG, site_id), safe=""))
+        status, raw = self.transport("GET", url, None, dict(self.headers))
+        if status != 200:
+            return None
+        entries = json.loads(raw.decode("utf-8") or "{}").get("entry", [])
+        return entries[0]["resource"] if entries else None
 
     def validate(self, resource: Dict[str, Any]) -> Dict[str, Any]:
         url = "%s/%s/$validate" % (self.base_url, resource["resourceType"])

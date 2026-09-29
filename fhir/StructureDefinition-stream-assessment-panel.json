@@ -1,8 +1,12 @@
 {
  "resourceType": "StructureDefinition",
  "id": "stream-assessment-panel",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StructureDefinition: Citizen stream assessment panel</p></div>"
+ },
  "url": "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel",
- "version": "0.2.0",
+ "version": "0.3.0",
  "name": "StreamAssessmentPanel",
  "title": "Citizen stream assessment panel",
  "status": "draft",
@@ -25,6 +29,21 @@
    {
     "id": "Observation.category",
     "path": "Observation.category",
+    "min": 1,
+    "slicing": {
+     "discriminator": [
+      {
+       "type": "pattern",
+       "path": "$this"
+      }
+     ],
+     "rules": "open"
+    }
+   },
+   {
+    "id": "Observation.category:survey",
+    "path": "Observation.category",
+    "sliceName": "survey",
     "min": 1,
     "max": "1",
     "patternCodeableConcept": {

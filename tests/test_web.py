@@ -60,7 +60,7 @@ def test_review_endpoint_confirms_and_changes_site_level():
         level = lambda: {s["site"]["site_id"]: s["risk"]["level"]
                          for s in json.loads(urllib.request.urlopen(base + "/api/sites", timeout=5).read())["sites"]}
         assert level()["S-WILLOW"] == "verify"
-        assert post("/api/review", {"record_id": "SYN-015", "decision": "confirm"})["decision"] == "confirm"
+        assert post("/api/review", {"record_id": "SYN-015", "decision": "confirm", "basis": "site-visit"})["decision"] == "confirm"
         assert level()["S-WILLOW"] == "high"
     finally:
         httpd.shutdown()

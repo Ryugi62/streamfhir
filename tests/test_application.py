@@ -21,8 +21,12 @@ class FakeRecords:
 
 
 class SpyServer:
-    def __init__(self):
+    def __init__(self, flags=None):
         self.calls = []
+        self.flags = flags or {}
+
+    def find_flag(self, site_id):
+        return self.flags.get(site_id)
 
     def post_transaction(self, bundle):
         self.calls.append(bundle)
@@ -94,7 +98,12 @@ def test_uc4_review_confirm_turns_verify_into_high_with_flag():
     svc = service([rec])
     before = {o.site.site_id: o for o in svc.site_overview()}["S-TEST"]
     assert before.risk.level == "verify" and before.flag_bundle is None
-    svc.review("R-1", "confirm")
+    try:
+        svc.review("R-1", "confirm")
+        assert False, "a confirmation without a basis must be refused"
+    except ValueError:
+        pass
+    svc.review("R-1", "confirm", "site-visit")
     after = {o.site.site_id: o for o in svc.site_overview()}["S-TEST"]
     assert after.risk.level == "high" and after.flag_bundle is not None
     svc.review("R-1", "reject")
@@ -104,7 +113,24 @@ def test_uc4_review_confirm_turns_verify_into_high_with_flag():
 def test_uc4_only_review_records_can_be_decided():
     svc = service([make_record(record_id="OK-1")])
     try:
-        svc.review("OK-1", "confirm")
+        svc.review("OK-1", "confirm", "site-visit")
         assert False, "expected ValueError"
     except ValueError:
         pass
+
+
+def test_new_record_is_stamped_with_service_clock_not_device_clock():
+    rec = make_record(observed_at="2031-01-01T00:00:00+00:00")  # a device clock far ahead of the demo date
+    assert service().check_record(rec).report.status == "blocked"
+    stamped = service().check_record(rec, stamp_now=True)
+    assert stamped.report.status == "ok" and stamped.report.assessment.observed_at == NOW
+
+
+def test_stand_down_only_for_sites_with_an_active_flag_and_keeps_start():
+    active = {"status": "active", "period": {"start": "2026-09-10T08:00:00+00:00"}}
+    svc = service([make_record(record_id="B", site_id="S-OTHER", lat=40.1985, lon=-8.4120)],
+                  server=SpyServer(flags={"S-OTHER": active}))
+    bundles = svc.flag_bundles(include_stand_down=True)
+    flags = [e["resource"] for b in bundles for e in b["entry"] if e["resource"]["resourceType"] == "Flag"]
+    assert [f["status"] for f in flags] == ["inactive"]           # S-TEST has no Flag on the server -> nothing
+    assert flags[0]["period"]["start"] == "2026-09-10T08:00:00+00:00"

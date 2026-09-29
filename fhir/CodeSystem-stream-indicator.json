@@ -1,14 +1,23 @@
 {
  "resourceType": "CodeSystem",
  "id": "stream-indicator",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CodeSystem: Citizen stream assessment indicators</p></div>"
+ },
  "url": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
- "version": "0.2.0",
+ "version": "0.3.0",
  "name": "StreamIndicator",
  "title": "Citizen stream assessment indicators",
  "status": "draft",
  "experimental": true,
  "date": "2026-09-29",
  "publisher": "StreamFHIR hackathon prototype",
+ "contact": [
+  {
+   "name": "StreamFHIR team"
+  }
+ ],
  "description": "Indicators of a representative citizen-science stream assessment. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
  "jurisdiction": [
   {

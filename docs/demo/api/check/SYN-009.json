@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+    "fullUrl": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -40,6 +40,15 @@
      "name": "Willow Creek - allotment gardens",
      "description": "Synthetic demo site: creek running past allotment gardens.",
      "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
      "position": {
       "longitude": -8.39,
       "latitude": 40.225
@@ -52,7 +61,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:b2d81cec-3e7e-4918-8528-dd5862715d04",
+    "fullUrl": "urn:uuid:340a461e-a457-4429-abfa-8f6f0e96cd5c",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -71,7 +80,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.2.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
      },
      "identifier": [
       {
@@ -87,7 +96,7 @@
      ],
      "version": [
       {
-       "value": "0.2.0"
+       "value": "0.3.0"
       }
      ]
     },
@@ -98,7 +107,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:bf985718-2e31-40a5-97fe-bd0d8d447916",
+    "fullUrl": "urn:uuid:e66c666b-17a8-4f6d-a009-2a508372ec71",
     "resource": {
      "resourceType": "Media",
      "meta": {
@@ -123,7 +132,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#photo-1"
+       "value": "SYN-009.photo-1"
       }
      ],
      "type": {
@@ -136,7 +145,7 @@
       ]
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "createdDateTime": "2026-09-17T09:00:00+01:00",
@@ -147,13 +156,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Media",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#photo-1"
+     "method": "PUT",
+     "url": "Media?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.photo-1"
     }
    },
    {
-    "fullUrl": "urn:uuid:b678a7ca-af54-44df-ba37-939ca6102507",
+    "fullUrl": "urn:uuid:6e208c82-cc85-404d-8a3d-9409fa2d37bc",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -211,7 +219,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -226,77 +234,76 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:5a596a8d-94ce-48c2-b240-9d02f4249449"
+       "reference": "urn:uuid:3da1cf14-0bbf-47d1-82f3-1f3bbcd7f50a"
       },
       {
-       "reference": "urn:uuid:36533fb4-3ba0-41b8-8872-df4444a144f2"
+       "reference": "urn:uuid:404b0d56-63a6-45fb-b32e-447616956d89"
       },
       {
-       "reference": "urn:uuid:bc8913ca-59df-409c-91e0-1726dc9c7fbf"
+       "reference": "urn:uuid:5d0cf1e6-8618-4974-af65-84089a7a8b60"
       },
       {
-       "reference": "urn:uuid:ce67323e-bf03-4d99-888c-f9c8569406ea"
+       "reference": "urn:uuid:f777eb03-012f-40b4-b603-3dec2ebfbca2"
       },
       {
-       "reference": "urn:uuid:8aaa8ed4-d101-4108-9ae6-b59ec1a3de8d"
+       "reference": "urn:uuid:a3be5b03-16f4-4596-be8c-6cc3c9f7946a"
       },
       {
-       "reference": "urn:uuid:bc4bb7cc-1b3a-46ba-94a0-7cf3898302cd"
+       "reference": "urn:uuid:78b7aa92-f452-4bf5-99da-449f23746df0"
       },
       {
-       "reference": "urn:uuid:634047e2-b5a5-476e-9a29-d9ea3b88cd10"
+       "reference": "urn:uuid:014fec4b-728b-433a-be77-cfaab585bd4d"
       },
       {
-       "reference": "urn:uuid:760d7cf6-f246-499f-97fb-c8d50abb8771"
+       "reference": "urn:uuid:93fdca92-1355-46ce-ae9a-d951562f3f51"
       },
       {
-       "reference": "urn:uuid:0a485018-515b-48e4-b31f-4f7c926ea9b6"
+       "reference": "urn:uuid:7947f5ae-80c9-40be-ba93-d184e834e0c3"
       },
       {
-       "reference": "urn:uuid:0421e774-d2b3-4904-9ebf-fd5780eef8c5"
+       "reference": "urn:uuid:c659e361-671e-4cd1-9eff-acd8dc995472"
       },
       {
-       "reference": "urn:uuid:ec908532-af97-4d19-a4cb-2508e8a4689f"
+       "reference": "urn:uuid:7d74c453-77b8-4bd2-9b45-e199c49bfe34"
       },
       {
-       "reference": "urn:uuid:6c1288f5-286f-4f22-835b-797cbadf72f7"
+       "reference": "urn:uuid:9d762477-3628-4eef-b181-e1fa9eb390b2"
       },
       {
-       "reference": "urn:uuid:096bb68c-a1f2-4569-8496-6d30e5205ae4"
+       "reference": "urn:uuid:52e685ae-aa1d-4ecd-984c-3e080aa6e902"
       },
       {
-       "reference": "urn:uuid:1483b76a-2af6-4663-89da-658a61844a53"
+       "reference": "urn:uuid:58b7b63d-7353-47c1-b78a-eccf6d3f10f4"
       },
       {
-       "reference": "urn:uuid:8ef7f98b-d294-44ce-badd-afdac5873410"
+       "reference": "urn:uuid:c04ee984-32d8-4222-b6e0-672975936aaf"
       },
       {
-       "reference": "urn:uuid:319494ec-d36b-407f-812c-c9c25fcb1fbb"
+       "reference": "urn:uuid:a6e6ba43-ab85-42a2-a3af-ea6cc7a8706a"
       },
       {
-       "reference": "urn:uuid:1b5a895e-3906-4ab2-b060-c59317efd17f"
+       "reference": "urn:uuid:45127f70-3b30-4378-a365-269aba1ae863"
       },
       {
-       "reference": "urn:uuid:83aad372-36eb-4a10-8e1a-90f2dc9058bf"
+       "reference": "urn:uuid:fdee4453-8000-4f1e-aa94-ce0cb961c76f"
       },
       {
-       "reference": "urn:uuid:1afbec3e-730e-4e28-b475-0f11ffd78632"
+       "reference": "urn:uuid:689cda59-ca98-4a65-be06-3c4679cb8171"
       }
      ],
      "derivedFrom": [
       {
-       "reference": "urn:uuid:bf985718-2e31-40a5-97fe-bd0d8d447916"
+       "reference": "urn:uuid:e66c666b-17a8-4f6d-a009-2a508372ec71"
       }
      ]
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009"
     }
    },
    {
-    "fullUrl": "urn:uuid:5a596a8d-94ce-48c2-b240-9d02f4249449",
+    "fullUrl": "urn:uuid:3da1cf14-0bbf-47d1-82f3-1f3bbcd7f50a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -328,7 +335,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#channel-condition"
+       "value": "SYN-009.channel-condition"
       }
      ],
      "status": "final",
@@ -354,7 +361,7 @@
       "text": "Channel condition score"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -370,13 +377,12 @@
      "valueInteger": 6
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#channel-condition"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.channel-condition"
     }
    },
    {
-    "fullUrl": "urn:uuid:36533fb4-3ba0-41b8-8872-df4444a144f2",
+    "fullUrl": "urn:uuid:404b0d56-63a6-45fb-b32e-447616956d89",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -408,7 +414,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#bank-stability"
+       "value": "SYN-009.bank-stability"
       }
      ],
      "status": "final",
@@ -434,7 +440,7 @@
       "text": "Bank stability score"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -450,13 +456,12 @@
      "valueInteger": 5
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#bank-stability"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.bank-stability"
     }
    },
    {
-    "fullUrl": "urn:uuid:bc8913ca-59df-409c-91e0-1726dc9c7fbf",
+    "fullUrl": "urn:uuid:5d0cf1e6-8618-4974-af65-84089a7a8b60",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -488,7 +493,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#riparian-zone"
+       "value": "SYN-009.riparian-zone"
       }
      ],
      "status": "final",
@@ -514,7 +519,7 @@
       "text": "Riparian zone score"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -530,13 +535,12 @@
      "valueInteger": 4
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#riparian-zone"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.riparian-zone"
     }
    },
    {
-    "fullUrl": "urn:uuid:ce67323e-bf03-4d99-888c-f9c8569406ea",
+    "fullUrl": "urn:uuid:f777eb03-012f-40b4-b603-3dec2ebfbca2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -568,7 +572,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#instream-habitat"
+       "value": "SYN-009.instream-habitat"
       }
      ],
      "status": "final",
@@ -594,7 +598,7 @@
       "text": "In-stream habitat score"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -610,13 +614,12 @@
      "valueInteger": 6
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#instream-habitat"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.instream-habitat"
     }
    },
    {
-    "fullUrl": "urn:uuid:8aaa8ed4-d101-4108-9ae6-b59ec1a3de8d",
+    "fullUrl": "urn:uuid:a3be5b03-16f4-4596-be8c-6cc3c9f7946a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -648,7 +651,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#water-temperature"
+       "value": "SYN-009.water-temperature"
       }
      ],
      "status": "final",
@@ -674,7 +677,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -695,13 +698,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#water-temperature"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.water-temperature"
     }
    },
    {
-    "fullUrl": "urn:uuid:bc4bb7cc-1b3a-46ba-94a0-7cf3898302cd",
+    "fullUrl": "urn:uuid:78b7aa92-f452-4bf5-99da-449f23746df0",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -733,7 +735,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#ph"
+       "value": "SYN-009.ph"
       }
      ],
      "status": "final",
@@ -759,7 +761,7 @@
       "text": "pH"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -780,13 +782,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#ph"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.ph"
     }
    },
    {
-    "fullUrl": "urn:uuid:634047e2-b5a5-476e-9a29-d9ea3b88cd10",
+    "fullUrl": "urn:uuid:014fec4b-728b-433a-be77-cfaab585bd4d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -818,7 +819,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#nitrate"
+       "value": "SYN-009.nitrate"
       }
      ],
      "status": "final",
@@ -844,7 +845,7 @@
       "text": "Nitrate"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -865,13 +866,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#nitrate"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.nitrate"
     }
    },
    {
-    "fullUrl": "urn:uuid:760d7cf6-f246-499f-97fb-c8d50abb8771",
+    "fullUrl": "urn:uuid:93fdca92-1355-46ce-ae9a-d951562f3f51",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -903,7 +903,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#phosphate"
+       "value": "SYN-009.phosphate"
       }
      ],
      "status": "final",
@@ -929,7 +929,7 @@
       "text": "Phosphate (as PO4)"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -950,13 +950,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#phosphate"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.phosphate"
     }
    },
    {
-    "fullUrl": "urn:uuid:0a485018-515b-48e4-b31f-4f7c926ea9b6",
+    "fullUrl": "urn:uuid:7947f5ae-80c9-40be-ba93-d184e834e0c3",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -988,7 +987,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#transparency"
+       "value": "SYN-009.transparency"
       }
      ],
      "status": "final",
@@ -1014,7 +1013,7 @@
       "text": "Transparency tube depth"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1035,13 +1034,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#transparency"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.transparency"
     }
    },
    {
-    "fullUrl": "urn:uuid:0421e774-d2b3-4904-9ebf-fd5780eef8c5",
+    "fullUrl": "urn:uuid:c659e361-671e-4cd1-9eff-acd8dc995472",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1073,7 +1071,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#water-colour"
+       "value": "SYN-009.water-colour"
       }
      ],
      "status": "final",
@@ -1099,7 +1097,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1124,18 +1122,17 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:bf985718-2e31-40a5-97fe-bd0d8d447916"
+       "reference": "urn:uuid:e66c666b-17a8-4f6d-a009-2a508372ec71"
       }
      ]
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#water-colour"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.water-colour"
     }
    },
    {
-    "fullUrl": "urn:uuid:ec908532-af97-4d19-a4cb-2508e8a4689f",
+    "fullUrl": "urn:uuid:7d74c453-77b8-4bd2-9b45-e199c49bfe34",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1167,7 +1164,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#surface"
+       "value": "SYN-009.surface"
       }
      ],
      "status": "final",
@@ -1193,7 +1190,7 @@
       "text": "Surface film"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1218,18 +1215,17 @@
      },
      "derivedFrom": [
       {
-       "reference": "urn:uuid:bf985718-2e31-40a5-97fe-bd0d8d447916"
+       "reference": "urn:uuid:e66c666b-17a8-4f6d-a009-2a508372ec71"
       }
      ]
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#surface"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.surface"
     }
    },
    {
-    "fullUrl": "urn:uuid:6c1288f5-286f-4f22-835b-797cbadf72f7",
+    "fullUrl": "urn:uuid:9d762477-3628-4eef-b181-e1fa9eb390b2",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1261,7 +1257,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#odour"
+       "value": "SYN-009.odour"
       }
      ],
      "status": "final",
@@ -1287,7 +1283,7 @@
       "text": "Odour"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1312,13 +1308,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#odour"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.odour"
     }
    },
    {
-    "fullUrl": "urn:uuid:096bb68c-a1f2-4569-8496-6d30e5205ae4",
+    "fullUrl": "urn:uuid:52e685ae-aa1d-4ecd-984c-3e080aa6e902",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1350,7 +1345,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#litter"
+       "value": "SYN-009.litter"
       }
      ],
      "status": "final",
@@ -1376,7 +1371,7 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1401,13 +1396,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#litter"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.litter"
     }
    },
    {
-    "fullUrl": "urn:uuid:1483b76a-2af6-4663-89da-658a61844a53",
+    "fullUrl": "urn:uuid:58b7b63d-7353-47c1-b78a-eccf6d3f10f4",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1439,7 +1433,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#dead-fish"
+       "value": "SYN-009.dead-fish"
       }
      ],
      "status": "final",
@@ -1465,7 +1459,7 @@
       "text": "Dead fish seen"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1481,18 +1475,17 @@
      "valueBoolean": false,
      "derivedFrom": [
       {
-       "reference": "urn:uuid:bf985718-2e31-40a5-97fe-bd0d8d447916"
+       "reference": "urn:uuid:e66c666b-17a8-4f6d-a009-2a508372ec71"
       }
      ]
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#dead-fish"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.dead-fish"
     }
    },
    {
-    "fullUrl": "urn:uuid:8ef7f98b-d294-44ce-badd-afdac5873410",
+    "fullUrl": "urn:uuid:c04ee984-32d8-4222-b6e0-672975936aaf",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1524,7 +1517,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#people-contact"
+       "value": "SYN-009.people-contact"
       }
      ],
      "status": "final",
@@ -1550,7 +1543,7 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1566,13 +1559,12 @@
      "valueBoolean": false
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#people-contact"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.people-contact"
     }
    },
    {
-    "fullUrl": "urn:uuid:319494ec-d36b-407f-812c-c9c25fcb1fbb",
+    "fullUrl": "urn:uuid:a6e6ba43-ab85-42a2-a3af-ea6cc7a8706a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1604,7 +1596,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#animal-contact"
+       "value": "SYN-009.animal-contact"
       }
      ],
      "status": "final",
@@ -1630,7 +1622,7 @@
       "text": "Pets or livestock in the water"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1646,13 +1638,12 @@
      "valueBoolean": false
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#animal-contact"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.animal-contact"
     }
    },
    {
-    "fullUrl": "urn:uuid:1b5a895e-3906-4ab2-b060-c59317efd17f",
+    "fullUrl": "urn:uuid:45127f70-3b30-4378-a365-269aba1ae863",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1684,7 +1675,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#sensitive-invertebrates"
+       "value": "SYN-009.sensitive-invertebrates"
       }
      ],
      "status": "final",
@@ -1710,7 +1701,7 @@
       "text": "Mayfly/stonefly/caddisfly groups found"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1726,13 +1717,12 @@
      "valueInteger": 1
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#sensitive-invertebrates"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.sensitive-invertebrates"
     }
    },
    {
-    "fullUrl": "urn:uuid:83aad372-36eb-4a10-8e1a-90f2dc9058bf",
+    "fullUrl": "urn:uuid:fdee4453-8000-4f1e-aa94-ce0cb961c76f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1764,7 +1754,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#nitrate-basis"
+       "value": "SYN-009.nitrate-basis"
       }
      ],
      "status": "final",
@@ -1790,7 +1780,7 @@
       "text": "Nitrate reporting basis"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1815,13 +1805,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#nitrate-basis"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.nitrate-basis"
     }
    },
    {
-    "fullUrl": "urn:uuid:1afbec3e-730e-4e28-b475-0f11ffd78632",
+    "fullUrl": "urn:uuid:689cda59-ca98-4a65-be06-3c4679cb8171",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1853,7 +1842,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-009#kick-sample-minutes"
+       "value": "SYN-009.kick-sample-minutes"
       }
      ],
      "status": "final",
@@ -1879,7 +1868,7 @@
       "text": "Kick-net sampling effort"
      },
      "subject": {
-      "reference": "urn:uuid:72c0ed18-6541-4d6b-98b5-819f1116a045",
+      "reference": "urn:uuid:5c60fc01-bafc-4c21-8adc-979965029778",
       "display": "Willow Creek - allotment gardens"
      },
      "effectiveDateTime": "2026-09-17T09:00:00+01:00",
@@ -1900,13 +1889,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009#kick-sample-minutes"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-009.kick-sample-minutes"
     }
    },
    {
-    "fullUrl": "urn:uuid:d5b53c80-7de1-4fcc-8124-d13012b942e5",
+    "fullUrl": "urn:uuid:e8c06733-801f-48e2-a4f3-8c180feec9ee",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-SYN-009",
@@ -1931,75 +1919,75 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-009 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.2.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-009 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.3.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:b678a7ca-af54-44df-ba37-939ca6102507"
+       "reference": "urn:uuid:6e208c82-cc85-404d-8a3d-9409fa2d37bc"
       },
       {
-       "reference": "urn:uuid:5a596a8d-94ce-48c2-b240-9d02f4249449"
+       "reference": "urn:uuid:3da1cf14-0bbf-47d1-82f3-1f3bbcd7f50a"
       },
       {
-       "reference": "urn:uuid:36533fb4-3ba0-41b8-8872-df4444a144f2"
+       "reference": "urn:uuid:404b0d56-63a6-45fb-b32e-447616956d89"
       },
       {
-       "reference": "urn:uuid:bc8913ca-59df-409c-91e0-1726dc9c7fbf"
+       "reference": "urn:uuid:5d0cf1e6-8618-4974-af65-84089a7a8b60"
       },
       {
-       "reference": "urn:uuid:ce67323e-bf03-4d99-888c-f9c8569406ea"
+       "reference": "urn:uuid:f777eb03-012f-40b4-b603-3dec2ebfbca2"
       },
       {
-       "reference": "urn:uuid:8aaa8ed4-d101-4108-9ae6-b59ec1a3de8d"
+       "reference": "urn:uuid:a3be5b03-16f4-4596-be8c-6cc3c9f7946a"
       },
       {
-       "reference": "urn:uuid:bc4bb7cc-1b3a-46ba-94a0-7cf3898302cd"
+       "reference": "urn:uuid:78b7aa92-f452-4bf5-99da-449f23746df0"
       },
       {
-       "reference": "urn:uuid:634047e2-b5a5-476e-9a29-d9ea3b88cd10"
+       "reference": "urn:uuid:014fec4b-728b-433a-be77-cfaab585bd4d"
       },
       {
-       "reference": "urn:uuid:760d7cf6-f246-499f-97fb-c8d50abb8771"
+       "reference": "urn:uuid:93fdca92-1355-46ce-ae9a-d951562f3f51"
       },
       {
-       "reference": "urn:uuid:0a485018-515b-48e4-b31f-4f7c926ea9b6"
+       "reference": "urn:uuid:7947f5ae-80c9-40be-ba93-d184e834e0c3"
       },
       {
-       "reference": "urn:uuid:0421e774-d2b3-4904-9ebf-fd5780eef8c5"
+       "reference": "urn:uuid:c659e361-671e-4cd1-9eff-acd8dc995472"
       },
       {
-       "reference": "urn:uuid:ec908532-af97-4d19-a4cb-2508e8a4689f"
+       "reference": "urn:uuid:7d74c453-77b8-4bd2-9b45-e199c49bfe34"
       },
       {
-       "reference": "urn:uuid:6c1288f5-286f-4f22-835b-797cbadf72f7"
+       "reference": "urn:uuid:9d762477-3628-4eef-b181-e1fa9eb390b2"
       },
       {
-       "reference": "urn:uuid:096bb68c-a1f2-4569-8496-6d30e5205ae4"
+       "reference": "urn:uuid:52e685ae-aa1d-4ecd-984c-3e080aa6e902"
       },
       {
-       "reference": "urn:uuid:1483b76a-2af6-4663-89da-658a61844a53"
+       "reference": "urn:uuid:58b7b63d-7353-47c1-b78a-eccf6d3f10f4"
       },
       {
-       "reference": "urn:uuid:8ef7f98b-d294-44ce-badd-afdac5873410"
+       "reference": "urn:uuid:c04ee984-32d8-4222-b6e0-672975936aaf"
       },
       {
-       "reference": "urn:uuid:319494ec-d36b-407f-812c-c9c25fcb1fbb"
+       "reference": "urn:uuid:a6e6ba43-ab85-42a2-a3af-ea6cc7a8706a"
       },
       {
-       "reference": "urn:uuid:1b5a895e-3906-4ab2-b060-c59317efd17f"
+       "reference": "urn:uuid:45127f70-3b30-4378-a365-269aba1ae863"
       },
       {
-       "reference": "urn:uuid:83aad372-36eb-4a10-8e1a-90f2dc9058bf"
+       "reference": "urn:uuid:fdee4453-8000-4f1e-aa94-ce0cb961c76f"
       },
       {
-       "reference": "urn:uuid:1afbec3e-730e-4e28-b475-0f11ffd78632"
+       "reference": "urn:uuid:689cda59-ca98-4a65-be06-3c4679cb8171"
       },
       {
-       "reference": "urn:uuid:bf985718-2e31-40a5-97fe-bd0d8d447916"
+       "reference": "urn:uuid:e66c666b-17a8-4f6d-a009-2a508372ec71"
       }
      ],
      "occurredDateTime": "2026-09-17T09:00:00+01:00",
-     "recorded": "2026-09-29T06:14:42+00:00",
+     "recorded": "2026-09-29T06:25:16+00:00",
      "activity": {
       "coding": [
        {
@@ -2039,8 +2027,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:b2d81cec-3e7e-4918-8528-dd5862715d04",
-        "display": "StreamFHIR 0.2.0"
+        "reference": "urn:uuid:340a461e-a457-4429-abfa-8f6f0e96cd5c",
+        "display": "StreamFHIR 0.3.0"
        }
       }
      ],

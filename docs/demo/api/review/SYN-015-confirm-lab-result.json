@@ -193,7 +193,9 @@
     ],
     "window_start": "2026-09-15T12:00:00+01:00",
     "window_end": "2026-09-29T12:00:00+01:00",
-    "decisions": {},
+    "decisions": {
+     "SYN-015": "confirm"
+    },
     "needs_flag": false
    },
    "reports": [
@@ -384,7 +386,9 @@
     ],
     "window_start": "2026-09-15T12:00:00+01:00",
     "window_end": "2026-09-29T12:00:00+01:00",
-    "decisions": {},
+    "decisions": {
+     "SYN-015": "confirm"
+    },
     "needs_flag": true
    },
    "reports": [
@@ -425,7 +429,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:8ba8d3aa-83d1-45c7-80c5-e28c74f7d5d7",
+      "fullUrl": "urn:uuid:02b12b00-ba33-4ad3-a147-aec7b04c6412",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -477,7 +481,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:79a95196-ff28-4e26-9712-0d85ac2cde30",
+      "fullUrl": "urn:uuid:19fbbab5-9eb2-4583-bf35-37d003ed708c",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -523,7 +527,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:9fc6ba39-c57a-4841-99f4-c43472d805ac",
+      "fullUrl": "urn:uuid:a8fb2d1c-5d08-4b5d-ab10-a5b20ee8023d",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -597,7 +601,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:8ba8d3aa-83d1-45c7-80c5-e28c74f7d5d7",
+        "reference": "urn:uuid:02b12b00-ba33-4ad3-a147-aec7b04c6412",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -605,7 +609,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:79a95196-ff28-4e26-9712-0d85ac2cde30",
+        "reference": "urn:uuid:19fbbab5-9eb2-4583-bf35-37d003ed708c",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -615,7 +619,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:47849aa6-43c9-4784-a9d2-599c24919c55",
+      "fullUrl": "urn:uuid:79aedd58-2348-4095-8403-413034f4cbce",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -639,7 +643,7 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:9fc6ba39-c57a-4841-99f4-c43472d805ac"
+         "reference": "urn:uuid:a8fb2d1c-5d08-4b5d-ab10-a5b20ee8023d"
         }
        ],
        "recorded": "2026-09-29T06:25:16+00:00",
@@ -664,7 +668,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:79a95196-ff28-4e26-9712-0d85ac2cde30",
+          "reference": "urn:uuid:19fbbab5-9eb2-4583-bf35-37d003ed708c",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -831,7 +835,9 @@
     "excluded_record_ids": [],
     "window_start": "2026-09-15T12:00:00+01:00",
     "window_end": "2026-09-29T12:00:00+01:00",
-    "decisions": {},
+    "decisions": {
+     "SYN-015": "confirm"
+    },
     "needs_flag": true
    },
    "reports": [
@@ -885,7 +891,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:9987846e-62ab-4e6b-a8df-ec549637d774",
+      "fullUrl": "urn:uuid:683dafdf-876b-4e04-824d-54a26c450f2f",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -937,7 +943,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:efea267e-90c3-4abc-9e6f-5251b6d7a665",
+      "fullUrl": "urn:uuid:575fd094-d4a2-45a3-9253-036456b7960a",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -983,7 +989,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:adf567ec-f1ce-4dbd-8282-15db0f3c885a",
+      "fullUrl": "urn:uuid:900c836b-d8a5-4d28-8bf6-00b5949b9e7c",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1046,7 +1052,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed."
        },
        "subject": {
-        "reference": "urn:uuid:9987846e-62ab-4e6b-a8df-ec549637d774",
+        "reference": "urn:uuid:683dafdf-876b-4e04-824d-54a26c450f2f",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1054,7 +1060,7 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:efea267e-90c3-4abc-9e6f-5251b6d7a665",
+        "reference": "urn:uuid:575fd094-d4a2-45a3-9253-036456b7960a",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1064,7 +1070,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:f44348c0-1143-4a79-bd0a-27b0b623376d",
+      "fullUrl": "urn:uuid:63184d6d-15c4-45d0-84c4-87c84a926023",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1088,7 +1094,7 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:adf567ec-f1ce-4dbd-8282-15db0f3c885a"
+         "reference": "urn:uuid:900c836b-d8a5-4d28-8bf6-00b5949b9e7c"
         }
        ],
        "recorded": "2026-09-29T06:25:16+00:00",
@@ -1113,7 +1119,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:efea267e-90c3-4abc-9e6f-5251b6d7a665",
+          "reference": "urn:uuid:575fd094-d4a2-45a3-9253-036456b7960a",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -1151,9 +1157,9 @@
    },
    "risk": {
     "site_id": "S-WILLOW",
-    "level": "verify",
+    "level": "high",
     "hazard_points": 7,
-    "confirmed_hazard_points": 0,
+    "confirmed_hazard_points": 7,
     "lane_points": {
      "environment": 0,
      "animal": 5,
@@ -1201,13 +1207,15 @@
       "observers": [
        "obs-03"
       ],
-      "corroborated": false,
-      "corroboration": "single or unreviewed report - verify",
+      "corroborated": true,
+      "corroboration": "confirmed by a reviewer",
       "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins.",
       "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
       "first_seen": "2026-09-27T18:20:00+01:00",
       "last_seen": "2026-09-27T18:20:00+01:00",
-      "trusted_record_ids": []
+      "trusted_record_ids": [
+       "SYN-015"
+      ]
      },
      {
       "rule_id": "R7",
@@ -1222,13 +1230,15 @@
       "observers": [
        "obs-03"
       ],
-      "corroborated": false,
-      "corroboration": "exposure seen, but the hazard it depends on is not yet corroborated",
+      "corroborated": true,
+      "corroboration": "confirmed by a reviewer",
       "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
       "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
       "first_seen": "2026-09-27T18:20:00+01:00",
       "last_seen": "2026-09-27T18:20:00+01:00",
-      "trusted_record_ids": []
+      "trusted_record_ids": [
+       "SYN-015"
+      ]
      },
      {
       "rule_id": "R9",
@@ -1266,8 +1276,10 @@
     ],
     "window_start": "2026-09-15T12:00:00+01:00",
     "window_end": "2026-09-29T12:00:00+01:00",
-    "decisions": {},
-    "needs_flag": false
+    "decisions": {
+     "SYN-015": "confirm"
+    },
+    "needs_flag": true
    },
    "reports": [
     {
@@ -1311,8 +1323,8 @@
     {
      "record_id": "SYN-015",
      "status": "review",
-     "decision": null,
-     "basis": null,
+     "decision": "confirm",
+     "basis": "lab-result",
      "observed_at": "2026-09-27T18:20:00+01:00",
      "issues": [
       {
@@ -1324,7 +1336,264 @@
      ]
     }
    ],
-   "flag_bundle": null
+   "flag_bundle": {
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+     {
+      "fullUrl": "urn:uuid:e5761fad-cdbe-4bd4-adb9-407754ce7ee5",
+      "resource": {
+       "resourceType": "Location",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Willow Creek - allotment gardens (S-WILLOW)</p></div>"
+       },
+       "identifier": [
+        {
+         "system": "https://example.org/fhir/streamfhir/sid/site",
+         "value": "S-WILLOW"
+        }
+       ],
+       "status": "active",
+       "name": "Willow Creek - allotment gardens",
+       "description": "Synthetic demo site: creek running past allotment gardens.",
+       "mode": "instance",
+       "physicalType": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+          "code": "area",
+          "display": "Area"
+         }
+        ]
+       },
+       "position": {
+        "longitude": -8.39,
+        "latitude": 40.225
+       }
+      },
+      "request": {
+       "method": "POST",
+       "url": "Location",
+       "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|S-WILLOW"
+      }
+     },
+     {
+      "fullUrl": "urn:uuid:e0120217-aa8c-4ae5-8cee-26c314c2f1a7",
+      "resource": {
+       "resourceType": "Device",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
+       },
+       "identifier": [
+        {
+         "system": "https://example.org/fhir/streamfhir/sid/device",
+         "value": "streamfhir-rule-engine"
+        }
+       ],
+       "deviceName": [
+        {
+         "name": "StreamFHIR mapper and rule engine",
+         "type": "user-friendly-name"
+        }
+       ],
+       "version": [
+        {
+         "value": "0.3.0"
+        }
+       ]
+      },
+      "request": {
+       "method": "POST",
+       "url": "Device",
+       "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+      }
+     },
+     {
+      "fullUrl": "urn:uuid:ea98ac37-0eb9-44b0-a495-d6205fab30c8",
+      "resource": {
+       "resourceType": "Flag",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Willow Creek - allotment gardens (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-11 unless re-confirmed.</p></div>"
+       },
+       "extension": [
+        {
+         "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
+         "valueReference": {
+          "identifier": {
+           "system": "https://example.org/fhir/streamfhir/sid/record",
+           "value": "SYN-015"
+          },
+          "type": "Observation",
+          "display": "Citizen assessment SYN-015"
+         }
+        }
+       ],
+       "identifier": [
+        {
+         "system": "https://example.org/fhir/streamfhir/sid/flag",
+         "value": "S-WILLOW"
+        }
+       ],
+       "status": "active",
+       "category": [
+        {
+         "coding": [
+          {
+           "system": "http://terminology.hl7.org/CodeSystem/flag-category",
+           "code": "safety",
+           "display": "Safety"
+          }
+         ]
+        }
+       ],
+       "code": {
+        "coding": [
+         {
+          "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-level",
+          "code": "high",
+          "display": "High health hazard"
+         }
+        ],
+        "text": "High health hazard at Willow Creek - allotment gardens (7 corroborated of 7 hazard points: environment 0 / animal 5 / human 2). Rules: R3 Possible cyanobacterial bloom (confirmed by a reviewer); R7 Pets or livestock in contact with affected water (confirmed by a reviewer). Expires 2026-10-11 unless re-confirmed."
+       },
+       "subject": {
+        "reference": "urn:uuid:e5761fad-cdbe-4bd4-adb9-407754ce7ee5",
+        "display": "Willow Creek - allotment gardens"
+       },
+       "period": {
+        "start": "2026-09-27T18:20:00+01:00",
+        "end": "2026-10-11T18:20:00+01:00"
+       },
+       "author": {
+        "reference": "urn:uuid:e0120217-aa8c-4ae5-8cee-26c314c2f1a7",
+        "display": "StreamFHIR 0.3.0"
+       }
+      },
+      "request": {
+       "method": "PUT",
+       "url": "Flag?identifier=https://example.org/fhir/streamfhir/sid/flag|S-WILLOW"
+      }
+     },
+     {
+      "fullUrl": "urn:uuid:1c9d2cc6-11f5-4c66-b7ef-e175e8592034",
+      "resource": {
+       "resourceType": "Provenance",
+       "id": "streamfhir-prov-flag-S-WILLOW",
+       "meta": {
+        "security": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code": "HTEST",
+          "display": "test health data"
+         },
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+          "code": "U",
+          "display": "unrestricted"
+         }
+        ]
+       },
+       "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Flag for Willow Creek - allotment gardens computed by StreamFHIR 0.3.0 from 1 citizen records</p></div>"
+       },
+       "target": [
+        {
+         "reference": "urn:uuid:ea98ac37-0eb9-44b0-a495-d6205fab30c8"
+        }
+       ],
+       "recorded": "2026-09-29T06:25:16+00:00",
+       "activity": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code": "CREATE",
+          "display": "create"
+         }
+        ]
+       },
+       "agent": [
+        {
+         "type": {
+          "coding": [
+           {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "assembler",
+            "display": "Assembler"
+           }
+          ]
+         },
+         "who": {
+          "reference": "urn:uuid:e0120217-aa8c-4ae5-8cee-26c314c2f1a7",
+          "display": "StreamFHIR 0.3.0"
+         }
+        }
+       ],
+       "entity": [
+        {
+         "role": "source",
+         "what": {
+          "identifier": {
+           "system": "https://example.org/fhir/streamfhir/sid/record",
+           "value": "SYN-015"
+          },
+          "type": "Observation"
+         }
+        }
+       ]
+      },
+      "request": {
+       "method": "PUT",
+       "url": "Provenance/streamfhir-prov-flag-S-WILLOW"
+      }
+     }
+    ]
+   }
   },
   {
    "site": {
@@ -1355,7 +1624,9 @@
     "excluded_record_ids": [],
     "window_start": "2026-09-15T12:00:00+01:00",
     "window_end": "2026-09-29T12:00:00+01:00",
-    "decisions": {},
+    "decisions": {
+     "SYN-015": "confirm"
+    },
     "needs_flag": false
    },
    "reports": [

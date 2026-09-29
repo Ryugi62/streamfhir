@@ -9,7 +9,7 @@
   "type": "transaction",
   "entry": [
    {
-    "fullUrl": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+    "fullUrl": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
     "resource": {
      "resourceType": "Location",
      "meta": {
@@ -40,6 +40,15 @@
      "name": "Alder Brook - below storm outfall",
      "description": "Synthetic demo site: 50 m below a storm-water outfall, next to a playground.",
      "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
      "position": {
       "longitude": -8.418,
       "latitude": 40.2105
@@ -52,7 +61,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:52984e9c-8492-41cc-8ee0-dc867bb63d97",
+    "fullUrl": "urn:uuid:f9320f01-b056-4d98-9400-572e6600b150",
     "resource": {
      "resourceType": "Device",
      "meta": {
@@ -71,7 +80,7 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.2.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.3.0</p></div>"
      },
      "identifier": [
       {
@@ -87,7 +96,7 @@
      ],
      "version": [
       {
-       "value": "0.2.0"
+       "value": "0.3.0"
       }
      ]
     },
@@ -98,7 +107,7 @@
     }
    },
    {
-    "fullUrl": "urn:uuid:f56237bb-cb2c-45de-aa6a-430f2a1322e0",
+    "fullUrl": "urn:uuid:8f58c8ff-72a1-4b2d-baed-339b8b85076f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -156,7 +165,7 @@
       "text": "Citizen stream assessment panel"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -171,51 +180,50 @@
      ],
      "hasMember": [
       {
-       "reference": "urn:uuid:61745fb4-aa63-4915-8088-74fdc340bae0"
+       "reference": "urn:uuid:aaccf0c4-d3f3-470d-9b29-31643696e6cd"
       },
       {
-       "reference": "urn:uuid:8db61a7e-cc12-453f-bc38-1d8ea221be22"
+       "reference": "urn:uuid:50702e31-58df-45b1-82aa-c73423c88a5f"
       },
       {
-       "reference": "urn:uuid:21ba6e30-9fab-4c36-bb3e-d5d5ba48607e"
+       "reference": "urn:uuid:1357c676-ed0c-4e8b-9da3-d80ec4ac6cf9"
       },
       {
-       "reference": "urn:uuid:cc34d5d0-291d-491e-a979-e64eec76bd66"
+       "reference": "urn:uuid:a60bb937-9eea-41db-8177-06cb14c5274a"
       },
       {
-       "reference": "urn:uuid:75989c5f-cabe-4434-af3a-3223183389ac"
+       "reference": "urn:uuid:2abb5520-d2b0-4d9a-85a8-cbbec068baed"
       },
       {
-       "reference": "urn:uuid:2fcee27c-546e-4a3f-a6b2-d3581f06616a"
+       "reference": "urn:uuid:ca5cb321-4196-4b3b-9e80-d9ed3fe1922d"
       },
       {
-       "reference": "urn:uuid:fb348604-82e8-40eb-b765-93fd366a37d1"
+       "reference": "urn:uuid:fc065cdc-0274-4e24-af56-93a1a33faa33"
       },
       {
-       "reference": "urn:uuid:a937e767-e023-48a1-a286-661e92c60e78"
+       "reference": "urn:uuid:c2be6d2c-19b0-40e7-ba05-ca09cd801840"
       },
       {
-       "reference": "urn:uuid:f62e1c97-0ec8-4615-820e-3a29e631c68c"
+       "reference": "urn:uuid:92459fac-d5f0-49fe-b1ad-b49ba034873c"
       },
       {
-       "reference": "urn:uuid:0166767f-b5bd-45fe-a942-84c09411dd1e"
+       "reference": "urn:uuid:9923503e-7771-4573-abce-7677a050439c"
       },
       {
-       "reference": "urn:uuid:539e20a4-abae-47f5-860e-b3703cbdd276"
+       "reference": "urn:uuid:066a87e3-a042-40ac-96a8-a303a934a41e"
       },
       {
-       "reference": "urn:uuid:08a83420-47db-4b6e-b549-64f03e8acd8d"
+       "reference": "urn:uuid:b004e8a0-6f84-4ad5-b57f-c7f18337293f"
       }
      ]
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004"
     }
    },
    {
-    "fullUrl": "urn:uuid:61745fb4-aa63-4915-8088-74fdc340bae0",
+    "fullUrl": "urn:uuid:aaccf0c4-d3f3-470d-9b29-31643696e6cd",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -247,7 +255,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#channel-condition"
+       "value": "SYN-004.channel-condition"
       }
      ],
      "status": "final",
@@ -273,7 +281,7 @@
       "text": "Channel condition score"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -289,13 +297,12 @@
      "valueInteger": 3
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#channel-condition"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.channel-condition"
     }
    },
    {
-    "fullUrl": "urn:uuid:8db61a7e-cc12-453f-bc38-1d8ea221be22",
+    "fullUrl": "urn:uuid:50702e31-58df-45b1-82aa-c73423c88a5f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -327,7 +334,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#bank-stability"
+       "value": "SYN-004.bank-stability"
       }
      ],
      "status": "final",
@@ -353,7 +360,7 @@
       "text": "Bank stability score"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -369,13 +376,12 @@
      "valueInteger": 3
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#bank-stability"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.bank-stability"
     }
    },
    {
-    "fullUrl": "urn:uuid:21ba6e30-9fab-4c36-bb3e-d5d5ba48607e",
+    "fullUrl": "urn:uuid:1357c676-ed0c-4e8b-9da3-d80ec4ac6cf9",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -407,7 +413,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#riparian-zone"
+       "value": "SYN-004.riparian-zone"
       }
      ],
      "status": "final",
@@ -433,7 +439,7 @@
       "text": "Riparian zone score"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -449,13 +455,12 @@
      "valueInteger": 4
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#riparian-zone"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.riparian-zone"
     }
    },
    {
-    "fullUrl": "urn:uuid:cc34d5d0-291d-491e-a979-e64eec76bd66",
+    "fullUrl": "urn:uuid:a60bb937-9eea-41db-8177-06cb14c5274a",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -487,7 +492,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#instream-habitat"
+       "value": "SYN-004.instream-habitat"
       }
      ],
      "status": "final",
@@ -513,7 +518,7 @@
       "text": "In-stream habitat score"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -529,13 +534,12 @@
      "valueInteger": 3
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#instream-habitat"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.instream-habitat"
     }
    },
    {
-    "fullUrl": "urn:uuid:75989c5f-cabe-4434-af3a-3223183389ac",
+    "fullUrl": "urn:uuid:2abb5520-d2b0-4d9a-85a8-cbbec068baed",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -567,7 +571,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#water-temperature"
+       "value": "SYN-004.water-temperature"
       }
      ],
      "status": "final",
@@ -593,7 +597,7 @@
       "text": "Water temperature"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -614,13 +618,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#water-temperature"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.water-temperature"
     }
    },
    {
-    "fullUrl": "urn:uuid:2fcee27c-546e-4a3f-a6b2-d3581f06616a",
+    "fullUrl": "urn:uuid:ca5cb321-4196-4b3b-9e80-d9ed3fe1922d",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -652,7 +655,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#water-colour"
+       "value": "SYN-004.water-colour"
       }
      ],
      "status": "final",
@@ -678,7 +681,7 @@
       "text": "Water colour"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -703,13 +706,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#water-colour"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.water-colour"
     }
    },
    {
-    "fullUrl": "urn:uuid:fb348604-82e8-40eb-b765-93fd366a37d1",
+    "fullUrl": "urn:uuid:fc065cdc-0274-4e24-af56-93a1a33faa33",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -741,7 +743,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#odour"
+       "value": "SYN-004.odour"
       }
      ],
      "status": "final",
@@ -767,7 +769,7 @@
       "text": "Odour"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -792,13 +794,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#odour"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.odour"
     }
    },
    {
-    "fullUrl": "urn:uuid:a937e767-e023-48a1-a286-661e92c60e78",
+    "fullUrl": "urn:uuid:c2be6d2c-19b0-40e7-ba05-ca09cd801840",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -830,7 +831,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#litter"
+       "value": "SYN-004.litter"
       }
      ],
      "status": "final",
@@ -856,7 +857,7 @@
       "text": "Litter"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -881,13 +882,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#litter"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.litter"
     }
    },
    {
-    "fullUrl": "urn:uuid:f62e1c97-0ec8-4615-820e-3a29e631c68c",
+    "fullUrl": "urn:uuid:92459fac-d5f0-49fe-b1ad-b49ba034873c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -919,7 +919,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#people-contact"
+       "value": "SYN-004.people-contact"
       }
      ],
      "status": "final",
@@ -945,7 +945,7 @@
       "text": "People in the water"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -961,13 +961,12 @@
      "valueBoolean": true
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#people-contact"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.people-contact"
     }
    },
    {
-    "fullUrl": "urn:uuid:0166767f-b5bd-45fe-a942-84c09411dd1e",
+    "fullUrl": "urn:uuid:9923503e-7771-4573-abce-7677a050439c",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -999,7 +998,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#animal-contact"
+       "value": "SYN-004.animal-contact"
       }
      ],
      "status": "final",
@@ -1025,7 +1024,7 @@
       "text": "Pets or livestock in the water"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -1041,13 +1040,12 @@
      "valueBoolean": false
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#animal-contact"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.animal-contact"
     }
    },
    {
-    "fullUrl": "urn:uuid:539e20a4-abae-47f5-860e-b3703cbdd276",
+    "fullUrl": "urn:uuid:066a87e3-a042-40ac-96a8-a303a934a41e",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1079,7 +1077,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#sensitive-invertebrates"
+       "value": "SYN-004.sensitive-invertebrates"
       }
      ],
      "status": "final",
@@ -1105,7 +1103,7 @@
       "text": "Mayfly/stonefly/caddisfly groups found"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -1121,13 +1119,12 @@
      "valueInteger": 0
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#sensitive-invertebrates"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.sensitive-invertebrates"
     }
    },
    {
-    "fullUrl": "urn:uuid:08a83420-47db-4b6e-b549-64f03e8acd8d",
+    "fullUrl": "urn:uuid:b004e8a0-6f84-4ad5-b57f-c7f18337293f",
     "resource": {
      "resourceType": "Observation",
      "meta": {
@@ -1159,7 +1156,7 @@
      "identifier": [
       {
        "system": "https://example.org/fhir/streamfhir/sid/record",
-       "value": "SYN-004#kick-sample-minutes"
+       "value": "SYN-004.kick-sample-minutes"
       }
      ],
      "status": "final",
@@ -1185,7 +1182,7 @@
       "text": "Kick-net sampling effort"
      },
      "subject": {
-      "reference": "urn:uuid:6715a0b5-3af6-4cc4-98bd-e983d946f8ea",
+      "reference": "urn:uuid:c268cae5-1499-4d24-b153-8eb17dc38127",
       "display": "Alder Brook - below storm outfall"
      },
      "effectiveDateTime": "2026-09-25T15:50:00+01:00",
@@ -1206,13 +1203,12 @@
      }
     },
     "request": {
-     "method": "POST",
-     "url": "Observation",
-     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004#kick-sample-minutes"
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|SYN-004.kick-sample-minutes"
     }
    },
    {
-    "fullUrl": "urn:uuid:ae80e35a-f1fc-42f8-81b9-3b4696a460f8",
+    "fullUrl": "urn:uuid:cee195f0-f3bf-4996-9a2d-b993747fd3f4",
     "resource": {
      "resourceType": "Provenance",
      "id": "streamfhir-prov-SYN-004",
@@ -1237,51 +1233,51 @@
      },
      "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-004 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.2.0</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record SYN-004 was reported by a pseudonymous citizen scientist and assembled into FHIR by StreamFHIR 0.3.0</p></div>"
      },
      "target": [
       {
-       "reference": "urn:uuid:f56237bb-cb2c-45de-aa6a-430f2a1322e0"
+       "reference": "urn:uuid:8f58c8ff-72a1-4b2d-baed-339b8b85076f"
       },
       {
-       "reference": "urn:uuid:61745fb4-aa63-4915-8088-74fdc340bae0"
+       "reference": "urn:uuid:aaccf0c4-d3f3-470d-9b29-31643696e6cd"
       },
       {
-       "reference": "urn:uuid:8db61a7e-cc12-453f-bc38-1d8ea221be22"
+       "reference": "urn:uuid:50702e31-58df-45b1-82aa-c73423c88a5f"
       },
       {
-       "reference": "urn:uuid:21ba6e30-9fab-4c36-bb3e-d5d5ba48607e"
+       "reference": "urn:uuid:1357c676-ed0c-4e8b-9da3-d80ec4ac6cf9"
       },
       {
-       "reference": "urn:uuid:cc34d5d0-291d-491e-a979-e64eec76bd66"
+       "reference": "urn:uuid:a60bb937-9eea-41db-8177-06cb14c5274a"
       },
       {
-       "reference": "urn:uuid:75989c5f-cabe-4434-af3a-3223183389ac"
+       "reference": "urn:uuid:2abb5520-d2b0-4d9a-85a8-cbbec068baed"
       },
       {
-       "reference": "urn:uuid:2fcee27c-546e-4a3f-a6b2-d3581f06616a"
+       "reference": "urn:uuid:ca5cb321-4196-4b3b-9e80-d9ed3fe1922d"
       },
       {
-       "reference": "urn:uuid:fb348604-82e8-40eb-b765-93fd366a37d1"
+       "reference": "urn:uuid:fc065cdc-0274-4e24-af56-93a1a33faa33"
       },
       {
-       "reference": "urn:uuid:a937e767-e023-48a1-a286-661e92c60e78"
+       "reference": "urn:uuid:c2be6d2c-19b0-40e7-ba05-ca09cd801840"
       },
       {
-       "reference": "urn:uuid:f62e1c97-0ec8-4615-820e-3a29e631c68c"
+       "reference": "urn:uuid:92459fac-d5f0-49fe-b1ad-b49ba034873c"
       },
       {
-       "reference": "urn:uuid:0166767f-b5bd-45fe-a942-84c09411dd1e"
+       "reference": "urn:uuid:9923503e-7771-4573-abce-7677a050439c"
       },
       {
-       "reference": "urn:uuid:539e20a4-abae-47f5-860e-b3703cbdd276"
+       "reference": "urn:uuid:066a87e3-a042-40ac-96a8-a303a934a41e"
       },
       {
-       "reference": "urn:uuid:08a83420-47db-4b6e-b549-64f03e8acd8d"
+       "reference": "urn:uuid:b004e8a0-6f84-4ad5-b57f-c7f18337293f"
       }
      ],
      "occurredDateTime": "2026-09-25T15:50:00+01:00",
-     "recorded": "2026-09-29T06:14:42+00:00",
+     "recorded": "2026-09-29T06:25:16+00:00",
      "activity": {
       "coding": [
        {
@@ -1321,8 +1317,8 @@
         ]
        },
        "who": {
-        "reference": "urn:uuid:52984e9c-8492-41cc-8ee0-dc867bb63d97",
-        "display": "StreamFHIR 0.2.0"
+        "reference": "urn:uuid:f9320f01-b056-4d98-9400-572e6600b150",
+        "display": "StreamFHIR 0.3.0"
        }
       }
      ],

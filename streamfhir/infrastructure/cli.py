@@ -38,6 +38,17 @@ def build_static(svc, out):
     _dump(os.path.join(out, "api", "records.json"), {"records": svc.records.all()})
     for r in svc.records.all():
         _dump(os.path.join(out, "api", "check", "%s.json" % r["record_id"]), check_json(svc.check_record(r)))
+    # precomputed single reviewer decisions, so Confirm/Reject also work in the static demo
+    os.makedirs(os.path.join(out, "api", "review"), exist_ok=True)
+    for rep in [svc.check_record(r).report for r in svc.records.all()]:
+        if rep.status != "review":
+            continue
+        for decision, basis in (("confirm", "site-visit"), ("confirm", "photo-checked"), ("confirm", "lab-result"),
+                                ("reject", None)):
+            svc.reviews.set(rep.record_id, decision, basis)
+            name = "%s-%s%s.json" % (rep.record_id, decision, "-" + basis if basis else "")
+            _dump(os.path.join(out, "api", "review", name), overview_json(svc.site_overview(), svc.clock.now()))
+            svc.reviews.set(rep.record_id, None)
     return len(svc.records.all())
 
 
@@ -57,10 +68,13 @@ def main(argv=None):
     sd.add_argument("record_id")
     sd.add_argument("--live", action="store_true", help="really POST to the FHIR server (synthetic data only)")
     sd.add_argument("--flags", action="store_true", help="also send active Flags for high-hazard sites")
-    sd.add_argument("--stand-down", action="store_true", help="with --flags: also set other sites' Flags to inactive")
+    sd.add_argument("--stand-down", action="store_true", help="with --flags: set the server's active Flag of now-calm sites to inactive")
+    sd.add_argument("--review", choices=["confirm", "reject"], help="apply a reviewer decision to this record first")
+    sd.add_argument("--basis", choices=["site-visit", "photo-checked", "lab-result"], help="basis for --review confirm")
     rv = sub.add_parser("review", help="confirm or reject a record that needs review, then show the overview")
     rv.add_argument("record_id")
     rv.add_argument("decision", choices=["confirm", "reject"])
+    rv.add_argument("--basis", choices=["site-visit", "photo-checked", "lab-result"])
     v = sub.add_parser("validate-remote", help="ask the FHIR server to $validate one generated Observation")
     v.add_argument("record_id")
     v.add_argument("--location-id", help="server id of an existing Location to reference (e.g. from a live send)")
@@ -112,6 +126,8 @@ def main(argv=None):
                 n += 1
         print("wrote %d bundles to %s" % (n, args.out))
     elif cmd == "send":
+        if args.review:
+            print(svc.review(args.record_id, args.review, args.basis))
         res = svc.check_record(_record(svc, args.record_id))
         if res.bundle is None:
             sys.exit("Record %s is blocked: %s" % (args.record_id, [i.message for i in res.report.issues]))
@@ -121,7 +137,7 @@ def main(argv=None):
                 flag = [e["resource"] for e in b["entry"] if e["resource"]["resourceType"] == "Flag"][0]
                 print(flag["identifier"][0]["value"], flag["status"], json.dumps(svc.share(b, live=args.live), indent=1))
     elif cmd == "review":
-        print(svc.review(args.record_id, args.decision))
+        print(svc.review(args.record_id, args.decision, args.basis))
         for o in svc.site_overview():
             print("%-11s %-9s hazard %2d (corroborated %2d) flag=%s" % (
                 o.site.site_id, o.risk.level.upper(), o.risk.hazard_points, o.risk.confirmed_hazard_points, bool(o.flag_bundle)))

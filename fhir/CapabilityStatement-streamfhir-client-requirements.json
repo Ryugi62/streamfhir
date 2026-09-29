@@ -1,8 +1,12 @@
 {
  "resourceType": "CapabilityStatement",
  "id": "streamfhir-client-requirements",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CapabilityStatement: What StreamFHIR needs from a FHIR R4 server</p></div>"
+ },
  "url": "https://example.org/fhir/streamfhir/CapabilityStatement/streamfhir-client-requirements",
- "version": "0.2.0",
+ "version": "0.3.0",
  "name": "StreamFHIRClientRequirements",
  "title": "What StreamFHIR needs from a FHIR R4 server",
  "status": "draft",
@@ -13,7 +17,7 @@
  "format": [
   "json"
  ],
- "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create (ifNoneExist on identifier) and conditional update of Flag by identifier. Consumers find warnings with Flag?category=safety&status=active or subscribe to them (see Subscription example).",
+ "description": "A receiving FHIR R4 server must accept transaction Bundles with conditional create (ifNoneExist on identifier) for Location and Device, conditional update by identifier for Observation, Media and Flag, and update-as-create for Provenance. Consumers find warnings with Flag?category=safety&status=active or subscribe to them (see Subscription example).",
  "rest": [
   {
    "mode": "server",
@@ -66,13 +70,13 @@
      "type": "Media",
      "interaction": [
       {
-       "code": "create"
+       "code": "update"
       },
       {
        "code": "read"
       }
      ],
-     "conditionalCreate": true,
+     "conditionalUpdate": true,
      "searchParam": [
       {
        "name": "identifier",
@@ -84,7 +88,7 @@
      "type": "Observation",
      "interaction": [
       {
-       "code": "create"
+       "code": "update"
       },
       {
        "code": "read"
@@ -93,7 +97,7 @@
        "code": "search-type"
       }
      ],
-     "conditionalCreate": true,
+     "conditionalUpdate": true,
      "searchParam": [
       {
        "name": "identifier",
@@ -119,7 +123,7 @@
        "code": "read"
       }
      ],
-     "conditionalCreate": true
+     "updateCreate": true
     },
     {
      "type": "Flag",
@@ -134,7 +138,7 @@
        "code": "search-type"
       }
      ],
-     "conditionalCreate": true,
+     "conditionalUpdate": true,
      "searchParam": [
       {
        "name": "identifier",
@@ -152,8 +156,7 @@
        "name": "subject",
        "type": "reference"
       }
-     ],
-     "conditionalUpdate": true
+     ]
     }
    ]
   }

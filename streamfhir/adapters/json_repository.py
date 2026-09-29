@@ -12,7 +12,8 @@ class JsonSiteRepository:
     def all(self) -> Dict[str, Site]:
         with open(self.path, encoding="utf-8") as fh:
             data = json.load(fh)
-        return {s["site_id"]: Site(s["site_id"], s["name"], s["lat"], s["lon"], s["water_body"], s.get("description", ""))
+        return {s["site_id"]: Site(s["site_id"], s["name"], s["lat"], s["lon"], s["water_body"], s.get("description", ""),
+                                s.get("flow", "flowing"))
                 for s in data["sites"]}
 
 

@@ -30,10 +30,12 @@ def test_ac8_bundle_is_transaction_with_conditional_location(sites, now):
     obs = resources(b, "Observation")
     assert len(obs) == 1 + 17  # panel + 17 indicators
     assert all(o["subject"]["reference"] == loc_entry["fullUrl"] for o in obs)
-    # idempotent re-send: every Observation and Media is a conditional create on its record identifier
+    # idempotent re-send + review propagation: every Observation and Media is a conditional update
     for e in b["entry"]:
         if e["resource"]["resourceType"] in ("Observation", "Media"):
-            assert e["request"]["ifNoneExist"].startswith("identifier=")
+            rt = e["resource"]["resourceType"]
+            assert e["request"]["method"] == "PUT" and e["request"]["url"].startswith(rt + "?identifier=")
+            assert "#" not in e["request"]["url"]
         if e["resource"]["resourceType"] == "Provenance":
             assert e["request"]["method"] == "PUT" and e["request"]["url"] == "Provenance/" + e["resource"]["id"]
 
@@ -116,7 +118,8 @@ def test_ac9_every_streamfhir_code_is_published(sites, now):
 
 
 def test_published_codesystems_match_catalogue():
-    for cs in codesystem_resources():
+    from streamfhir.adapters.fhir_mapper import conformance_resources
+    for cs in [r for r in conformance_resources() if r["resourceType"] == "CodeSystem"]:
         with open(os.path.join(ROOT, "fhir", "CodeSystem-%s.json" % cs["id"])) as fh:
             assert json.load(fh) == cs, "run: python3 -m streamfhir build-fhir"
 
@@ -159,10 +162,11 @@ def test_loinc_nitrate_only_when_expressed_as_no3(sites, now):
 
 def test_reviewer_decisions_change_status_and_provenance(sites, now):
     report = validate_record(make_record(values={"ph": 4.2}), sites, now)
-    ok = mapper().assessment_bundle(report, sites["S-TEST"], "confirm")
+    ok = mapper().assessment_bundle(report, sites["S-TEST"], "confirm", "site-visit")
     assert {o["status"] for o in resources(ok, "Observation")} == {"final"}
     roles = [a["type"]["coding"][0]["code"] for a in resources(ok, "Provenance")[0]["agent"]]
     assert roles == ["author", "assembler", "verifier"]
+    assert "site-visit" in resources(ok, "Provenance")[0]["agent"][2]["who"]["display"]
     bad = mapper().assessment_bundle(report, sites["S-TEST"], "reject")
     assert {o["status"] for o in resources(bad, "Observation")} == {"entered-in-error"}
 
@@ -183,7 +187,8 @@ def test_flag_is_traceable_expiring_and_updatable(sites, now):
 
 def test_stand_down_sets_same_flag_inactive(sites, now):
     risk = evaluate_site("S-TEST", [validate_record(make_record(), sites, now)], as_of=now)
-    sd = mapper().stand_down_bundle(risk, sites["S-TEST"])
+    sd = mapper().stand_down_bundle(risk, sites["S-TEST"], "2026-09-20T09:30:00+01:00")
     flag_entry = [e for e in sd["entry"] if e["resource"]["resourceType"] == "Flag"][0]
     assert flag_entry["resource"]["status"] == "inactive"
+    assert flag_entry["resource"]["period"]["start"] == "2026-09-20T09:30:00+01:00"  # original start kept
     assert flag_entry["request"]["url"].endswith("|S-TEST")

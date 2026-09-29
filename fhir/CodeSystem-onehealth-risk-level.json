@@ -1,14 +1,23 @@
 {
  "resourceType": "CodeSystem",
  "id": "onehealth-risk-level",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>CodeSystem: StreamFHIR health hazard levels</p></div>"
+ },
  "url": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-level",
- "version": "0.2.0",
+ "version": "0.3.0",
  "name": "OneHealthRiskLevel",
  "title": "StreamFHIR health hazard levels",
  "status": "draft",
  "experimental": true,
  "date": "2026-09-29",
  "publisher": "StreamFHIR hackathon prototype",
+ "contact": [
+  {
+   "name": "StreamFHIR team"
+  }
+ ],
  "description": "Site-level health hazard levels computed by the StreamFHIR rule engine. Example canonical URL; these are NOT official HL7, LOINC or SNOMED CT codes.",
  "jurisdiction": [
   {
