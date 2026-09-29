@@ -441,7 +441,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:3c41cbc5-4f0e-49d7-9331-93a67386f15c",
+      "fullUrl": "urn:uuid:e81cac23-97ec-4b5d-843f-2c737c0d36ef",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -493,7 +493,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:e61dd349-6cef-4a5b-84c2-27486f2bcdf6",
+      "fullUrl": "urn:uuid:59ba27f1-caea-4afb-888e-afbb64498247",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -539,7 +539,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:72ebfd00-c6bb-4afa-aa35-dd1235edb62e",
+      "fullUrl": "urn:uuid:190319ed-3766-42dd-bab3-db971c26b116",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -582,6 +582,30 @@
           "type": "Observation",
           "display": "Citizen assessment SYN-004"
          }
+        },
+        {
+         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+         "valueCodeableConcept": {
+          "coding": [
+           {
+            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+            "code": "R4",
+            "display": "Sewage signal"
+           }
+          ]
+         }
+        },
+        {
+         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+         "valueCodeableConcept": {
+          "coding": [
+           {
+            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+            "code": "R6",
+            "display": "People in contact with affected water"
+           }
+          ]
+         }
         }
        ],
        "identifier": [
@@ -613,7 +637,7 @@
         "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:3c41cbc5-4f0e-49d7-9331-93a67386f15c",
+        "reference": "urn:uuid:e81cac23-97ec-4b5d-843f-2c737c0d36ef",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -621,7 +645,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:e61dd349-6cef-4a5b-84c2-27486f2bcdf6",
+        "reference": "urn:uuid:59ba27f1-caea-4afb-888e-afbb64498247",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -631,7 +655,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:4ec33b92-493d-444f-a352-ebc4df1c251f",
+      "fullUrl": "urn:uuid:9975df25-22e8-45e2-a169-53282f05c0b6",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -655,10 +679,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:72ebfd00-c6bb-4afa-aa35-dd1235edb62e"
+         "reference": "urn:uuid:190319ed-3766-42dd-bab3-db971c26b116"
         }
        ],
-       "recorded": "2026-09-29T06:35:05+00:00",
+       "recorded": "2026-09-29T10:04:36+00:00",
        "activity": {
         "coding": [
          {
@@ -680,7 +704,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:e61dd349-6cef-4a5b-84c2-27486f2bcdf6",
+          "reference": "urn:uuid:59ba27f1-caea-4afb-888e-afbb64498247",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -907,7 +931,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:2daab13f-9a95-4ced-a348-069784170c48",
+      "fullUrl": "urn:uuid:6562042c-4ddb-46c1-a08b-32c917d2411c",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -959,7 +983,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:b3bcf294-8dc0-4d8a-b75d-dfd0505432a5",
+      "fullUrl": "urn:uuid:5eda0718-94a7-4723-b6c0-462340c2f932",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -1005,7 +1029,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:88e40f17-a5a7-457f-a7a0-bf539a3ac8c9",
+      "fullUrl": "urn:uuid:0be1c750-0a24-4d34-9339-d3ec984ad449",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1036,6 +1060,30 @@
           },
           "type": "Observation",
           "display": "Citizen assessment SYN-006"
+         }
+        },
+        {
+         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+         "valueCodeableConcept": {
+          "coding": [
+           {
+            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+            "code": "R3",
+            "display": "Possible cyanobacterial bloom"
+           }
+          ]
+         }
+        },
+        {
+         "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+         "valueCodeableConcept": {
+          "coding": [
+           {
+            "system": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule",
+            "code": "R7",
+            "display": "Pets or livestock in contact with affected water"
+           }
+          ]
          }
         }
        ],
@@ -1068,7 +1116,7 @@
         "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:2daab13f-9a95-4ced-a348-069784170c48",
+        "reference": "urn:uuid:6562042c-4ddb-46c1-a08b-32c917d2411c",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1076,7 +1124,7 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:b3bcf294-8dc0-4d8a-b75d-dfd0505432a5",
+        "reference": "urn:uuid:5eda0718-94a7-4723-b6c0-462340c2f932",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1086,7 +1134,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:101131a8-c047-4ebe-8106-609c67ba83da",
+      "fullUrl": "urn:uuid:c976e1d2-0b6e-462f-852d-e4fcdc6f39a2",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1110,10 +1158,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:88e40f17-a5a7-457f-a7a0-bf539a3ac8c9"
+         "reference": "urn:uuid:0be1c750-0a24-4d34-9339-d3ec984ad449"
         }
        ],
-       "recorded": "2026-09-29T06:35:05+00:00",
+       "recorded": "2026-09-29T10:04:36+00:00",
        "activity": {
         "coding": [
          {
@@ -1135,7 +1183,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:b3bcf294-8dc0-4d8a-b75d-dfd0505432a5",
+          "reference": "urn:uuid:5eda0718-94a7-4723-b6c0-462340c2f932",
           "display": "StreamFHIR 0.3.0"
          }
         }

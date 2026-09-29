@@ -25,6 +25,7 @@ CS_INDICATOR = BASE + "/CodeSystem/stream-indicator"
 CS_ANSWER = BASE + "/CodeSystem/stream-answer"
 CS_RISK = BASE + "/CodeSystem/onehealth-risk-level"
 CS_RULE = BASE + "/CodeSystem/onehealth-risk-rule"
+EXT_FLAG_RULE = BASE + "/StructureDefinition/flag-rule"   # coded citation of a fired rule on a Flag
 VS_INDICATOR = BASE + "/ValueSet/stream-indicator"
 PROFILE_PANEL = BASE + "/StructureDefinition/stream-assessment-panel"
 PROFILE_OBS = BASE + "/StructureDefinition/stream-indicator-observation"
@@ -327,7 +328,10 @@ class FhirMapper:
             "text": narrative(text),
             "extension": [{"url": FLAG_DETAIL, "valueReference": _logical(SID_RECORD, rid, "Observation",
                                                                            "Citizen assessment " + rid)}
-                          for rid in evidence],
+                          for rid in evidence] + [
+                {"url": EXT_FLAG_RULE, "valueCodeableConcept": {"coding": [
+                    {"system": CS_RULE, "code": f.rule_id, "display": f.title}]}}
+                for f in hazards if active and f.corroborated],
             "identifier": [{"system": SID_FLAG, "value": site.site_id}],
             "status": "active" if active else "inactive",
             "category": [{"coding": [{"system": FLAG_CATEGORY, "code": "safety", "display": "Safety"}]}],
@@ -446,8 +450,31 @@ def _sd(sd_id: str, url: str, name: str, title: str, description: str, extra: Li
                          + _common_elements() + extra}}
 
 
+def flag_rule_extension() -> Dict[str, Any]:
+    """Extension that cites, as a code from the onehealth-risk-rule CodeSystem, a rule that raised the Flag."""
+    return {
+        "resourceType": "StructureDefinition", "id": "flag-rule", "url": EXT_FLAG_RULE, "version": VERSION,
+        "name": "FlagRule", "title": "StreamFHIR rule cited by a Flag", "status": "draft", "experimental": True,
+        "date": DATE, "description": "A corroborated StreamFHIR health-hazard rule that raised this Flag, coded from the "
+        "onehealth-risk-rule CodeSystem. One extension per rule. Example canonical, prototype only.",
+        "fhirVersion": "4.0.1", "kind": "complex-type", "abstract": False,
+        "context": [{"type": "element", "expression": "Flag"}], "type": "Extension",
+        "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension", "derivation": "constraint",
+        "differential": {"element": [
+            {"id": "Extension", "path": "Extension", "short": "Rule that raised the Flag", "min": 0, "max": "*"},
+            {"id": "Extension.extension", "path": "Extension.extension", "max": "0"},
+            {"id": "Extension.url", "path": "Extension.url", "fixedUri": EXT_FLAG_RULE},
+            {"id": "Extension.value[x]", "path": "Extension.value[x]", "min": 1,
+             "type": [{"code": "CodeableConcept"}]},
+            {"id": "Extension.value[x].coding", "path": "Extension.value[x].coding", "min": 1, "max": "1"},
+            {"id": "Extension.value[x].coding.system", "path": "Extension.value[x].coding.system", "min": 1,
+             "fixedUri": CS_RULE},
+            {"id": "Extension.value[x].coding.code", "path": "Extension.value[x].coding.code", "min": 1},
+        ]}}
+
+
 def structuredefinition_resources() -> List[Dict[str, Any]]:
-    return [
+    return [flag_rule_extension(),
         _sd("stream-assessment-panel", PROFILE_PANEL, "StreamAssessmentPanel", "Citizen stream assessment panel",
             "One citizen visit to a stream site: groups the indicator Observations via hasMember and carries no value. "
             "Example canonical, prototype only.",

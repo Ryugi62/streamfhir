@@ -1,0 +1,76 @@
+{
+ "resourceType": "StructureDefinition",
+ "id": "flag-rule",
+ "text": {
+  "status": "generated",
+  "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StructureDefinition: StreamFHIR rule cited by a Flag</p></div>"
+ },
+ "url": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule",
+ "version": "0.3.0",
+ "name": "FlagRule",
+ "title": "StreamFHIR rule cited by a Flag",
+ "status": "draft",
+ "experimental": true,
+ "date": "2026-09-29",
+ "description": "A corroborated StreamFHIR health-hazard rule that raised this Flag, coded from the onehealth-risk-rule CodeSystem. One extension per rule. Example canonical, prototype only.",
+ "fhirVersion": "4.0.1",
+ "kind": "complex-type",
+ "abstract": false,
+ "context": [
+  {
+   "type": "element",
+   "expression": "Flag"
+  }
+ ],
+ "type": "Extension",
+ "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+ "derivation": "constraint",
+ "differential": {
+  "element": [
+   {
+    "id": "Extension",
+    "path": "Extension",
+    "short": "Rule that raised the Flag",
+    "min": 0,
+    "max": "*"
+   },
+   {
+    "id": "Extension.extension",
+    "path": "Extension.extension",
+    "max": "0"
+   },
+   {
+    "id": "Extension.url",
+    "path": "Extension.url",
+    "fixedUri": "https://example.org/fhir/streamfhir/StructureDefinition/flag-rule"
+   },
+   {
+    "id": "Extension.value[x]",
+    "path": "Extension.value[x]",
+    "min": 1,
+    "type": [
+     {
+      "code": "CodeableConcept"
+     }
+    ]
+   },
+   {
+    "id": "Extension.value[x].coding",
+    "path": "Extension.value[x].coding",
+    "min": 1,
+    "max": "1"
+   },
+   {
+    "id": "Extension.value[x].coding.system",
+    "path": "Extension.value[x].coding.system",
+    "min": 1,
+    "fixedUri": "https://example.org/fhir/streamfhir/CodeSystem/onehealth-risk-rule"
+   },
+   {
+    "id": "Extension.value[x].coding.code",
+    "path": "Extension.value[x].coding.code",
+    "min": 1
+   }
+  ]
+ }
+}

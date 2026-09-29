@@ -192,3 +192,29 @@ def test_stand_down_sets_same_flag_inactive(sites, now):
     assert flag_entry["resource"]["status"] == "inactive"
     assert flag_entry["resource"]["period"]["start"] == "2026-09-20T09:30:00+01:00"  # original start kept
     assert flag_entry["request"]["url"].endswith("|S-TEST")
+
+
+def test_flag_cites_fired_hazard_rules_as_codes(sites, now):
+    from streamfhir.adapters.fhir_mapper import CS_RULE, EXT_FLAG_RULE, conformance_resources
+    r = make_record(values={"odour": "sewage", "people-contact": True})
+    risk = evaluate_site("S-TEST", [validate_record(r, sites, now)], as_of=now)
+    flag = resources(mapper().risk_bundle(risk, sites["S-TEST"]), "Flag")[0]
+    rule_ext = [x for x in flag["extension"] if x["url"] == EXT_FLAG_RULE]
+    codes = [x["valueCodeableConcept"]["coding"][0] for x in rule_ext]
+    expected = {f.rule_id for f in risk.fired if f.kind == "hazard" and f.corroborated}
+    assert {"R4", "R6"} <= expected
+    assert {c["code"] for c in codes} == expected
+    assert all(c["system"] == CS_RULE for c in codes)
+    assert flag["extension"][0]["url"] == "http://hl7.org/fhir/StructureDefinition/flag-detail"
+    sd = [x for x in conformance_resources() if x.get("url") == EXT_FLAG_RULE][0]
+    assert sd["type"] == "Extension" and sd["context"] == [{"type": "element", "expression": "Flag"}]
+    with open(os.path.join(ROOT, "fhir", "StructureDefinition-%s.json" % sd["id"])) as fh:
+        assert json.load(fh) == sd, "run: python3 -m streamfhir build-fhir"
+
+
+def test_stand_down_flag_cites_no_rules(sites, now):
+    from streamfhir.adapters.fhir_mapper import EXT_FLAG_RULE
+    risk = evaluate_site("S-TEST", [validate_record(make_record(), sites, now)], as_of=now)
+    sd = mapper().stand_down_bundle(risk, sites["S-TEST"], "2026-09-20T09:30:00+01:00")
+    flag = resources(sd, "Flag")[0]
+    assert all(x["url"] != EXT_FLAG_RULE for x in flag.get("extension", []))
