@@ -1,0 +1,512 @@
+{
+ "report": {
+  "record_id": "IT-ARPAC-Sn-2025-10-01T0920",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:a97b833e-bccf-4e5b-be71-7a32d5ffa8c1",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Benevento · S., Masseria Lepore (Deposito AMIU) (IT-ARPAC-Sn)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "IT-ARPAC-Sn"
+      }
+     ],
+     "status": "active",
+     "name": "Benevento · S., Masseria Lepore (Deposito AMIU)",
+     "description": "Real Campania river monitoring station Sn (ARPAC), Benevento",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 14.8069634219,
+      "latitude": 41.1174626488
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|IT-ARPAC-Sn"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d99e536b-ba49-4ef4-8020-d0ec027ccdca",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:e0511e69-2dcd-4fa0-8af4-b598576bc202",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Benevento · S., Masseria Lepore (Deposito AMIU) on 2025-10-01T09:20:00+02:00: 3 indicators (final, record IT-ARPAC-Sn-2025-10-01T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Sn-2025-10-01T0920"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:a97b833e-bccf-4e5b-be71-7a32d5ffa8c1",
+      "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
+     },
+     "effectiveDateTime": "2025-10-01T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:6e2398d4-fa31-4e3b-a3d6-78f8e443e0e0"
+      },
+      {
+       "reference": "urn:uuid:3de87b04-b4c6-480d-9064-cde8b991d18a"
+      },
+      {
+       "reference": "urn:uuid:85e363bc-2d39-4b38-827f-b04e72dab4c6"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Sn-2025-10-01T0920"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:6e2398d4-fa31-4e3b-a3d6-78f8e443e0e0",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 4.77 mg/L at Benevento · S., Masseria Lepore (Deposito AMIU) (final, record IT-ARPAC-Sn-2025-10-01T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Sn-2025-10-01T0920.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:a97b833e-bccf-4e5b-be71-7a32d5ffa8c1",
+      "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
+     },
+     "effectiveDateTime": "2025-10-01T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 4.77,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Sn-2025-10-01T0920.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:3de87b04-b4c6-480d-9064-cde8b991d18a",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-N at Benevento · S., Masseria Lepore (Deposito AMIU) (final, record IT-ARPAC-Sn-2025-10-01T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Sn-2025-10-01T0920.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:a97b833e-bccf-4e5b-be71-7a32d5ffa8c1",
+      "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
+     },
+     "effectiveDateTime": "2025-10-01T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-N",
+        "display": "Nitrate reporting basis: as-N"
+       }
+      ],
+      "text": "as-N"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Sn-2025-10-01T0920.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:85e363bc-2d39-4b38-827f-b04e72dab4c6",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 15.5 °C at Benevento · S., Masseria Lepore (Deposito AMIU) (final, record IT-ARPAC-Sn-2025-10-01T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Sn-2025-10-01T0920.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:a97b833e-bccf-4e5b-be71-7a32d5ffa8c1",
+      "display": "Benevento · S., Masseria Lepore (Deposito AMIU)"
+     },
+     "effectiveDateTime": "2025-10-01T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 15.5,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Sn-2025-10-01T0920.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:f04cca26-f1a7-4416-9b14-533866210602",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-IT-ARPAC-Sn-2025-10-01T0920",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-Sn-2025-10-01T0920 was imported from ARPA Campania open data, Monitoraggio Fiumi, station Sn and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:e0511e69-2dcd-4fa0-8af4-b598576bc202"
+      },
+      {
+       "reference": "urn:uuid:6e2398d4-fa31-4e3b-a3d6-78f8e443e0e0"
+      },
+      {
+       "reference": "urn:uuid:3de87b04-b4c6-480d-9064-cde8b991d18a"
+      },
+      {
+       "reference": "urn:uuid:85e363bc-2d39-4b38-827f-b04e72dab4c6"
+      }
+     ],
+     "occurredDateTime": "2025-10-01T09:20:00+02:00",
+     "recorded": "2026-09-29T13:49:36+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "ARPAC"
+        },
+        "display": "Monitoring organisation ARPAC",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:d99e536b-ba49-4ef4-8020-d0ec027ccdca",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "IT-ARPAC-Sn-2025-10-01T0920"
+        },
+        "display": "Original source record (ARPA Campania open data, Monitoraggio Fiumi, station Sn)"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-IT-ARPAC-Sn-2025-10-01T0920"
+    }
+   }
+  ]
+ }
+}

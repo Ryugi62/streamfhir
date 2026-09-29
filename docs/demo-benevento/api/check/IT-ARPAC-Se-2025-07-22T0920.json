@@ -1,0 +1,539 @@
+{
+ "report": {
+  "record_id": "IT-ARPAC-Se-2025-07-22T0920",
+  "status": "review",
+  "issues": [
+   {
+    "severity": "warning",
+    "field": "source",
+    "code": "source-note",
+    "message": "From the source system: PH has no numeric value in the source ('n.d')."
+   }
+  ]
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Benevento · Serretelle, Ponte Corvo (IT-ARPAC-Se)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "IT-ARPAC-Se"
+      }
+     ],
+     "status": "active",
+     "name": "Benevento · Serretelle, Ponte Corvo",
+     "description": "Real Campania river monitoring station Se (ARPAC), Benevento",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 14.7498179688,
+      "latitude": 41.1093076668
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|IT-ARPAC-Se"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:ce987158-70e5-4b9f-8ae6-910a08be81d0",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:947d8ee0-f401-4165-9932-8143547697b7",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Benevento · Serretelle, Ponte Corvo on 2025-07-22T09:20:00+02:00: 3 indicators (preliminary, record IT-ARPAC-Se-2025-07-22T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Se-2025-07-22T0920"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "display": "Benevento · Serretelle, Ponte Corvo"
+     },
+     "effectiveDateTime": "2025-07-22T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:89c39397-11a0-4692-a58d-265c232d5efa"
+      },
+      {
+       "reference": "urn:uuid:492f9207-9260-4eac-adb3-d55bd689ecc7"
+      },
+      {
+       "reference": "urn:uuid:9a23b10c-b04f-455c-9ea4-709b91f36888"
+      }
+     ],
+     "note": [
+      {
+       "text": "Needs review: From the source system: PH has no numeric value in the source ('n.d')."
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Se-2025-07-22T0920"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:89c39397-11a0-4692-a58d-265c232d5efa",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 1.0 mg/L at Benevento · Serretelle, Ponte Corvo (preliminary, record IT-ARPAC-Se-2025-07-22T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Se-2025-07-22T0920.nitrate"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "display": "Benevento · Serretelle, Ponte Corvo"
+     },
+     "effectiveDateTime": "2025-07-22T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 1.0,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     },
+     "note": [
+      {
+       "text": "Needs review: From the source system: PH has no numeric value in the source ('n.d')."
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Se-2025-07-22T0920.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:492f9207-9260-4eac-adb3-d55bd689ecc7",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-N at Benevento · Serretelle, Ponte Corvo (preliminary, record IT-ARPAC-Se-2025-07-22T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Se-2025-07-22T0920.nitrate-basis"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "display": "Benevento · Serretelle, Ponte Corvo"
+     },
+     "effectiveDateTime": "2025-07-22T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-N",
+        "display": "Nitrate reporting basis: as-N"
+       }
+      ],
+      "text": "as-N"
+     },
+     "note": [
+      {
+       "text": "Needs review: From the source system: PH has no numeric value in the source ('n.d')."
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Se-2025-07-22T0920.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:9a23b10c-b04f-455c-9ea4-709b91f36888",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 23.6 °C at Benevento · Serretelle, Ponte Corvo (preliminary, record IT-ARPAC-Se-2025-07-22T0920)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-Se-2025-07-22T0920.water-temperature"
+      }
+     ],
+     "status": "preliminary",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:cf9b3793-48bf-4230-9cd0-806c72f65820",
+      "display": "Benevento · Serretelle, Ponte Corvo"
+     },
+     "effectiveDateTime": "2025-07-22T09:20:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 23.6,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     },
+     "note": [
+      {
+       "text": "Needs review: From the source system: PH has no numeric value in the source ('n.d')."
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-Se-2025-07-22T0920.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:5365b0e6-e6c5-4e63-bc66-f1a185ba34af",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-IT-ARPAC-Se-2025-07-22T0920",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-Se-2025-07-22T0920 was imported from ARPA Campania open data, Monitoraggio Fiumi, station Se and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:947d8ee0-f401-4165-9932-8143547697b7"
+      },
+      {
+       "reference": "urn:uuid:89c39397-11a0-4692-a58d-265c232d5efa"
+      },
+      {
+       "reference": "urn:uuid:492f9207-9260-4eac-adb3-d55bd689ecc7"
+      },
+      {
+       "reference": "urn:uuid:9a23b10c-b04f-455c-9ea4-709b91f36888"
+      }
+     ],
+     "occurredDateTime": "2025-07-22T09:20:00+02:00",
+     "recorded": "2026-09-29T13:49:36+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "ARPAC"
+        },
+        "display": "Monitoring organisation ARPAC",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:ce987158-70e5-4b9f-8ae6-910a08be81d0",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "IT-ARPAC-Se-2025-07-22T0920"
+        },
+        "display": "Original source record (ARPA Campania open data, Monitoraggio Fiumi, station Se)"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-IT-ARPAC-Se-2025-07-22T0920"
+    }
+   }
+  ]
+ }
+}

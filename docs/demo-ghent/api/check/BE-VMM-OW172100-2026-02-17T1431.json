@@ -1,0 +1,598 @@
+{
+ "report": {
+  "record_id": "BE-VMM-OW172100-2026-02-17T1431",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Ghent · Bovenschelde in Gent (BE-VMM-OW172100)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "BE-VMM-OW172100"
+      }
+     ],
+     "status": "active",
+     "name": "Ghent · Bovenschelde in Gent",
+     "description": "Real Flemish river monitoring station OW172100 (VMM)",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 3.72403,
+      "latitude": 51.0016
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|BE-VMM-OW172100"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:f62e256f-b827-45c0-a978-2115af8e77cc",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:a854d9e9-4c82-4a3b-9421-2ad80eaa018b",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Ghent · Bovenschelde in Gent on 2026-02-17T14:31:39+01:00: 4 indicators (final, record BE-VMM-OW172100-2026-02-17T1431)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW172100-2026-02-17T1431"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "display": "Ghent · Bovenschelde in Gent"
+     },
+     "effectiveDateTime": "2026-02-17T14:31:39+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:b506c2da-5bcf-4117-b1d2-48c03ad0c43e"
+      },
+      {
+       "reference": "urn:uuid:0a8a0e6b-a24e-4ecb-a98d-1a972ca1f701"
+      },
+      {
+       "reference": "urn:uuid:b634124b-d6fe-4235-acad-ca78885ba65c"
+      },
+      {
+       "reference": "urn:uuid:81275f10-dea9-4328-b1a9-d2695d6190eb"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW172100-2026-02-17T1431"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b506c2da-5bcf-4117-b1d2-48c03ad0c43e",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 5.9 mg/L at Ghent · Bovenschelde in Gent (final, record BE-VMM-OW172100-2026-02-17T1431)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW172100-2026-02-17T1431.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "display": "Ghent · Bovenschelde in Gent"
+     },
+     "effectiveDateTime": "2026-02-17T14:31:39+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 5.9,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW172100-2026-02-17T1431.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:0a8a0e6b-a24e-4ecb-a98d-1a972ca1f701",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-N at Ghent · Bovenschelde in Gent (final, record BE-VMM-OW172100-2026-02-17T1431)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW172100-2026-02-17T1431.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "display": "Ghent · Bovenschelde in Gent"
+     },
+     "effectiveDateTime": "2026-02-17T14:31:39+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-N",
+        "display": "Nitrate reporting basis: as-N"
+       }
+      ],
+      "text": "as-N"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW172100-2026-02-17T1431.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:b634124b-d6fe-4235-acad-ca78885ba65c",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 7.81 pH at Ghent · Bovenschelde in Gent (final, record BE-VMM-OW172100-2026-02-17T1431)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW172100-2026-02-17T1431.ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "display": "Ghent · Bovenschelde in Gent"
+     },
+     "effectiveDateTime": "2026-02-17T14:31:39+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 7.81,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW172100-2026-02-17T1431.ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:81275f10-dea9-4328-b1a9-d2695d6190eb",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 6.9 °C at Ghent · Bovenschelde in Gent (final, record BE-VMM-OW172100-2026-02-17T1431)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "BE-VMM-OW172100-2026-02-17T1431.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:e48dbce6-6b10-4029-b01f-80e607fe46b8",
+      "display": "Ghent · Bovenschelde in Gent"
+     },
+     "effectiveDateTime": "2026-02-17T14:31:39+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "VMM"
+       },
+       "display": "Monitoring organisation VMM",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 6.9,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|BE-VMM-OW172100-2026-02-17T1431.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:46f0720f-281e-4e2f-a57f-053daeeb55da",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-BE-VMM-OW172100-2026-02-17T1431",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record BE-VMM-OW172100-2026-02-17T1431 was imported from VMM Databank waterkwaliteit, station OW172100 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:a854d9e9-4c82-4a3b-9421-2ad80eaa018b"
+      },
+      {
+       "reference": "urn:uuid:b506c2da-5bcf-4117-b1d2-48c03ad0c43e"
+      },
+      {
+       "reference": "urn:uuid:0a8a0e6b-a24e-4ecb-a98d-1a972ca1f701"
+      },
+      {
+       "reference": "urn:uuid:b634124b-d6fe-4235-acad-ca78885ba65c"
+      },
+      {
+       "reference": "urn:uuid:81275f10-dea9-4328-b1a9-d2695d6190eb"
+      }
+     ],
+     "occurredDateTime": "2026-02-17T14:31:39+01:00",
+     "recorded": "2026-09-29T13:49:36+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "VMM"
+        },
+        "display": "Monitoring organisation VMM",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:f62e256f-b827-45c0-a978-2115af8e77cc",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "BE-VMM-OW172100-2026-02-17T1431"
+        },
+        "display": "Original source record (VMM Databank waterkwaliteit, station OW172100)"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-BE-VMM-OW172100-2026-02-17T1431"
+    }
+   }
+  ]
+ }
+}

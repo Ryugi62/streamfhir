@@ -1,0 +1,346 @@
+{
+ "report": {
+  "record_id": "IT-ARPAC-S7-2026-01-14T1040",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:17e1657b-80e7-427a-8e8c-6dffd033eda2",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Benevento · Sabato, Ponte SP3 (IT-ARPAC-S7)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "IT-ARPAC-S7"
+      }
+     ],
+     "status": "active",
+     "name": "Benevento · Sabato, Ponte SP3",
+     "description": "Real Campania river monitoring station S7 (ARPAC), Benevento",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 14.782937,
+      "latitude": 41.11327
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|IT-ARPAC-S7"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:7f380e6b-800e-48b2-93d7-acd7e0fcf516",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:29228913-bb29-4ccd-a6ee-f70bbb528417",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Benevento · Sabato, Ponte SP3 on 2026-01-14T10:40:00+01:00: 1 indicators (final, record IT-ARPAC-S7-2026-01-14T1040)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-S7-2026-01-14T1040"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:17e1657b-80e7-427a-8e8c-6dffd033eda2",
+      "display": "Benevento · Sabato, Ponte SP3"
+     },
+     "effectiveDateTime": "2026-01-14T10:40:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:33553d22-eedc-4291-b684-c43c1c6e1212"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-S7-2026-01-14T1040"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:33553d22-eedc-4291-b684-c43c1c6e1212",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 8.0 °C at Benevento · Sabato, Ponte SP3 (final, record IT-ARPAC-S7-2026-01-14T1040)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-S7-2026-01-14T1040.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:17e1657b-80e7-427a-8e8c-6dffd033eda2",
+      "display": "Benevento · Sabato, Ponte SP3"
+     },
+     "effectiveDateTime": "2026-01-14T10:40:00+01:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 8.0,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-S7-2026-01-14T1040.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:cf2a10d6-5fc5-4a56-871c-0056cd9a630b",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-IT-ARPAC-S7-2026-01-14T1040",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-S7-2026-01-14T1040 was imported from ARPA Campania open data, Monitoraggio Fiumi, station S7 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:29228913-bb29-4ccd-a6ee-f70bbb528417"
+      },
+      {
+       "reference": "urn:uuid:33553d22-eedc-4291-b684-c43c1c6e1212"
+      }
+     ],
+     "occurredDateTime": "2026-01-14T10:40:00+01:00",
+     "recorded": "2026-09-29T13:49:36+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "ARPAC"
+        },
+        "display": "Monitoring organisation ARPAC",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:7f380e6b-800e-48b2-93d7-acd7e0fcf516",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "IT-ARPAC-S7-2026-01-14T1040"
+        },
+        "display": "Original source record (ARPA Campania open data, Monitoraggio Fiumi, station S7)"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-IT-ARPAC-S7-2026-01-14T1040"
+    }
+   }
+  ]
+ }
+}

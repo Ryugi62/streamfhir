@@ -69,3 +69,8 @@ Why the slicing (v0.4): with the old required binding on the whole `Observation.
 | Step | Command | Result |
 |---|---|---|
 | 28. Real FreshWater Watch volunteer record FWW-304472 (Rio Vouga, Aveiro; blue-green scum, photo, animal access) and the Flag it raises | `python3 -m streamfhir import-fww`, then ad-hoc `$validate` (validation only, nothing stored; subject pointed at `Location/54630` for reference resolution) | panel, `surface` and `animal-contact` Observations vs profiles: **0 errors, 0 warnings**; the real-data Flag (level `high`, R3 + R7) vs `stream-site-flag`: **0 errors, 0 warnings** |
+
+## v0.7 — two more OneAquaHealth cities' open agency feeds (2026-09-29, ~23:00 KST)
+| Step | Command | Result |
+|---|---|---|
+| 29. Ghent (VMM) and Benevento (ARPA Campania) samplings through the same pipeline | `python3 -m streamfhir import-ghent`, `import-benevento`, then ad-hoc `$validate` (validation only) | Ghent `BE-VMM-OW168900-2026-09-09T1209` nitrate (as N) and pH Observations: **0 errors, 0 warnings**; Benevento `IT-ARPAC-Ta3-2025-05-27T1130` nitrate, nitrate basis, pH and temperature Observations: **0 errors, 0 warnings** |

@@ -1,0 +1,598 @@
+{
+ "report": {
+  "record_id": "IT-ARPAC-C9-2025-05-27T1045",
+  "status": "ok",
+  "issues": []
+ },
+ "bundle": {
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+   {
+    "fullUrl": "urn:uuid:9d89c1a8-9610-4ef7-b406-688076d51048",
+    "resource": {
+     "resourceType": "Location",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Stream monitoring site Benevento · Calore, Masseria Di Gioia (IT-ARPAC-C9)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/site",
+       "value": "IT-ARPAC-C9"
+      }
+     ],
+     "status": "active",
+     "name": "Benevento · Calore, Masseria Di Gioia",
+     "description": "Real Campania river monitoring station C9 (ARPAC), Foglianise",
+     "mode": "instance",
+     "physicalType": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code": "area",
+        "display": "Area"
+       }
+      ]
+     },
+     "position": {
+      "longitude": 14.7173506706,
+      "latitude": 41.153299934
+     }
+    },
+    "request": {
+     "method": "POST",
+     "url": "Location",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/site|IT-ARPAC-C9"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:4587251b-7d0e-4af9-938a-3cf92f03c71b",
+    "resource": {
+     "resourceType": "Device",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>StreamFHIR mapper and rule engine 0.5.1</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/device",
+       "value": "streamfhir-rule-engine"
+      }
+     ],
+     "deviceName": [
+      {
+       "name": "StreamFHIR mapper and rule engine",
+       "type": "user-friendly-name"
+      }
+     ],
+     "version": [
+      {
+       "value": "0.5.1"
+      }
+     ]
+    },
+    "request": {
+     "method": "POST",
+     "url": "Device",
+     "ifNoneExist": "identifier=https://example.org/fhir/streamfhir/sid/device|streamfhir-rule-engine"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:beffadb9-2441-4246-8762-626bac1b6b92",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-assessment-panel"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Agency sampling of Benevento · Calore, Masseria Di Gioia on 2025-05-27T10:45:00+02:00: 4 indicators (final, record IT-ARPAC-C9-2025-05-27T1045)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-C9-2025-05-27T1045"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "stream-assessment",
+        "display": "Citizen stream assessment panel"
+       }
+      ],
+      "text": "Citizen stream assessment panel"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d89c1a8-9610-4ef7-b406-688076d51048",
+      "display": "Benevento · Calore, Masseria Di Gioia"
+     },
+     "effectiveDateTime": "2025-05-27T10:45:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "hasMember": [
+      {
+       "reference": "urn:uuid:d4c40895-f6fa-45e8-85c6-18928600495d"
+      },
+      {
+       "reference": "urn:uuid:15a60974-67d9-40b9-b3d9-a812f259fc5b"
+      },
+      {
+       "reference": "urn:uuid:44112c88-c1ea-4926-ad62-a2dd6d3ea10f"
+      },
+      {
+       "reference": "urn:uuid:80b11420-b281-45d7-b1d4-036d6a4d96be"
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-C9-2025-05-27T1045"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:d4c40895-f6fa-45e8-85c6-18928600495d",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate: 1.24 mg/L at Benevento · Calore, Masseria Di Gioia (final, record IT-ARPAC-C9-2025-05-27T1045)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-C9-2025-05-27T1045.nitrate"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate",
+        "display": "Nitrate"
+       }
+      ],
+      "text": "Nitrate"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d89c1a8-9610-4ef7-b406-688076d51048",
+      "display": "Benevento · Calore, Masseria Di Gioia"
+     },
+     "effectiveDateTime": "2025-05-27T10:45:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 1.24,
+      "unit": "mg/L",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg/L"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-C9-2025-05-27T1045.nitrate"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:15a60974-67d9-40b9-b3d9-a812f259fc5b",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Nitrate reporting basis: as-N at Benevento · Calore, Masseria Di Gioia (final, record IT-ARPAC-C9-2025-05-27T1045)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-C9-2025-05-27T1045.nitrate-basis"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "nitrate-basis",
+        "display": "Nitrate reporting basis"
+       }
+      ],
+      "text": "Nitrate reporting basis"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d89c1a8-9610-4ef7-b406-688076d51048",
+      "display": "Benevento · Calore, Masseria Di Gioia"
+     },
+     "effectiveDateTime": "2025-05-27T10:45:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueCodeableConcept": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-answer",
+        "code": "nitrate-basis-as-N",
+        "display": "Nitrate reporting basis: as-N"
+       }
+      ],
+      "text": "as-N"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-C9-2025-05-27T1045.nitrate-basis"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:44112c88-c1ea-4926-ad62-a2dd6d3ea10f",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>pH: 8.78 pH at Benevento · Calore, Masseria Di Gioia (final, record IT-ARPAC-C9-2025-05-27T1045)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-C9-2025-05-27T1045.ph"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "ph",
+        "display": "pH"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3152-01-0",
+        "display": "pH"
+       }
+      ],
+      "text": "pH"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d89c1a8-9610-4ef7-b406-688076d51048",
+      "display": "Benevento · Calore, Masseria Di Gioia"
+     },
+     "effectiveDateTime": "2025-05-27T10:45:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 8.78,
+      "unit": "pH",
+      "system": "http://unitsofmeasure.org",
+      "code": "[pH]"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-C9-2025-05-27T1045.ph"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:80b11420-b281-45d7-b1d4-036d6a4d96be",
+    "resource": {
+     "resourceType": "Observation",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ],
+      "profile": [
+       "https://example.org/fhir/streamfhir/StructureDefinition/stream-indicator-observation"
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Water temperature: 19.6 °C at Benevento · Calore, Masseria Di Gioia (final, record IT-ARPAC-C9-2025-05-27T1045)</p></div>"
+     },
+     "identifier": [
+      {
+       "system": "https://example.org/fhir/streamfhir/sid/record",
+       "value": "IT-ARPAC-C9-2025-05-27T1045.water-temperature"
+      }
+     ],
+     "status": "final",
+     "category": [
+      {
+       "coding": [
+        {
+         "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+        }
+       ]
+      }
+     ],
+     "code": {
+      "coding": [
+       {
+        "system": "https://example.org/fhir/streamfhir/CodeSystem/stream-indicator",
+        "code": "water-temperature",
+        "display": "Water temperature"
+       },
+       {
+        "system": "http://dd.eionet.europa.eu/vocabulary/wise/ObservedProperty",
+        "code": "EEA_3121-01-5",
+        "display": "Water temperature"
+       }
+      ],
+      "text": "Water temperature"
+     },
+     "subject": {
+      "reference": "urn:uuid:9d89c1a8-9610-4ef7-b406-688076d51048",
+      "display": "Benevento · Calore, Masseria Di Gioia"
+     },
+     "effectiveDateTime": "2025-05-27T10:45:00+02:00",
+     "performer": [
+      {
+       "identifier": {
+        "system": "https://example.org/fhir/streamfhir/sid/observer",
+        "value": "ARPAC"
+       },
+       "display": "Monitoring organisation ARPAC",
+       "type": "Organization"
+      }
+     ],
+     "valueQuantity": {
+      "value": 19.6,
+      "unit": "°C",
+      "system": "http://unitsofmeasure.org",
+      "code": "Cel"
+     }
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Observation?identifier=https://example.org/fhir/streamfhir/sid/record|IT-ARPAC-C9-2025-05-27T1045.water-temperature"
+    }
+   },
+   {
+    "fullUrl": "urn:uuid:ee5402c8-48fd-47cd-9c16-b21f4ef4276b",
+    "resource": {
+     "resourceType": "Provenance",
+     "id": "streamfhir-prov-IT-ARPAC-C9-2025-05-27T1045",
+     "meta": {
+      "security": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "U",
+        "display": "unrestricted"
+       }
+      ]
+     },
+     "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Record IT-ARPAC-C9-2025-05-27T1045 was imported from ARPA Campania open data, Monitoraggio Fiumi, station C9 and assembled into FHIR by StreamFHIR 0.5.1</p></div>"
+     },
+     "target": [
+      {
+       "reference": "urn:uuid:beffadb9-2441-4246-8762-626bac1b6b92"
+      },
+      {
+       "reference": "urn:uuid:d4c40895-f6fa-45e8-85c6-18928600495d"
+      },
+      {
+       "reference": "urn:uuid:15a60974-67d9-40b9-b3d9-a812f259fc5b"
+      },
+      {
+       "reference": "urn:uuid:44112c88-c1ea-4926-ad62-a2dd6d3ea10f"
+      },
+      {
+       "reference": "urn:uuid:80b11420-b281-45d7-b1d4-036d6a4d96be"
+      }
+     ],
+     "occurredDateTime": "2025-05-27T10:45:00+02:00",
+     "recorded": "2026-09-29T13:49:36+00:00",
+     "activity": {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+        "code": "CREATE",
+        "display": "create"
+       }
+      ]
+     },
+     "agent": [
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "author",
+          "display": "Author"
+         }
+        ]
+       },
+       "who": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/observer",
+         "value": "ARPAC"
+        },
+        "display": "Monitoring organisation ARPAC",
+        "type": "Organization"
+       }
+      },
+      {
+       "type": {
+        "coding": [
+         {
+          "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+          "code": "assembler",
+          "display": "Assembler"
+         }
+        ]
+       },
+       "who": {
+        "reference": "urn:uuid:4587251b-7d0e-4af9-938a-3cf92f03c71b",
+        "display": "StreamFHIR 0.5.1"
+       }
+      }
+     ],
+     "entity": [
+      {
+       "role": "source",
+       "what": {
+        "identifier": {
+         "system": "https://example.org/fhir/streamfhir/sid/record",
+         "value": "IT-ARPAC-C9-2025-05-27T1045"
+        },
+        "display": "Original source record (ARPA Campania open data, Monitoraggio Fiumi, station C9)"
+       }
+      }
+     ]
+    },
+    "request": {
+     "method": "PUT",
+     "url": "Provenance/streamfhir-prov-IT-ARPAC-C9-2025-05-27T1045"
+    }
+   }
+  ]
+ }
+}

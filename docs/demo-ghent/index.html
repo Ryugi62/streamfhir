@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamFHIR</title>
+<style>
+:root{--blue:#3182F6;--blue-d:#1B64DA;--text:#191F28;--sub:#4E5968;--hint:#5B6470;--bg:#F2F4F6;--card:#FFFFFF;--line:#E5E8EB;
+--ok:#067647;--ok-bg:#E6F6EE;--warn:#9A4A00;--warn-bg:#FFF4E0;--no:#C4161C;--no-bg:#FDECEC;--code:#F9FAFB}
+@media (prefers-color-scheme:dark){:root{--text:#F2F4F6;--sub:#B0B8C1;--hint:#9EA7B1;--bg:#101013;--card:#1C1D22;--line:#2C2E35;
+--ok:#4ADE80;--ok-bg:#12291D;--warn:#FFC266;--warn-bg:#33240B;--no:#FF8A8A;--no-bg:#3A1416;--code:#15161A}}
+*{box-sizing:border-box}
+html{scroll-padding-bottom:96px}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:640px;margin:0 auto;padding:16px 16px 120px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 0 24px}
+.brand{font-weight:800;font-size:18px;letter-spacing:-.2px}
+.brand small{display:block;font-weight:500;font-size:13px;color:var(--hint)}
+nav{white-space:nowrap;flex-shrink:0}
+nav a{color:var(--sub);text-decoration:none;font-size:15px;font-weight:600;padding:8px 8px;border-radius:10px}
+nav a.on{color:var(--blue-d);background:rgba(49,130,246,.10)}
+h1{font-size:26px;line-height:1.3;margin:0 0 8px;letter-spacing:-.4px}
+h2{font-size:22px;margin:0 0 12px;letter-spacing:-.3px}
+.lead{color:var(--sub);margin:0 0 24px}
+.help{font-size:13px;color:var(--hint)}
+section{margin-bottom:24px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+a.card{display:block;color:inherit;text-decoration:none}
+a.card:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.num{font-size:32px;font-weight:800;line-height:1.1;letter-spacing:-.6px}
+.num small{font-size:15px;font-weight:600;color:var(--sub);margin-left:4px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.chip{display:inline-block;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.high,.blocked{color:var(--no);background:var(--no-bg)}
+.moderate,.review{color:var(--warn);background:var(--warn-bg)}
+.low,.ok{color:var(--ok);background:var(--ok-bg)}
+.site-name{font-weight:700;font-size:17px;margin:10px 0 2px}
+.lanes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.lane{background:var(--bg);border-radius:12px;padding:10px 12px}
+.lane b{display:block;font-size:20px}
+.lane span{font-size:13px;color:var(--sub)}
+.banner{border-radius:16px;padding:24px 20px;margin-bottom:12px}
+.banner .big{font-size:28px;font-weight:800;letter-spacing:-.5px;line-height:1.2}
+.banner p{margin:6px 0 0;font-size:15px}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:14px 0;border-top:1px solid var(--line)}
+ul.plain li:first-child{border-top:0}
+.tag{font-size:13px;font-weight:700}
+.tag.yes{color:var(--ok)} .tag.no{color:var(--warn)}
+details{background:var(--card);border-radius:16px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;list-style:none}
+summary::after{content:" +";color:var(--hint)}
+details[open] summary::after{content:" −"}
+pre{background:var(--code);border-radius:12px;padding:12px;overflow:auto;max-height:420px;font-size:12px;line-height:1.45;margin:12px 0 0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:12px}
+td,th{text-align:left;vertical-align:top;padding:8px 6px;border-top:1px solid var(--line)}
+label{display:block;font-weight:700;margin-bottom:8px}
+select,textarea{width:100%;font:inherit;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+textarea{font:13px/1.45 ui-monospace,Menlo,monospace;min-height:220px}
+.cta{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to top,var(--bg) 70%,transparent)}
+.cta button{display:block;width:100%;max-width:608px;margin:0 auto;height:56px;border:0;border-radius:16px;background:var(--blue-d);color:#fff;font-family:inherit;font-weight:700;font-size:17px;line-height:1;cursor:pointer}
+.cta button:active{background:#1957C2}
+.cta button[disabled]{opacity:.5}
+.skel{height:132px;border-radius:16px;margin-bottom:12px;background:linear-gradient(90deg,var(--card),var(--line),var(--card));background-size:200% 100%;animation:sh 1.2s infinite}
+@keyframes sh{to{background-position:-200% 0}}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:inherit;font-size:15px;font-weight:600;color:var(--text);background:var(--bg);border:2px solid transparent;border-radius:12px;padding:12px 14px;cursor:pointer;min-height:48px}
+div[role=radiogroup] .opt{display:block;width:100%;text-align:left;margin-bottom:8px}
+.opt.sel{border-color:var(--blue);color:var(--blue-d);background:rgba(49,130,246,.08)}
+.field{margin-bottom:20px}.field:last-child{margin-bottom:0}
+.in{width:100%;font:inherit;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+input[type=range]{width:100%;accent-color:var(--blue);height:32px}
+.bar{height:6px;background:var(--line);border-radius:3px;margin:6px 0 20px;overflow:hidden}.bar i{display:block;height:100%;background:var(--blue)}
+button.link{font:inherit;color:var(--sub);background:none;border:0;padding:8px 0;cursor:pointer}
+@media (min-width:1024px){main{max-width:960px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid .card{margin:0}.cta button{max-width:928px}}
+.map{padding:12px;margin:0 0 12px}.map svg{width:100%;height:auto;max-height:260px;display:block}.map text{font-size:13px;fill:var(--sub);font-weight:600}.map figcaption{margin-top:6px}
+.advice{margin-top:6px;font-size:15px;background:var(--bg);border-radius:10px;padding:8px 10px}
+details ul.plain{margin-top:8px}
+.foot{font-size:13px;color:var(--hint);text-align:center;margin-top:32px}
+</style>
+</head>
+<body>
+<main>
+  <header class="top">
+    <div class="brand">StreamFHIR<small>Stream checks → health data</small></div>
+    <nav aria-label="Main"><a href="#/" id="nav-sites">Sites</a><a href="#/new" id="nav-new">New check</a><a href="#/check" id="nav-check">Samples</a></nav>
+  </header>
+  <div id="view" aria-live="polite"><div class="skel"></div><div class="skel"></div></div>
+  <p class="foot" id="foot">All sites and records are synthetic demo data. Codes under example.org are prototype codes, not official terminology.</p>
+</main>
+<div class="cta"><button id="cta" type="button">…</button></div>
+<script>window.STATIC_DEMO = true;</script>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LEVEL = {high:"High hazard", verify:"Needs verification", moderate:"Moderate", low:"Low"};
+const LEVEL_CLASS = {high:"high", verify:"moderate", moderate:"moderate", low:"low"};
+const VERDICT = {
+  high:"Confirmed warning, ready to share with a public-health system.",
+  verify:"Serious signs, but not yet confirmed. A reviewer should check the reports below.",
+  moderate:"Some warning signs. Keep watching; no warning record yet.",
+  low:"No health warning signs in the last 14 days."};
+const STATUS = {
+  ok:{big:"Ready to share", line:"Everything looks right. Values are marked final."},
+  review:{big:"Needs a quick look", line:"Will be shared as preliminary until a reviewer confirms the points below. Nothing was changed."},
+  blocked:{big:"Can't share yet", line:"Fix the points below and check again. Nothing was sent."}};
+const DECISION = {confirm:"Confirmed by reviewer", reject:"Rejected by reviewer"};
+let cache = null, records = null, lastCheck = null, staticDecision = null;
+const OFFLINE = `<div class="card" role="status"><h2>This needs the local app</h2><p>The online demo can only replay the sample records. To check your own record, run one command and open http://127.0.0.1:8000:</p><pre>python3 -m streamfhir serve</pre></div>`;
+
+async function api(path, body){
+  if(window.STATIC_DEMO) return staticApi(path, body);
+  const r = await fetch(path, body ? {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(body)} : {});
+  return r.json();
+}
+/* Server-less demo (GitHub Pages): precomputed answers for the sample records. */
+async function staticApi(path, body){
+  const get = async p => (await fetch(p)).json();
+  if(path === "/api/sites") return get(staticDecision ? `api/review/${staticDecision}.json` : "api/sites.json");
+  if(path === "/api/records") return get("api/records.json");
+  if(path === "/api/interop") return get("api/interop.json");
+  if(path === "/api/check"){
+    const orig = (records || []).find(r => r.record_id === body.record.record_id);
+    if(orig && JSON.stringify(orig) === JSON.stringify(body.record)) return get(`api/check/${encodeURIComponent(orig.record_id)}.json`);
+    return {offline:true};
+  }
+  if(path === "/api/share"){ const n = body.bundle.entry.length; return {mode:"dry-run", message:`Dry run: nothing was sent. ${n} resources are ready for a FHIR server.`}; }
+  if(path === "/api/review"){ staticDecision = body.decision ? `${body.record_id}-${body.decision}${body.basis ? "-" + body.basis : ""}` : null;
+    return {record_id:body.record_id, decision:body.decision, basis:body.basis}; }
+  return {};
+}
+function cta(label, fn, disabled){ const b = $("#cta"); b.textContent = label; b.onclick = fn; b.disabled = !!disabled; }
+function nav(which){ ["sites","new","check"].forEach(n => { const a = $("#nav-"+n); a.className = which===n ? "on" : ""; if(which===n) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); }); }
+function lanes(p){ return `<div class="lanes" aria-label="Health hazard points by One Health lane">
+  <div class="lane"><b>${p.environment}</b><span>Environment</span></div>
+  <div class="lane"><b>${p.animal}</b><span>Animals</span></div>
+  <div class="lane"><b>${p.human}</b><span>People</span></div></div>`; }
+const COND = {poor:"Ecological condition: poor", fair:"Ecological condition: fair", good:"Ecological condition: good", "not assessed":"Ecological condition: not assessed (no habitat, nutrient or invertebrate data)"};
+const lvl = r => r.hazard_assessed === false ? "na" : r.level;
+LEVEL.na = "Not assessed"; LEVEL["not-assessed"] = "Not assessed"; LEVEL_CLASS.na = "review"; VERDICT.na = "No visual hazard checks in the last 14 days, so nothing can be said about health hazards here.";
+const isReal = () => !!(cache && cache.dataset && cache.dataset.synthetic === false && cache.dataset.observer_kind === "organisation");   /* real agency lab data */
+const CCOL = {poor:"var(--no)", fair:"var(--warn)", good:"var(--ok)", "not assessed":"var(--hint)"};
+const CCLASS = {poor:"blocked", fair:"review", good:"ok", "not assessed":"review"};
+const CSHORT = {poor:"Condition: poor", fair:"Condition: fair", good:"Condition: good", "not assessed":"Condition: not assessed"};
+const fmtDate = t => t ? new Date(t).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
+function latestReport(x){ return x.reports.filter(p => p.observed_at).sort((a, b) => a.observed_at < b.observed_at ? 1 : -1)[0]; }
+function labLine(p){
+  if(!p) return "";
+  const v = p.values || {}, b = p.below_limit || {}, parts = [];
+  if(v.nitrate !== undefined) parts.push(`<b>Nitrate ${v.nitrate} mg/L</b>${v.nitrate >= 50 ? " (≥ 50: EU Nitrates Directive level)" : v.nitrate >= 25 ? " (≥ 25 screening value)" : ""}`);
+  if(v.phosphate !== undefined) parts.push(`<b>Orthophosphate ${v.phosphate} mg/L</b>${v.phosphate >= 0.5 ? " (≥ 0.5: French good/moderate boundary)" : ""}`);
+  else if(b.phosphate !== undefined) parts.push(`Orthophosphate &lt; ${b.phosphate} mg/L (below lab limit)`);
+  if(v.ph !== undefined) parts.push(`pH ${v.ph}`);
+  if(v["water-temperature"] !== undefined) parts.push(`${v["water-temperature"]} °C`);
+  return parts.join(" · ");
+}
+const asOf = () => cache && cache.as_of ? new Date(cache.as_of).toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}) : "";
+
+function map(list){
+  const lats = list.map(x => x.site.lat), lons = list.map(x => x.site.lon);
+  const [a, b, c, d] = [Math.min(...lats), Math.max(...lats), Math.min(...lons), Math.max(...lons)];
+  const W = 360, H = 220, pad = 28, sx = (W - 2*pad) / ((d - c) || 1), sy = (H - 2*pad) / ((b - a) || 1), k = Math.min(sx, sy);
+  const X = lon => pad + (lon - c) * k + ((W - 2*pad) - (d - c) * k) / 2, Y = lat => H - pad - (lat - a) * k - ((H - 2*pad) - (b - a) * k) / 2;
+  const col = {high:"var(--no)", verify:"var(--warn)", moderate:"var(--warn)", low:"var(--ok)", na:"var(--hint)"};
+  if(isReal()) return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} real monitoring stations coloured by ecological condition">
+    ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${x.risk.condition_points ? 6 : 4}" fill="${CCOL[x.risk.condition]}" opacity=".9" ${x.risk.fired.some(f => f.rule_id === "R9") ? `stroke="var(--no)" stroke-width="3"` : ""}><title>${esc(x.site.name)}: ${CSHORT[x.risk.condition]}</title></circle></a>`).join("")}
+  </svg><figcaption class="help"><span style="color:var(--no)">●</span> Poor · <span style="color:var(--warn)">●</span> Fair (larger) · <span style="color:var(--ok)">●</span> Good · <span style="color:var(--hint)">●</span> Not assessed · <span style="color:var(--no)">◯</span> red ring = a sample above 50 mg/L nitrate — ecological condition from the real lab values. Schematic positions, no base map. Tap a dot to open the station.</figcaption></figure>`;
+  return `<figure class="card map"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of the ${list.length} demo sites coloured by hazard level">
+    ${list.map(x => `<a href="#/site/${esc(x.site.site_id)}"><circle cx="${X(x.site.lon).toFixed(1)}" cy="${Y(x.site.lat).toFixed(1)}" r="${list.length > 8 ? (x.risk.level==="high"?7:4) : (x.risk.level==="high"?11:8)}" fill="${x.risk.level==="verify" ? "none" : col[lvl(x.risk)]}" stroke="${col[lvl(x.risk)]}" stroke-width="${x.risk.level==="verify" ? 4 : 0}" opacity=".9"><title>${esc(x.site.name)}: ${LEVEL[x.risk.level]}</title></circle>
+      ${list.length <= 8 ? `<text x="${(X(x.site.lon) + (X(x.site.lon) > W/2 ? -15 : 15)).toFixed(1)}" y="${(Y(x.site.lat)+5).toFixed(1)}" text-anchor="${X(x.site.lon) > W/2 ? "end" : "start"}">${esc(x.site.name.split(" - ").map((t, i) => i ? t.split(" ")[0] : t).join(" · "))}</text>` : ""}</a>`).join("")}
+  </svg><figcaption class="help"><span style="color:var(--no)">●</span> High (large) · <span style="color:var(--warn)">○</span> Needs verification (ring) · <span style="color:var(--warn)">●</span> Moderate · <span style="color:var(--ok)">●</span> Low · <span style="color:var(--hint)">●</span> Not assessed. Schematic positions, no base map. Tap a dot to open the site.</figcaption></figure>`;
+}
+
+function footnote(){
+  if(cache && cache.dataset && cache.dataset.synthetic === false)
+    $("#foot").textContent = (cache.dataset.label ? cache.dataset.label + ": real" : "Real") + " public monitoring data" + (cache.dataset.label ? "" : " from the US Water Quality Portal") + " (not citizen science), imported as a snapshot. Codes under example.org are prototype codes, not official terminology.";
+}
+
+async function sites(){
+  nav("sites");
+  cache = cache || await api("/api/sites"); footnote();
+  const order = {high:0, verify:1, moderate:2, low:3, "not-assessed":4};
+  const s = cache.sites.slice().sort((a, b) => order[a.risk.level] - order[b.risk.level] || b.risk.hazard_points - a.risk.hazard_points || b.risk.condition_points - a.risk.condition_points);
+  const real = cache.dataset && cache.dataset.synthetic === false, perSite = real && cache.dataset.evaluate_each_site_at_its_latest_visit, lab = isReal();
+  const need = s.filter(x => x.risk.level === "high" || x.risk.level === "verify").length;
+  if(lab) s.sort((a, b) => b.risk.condition_points - a.risk.condition_points);
+  const enriched = s.filter(x => x.risk.fired.some(f => f.kind === "condition")).length;
+  $("#view").innerHTML = `<section><h1>${lab ? `${s.length} real stations · ${enriched} above a nutrient screening value · ${s.filter(x => x.risk.fired.some(f => f.rule_id === "R9")).length} above 50 mg/L nitrate` : real ? `${s.length} real citizen-science sites, ${need} with a corroborated warning` : `${s.length} stream sites, ${need} need action`}</h1>
+    <p class="lead">Every point comes from a printed rule about the environment, animals or people — One Health in one card.${asOf() && !perSite ? ` <span class="help">Evaluated as of ${esc(asOf())}.</span>` : ""}</p>
+    ${real && cache.dataset.banner ? `<p class="help" id="realnote">${esc(cache.dataset.banner)}</p>` : real ? `<p class="help" id="realnote">${esc(cache.dataset.label || "Real public monitoring data")}. Agency lab chemistry only, so health hazards stay <b>Not assessed</b> (they need citizen observations); the nutrient and nitrate rules run on the real values.${perSite ? ` Each station is evaluated at its own latest sampling; most have a single sampling in this snapshot. Record age is judged against the snapshot end (${esc(asOf())}).` : ""}</p>` : ""}
+    ${map(s)}
+    <div class="grid">${s.map(x => lab ? `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
+      <div class="row"><div class="num">${x.risk.condition_points}<small>condition points</small></div><span class="chip ${CCLASS[x.risk.condition]}">${CSHORT[x.risk.condition]}</span></div>
+      <div class="site-name">${esc(x.site.name)}</div>
+      <div class="help">${labLine(latestReport(x)) || "No nutrient values at the latest sampling."}</div>
+      <div class="help" style="margin-top:6px">${x.risk.fired.filter(f => f.kind === "condition").map(f => esc(f.rule_id + " " + f.title)).join(" · ") || "No nutrient rule fired."}</div>
+      <div class="help" style="margin-top:10px">Latest sampling ${esc(fmtDate((latestReport(x) || {}).observed_at))} · ${x.reports.length} ${x.reports.length===1?"sampling":"samplings"} in the snapshot · health hazard not assessed (lab data only)</div></a>` : `<a class="card" href="#/site/${esc(x.site.site_id)}" data-site="${esc(x.site.site_id)}">
+      <div class="row"><div class="num">${x.risk.hazard_points}<small>hazard points</small></div><span class="chip ${LEVEL_CLASS[lvl(x.risk)]}">${LEVEL[lvl(x.risk)]}</span></div>
+      <div class="site-name">${esc(x.site.name)}</div>
+      <div class="help">${esc(VERDICT[lvl(x.risk)])}</div>
+      ${lanes(x.risk.lane_points)}
+      <div class="help" style="margin-top:10px">${COND[x.risk.condition]} · ${x.risk.record_ids.length} ${x.risk.record_ids.length===1?"check":"checks"} used</div></a>`).join("")}</div></section>`;
+  cta(real ? "Try a citizen check (demo form)" : "Start a new stream check", () => location.hash = "#/new");
+}
+
+function ruleItem(f){
+  const lab = isReal() && f.kind === "condition";
+  return `<li><div class="row"><b>${esc(f.rule_id)} · ${esc(f.title)}</b>
+    ${lab ? `<span class="tag yes">Agency lab value</span>` : `<span class="tag ${f.corroborated?"yes":"no"}">${f.corroborated ? "Corroborated" : "Not yet corroborated"}</span>`}</div>
+    <div class="help">${f.kind === "condition" ? `+${Object.values(f.points).reduce((a,b)=>a+b,0)} condition` : Object.entries(f.points).map(([k,v]) => `+${v} ${k}`).join(" · ")} · ${lab ? "condition rules never raise a warning, so corroboration does not apply" : esc(f.corroboration)} · records ${f.record_ids.map(esc).join(", ")}</div>
+    <div>${esc(f.why)}</div><div class="advice"><b>What to do:</b> ${esc(f.advice)}</div></li>`;
+}
+
+async function interopPanel(siteId){
+  const el = $("#interop"); if(!el) return;
+  let d; try { d = await api("/api/interop"); } catch(e){ return; }
+  if(!d || d.site_id !== siteId) return;
+  const rows = d.nitrate_results.map(r => `<tr><td>${r.synthetic ? "<b>SYNTHETIC</b> citizen check (test data)" : "Agency lab: " + esc(r.performer || "")}</td><td>${r.category}</td><td><b>${r.value_mg_per_l} mg/L</b></td><td>${esc(fmtDate(r.effective))}</td></tr>`).join("");
+  const fl = (d.flags || []).filter(f => f.status === "active").map(f => `<p class="help" style="margin:10px 0 0">…and the two synthetic citizen checks (scum + dogs in the water, two observers, photos kept for review) raise <b>${esc(f.id)}</b>: level <b>${esc(f.code)}</b>, rules ${f.rules.map(esc).join(", ")}, on this real station's Location.</p>`).join("");
+  el.innerHTML = `<section><h2>One query, two sources</h2><div class="card">
+    <p style="margin:0 0 8px">One FHIR search by the EU (EEA WISE) nitrate code at this station, run live on the public HAPI server on ${esc(fmtDate(d.retrieved))}:</p>
+    <table><tr><th>Source</th><th>Category</th><th>Nitrate</th><th>Date</th></tr>${rows}</table>${fl}
+    <p class="help" style="margin:10px 0 0"><a href="${esc(d.nitrate_query)}">Run the search live</a> (the test server may purge data) · captured response in the repo: <code>data/real-eu-toulouse/interop-query.json</code></p></div></section>`;
+}
+
+async function decide(id, decision, basis){
+  const res = await api("/api/review", {record_id:id, decision, basis});
+  if(res.error){ alert(res.error); return; }
+  const here = location.hash; cache = null; await site(decodeURIComponent(here.slice(7)));
+  $("#level").scrollIntoView({behavior:"smooth"});
+}
+
+async function site(id){
+  nav("sites");
+  cache = cache || await api("/api/sites");
+  const x = cache.sites.find(s => s.site.site_id === id);
+  if(!x){ location.hash = "#/"; return; }
+  const r = x.risk, hz = r.fired.filter(f => f.kind === "hazard"), cd = r.fired.filter(f => f.kind === "condition");
+  const real = isReal() && r.hazard_assessed === false, lp = latestReport(x);
+  $("#view").innerHTML = real ? `<section>
+    <div class="card" id="level"><div class="num">${r.condition_points}<small>condition points</small></div>
+      <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
+      <div class="row"><span class="chip ${CCLASS[r.condition]}">${CSHORT[r.condition]}</span>${cd.some(f => f.rule_id === "R9") ? ` <span class="chip blocked">Nitrate ≥ 50 mg/L</span>` : ""}</div>
+      <p class="lead" style="margin:10px 0 0">${labLine(lp) || "No nutrient values at the latest sampling."}</p>
+      <p class="help" style="margin:10px 0 0">Latest sampling ${esc(fmtDate(lp && lp.observed_at))} by ${esc((lp && lp.observer_name) || "the agency")} · ${x.reports.length} ${x.reports.length===1?"sampling":"samplings"} in the snapshot${x.reports.length===1 ? " — one sample is a screening signal, not a status class" : ""}. Condition classes are demo screening classes, not WFD status classes.</p></div></section>
+    <div id="interop"></div>
+    ${cd.length ? `<section><h2>Ecological condition: why</h2><div class="card"><ul class="plain">${cd.map(ruleItem).join("")}</ul></div></section>` : ""}
+    <section><h2>Health hazard</h2><div class="card"><p style="margin:0"><b>Not assessed.</b> Lab chemistry cannot see scum, sewage smell, dead fish, or people and dogs in the water. A citizen visual check at this station would fill that gap — that is what StreamFHIR is built for.</p></div></section>
+    <section><h2>Agency samplings (lab chemistry)</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(fmtDate(p.observed_at))}</b><span class="chip ${p.status}">${STATUS[p.status].big}</span></div>
+      <div class="help">${labLine(p)} · record ${esc(p.record_id)}</div>${p.issues.map(i => `<div class="help">${esc(i.message)}</div>`).join("")}</li>`).join("")}</ul></div></section>
+    <details><summary>All ${cache.rules.length} rules (how points are counted)</summary>
+      <table><tr><th>Rule</th><th>When</th><th>Points</th></tr>${cache.rules.map(u => `<tr><td>${u.id} ${esc(u.title)} <span class="help">(${u.kind})</span></td><td>${esc(u.when)}</td><td>${u.kind === "condition" ? `+${Object.values(u.points).reduce((a,b)=>a+b,0)} condition` : Object.entries(u.points).map(([k,v])=>`+${v} ${k}`).join("<br>")}</td></tr>`).join("")}</table></details>` : `<section>
+    <div class="card" id="level"><div class="num">${r.hazard_points}<small>hazard points · ${r.confirmed_hazard_points} corroborated</small></div>
+      <h1 style="margin-top:8px">${esc(x.site.name)}</h1>
+      <div class="row"><span class="chip ${LEVEL_CLASS[lvl(r)]}">${LEVEL[lvl(r)]}</span></div>
+      <p class="lead" style="margin:10px 0 0">${esc(VERDICT[lvl(r)])}</p>${lanes(r.lane_points)}
+      <p class="help" style="margin:10px 0 0">${COND[r.condition]} (${r.condition_points} points) — tracked separately, never raises a warning on its own.</p></div></section>
+    <section><h2>Health hazard: why</h2><div class="card"><ul class="plain">${hz.length ? hz.map(ruleItem).join("") : "<li>No hazard rule fired.</li>"}</ul></div></section>
+    <section><h2>${isReal() ? "Agency samplings (lab chemistry)" : "Citizen checks"}</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(p.record_id)}</b>
+      <span class="chip ${p.decision==="reject"?"blocked":p.decision==="confirm"?"ok":p.status}">${p.decision ? DECISION[p.decision] + (p.basis ? " (" + esc(p.basis.replace("-", " ")) + ")" : "") : STATUS[p.status].big}</span></div>
+      ${p.issues.map(i => `<div class="help">${esc(i.message)}</div>`).join("")}
+      ${p.status === "review" && window.STATIC_DEMO && staticDecision && !p.decision ? `<p class="help">The online demo replays one decision at a time — undo the current one first.</p>` : p.status === "review" ? `<div class="opts" style="margin-top:10px">${p.decision ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="">Undo decision</button>` :
+        `<span class="help" style="width:100%">Confirm only with a basis:</span>
+         <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="site-visit">Confirm · I visited</button>
+         ${p.has_photo ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="photo-checked">Confirm · photo checked</button>` : ""}
+         <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="lab-result">Confirm · lab result</button>
+         <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="reject">Reject report</button>`}</div>` : ""}</li>`).join("")}</ul></div></section>
+    ${cd.length ? `<details${isReal() ? " open" : ""}><summary>Ecological condition (${cd.length} rule${cd.length>1?"s":""})</summary><ul class="plain">${cd.map(ruleItem).join("")}</ul></details>` : ""}
+    <details><summary>All ${cache.rules.length} rules (how points are counted)</summary>
+      <table><tr><th>Rule</th><th>When</th><th>Points</th></tr>${cache.rules.map(u => `<tr><td>${u.id} ${esc(u.title)} <span class="help">(${u.kind})</span></td><td>${esc(u.when)}</td><td>${u.kind === "condition" ? `+${Object.values(u.points).reduce((a,b)=>a+b,0)} condition` : Object.entries(u.points).map(([k,v])=>`+${v} ${k}`).join("<br>")}${u.flowing_only ? "<br><span class=help>flowing sites only</span>" : ""}</td></tr>`).join("")}</table>
+      <p class="help">A warning record (FHIR Flag) is raised only when 5+ hazard points are corroborated by trusted reports (two independent observers, a photo, or a reviewer) in the 14 days up to the demo date. It expires 14 days after the last corroborating report; a hazard only clears after 2 trusted clear visits at least 7 days apart. Blocked and rejected reports never count.</p></details>
+    ${x.flag_bundle ? `<details><summary>Warning record for health systems (FHIR Flag)</summary><p class="help">FHIR is the data standard hospitals and public-health agencies use to exchange records. This Flag points at the site (Location) and links the reports behind it.</p><pre>${esc(JSON.stringify(x.flag_bundle, null, 1))}</pre></details><div id="share"></div>` : ""}`;
+  document.querySelectorAll("button[data-rec]").forEach(b => b.onclick = () => decide(b.dataset.rec, b.dataset.dec || null, b.dataset.basis || null));
+  if(real) interopPanel(id);
+  if(x.flag_bundle){
+    cta("Share warning record (dry run)", async () => {
+      const res = await api("/api/share", {bundle:x.flag_bundle});
+      $("#share").innerHTML = `<div class="banner ok" role="status"><div class="big">Dry run done</div><p>${esc(res.message)}</p></div>`;
+      $("#share").scrollIntoView({behavior:"smooth"});
+    });
+  } else cta("Back to all sites", () => location.hash = "#/");
+}
+
+async function check(){
+  nav("check");
+  records = records || (await api("/api/records")).records;
+  $("#view").innerHTML = `<section><h1>Which record should we check?</h1>
+    <p class="lead">${isReal() ? "Pick an agency sampling" : "Pick a citizen visit"}. We check it, explain any problem in plain words, and turn it into FHIR data.</p>
+    <label for="pick">Sample record</label>
+    <select id="pick">${records.map(r => `<option value="${esc(r.record_id)}">${esc(r.record_id)} · ${esc(r.site_id)} · ${esc((r.observed_at||"").slice(0,10))}</option>`).join("")}</select>
+    <details style="margin-top:12px"><summary>Edit the record (JSON)</summary><p class="help">Change a value — for example set "ph" to 15 — and check again.</p><textarea id="raw" spellcheck="false"></textarea></details>
+    </section><div id="result"></div>`;
+  const fill = () => { $("#raw").value = JSON.stringify(records.find(r => r.record_id === $("#pick").value), null, 1); $("#result").innerHTML = ""; cta("Check this record", run); };
+  $("#pick").onchange = fill; fill();
+}
+
+async function run(){
+  let rec;
+  try { rec = JSON.parse($("#raw").value); } catch(e){ $("#result").innerHTML = `<div class="banner blocked"><div class="big">Can't read this</div><p>The text is not valid JSON.</p></div>`; return; }
+  await showResult(rec, $("#result"), () => run(), "Check this record");
+}
+
+async function showResult(rec, target, retry, retryLabel, stampNow){
+  const res = await api("/api/check", {record: rec, stamp_now: !!stampNow}); lastCheck = res;
+  if(res.offline){ target.innerHTML = OFFLINE; cta(retryLabel, retry); return; }
+  const st = res.report.status, n = res.bundle ? res.bundle.entry.length : 0;
+  const counts = {}; (res.bundle ? res.bundle.entry : []).forEach(e => counts[e.resource.resourceType] = (counts[e.resource.resourceType]||0)+1);
+  target.innerHTML = `<section>
+    <div class="banner ${st}" id="status" role="status"><div class="big">${STATUS[st].big}</div><p>${esc(STATUS[st].line)}</p></div>
+    ${res.report.issues.length ? `<div class="card"><ul class="plain">${res.report.issues.map(i => `<li><span class="chip ${i.severity==="error"?"blocked":"review"}">${i.severity==="error"?"Must fix":"Look"}</span> ${esc(i.message)}</li>`).join("")}</ul></div>` : ""}
+    ${res.bundle ? `<div class="card"><div class="num">${n}<small>FHIR resources ready</small></div>
+      <p class="help">${Object.entries(counts).map(([k,v]) => `${v} ${k}`).join(" · ")}</p></div>
+      <details><summary>See the FHIR data</summary><p class="help">A transaction Bundle: the site (Location), one Observation per indicator grouped by a panel, photos (Media) and who/what produced it (Provenance).</p><pre>${esc(JSON.stringify(res.bundle, null, 1))}</pre></details><div id="share"></div>` : ""}</section>`;
+  $("#status").scrollIntoView({behavior:"smooth"});
+  if(res.bundle){
+    cta("Send to FHIR server (dry run)", async () => {
+      const s = await api("/api/share", {bundle: res.bundle});
+      $("#share").innerHTML = `<div class="banner ok"><div class="big">Dry run done</div><p>${esc(s.message)}</p></div>`;
+      $("#share").scrollIntoView({behavior:"smooth"});
+    });
+  } else cta(retryLabel, retry);
+}
+
+/* ---------- New check: one question group per step ---------- */
+const STEPS = [
+  {title:"Where are you?", help:"Pick the stream site you are standing at.", fields:[{k:"site", t:"site"}]},
+  {title:"What does the water look like?", fields:[
+    {k:"water-colour", t:"choice", label:"Colour", opts:["clear","brown-turbid","green","milky-grey","other"]},
+    {k:"surface", t:"choice", label:"Anything floating on top?", opts:["none","foam","oily-sheen","algal-scum"]}]},
+  {title:"What do you smell and see around it?", fields:[
+    {k:"odour", t:"choice", label:"Smell", opts:["none","earthy","sewage","chemical"]},
+    {k:"litter", t:"choice", label:"Litter", opts:["none","some","lots"]}]},
+  {title:"Who is in the water?", help:"This is what links water to health.", fields:[
+    {k:"people-contact", t:"bool", label:"People in the water (paddling, swimming)"},
+    {k:"animal-contact", t:"bool", label:"Dogs or livestock in the water"}]},
+  {title:"Did you see dead fish?", help:"If yes, please add a photo in the last step.", fields:[{k:"dead-fish", t:"bool", label:"Dead fish seen"}]},
+  {title:"How natural does the stream look?", help:"1 = very damaged, 10 = natural. Skip any you are unsure of.", fields:[
+    {k:"channel-condition", t:"score", label:"Channel shape"}, {k:"bank-stability", t:"score", label:"Banks"},
+    {k:"riparian-zone", t:"score", label:"Plants along the banks"}, {k:"instream-habitat", t:"score", label:"Hiding places for fish and insects"}]},
+  {title:"Any readings from a kit?", help:"All optional. Leave empty if you have no kit.", fields:[
+    {k:"water-temperature", t:"number", label:"Water temperature (°C)"}, {k:"ph", t:"number", label:"pH"},
+    {k:"nitrate", t:"number", label:"Nitrate (mg/L)"}, {k:"sensitive-invertebrates", t:"number", label:"Mayfly / stonefly / caddisfly groups found (0–3)"}]},
+  {title:"Last step", help:"Your nickname stays pseudonymous — no name or e-mail is stored.", fields:[
+    {k:"photo", t:"text", label:"Photo link (optional)", ph:"https://…"}, {k:"observer", t:"text", label:"Your observer nickname", ph:"obs-…"}]},
+];
+let draft = {}, stepNo = 0;
+const pretty = v => String(v).replace(/-/g, " ");
+
+function fieldHtml(f){
+  const v = draft[f.k];
+  if(f.t === "site") return `<div role="radiogroup" aria-label="Site">${cache.sites.map(x => `<button type="button" class="opt ${v===x.site.site_id?"sel":""}" aria-pressed="${v===x.site.site_id}" data-k="site" data-v="${esc(x.site.site_id)}">${esc(x.site.name)}</button>`).join("")}</div>`;
+  if(f.t === "choice") return `<label>${esc(f.label)}</label><div class="opts">${f.opts.map(o => `<button type="button" class="opt ${v===o?"sel":""}" aria-pressed="${v===o}" data-k="${f.k}" data-v="${o}">${esc(pretty(o))}</button>`).join("")}</div>`;
+  if(f.t === "bool") return `<label>${esc(f.label)}</label><div class="opts">${[["yes",true],["no",false]].map(([t,b]) => `<button type="button" class="opt ${v===b?"sel":""}" aria-pressed="${v===b}" data-k="${f.k}" data-b="${b}">${t}</button>`).join("")}</div>`;
+  if(f.t === "score") return `<label for="f-${f.k}">${esc(f.label)} <span class="help">${v ?? "not rated"}</span></label><input id="f-${f.k}" type="range" min="1" max="10" step="1" value="${v ?? 5}" data-k="${f.k}" data-score="1">`;
+  if(f.t === "number") return `<label for="f-${f.k}">${esc(f.label)}</label><input id="f-${f.k}" class="in" type="number" inputmode="decimal" step="any" value="${v ?? ""}" data-k="${f.k}" data-num="1">`;
+  return `<label for="f-${f.k}">${esc(f.label)}</label><input id="f-${f.k}" class="in" type="text" placeholder="${esc(f.ph||"")}" value="${esc(v ?? "")}" data-k="${f.k}">`;
+}
+
+async function wizard(){
+  nav("new");
+  cache = cache || await api("/api/sites");
+  if(draft.observer === undefined){ let o = null; try { o = localStorage.getItem("sf-observer"); } catch(e){}
+    draft.observer = o || "obs-" + Math.random().toString(16).slice(2, 6); }
+  const st = STEPS[stepNo];
+  $("#view").innerHTML = `<section>${window.STATIC_DEMO && stepNo === 0 ? `<div class="banner review" role="status"><div class="big" style="font-size:20px">Preview only</div><p>In this online demo you can walk through the steps, but checking a new record needs the local app (python3 -m streamfhir serve). To see real results here, open Samples.</p></div>` : ""}<p class="help">Step ${stepNo+1} of ${STEPS.length}</p>
+    <div class="bar"><i style="width:${Math.round((stepNo+1)/STEPS.length*100)}%"></i></div>
+    <h1>${esc(st.title)}</h1>${st.help ? `<p class="lead">${esc(st.help)}</p>` : ""}
+    <div class="card">${st.fields.map(f => `<div class="field">${fieldHtml(f)}</div>`).join("")}</div>
+    ${stepNo ? `<button type="button" class="link" id="back">← Back</button>` : ""}</section><div id="result"></div>`;
+  document.querySelectorAll(".opt").forEach(b => b.onclick = () => {
+    draft[b.dataset.k] = b.dataset.b !== undefined ? b.dataset.b === "true" : b.dataset.v; wizard(); });
+  document.querySelectorAll("input[data-k]").forEach(i => i.oninput = () => {
+    if(i.dataset.score){ draft[i.dataset.k] = parseInt(i.value, 10); i.previousElementSibling.querySelector(".help").textContent = i.value; }
+    else if(i.dataset.num){ draft[i.dataset.k] = i.value === "" ? undefined : Number(i.value); }
+    else draft[i.dataset.k] = i.value; });
+  if($("#back")) $("#back").onclick = () => { stepNo--; wizard(); window.scrollTo(0,0); };
+  const last = stepNo === STEPS.length - 1;
+  cta(last ? "Check my record" : "Next", () => {
+    if(stepNo === 0 && !draft.site) return;
+    if(!last){ stepNo++; wizard(); window.scrollTo(0,0); return; }
+    finishWizard();
+  }, stepNo === 0 && !draft.site);
+}
+
+function finishWizard(){
+  const site = cache.sites.find(x => x.site.site_id === draft.site).site;
+  try { localStorage.setItem("sf-observer", draft.observer || ""); } catch(e){}
+  const values = {};
+  STEPS.slice(1, -1).forEach(s => s.fields.forEach(f => { if(draft[f.k] !== undefined && draft[f.k] !== "") values[f.k] = draft[f.k]; }));
+  const d = new Date();  /* observation time is stamped by the server clock (stamp_now), not the device */
+  const rec = {record_id: "NEW-" + d.getTime(), synthetic: true, site_id: site.site_id,
+    observer: draft.observer, lat: site.lat, lon: site.lon, photos: draft.photo ? [draft.photo] : [], values};
+  $("#view").innerHTML = `<section><h1>Your check</h1><p class="lead">${esc(site.name)} · position taken from the registered site.</p></section><div id="result"></div>`;
+  showResult(rec, $("#result"), () => { stepNo = 0; wizard(); }, "Start again", true);
+}
+
+function route(){
+  const h = location.hash || "#/";
+  if(h.startsWith("#/site/")) site(decodeURIComponent(h.slice(7)));
+  else if(h === "#/check") check();
+  else if(h === "#/new"){ draft = {observer: draft.observer}; stepNo = 0; wizard(); }
+  else sites();
+  window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route); route();
+api("/api/sites").then(d => { cache = cache || d; footnote(); });
+</script>
+</body>
+</html>

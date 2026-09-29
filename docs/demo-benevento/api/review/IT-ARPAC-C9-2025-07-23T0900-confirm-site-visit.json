@@ -1,0 +1,945 @@
+{
+ "rules": [
+  {
+   "id": "R1",
+   "title": "Poor habitat",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "mean of the visual habitat scores <= 5 (of 10)",
+   "why": "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
+   "advice": "Share with the city's river restoration team; repeat the visual check each season.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R2",
+   "title": "Nutrient enrichment (screening)",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+   "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+   "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R3",
+   "title": "Possible cyanobacterial bloom",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "human": 2
+   },
+   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
+   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+   "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R4",
+   "title": "Sewage signal",
+   "kind": "hazard",
+   "points": {
+    "human": 3,
+    "environment": 1
+   },
+   "when": "odour = sewage or water-colour = milky-grey",
+   "why": "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
+   "advice": "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R5",
+   "title": "Dead fish",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "environment": 1
+   },
+   "when": "dead-fish = yes",
+   "why": "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
+   "advice": "Do not touch the fish; note how many and report to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R6",
+   "title": "People in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "human": 2
+   },
+   "when": "people-contact = yes while R3 or R4 fired at the site",
+   "why": "Exposure turns a water problem into a human-health problem.",
+   "advice": "Discourage paddling and swimming here until the signal has been checked.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R7",
+   "title": "Pets or livestock in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "animal": 2
+   },
+   "when": "animal-contact = yes while R3, R4 or R5 fired at the site",
+   "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+   "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R8",
+   "title": "Oil or chemical signal",
+   "kind": "hazard",
+   "points": {
+    "environment": 2,
+    "human": 1
+   },
+   "when": "surface = oily-sheen or odour = chemical",
+   "why": "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
+   "advice": "Avoid skin contact and report the sheen or smell to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R9",
+   "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
+   "kind": "condition",
+   "points": {
+    "human": 1
+   },
+   "when": "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value",
+   "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+   "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R10",
+   "title": "No mayfly, stonefly or caddisfly larvae found",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach",
+   "why": "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
+   "advice": "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  }
+ ],
+ "as_of": "2026-01-14T23:59:59+01:00",
+ "dataset": {
+  "synthetic": false,
+  "observer_kind": "organisation",
+  "label": "Real EU data: Benevento rivers (ARPA Campania)",
+  "import_stats": {
+   "rows": 207,
+   "mapped_values": 153,
+   "records": 32,
+   "older_than_since": 33,
+   "sites": 6
+  },
+  "source_query": "see SOURCE.txt",
+  "evaluate_each_site_at_its_latest_visit": true
+ },
+ "sites": [
+  {
+   "site": {
+    "site_id": "IT-ARPAC-C9",
+    "name": "Benevento · Calore, Masseria Di Gioia",
+    "lat": 41.153299934,
+    "lon": 14.7173506706,
+    "water_body": "CALORE VOLTURNO",
+    "description": "Real Campania river monitoring station C9 (ARPAC), Foglianise",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "IT-ARPAC-C9",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "IT-ARPAC-C9-2026-01-14T0945"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-12-31T09:45:00+01:00",
+    "window_end": "2026-01-14T09:45:00+01:00",
+    "decisions": {
+     "IT-ARPAC-C9-2025-07-23T0900": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "IT-ARPAC-C9-2025-02-12T1120",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-12T11:20:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.78,
+      "nitrate-basis": "as-N",
+      "ph": 8.4,
+      "water-temperature": 9.0
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-C9-2025-07-23T0900",
+     "status": "review",
+     "decision": "confirm",
+     "basis": "site-visit",
+     "observed_at": "2025-07-23T09:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.17,
+      "nitrate-basis": "as-N",
+      "water-temperature": 25.7
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: PH has no numeric value in the source ('n.d.')."
+      }
+     ]
+    },
+    {
+     "record_id": "IT-ARPAC-C9-2025-05-27T1045",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-27T10:45:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.24,
+      "nitrate-basis": "as-N",
+      "ph": 8.78,
+      "water-temperature": 19.6
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-C9-2025-10-29T0930",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-29T09:30:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.7,
+      "nitrate-basis": "as-N",
+      "water-temperature": 14.5
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: PH has no numeric value in the source ('n.d.')."
+      }
+     ]
+    },
+    {
+     "record_id": "IT-ARPAC-C9-2026-01-14T0945",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-01-14T09:45:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 5.4
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "IT-ARPAC-S7",
+    "name": "Benevento · Sabato, Ponte SP3",
+    "lat": 41.11327,
+    "lon": 14.782937,
+    "water_body": "SABATO",
+    "description": "Real Campania river monitoring station S7 (ARPAC), Benevento",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "IT-ARPAC-S7",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "IT-ARPAC-S7-2026-01-14T1040"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-12-31T10:40:00+01:00",
+    "window_end": "2026-01-14T10:40:00+01:00",
+    "decisions": {
+     "IT-ARPAC-C9-2025-07-23T0900": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "IT-ARPAC-S7-2025-04-07T1015",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-04-07T10:15:00+02:00",
+     "has_photo": false,
+     "values": {
+      "ph": 8.1,
+      "water-temperature": 10.0
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-02-18T1045",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-18T10:45:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.02,
+      "nitrate-basis": "as-N",
+      "ph": 8.3,
+      "water-temperature": 10.4
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-12-09T1045",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-09T10:45:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 12.3
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-09-15T1025",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-09-15T10:25:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 20.6
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: PH has no numeric value in the source ('n.d.')."
+      }
+     ]
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-11-19T1110",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-19T11:10:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 13.3
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-10-20T1100",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-20T11:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.62,
+      "nitrate-basis": "as-N"
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-07-22T1050",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-22T10:50:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.55,
+      "nitrate-basis": "as-N",
+      "water-temperature": 25.4
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: PH has no numeric value in the source ('n.d')."
+      }
+     ]
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-06-23T0940",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-06-23T09:40:00+02:00",
+     "has_photo": false,
+     "values": {
+      "ph": 7.3,
+      "water-temperature": 22.5
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-05-26T0930",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-26T09:30:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.37,
+      "nitrate-basis": "as-N",
+      "ph": 7.5,
+      "water-temperature": 17.1
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2025-08-26T1120",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-08-26T11:20:00+02:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 22.6
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S7-2026-01-14T1040",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-01-14T10:40:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 8.0
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "IT-ARPAC-S8",
+    "name": "Benevento · Sabato, Ponte Leproso",
+    "lat": 41.1321842189,
+    "lon": 14.7649688793,
+    "water_body": "SABATO",
+    "description": "Real Campania river monitoring station S8 (ARPAC), Benevento",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "IT-ARPAC-S8",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "IT-ARPAC-S8-2025-10-01T1015"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-09-17T10:15:00+02:00",
+    "window_end": "2025-10-01T10:15:00+02:00",
+    "decisions": {
+     "IT-ARPAC-C9-2025-07-23T0900": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "IT-ARPAC-S8-2025-02-17T1025",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-02-17T10:25:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.2,
+      "nitrate-basis": "as-N",
+      "ph": 8.3,
+      "water-temperature": 10.1
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S8-2025-10-01T1015",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-01T10:15:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.0,
+      "nitrate-basis": "as-N",
+      "water-temperature": 17.8
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S8-2025-07-07T1000",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-07T10:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.94,
+      "nitrate-basis": "as-N",
+      "ph": 8.73,
+      "water-temperature": 25.0
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-S8-2025-05-21T1040",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-21T10:40:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.0,
+      "nitrate-basis": "as-N",
+      "ph": 8.8,
+      "water-temperature": 18.4
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "IT-ARPAC-Se",
+    "name": "Benevento · Serretelle, Ponte Corvo",
+    "lat": 41.1093076668,
+    "lon": 14.7498179688,
+    "water_body": "SERRETELLE",
+    "description": "Real Campania river monitoring station Se (ARPAC), Benevento",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "IT-ARPAC-Se",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "IT-ARPAC-Se-2025-07-22T0920"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-07-08T09:20:00+02:00",
+    "window_end": "2025-07-22T09:20:00+02:00",
+    "decisions": {
+     "IT-ARPAC-C9-2025-07-23T0900": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "IT-ARPAC-Se-2025-03-18T1015",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-03-18T10:15:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 0.71,
+      "nitrate-basis": "as-N",
+      "ph": 8.5,
+      "water-temperature": 10.0
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Se-2025-07-22T0920",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-22T09:20:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.0,
+      "nitrate-basis": "as-N",
+      "water-temperature": 23.6
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: PH has no numeric value in the source ('n.d')."
+      }
+     ]
+    },
+    {
+     "record_id": "IT-ARPAC-Se-2025-06-25T1300",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-06-25T13:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.47,
+      "nitrate-basis": "as-N",
+      "ph": 8.5,
+      "water-temperature": 23.5
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "IT-ARPAC-Sn",
+    "name": "Benevento · S., Masseria Lepore (Deposito AMIU)",
+    "lat": 41.1174626488,
+    "lon": 14.8069634219,
+    "water_body": "S. NICOLA_BARONIA",
+    "description": "Real Campania river monitoring station Sn (ARPAC), Benevento",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "IT-ARPAC-Sn",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "not assessed",
+    "fired": [],
+    "record_ids": [
+     "IT-ARPAC-Sn-2026-01-14T1010"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-12-31T10:10:00+01:00",
+    "window_end": "2026-01-14T10:10:00+01:00",
+    "decisions": {
+     "IT-ARPAC-C9-2025-07-23T0900": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "IT-ARPAC-Sn-2025-01-20T1010",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-01-20T10:10:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.88,
+      "nitrate-basis": "as-N",
+      "ph": 7.5,
+      "water-temperature": 10.4
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Sn-2025-10-01T0920",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-01T09:20:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 4.77,
+      "nitrate-basis": "as-N",
+      "water-temperature": 15.5
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Sn-2025-05-21T0930",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-21T09:30:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 4.04,
+      "nitrate-basis": "as-N",
+      "ph": 8.5,
+      "water-temperature": 15.8
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Sn-2025-07-29T0930",
+     "status": "review",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-29T09:30:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.78,
+      "nitrate-basis": "as-N",
+      "water-temperature": 19.7
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "source",
+       "code": "source-note",
+       "message": "From the source system: PH has no numeric value in the source ('N.D.')."
+      }
+     ]
+    },
+    {
+     "record_id": "IT-ARPAC-Sn-2026-01-14T1010",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-01-14T10:10:00+01:00",
+     "has_photo": false,
+     "values": {
+      "water-temperature": 7.4
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "IT-ARPAC-Ta3",
+    "name": "Benevento · Tammaro, P.te Valentino",
+    "lat": 41.1474486172,
+    "lon": 14.8340935519,
+    "water_body": "TAMMARO",
+    "description": "Real Campania river monitoring station Ta3 (ARPAC), Benevento",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "IT-ARPAC-Ta3",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "IT-ARPAC-Ta3-2025-10-14T1000"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2025-09-30T10:00:00+02:00",
+    "window_end": "2025-10-14T10:00:00+02:00",
+    "decisions": {
+     "IT-ARPAC-C9-2025-07-23T0900": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "IT-ARPAC-Ta3-2025-07-14T1100",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-07-14T11:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 0.97,
+      "nitrate-basis": "as-N",
+      "water-temperature": 23.7
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Ta3-2025-10-14T1000",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-14T10:00:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.67,
+      "nitrate-basis": "as-N",
+      "water-temperature": 14.3
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Ta3-2025-01-20T0945",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-01-20T09:45:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.32,
+      "nitrate-basis": "as-N",
+      "ph": 7.5,
+      "water-temperature": 11.5
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    },
+    {
+     "record_id": "IT-ARPAC-Ta3-2025-05-27T1130",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-05-27T11:30:00+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 0.47,
+      "nitrate-basis": "as-N",
+      "ph": 8.9,
+      "water-temperature": 19.3
+     },
+     "below_limit": {},
+     "observer_name": "ARPA Campania",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  }
+ ]
+}

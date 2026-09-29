@@ -100,6 +100,7 @@ Essence: *not* "another water-quality app", but "a citizen observation that a he
 - AC-43 Given a site where no hazard input was observed, Then the API level is `not-assessed`, never `low`.
 - AC-44 Given `interop-demo`, Then a real agency reading and a synthetic (HTEST) citizen reading at the same station carry the same EEA nitrate code.
 - AC-45 Given FreshWater Watch (Earthwatch) volunteer records, Then only fields with a matching meaning are scored (blue-green scum, oily sheen, foam, colour, litter, animal access, swimming, photo), other colours become "other", kit bands stay notes, and a photo-backed scum report with animal access raises a corroborated Flag.
+- AC-46 Given the Ghent (VMM) and Benevento (ARPAC) open exports, Then the same record shape results: nitrate keeps its N basis, phosphorus as P stays a note, values below a limit or `n.d.` are never turned into numbers, and records are laboratory data.
 - AC-30 Given the UI file, Then it has a viewport meta, no external resources, one fixed CTA >= 52 px, folded evidence and live-region status.
 
 ## 7. Architecture (Clean)
@@ -125,6 +126,7 @@ FHIR is treated as an external format, so the mapper lives in `adapters/`; the d
 - POST one synthetic Bundle to HAPI R4 once (live), record returned IDs; run `$validate` on one generated Observation and record the OperationOutcome summary.
 
 ## 10. Change log
+- v0.7 2026-09-29 (night): FreshWater Watch citizen records (Toulouse, Coimbra region); Ghent (VMM) and Benevento (ARPAC) agency feeds.
 - v0.5 2026-09-29 (night): real EU data (Hub'Eau, Toulouse area, 52 stations), EEA WISE + Sandre codings, ConceptMap + fragment CodeSystems, profile slices code.coding (one StreamFHIR coding required, translations allowed), per-site evaluation for monitoring data, EEA coverage check for the 5 OAH cities.
 - v0.1 2026-09-29 first version.
 - v0.4 2026-09-29 after rounds 3-4: real public data import (WQP), 'not assessed' instead of good-by-default, Flag ifMatch, static preview notice, Organization performer for real data, nitrate unit check.

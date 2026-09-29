@@ -143,6 +143,8 @@ def main(argv=None):
     ih.add_argument("--city", default="Toulouse area")
     iff = sub.add_parser("import-fww", help="convert FreshWater Watch (Earthwatch) citizen-science snapshots into a StreamFHIR dataset")
     iff.add_argument("--dir", default=os.path.join(ROOT, "data", "real-fww"), help="folder with fww-<City>.json and SOURCE.txt")
+    for name, city in (("import-ghent", "Ghent (VMM)"), ("import-benevento", "Benevento (ARPA Campania)")):
+        sub.add_parser(name, help="convert the %s river-quality snapshot into a StreamFHIR dataset" % city)
     ec = sub.add_parser("eea-coverage", help="summarise the EEA Waterbase snapshot near the five OneAquaHealth cities")
     ec.add_argument("--file", default=os.path.join(ROOT, "data", "eea-coverage", "waterbase-near-oah-cities.json"))
     io = sub.add_parser("interop-demo", help="send one real agency sampling + one synthetic citizen check at the same station, "
@@ -307,6 +309,45 @@ def main(argv=None):
                         "evaluate_each_site_at_its_latest_visit": True},
             "demo_as_of": latest + "T23:59:59+00:00", "records": records})
         print(json.dumps(dict(stats, sites=len(sites), records=len(records)), indent=1))
+    elif cmd in ("import-ghent", "import-benevento"):
+        from datetime import date, timedelta
+        from ..adapters import national_feeds as nf
+        if cmd == "import-ghent":
+            folder, city = os.path.join(ROOT, "data", "real-eu-ghent"), "Ghent"
+            stations = [{"code": "OW172100", "name": "Bovenschelde in Gent", "lat": 51.0016, "lon": 3.72403},
+                        {"code": "OW571900", "name": "Leie-Grensleie in Gent", "lat": 51.03317, "lon": 3.64483},
+                        {"code": "OW168900", "name": "Zeeschelde in Melle", "lat": 51.00578, "lon": 3.80358}]
+            sites = nf.vmm_sites(stations, city="Ghent")
+            texts = {}
+            for st in stations:
+                with open(os.path.join(folder, "vmm_%s.tsv" % st["code"]), encoding="utf-8") as fh:
+                    texts[st["code"]] = fh.read()
+            last = max(l.split("\t")[1] for t in texts.values() for l in t.splitlines()[1:] if l.count("\t") > 2)
+            since = (date.fromisoformat(last) - timedelta(days=365)).isoformat()
+            records, stats = nf.parse_vmm(texts, {x["site_id"]: x for x in sites}, since=since)
+            label, lic = "Real EU data: Ghent rivers (VMM, Flanders)", "VMM, modellicentie gratis hergebruik"
+        else:
+            folder, city = os.path.join(ROOT, "data", "real-eu-benevento"), "Benevento"
+            with open(os.path.join(folder, "stazioni.csv"), encoding="utf-8") as fh:
+                sites = nf.arpac_sites(fh.read(), {"C8", "C9", "S7", "S8", "Se", "Sn", "Ta3"}, city="Benevento")
+            with open(os.path.join(folder, "results.csv"), encoding="utf-8") as fh:
+                records, stats = nf.parse_arpac(fh.read(), {x["site_id"]: x for x in sites})
+            last = max(r["observed_at"][:10] for r in records)
+            since = (date.fromisoformat(last) - timedelta(days=365)).isoformat()
+            stats["older_than_since"] = sum(1 for r in records if r["observed_at"][:10] < since)
+            records = [r for r in records if r["observed_at"][:10] >= since]
+            stats["records"] = len(records)
+            label, lic = "Real EU data: Benevento rivers (ARPA Campania)", "ARPA Campania open data, CC BY"
+        used = {r["site_id"] for r in records}
+        stats["sites"] = len(used)
+        _dump(os.path.join(folder, "sites.json"), {"_note": "REAL public river monitoring stations (%s)." % lic,
+                                                    "sites": [x for x in sites if x["site_id"] in used]})
+        _dump(os.path.join(folder, "assessments.json"), {
+            "_note": "REAL public monitoring data (%s), the 12 months up to the latest sample; see SOURCE.txt." % lic,
+            "dataset": {"synthetic": False, "observer_kind": "organisation", "label": label, "import_stats": stats,
+                        "source_query": "see SOURCE.txt", "evaluate_each_site_at_its_latest_visit": True},
+            "demo_as_of": last + "T23:59:59+01:00", "records": records})
+        print(json.dumps(stats, indent=1))
     elif cmd == "eea-coverage":
         from ..adapters.waterbase_importer import coverage
         with open(args.file, encoding="utf-8") as fh:

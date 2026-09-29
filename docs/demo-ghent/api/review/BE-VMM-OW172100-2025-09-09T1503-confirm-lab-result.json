@@ -1,0 +1,943 @@
+{
+ "rules": [
+  {
+   "id": "R1",
+   "title": "Poor habitat",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "mean of the visual habitat scores <= 5 (of 10)",
+   "why": "Degraded banks, channel and riparian strip reduce the stream's ability to clean itself and to host life.",
+   "advice": "Share with the city's river restoration team; repeat the visual check each season.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R2",
+   "title": "Nutrient enrichment (screening)",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "nitrate >= 25 mg/L as NO3 (a conservative screening value, half the French good/moderate boundary of 50) or orthophosphate >= 0.5 mg/L as PO4 (the French good/moderate boundary); one sample is a screening signal, not a status class",
+   "why": "Extra nutrients can feed algae; in most fresh waters phosphate is the limiting nutrient, so high phosphate matters most for blooms, while high nitrate mainly signals run-off.",
+   "advice": "Look upstream for run-off sources (fields, allotments, outfalls) and keep monitoring.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R3",
+   "title": "Possible cyanobacterial bloom",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "human": 2
+   },
+   "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
+   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
+   "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R4",
+   "title": "Sewage signal",
+   "kind": "hazard",
+   "points": {
+    "human": 3,
+    "environment": 1
+   },
+   "when": "odour = sewage or water-colour = milky-grey",
+   "why": "Sewage smell or grey water suggests faecal contamination, a route for gut infections in people and animals.",
+   "advice": "Avoid touching the water, wash hands, and report it to the water utility or municipality.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R5",
+   "title": "Dead fish",
+   "kind": "hazard",
+   "points": {
+    "animal": 3,
+    "environment": 1
+   },
+   "when": "dead-fish = yes",
+   "why": "Fish kills point to low oxygen, toxins or pollution - an early warning for other animals.",
+   "advice": "Do not touch the fish; note how many and report to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R6",
+   "title": "People in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "human": 2
+   },
+   "when": "people-contact = yes while R3 or R4 fired at the site",
+   "why": "Exposure turns a water problem into a human-health problem.",
+   "advice": "Discourage paddling and swimming here until the signal has been checked.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R7",
+   "title": "Pets or livestock in contact with affected water",
+   "kind": "hazard",
+   "points": {
+    "animal": 2
+   },
+   "when": "animal-contact = yes while R3, R4 or R5 fired at the site",
+   "why": "Dogs and livestock drink and swim in affected water and are often the first victims of blooms.",
+   "advice": "Keep pets and livestock out of the water and away from scum on the shore.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R8",
+   "title": "Oil or chemical signal",
+   "kind": "hazard",
+   "points": {
+    "environment": 2,
+    "human": 1
+   },
+   "when": "surface = oily-sheen or odour = chemical",
+   "why": "Hydrocarbons and chemicals harm aquatic life and can irritate skin on contact.",
+   "advice": "Avoid skin contact and report the sheen or smell to the environment authority.",
+   "flowing_only": false,
+   "clears_after": "2 trusted clear visits >= 7 days apart"
+  },
+  {
+   "id": "R9",
+   "title": "Nitrate above 50 mg/L (EU Nitrates Directive level)",
+   "kind": "condition",
+   "points": {
+    "human": 1
+   },
+   "when": "nitrate >= 50 mg/L as NO3: the level at which the EU Nitrates Directive (91/676/EEC, Annex I) treats surface fresh water as affected by pollution; it is also the EU drinking-water parametric value",
+   "why": "Stream water is not drinking water, but this level signals run-off that may reach wells and supplies.",
+   "advice": "Mention it to the water utility; private well owners nearby may want a lab test.",
+   "flowing_only": false,
+   "clears_after": "1 trusted clear visit"
+  },
+  {
+   "id": "R10",
+   "title": "No mayfly, stonefly or caddisfly larvae found",
+   "kind": "condition",
+   "points": {
+    "environment": 2
+   },
+   "when": "sensitive-invertebrates = 0 after >= 1 minute of kick-net sampling in a flowing reach",
+   "why": "Most families of these groups need clean, oxygen-rich water, so finding none suggests poorer conditions over weeks. Some families tolerate pollution, so this is a coarse screen, not a biotic index.",
+   "advice": "Repeat the sample in a riffle; if still none, share with the ecology team for a full index.",
+   "flowing_only": true,
+   "clears_after": "1 trusted clear visit"
+  }
+ ],
+ "as_of": "2026-09-09T23:59:59+01:00",
+ "dataset": {
+  "synthetic": false,
+  "observer_kind": "organisation",
+  "label": "Real EU data: Ghent rivers (VMM, Flanders)",
+  "import_stats": {
+   "rows": 22248,
+   "mapped_values": 116,
+   "older_than_since": 150,
+   "records": 39,
+   "sites": 3
+  },
+  "source_query": "see SOURCE.txt",
+  "evaluate_each_site_at_its_latest_visit": true
+ },
+ "sites": [
+  {
+   "site": {
+    "site_id": "BE-VMM-OW172100",
+    "name": "Ghent · Bovenschelde in Gent",
+    "lat": 51.0016,
+    "lon": 3.72403,
+    "water_body": "Bovenschelde in Gent",
+    "description": "Real Flemish river monitoring station OW172100 (VMM)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "BE-VMM-OW172100",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "BE-VMM-OW172100-2026-09-08T1340"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2026-08-25T13:40:17+02:00",
+    "window_end": "2026-09-08T13:40:17+02:00",
+    "decisions": {
+     "BE-VMM-OW172100-2025-09-09T1503": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "BE-VMM-OW172100-2025-09-09T1503",
+     "status": "review",
+     "decision": "confirm",
+     "basis": "lab-result",
+     "observed_at": "2025-09-09T15:03:20+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.66,
+      "nitrate-basis": "as-N",
+      "ph": 8.23,
+      "water-temperature": 20.9
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": [
+      {
+       "severity": "warning",
+       "field": "observed_at",
+       "code": "stale",
+       "message": "This observation is more than a year old. It is kept, but it will not describe today's stream."
+      }
+     ]
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2025-10-14T1344",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-14T13:44:52+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.6,
+      "nitrate-basis": "as-N",
+      "ph": 7.78,
+      "water-temperature": 15.6
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2025-11-18T1335",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-18T13:35:45+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.2,
+      "nitrate-basis": "as-N",
+      "ph": 7.8,
+      "water-temperature": 10.0
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2025-12-03T1308",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-03T13:08:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.6,
+      "nitrate-basis": "as-N",
+      "ph": 7.5,
+      "water-temperature": 8.3
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-01-20T1344",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-01-20T13:44:23+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.6,
+      "nitrate-basis": "as-N",
+      "ph": 7.55,
+      "water-temperature": 7.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-02-17T1431",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-02-17T14:31:39+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.9,
+      "nitrate-basis": "as-N",
+      "ph": 7.81,
+      "water-temperature": 6.9
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-03-17T1400",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-03-17T14:00:17+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.5,
+      "nitrate-basis": "as-N",
+      "ph": 7.82,
+      "water-temperature": 11.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-04-08T1221",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-04-08T12:21:38+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 4.3,
+      "nitrate-basis": "as-N",
+      "ph": 8.44,
+      "water-temperature": 13.4
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-05-05T1357",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-05-05T13:57:13+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.72,
+      "nitrate-basis": "as-N",
+      "ph": 7.92,
+      "water-temperature": 16.4
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-06-09T1321",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-06-09T13:21:28+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.71,
+      "nitrate-basis": "as-N",
+      "ph": 7.75,
+      "water-temperature": 18.7
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-07-07T1309",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-07-07T13:09:33+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.06,
+      "nitrate-basis": "as-N",
+      "ph": 8.2,
+      "water-temperature": 25.7
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-08-11T1158",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-08-11T11:58:24+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.93,
+      "nitrate-basis": "as-N",
+      "ph": 8.37,
+      "water-temperature": 23.3
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW172100-2026-09-08T1340",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-08T13:40:17+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.74,
+      "nitrate-basis": "as-N",
+      "ph": 8.09,
+      "water-temperature": 20.7
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "BE-VMM-OW571900",
+    "name": "Ghent · Leie-Grensleie in Gent",
+    "lat": 51.03317,
+    "lon": 3.64483,
+    "water_body": "Leie-Grensleie in Gent",
+    "description": "Real Flemish river monitoring station OW571900 (VMM)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "BE-VMM-OW571900",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "BE-VMM-OW571900-2026-09-03T0936"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2026-08-20T09:36:43+02:00",
+    "window_end": "2026-09-03T09:36:43+02:00",
+    "decisions": {
+     "BE-VMM-OW172100-2025-09-09T1503": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "BE-VMM-OW571900-2025-09-22T0916",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-09-22T09:16:49+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.39,
+      "nitrate-basis": "as-N",
+      "ph": 7.99,
+      "water-temperature": 16.5
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2025-10-20T0931",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-20T09:31:28+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.37,
+      "nitrate-basis": "as-N",
+      "ph": 8.16,
+      "water-temperature": 14.4
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2025-11-06T0918",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-06T09:18:42+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.46,
+      "nitrate-basis": "as-N",
+      "ph": 7.69,
+      "water-temperature": 12.0
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2025-12-01T0934",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-01T09:34:07+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 4.9,
+      "nitrate-basis": "as-N",
+      "ph": 7.66,
+      "water-temperature": 6.7
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-01-19T1341",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-01-19T13:41:57+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 8.5,
+      "nitrate-basis": "as-N",
+      "ph": 7.73,
+      "water-temperature": 7.1
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-02-23T0949",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-02-23T09:49:51+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.1,
+      "nitrate-basis": "as-N",
+      "ph": 7.73,
+      "water-temperature": 9.0
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-03-10T1153",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-03-10T11:53:57+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.2,
+      "nitrate-basis": "as-N",
+      "ph": 7.74,
+      "water-temperature": 11.6
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-04-01T0945",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-04-01T09:45:12+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 4.5,
+      "nitrate-basis": "as-N",
+      "ph": 7.97,
+      "water-temperature": 10.7
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-05-06T0825",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-05-06T08:25:22+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.26,
+      "nitrate-basis": "as-N",
+      "ph": 8.0,
+      "water-temperature": 15.7
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-06-02T0825",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-06-02T08:25:16+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.31,
+      "nitrate-basis": "as-N",
+      "ph": 7.72,
+      "water-temperature": 23.3
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-06-30T1123",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-06-30T11:23:03+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 0.61,
+      "nitrate-basis": "as-N",
+      "ph": 7.84,
+      "water-temperature": 24.9
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW571900-2026-09-03T0936",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-03T09:36:43+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.08,
+      "nitrate-basis": "as-N",
+      "ph": 8.05,
+      "water-temperature": 20.1
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  },
+  {
+   "site": {
+    "site_id": "BE-VMM-OW168900",
+    "name": "Ghent · Zeeschelde in Melle",
+    "lat": 51.00578,
+    "lon": 3.80358,
+    "water_body": "Zeeschelde in Melle",
+    "description": "Real Flemish river monitoring station OW168900 (VMM)",
+    "flow": "flowing",
+    "identifiers": []
+   },
+   "risk": {
+    "site_id": "BE-VMM-OW168900",
+    "level": "not-assessed",
+    "hazard_points": 0,
+    "confirmed_hazard_points": 0,
+    "lane_points": {
+     "environment": 0,
+     "animal": 0,
+     "human": 0
+    },
+    "condition_points": 0,
+    "condition": "good",
+    "fired": [],
+    "record_ids": [
+     "BE-VMM-OW168900-2026-09-09T1209"
+    ],
+    "excluded_record_ids": [],
+    "window_start": "2026-08-26T12:09:52+02:00",
+    "window_end": "2026-09-09T12:09:52+02:00",
+    "decisions": {
+     "BE-VMM-OW172100-2025-09-09T1503": "confirm"
+    },
+    "hazard_assessed": false,
+    "needs_flag": false
+   },
+   "reports": [
+    {
+     "record_id": "BE-VMM-OW168900-2025-09-10T1216",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-09-10T12:16:48+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.68,
+      "nitrate-basis": "as-N",
+      "ph": 8.25,
+      "water-temperature": 20.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2025-10-15T1143",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-10-15T11:43:52+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.2,
+      "nitrate-basis": "as-N",
+      "ph": 7.76,
+      "water-temperature": 15.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2025-11-19T1201",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-11-19T12:01:44+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.0,
+      "nitrate-basis": "as-N",
+      "ph": 7.83,
+      "water-temperature": 9.4
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2025-12-16T1159",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2025-12-16T11:59:00+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.0,
+      "nitrate-basis": "as-N",
+      "ph": 7.78,
+      "water-temperature": 9.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-01-21T1213",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-01-21T12:13:31+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 6.6,
+      "nitrate-basis": "as-N",
+      "ph": 7.72,
+      "water-temperature": 6.9
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-02-18T1152",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-02-18T11:52:32+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.7,
+      "nitrate-basis": "as-N",
+      "ph": 7.77,
+      "water-temperature": 6.1
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-03-18T1223",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-03-18T12:23:40+01:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 5.3,
+      "nitrate-basis": "as-N",
+      "ph": 7.84,
+      "water-temperature": 10.9
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-04-15T1151",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-04-15T11:51:28+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 4.0,
+      "nitrate-basis": "as-N",
+      "ph": 8.53,
+      "water-temperature": 14.1
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-05-06T1146",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-05-06T11:46:24+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.73,
+      "nitrate-basis": "as-N",
+      "ph": 8.14,
+      "water-temperature": 16.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-06-10T1208",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-06-10T12:08:43+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 3.58,
+      "nitrate-basis": "as-N",
+      "ph": 7.74,
+      "water-temperature": 19.0
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-07-08T1118",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-07-08T11:18:13+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.77,
+      "nitrate-basis": "as-N",
+      "ph": 8.28,
+      "water-temperature": 25.1
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-07-24T1039",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-07-24T10:39:01+02:00",
+     "has_photo": false,
+     "values": {
+      "ph": 8.24,
+      "water-temperature": 23.2
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-08-12T1148",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-08-12T11:48:31+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 1.65,
+      "nitrate-basis": "as-N",
+      "ph": 8.35,
+      "water-temperature": 23.5
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    },
+    {
+     "record_id": "BE-VMM-OW168900-2026-09-09T1209",
+     "status": "ok",
+     "decision": null,
+     "basis": null,
+     "observed_at": "2026-09-09T12:09:52+02:00",
+     "has_photo": false,
+     "values": {
+      "nitrate": 2.8,
+      "nitrate-basis": "as-N",
+      "ph": 8.07,
+      "water-temperature": 20.8
+     },
+     "below_limit": {},
+     "observer_name": "Vlaamse Milieumaatschappij (VMM)",
+     "issues": []
+    }
+   ],
+   "flag_bundle": null
+  }
+ ]
+}

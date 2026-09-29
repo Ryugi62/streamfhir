@@ -1,0 +1,746 @@
+{
+ "_note": "REAL public monitoring data (ARPA Campania open data, CC BY), the 12 months up to the latest sample; see SOURCE.txt.",
+ "dataset": {
+  "synthetic": false,
+  "observer_kind": "organisation",
+  "label": "Real EU data: Benevento rivers (ARPA Campania)",
+  "import_stats": {
+   "rows": 207,
+   "mapped_values": 153,
+   "records": 32,
+   "older_than_since": 33,
+   "sites": 6
+  },
+  "source_query": "see SOURCE.txt",
+  "evaluate_each_site_at_its_latest_visit": true
+ },
+ "demo_as_of": "2026-01-14T23:59:59+01:00",
+ "records": [
+  {
+   "record_id": "IT-ARPAC-S7-2025-04-07T1015",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-04-07T10:15:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "ph": 8.1,
+    "water-temperature": 10.0
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-C9-2025-02-12T1120",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-C9",
+   "observed_at": "2025-02-12T11:20:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.153299934,
+   "lon": 14.7173506706,
+   "photos": [],
+   "values": {
+    "nitrate": 1.78,
+    "nitrate-basis": "as-N",
+    "ph": 8.4,
+    "water-temperature": 9.0
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 160 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station C9"
+  },
+  {
+   "record_id": "IT-ARPAC-S8-2025-02-17T1025",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S8",
+   "observed_at": "2025-02-17T10:25:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1321842189,
+   "lon": 14.7649688793,
+   "photos": [],
+   "values": {
+    "nitrate": 2.2,
+    "nitrate-basis": "as-N",
+    "ph": 8.3,
+    "water-temperature": 10.1
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 380 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S8"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-02-18T1045",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-02-18T10:45:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "nitrate": 2.02,
+    "nitrate-basis": "as-N",
+    "ph": 8.3,
+    "water-temperature": 10.4
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 250 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-Se-2025-03-18T1015",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Se",
+   "observed_at": "2025-03-18T10:15:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1093076668,
+   "lon": 14.7498179688,
+   "photos": [],
+   "values": {
+    "nitrate": 0.71,
+    "nitrate-basis": "as-N",
+    "ph": 8.5,
+    "water-temperature": 10.0
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 70 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Se"
+  },
+  {
+   "record_id": "IT-ARPAC-Sn-2025-01-20T1010",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Sn",
+   "observed_at": "2025-01-20T10:10:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1174626488,
+   "lon": 14.8069634219,
+   "photos": [],
+   "values": {
+    "nitrate": 3.88,
+    "nitrate-basis": "as-N",
+    "ph": 7.5,
+    "water-temperature": 10.4
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 490 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Sn"
+  },
+  {
+   "record_id": "IT-ARPAC-Sn-2025-10-01T0920",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Sn",
+   "observed_at": "2025-10-01T09:20:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1174626488,
+   "lon": 14.8069634219,
+   "photos": [],
+   "values": {
+    "nitrate": 4.77,
+    "nitrate-basis": "as-N",
+    "water-temperature": 15.5
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 1040 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Sn"
+  },
+  {
+   "record_id": "IT-ARPAC-S8-2025-10-01T1015",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S8",
+   "observed_at": "2025-10-01T10:15:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1321842189,
+   "lon": 14.7649688793,
+   "photos": [],
+   "values": {
+    "nitrate": 3.0,
+    "nitrate-basis": "as-N",
+    "water-temperature": 17.8
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 780 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S8"
+  },
+  {
+   "record_id": "IT-ARPAC-S8-2025-07-07T1000",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S8",
+   "observed_at": "2025-07-07T10:00:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1321842189,
+   "lon": 14.7649688793,
+   "photos": [],
+   "values": {
+    "nitrate": 1.94,
+    "nitrate-basis": "as-N",
+    "ph": 8.73,
+    "water-temperature": 25.0
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 1590 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S8"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-12-09T1045",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-12-09T10:45:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "water-temperature": 12.3
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-Ta3-2025-07-14T1100",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Ta3",
+   "observed_at": "2025-07-14T11:00:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1474486172,
+   "lon": 14.8340935519,
+   "photos": [],
+   "values": {
+    "nitrate": 0.97,
+    "nitrate-basis": "as-N",
+    "water-temperature": 23.7
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 150 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Ta3"
+  },
+  {
+   "record_id": "IT-ARPAC-Ta3-2025-10-14T1000",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Ta3",
+   "observed_at": "2025-10-14T10:00:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1474486172,
+   "lon": 14.8340935519,
+   "photos": [],
+   "values": {
+    "nitrate": 1.67,
+    "nitrate-basis": "as-N",
+    "water-temperature": 14.3
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 230 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Ta3"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-09-15T1025",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-09-15T10:25:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "water-temperature": 20.6
+   },
+   "below_limit": {},
+   "source_notes": [
+    "PH has no numeric value in the source ('n.d.')."
+   ],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-11-19T1110",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-11-19T11:10:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "water-temperature": 13.3
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-Ta3-2025-01-20T0945",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Ta3",
+   "observed_at": "2025-01-20T09:45:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1474486172,
+   "lon": 14.8340935519,
+   "photos": [],
+   "values": {
+    "nitrate": 2.32,
+    "nitrate-basis": "as-N",
+    "ph": 7.5,
+    "water-temperature": 11.5
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 70 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Ta3"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-10-20T1100",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-10-20T11:00:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "nitrate": 2.62,
+    "nitrate-basis": "as-N"
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 780 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-Sn-2025-05-21T0930",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Sn",
+   "observed_at": "2025-05-21T09:30:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1174626488,
+   "lon": 14.8069634219,
+   "photos": [],
+   "values": {
+    "nitrate": 4.04,
+    "nitrate-basis": "as-N",
+    "ph": 8.5,
+    "water-temperature": 15.8
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 1160 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Sn"
+  },
+  {
+   "record_id": "IT-ARPAC-S8-2025-05-21T1040",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S8",
+   "observed_at": "2025-05-21T10:40:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1321842189,
+   "lon": 14.7649688793,
+   "photos": [],
+   "values": {
+    "nitrate": 3.0,
+    "nitrate-basis": "as-N",
+    "ph": 8.8,
+    "water-temperature": 18.4
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 770 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S8"
+  },
+  {
+   "record_id": "IT-ARPAC-Se-2025-07-22T0920",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Se",
+   "observed_at": "2025-07-22T09:20:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1093076668,
+   "lon": 14.7498179688,
+   "photos": [],
+   "values": {
+    "nitrate": 1.0,
+    "nitrate-basis": "as-N",
+    "water-temperature": 23.6
+   },
+   "below_limit": {},
+   "source_notes": [
+    "PH has no numeric value in the source ('n.d')."
+   ],
+   "source_info": [
+    "Total phosphorus 120 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Se"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-07-22T1050",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-07-22T10:50:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "nitrate": 2.55,
+    "nitrate-basis": "as-N",
+    "water-temperature": 25.4
+   },
+   "below_limit": {},
+   "source_notes": [
+    "PH has no numeric value in the source ('n.d')."
+   ],
+   "source_info": [
+    "Total phosphorus 900 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-06-23T0940",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-06-23T09:40:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "ph": 7.3,
+    "water-temperature": 22.5
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-C9-2025-07-23T0900",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-C9",
+   "observed_at": "2025-07-23T09:00:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.153299934,
+   "lon": 14.7173506706,
+   "photos": [],
+   "values": {
+    "nitrate": 2.17,
+    "nitrate-basis": "as-N",
+    "water-temperature": 25.7
+   },
+   "below_limit": {},
+   "source_notes": [
+    "PH has no numeric value in the source ('n.d.')."
+   ],
+   "source_info": [
+    "Total phosphorus 510 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station C9"
+  },
+  {
+   "record_id": "IT-ARPAC-Se-2025-06-25T1300",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Se",
+   "observed_at": "2025-06-25T13:00:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1093076668,
+   "lon": 14.7498179688,
+   "photos": [],
+   "values": {
+    "nitrate": 1.47,
+    "nitrate-basis": "as-N",
+    "ph": 8.5,
+    "water-temperature": 23.5
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 800 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Se"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-05-26T0930",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-05-26T09:30:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "nitrate": 2.37,
+    "nitrate-basis": "as-N",
+    "ph": 7.5,
+    "water-temperature": 17.1
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 480 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2025-08-26T1120",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2025-08-26T11:20:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "water-temperature": 22.6
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  },
+  {
+   "record_id": "IT-ARPAC-C9-2025-05-27T1045",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-C9",
+   "observed_at": "2025-05-27T10:45:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.153299934,
+   "lon": 14.7173506706,
+   "photos": [],
+   "values": {
+    "nitrate": 1.24,
+    "nitrate-basis": "as-N",
+    "ph": 8.78,
+    "water-temperature": 19.6
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus 290 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station C9"
+  },
+  {
+   "record_id": "IT-ARPAC-Ta3-2025-05-27T1130",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Ta3",
+   "observed_at": "2025-05-27T11:30:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1474486172,
+   "lon": 14.8340935519,
+   "photos": [],
+   "values": {
+    "nitrate": 0.47,
+    "nitrate-basis": "as-N",
+    "ph": 8.9,
+    "water-temperature": 19.3
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [
+    "Total phosphorus <10 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Ta3"
+  },
+  {
+   "record_id": "IT-ARPAC-Sn-2025-07-29T0930",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Sn",
+   "observed_at": "2025-07-29T09:30:00+02:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1174626488,
+   "lon": 14.8069634219,
+   "photos": [],
+   "values": {
+    "nitrate": 2.78,
+    "nitrate-basis": "as-N",
+    "water-temperature": 19.7
+   },
+   "below_limit": {},
+   "source_notes": [
+    "PH has no numeric value in the source ('N.D.')."
+   ],
+   "source_info": [
+    "Total phosphorus 1010 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Sn"
+  },
+  {
+   "record_id": "IT-ARPAC-C9-2025-10-29T0930",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-C9",
+   "observed_at": "2025-10-29T09:30:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.153299934,
+   "lon": 14.7173506706,
+   "photos": [],
+   "values": {
+    "nitrate": 2.7,
+    "nitrate-basis": "as-N",
+    "water-temperature": 14.5
+   },
+   "below_limit": {},
+   "source_notes": [
+    "PH has no numeric value in the source ('n.d.')."
+   ],
+   "source_info": [
+    "Total phosphorus 400 µg/L (not orthophosphate; kept as a note)."
+   ],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station C9"
+  },
+  {
+   "record_id": "IT-ARPAC-C9-2026-01-14T0945",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-C9",
+   "observed_at": "2026-01-14T09:45:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.153299934,
+   "lon": 14.7173506706,
+   "photos": [],
+   "values": {
+    "water-temperature": 5.4
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station C9"
+  },
+  {
+   "record_id": "IT-ARPAC-Sn-2026-01-14T1010",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-Sn",
+   "observed_at": "2026-01-14T10:10:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.1174626488,
+   "lon": 14.8069634219,
+   "photos": [],
+   "values": {
+    "water-temperature": 7.4
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station Sn"
+  },
+  {
+   "record_id": "IT-ARPAC-S7-2026-01-14T1040",
+   "synthetic": false,
+   "origin": "arpac",
+   "site_id": "IT-ARPAC-S7",
+   "observed_at": "2026-01-14T10:40:00+01:00",
+   "observer": "ARPAC",
+   "observer_name": "ARPA Campania",
+   "lat": 41.11327,
+   "lon": 14.782937,
+   "photos": [],
+   "values": {
+    "water-temperature": 8.0
+   },
+   "below_limit": {},
+   "source_notes": [],
+   "source_info": [],
+   "source": "ARPA Campania open data, Monitoraggio Fiumi, station S7"
+  }
+ ]
+}

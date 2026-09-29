@@ -88,7 +88,7 @@ python3 -m streamfhir import-hubeau               # real Toulouse-area river dat
 python3 -m streamfhir --data data/real-eu-toulouse serve     # browse it (same as the /demo-eu/ page)
 python3 -m streamfhir eea-coverage                # EU (EEA Waterbase) code coverage near the 5 OneAquaHealth cities
 python3 -m streamfhir --data data/real-eu-toulouse interop-demo --live   # agency + synthetic citizen nitrate, one EEA-code query
-python3 -m pip install pytest && python3 -m pytest -q     # 99 tests, no network
+python3 -m pip install pytest && python3 -m pytest -q     # 101 tests, no network
 ```
 Set `STREAMFHIR_FHIR_BASE` to target another FHIR R4 server. The web UI only does dry runs unless `STREAMFHIR_ALLOW_LIVE=1`. The sample data is evaluated as of a fixed demo date (`demo_as_of` in `data/assessments.json`) so the demo never goes stale. Set `STREAMFHIR_REAL_CLOCK=1` to use today's date. A `Dockerfile` is included (`--host 0.0.0.0`). We have not built it, because no Docker was available on the development machine.
 
@@ -209,7 +209,7 @@ Sample result (demo date 29 Sep 2026):
 - **Demo moment:** confirming report SYN-015 at Willow Creek ("I visited") turns *Needs verification* into *High* and raises the Flag. Undo returns it. This also works in the static demo, which replays precomputed single decisions.
 
 ## Evidence
-- **99 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-45 (see `SPEC.md`).
+- **101 automated tests** (`pytest -q`), 0 network calls. They include an architecture test, static UI checks, and acceptance tests AC-1 to AC-46 (see `SPEC.md`).
 - **Live on the public HAPI FHIR R4 server, synthetic data only** ([details and IDs](docs/evidence-hapi.md); the server may purge data at any time):
   - Transactions are accepted.
   - Re-sending the same record creates **0 duplicates**, and Flags update in place.
@@ -239,6 +239,14 @@ Sample result (demo date 29 Sep 2026):
 
 **The EU code layer reaches all five OneAquaHealth cities.** In the EEA Waterbase (WISE-6) aggregated table, surface-water monitoring sites within about 13 km of each research city report pH, temperature and nitrate under the same EEA codes: Benevento 12 sites, Coimbra 1, Ghent 3, Oslo 7 (no phosphate), Toulouse 10 (`python3 -m streamfhir eea-coverage`, snapshot in `data/eea-coverage/`). That table's latest reporting years for these sites are 2009–2012, and the sample-level table timed out on the public query service, so this is a coverage check of the codes, not a data run.
 
+## Two more OneAquaHealth cities: Ghent and Benevento (same importer shape)
+The Toulouse importer's shape was reused for two more research cities' open agency feeds (`streamfhir/adapters/national_feeds.py`, one parse function each):
+- **Ghent — VMM** (Flemish Environment Agency, *Databank waterkwaliteit*, public per-station export; modellicentie gratis hergebruik): 3 stations in and next to Ghent (Bovenschelde, Leie-Grensleie, Zeeschelde at Melle), the 12 months up to 9 Sep 2026 → **39 samplings, 310 FHIR resources, 38 ready / 1 older than a year**. Nitrate is reported as N (mgN/L) and keeps that basis; orthophosphate is reported as P and is kept as a note, not converted.
+- **Benevento — ARPA Campania** (open data *Monitoraggio Fiumi*, CC BY): 6 river stations in and next to Benevento (Sabato, Serretelle, S. Nicola, Tammaro, Calore), the 12 months up to 14 Jan 2026 → **32 samplings, 220 FHIR resources, 26 ready / 6 needing a look**: in 6 samplings the source gives `n.d.` instead of a pH value, which is routed to a person rather than dropped.
+- Neither city's latest samplings exceed the nutrient screening values, so no condition rule fires; health hazards stay *Not assessed* (lab chemistry only). Real Ghent and Benevento Observations validate on HAPI with 0 errors, 0 warnings (evidence step 29).
+- Demos: https://ryugi62.github.io/streamfhir/demo-ghent/ and https://ryugi62.github.io/streamfhir/demo-benevento/.
+- **Coverage of the five cities:** agency pipeline runs for Toulouse, Ghent and Benevento; real citizen records for Toulouse and the Coimbra region; Oslo not yet (Norway's Vannmiljø API needs a key, which we did not request) and no Portuguese agency run (the SNIRH server was unreachable from our machine).
+
 ## Real citizen science (FreshWater Watch, near Toulouse and Coimbra)
 `import-fww` converts Earthwatch Europe's **FreshWater Watch** volunteer records (public ArcGIS view, no account; open access with no formal licence, attribution Earthwatch Europe; queries in `data/real-fww/SOURCE.txt`) within about 50 km (±0.5°) of the two OneAquaHealth cities that have any: Toulouse (19) and Coimbra (6; the sites are around Aveiro and Figueira da Foz). Benevento, Ghent and Oslo have none within that distance.
 - Only fields whose meaning matches StreamFHIR indicators are scored: water colour (Colourless/Brown/Green; any other colour, e.g. *Grey*, becomes *other*, not *milky-grey*), a *Blue_green_scum* algae report → algal scum, oily sheen, foam, litter, *Animal_access* → pets or livestock in contact (a proxy: animals can reach the water), *Swimming* → people in contact, and the volunteer's photo. Nitrate and phosphate kit colour bands, other algae types and pollution sources are kept as notes, not scored.
@@ -254,7 +262,7 @@ Sample result (demo date 29 Sep 2026):
 
 ## Limitations
 - Demo data is synthetic. The real runs are agency chemistry (the US Water Quality Portal; France's Hub'Eau around Toulouse) and 25 FreshWater Watch volunteer records near Toulouse and Coimbra (2015–2023). There has been no field test, and there are no real users or partners. FreshWater Watch data has no formal licence ("open access"); we attribute Earthwatch Europe and would ask them before any reuse beyond this prototype.
-- Of the 52 Toulouse-area stations, only 1 matched a code in the EEA site list we pulled (a small area query), so only that Location carries its EU `euMonitoringSiteCode`. Other OAH cities were checked for EU code coverage only, not run through the pipeline.
+- Of the 52 Toulouse-area stations, only 1 matched a code in the EEA site list we pulled, so only that Location carries its EU `euMonitoringSiteCode`. Oslo has no pipeline run (Vannmiljø needs an API key) and Coimbra has citizen records but no agency run (SNIRH unreachable).
 - The record schema is representative, not the official OneAquaHealth schema.
 - The rules and thresholds are simple, hand-written and untuned. They have not been validated against lab results and must not be read as a health advisory.
 - Only one LOINC code is used. The other codes are prototype codes under `example.org`. The profiles are small differentials, validated with the HAPI server's validator rather than the official IG Publisher.
@@ -278,7 +286,7 @@ streamfhir/infrastructure/ CLI, web server, static UI, composition root
 fhir/                      CodeSystems, ValueSet, profiles, CapabilityStatement, Subscription example
 data/                      synthetic sites and records; data/real-wqp (US) and data/real-eu-toulouse (France) real snapshots; data/eea-coverage
 docs/                      static demo, demo script, live evidence, screenshots
-tests/                     99 tests
+tests/                     101 tests
 ```
 
 ## License
