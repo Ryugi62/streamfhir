@@ -127,10 +127,12 @@ def test_new_record_is_stamped_with_service_clock_not_device_clock():
 
 
 def test_stand_down_only_for_sites_with_an_active_flag_and_keeps_start():
-    active = {"status": "active", "period": {"start": "2026-09-10T08:00:00+00:00"}}
+    active = {"status": "active", "period": {"start": "2026-09-10T08:00:00+00:00"}, "meta": {"versionId": "4"}}
     svc = service([make_record(record_id="B", site_id="S-OTHER", lat=40.1985, lon=-8.4120)],
                   server=SpyServer(flags={"S-OTHER": active}))
     bundles = svc.flag_bundles(include_stand_down=True)
     flags = [e["resource"] for b in bundles for e in b["entry"] if e["resource"]["resourceType"] == "Flag"]
     assert [f["status"] for f in flags] == ["inactive"]           # S-TEST has no Flag on the server -> nothing
     assert flags[0]["period"]["start"] == "2026-09-10T08:00:00+00:00"
+    req = [e["request"] for b in bundles for e in b["entry"] if e["resource"]["resourceType"] == "Flag"][0]
+    assert req["ifMatch"] == 'W/"4"'                                # optimistic locking on the version we read

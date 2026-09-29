@@ -196,10 +196,10 @@ async function site(id){
     <section><h2>Citizen checks</h2><div class="card"><ul class="plain">${x.reports.map(p => `<li><div class="row"><b>${esc(p.record_id)}</b>
       <span class="chip ${p.decision==="reject"?"blocked":p.decision==="confirm"?"ok":p.status}">${p.decision ? DECISION[p.decision] + (p.basis ? " (" + esc(p.basis.replace("-", " ")) + ")" : "") : STATUS[p.status].big}</span></div>
       ${p.issues.map(i => `<div class="help">${esc(i.message)}</div>`).join("")}
-      ${p.status === "review" ? `<div class="opts" style="margin-top:10px">${p.decision ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="">Undo decision</button>` :
+      ${p.status === "review" && window.STATIC_DEMO && staticDecision && !p.decision ? `<p class="help">The online demo replays one decision at a time — undo the current one first.</p>` : p.status === "review" ? `<div class="opts" style="margin-top:10px">${p.decision ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="">Undo decision</button>` :
         `<span class="help" style="width:100%">Confirm only with a basis:</span>
          <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="site-visit">Confirm · I visited</button>
-         <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="photo-checked">Confirm · photo checked</button>
+         ${p.has_photo ? `<button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="photo-checked">Confirm · photo checked</button>` : ""}
          <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="confirm" data-basis="lab-result">Confirm · lab result</button>
          <button type="button" class="opt" data-rec="${esc(p.record_id)}" data-dec="reject">Reject report</button>`}</div>` : ""}</li>`).join("")}</ul></div></section>
     ${cd.length ? `<details><summary>Ecological condition (${cd.length} rule${cd.length>1?"s":""})</summary><ul class="plain">${cd.map(ruleItem).join("")}</ul></details>` : ""}
@@ -298,7 +298,7 @@ async function wizard(){
   if(draft.observer === undefined){ let o = null; try { o = localStorage.getItem("sf-observer"); } catch(e){}
     draft.observer = o || "obs-" + Math.random().toString(16).slice(2, 6); }
   const st = STEPS[stepNo];
-  $("#view").innerHTML = `<section><p class="help">Step ${stepNo+1} of ${STEPS.length}</p>
+  $("#view").innerHTML = `<section>${window.STATIC_DEMO && stepNo === 0 ? `<div class="banner review" role="status"><div class="big" style="font-size:20px">Preview only</div><p>In this online demo you can walk through the steps, but checking a new record needs the local app (python3 -m streamfhir serve). To see real results here, open Samples.</p></div>` : ""}<p class="help">Step ${stepNo+1} of ${STEPS.length}</p>
     <div class="bar"><i style="width:${Math.round((stepNo+1)/STEPS.length*100)}%"></i></div>
     <h1>${esc(st.title)}</h1>${st.help ? `<p class="lead">${esc(st.help)}</p>` : ""}
     <div class="card">${st.fields.map(f => `<div class="field">${fieldHtml(f)}</div>`).join("")}</div>

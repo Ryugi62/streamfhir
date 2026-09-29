@@ -35,7 +35,7 @@
     "human": 2
    },
    "when": "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test points to ordinary green or filamentous algae",
-   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins.",
+   "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
    "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
    "flowing_only": false,
    "clears_after": "2 trusted clear visits >= 7 days apart"
@@ -205,6 +205,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-16T08:40:00+01:00",
+     "has_photo": true,
      "issues": []
     },
     {
@@ -213,6 +214,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-24T17:15:00+01:00",
+     "has_photo": true,
      "issues": []
     },
     {
@@ -221,6 +223,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-27T12:05:00+01:00",
+     "has_photo": false,
      "issues": [
       {
        "severity": "warning",
@@ -236,6 +239,7 @@
      "decision": null,
      "basis": null,
      "observed_at": null,
+     "has_photo": false,
      "issues": [
       {
        "severity": "error",
@@ -398,6 +402,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-20T16:30:00+01:00",
+     "has_photo": true,
      "issues": []
     },
     {
@@ -406,6 +411,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-25T15:50:00+01:00",
+     "has_photo": false,
      "issues": []
     },
     {
@@ -414,6 +420,7 @@
      "decision": null,
      "basis": null,
      "observed_at": null,
+     "has_photo": false,
      "issues": [
       {
        "severity": "error",
@@ -429,7 +436,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:43682d9c-8151-4b3c-ba52-bdaad48483b3",
+      "fullUrl": "urn:uuid:4a6f8baf-c7c7-41cb-99c2-f20525ca8cf4",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -481,7 +488,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:475db3fe-ba8b-4f8e-9cbd-0b00cc821dc3",
+      "fullUrl": "urn:uuid:04ee090c-44e0-47cd-a191-5bfcb1aa3b20",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -527,7 +534,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:3deac045-0056-46bf-a99b-fd0afe7f9a55",
+      "fullUrl": "urn:uuid:496eeaec-44c2-4188-8921-6c8fb3005212",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -546,7 +553,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed.</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits &gt;= 7 days apart clear a hazard.</p></div>"
        },
        "extension": [
         {
@@ -598,10 +605,10 @@
           "display": "High health hazard"
          }
         ],
-        "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed."
+        "text": "High health hazard at Alder Brook - below storm outfall (6 corroborated of 6 hazard points: environment 1 / animal 0 / human 5). Rules: R4 Sewage signal (2 independent observers); R6 People in contact with affected water (2 independent observers). Expires 2026-10-09 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:43682d9c-8151-4b3c-ba52-bdaad48483b3",
+        "reference": "urn:uuid:4a6f8baf-c7c7-41cb-99c2-f20525ca8cf4",
         "display": "Alder Brook - below storm outfall"
        },
        "period": {
@@ -609,7 +616,7 @@
         "end": "2026-10-09T15:50:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:475db3fe-ba8b-4f8e-9cbd-0b00cc821dc3",
+        "reference": "urn:uuid:04ee090c-44e0-47cd-a191-5bfcb1aa3b20",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -619,7 +626,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:9c728b8c-437b-441e-9379-6f7b537ffb4c",
+      "fullUrl": "urn:uuid:1e3ef6ce-1a35-4734-b4d7-251b538a5ade",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-ALDER-DN",
@@ -643,10 +650,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:3deac045-0056-46bf-a99b-fd0afe7f9a55"
+         "reference": "urn:uuid:496eeaec-44c2-4188-8921-6c8fb3005212"
         }
        ],
-       "recorded": "2026-09-29T06:28:41+00:00",
+       "recorded": "2026-09-29T06:30:54+00:00",
        "activity": {
         "coding": [
          {
@@ -668,7 +675,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:475db3fe-ba8b-4f8e-9cbd-0b00cc821dc3",
+          "reference": "urn:uuid:04ee090c-44e0-47cd-a191-5bfcb1aa3b20",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -770,7 +777,7 @@
       ],
       "corroborated": true,
       "corroboration": "trusted report with a photo attached",
-      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins.",
+      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
       "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
       "first_seen": "2026-09-18T11:20:00+01:00",
       "last_seen": "2026-09-18T11:20:00+01:00",
@@ -847,6 +854,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-18T11:20:00+01:00",
+     "has_photo": true,
      "issues": []
     },
     {
@@ -855,6 +863,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-22T18:40:00+01:00",
+     "has_photo": false,
      "issues": [
       {
        "severity": "warning",
@@ -876,6 +885,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-27T10:05:00+01:00",
+     "has_photo": true,
      "issues": [
       {
        "severity": "warning",
@@ -891,7 +901,7 @@
     "type": "transaction",
     "entry": [
      {
-      "fullUrl": "urn:uuid:2e5c5b32-d6ea-48e3-9140-71740d261d0e",
+      "fullUrl": "urn:uuid:1b6d7cb4-275c-4385-b414-9660b0c0abeb",
       "resource": {
        "resourceType": "Location",
        "meta": {
@@ -943,7 +953,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:00fc01a2-cc12-4841-9fa7-3728791c953d",
+      "fullUrl": "urn:uuid:57f5a61a-76f6-443f-a088-06a3fc242d30",
       "resource": {
        "resourceType": "Device",
        "meta": {
@@ -989,7 +999,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:0c4a9b1f-76d0-444d-a60c-5ca4f7ddaa80",
+      "fullUrl": "urn:uuid:c7f4d4a1-5a0e-41ef-9209-8b62ea9fb3db",
       "resource": {
        "resourceType": "Flag",
        "meta": {
@@ -1008,7 +1018,7 @@
        },
        "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed.</p></div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits &gt;= 7 days apart clear a hazard.</p></div>"
        },
        "extension": [
         {
@@ -1049,10 +1059,10 @@
           "display": "High health hazard"
          }
         ],
-        "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed."
+        "text": "High health hazard at Mill Pond inlet (7 corroborated of 11 hazard points: environment 1 / animal 8 / human 2). Rules: R3 Possible cyanobacterial bloom (trusted report with a photo attached); R5 Dead fish (single or unreviewed report - verify); R7 Pets or livestock in contact with affected water (trusted report with a photo attached). Expires 2026-10-02 unless re-confirmed; expiry means no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard."
        },
        "subject": {
-        "reference": "urn:uuid:2e5c5b32-d6ea-48e3-9140-71740d261d0e",
+        "reference": "urn:uuid:1b6d7cb4-275c-4385-b414-9660b0c0abeb",
         "display": "Mill Pond inlet"
        },
        "period": {
@@ -1060,7 +1070,7 @@
         "end": "2026-10-02T11:20:00+01:00"
        },
        "author": {
-        "reference": "urn:uuid:00fc01a2-cc12-4841-9fa7-3728791c953d",
+        "reference": "urn:uuid:57f5a61a-76f6-443f-a088-06a3fc242d30",
         "display": "StreamFHIR 0.3.0"
        }
       },
@@ -1070,7 +1080,7 @@
       }
      },
      {
-      "fullUrl": "urn:uuid:f796fe19-dd28-441e-b185-494c2f1d9273",
+      "fullUrl": "urn:uuid:a77b60b3-5f4a-4deb-a8da-5415eab8134c",
       "resource": {
        "resourceType": "Provenance",
        "id": "streamfhir-prov-flag-S-MILL",
@@ -1094,10 +1104,10 @@
        },
        "target": [
         {
-         "reference": "urn:uuid:0c4a9b1f-76d0-444d-a60c-5ca4f7ddaa80"
+         "reference": "urn:uuid:c7f4d4a1-5a0e-41ef-9209-8b62ea9fb3db"
         }
        ],
-       "recorded": "2026-09-29T06:28:41+00:00",
+       "recorded": "2026-09-29T06:30:54+00:00",
        "activity": {
         "coding": [
          {
@@ -1119,7 +1129,7 @@
           ]
          },
          "who": {
-          "reference": "urn:uuid:00fc01a2-cc12-4841-9fa7-3728791c953d",
+          "reference": "urn:uuid:57f5a61a-76f6-443f-a088-06a3fc242d30",
           "display": "StreamFHIR 0.3.0"
          }
         }
@@ -1210,7 +1220,7 @@
       ],
       "corroborated": false,
       "corroboration": "single or unreviewed report - verify",
-      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins.",
+      "why": "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
       "advice": "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
       "first_seen": "2026-09-27T18:20:00+01:00",
       "last_seen": "2026-09-27T18:20:00+01:00",
@@ -1286,6 +1296,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-17T09:00:00+01:00",
+     "has_photo": true,
      "issues": []
     },
     {
@@ -1294,6 +1305,7 @@
      "decision": "confirm",
      "basis": "lab-result",
      "observed_at": "2026-09-23T13:30:00+01:00",
+     "has_photo": true,
      "issues": [
       {
        "severity": "warning",
@@ -1309,6 +1321,7 @@
      "decision": null,
      "basis": null,
      "observed_at": null,
+     "has_photo": false,
      "issues": [
       {
        "severity": "error",
@@ -1324,6 +1337,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-27T18:20:00+01:00",
+     "has_photo": false,
      "issues": [
       {
        "severity": "warning",
@@ -1377,6 +1391,7 @@
      "decision": null,
      "basis": null,
      "observed_at": "2026-09-21T10:45:00+01:00",
+     "has_photo": true,
      "issues": []
     }
    ],

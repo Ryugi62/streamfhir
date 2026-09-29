@@ -112,7 +112,8 @@ class StreamFhirService:
                 current = self.server.find_flag(o.site.site_id)
                 if current and current.get("status") == "active":
                     start = (current.get("period") or {}).get("start")
-                    out.append(self.translator.stand_down_bundle(o.risk, o.site, start))
+                    version = (current.get("meta") or {}).get("versionId")
+                    out.append(self.translator.stand_down_bundle(o.risk, o.site, start, version))
         return out
 
     # UC-3

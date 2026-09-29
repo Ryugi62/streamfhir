@@ -105,7 +105,7 @@ RULES: Tuple[Rule, ...] = (
          "surface = algal-scum, or water-colour = green with water >= 20 C; not counted if the jar/stick test "
          "points to ordinary green or filamentous algae",
          "Scums in warm water are typical of cyanobacterial blooms, which can poison dogs, livestock and people. "
-         "Only a lab test can confirm toxins.",
+         "Only a lab test can confirm toxins. If the jar/stick test was not done, the scum is treated as a possible bloom (precaution).",
          "Keep dogs and children out of the water and report the bloom to the local authority for testing.",
          keys=("surface", "water-colour", "bloom-check"), record_test=_bloom, clear_keys=("surface", "water-colour")),
     Rule("R4", "Sewage signal", HAZARD, {HUMAN: 3, ENVIRONMENT: 1},

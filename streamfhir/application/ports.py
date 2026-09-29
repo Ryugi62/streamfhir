@@ -35,7 +35,8 @@ class FhirTranslator(Protocol):
 
     def risk_bundle(self, risk: SiteRisk, site: Site) -> Optional[Dict[str, Any]]: ...
 
-    def stand_down_bundle(self, risk: SiteRisk, site: Site, previous_start: Optional[str] = None) -> Dict[str, Any]: ...
+    def stand_down_bundle(self, risk: SiteRisk, site: Site, previous_start: Optional[str] = None,
+                          if_match: Optional[str] = None) -> Dict[str, Any]: ...
 
 
 class FhirServer(Protocol):

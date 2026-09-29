@@ -290,7 +290,8 @@ class FhirMapper:
         return {"resourceType": "Bundle", "type": "transaction", "entry": entries}
 
     # ---------- UC-2 ----------
-    def _flag_bundle(self, risk: SiteRisk, site: Site, active: bool, previous_start: Optional[str] = None) -> Dict[str, Any]:
+    def _flag_bundle(self, risk: SiteRisk, site: Site, active: bool, previous_start: Optional[str] = None,
+                     if_match: Optional[str] = None) -> Dict[str, Any]:
         loc = self._location_entry(site)
         dev = self._device_entry()
         hazards = [f for f in risk.fired if f.kind == HAZARD]
@@ -302,14 +303,18 @@ class FhirMapper:
             start = min(f.first_seen for f in hazards if f.corroborated)
             last = max(f.last_seen for f in hazards if f.corroborated)
             period = {"start": _iso(start), "end": _iso(last + timedelta(days=14))}
-            text = "%s at %s (%d corroborated of %d hazard points: %s). Rules: %s. Expires %s unless re-confirmed." % (
+            text = "%s at %s (%d corroborated of %d hazard points: %s). Rules: %s. Expires %s unless re-confirmed; expiry means " \
+                   "no recent data, not clean water - only 2 trusted clear visits >= 7 days apart clear a hazard." % (
                 LEVEL_DISPLAY[risk.level], site.name, risk.confirmed_hazard_points, risk.hazard_points, lanes, rules,
                 period["end"][:10])
         else:
             period = {"end": _iso(risk.window_end)}
             if previous_start:
                 period = {"start": previous_start, "end": _iso(risk.window_end)}
-            text = "No current corroborated health hazard at %s (%s)." % (site.name, LEVEL_DISPLAY[risk.level])
+            cleared = [f.rule_id for f in hazards if not f.corroborated]
+            text = "Stood down: no current corroborated health hazard at %s (%s)%s." % (
+                site.name, LEVEL_DISPLAY[risk.level],
+                "; unconfirmed signals remain: " + ", ".join(cleared) if cleared else "")
         flag = {
             "resourceType": "Flag",
             "meta": self._meta(),
@@ -346,7 +351,8 @@ class FhirMapper:
         return {"resourceType": "Bundle", "type": "transaction", "entry": [
             loc, dev,
             {"fullUrl": flag_url, "resource": flag,
-             "request": {"method": "PUT", "url": "Flag?identifier=%s|%s" % (SID_FLAG, site.site_id)}},
+             "request": dict(self._upsert("Flag", SID_FLAG, site.site_id),
+                             **({"ifMatch": 'W/"%s"' % if_match} if if_match else {}))},
             {"fullUrl": self._urn(), "resource": prov, "request": {"method": "PUT", "url": "Provenance/" + prov_id}},
         ]}
 
@@ -354,9 +360,11 @@ class FhirMapper:
         """Active Flag for a site whose corroborated hazard reaches the threshold (else None)."""
         return self._flag_bundle(risk, site, active=True) if risk.needs_flag else None
 
-    def stand_down_bundle(self, risk: SiteRisk, site: Site, previous_start: Optional[str] = None) -> Dict[str, Any]:
-        """Set the site's existing Flag (same identifier) to inactive, keeping its original start."""
-        return self._flag_bundle(risk, site, active=False, previous_start=previous_start)
+    def stand_down_bundle(self, risk: SiteRisk, site: Site, previous_start: Optional[str] = None,
+                          if_match: Optional[str] = None) -> Dict[str, Any]:
+        """Set the site's existing Flag (same identifier) to inactive, keeping its original start.
+        if_match = the versionId that was read, so a concurrent change is not overwritten."""
+        return self._flag_bundle(risk, site, active=False, previous_start=previous_start, if_match=if_match)
 
 
 # ---------- conformance resources (published in fhir/) ----------
